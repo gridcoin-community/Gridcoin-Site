@@ -1,0 +1,289 @@
+---
+title: "Gridcoin - Step 3: Acquire Gridcoin"
+layout: layout
+---
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/boinc-install.htm">
+                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Projects</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/gridcoin-install.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 4</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS and DPOR</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->
+
+<!--TEST AREA-->
+<section style="padding-top:0px;background-color: #303030; padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+            <div class="row" style="margin-top:10px;">
+                <div class='col-xs-12 col-sm-12 text-center' style="background-color: #282828;">
+                    <h4 style=" color:white; font-weight:bold;">
+                        You must sync the blockchain before proceeding
+                    </h4>
+                </div>
+            </div>
+
+            <!--prereqs-->
+            <div class="row">
+                <div class="col-xs-12" style="background-color: #282828;">
+                    <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
+                        <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                            <ul>
+                                <li>
+                                    Prior to being able to stake or transfer Gridcoin to/from the Gridcoin client you need to fully sync the gridcoin client to the latest block on the blockchain (green tick under connections indicates a fully synced wallet)
+                                    <ul>
+                                        <li>
+                                        You can download a snapshot of the blockchain from within the client by clicking 'Rebuild block chain | Download Blocks'.
+                                        </li>
+                                        <li>
+                                            <b>Note</b>: The 'Download Blocks' feature require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
+                                        </li>
+                                        <li>
+                                        If you're having issues with 'Download Blocks', you can manually download the latest snapshot <a href="http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip">here</a>.
+                                        </li>
+                                        <li>
+                                        <b>Note</b>: The snapshot will not fully sync your client, but will rather bring you up to 80-90% sync. Allow your client to manually sync after the snapshot has been implemented.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding-top: 10px;">
+                                    <b>If</b> you are unable to acquire connections to the Gridcoin network, attempt the following:
+                                    <ul>
+                                        <li>
+                                            Verify that your computer time is synced to your configured time server.
+                                        </li>
+                                        <li>
+                                            Investigate whether or not your ISP is blocking the P2P traffic.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding-top:10px;">
+                                    Regularly verify you're running the latest version of the gridcoin client, as there are frequent updates. Notices of updates are posted regularly on <a href="http://www.reddit.com/r/gridcoin">Reddit</a>/<a href="https://twitter.com/GridcoinNetwork">Twitter</a>/<a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin">IRC</a>.
+                                    <ul>
+                                        <li>
+                                            Both the 'Download Blocks' and 'Upgrade Client' features require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/prereqs-->
+        </div>
+</section>
+<!--/TEST AREA-->
+
+<!--TEST AREA-->
+<section style="padding-top:0px;background-color: #303030; padding-bottom: 15px;">
+        <div class="container" style="overflow:hidden;">
+            <div class="row" style="margin-top:10px;">
+                <div class='col-xs-12 col-sm-12 text-center' style="background-color: #282828;">
+                    <h4 style=" color:white; font-weight:bold;">
+                        Acquire a positive balance of Gridcoin prior to proceeding to step 4
+                    </h4>
+                </div>
+            </div>
+            <!--Contibute content-->
+            <div class="row">
+                <div class="col-xs-12" style="background-color: #282828;">
+                    <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
+                        <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                            <ul>
+                                <li>
+                                    In Gridcoin's Proof-of-Stake (POS) system, rewards are minted as yearly compound interest <a href="http://wiki.gridcoin.us/Proof-of-Research#Proof-of-Stake">(Read more about POS)</a>.
+                                </li>
+                                <li style="padding-top:10px;">
+                                    In order to mint yearly compound interest, a positive balance of GRC is required (This is the case for all POS cryptocurrencies).
+                                    <ul>
+                                        <li>
+                                            There are 960 blocks per day that you can attempt to stake. If you've got 1% of the total Gridcoin supply, you'll approximately stake 9.6 blocks per day.
+                                        </li>
+                                        <li>
+                                            The formula required to work out the quantity of coins to stake in a period of time is:
+                                            <ul>
+                                                <li>
+                                                    <code>
+                                                    EstimatedDaysUntilStake=(1/(UserBalance/NetworkCoinSupply))/960
+                                                    </code>
+                                                </li>
+                                                <li>
+                                                    <code>
+                                                    CoinsRequired=(1/(days*960))*NetworkCoinSupply
+                                                    </code>
+                                                </li>
+                                                <li>
+                                                    Note: The payout window is approximately 182.5 days. This may (most likely will) increase in the future. 
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Best practice is to stake 24/7, since you have an opportunity to stake each block (even if your probability is low).
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="padding-top:10px;">
+                                    To register your CPID in the DPOR system, you need to advertise a beacon to the network in the form of a smart transaction that costs a very small fee.
+                                </li>
+                                <li style="padding-top:10px;">
+                                    The DPOR system utilizes ResearchAge to securely reward users on top of their minted blocks.
+                                </li>
+                                <li style="padding-top:10px;">
+                                    Thusly, the rate at which you are rewarded for your BOINC work is identical to the rate at which you mint POS blocks (since you're rewarded for DPOR on top of your interest payment).
+                                </li>
+                                <li style="padding-top:10px;">
+                                    Note: Your balance does not affect the magnitude calculation, only the rate of payment.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/Contribute content-->
+
+                <div class="row" style="background-color: #282828;">
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 style="color: white; text-align: center;">Free Methods</h5>
+                        <ul style="text-align: center; list-style-type: none; padding-left: 0;color:#9A9899;">
+                            <li style="margin-bottom: 10px;">
+                                Acquire GRC from faucets online:
+                                <ul style="text-align: center; list-style-type: none; padding-left: 0;color:#9A9899;">
+                                    <li>
+                                        <a href="http://faucet.gridcoin.asia/">Gridcoin.asia Faucet</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://cryptospout.com/faucet/hourly_gridcoin_research_faucet.html">Cryptospout Gridcoin Faucet</a>
+                                    </li>
+                                    <!--<li>
+                                        <a href="http://www.cryptoblox.com/coins/GridcoinResearch/">CryptoBlox Gridcoin Faucet</a>
+                                    </li>-->
+                                </ul>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Visit <a href="http://uscore.net/">uscore.net</a>, receive GRC by registering for their regular Gridcoin/BOINC related newsletter.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Join the <a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin">#gridcoin</a> IRC channel, there are tip bots and good chat.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Join the <a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin-irpg">#gridcoin-irpg</a> IRC channel that occasionally pays out gridcoin, join in! 
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                Join the <a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin-games">#gridcoin-games</a> IRC channel, the games are a laugh & some pay out. 
+                            </li>
+                            <li style="margin-bottom: 10px; color:#9A9899;">
+                                Utilize cryptocurrency ASICs in the Eobot <a href="https://www.eobot.com/">multipool</a> to earn Gridcoin.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h5 style="text-align:left; color:white; text-align:center;">Paid Methods</h5>
+                        <ul style="text-align: center; list-style-type: none; padding-left: 0;color:#9A9899;">
+                            <li style="margin-bottom: 10px; color:#9A9899;">
+                                Purchase GRC from an exchange
+                                <ul style="list-style-type: none;">
+                                    <li>
+                                        <a href="https://holytransaction.com/">
+                                            <img src="../Images/Exchanges/Holy.png" alt="HolyTransactions" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bittrex.com/Market/?MarketName=BTC-GRC">
+                                            <img src="../Images/Exchanges/bittrex.png" alt="Bittrex" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://c-cex.com/?p=grc-btc">
+                                            <img src="../Images/Exchanges/ccex2.png" alt="c-cex" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://poloniex.com/exchange#btc_grc">
+                                            <img src="../Images/Exchanges/poloniex.png" alt="poloniex" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cryptopia.co.nz/Exchange?market=GRC_BTC">
+                                            <img src="../Images/Exchanges/Cryptopia2.png" alt="cryptopia" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.banx.io/trade?c=GRC&p=BTC">
+                                            <img src="../Images/Exchanges/Logo-Light.png" alt="BANX.IO" />
+                                        </a>
+                                    </li>                                  
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+        <!--Step 1-->
+
+        </div>
+</section>
+<!--/TEST AREA-->
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px; padding-top: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/boinc-install.htm">
+                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Projects</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/gridcoin-install.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 4</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS and DPOR</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->

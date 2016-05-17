@@ -1,0 +1,2261 @@
+---
+page.title: "Gridcoin - Step 1: BOINC Installation"
+---
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/boinc-install.htm">
+                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Projects</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/gridcoin-install.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 4</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS and DPOR</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->
+<!--TEST AREA-->
+<section style="padding-top: 0px; background-color: #303030; padding-bottom: 15px;">
+    <!--Start of GRC Feature section-->
+    <!--First row of features-->
+    <div class="container" style="overflow:hidden;">
+        <div class="row features" style="background-color: #282828;">
+            <div class="col-xs-12 col-sm-8">
+                <h4 style="text-align:left; color:white;">BOINC Introduction</h4>
+                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        First of all, if you just want to be an investor in Gridcoin, you can skip the following steps which explain how to set up a mining environment for Gridcoin. In that case, you will just need to <a href="/Guides/gridcoin-install.htm" title="Gridcoin Client installation">install the Gridcoin Wallet</a>.
+                    </li>
+
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        To get Distributed-Proof-of-Research (DPOR) payments, you will have to participate in one or more projects of the Berkeley Open Infrastructure for Network Computing (BOINC). BOINC is a platform for universities and research groups to upload small packages of their research. These small packages, known as workunits, contain parts of calculations and numerical problems which your home computer can solve. You can find more information <a href="http://boinc.berkeley.edu/" title="BOINC">here</a> and on <a href="http://en.wikipedia.org/wiki/Berkeley_Open_Infrastructure_for_Network_Computing" title="BOINC Wikipedia">Wikipedia</a>.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4 hidden-xs">
+                <img src="/Images/boinc_logo2.png" alt="BOINC Logo" />
+            </div>
+        </div>
+
+        <div class="row features" style="background-color: #282828;">
+            <!-- 16:9 aspect ratio -->
+            <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jX78dSvg8kg" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jX78dSvg8kg" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Step 1-->
+        <div class='row' style="margin-top:10px;">
+            <div class='col-xs-12 text-center' style="background-color: #282828;">
+                <h4 style=" color:white; font-weight:bold;">
+                    Step 1A: Install BOINC on the platform of your choice
+                </h4>
+            </div>
+        </div>
+        <!--/Step 1-->
+
+        <div class="row features">
+            <div class="col-xs-12" style="background-color: #282828; margin-top:10px;">
+                <!--Tab Panel-->
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <div class="row">
+                        <div class="col-xs-12" style="text-align:center;">
+                            <h6 style="color:white;">Select your operating system (click the buttons):</h6>
+                        </div>
+                        <div class="col-xs-12" style="text-align:center;">
+                            <ul class="nav nav-pills" role="tablist" style="display: inline-block; padding-top:25px;">
+                                <li role="presentation" class="active"><a href="#Windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+                                <li role="presentation"><a href="#OSX" aria-controls="OSX" role="tab" data-toggle="tab">OSX</a></li>
+                                <li role="presentation"><a href="#Linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+                                <li role="presentation"><a href="#FreeBSD" aria-controls="FreeBSD" role="tab" data-toggle="tab">FreeBSD</a></li>
+                                <li role="presentation"><a href="#DIY" aria-controls="DIY" role="tab" data-toggle="tab">Anonymous Platform</a></li>
+                                <li role="presentation"><a href="#Other" aria-controls="Other" role="tab" data-toggle="tab">Other</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="border:none;">
+                        <!--Windows-->
+                        <div role="tabpanel" class="tab-pane active" id="Windows">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 style="text-align:left; color:white;">Microsoft Windows</h4>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                <a class="external text" href="http://boinc.berkeley.edu/download.php" rel="nofollow">Download</a> the installer, then double-click the installer icon.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Most of the projects do not need the installation of VirtualBox, so the download link on the right side should be sufficient. More information about VirtualBox can be found <a href="http://boinc.berkeley.edu/wiki/VirtualBox" title="Virtualbox information">here</a>.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                You can set install options by clicking the "Advanced"
+                                                button on the configuration screen. The options are:
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                <ul>
+                                                    <li>
+                                                        <b>Program directory</b> - where BOINC's program
+                                                        files will be stored.
+                                                    </li>
+
+                                                    <li>
+                                                        <b>Data directory</b> - where BOINC's data files
+                                                        will be stored. This will be a hidden directory. Where
+                                                        it is is shown in the BOINC start up messages.
+                                                    </li>
+
+                                                    <li>
+                                                        <b>Use BOINC screensaver</b> - Use the BOINC
+                                                        screensaver for the current user.
+                                                    </li>
+
+                                                    <li>
+                                                        <b>Protected application execution</b> - Run
+                                                        project applications under an unprivileged account.
+                                                        This provides increased protection against faulty
+                                                        applications, but it prevents BOINC from using your
+                                                        GPU, and it may cause graphics to not work with older
+                                                        applications.
+                                                    </li>
+
+                                                    <li>
+                                                        <b>
+                                                            Allow all users on this computer to control
+                                                            BOINC
+                                                        </b> - If selected (<i>public mode</i>), all users
+                                                        can control BOINC (attach/detach projects, etc.). If
+                                                        not selected (<i>private mode</i>), the only users who
+                                                        can control BOINC are: the installing user, members of
+                                                        the Administrator group, and members of the
+                                                        'boinc_users' group. When other users run the BOINC
+                                                        Manager, they'll be shown a dialog saying to contact
+                                                        the administrator to add them to the 'boinc_users'
+                                                        group.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                To run BOINC invisibly, choose the "Protected application execution" option, then delete the BOINC shortcut from the <b>Start/Programs/BOINC</b> and <b>Start/Programs/Startup</b> menus (locate BOINC in each menu, right-click, select Delete). You can still run the BOINC Manager by going to <b>C:\Program Files\BOINC</b> and double-clicking on boincmgr.exe
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Windows-->
+                        <!--OSX-->
+                        <div role="tabpanel" class="tab-pane" id="OSX">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 style="text-align:left; color:white;">MAC OSX</h4>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                <a class="external text" href="http://boinc.berkeley.edu/download.php" rel="nofollow">Download</a> the installer.
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If your browser has not already done so, expand the
+                                                zip archive by double-clicking on it in the
+                                                Finder.
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Double-click on the <b>BOINC Installer</b>
+                                                application to run the installer, then follow the
+                                                prompts.
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Close the installer when it is finished. This will
+                                                automatically launch the BOINC Manager.
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If you want BOINC to be your screen saver, open
+                                                <b>System Preferences</b> from the Apple menu. Select
+                                                <b>Desktop &amp; Screen Saver</b> and select
+                                                <b>BOINCSaver</b>.
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The default location for <b>data directory</b> of
+                                                BOINC is <code>
+                                                    /Library/Application Support/BOINC
+                                                    Data
+                                                </code>. You may want to exclude this folder from
+                                                Time Machine backup system to prevent increase of
+                                                backup data size.
+                                            </li>
+
+                                            <li style="margin-bottom: 5px; text-align:left; color:#9A9899;">
+                                                Several <a href="http://boinc.berkeley.edu/trac/wiki/Tools_for_Mac_OS_X" title="Tools for Mac OS X">tools for Mac OS X</a> are available
+                                                to:
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify;padding-left: 5;">
+                                            <li style="margin-bottom: 5px; text-align:left; color:#9A9899;">
+                                                Automatically run BOINC as a daemon or system service at boot time.
+                                            </li>
+
+                                            <li style="margin-bottom: 5px; text-align:left; color:#9A9899;">
+                                                Improve security for stand-alone clients.
+                                            </li>
+
+                                            <li style="margin-bottom: 5px; text-align:left; color:#9A9899;">
+                                                Prevent BOINC Manager from launching automatically when selected users log in.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/OSX-->
+                        <!--Linux-->
+                        <div role="tabpanel" class="tab-pane" id="Linux">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 style="text-align:left; color:white;">Linux</h4>
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                You can install BOINC on a Linux computer in any of
+                                                three ways:
+                                                <ul>
+                                                    <li>
+                                                        Use the package management system of your Linux
+                                                        distribution;
+                                                    </li>
+
+                                                    <li>
+                                                        Use the "Berkeley installer" provided by BOINC (a
+                                                        self-extracting archive, not distro-specific);
+                                                    </li>
+
+                                                    <li>
+                                                        Build directly from source code.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <h5 style="text-align:left; color:white;">
+                                            Installing BOINC as a package
+                                        </h5>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Some Linux distributions (Fedora, Ubuntu, Debian,
+                                                Gentoo, possibly others) have BOINC packages that you can
+                                                install using your your distro's package manager. Compared
+                                                to using the Berkeley Installer, this has several
+                                                advantages:
+                                                <ul>
+                                                    <li>
+                                                        The resulting BOINC installation runs applications
+                                                        under an unprivileged account, and is therefore more
+                                                        secure.
+                                                    </li>
+
+                                                    <li>
+                                                        The BOINC binaries are dynamically linked,
+                                                        therefore they require less memory than the binaries in
+                                                        the Berkeley Installer.
+                                                    </li>
+
+                                                    <li>
+                                                        The package manager checks for dependencies and
+                                                        installs any additional libraries required to run BOINC
+                                                        on your Linux distro.
+                                                    </li>
+
+                                                    <li>
+                                                        BOINC is installed as a daemon (BOINC runs
+                                                        automatically at boot time even if no user is logged
+                                                        in).
+                                                    </li>
+
+                                                    <li>
+                                                        BOINC updates can be automated if your Linux distro
+                                                        has automated package update capability (most popular
+                                                        distros do)
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If you want to use the packages from repositories, take
+                                                into account that there are two packages that can be
+                                                installed separately, one for BOINC Client and another for
+                                                <a href="http://boinc.berkeley.edu/trac/wiki/BOINC_Manager" title="BOINC Manager">
+                                                    BOINC
+                                                    Manager
+                                                </a>. Only the client part is required but you will
+                                                likely want to install the manager as well unless you
+                                                intend to manage the client from a remote host.
+                                            </li>
+                                        </ul>
+
+                                        <h5 style="text-align:left; color:white;">
+                                            The Berkeley Installer
+                                        </h5>
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">The <i>Berkeley Installer</i> is available <a class="external text" href="http://boinc.berkeley.edu/download.php" rel="nofollow">directly from the BOINC project</a>. It is a self-extracting archive. This type of installation requires that you be familiar with the UNIX command-line interface. The download files have names like <code>boinc_7.2.23_i686-pc-linux-gnu.sh</code>. After downloading the file, you'll need to be in the directory where you download the archive to unpack it.</li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">Here is an example. The archive is downloaded to the desktop. It is then moved to the home directory (~). Finally BOINC is unpacked and installed. All of this can be done within a regular user account; root privileges are not needed.</li>
+                                            <li>
+                                                <pre>
+$ mv ~/Desktop/boinc_7.2.23_i686-pc-linux-gnu.sh ~
+$ cd ~
+$ sh boinc_7.2.23_i686-pc-linux-gnu.sh
+</pre>
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                This creates a directory called 'BOINC/' under the home directory containing the following files:
+                                                <ul>
+                                                    <li>
+                                                        boinc : The BOINC core client.
+                                                    </li>
+                                                    <li>
+                                                        boincmgr : <a class="mw-redirect" href="/wiki/The_BOINC_Manager" title="The BOINC Manager">The BOINC Manager</a>.
+                                                    </li>
+                                                    <li>
+                                                        boinccmd : A <a href="/wiki/Boinccmd_tool" title="Boinccmd tool">command line tool</a> for controlling a running core client.
+                                                    </li>
+                                                    <li>
+                                                        run_client : A script that cd's into the BOINC directory and runs the core client.
+                                                    </li>
+                                                    <li>
+                                                        run_manager : A script that cd's into the BOINC directory and
+                                                        runs the manager.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                To start the client manually enter the following
+                                                terminal commands:
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                <pre>
+$ cd ~/BOINC
+$ ./run_client --daemon
+$ ./run_manager
+</pre>
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The BOINC working directory can be moved elsewhere as
+                                                you like, and can even be renamed. One common choice is
+                                                <tt>~/.boinc</tt>, since files and directories with names
+                                                that begin with "dot" do not show up by default in Unix
+                                                directory listings. Whatever the name, everything related
+                                                to the BOINC client is contained within that directory, and
+                                                you should always run the client and the manager from that
+                                                working directory.
+                                            </li>
+                                        </ul>
+
+                                        <h5 style="text-align:left; color:white;">Build from Source</h5>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                BOINC is open source software. You can download the
+                                                source code and build your own BOINC client, if you so
+                                                desire. It's not as easy as either of the two methods
+                                                above, but it may turn out to be more interesting. And some
+                                                people might even be interested in contributing to the
+                                                ongoing BOINC development efforts.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If you want to build BOINC on Linux, you need to keep in
+                                                mind that BOINC consists of both client software and
+                                                project server software. To run BOINC on your own Linux
+                                                computer and contribute to existing projects you only need
+                                                to build the <b>client</b> software.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Instructions for building BOINC from source code are in
+                                                a separate developer's wiki. You will need to start with
+                                                these pages:
+                                                <ul>
+                                                    <li>
+                                                        <a class="external text" href="http://boinc.berkeley.edu/trac/wiki/SoftwarePrereqsUnix"
+                                                           rel="nofollow">Software Prerequisites for Linux</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="external text" href="http://boinc.berkeley.edu/trac/wiki/SourceCodeGit"
+                                                           rel="nofollow">Get BOINC source code</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="external text" href="http://boinc.berkeley.edu/trac/wiki/BuildSystem"
+                                                           rel="nofollow">Building BOINC on Unix</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                There is also useful documentation on other web
+                                                sites:
+                                                <ul>
+                                                    <li>
+                                                        <a class="external text" href="http://www.boinc-wiki.info/Building_the_BOINC_Client_Software"
+                                                           rel="nofollow">
+                                                            Building the BOINC Client
+                                                            Software
+                                                        </a> (from the Unofficial BOINC wiki)
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="external text" href="http://www.spy-hill.net/help/boinc/unix.html" rel="nofollow">
+                                                            Installing and Running the BOINC client
+                                                            on Unix
+                                                        </a> (from Spy Hill) - how to install and
+                                                        configure the client once you have built it
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="external text" href="http://www.spy-hill.net/help/boinc/boinc-on-linux.html"
+                                                           rel="nofollow">
+                                                            Building BOINC and BOINC
+                                                            Applications on Linux
+                                                        </a> (from Spy Hill) -
+                                                        building the client is a by-product of these old
+                                                        and rather long instructions which were mainly
+                                                        aimed at people who want to set up a BOINC project
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Linux-->
+                        <!--FreeBSD-->
+                        <div role="tabpanel" class="tab-pane" id="FreeBSD">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 style="text-align:left; color:white;">FreeBSD</h4>
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Go to /usr/ports/net/boinc-client/, open the Makefile in a text editor
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Change the
+                                                <code>CONFIGURE_ARGS=--disable-server</code> as
+                                                follows:
+
+                                                <ul>
+                                                    <li>
+                                                        On 32 bit FreeBSD change it to<br>
+                                                        <code>
+                                                            CONFIGURE_ARGS=--disable-server
+                                                            --with-boinc-platform=i686-pc-freebsd
+                                                            --with-boinc-alt-platform=i686-pc-linux-gnu
+                                                        </code>
+                                                    </li>
+
+                                                    <li>
+                                                        On 64 bit FreeBSD change it to<br>
+                                                        <code>
+                                                            CONFIGURE_ARGS=--disable-server
+                                                            --with-boinc-platform=x86_64-pc-freebsd
+                                                            --with-boinc-alt-platform=i686-pc-linux-gnu
+                                                        </code>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Do make install clean
+                                            </li>
+
+                                            <li>
+                                                If you receive an error like "ELF 0 ....", make sure you have installed
+                                                <ul>
+                                                    <li>
+                                                        /usr/ports/emulators/linux_base-fc4 or higher
+                                                    </li>
+                                                    <li>sysctl kern.elf32.fallback_brand=3</li>
+                                                </ul>
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                There is <a class="external text" href="http://people.freebsd.org/~pav/boinc.html" rel="nofollow">additional information</a> on installing, configuring and running BOINC on FreeBSD.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/FreeBSD-->
+                        <!--DIY-->
+                        <div role="tabpanel" class="tab-pane" id="DIY">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 style="text-align:left; color:white;">How to install BOINC on an Anonymous Platform</h4>
+
+                                        <!-- start content -->
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                BOINC applications are native-mode programs, so different versions are required for each platform (a "platform" is the combination of an operating system and a CPU architecture: e.g., Linux/Intel32). Each BOINC-based project has application versions for one or more platforms. When the BOINC client requests work from the project's server, the client tells the server its platform, and the server gives it the appropriate version.
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; padding-left: 0;">
+                                            <li style="list-style-type: none;text-align:left; color:#9A9899;">
+                                                This addresses the needs of most BOINC participants, but it's inadequate if:
+                                                <ul>
+                                                    <li style="text-align:left; color:#9A9899;">
+                                                        your computers have platforms not supported by BOINC or by the project;
+                                                    </li>
+                                                    <li style="text-align:left; color:#9A9899;">
+                                                        for security reasons, you want to only run executables you have compiled yourself;
+                                                    </li>
+                                                    <li style="text-align:left; color:#9A9899;">
+                                                        you want to optimize applications for particular architectures.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                To handle these cases, BOINC offers a mechanism called <b>anonymous platform</b>. This lets you build applications yourse1lf, or obtain them from a third party, rather than getting them from the project server. This can be used only for projects that make their source code available. As an example, see the <a class="external text" href="http://setiweb.ssl.berkeley.edu/sah_porting.php" rel="nofollow">instructions for SETI@home</a>.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If the BOINC client is not available for your platform, you must <a class="external text" href="http://boinc.berkeley.edu/trac/wiki/BuildSystem" rel="nofollow">build it yourself</a>.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                To use the anonymous platform mechanism for a particular project:
+                                                <ul>
+                                                    <li>
+                                                        Get the project's application source code and compile it, or download an executable from a third party.
+                                                    </li>
+                                                    <li>
+                                                        Run the BOINC client and attach to the project. This will create a 'project directory' (whose name is the project URL) in the BOINC directory. Exit the client. Put your executables in the project directory (Mac OS X users: see note below).
+                                                    </li>
+                                                    <li>
+                                                        Create a file <b>app_info.xml</b> in the project directory. This file describes the applications you have compiled or downloaded. Its format is described below.
+                                                    </li>
+                                                    <li>
+                                                        Run the BOINC client again. When it requests work from the scheduling server, it will report its platform as 'anonymous' and send a list of the applications you have supplied. The server will sends tasks for those applications.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Mac OS X note: When you add files inside the Mac's BOINC Data directory, you must set ownership and permissions properly. If you are using the BOINC Manager, simply run the BOINC Installer again. If you are running the Unix command-line version, run the Mac_SA_Secure.sh shell script; it is bundled with the command-line BOINC Client and also available at <a class="extiw" href="http://boinc.berkeley.edu/mac_build/Mac_SA_Secure.sh" title="boincw:mac build/Mac SA Secure.sh">Mac_SA_Secure.sh</a>.
+                                            </li>
+                                            <li>
+                                                To switch back to using the project-supplied executables, delete the app_info.xml file and reset the project.
+                                            </li>
+                                            <li>
+                                                You may want to check out the following email lists (e.g. the port may already exist):
+                                                <ul>
+                                                    <li>
+                                                        <a class="extiw" href="http://lists.ssl.berkeley.edu/mailman/listinfo/boinc_opt" title="mlist:boinc opt">boinc_opt@ssl.berkeley.edu</a>: discussion of porting and optimization of BOINC applications.
+                                                    </li>
+                                                    <li>
+                                                        <a class="extiw" href="http://lists.ssl.berkeley.edu/mailman/listinfo/boinc_dev" title="mlist:boinc dev">boinc_dev@ssl.berkeley.edu</a>: discussion of development and porting of BOINC software.
+                                                    </li>
+                                                    <li>
+                                                        <a class="extiw" href="http://lists.ssl.berkeley.edu/mailman/listinfo/boinc_cvs" title="mlist:boinc cvs">boinc_cvs@ssl.berkeley.edu</a>: checkins to the BOINC source are reported here.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h5 style="text-align:left; color:white;">
+                                            The format of app_info.xml
+                                        </h5>
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The file app_info.xml is an XML description of the applications you have compiled or downloaded. It has elements describing the files that make up the application, and describing the attributes of the application. The format is as follows:
+                                            </li>
+                                            <li>
+                                                <pre style="text-align:left;">
+&lt;app_info&gt;
+&lt;app&gt;
+&lt;name&gt;setiathome_enhanced&lt;/name&gt;
+&lt;/app&gt;
+&lt;file_info&gt;
+&lt;name&gt;setiathome_6.6_windows_intelx86.exe&lt;/name&gt;
+&lt;executable/&gt;
+&lt;/file_info&gt;
+&lt;file_info&gt;
+&lt;name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/name&gt;
+&lt;executable/&gt;
+&lt;/file_info&gt;
+&lt;app_version&gt;
+&lt;app_name&gt;setiathome_enhanced&lt;/app_name&gt;
+&lt;version_num&gt;660&lt;/version_num&gt;
+&lt;api_version&gt;6.1.0&lt;/api_version&gt;
+[
+&lt;coproc&gt;
+&lt;type&gt;CUDA&lt;/type&gt;
+&lt;count&gt;1&lt;/count&gt;
+&lt;/coproc&gt;
+]
+[ &lt;plan_class&gt;cuda&lt;/plan_class&gt; ]
+[ &lt;flops&gt;X&lt;/flops&gt; ]
+[ &lt;avg_ncpus&gt;X&lt;/avg_ncpus&gt; ]
+[ &lt;max_ncpus&gt;X&lt;/max_ncpus&gt; ]
+[ &lt;cmdline&gt;args&lt;/cmdline&gt; ]
+&lt;file_ref&gt;
+&lt;file_name&gt;setiathome_6.6_windows_intelx86.exe&lt;/file_name&gt;
+&lt;main_program/&gt;
+&lt;/file_ref&gt;
+&lt;file_ref&gt;
+&lt;file_name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/file_name&gt;
+&lt;open_name&gt;graphics_app&lt;/open_name&gt;
+&lt;/file_ref&gt;
+&lt;/app_version&gt;
+&lt;/app_info&gt;
+</pre>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                <h5 style="text-align:left; color:white;">
+                                                    app_info.xml's elements include:
+                                                </h5>
+                                                <ul>
+                                                    <li>
+                                                        <b>&lt;version_num&gt;</b>: the application's version number.
+                                                    </li>
+                                                    <li>
+                                                        <b>&lt;api_version&gt;</b>: the BOINC version number of the API the app uses.
+                                                    </li>
+                                                    <li>
+                                                        <b>&lt;coproc&gt;</b>: describes a coprocessor requirement. The <b>type</b> element can refer to <a href="http://boinc.berkeley.edu/trac/wiki/Client_configuration#Options" title="Client configuration"> a GPU type specified in cc_config.xml</a>.
+                                                    </li>
+                                                    <li>
+                                                        <b>&lt;flops&gt;</b>: the expected FLOPS of the application (for multi-thread and coprocessor apps).
+                                                    </li>
+                                                    <li>
+                                                        <b>&lt;avg_ncpus&gt;</b>: the average number of CPUs used by the app.
+                                                    </li>
+                                                    <li>
+                                                        <b>&lt;max_ncpus&gt;</b>: the max number of CPUs used by the app.
+                                                    </li>
+                                                    <li>
+                                                        Generally this should match the corresponding elements in a scheduler reply message (sched_reply_URL.xml), except
+                                                        that the &lt;platform&gt; element should be removed.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/DIY-->
+
+                        <div role="tabpanel" class="tab-pane" id="Other">
+                            <!--Other-->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 style="text-align:left; color:white;">Other sources of BOINC client software</h4>
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The following sites offer downloads of BOINC software and
+                                                BOINC project applications, compiled for various platforms.
+                                                These downloads are not endorsed by BOINC or any BOINC project;
+                                                use them at your own risk.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                You can use these with BOINC's <a href="http://boinc.berkeley.edu/wiki/Anonymous_platform" title="Anonymous_platform in BOINC user documentation (MediaWiki)">
+                                                    anonymous
+                                                    platform mechanism
+                                                </a>.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Read <a class="wiki" href="/trac/wiki/CoreClient">
+                                                    Installing
+                                                    the command-line client
+                                                </a>.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <table class="table table-hover table-condensed table-bordered" style="background-color:#303030;">
+                                            <thead>
+                                                <tr>
+                                                    <td><strong>Site</strong></td>
+
+                                                    <td><strong>Platforms</strong></td>
+
+                                                    <td><strong>Programs available</strong></td>
+                                                </tr>
+                                            </thead>
+
+                                            <tr>
+                                                <td style="text-align: left">
+                                                    <a class="ext-link" href="http://www.dotsch.de/boinc">
+                                                        <span class="icon">​</span>http://www.dotsch.de/boinc
+                                                    </a> (Lars
+                                                    Bausch)
+                                                </td>
+
+                                                <td style="text-align: right">
+                                                    AIX(Power/PowerPC)<br>
+                                                    DragonflyBSD(i386)<br>
+                                                    FreeBSD(Alpha, i386, IA64, SPARC64, x64)<br>
+                                                    HP-UX 10.x/11.x/11i (PARISC+IA64)<br>
+                                                    IRIX 6.5.x<br>
+                                                    Linux(Alpha, HPPA, IA64, MIPS Big Endian+Little
+                                                    Endian(EL), PPC/Power, Playstation 3 (PS3), Power64,
+                                                    SPARC, zSeries)<br>
+                                                    MacOS X Intel+PPC<br>
+                                                    NetBSD(i386, MIPS Little Endian(EL), PowerPC/Power,
+                                                    x86_64)<br>
+                                                    OpenBSD(Alpha, i386, SPARC64, x64)<br>
+                                                    Solaris(SPARC+x86)<br>
+                                                    TRU64
+                                                </td>
+
+                                                <td style="text-align: right">
+                                                    BOINC client, SETI@home
+                                                    Enhanced Multibeam, SETI@home Enhanced and
+                                                    Astropulse
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.lb.shuttle.de/apastron/boincDown.shtml">
+                                                        <span class="icon">​</span>Stefan Urbat
+                                                    </a>
+                                                </td>
+
+                                                <td>
+                                                    Solaris: SPARC, AMD64 (Opteron), x86, i686<br>
+                                                    Linux: Alpha, SPARC, AMD64 (Opteron), PowerPC, Itanium,
+                                                    s390<br>
+                                                    HP-UX: PA RISC and Itanium/IA64 (includes BOINC
+                                                    Manager)<br>
+                                                    Tru64: Alpha<br>
+                                                    AIX: Power4 and later<br>
+                                                    OpenBSD: x86<br>
+                                                    NetBSD: x86<br>
+                                                    FreeBSD: x86, Alpha
+                                                </td>
+
+                                                <td>BOINC core client, SETI@home</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.mikrocomp.hu/seti/">
+                                                        <span class="icon">​</span>SETI@SummoneR.mikrocomp.hu
+                                                    </a>
+                                                </td>
+
+                                                <td>OpenBSD: amd64 (x86_64)</td>
+
+                                                <td>
+                                                    BOINC core client and SETI@home Enhanced
+                                                    non-graphical
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.pperry.f2s.com/downloads.htm">
+                                                        <span class="icon">
+                                                        </span>SETI-Linux
+                                                    </a>
+                                                </td>
+
+                                                <td>
+                                                    Linux: i686, Athlon-XP, AMD64, Pentium 3.<br>
+                                                    Some Links to other Platforms
+                                                </td>
+
+                                                <td>BOINC, SETI@home</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://boinc.vawacon.ch/">
+                                                        <span class="icon">​</span>SOLARIS@x86
+                                                    </a>
+                                                </td>
+
+                                                <td>Solaris 9 on Intel x86</td>
+                                                <td>BOINC core client, SETI@home</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://lunatics.kwsn.net/">
+                                                        <span class="icon">​</span>lunatics.kwsn.net
+                                                    </a>
+                                                </td>
+
+                                                <td>Linux and Windows/x86</td>
+                                                <td>
+                                                    BOINC and SETI@home. Also, <a href="http://lunatics.kwsn.net/index.php?op=Articles">How-Tos for BOINC and SETI@home compilation for Linux and Windows.</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://alioth.debian.org/projects/pkg-boinc/">alioth.debian.org</a>; installation instructions at <a href="http://wiki.debian.org/BOINC#Installation">wiki.debian.org</a>
+                                                </td>
+
+                                                <td>
+                                                    Debian and Ubuntu GNU/Linux: i386, amd64<br>
+                                                    Debian GNU/Linux: alpha, armel, hppa, ia64, m68k, mips,
+                                                    mipsel, powerpc, s390 and sparc<br>
+                                                    Debian GNU/kFreeBSD: kfreebsd-amd64 and
+                                                    kfreebsd-i386<br>
+                                                    Debian GNU/Hurd: hurd-i386
+                                                </td>
+
+                                                <td>
+                                                    <a class="ext-link" href="http://packages.debian.org/boinc-client">
+                                                        <span class="icon">
+                                                        </span>BOINC core client
+                                                    </a>, <a class="ext-link"
+                                                             href="http://packages.debian.org/boinc-manager">
+                                                        <span class="icon">
+                                                        </span>BOINC manager
+                                                    </a> and <a class="ext-link"
+                                                                href="http://packages.debian.org/boinc-app-seti">
+                                                        <span class="icon">
+                                                        </span>SETI@home
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.nekochan.net/nekoware/index.php?path=current/">
+                                                        <span class="icon">​</span>nekochan.net
+                                                    </a>
+                                                </td>
+
+                                                <td>SGI Irix 6.5.22 and above</td>
+
+                                                <td>
+                                                    <a class="ext-link" href="http://www.nekochan.net/nekoware/current/neko_boinc_client-5.4.9.tardist">
+                                                        <span class="icon">​</span>BOINC client 5.4.9
+                                                    </a>
+                                                    and <a class="ext-link" href="http://www.nekochan.net/nekoware/current/neko_setiathome_enhanced-5.12.tardist">
+                                                        <span class="icon">​</span>SETI@home enhanced
+                                                        5.12
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>FreeBSD.org</td>
+
+                                                <td>FreeBSD on a variety of hardware.</td>
+
+                                                <td>
+                                                    <a class="ext-link" href="http://www.freebsd.org/cgi/ports.cgi?query=boinc-client&amp;stype=all">
+                                                        <span class="icon">​</span>BOINC core client
+                                                    </a>,
+                                                    <a class="ext-link" href="http://www.freebsd.org/cgi/ports.cgi?query=boinc-setiathome&amp;stype=all">
+                                                        <span class="icon">​</span>SETI@home
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.godefroy.t.freesurf.fr/seti/">
+                                                        <span class="icon">
+                                                        </span>SETI@home and BOINC on Linux
+                                                    </a>
+                                                </td>
+
+                                                <td>Mandrake Linux</td>
+
+                                                <td>BOINC and SETI@home (graphical versions)</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://boincpe.schreiter.info/">
+                                                        <span class="icon">​</span>BOINCpe
+                                                    </a>
+                                                </td>
+
+                                                <td>
+                                                    Run BOINC from a RAM disk, on machines with as
+                                                    little as 256 MB RAM
+                                                </td>
+
+                                                <td>BOINC core client and Manager</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://forums.macnn.com/showthread.php?t=266339">
+                                                        <span class="icon">
+                                                        </span>macnn.com
+                                                    </a>
+                                                </td>
+
+                                                <td>Mac OS X</td>
+
+                                                <td>BOINC core client, SETI@home app</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://www.rechenaugust.de/boinc/">
+                                                        <span class="icon">​</span>www.rechenaugust.de/boinc
+                                                    </a>
+                                                </td>
+
+                                                <td>32-bit and 64-bit Linux OpenSuse 11</td>
+
+                                                <td>6.10.58 and 6.12.x BOINC clients</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://download.opensuse.org/repositories/home:/enzokiel/openSUSE_11.3_Update/">
+                                                        <span class="icon">​</span>http://download.opensuse.org/repositories/home:/enzokiel/openSUSE_11.3_Update/
+                                                    </a>
+                                                </td>
+
+                                                <td>32-bit and 64-bit Linux OpenSUSE 11.3</td>
+
+                                                <td>6.12.x BOINC client/ManagerGui Repository</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a class="ext-link" href="http://web.os2power.com/yuri/SetiAtHome/">
+                                                        <span class="icon">
+                                                        </span>Yuri Dario
+                                                    </a>
+                                                </td>
+
+                                                <td>OS/2 Warp, eComStation</td>
+
+                                                <td>BOINC client and SETI@home</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--/-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Tab Panel-->
+            </div>
+        </div>
+
+        <!--Step 2 banner-->
+        <div class='row' style="margin-bottom:25px; padding-top:10px;">
+            <div class='col-sm-12' style="background-color: #282828; text-align:center;">
+                <h4 style=" color:white; font-weight:bold;">
+                    Step 1B: Choose BOINC projects from the whitelist
+                </h4>
+            </div>
+        </div>
+        <!--/Step 2 banner-->
+            <div class="row features" style="background-color: #282828;">
+                <div class="col-xs-12 col-sm-4">
+                    <h5 style="color:white;">Whitelist justification</h5>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            The whitelist was created to increase security and to focus user's resources on active projects.
+                        </li>
+                        <li>
+                            Without a whitelist, there was the potential for malicious BOINC projects being created for users to solomine for GRC, or potentially to infect gridcoin users with malware.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <h5 style="color:white;">Whitelist discussion/scrutiny</h5>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            Please join the community in maintaining a secure <a href="https://cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">BOINC whitelist in the dedicated thread</a>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <h5 style="color:orange;">Please note:</h5>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            You will <b>only</b> be rewarded for whitelisted BOINC projects.
+                        </li>
+                        <li>
+                            Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <!--Step 2 content-->
+        <div class="row features">
+            <div class="col-sm-12 hidden-xs" style="background-color: #282828; margin-top:10px;">
+
+                <!--Tab Panel-->
+                <div role="tabpanel">
+                    <div class="col-xs-12" style="text-align:center;">
+                        <h6 style="color:white;">Select the category of BOINC project most applicable to your computer capabilities:</h6>
+                    </div>
+                    <!-- Nav tabs -->
+                    <div style="text-align:center;">
+                        <ul class="nav nav-pills" role="tablist" style="display: inline-block; padding-top:25px;">
+                            <li role="presentation"><a href="#Nvidia" aria-controls="Nvidia" role="tab" data-toggle="tab">Nvidia GPU Projects</a></li>
+                            <li role="presentation"><a href="#AMD" aria-controls="AMD" role="tab" data-toggle="tab">AMD GPU Projects</a></li>
+                            <li role="presentation"><a href="#Multi-GPU" aria-controls="Multi-GPU" role="tab" data-toggle="tab">Multi-GPU Projects</a></li>
+                            <li role="presentation"><a href="#CPU" aria-controls="CPU" role="tab" data-toggle="tab">CPU Projects</a></li>
+                            <!--<li role="presentation"><a href="#Sensor" aria-controls="Sensor" role="tab" data-toggle="tab">Sensor Projects</a></li>-->
+                            <li role="presentation"><a href="#ASIC" aria-controls="ASIC" role="tab" data-toggle="tab">ASIC Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="border:none;">
+                        <!--Nvidia-->
+                        <div role="tabpanel" class="tab-pane" id="Nvidia">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <!--Nvidia-->
+                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
+                                    <thead style="background-color:#383736;">
+                                        <tr>
+                                            <th style="width:20%;">
+                                                Project
+                                            </th>
+                                            <th style="width:40%;">
+                                                Goal
+                                            </th>
+                                            <th style="width:20%;">
+                                                Sponsor
+                                            </th>
+                                            <th style="width:20%;">
+                                                Compatability
+                                            </th>
+                                            <th style="width:20%;">
+                                                Quick Links
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color:#3E3D3C;">
+                                        <tr>
+                                            <td>
+                                                <a href="http://asteroidsathome.net/boinc/">Asteroids@home</a>
+                                            </td>
+                                            <td>
+                                                Asteroid research - it uses photometric measurements of asteroids observed by professional big all-sky surveys as well as 'backyard' astronomers. The data is processed using the lightcurve inversion method and a 3D shape model of an asteroid together with the rotation period and the direction of the spin axis are derived.
+                                            </td>
+                                            <td>
+                                                <a href="http://www.cuni.cz/UKENG-1.html">Charles University in Prague</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/freebsd.png" style="width:24px; height:24px;" alt="freebsd" />
+                                            </td>
+                                            <td>
+                                                <a href="http://asteroidsathome.net/boinc/team_display.php?teamid=2218" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://asteroidsathome.net/boinc/team_members.php?teamid=2218" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--/Nvidia-->
+                            </div>
+                        </div>
+                        <!--/Nvidia-->
+                        <!--AMD-->
+                        <div role="tabpanel" class="tab-pane" id="AMD">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
+                                    <thead style="background-color:#383736;">
+                                        <tr>
+                                            <th style="width:20%;">
+                                                Project
+                                            </th>
+                                            <th style="width:40%;">
+                                                Goal
+                                            </th>
+                                            <th style="width:20%;">
+                                                Sponsor
+                                            </th>
+                                            <th style="width:20%;">
+                                                Compatability
+                                            </th>
+                                            <th style="width:20%">
+                                                Quick Links
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color:#3E3D3C;">
+                                        <tr>
+                                            <td>
+                                                <a href="http://milkyway.cs.rpi.edu/milkyway/">Milkyway@home</a>
+                                            </td>
+                                            <td>
+                                                Creation of a 3d map of the milkyway galaxy using data gathered by the Sloan Digital Sky Survey. This project enables research in both astroinformatics and computer science.
+                                            </td>
+                                            <td>
+                                                <a href="http://www.rpi.edu/">Rensselaer Polytechnic Institute</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            </td>
+                                            <td>
+                                                <a href="http://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://milkyway.cs.rpi.edu/milkyway/team_members.php?teamid=6566" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://boinc.fzk.de/poem/">POEM@HOME</a>
+                                            </td>
+                                            <td>Models protein folding using Anfinsen's dogma</td>
+                                            <td>
+                                                <a href="http://www.int.kit.edu/wenzel.php">Karlsruhe Institute of Technology</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://boinc.fzk.de/poem/team_display.php?teamid=3147" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://boinc.fzk.de/poem/team_members.php?teamid=3147" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--/AMD-->
+                        <!--/Multi-GPU-->
+                        <div role="tabpanel" class="tab-pane" id="Multi-GPU">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
+                                    <thead style="background-color:#383736;">
+                                        <tr>
+                                            <th style="width:20%;">
+                                                Project
+                                            </th>
+                                            <th style="width:40%;">
+                                                Goal
+                                            </th>
+                                            <th style="width:20%;">
+                                                Sponsor
+                                            </th>
+                                            <th style="width:20%;">
+                                                Compatability
+                                            </th>
+                                            <th style="width:20%">
+                                                Quick Links
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color:#3E3D3C;">
+                                        <tr>
+                                            <td>
+                                                <a href="http://boinc.thesonntags.com/collatz/">Collatz Conjecture</a>
+                                            </td>
+                                            <td>Attempting to disprove the <a href="http://en.wikipedia.org/wiki/Collatz_conjecture">Collatz Conjecture</a></td>
+                                            <td>Private</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://boinc.thesonntags.com/collatz/team_display.php?teamid=3029" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://boinc.thesonntags.com/collatz/team_members.php?teamid=3029" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.gpugrid.net/">GPUgrid</a>
+                                            </td>
+                                            <td>
+                                                Full-atom molecular simulations of proteins
+                                            </td>
+                                            <td>
+                                                Private Sponsors, accept donations in Bitcoin
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/virtualbox.png" style="width:24px; height:24px;" alt="virtualbox" />
+                                            </td>
+                                            <td>
+                                                <a href="https://www.gpugrid.net/team_display.php?teamid=3493" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.gpugrid.net/team_members.php?teamid=3493" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://einstein.phys.uwm.edu/">Einstein@home</a>
+                                            </td>
+                                            <td>Search for spinning neutron (pulsars) stars using data from the LIGO gravitational-wave detectors, the Arecibo radio telescope, and the Fermi gamma-ray satellite</td>
+                                            <td>Univ. of Wisconsin - Milwaukee, Max Planck Institute</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://einstein.phys.uwm.edu/team_display.php?teamid=13630" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://einstein.phys.uwm.edu/team_members.php?teamid=13630" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.primegrid.com/">PrimeGrid</a>
+                                            </td>
+                                            <td>Search for prime numbers. Primes play a central role in the cryptographic systems which are used for computer security. Through the study of prime numbers it can be shown whether current security schemes are sufficiently secure.</td>
+                                            <td>Private, supported by Rackspace</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.primegrid.com/team_display.php?teamid=4469" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.primegrid.com/team_members.php?teamid=4469" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://setiathome.berkeley.edu/">SETI@home</a>
+                                            </td>
+                                            <td>Search for Extraterrestrial Intelligence (SETI)</td>
+                                            <td>Berkeley University, California</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://setiathome.berkeley.edu/team_display.php?teamid=145340" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://setiathome.berkeley.edu/team_members.php?teamid=145340" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--/Multi-GPU-->
+                        <!--CPU-->
+                        <div role="tabpanel" class="tab-pane" id="CPU">
+                            <div class="col-xs-12 col-sm-12">
+                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
+                                    <thead style="background-color:#383736;">
+                                        <tr>
+                                            <th style="width:20%;">
+                                                Project
+                                            </th>
+                                            <th style="width:40%;">
+                                                Goal
+                                            </th>
+                                            <th style="width:20%;">
+                                                Sponsor
+                                            </th>
+                                            <th style="width:20%;">
+                                                Compatability
+                                            </th>
+                                            <th style="width:20%">
+                                                Quick Links
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color:#3E3D3C;">
+                                        <tr>
+                                            <td>
+                                                <a href="http://volunteer.cs.und.edu/csg/">Gridcoin Finance</a>
+                                            </td>
+                                            <td>Gridcoin Finance is a research and development project that uses volunteers computing power to perform financial simulations, analysis of the block chain, consolidate humanitarian reports, calculate marketing strategies, perform stock option analysis, harvest business intelligence, and assimilate top level results for the crowdsourced web pages.</td>
+                                            <td>
+                                            Gridcoin
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            </td>
+                                            <td>
+                                                <a href="http://finance.gridcoin.us/team_display.php?teamid=5" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://finance.gridcoin.us/team_members.php?teamid=5&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://volunteer.cs.und.edu/csg/">Citizen Science Grid</a>
+                                            </td>
+                                            <td>Umbrella project for DNA@Home, SubsSet Sum@Home, and Wildlife@Home.</td>
+                                            <td>
+                                            University of North Dakota
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            </td>
+                                            <td>
+                                                <a href="http://csgrid.org/csg/team_display.php?teamid=154" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://csgrid.org/csg/team_members.php?teamid=154&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://burp.renderfarming.net/">BURP</a>
+                                            </td>
+                                            <td>A publicly distributed system for rendering 3D animations.</td>
+                                            <td>
+                                                ?
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            </td>
+                                            <td>
+                                                <a href="http://burp.renderfarming.net/team_display.php?teamid=1285" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://burp.renderfarming.net/team_members.php?teamid=1285&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.distributeddatamining.org/">Distributed Data Mining</a>
+                                            </td>
+                                            <td>Various fields of Simulation, Data Analysis and Machine Learning.</td>
+                                            <td>
+                                                <a href="www.distributeddatamining.org/ScientificPartners">Multiple Sponsors</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.distributeddatamining.org/team/2176" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.distributeddatamining.org/DistributedDataMining/team_members.php?teamid=2176&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.worldcommunitygrid.org/">World Community Grid</a>
+                                            </td>
+                                            <td>Solve aids, cancer, disease, etc.</td>
+                                            <td>Sponsored by the IBM responsibility initiative</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            </td>
+                                            <td>
+                                                <a href="https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="https://secure.worldcommunitygrid.org/team/viewTeamMemberDetail.do?sort=points&teamId=BBNGDQS832" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://yafu.myfirewall.org/">YAFU</a>
+                                            </td>
+                                            <td>Factorize numbers of 70-130 digit length which are needed to bring <a href="https://en.wikipedia.org/wiki/Aliquot_sequence">Aliquot Sequences</a> to a <a href="https://www.rechenkraft.net/aliquot/AllSeq.html">size of 130.</a></td>
+                                            <td>
+                                                ?
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://yafu.myfirewall.org/yafu/team_display.php?teamid=260" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://yafu.myfirewall.org/yafu/team_members.php?teamid=260&offset=0&sort_by=total_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://atlasathome.cern.ch/">ATLAS@Home</a>
+                                            </td>
+                                            <td><a href="http://atlas.ch/">ATLAS Experiment Simulations</a></td>
+                                            <td><a href="http://home.web.cern.ch/">CERN</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/virtualbox.png" style="width:24px; height:24px;" alt="virtualbox" />
+                                            </td>
+                                            <td>
+                                                <a href="http://atlasathome.cern.ch/team_display.php?teamid=1869" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://atlasathome.cern.ch/team_members.php?teamid=1869" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://findah.ucd.ie/">FIND@Home</a>
+                                            </td>
+                                            <td>docking simulations on malaria proteins</td>
+                                            <td><a href="http://www.ucd.ie/casl/">UCD CASL</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://findah.ucd.ie/team_display.findphp?teamid=2198" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://findah.ucd.ie/team_members.php?teamid=2198" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://climateprediction.net/">climate prediction</a>
+                                            </td>
+                                            <td>Climate modelling and prediction</td>
+                                            <td><a href="http://www.ox.ac.uk/">University of Oxford</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://climateapps2.oerc.ox.ac.uk/cpdnboinc/team_display.php?teamid=10427" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://climateapps2.oerc.ox.ac.uk/cpdnboinc/team_members.php?teamid=10427" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://aerospaceresearch.net/constellation/">constellation</a>
+                                            </td>
+                                            <td>Various aerospace related sciences and engineering</td>
+                                            <td>Rechenkraft.net, DGLR, Selfnet, and Shack</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://aerospaceresearch.net/constellation/team_display.php?teamid=2177" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://aerospaceresearch.net/constellation/team_members.php?teamid=2177" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://convector.fsv.cvut.cz/">convector</a>
+                                            </td>
+                                            <td><a href="http://convector.fsv.cvut.cz//52_bar_truss.pdf">52 bar truss discrete optimization problem</a></td>
+                                            <td>Czech Technical University in Prague</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://convector.fsv.cvut.cz/team_display.php?teamid=172" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://convector.fsv.cvut.cz/team_members.php?teamid=172" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.cosmologyathome.org/">Cosmology@Home</a>
+                                            </td>
+                                            <td><a href="http://teacherlink.ed.usu.edu/tlnasa/reference/ImagineDVD/Files/imagine/docs/science/know_l1/dark_matter.html">Darkmatter</a>/Universe Model Research</td>
+                                            <td>Department of Astronomy at the <a href="http://www.illinois.edu/">University of Illinois at Urbana-Champaign</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.cosmologyathome.org/team_display.php?teamid=3637" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.cosmologyathome.org/team_members.php?teamid=3637" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr><!--
+                                        <tr>
+                                            <td>
+                                                <a href="http://home.edges-grid.eu/home/">EDGeS@Home</a>
+                                            </td>
+                                            <td>Molecular docking simulations; Umbrella Project for Biovel, Zeta Research Group</td>
+                                            <td>The project received funding from the European Union Seventh Framework Programme (FP7/2007-2013) and is part of the International Desktop Grid Federation and the European Grid Infrastructure</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/virtualbox.png" style="width:24px; height:24px;" alt="virtualbox" />
+                                            </td>
+                                            <td>
+                                                <a href="http://home.edges-grid.eu/home/team_display.php?teamid=2354" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://home.edges-grid.eu/home/team_members.php?teamid=2354" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>-->
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.enigmaathome.net/">Enigma@Home</a>
+                                            </td>
+                                            <td>Cracking original <a href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma</a> messages</td>
+                                            <td>Private</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.enigmaathome.net/team_display.php?teamid=2937" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.enigmaathome.net/team_members.php?teamid=2937" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://boinc.gorlaeus.net/">Leiden Classical</a>
+                                            </td>
+                                            <td>Simulations of various molecules and atoms in a classical mechanics environment. In contrast to other projects, Leiden Classical allows volunteers, students and other scientists to submit their personal calculations to the grid.</td>
+                                            <td><a href="http://www.leiden.edu/">Leiden University</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://boinc.gorlaeus.net/team_display.php?teamid=1629" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://boinc.gorlaeus.net/team_members.php?teamid=1629" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://lhcathomeclassic.cern.ch/sixtrack/">LHC@Home</a>
+                                            </td>
+                                            <td>Accelerator Physics</td>
+                                            <td><a href="http://home.web.cern.ch/">CERN</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://lhcathomeclassic.cern.ch/sixtrack/team_display.php?teamid=8128" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://lhcathomeclassic.cern.ch/sixtrack/team_members.php?teamid=8128" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://lhcathome2.cern.ch/vLHCathome/">vLHCathome</a>
+                                            </td>
+                                            <td>Full-fledged LHC event physics simulations</td>
+                                            <td><a href="http://home.web.cern.ch/">CERN</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/virtualbox.png" style="width:24px; height:24px;" alt="virtualbox" />
+                                            </td>
+                                            <td>
+                                                <a href="http://lhcathome2.cern.ch/vLHCathome/team_display.php?teamid=2429" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://lhcathome2.cern.ch/vLHCathome/team_members.php?teamid=2429" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.malariacontrol.net/">Malariacontrol</a>
+                                            </td>
+                                            <td>Research focusing on the control of Malaria</td>
+                                            <td><a href="http://www.gatesfoundation.org/Pages/home.aspx">The Bill and Melinda Gates Foundation</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.malariacontrol.net/team_display.php?teamid=4059" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.malariacontrol.net/team_members.php?teamid=4059" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://mindmodeling.org/">MindModeling@home</a>
+                                            </td>
+                                            <td>Utilize computational cognitive process modeling to better understand the human mind</td>
+                                            <td>University of Dayton and Wright State University</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://mindmodeling.org/team_display.php?teamid=2415" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://mindmodeling.org/team_members.php?teamid=2415" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://escatter11.fullerton.edu/nfs/">NFS@Home</a>
+                                            </td>
+                                            <td>Lattice sieving step in Number Field Sieve factorization of large integers. Many public key algorithms, including the RSA algorithm, rely on the fact that the publicly available modulus cannot be factored. If it is factored, the private key can be easily calculated.</td>
+                                            <td>California State University Fullerton</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/freebsd.png" style="width:24px; height:24px;" alt="freebsd" />
+                                            </td>
+                                            <td>
+                                                <a href="http://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://escatter11.fullerton.edu/nfs/team_members.php?teamid=2353" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://numberfields.asu.edu/NumberFields/">NumberFields@home</a>
+                                            </td>
+                                            <td><a href="http://numberfields.asu.edu/NumberFields/ProjectDescription.html">Research in number theory</a> Number theorists can mine the data for interesting patterns to help them formulate conjectures about number fields.</td>
+                                            <td>Arizona State University, school of Mathematics</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://numberfields.asu.edu/NumberFields/team_display.php?teamid=2069" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://numberfields.asu.edu/NumberFields/team_members.php?teamid=2069" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://boinc.bakerlab.org/rosetta/">Rosetta@Home</a>
+                                            </td>
+                                            <td>Protein structure prediction that may ultimately lead to finding cures for some major human diseases. <a href="http://boinc.bakerlab.org/rosetta/rah_medical_relevance.php">Disease Related Research</a></td>
+                                            <td><a href="http://www.washington.edu/">University of Washington</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            </td>
+                                            <td>
+                                                <a href="http://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://boinc.bakerlab.org/rosetta/team_members.php?teamid=12575" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://sat.isa.ru/pdsat/">SAT@home</a>
+                                            </td>
+                                            <td>Discrete functions inversion problems, discrete optimization, bio-informatics, etc that can be effectively reduced to <a href="http://en.wikipedia.org/wiki/Boolean_satisfiability_problem">Boolean satisfiability problem</a></td>
+                                            <td>Institute for System Dynamics and Control Theory and Institute for Information Transmission Problems, Russian Academy of Science</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://sat.isa.ru/pdsat/team_display.php?teamid=2059" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://sat.isa.ru/pdsat/team_members.php?teamid=2059" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://pogs.theskynet.org/pogs/">theSkyNet POGS</a>
+                                            </td>
+                                            <td>Astronomy Research. Combine the spectral coverage of GALEX, Pan-STARRS1, and WISE to generate a multi-wavelength UV-optical-NIR galaxy atlas for the nearby Universe. Calculate physical parameters such as: star formation rate, stellar mass of the galaxy, dust attenuation, and total dust mass of a galaxy; on a pixel-by-pixel basis using spectral energy distribution fitting techniques</td>
+                                            <td>International Centre for Radio Astronomy Research (ICRAR), a joint venture of Curtin University and The University of Western Australia</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            </td>
+                                            <td>
+                                                <a href="http://pogs.theskynet.org/pogs/team_display.php?teamid=2020" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://pogs.theskynet.org/pogs/team_members.php?teamid=2020" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://www.rechenkraft.net/yoyo/">yoyo@home</a>
+                                            </td>
+                                            <td>Brings existing distributed computing projects to the Boinc world using the Boinc Wrapper technology</td>
+                                            <td>Supported by Rechenkraft.net e.V. , accept private Donations, also accept Bitcoin</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                                <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            </td>
+                                            <td>
+                                                <a href="http://www.rechenkraft.net/yoyo/team_display.php?teamid=1475" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://www.rechenkraft.net/yoyo/team_members.php?teamid=1475" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <!--
+                                        <tr>
+                                            <td>
+                                                <a href="#">Universe@home test</a>
+                                            </td>
+                                            <td>Physics and Astronomy</td>
+                                            <td><a href="http://en.uw.edu.pl/">University of Warsow</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="#" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="#" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!--/CPU-->
+                        <!--Sensor-->
+                        <div role="tabpanel" class="tab-pane" id="Sensor">
+                            <table class="table table-hover table-condensed table-bordered" style="width:100%;">
+                                <thead style="background-color:#383736;">
+                                    <tr>
+                                        <th style="width:20%;">
+                                            Project
+                                        </th>
+                                        <th style="width:40%;">
+                                            Goal
+                                        </th>
+                                        <th style="width:20%;">
+                                            Sponsor
+                                        </th>
+                                        <th style="width:20%;">
+                                            Compatability
+                                        </th>
+                                        <th style="width:20%">
+                                            Quick Links
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color:#3E3D3C;">
+                                    <tr>
+                                        <td>
+                                            <a href="http://qcn.stanford.edu/sensor/">Quake Catcher Network</a>
+                                        </td>
+                                        <td>The aim of the project is to detect seismic events via attached (internal laptop or external USB) accelerometers; which are then reported to the system servers at Stanford.</td>
+                                        <td>
+                                            <a href="http://www.stanford.edu/">Stanford University</a> and <a href="http://www.ucr.edu/">University of California at Riverside</a>
+                                        </td>
+                                        <td>
+                                            <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
+                                            <img src="/Images/Platforms/android.png" style="width:24px; height:24px;" alt="android" />
+                                            <img src="/Images/Platforms/raspberry.png" style="width:24px; height:24px;" alt="raspberry pi" />
+                                        </td>
+                                        <td>
+                                            <a href="http://qcn.stanford.edu/sensor/team_display.php?teamid=4616" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                            <a href="http://qcn.stanford.edu/sensor/team_members.php?teamid=4616" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://radioactiveathome.org/boinc/">Radioactive@Home</a>
+                                        </td>
+                                        <td>Distributed radiation detection network. It creates a free and constantly updated map of radiation available for all people, by gathering information about gamma radiation using using sensors connected to computers of volunteers willing to participate in the project. A specific sensor is needed to run this project.</td>
+                                        <td>Private</td>
+                                        <td>
+                                            <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            <img src="/Images/Platforms/raspberry.png" style="width:24px; height:24px;" alt="raspberry pi" />
+                                        </td>
+                                        <td>
+                                            <a href="http://radioactiveathome.org/boinc/team_display.php?teamid=2005" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                            <a href="http://radioactiveathome.org/boinc/team_members.php?teamid=2005" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--/Sensor-->
+                        <!--ASIC-->
+                        <div role="tabpanel" class="tab-pane" id="ASIC">
+                            <table class="table table-hover table-condensed table-bordered" style="background-color:#383736; width:100%;">
+                                <thead>
+                                    <tr>
+                                        <th style="width:20%;">
+                                            Project
+                                        </th>
+                                        <th style="width:40%;">
+                                            Goal
+                                        </th>
+                                        <th style="width:20%;">
+                                            Sponsor
+                                        </th>
+                                        <th style="width:20%;">
+                                            Compatability
+                                        </th>
+                                        <th style="width:20%">
+                                            Quick Links
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color:#3E3D3C;">
+                                    <tr>
+                                        <td>
+                                            <a href="#">Bitcoin Utopia</a>
+                                        </td>
+                                        <td>Mining Bitcoin on a large Pool and dedicating the rewards as charity towards other BOINC projects</td>
+                                        <td>Private, collect 10% of all Mined Bitcoins</td>
+                                        <td>
+                                            <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                            <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                        </td>
+                                        <td>
+                                            <a href="http://www.bitcoinutopia.net/bitcoinutopia/team_display.php?teamid=1888" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                            <a href="http://www.bitcoinutopia.net/bitcoinutopia/team_members.php?teamid=1888" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--/ASIC-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="background-color: #282828;">
+                <h6 style="color:white; margin-top:5px;">Confused by the above?</h6>
+                <ul style="padding-top:5px;">
+                    A more thorough (and possibly more up-to-date) breakdown of the whitelisted projects can be found here:
+                    <li>
+                        <a href="http://wiki.gridcoin.us/Current_BOINC_Whitelist">Gridcoin wiki: Whitelist page</a>
+                    </li>
+                    <li>
+                        <a href="/Guides/whitelist.htm">Gridcoin.us Whitelist page</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/Step 2 content-->
+        <!--Step 3 banner-->
+        <div class='row' style="margin-top:10px;">
+            <div class='col-xs-12 text-center' style="background-color: #282828;">
+                <h4 style=" color:white; font-weight:bold;">
+                    Step 1C: Sign up to chosen BOINC projects
+                </h4>
+            </div>
+        </div>
+        <!--/Step 3 banner-->
+        <!--Step 3 banner-->
+        <div class='row' style="margin-top:10px;">
+            <div class='col-xs-12 text-center' style="background-color: #282828;">
+                <h6 style="color:white; text-align:left;">
+                    Foreword prior to proceeding:
+                </h6>
+                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        The email address is the link which connects your computer’s BOINC work to Gridcoin, so it is important to use the same email address in every BOINC project as well as in the configuration file of Gridcoin which will be explained later.
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        Each project has to be connected to Gridcoin by joining the team Gridcoin in every project.
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        Researchers are only rewarded for contributing towards <b>whitelisted</b> BOINC projects!
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        Try to match projects to meet your computer's capabilities. If you do not have ASICs, you should not try to participate in ASIC projects like Bitcoin Utopia. Similarly, if you do not have a GPU, don’t participate in GPU projects like Asteroids@home. The Gridcoin whitelist shows the specific requirements of each project.
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                        There are two methods of adding BOINC projects; these are to manually setup each project one at a time, or to use an account manager service to speed up the process.
+                    </li>
+                    <li style="text-align:left; color:#9A9899;">
+                        Pros of using an account manager:
+                        <ul>
+                            <li>
+                                Single Sign On: One password for BOINC to remember.
+                            </li>
+                            <li>
+                                Manage computer resources & configuration from one location.
+                            </li>
+                            <li>
+                                Manage all BOINC projects from one management portal online.
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="text-align:left; color:#9A9899;">
+                        Cons of using an account manager:
+                        <ul>
+                            <li>
+                                Single Sign On: If your account manager's credentials are compromised, then all of your boinc project accounts will be compromised.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/Step 3 banner-->
+        <!--Step 3 content-->
+        <div class="row features">
+            <div class="col-sm-12" style="background-color: #282828; margin-top:10px;">
+
+                <!--Tab Panel-->
+                <div role="tabpanel">
+                    <div class="col-xs-12" style="text-align:center;">
+                        <h6 style="color:white;">Select your prefered BOINC registration method:</h6>
+                    </div>
+                    <!-- Nav tabs -->
+                    <div style="text-align:center;">
+                        <ul class="nav nav-pills" role="tablist" style="display: inline-block; margin-top:25px;">
+                            <li role="presentation"><a href="#ManualSetup" aria-controls="ManualSetup" role="tab" data-toggle="tab">Manual Setup</a></li>
+                            <li role="presentation" class="active"><a href="#AccountManager" aria-controls="AccountManager" role="tab" data-toggle="tab">Account Managers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content" style="background-color: #282828; border:none;">
+                        <!--Manually Adding a Project-->
+                        <div role="tabpanel" class="tab-pane" id="ManualSetup">
+                            <div class="container">
+                                <div class="row" style="margin-bottom:5px;">
+                                    <h4 style="text-align:left; color:white;">Manually setting up projects</h4>
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-1.png">
+                                            <img alt="BOINC add project 1" class="aligncenter size-medium wp-image-209" height="182" src="../Images/boinc-client_files/BOINC-add-project-1-300x182.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                As an example, we will use the project <em>Leiden Classical</em>, a CPU only project.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                After starting the BOINC Manager, you are asked to add a project or use an account manager. Select the 'add a project' radio button.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-2.png">
+                                            <img alt="BOINC add project 2" class="aligncenter size-medium wp-image-211" height="181" src="../Images/boinc-client_files/BOINC-add-project-2-300x181.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                After clicking “Next“ we choose the desired project.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-3.png">
+                                            <img alt="BOINC add project 3" class="aligncenter size-medium wp-image-212" height="181" src="../Images/boinc-client_files/BOINC-add-project-3-300x181.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The following step, after clicking “Next”, is to open an account or login to an existing one. For some projects you have to register directly on the homepage of the project. Remember, the email address has to be the same for every project if you want to be paid in Gridcoins.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-4.png">
+                                            <img alt=" boinc add project 4" class="aligncenter size-medium wp-image-213" height="146" src="../Images/boinc-client_files/BOINC-add-project-4-300x146.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                The project is added now and will start with research-calculations if workunits are available. After pressing the “Finish” button the project homepage should open. If not, go to the project homepage (you can definitely find it via Google). You have to find the “Your Account” button and press it. The project homepage of a different project can look different, but should have the same functions!
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-5.png">
+                                            <img alt="Boinc login to account" height="89" src="../Images/boinc-client_files/BOINC-add-project-5-300x89.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Log in to your account.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-6.png">
+                                            <img alt="finding team gridcoin" class="aligncenter size-medium wp-image-215" height="202" src="../Images/boinc-client_files/BOINC-add-project-6-300x202.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                After login, you have to join the Gridcoin team. Do this by clicking “find a team”.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-7.png">
+                                            <img alt="search for gridcoin" class="size-medium wp-image-216" height="254" src="../Images/boinc-client_files/BOINC-add-project-7-300x254.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Search for Gridcoin.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-8.png">
+                                            <img alt="join team gridcoin" class="aligncenter size-medium wp-image-217" height="94" src="../Images/boinc-client_files/BOINC-add-project-8-300x94.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Click on team Gridcoin and then “Join”.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-9.png">
+                                            <img alt="BOINC add project 9" class="aligncenter size-medium wp-image-218" height="300" src="../Images/boinc-client_files/BOINC-add-project-9-205x300.png" width="205">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                Repeat these steps for all projects you want to participate in.
+                                            </li>
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                In the simple view of the BOINC Manager the team is not displayed.
+                                                To see it change to the “Advanced View”.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+                                <!--Row-->
+                                <div class="row" style="margin-bottom:5px;">
+                                    <!--LEFT-->
+                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
+                                        <a href="../Images/boinc-client_files/BOINC-add-project-10.png">
+                                            <img alt="BOINC add project 10" class="aligncenter size-medium wp-image-219" height="93" src="../Images/boinc-client_files/BOINC-add-project-10-300x93.png" width="300">
+                                        </a>
+                                    </div>
+                                    <!--/LEFT-->
+                                    <!--RIGHT-->
+                                    <div class="col-xs-12 col-sm-6">
+                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                                If the team is not displayed yet, click on the project and then
+                                                on Update.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--/RIGHT-->
+                                </div>
+                                <!--/ROW-->
+
+                                <div class="row" style="margin-bottom:5px;">
+                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                                        <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                            If you have added a whitelisted project and joined team Gridcoin, your computer should now be researching.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Manually Adding a Project-->
+                        <!--Account Manager Section-->
+                        <div role="tabpanel" class="tab-pane active" id="AccountManager">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12" style="margin-top:10px; text-align:left;">
+                                        <h4 style="text-align:left; color:white;">BOINC Account Manager Guide</h4>
+                                        <ul style="text-align: justify; padding-left: 0;">
+                                            <li style="color:#9A9899;">
+                                                Create a BAM! account <a href="http://boincstats.com/en/bam/register">here</a>.
+                                            </li>
+                                            <li style="color:#9A9899;">Wait for the activation mail, and activate your account.</li>
+                                            <li style="color:#9A9899;">Login to BAM! (the login box is at the top-right of <a href="http://boincstats.com">this page</a>).</li>
+                                            <li style="color:#9A9899;">Navigate to "<a href="http://boincstats.com/en/bam/signup/">Sign-up for projects</a>" in the 'BAM!' menu and click the 'Create account' icon (<img src="/Images/bam-icon.png" alt="icon" />) for every project you want to join.</li>
+                                            <li style="color:#9A9899;">
+                                                Follow these steps to join team Gridcoin in each project:
+                                                <ul>
+                                                    <li>Navigate to the <a href="http://boincstats.com/en/bam/teams/">Team</a> page.</li>
+                                                    <li>For each project you wish to contribute towards, tick the checkbox in the 3rd column.</li>
+                                                    <li>Click the green 'Change/Join team' button at the bottom of the list of projects.</li>
+                                                    <li>Enter 'Gridcoin' in the popup text field & click the 'Search' button.</li>
+                                                    <li>The page will change to just the checked projects, and will show their respective results for the team 'Gridcoin' search query in a dropdown box.</li>
+                                                    <li>Select team 'Gridcoin' in each dropdown menu & click the green 'Change/join team' button.</li>
+                                                    <li>Click the orange 'back to overview' button.</li>
+                                                </ul>
+                                            </li>
+                                            <li style="color:#9A9899;">Navigate to "<a href="http://boincstats.com/en/bam/projects/">My projects</a>" in the 'BAM!' menu and select the projects that you want all your new hosts to attach to by click the "Attach new host by default" icon.</li>
+                                            <li style="color:#9A9899;">Attach your BOINC client to BAM!. The instructions are <a href="http://boincstats.com/en/bam/attachInstruction">here</a>.</li>
+                                            <li style="color:#9A9899;">The client will make two connections to BAM!. It will connect to all projects that are set to default attach.</li>
+                                            <li style="color:#9A9899;">Done! There are more options in BAM! to fine-tune settings and hosts. Browse around and read the <a href="http://boincstats.com/en/page/faq">F.A.Q.</a> for details.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/Account Manager Section-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/Step 3 content-->
+    </div>
+    <!--End of GRC Feature Section-->
+</section>
+<!--/TEST AREA-->
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px; padding-top: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/boinc-install.htm">
+                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Projects</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/gridcoin-install.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 4</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS and DPOR</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->

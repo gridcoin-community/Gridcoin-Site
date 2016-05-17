@@ -1,0 +1,110 @@
+﻿---
+title: "Gridcoin - Security Guides"
+layout: layout
+---
+<!--Intro-->
+<section style="background-color: #282828; padding-bottom:0px;">
+    <div class="container">
+        <div class='row'>
+            <div class='col-xs-12 text-center'>
+                <h4 style="color:white; font-weight:bold;">Security Guide</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Intro-->
+<!-- FAQ Content -->
+<section style="min-height:100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 alert alert-warning" style="text-align:center; margin-top:10px;">
+                <h5>
+                    This majority of this guide is tailored for Windows users.<br />
+                    Guides for Linux and MAC coming soon!
+                </h5>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your wallet</h4>
+                <p>
+                    If your wallet.dat file is stolen, and it's unencrypted & you have no backup of the file, it's the equivelant of cash being stolen; there's no way of getting it back unless you catch the theif. Thusly, you must take proper precautions to prevent the loss/theft of your gridcoin.
+                </p>
+                <h5>Wallet security recommendations:</h5>
+                <b>NOTE: PAPER WALLET INCOMPATIBLE WITH RESEARCH CLIENT/COINS!</b>
+                <ul>
+                    <li>Create a <a href="http://walletgenerator.net/">paper wallet</a> and store it in a waterproof, safe environment.</li>
+                    <li>Backup the wallet.dat file on encrypted USB sticks and store them in a safe.</li>
+                    <li>Alternatively, store an encrypted zip/rar/volume on any form of storage medium and keep it safe.</li>
+                    <li>Regularly check that your backups work - if you encrypt your wallet then forget the pass, you're in trouble..</li>
+                    <li>Read <a href="https://en.bitcoin.it/wiki/Securing_your_wallet">this wallet security guide</a> (for bitcoin, but relevant to gridcoin to some degree).</li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your browser</h4>
+                <p>
+                    One of the most common attack vectors is through your web browser, so take precautionary measures to minimize risk of loss of funds/exposure to malware.
+                </p>
+                <h5>Non-extensive browser security recommendation:</h5>
+                <ul>
+                    <li>Stop using internet explorer, switch to <a href="https://www.mozilla.org/en-US/firefox/desktop/">Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, or one of the many variants of the two.</li>
+                    <li>Do not use the same password for multiple sites.</li>
+                    <li>Use long passwords! <a href="https://xkcd.com/936/">the longer, the more difficult to crack.</a></li>
+                    <li>Use 2 factor authentication like a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a>, or <a href="https://www.google.com/landing/2step/">GoogleAuth</a> on any website that offers it; it's a second layer of defence against phishing.</li>
+                    <li>If you've been sent a shortened link, either use a link preview service or flat up don't click it!</li>
+                    <li>Disable any extensions that have been installed by 3rd party software - java/toolbars/etc, minus antivirus.</li>
+                    <li>Update all plugins (flash/java/etc)</li>
+                    <li>Use duckduckgo instead of google: <a href="http://duckduckgo.com/">DuckDuckGo</a></li>
+                </ul>
+
+                <h5>Firefox extension recommendation for extra security:</h5>
+                <ul>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-edge/?src=search">Adblock edge</a>: Eliminate adverts from the internet; adverts often are malicious! ABP has 'whitelisted' adverts.</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=hp-dl-mostpopular">NoScript</a>: Nerfs scripts on the internet; you have to manually allow sites to run scripts. Can help prevent malicious scripts running.</li>
+                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/policeman/?src=cb-dl-toprated">Policeman</a>: Alternative to noscript. Nerfs scripts on the internet.</li>
+                    <li><a href="https://www.eff.org/https-everywhere">Https everywhere</a>: An extension made by the EFF; Requests a https connection on all/most sites.</li>
+                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/requestpolicy/">requestpolicy</a>: Protects against CSRF (Controls cross-site requests).</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-controller/">Cookie Controller</a>: Manage site cookie permissions (Browse & remove cookies).</li>
+                    <li><a href="https://code.google.com/p/https-finder/">https-finder</a>: Detects valid https pages as you browse.</li>
+                    <li><a href="https://addons.mozilla.org/En-us/firefox/addon/refcontrol/">RefControl</a>: Hides/Forges your referers</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/?src=search">Lastpass</a>: A secure password manager. Combine with a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a> and you'll have incredibly secure authentication online! Highly reccomended!</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/cryptocat/">Cryptocat</a>: Encrypted chat.</li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your communications</h4>
+                <p>
+                    It's crucial that your private communications online are not intercepted by any malicious entity; privacy is a human right, take yours back!
+                </p>
+                <ul>
+                    <li><a href="http://arstechnica.com/tech-policy/2014/12/newly-published-nsa-documents-show-agency-could-grab-all-skype-traffic/">Do <b>not</b> use skype!</a></li>
+                    <li>Use a VPN to evade censorship, MITM attacks & totalitarian governments. <a href="http://torrentfreak.com/which-vpn-services-take-your-anonymity-seriously-2014-edition-140315/">Find the best vpn for you.</a></li>
+                    <li>Encrypt your private emails <a href="https://www.wefightcensorship.org/article/sending-encrypted-emails-using-thunderbird-and-pgphtml.html">using PGP.</a></li>
+                    <li>Always attempt to use multi-party encryption if performing group chat/conferences. At the very least, password protect chat rooms.</li>
+                    <li>Use OTR for 1-1 secure communications <a href="https://securityinabox.org/en/pidgin_main">(Pidgin + OTR)</a>, keep an eye out for multi-party OTR in the future.</li>
+                    <li>Don't share <b>ANY</b> of your personal information online. Use aliases.</li>
+                    <li>Use encrypted texting apps e.g. <a href="https://guardianproject.info/apps/chatsecure">Chatsecure</a></li>
+                    <li>Keep usage of social media to a minimum; if you're not paying for the service, <b><u>you're the product being sold.</u></b></li>
+                    <li>Do not use an email provider based in USA, instead use a <a href="http://prxbx.com/email/">secure alternative (link to list)</a>.</li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your computer</h4>
+                <p>
+                    Most of these tips are a given, but it's good to remember to remember that they are quite important to adhere to.
+                </p>
+                <ul>
+                    <li><a href="https://secunia.com/vulnerability_scanning/personal/">Use Secunia PSI</a> to keep software constantly up to date.</li>
+                    <li>Keep your operating system up to date (windows updates/ubuntu apt-get upgrade/fedora yum -y upgrade/etc) & dont run a cracked version of your operating system (Good way to infect your pc & be a victim of ID theft).</li>
+                    <li>Keep usage of cracked/pirated software/games to an absolute minimum; keygens and pirate software can be (usually are) a source of malware.</li>
+                    <li>If you must install insecure software, run it in a <a href="http://www.sandboxie.com/">sandbox</a>!</li>
+                    <li>Install an antivirus program (<a href="http://www.bitdefender.co.uk/">Bitdefender</a> paid versions are good!). Scan all files that you download from the internet, especially from forums & P2P sites/apps.</li>
+                    <li>Keep offline backups of your important data.</li>
+                    <li>Install theft prevention software on mobile devices, examples are: <a href="https://preyproject.com/">Prey</a>, <a href="http://lojack.absolute.com/en">Lojack</a>, etc.</li>
+                    <li>Encrypt your devices' storage, especially if you've got a mobile wallet.</li>
+                    <li>Do not share any of your account credentials to anyone, don't write them down, and don't store them insecurely on your pc.</li>
+                    <li>If you want to securely store passwords on your pc (not browser), use <a href="">KeePass</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of FAQ Content -->

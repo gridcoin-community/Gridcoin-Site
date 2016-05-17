@@ -1,0 +1,1706 @@
+﻿---
+title: "Gridcoin - Terminology"
+layout: layout
+---
+<!--Intro-->
+<section style="background-color: #282828; padding-bottom:0px;">
+    <div class="container">
+        <div class='row'>
+            <div class='col-xs-12 text-center'>
+                <h4 style="color:white; font-weight:bold;">Terminology Guide</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Intro-->
+<!-- Terminology Content -->
+<section style="padding-top:10px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <!--Content-->
+                <table class="table table-hover table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;" colspan="2"><h4>BOINC Terminology</h4></th>
+                        </tr>
+                        <tr>
+                            <th>Word</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Abort</td>
+                        <td>
+                            To stop a task crunching. This will effectively stop it, delete it and wait to be reported as being aborted by user. In your stderr text on the server it will show as "Aborted by User". No credit will be given for this task.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Abort Transfer</td>
+                        <td>
+                            As above, this aborts the task. It will NOT stop the upload or download of a task!!
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aborted by User</td>
+                        <td>
+                            The message you get when you abort a task, both in Boinc Manager/Tasks and on the project.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Account Key</td>
+                        <td>
+                            A random 32 character hexadecimal key assigned to your email address, made by the project.<br />
+                            With this key you can log in at all times on a projects server, to change your password etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Account Manager</td>
+                        <td>
+                            This is a web site that simplifies participating in BOINC, especially if you are new to BOINC, or if you have several computers, participate in several projects, or like to learn about new projects.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Activities Suspended</td>
+                        <td>
+                            You will see this message in Boinc Manager/Tasks when you have Suspended/Snoozed BOINC.<br />
+                            Resume from the Activity menu.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Allow New Tasks</td>
+                        <td>
+                            Formerly known as No New Work.<br />
+                            In Boinc Manager/Projects, when you select a project and press the No New Tasks button, it changes to this new button. The button shows the option you have, not the state it is in.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alpha project </td>
+                        <td>
+                            A project that isn't available to the main public.<br />
+                            Example given, the BOINC Alpha project is invite only.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alpha version</td>
+                        <td>
+                            The first stage in testing of the BOINC core client or a project's application.<br />
+                            The group of people testing it is small. It's not given out to the general public until most bugs have been removed through testing.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AM</td>
+                        <td>
+                            Abbreviation for Account Manager.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AMD</td>
+                        <td>
+                            Advanced Micro Devices - A CPU manufacturer.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Anonymous platform</td>
+                        <td>
+                            BOINC applications, and the BOINC core client, are native-mode programs, so different versions are required for each platform (a 'platform' is the combination of an operating system and a processor type: e.g., Linux/Intel).<br />
+                            <br />
+                            The BOINC core client is available for common platforms (Windows/Intel, Linux/Intel, Mac OS/X. etc.). BOINC-based projects compile program versions for some or all of these platforms and place them on their servers. Typically, you download the BOINC core client version for your platform. When the core client requests work from the project's scheduling server, the client tells the server its platform, and the server instructs it to download the appropriate program version.<br />
+                            <br />
+                            This addresses the needs of most BOINC participants, but it's inadequate if:<br />
+                            <ul>
+                                <li>your computers have platforms not supported by BOINC or by the project;</li>
+                                <li>for security reasons, you want to only run executables you have compiled yourself;</li>
+                                <li>you want to optimize applications for particular architectures.</li>
+                            </ul>
+                            To handle these cases, BOINC lets you make the client software yourself, or obtain it from a third party, rather than downloading it from its 'official' source. This applies to both the core client and to project-specific applications.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AP (1)</td>
+                        <td>
+                            Abbreviation for anonymous platform.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AP/ap (2)</td>
+                        <td>
+                            Abbreviation for Astropulse.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>App_info.xml</td>
+                        <td>
+                            A file listing a non-standard application. Either you downloaded an optimized application or you compiled it yourself.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assimilator</td>
+                        <td>
+                            The assimilator handles workunits that are 'completed': that is, that have a canonical task or for which an error condition has occurred. Handling a successfully completed task might involve record tasks in a database and perhaps triggering the generation of more work.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Astropulse</td>
+                        <td>
+                            Astropulse is a new type of SETI. It expands on the original SETI@home, but does not replace it. The original SETI@home searches for narrowband signals, as does a conventional AM or FM radio. Astropulse, on the other hand, listens for broader-band, short-time pulses.<br />
+                            <br />
+                            See for more information: <a href="http://setiathome.berkeley.edu/ap_faq.php">Astropulse @ Seti</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attach</td>
+                        <td>
+                            To tell BOINC you want to crunch for a specific project, you attach to that project through Boinc Manager or via an account manager.<br />
+                            By attaching to a project, BOINC will download the project's application(s) and at least one task to work on.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Backoff</td>
+                        <td>
+                            The time between scheduler requests. Also called deferral.<br />
+                            Increases at random yet exponentially, with a minimum of 1 minute and a maximum of 1 day (86,400 seconds).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BAM!</td>
+                        <td>
+                            Abbreviation for BOINCstats Account Manager.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Benchmarks</td>
+                        <td>
+                            Testing the CPU's capabilities/performance.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Beta project</td>
+                        <td>
+                            The second stage in testing, after Alpha testing a project's application.<br />
+                            The group of people testing it has grown. It's not given out to the general public until most bugs have been removed through testing.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BM</td>
+                        <td>
+                            Abbreviation for BOINC Manager.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC</td>
+                        <td>
+                            Abbreviation for Berkeley Open Infrastructure for Network Computing.<br />
+                            Usually used to point out the whole BOINC package: daemon, manager and screen saver.<br />
+                            Never used to point out the project's application.<br />
+                            <br />
+                            Also named BOINC Core Client.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Boinccmd</td>
+                        <td>
+                            The BOINC command tool (boinccmd.exe) provides a command-line interface to a running BOINC core client.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC Daemon</td>
+                        <td>
+                            The actual BOINC program.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC Database</td>
+                        <td>
+                            MySQL database program that stores the available platforms, applications, users, hosts and a description of the results and work units.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC Manager</td>
+                        <td>
+                            A Graphical User Interface (GUI) program with which you can check and control the use of your computer's disk, network and processor resources, check Boinc specific and project messages and running tasks. It is normally started at boot time and starts the Boinc daemon.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC screen saver</td>
+                        <td>
+                            A computer program originally designed to conserve the image quality of computer displays by blanking the screen or filling them with moving images or patterns when the computers are not in use. Today, screensavers are primarily used for entertainment or security purposes.<br />
+                            <br />
+                            Not all projects include a screen saver in their science application.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BOINC Simple GUI</td>
+                        <td>
+                            A simpler set up GUI for the Boinc Manager.<br />
+                            It has some simple preferences build in.<br />
+                            It is also fully skinnable.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BRP</td>
+                        <td>
+                            Binary Radio Pulsar. A search method used at Einstein@Home. Uses data from the Arecibo dish.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BSG</td>
+                        <td>
+                            Abbreviation for BOINC Simple GUI.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cache</td>
+                        <td>
+                            <ul>
+                                <li>In BOINC: Other word for the tasks in queue.</li>
+                                <li>On a CPU; Level 1, 2 or 3 cache: fast memory onboard the CPU for storing much used memory pages.</li>
+                                <li>On a computer; General: a collection of data duplicating original values stored elsewhere or computed earlier. Once the data is stored in the cache, future use can be made by accessing the cached copy rather than re-fetching or recomputing the original data, so that the average access time is lower.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Canonical</td>
+                        <td>
+                            As in canonical results: accepted results.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CC</td>
+                        <td>
+                            Abbreviation for Core Client.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>cc_config.xml</td>
+                        <td>
+                            A configuration file available for alpha/beta testing of the BOINC client.<br />
+                            The flags inside this file add helpful debug information to the std*.txt files, which can then be sent to the developers.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Checkpoint/Checkpointing</td>
+                        <td>
+                            The writing to disk of a temporary marker on how far the result is crunched.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Claimed Credit</td>
+                        <td>
+                            When your computer completes a result (upload and report) it claims credit for the amount of work it has done. Whether or not you get the claim depends on if the project validates the results.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Client Error</td>
+                        <td>
+                            Any errors made by the client, or by the user. Aborting results is a client error.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Client_state.xml</td>
+                        <td>
+                            The general status file for BOINC. It contains information on all the projects you are attached to, your preferences settings, proxy settings etc. Without it BOINC will start as new, download new work and all.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cobblestones</td>
+                        <td>
+                            The original name for Credits.<br />
+                            Named after Jeff Cobb, one of the Seti administrators.<br />
+                            <br />
+                            A Cobblestone is 1/100 day of CPU Time on a Reference Computer that does:<br />
+                            <ul>
+                                <li>
+                                    1,000 double-precision MIPS based on the Whetstone Benchmark.
+                                </li>
+                                <li>
+                                    1,000 VAX MIPS based on the Dhrystone Benchmark.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Communication deferred</td>
+                        <td>
+                            When the BOINC daemon cannot communicate with any of the projects attached, you get this message. It isn't an error message. It's informational, telling you also how long it will take before it will try to communicate with the project again. See Backoff and Defer/Deferal/Deferring.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Computer ID</td>
+                        <td>
+                            The Identification Number for the computer you run BOINC with on the project you are attached to.<br />
+                            See also HostID.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Connect to Network about every</td>
+                        <td>
+                            With this setting in your General Preferences, you regulate how long the hiatus is between communications with the project, to ask for more work. It doesn't set the amount of work. It depends on the deadline of some projects if you get work when set too high. Default is 0.1 day, maximum is 10 days.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Core Client</td>
+                        <td>
+                            Another name for the BOINC daemon, the BOINC executable.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPID</td>
+                        <td>
+                            Abbreviation for Cross Project IDentification.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>
+                            Abbreviation for Central Processing Unit. This is the computer's main component, without it the computer won't start up or work.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPU Efficiency</td>
+                        <td>
+                            This number reflects the amount of CPU used for BOINC application graphics, CPU usage by non-BOINC applications and I/O activity by the BOINC application.<br />
+                            <br />
+                            Minimum 0, maximum 1. Multiply by 100 to get to a percentage.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPU Throttling</td>
+                        <td>
+                            This pauses crunching for 1 or more seconds per every 10 seconds, depending on what percentage you set it to. Read <a href="http://boincfaq.mundayweb.com/index.php?view=45">CPU Usage Percentage, how does it work?</a> for more information.
+                            Available in BOINC 5.6.5 and above.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPU Time</td>
+                        <td>The amount of time the CPU has taken so far to crunch a result.</td>
+                    </tr>
+                    <tr>
+                        <td>Credit/Credits</td>
+                        <td>A reward for the computations your computer performs for a project.</td>
+                    </tr>
+                    <tr>
+                        <td>Cross Project Identification</td>
+                        <td>A random generated 32 character hexadecimal key that identifies you on other projects if you use the same email address. Is mainly used for the statistics sites.</td>
+                    </tr>
+                    <tr>
+                        <td>Crunching</td>
+                        <td>Describes the CPU's computation activity that the science application does on a result.</td>
+                    </tr>
+                    <tr>
+                        <td>Database Purger</td>
+                        <td>The database purger removes workunit and result database entries when they are no longer needed, first writing them to XML log files. This bounds the size of these tables, so that they act as a working set rather than an archive. This allows database management operations (such as backups and schema changes) to be done quickly.</td>
+                    </tr>
+                    <tr>
+                        <td>DCF</td>
+                        <td>Abbreviation for Duration Correction Factor.</td>
+                    </tr>
+                    <tr>
+                        <td>Deadline</td>
+                        <td>
+                            The "Sell by date" of a result. If you return a result after its deadline has passed, you will not get credit. An exception to this rule is the CPDN project which allows for results to come in late.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Debt</td>
+                        <td>
+                            A project's 'debt' is how much work is owed to it, relative to other projects.<br />
+                            It regulates if work is requested from a project (long term debt) and which project is next in line to be crunched (short term debt).<br />
+                            See Long Term Debt, Short Term Debt, No Work Fetch and Work Fetch Policy.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Defer/Deferral/Deferring</td>
+                        <td>
+                            The time between scheduler requests. It's BOINC's way of pausing between requests for work.<br />
+                            So not to overload the servers, a standard backoff/deferral of at least 60 seconds is used between communication attempts.<br />
+                            If a project is offline or has no work, the deferral increases inside the BOINC client. Minimum is 60 seconds, maximum is 86,400 seconds (1 day).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Detach</td>
+                        <td>
+                            When you are done with a project and don't want to crunch for it anymore, you detach from it.<br />
+                            Detaching will delete all outstanding results, application executables and other files.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Downloading</td>
+                        <td>
+                            The act of getting results into your cache or the science application from the project.<br />
+                            This will of course use your internet connection.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dual Core</td>
+                        <td>
+                            This technology allows for two independent CPUs to sit on on CPU die.<br />
+                            Also known as Multi-Core.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Duration Correction Factor</td>
+                        <td>
+                            With this BOINC learns to estimate the "to completion time" of results more correctly, so in the end you can even download more work.<br />
+                            It takes on average about 2 weeks before BOINC gets in the neighborhood of correctly estimated times and even then it continues to correct times.<br />
+                            It works per project. Default is 1.<br />
+                            <br />
+                            If your times all of a sudden sky-rocket, there's a good chance your DCF numbers are broken (very high).<br />
+                            Resetting them to 1 is then a good thing to do. The entry can be found in the client_state.xml file.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Earliest Deadline First/EDF</td>
+                        <td>
+                            A policy for results that are in danger of missing their deadline, and weighted round-robin among other projects if additional CPUs exist. This allows the client to meet deadlines that would otherwise be missed, while honoring resource shares over the long term.
+                            <br /><br />
+                            No longer in use in BOINC 5.7.5 and above.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exit</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    When an application reaches the end of a result, it leaves from memory.
+                                </li>
+                                <li>
+                                    The way to stop BOINC Manager.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feeder</td>
+                        <td>The feeder streamlines the scheduler's database access. It maintains a shared-memory segment containing 1) static database tables such as applications and application versions, and 2) a fixed-size cache of unsent result/workunit pairs. The scheduler finds results that can be sent to a particular client by scanning this memory segment, rather than by accessing the database. A semaphore synchronizes access to the shared-memory segment. To minimize contention for this semaphore, a scheduler can mark a cache entry as 'busy' (and release the semaphore) while it reads the result from the database (to verify that it is still unsent). </td>
+                    </tr>
+                    <tr>
+                        <td>File Deleter</td>
+                        <td>
+                            The file deleter deletes input and output files when they are no longer needed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Firewall</td>
+                        <td>
+                            A firewall is a logical barrier designed to prevent unauthorized or unwanted communications between sections of a computer network. This can be a hardware firewall (inside the modem, router or bridge) or a software firewall.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FLOP(S)</td>
+                        <td>
+                            In computing, FLOPS (or flops) is an acronym meaning FLoating point Operations Per Second. This is used as a measure of a computer's performance, especially in fields of scientific calculations that make heavy use of floating point calculations; similar to instructions per second.
+                            <br /><br />
+                            One should speak in the singular of a FLOPS and not of a FLOP, although the latter is frequently encountered. The final S stands for second and does not indicate a plural. Alternatively, the singular FLOP (or flop) is used as an abbreviation for "FLoating-point OPeration", and a flop count is a count of these operations (e.g., required by a given algorithm or computer program). In this context, "flops" is simply the plural rather than a rate.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>General Preferences</td>
+                        <td>
+                            This set of preferences specify how and when your BOINC should run.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GR</td>
+                        <td>
+                            An abbreviation of Grid Republic.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Granted Credit</td>
+                        <td>
+                            Is what you get after your result has been validated by the project's validator.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grid Republic</td>
+                        <td>
+                            A third party Account Manager, see <a href="http://www.gridrepublic.org/">Grid Republic</a>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Host</td>
+                        <td>
+                            Host is another word for your computer.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HostID</td>
+                        <td>When your computer first attaches to a project, it gets a HostID. This is a number which is stored in the project's BOINC database. The security measure taken is that the HostID that downloads work should also be the one that uploads it. If your work is uploaded with another HostID, you won't get Credits. See also Computer ID.</td>
+                    </tr>
+                    <tr>
+                        <td>Host Location</td>
+                        <td>
+                            A setting under Your Account, Computers in your account, to set the venue you want this computer to work under. See Venue.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Host Name</td>
+                        <td>
+                            When checking your computer under Your Account, it'll show the name you/your company/school gave to that computer. This name is only visible to you.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HT</td>
+                        <td>
+                            Abbreviation of Hyperthreading and Hypertransport.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hyperthreading</td>
+                        <td>
+                            Hyperthreading (or Hyper-threading) is Intel's way of allowing two CPUs to exist on one CPU. One CPU is the normal one, the other is a virtual one. Not to be confused with Dual Core.<br />
+                            <br />
+                            From Wikipedia: Hyper-Threading works by duplicating certain sections of the processor—those that store the architectural state—but not duplicating the main execution resources. This allows a Hyper-Threading equipped processor to pretend to be two "logical" processors to the host operating system, allowing the operating system to schedule two threads or processes simultaneously.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hypertransport</td>
+                        <td>
+                            From Wikipedia: HyperTransport (HT), formerly known as Lightning Data Transport (LDT), is a bidirectional serial/parallel high-bandwidth, low-latency computer bus that was introduced on April 2, 2001 [1]. The HyperTransport Consortium is in charge of promoting and developing HyperTransport technology. The technology is used by AMD and Transmeta in x86 processors, PMC-Sierra, Broadcom, and Raza Microelectronics in MIPS microprocessors, ATI Technologies, NVIDIA, VIA, SiS, AMD, and HP in PC chipsets, HP, Sun Microsystems, IBM, and IWill in servers, Cray, Newisys, and QLogic in high performance computing, and Cisco Systems in routers. Notably missing from this list is semiconductor giant Intel, which continues to use a shared bus architecture.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Initial Replication</td>
+                        <td>
+                            When a work unit is split into results to crunch, the result is divided over (usually) 2 or more hostIDs. This dividing of the result is called initial replication. It is needed to get to the quorum.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Intel</td>
+                        <td>
+                            A CPU producing company.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Invalid</td>
+                        <td>
+                            Is an error message on the project's website for a result. For some reason it got to be invalid.<br />
+                            Reasons can be that it can't reach quorum, your result crashed etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Local Host</td>
+                        <td>
+                            Local host (or localhost) is another word for your computer. In network addresses it resides at 127.0.0.1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Long Term Debt</td>
+                        <td>
+                            Long-term debt is used by the work-fetch policy. It is defined for all projects, and adjusted over the set of potentially runnable projects. It is normalized so that average long-term debt, over all project, is zero.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LTD</td>
+                        <td>
+                            Abbreviation for Long Term Debt.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Master File</td>
+                        <td>
+                            The Master File is a file on the project's server that tells where to find the scheduler server(s) and the project's data servers.<br />
+                            <br />
+                            It usually resides on the index page and should have embedded within one or more comment lines (invisible when the page is normally viewed in a Web Browser) one or more URLs for the Project's Scheduling Servers.<br />
+                            <br />
+                            This allows the Project to move the Servers to a new address without having to e-mail notices, contact and update all of the Participant's Computers, etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Master Science Database</td>
+                        <td>
+                            This is the database of the project where all the results come from and are reported back to.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maxmium Daily Quota</td>
+                        <td>
+                            A setting that allows a computer to only download so many results per day.<br />
+                            When the computer "trashes" results, or in other words returns client error upon client error, the MDQ is decreased 1 per faulty/trashed result. In the end you end up with 1 result per day. When you see such a message, it's 99% of the time your computer that is at fault. Check your hardware.<br />
+                            <br />
+                            Once the computer returns good results again, the MDQ will double per result returned correctly.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MB</td>
+                        <td>
+                            Abbreviation for motherboard/megabyte/Abbreviation for Multi-Beam, a search method used on Seti.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Merge Computers</td>
+                        <td>
+                            When your one computer is in your computer list multiple times with the same CPU/Operating system description, this feature allows you to merge them all together to be shown as one computer. You will not lose the old credit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>
+                            Model is another word for a result, mostly used on the CPDN projects. Since their results are models of what the weather looked like or may look like in the future.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NNT</td>
+                        <td>
+                            Abbreviation for No New Tasks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No New Tasks</td>
+                        <td>
+                            Formerly known as No New Work.<br />
+                            When in BOINC Manager, you can set a project not to download work again. This allows you to stay attached to the project without too many problems. The button will change to "Allow New Tasks". It shows the option you have, not the state that it is in. See Allow New Tasks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No Reply</td>
+                        <td>
+                            The result was sent to a client and no reply was received within the time limit.<br />
+                            See Outcome.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No Work Fetch</td>
+                        <td>
+                            This situation occurs when you have no need for work. See <a href="http://boincfaq.mundayweb.com/index.php?view=102">Not requesting new work or reporting results</a>. The work fetch scheduler deems you don't need work and thus you won't get any.<br />
+                            See Work Fetch Policy.<br />
+                            <br />
+                            This situation can also happen when your computer is in EDF mode. See EDF/Earliest Deadline First.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NWF</td>
+                        <td>
+                            Abbreviation for No Work Fetch.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Open Source</td>
+                        <td>
+                            From <a href="http://en.wikipedia.org/wiki/Open_source">Wikipedia</a>: Open source describes practices in production and development that promote access to the end product's source materials — typically its source code — allowing users to create user-generated software content. Some consider it a philosophy, and others consider it a pragmatic methodology.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Outcome</td>
+                        <td>
+                            A result's outcome is defined if its server state is over. Possible values are:<br />
+                            <ul>
+                                <li>
+                                    Unknown -- The result was sent to a client, but the client has not yet completed the work and reported the outcome.
+                                </li>
+                                <li>
+                                    Success -- A client completed the result successfully.
+                                </li>
+                                <li>
+                                    Couldn't send -- The server wasn't able to send the result to a client (perhaps because its - resource requirements were too large)
+                                </li>
+                                <li>
+                                    Client error -- The result was sent to a client and an error occurred.
+                                </li>
+                                <li>
+                                    No reply -- The result was sent to a client and no reply was received within the time limit.
+                                </li>
+                                <li>
+                                    Didn't need -- The result wasn't sent to a client because enough other results were returned for this work unit.
+                                </li>
+                                <li>
+                                    Validate error -- The result was reported but could not be validated, typically because the output files were lost on the server.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Over</td>
+                        <td>This will show on the Your Results pages in the Your Account page, when the result's outcome has hit one of the definitive ones.</td>
+                    </tr>
+                    <tr>
+                        <td>Overcommitted</td>
+                        <td>
+                            This message is for BOINC version pre-5.8, it falls together with the Earliest Deadline First message. An overcommitted computer is in the process of missing a deadline on one or more results. It won't download new work.
+                            <br /><br />
+                            The message can also happen when you download just too much work for a slow computer.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Parsing</td>
+                        <td>
+                            Parsing transforms input text into a data structure, usually a tree, which is suitable for later processing and which captures the implied hierarchy of the input.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>A password is a security measure, allowing you to log in, but others not. Using a password of only letters, all lower case, is easily cracked. Using a combination of lower case, upper case and numbers is more difficult to crack.</td>
+                    </tr>
+                    <tr>
+                        <td>Pending Credit</td>
+                        <td>The stage between you reporting your results and the project not having had enough results in yet to form a quorum of results. During this period, your credits will be listed as pending. When the quorum of results is met and all results are checked by the validtor and deemed OK, your credit will be granted. See Claimed Credit; Granted Credit.</td>
+                    </tr>
+                    <tr>
+                        <td>Preempted</td>
+                        <td>
+                            Used up until version 5.8.2 which changed it to "Waiting to run".<br />
+                            Preempted means paused. When you have multiple projects attached and they switch applications at the switch-over time (default 60 minutes), while one of your results is still being crunched, this result will be paused. It then shows as preempted in Boinc Manager.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Profile</td>
+                        <td>
+                            On a project's website you can make a personal profile in which you tell things about yourself. The profile, if it contains a picture, is used to make the User of the Day.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Project</td>
+                        <td>
+                            Project is a description for Einstein@Home, Seti@Home, Rosetta@Home etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Project Suspended by User</td>
+                        <td>
+                            This is a condition in Boinc Manager/Projects and /Tasks.<br />
+                            It can be met by suspending an individual result, or suspending the whole project, or suspending the whole of BOINC.<br />
+                            By suspending a project/result you stop it from being crunched.<br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Proxy</td>
+                        <td>
+                            From <a href="http://en.wikipedia.org/wiki/Proxy_server">Wikipedia</a>: A proxy (-server) is a computer that offers a computer network service to allow clients to make indirect network connections to other network services. A client connects to the proxy server, then requests a connection, file, or other resource available on a different server. The proxy provides the resource either by connecting to the specified server or by serving it from a cache. In some cases, the proxy may alter the client's request or the server's response for various purposes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Queue</td>
+                        <td>
+                            Starting with Seti Classic, it had a flaw where it would only download one result, crunch it and upload it again. Yet if the project was offline for a couple of weeks, you couldn't get - and thus crunch more - results.<br />
+                            Add-ons to Seti Classic overcame this problem. A central server would download multiple results that were sent out to others.<br />
+                            BOINC has its own queue. It can take work from 0.001 days to a maximum of 10 days. This should get your through project related outages without a problem.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quorum</td>
+                        <td>
+                            One result, a set or a collection of results that are ready for Validation. Most projects use a quorum of 3 results.<br />
+                            Some projects use a quorum of 1, where you get what you claimed.<br />
+                            CPDN uses trickles which give you a set amount of credit for the model you are crunching. See trickles.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quota</td>
+                        <td>
+                            The daily result quota will determine how many results you can download per 24 hours to your computer.<br />
+                            This ammount is set by the project. It's also set per CPU. So if you have a duo-core HT computer, you have 4 times the daily quota.<br />
+                            This depends on how many CPUs you set BOINC to use, of course.<br />
+                            <br />
+                            When your computer is returning only garbage results, which won't validate, you will be deducted one result per result turned in badly.<br />
+                            This means you could end up to 1 result/day per CPU. Hopefully before that time you noticed something is wrong already.<br />
+                            Do check if you didn't overclock too high, check if your RAM is still allright and always report to the forums of the project you have the problem with, include the error message you got when returning faulty results.<br />
+                            <br />
+                            Once you fixed your computer and are returning good results again, your quota will double with every result returned correctly.<br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RAC</td>
+                        <td>
+                            Abbreviation of Recent Average Credit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RDCF</td>
+                        <td>
+                            Abbreviation for Result Duration Correction Factor. Also known as DCF/Duration Correction Factor.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Read config file</td>
+                        <td>
+                            Used only in BOINC 5.8 and above.<br />
+                            This allows for changes to the cc_config.xml file while BOINC is running. Using this menu option loads the cc_config.xml file again without you needing to exit BOINC and restarting it.<br />
+                            Works also on service installs.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Read local prefs file</td>
+                        <td>
+                            Used only in BOINC 5.8 and above.<br />
+                            This allows for changes to the global_prefs.xml or global_prefs_override.xml file while BOINC is running. Using this menu option loads the latest preferences file again without you needing to exit BOINC and restarting it.<br />
+                            Works also on service installs.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ready to Report</td>
+                        <td>
+                            Once the application has crunched your result to completion and uploaded it to the project, it needs to be reported back to the project's database that you finished this result.
+                            In BOINC Manager it will then show as "Ready to report".
+
+                            BOINC reports completed work at the first of:
+                            <ul>
+                                <li>
+                                    The next work request from a project.
+                                </li>
+                                <li>
+                                    24 hours before the deadline.
+                                </li>
+                                <li>
+                                    Immediately if the work is completed later than 24 hours before the deadline.
+                                </li>
+                                <li>
+                                    Connect every X days after the work is completed.
+                                </li>
+                                <li>
+                                    With the next trickle (CPDN only at this point).
+                                </li>
+                                <li>
+                                    When the user clicks update.
+                                </li>
+                                <li>
+                                    Connect every X days before the report is due. (new with 5.4 and above)
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ready to Run</td>
+                        <td>
+                            Results in the queue in BOINC Manager/Tasks that haven't started yet will show this status.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Release project</td>
+                        <td>
+                            A project that got out of Alpha or Beta stage testing and is opened to the public.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Remote Procedure Call</td>
+                        <td>
+                            From <a href="http://en.wikipedia.org/wiki/Remote_procedure_call">Wikipedia</a>: Remote procedure call is a technology that allows a computer program to cause a subroutine or procedure to execute in another address space - commonly on another computer, without the programmer explicitly coding the details for this remote interaction. That is, the programmer would write essentially the same code whether the subroutine is local to the executing program, or remote.<br />
+                            <br />
+                            It's also used to allow BOINC to communicate with its different parts (daemon, GUI, screen saver) on localhost. The computer's firewall needs to approve of this.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Report Deadline</td>
+                        <td>
+                            The "Sell by date" of a result. See Deadline.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reset Project</td>
+                        <td>
+                            This command in the BOINC Manager will reset the project back to its initial state. It will delete all results you still have, including those you still need to report. It will also delete the application(s) and then download everything anew. -- It will not delete an anonymous platform though. If you are using an app_info.xml file, you will need to exit BOINC, delete this file yourself, then restart BOINC and reset the project.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Resource Share</td>
+                        <td>
+                            With the Resource Share setting you set the amount of time you give the CPU to any of the projects you are attached to over a 24 hour window. The project needs to have work in the queue.<br />
+                            Other dependencies are the Short Term Debt and the switch between projects time.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Result</td>
+                        <td>The outcome of a task after it has been crunched by the application for that project. This is what you upload to the project. See Work Unit.</td>
+                    </tr>
+                    <tr>
+                        <td>Resume</td>
+                        <td>
+                            To continue after a pause or suspend. In BOINC Manager, the Suspend button will change to a Resume button when pressed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retry Communications</td>
+                        <td>
+                            With the Retry comms option in BOINC Manager/Advanced menu, you can force communications with all projects that are deferring communications. It will not make your BOINC Update on itself. Use the Update button for that.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retry in…</td>
+                        <td>
+                            Status showing in BOINC Manager, showing the deferral time before Boinc will try to communicate with a project again.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Retry Now</td>
+                        <td>
+                            A way to force a retry on uploading results in BOINC Manager/Tasks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RPC</td>
+                        <td>Abbreviation for Remote Procedure Call.</td>
+                    </tr>
+                    <tr>
+                        <td>RS</td>
+                        <td>
+                            Abbreviation for Resource Share.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Run always</td>
+                        <td>
+                            Do work, regardless of any general preferences set.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Run based on preferences</td>
+                        <td>
+                            Do work, following the preferences you set in your general preferences and project preferences (resource share, queue size, disk amount used, etc.).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Running</td>
+                        <td>
+                            When in BOINC Manager/Tasks, the status Running Shows the active result(s) being crunched.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Running, High Priority</td>
+                        <td>
+                            A policy for results that are in danger of missing their deadline, and weighted round-robin among other projects if additional CPUs exist. This allows the client to meet deadlines that would otherwise be missed, while honoring resource shares over the long term.
+                            <br />
+                            Since BOINC 6.10.24 only tasks that miss their deadline in RR simulation will be chosen.
+                            <br />
+                            Former EDF. See also EDF, Earliest Deadline First.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Scheduler</td>
+                        <td>
+                            The scheduler communicates with BOINC clients. Each request includes a description of the host, a list of completed results, and a request for additional work, expressed in terms of the time the work should take to complete. The reply includes a list of results and their corresponding workunits. For each request involves a number of database operations: reading and updating records for the user account and team, the host, and the various workunits and results. Many instances of the scheduler can run at once (it is implemented as a Fast CGI program run from the Apache web server).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>(Science) Application</td>
+                        <td>
+                            The actual executable that is crunching the results sent to you by the project you are attached to. Science is put in parentheses as not all projects out there do science.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Service Install</td>
+                        <td>
+                            An option to install BOINC under Windows. When installed as a service, BOINC can run when no one is logged on. It can also run without the BOINC Manager showing all the time. The graphics will not work natively, while the screen saver shows only textual information. (There is a work around for that). This option needs a Windows administrator account with password.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Shared Memory</td>
+                        <td>
+                            From <a href="http://en.wikipedia.org/wiki/Shared_memory">Wikipedia</a>: In computer hardware, shared memory refers to a (typically) large block of random access memory that can be accessed by several different central processing units (CPUs) in a multiple-processor computer system. The issue with shared memory systems is that many CPUs need fast access to memory and will likely cache memory. Whenever one cache is updated with information that may be used by other processors, the change needs to be reflected to the other processors, otherwise the different processors will be working with incoherent data. Such coherence protocols can, when they work well, provide extremely high performance access to shared information between multiple processors. On the other hand they can sometimes become overloaded and become a bottleneck to performance.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Shared User Install</td>
+                        <td>
+                            An option to install BOINC, where BOINC runs for whomever logged in.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Short Term Debt</td>
+                        <td>
+                            Short-term debt is used by the CPU scheduler. It is adjusted over the set of runnable projects. It is normalized so that minimum short-term debt is zero, and maximum short-term debt is no greater than 86,400 (i.e. one day).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Show Graphics</td>
+                        <td>
+                            In BOINC Manager/Tasks, this option is used to open a window with which you can see the graphics of the project, otherwise shown in the screen saver. This only works when the project's application actually has graphics capability/a screen saver built in.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Single User Install</td>
+                        <td>
+                            An option to install BOINC, where BOINC will only run for the user who installed it when he is logged in.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Snooze</td>
+                        <td>
+                            Stop work (crunching and file transfer) for one hour or until you cancel Snooze.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            This shows the condition BOINC is in when doing work, trying to communicate with a project, etc. It's always showing what it is doing.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>STD</td>
+                        <td>
+                            Abbreviation for Short Term Debt.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Success</td>
+                        <td>
+                            Message showing when BOINC has managed to complete communications.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suspend Project</td>
+                        <td>
+                            With this setting in BOINC Manager/Projects, you pause the whole project you selected. It will pause (suspend) all running and waiting results as well. The button will change to the next option you have: Resume.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suspend Task</td>
+                        <td>
+                            With this setting in BOINC Manager/Tasks, you pause individual results. The Button will change to the next option you have: Resume Task.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suspended</td>
+                        <td>
+                            A status message showing you have suspended a project or a task.<br />
+                            Another word for suspended is paused.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Suspended by User</td>
+                        <td>
+                            A status message showing you have suspended a project or a task.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Task</td>
+                        <td>
+                            A piece of the Work Unit to be crunched on the participants computer. This is what you download from the project. See Work Unit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Team</td>
+                        <td>
+                            A group of people with the same interest who have come together to crunch for the same project.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>To Completion</td>
+                        <td>
+                            The (estimated) time remaining to the end of the result. Shown in BOINC Manager/Tasks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transitioner</td>
+                        <td>
+                            The transitioner acts as a coordinator. It examines workunits for which a state change has occurred (e.g., a completed result has been reported). Depending on the situation, it may generates new results, flag the workunit as having a nonrecoverable error, or trigger validation or assimilation of the workunit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Trickle</td>
+                        <td>
+                            A between times status report of a result that is running.<br />
+                            Long running projects, such as ClimatePrediction.Net use trickles to send information about their model back to the servers. This so the people still have (some) information in case the result is never crunched to its full time (crashes, loss of interest by the user).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Turnaround Time</td>
+                        <td>
+                            The time between your computer getting tasks and it crunching, uploading and reporting them.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Unrecoverable error</td>
+                        <td>
+                            A message for the user/project to show that for some kind of reason this result crashed and cannot be crunched any further. The message will usually have an error message included.<br />
+                            In the stderr.txt that is sent to the server it will show (hopefully) more information.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Unsent</td>
+                        <td>
+                            Message on the Project's server. The result is ready to send, but hasn't been sent yet.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UOTD</td>
+                        <td>
+                            Abbreviation for User of the Day.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Update</td>
+                        <td>
+                            With this button you force updates on the project. For instance reporting all results ready to be reported, or you have changed your preferences and want BOINC to know about them. With this button you do so. You Update the whole state of BOINC with it.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Uploading</td>
+                        <td>
+                            The act of sending completed results from your cache back to the project.<br />
+                            This will of course use your internet connection.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>User of the Day</td>
+                        <td>
+                            A show of appreciation by the project to those who have made a profile with a picture. The UOTD is chosen at random from the BOINC database.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Validate Error</td>
+                        <td>
+                            The result was reported but could not be validated, typically because the output files were lost on the server.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Validator</td>
+                        <td>
+                            The validator compares redundant results and selects a canonical result representing the correct output, and a canonical credit granted to users and hosts that return the correct output.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Venue</td>
+                        <td>
+                            The Location setting for the preferences for this computer.<br />
+                            Venue choices are Home, Work, School and Default.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>VHAR</td>
+                        <td>
+                            On Seti: Very High Angle Range.<br />
+                            Happens when the receiver is actively being 'nodded' from side to side to cover more sky, in a basket weave pattern.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>VLAR</td>
+                        <td>
+                            One Seti: Very Low Angle Range.<br />
+                            Happens when the receiver is actively being powered backwards against the Earth's rotation, so a single sky point (star, nebula, galaxy) remains at the centre of the field of view for an extended period.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Waiting to run</td>
+                        <td>
+                            Used in BOINC 5.8.3 and above.<br />
+                            The new terminology for preempted. A result that has run and is paused will now show this status in BOINC Manager/Tasks.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Watchdog (from Rosetta)</td>
+                        <td>
+                            Rosetta has a "watch dog" in place which helps assure that a given task is crunching properly, and to abort it for you if it is not progressing. So, again, when in doubt, let it run.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Work Generator</td>
+                        <td>
+                            The work generator creates new workunits and their input files. As an example, the SETI@home work generator reads digital tapes containing data from a radio telescope, divides this data into files, and creates a workunit in the BOINC database. The work generator sleeps if the number of unsent results exceeds a threshold, limiting the amount of disk storage needed for input files.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Work Unit</td>
+                        <td>A term used to signify a piece of work from any of the projects. One work unit is divided in multiple tasks. It's these tasks which are sent out to you, the cruncher and returned to the project. All returned tasks make up the work unit again. The work unit will stay on the project's servers until all tasks sent out and returned are validated and assimilated.</td>
+                    </tr>
+                    <tr>
+                        <td>Work Fetch Policy</td>
+                        <td>
+                            A policy running in the background when BOINC runs that is constantly checking: When should the core client ask a project for more work, which project should it ask and how much work should it ask for?<br />
+                            <br />
+                            It depends on the Long Term Debt, the amount of work still in queue, the speed of the processor.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Write to Disk Interval</td>
+                        <td>
+                            The time in seconds that BOINC writes the status on an application's crunching to disk.<br />
+                            In preferences set default at 60 seconds, but science applications can override this (from anywhere to every 3 seconds to every 300 seconds).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>WU</td>
+                        <td>
+                            Abbreviation for Work Unit.
+                        </td>
+                    </tr>
+                </table>
+                <!--End of boinc-->
+                <br />
+                <!--Start of Crypto-->
+                <table class="table table-hover table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;" colspan="2"><h4>CryptoCurrency Terminology</h4></th>
+                        </tr>
+                        <tr>
+                            <th>Word</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <!--
+                    <tr>
+                        <td>Mining</td>
+                        <td>The process of verifying transactions on the network & being rewarded for it.</td>
+                    </tr>
+                    <tr>
+                        <td>Supernode/Fullnode</td>
+                        <td>A gridcoind instance dedicated to providing network bandwidth and verifying transactions; these nodes strengthen the health of the network.</td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>51% attack</td>
+                        <td>
+                            A condition in which more than half the computing power on a cryptocurrency network is controlled by a single miner or group of miners. That amount of power theoretically makes them the authority on the network. This means that every client on the network believes the attacker’s hashed transaction block. This gives them control over the network, including the power to:
+                            <ul>
+                                <li>Issue a transaction that conflicts with someone else's.</li>
+                                <li>Stop someone else's transaction from being confirmed.</li>
+                                <li>Spend the same coins multiple times.</li>
+                                <li>Prevent other miners from mining valid blocks.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            An address is used to receive and send transactions on the network. It contains a string of alphanumeric characters, but can also be represented as a scannable QR code. An address is also the public key in the pair of keys used by bitcoin holders to digitally sign transactions (see Public key).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Altcoin</td>
+                        <td>
+                            The collective name for cryptocurrencies offered as alternatives to bitcoin. Litecoin, Feathercoin and PPcoin are all altcoins.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>AML</td>
+                        <td>
+                            Anti-Money Laundering techniques are used to stop people converting illegally obtained funds, to appear as though they have been earned legally. AML mechanisms can be legal or technical in nature. Regulators frequently apply AML techniques to bitcoin exchanges.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ASIC</td>
+                        <td>
+                            An Application Specific Integrated Circuit is a silicon chip specifically designed to do a single task. In the case of bitcoin, they are designed to process SHA-256 hashing problems to mine new bitcoins.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ASIC Miner</td>
+                        <td>
+                            A piece of equipment containing an ASIC chip, configured to mine for bitcoins. They can come in the form of boards that plug into a backplane, devices with a USB connector, or standalone devices including all of the necessary software, that connect to a network via a wireless link or ethernet cable.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain</td>
+                        <td>
+                            The full list of blocks that have been mined since the beginning of the gridcoin cryptocurrency. The block chain is designed so that each block contains a hash drawing on the blocks that came before it. This is designed to make it more tamperproof.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Block Reward</td>
+                        <td>
+                            The reward given to a miner which has successfully hashed a transaction block. This can be a mixture of coins and transaction fees, depending on the policy used by the cryptocurrency in question, and whether all of the coins have already been successfully mined.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Client</td>
+                        <td>
+                            A software program running on a desktop or laptop computer, or mobile device. It connects to the bitcoin network and forwards transactions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Confirmation</td>
+                        <td>
+                            The act of hashing a bitcoin transaction successfully into a transaction block, and cementing its validity. A single confirmation will take around 10 minutes, which is the average length of time for a transaction block to be hashed. However, some more sensitive or larger transactions may require multiple confirmations, meaning that more blocks must be hashed and added to the block chain after the transaction’s block has been hashed. Each time another block is added to the block chain after the transaction’s block, the transaction is confirmed again.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Colored coins</td>
+                        <td>
+                            A proposed add-on function for bitcoin that would enable bitcoin users to give them additional attributes. These attributes could be user-defined, enabling you to mark a bitcoin as a share of stock, or a physical asset. This would enable bitcoins to be traded as tokens for other property.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CPU</td>
+                        <td>
+                            Central Processing Unit – the ‘brain’ of a computer. In the early days, these were used to hash bitcoin transactions, but are now no longer powerful enough. They are still sometimes used to hash transactions for altcoins.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Coin age</td>
+                        <td>
+                            The age of a coin, defined as the currency amount multiplied by the holding period.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptocurrency</td>
+                        <td>
+                            A form of currency based on mathematics alone. Instead of fiat currency, which is printed, cryptocurrency is produced by solving mathematical problems based on cryptography.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography</td>
+                        <td>
+                            The use of mathematics to create codes and ciphers that can be used to conceal information. Used as the basis for the mathematical problems used to verify and secure gridcoin transactions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DDoS</td>
+                        <td>
+                            A distributed denial of service attack uses large numbers of computers under an attacker’s control to drain the resources of a central target. They often send small amounts of network traffic across the Internet to tie up computing and bandwidth resources at the target, which prevents it from providing services to legitimate users.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Deflation</td>
+                        <td>
+                            The reduction of prices in an economy over time. It happens when the supply of a good or service increases faster than the supply of money, or when the supply of money is finite, and decreases. This leads to more goods or services per unit of currency, meaning that less currency is needed to purchase them. This carries some downsides. When people expect prices to fall, it causes them to stop spending and hoard money, in the hope that their money will go further later. This can depress an economy.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Difficulty</td>
+                        <td>
+                            This number determines how difficult it is to hash a new block. It is related to the maximum allowed number in a given numerical portion of a transaction block’s hash. The lower the number, the more difficult it is to produce a hash value that fits it. Difficulty varies based on the amount of computing power used by miners on the bitcoin network. If large numbers of miners leave a network, the difficulty would decrease. Thus far, however, bitcoin’s growing popularity has attracted more computing power to the network, meaning that the difficulty has increased.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Double spending</td>
+                        <td>
+                            The act of spending bitcoins twice. It happens when someone makes a transaction using bitcoins, and then makes a second purchase from someone else, using the same bitcoins. They then convince the rest of the network to confirm only one of the transactions by hashing it in a block. Double spending is not easy to do, thanks to the way that the bitcoin network operates, but it is nevertheless a risk run by those accepting zero-confirmation transactions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dust transaction</td>
+                        <td>
+                            A transaction for an extremely small amount of bitcoins, which offers little financial value, but takes up space in the block chain. The bitcoin developer team has taken efforts to eliminate dust transactions by increasing the minimum transaction amount that will be relayed by the network.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ECDSA</td>
+                        <td>
+                            The Elliptic Curve Digital Signature Algorithm is the lightweight cryptographic algorithm used to sign transactions in the Bitcoin protocol.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Escrow</td>
+                        <td>
+                            The act of holding funds or assets in a third-party account to protect them during an asynchronous transaction. If Bob wants to send money to Alice in exchange for a file, but they cannot conduct the exchange in person, then how can they trust each other to send the money and file to each other at the same time? Instead, Bob sends the money to Eve, a trusted party who holds the funds until Bob confirms that he has received the file from Alice. She then sends Alice the money.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exchange</td>
+                        <td>
+                            A central resource for exchanging different forms of money and other assets.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Faucet</td>
+                        <td>
+                            A service that donates coins to new users daily.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fiat currency</td>
+                        <td>
+                            A currency, conjured out of thin air, which only has value because people say it does. Constantly under close scrutiny by regulators due to its known application in money laundering and terrorist activities. Not to be confused with bitcoin.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FinCEN</td>
+                        <td>
+                            The Financial Crimes Enforcement Network, an agency within the US Treasury Department. FinCEN has thus far been the main organization to impose regulations on exchanges trading in bitcoin.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fork</td>
+                        <td>
+                            The creation of an alternative ongoing version of the block chain, typically because one set of miners begins hashing a different set of transaction blocks from another. It can be caused maliciously, by a group of miners gaining too much control over the network (see 51% attack), accidentally, thanks to a bug in the system, or intentionally, when a core development team decides to introduce substantial new features into a new version of a client. A fork is successful if it becomes the longest version of the block chain, as defined by difficulty.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FPGA</td>
+                        <td>
+                            A Field Programmable Gate Array is a processing chip that can be configured with custom functions after it has been fabricated. Think of it as a blank silicon slate on which instructions can be written. Because FPGAs can be produced en masse and configured after fabrication, manufacturers benefit from economies of scale, making them cheaper than ASIC chips. However, they are usually far slower.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Genesis block</td>
+                        <td>
+                            The very first block in the block chain.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gigahashes/sec</td>
+                        <td>
+                            The number of hashing attempts possible in a given second, measured in billions of hashes (thousands of Megahashes).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hash</td>
+                        <td>
+                            A mathematical process that takes a variable amount of data and produces a shorter, fixed-length output. A hashing function has two important characteristics. Firstly, it is mathematically difficult to work out what the original input was by looking at the output. Secondly, changing even the tiniest part of the input will produce an entirely different output.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hash rate</td>
+                        <td>
+                            The number of hashes that can be performed by a gridcoin miner in a given period of time (usually a second).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Inflation</td>
+                        <td>
+                            When the value of money drops over time, causing prices for goods to increase. The result is a drop in purchasing power. Effects include less motivation to hoard money, and more motivation to spend it quickly while the prices of goods are still low.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kilohashes/sec</td>
+                        <td>
+                            The number of hashing attempts possible in a given second, measured in thousands of hashes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Leverage</td>
+                        <td>
+                            In foreign currency trading, leverage multiplies the real funds in your account by a given factor, enabling you to make trades that result in significant profit. By giving leverage to a trader, the trading exchange is effectively lending them money, in the hope that it will earn back more than it loaned in commission. Leverage is also known as a margin requirement.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Liquidity</td>
+                        <td>
+                            The ability to buy and sell an asset easily, with pricing that stays roughly similar between trades. A suitably large community of buyers and sellers is important for liquidity. The result of an illiquid market is price volatility, and the inability to easily determine the value of an asset.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Margin call</td>
+                        <td>
+                            The act of calling in a margin requirement. An exchange will issue a margin call when it feels that a trader does not have sufficient funds to cover a leveraged trading position.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Megahashes/sec</td>
+                        <td>
+                            The number of hashing attempts possible in a given second, measured in millions of hashes (thousands of Kilohashes).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Market order</td>
+                        <td>
+                            An instruction given to an exchange, asking it to buy or sell an asset at the going market rate. In a bitcoin exchange, you would place a market order if you simply wanted to buy or sell bitcoins immediately, rather than holding them until a set market condition is triggered to try and make a profit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Microtransaction</td>
+                        <td>
+                            Paying a tiny amount for an asset or service, primarily online. Micro-transactions are difficult to perform under conventional payment systems, because of the heavy commissions involved. It is difficult to pay two cents to read an online article using your credit card, for example.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mining</td>
+                        <td>
+                            The act of generating new bitcoins by solving cryptographic problems using computing hardware.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mixing service</td>
+                        <td>
+                            A service that mixes your bitcoins with someone else’s, sending you back gridcoin with different inputs and outputs from the ones that you sent to it. A mixing service (also known as a tumbler) preserves your privacy because it stops people tracing a particular gridcoin to you. It also has the potential to be used for money laundering.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Node</td>
+                        <td>
+                            A computer connected to the bitcoin network using a client that relays transactions to others (see client).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nonce</td>
+                        <td>
+                            A random string of data used as an input when hashing a transaction block. A nonce is used to try and produce a digest that fits the numerical parameters set by the bitcoin difficulty. A different nonce will be used with each hashing attempt, meaning that billions of nonces are generated when attempting to hash each transaction block.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Orphan block</td>
+                        <td>
+                            A block which is not a part of the valid block chain, but which was instead part of a fork that was discarded.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>OTC exchange</td>
+                        <td>
+                            An exchange in which traders make deals with each other directly, rather than relying on a central exchange to mediate between them.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Output</td>
+                        <td>
+                            The destination address for a gridcoin transaction. There can be multiple outputs for a single transaction.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>P2P</td>
+                        <td>
+                            Peer-to-peer. Decentralized interactions that happen between at least two parties in a highly interconnected network. An alternative system to a ‘hub-and-spoke’ arrangement, in which all participants in a transaction deal with each other through a single mediation point.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Paper wallet</td>
+                        <td>
+                            A printed sheet containing one or more public gridcoin addresses and their corresponding private keys. Often used to store gridcoin securely, instead of using software wallets, which can be corrupted, or web wallets, which can be hacked or simply disappear. A useful form of cold gridcoin storage.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pool</td>
+                        <td>
+                            A collection of mining clients which collectively mine a block, and then split the reward between them. Mining pools are a useful way to increase your probability of successfully mining a block as the difficulty rises.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pre-mining</td>
+                        <td>
+                            The mining of coins by a cryptocurrency’s founder before that coin has been announced and details released to others who may wish to mine the coin. Pre-mining is a common technique used with scamcoins, although not all pre-mined coins are scamcoins (see Scamcoins).
+                        </td>
+                    <tr>
+                        <td>Private key</td>
+                        <td>
+                            An alphanumeric string kept secret by the user, and designed to sign a digital communication when hashed with a public key. In the case of bitcoin, this string is a private key designed to work with a public key. The public key is a bitcoin address (see Bitcoin address).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PSP</td>
+                        <td>
+                            Payment Service Provider. The PSP offers payment processing services for merchants who wish to accept payments online.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pump and dump</td>
+                        <td>
+                            Inflating the value of a financial asset that has been produced or acquired cheaply, using aggressive publicity and often misleading statements. The publicity causes others to acquire the asset, forcing up its value. When the value is high enough, the perpetrator sells their assets, cashing in and flooding the market, which causes the value to crash.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Process node</td>
+                        <td>
+                            The size of a transistor in nanometers, produced during a chip fabrication process. Smaller process nodes are more efficient.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Proof of stake</td>
+                        <td>
+                            An alternative to proof of work, in which your existing stake in a currency (the amount of that currency that you hold) is used to calculate the amount of that currency that you can mine.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Proof of work</td>
+                        <td>
+                            A system that ties mining capability to computational power. Blocks must be hashed, which is in itself an easy computational process, but an additional variable is added to the hashing process to make it more difficult. When a block is successfully hashed, the hashing must have taken some time and computational effort. Thus, a hashed block is considered proof of work.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Public key</td>
+                        <td>
+                            An alphanumeric string which is publicly known, and which is hashed with another, privately held string to sign a digital communication. In the case of gridcoin, the public key is a gridcoin address.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>QR code</td>
+                        <td>
+                            A two-dimensional graphical block containing a monochromatic pattern representing a sequence of data. QR codes are designed to be scanned by cameras, including those found in mobile phones, and are frequently used to encode bitcoin addresses.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Signature</td>
+                        <td>
+                            A digital digest produced by hashing private and public keys together to prove that a gridcoin transaction came from a particular address.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Silk Road</td>
+                        <td>
+                            An underground online marketplace, generally used for illicit purchases, often with cryptocurrencies such as bitcoin. Silk Road was shut down in early October 2013 by the FBI after owner Ross Ulbricht was arrested.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SEPA</td>
+                        <td>
+                            The Single European Payments Area. A payment integration agreement within the European Union, designed to make it easier to transfer funds between different banks and nations in euros.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SHA-256</td>
+                        <td>
+                            The cryptographic function used as the basis for bitcoin’s proof of work system.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Stale</td>
+                        <td>
+                            When a gridcoin block is successfully hashed, any others attempting to hash it may as well stop, because it is now ‘stale’. They would simply be repeating work that someone else has already done, for no reward. The term is also used in mining pools to describe a share of a hashing job that has already been completed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Taint</td>
+                        <td>
+                            An analysis of how closely related two addresses are when they have both held a particular bitcoin. A taint analysis could be used to determine how many steps it took for bitcoins to move from an address known for stolen coins, to the current address.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Terahashes/sec</td>
+                        <td>
+                            The number of hashing attempts possible in a given second, measured in trillions of hashes (thousands of Gigahashes).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Testnet</td>
+                        <td>
+                            An alternative gridcoin block chain, used purely for testing purposes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TOR</td>
+                        <td>
+                            An anonymous routing protocol, used by people wanting to hide their identity online.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transaction block</td>
+                        <td>
+                            A collection of transactions on the gridcoin network, gathered into a block that can then be hashed and added to the block chain.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transaction fee</td>
+                        <td>
+                            A small fee imposed on some transactions sent across the gridcoin network. The transaction fee is awarded to the miner that successfully hashes the block containing the relevant transaction.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Volatility</td>
+                        <td>
+                            The measurement of price movements over time for a traded financial asset (including bitcoin).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wallet</td>
+                        <td>
+                            A method of storing gridcoin for later use. A wallet holds the private keys associated with gridcoin addresses. The block chain is the record of the bitcoin amounts associated with those addresses.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wire transfer</td>
+                        <td>
+                            Electronically transferring money from one person to another. Commonly used to send and retrieve fiat currency from gridcoin exchanges.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Zero-confirmation transaction</td>
+                        <td>
+                            A transaction in which the merchant is happy to provide a product or service before the gridcoin’s transmission has been confirmed by a miner and added to the block chain. It can carry a risk of double spending.
+                        </td>
+                    </tr>
+
+                    <!--Template for new entry-->
+                    <!--
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    -->
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Terminology Content -->

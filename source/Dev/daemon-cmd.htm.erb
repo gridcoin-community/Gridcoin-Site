@@ -1,0 +1,1608 @@
+﻿---
+title: "Gridcoin - Daemon Commands"
+layout: layout
+---
+<!--Intro-->
+<section style="background-color: #282828; padding-bottom:0px;">
+    <div class="container">
+        <div class='row'>
+            <div class='col-xs-12 text-center'>
+                <h4 style="color:white; font-weight:bold;">Gridcoin Daemon Commands</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Intro-->
+
+    <div style="min-height:100%">
+        <!-- Guide links -->
+        <section>
+            <div class="container">
+                <div class="col-sm-12" style="padding-top:25px; padding-bottom:25px;">
+                    <div class="row">
+                        <table class="table table-hover table-condensed table-bordered">
+                            <caption>
+                                <h4>Generic commands</h4>
+                            </caption>
+                            <thead class="bg-clouds">
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        -conf=&lt;file&gt;
+                                    </td>
+                                    <td>
+                                        Specify configuration file (default: gridcoin.conf)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -pid=&lt;file&gt;
+                                    </td>
+                                    <td>
+                                        Specify pid file (default: gridcoind.pid)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -datadir=&lt;dir&gt;
+                                    </td>
+                                    <td>
+                                        Specify data directory
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -dbcache=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Set database cache size in megabytes (default: 25)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -timeout=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Specify connection timeout in milliseconds (default: 5000)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -proxy=&lt;ip:port&gt;
+                                    </td>
+                                    <td>
+                                        Connect through socks proxy
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -socks=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Select the version of socks proxy to use (4-5, default: 5)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -tor=&lt;ip:port&gt;
+                                    </td>
+                                    <td>
+                                        Use proxy to reach tor hidden services (default: same as -proxy)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -dns
+                                    </td>
+                                    <td>
+                                        Allow DNS lookups for -addnode, -seednode and -connect
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -port=&lt;port&gt;
+                                    </td>
+                                    <td>
+                                        Listen for connections on &lt;port&gt; (default: 32760 or testnet: 32759)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -maxconnections=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Maintain at most &lt;n&gt; connections to peers (default: 125)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -addnode=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Add a node to connect to and attempt to keep the connection open
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -connect=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Connect only to the specified node(s)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -seednode=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Connect to a node to retrieve peer addresses, and disconnect
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -externalip=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Specify your own public address
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -onlynet=&lt;net&gt;
+                                    </td>
+                                    <td>
+                                        Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -discover
+                                    </td>
+                                    <td>
+                                        Discover own IP address (default: 1 when listening and no -externalip)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -checkpoints
+                                    </td>
+                                    <td>
+                                        Only accept block chain matching built-in checkpoints (default: 1)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -listen
+                                    </td>
+                                    <td>
+                                        Accept connections from outside (default: 1 if no -proxy or -connect)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -bind=&lt;addr&gt;
+                                    </td>
+                                    <td>
+                                        Bind to given address and always listen on it. Use [host]:port notation for IPv6
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -dnsseed
+                                    </td>
+                                    <td>
+                                        Find peers using DNS lookup (default: 1 unless -connect)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -banscore=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Threshold for disconnecting misbehaving peers (default: 100)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -bantime=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Number of seconds to keep misbehaving peers from reconnecting (default: 86400)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -maxreceivebuffer=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -maxsendbuffer=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Maximum per-connection send buffer, &lt;n&gt;*1000 bytes (default: 1000)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -bloomfilters
+                                    </td>
+                                    <td>
+                                        Allow peers to set bloom filters (default: 0)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -upnp
+                                    </td>
+                                    <td>
+                                        Use UPnP to map the listening port (default: 1 when listening)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -upnp
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -paytxfee=&lt;amt&gt;
+                                    </td>
+                                    <td>
+                                        Fee per KB to add to transactions you send
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -mininput=&lt;amt&gt;
+                                    </td>
+                                    <td>
+                                        When creating transactions, ignore inputs with value less than this (default: 0.0001)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -server
+                                    </td>
+                                    <td>
+                                        Accept command line and JSON-RPC commands
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -daemon
+                                    </td>
+                                    <td>
+                                        Run in the background as a daemon and accept commands
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -testnet
+                                    </td>
+                                    <td>
+                                        Use the test network
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -debug
+                                    </td>
+                                    <td>
+                                        Output extra debugging information. Implies all other -debug* options
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -debugnet
+                                    </td>
+                                    <td>
+                                        Output extra network debugging information
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -logtimestamps
+                                    </td>
+                                    <td>
+                                        Prepend debug output with timestamp
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -shrinkdebugfile
+                                    </td>
+                                    <td>
+                                        Shrink debug.log file on client startup (default: 1 when no -debug)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -printtoconsole
+                                    </td>
+                                    <td>
+                                        Send trace/debug info to console instead of debug.log file
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -printtodebugger
+                                    </td>
+                                    <td>
+                                        Send trace/debug info to debugger
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcuser=&lt;user&gt;
+                                    </td>
+                                    <td>
+                                        Username for JSON-RPC connections
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcpassword=&lt;pw&gt;
+                                    </td>
+                                    <td>
+                                        Password for JSON-RPC connections
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcport=&lt;port&gt;
+                                    </td>
+                                    <td>
+                                        Listen for JSON-RPC connections on &lt;port&gt; (default: 32760 or testnet: 32759)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcallowip=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Allow JSON-RPC connections from specified IP address
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcconnect=&lt;ip&gt;
+                                    </td>
+                                    <td>
+                                        Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcthreads=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Set the number of threads to service RPC calls (default: 4)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -blocknotify=&lt;cmd&gt;
+                                    </td>
+                                    <td>
+                                        Execute command when the best block changes (%s in cmd is replaced by block hash)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -walletnotify=&lt;cmd&gt;
+                                    </td>
+                                    <td>
+                                        Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -alertnotify=&lt;cmd&gt;
+                                    </td>
+                                    <td>
+                                        Execute command when a relevant alert is received (%s in cmd is replaced by message)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -upgradewallet
+                                    </td>
+                                    <td>
+                                        Upgrade wallet to latest format
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -keypool=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Set key pool size to &lt;n&gt; (default: 100)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rescan
+                                    </td>
+                                    <td>
+                                        Rescan the block chain for missing wallet transactions
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -salvagewallet
+                                    </td>
+                                    <td>
+                                        Attempt to recover private keys from a corrupt wallet.dat
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -checkblocks=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        How many blocks to check at startup (default: 288, 0 = all)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -checklevel=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        How thorough the block verification is (0-4, default: 3)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -txindex
+                                    </td>
+                                    <td>
+                                        Maintain a full transaction index (default: 0)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -loadblock=&lt;file&gt;
+                                    </td>
+                                    <td>
+                                        Imports blocks from external blk000??.dat file
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -reindex
+                                    </td>
+                                    <td>
+                                        Rebuild block chain index from current blk000??.dat files
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -par=&lt;n&gt;
+                                    </td>
+                                    <td>
+                                        Set the number of script verification threads (up to 16, 0 = auto, &lt;0 = leave that many cores free, default: 0)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-hover table-condensed table-bordered">
+                        <caption>
+                            <h4>
+                                Block creation options
+                            </h4>
+                        </caption>
+                            <thead class="bg-clouds">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    -blockminsize=&lt;n&gt;
+                                </td>
+                                <td>
+                                    Set minimum block size in bytes (default: 0)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    -blockmaxsize=&lt;n&gt;
+                                </td>
+                                <td>
+                                    Set maximum block size in bytes (default: 250000)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    -blockprioritysize=&lt;n&gt;
+                                </td>
+                                <td>
+                                    Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <table class="table table-hover table-condensed table-bordered">
+                            <caption>
+                                <h4>
+                                    SSL option
+                                </h4>
+                            </caption>
+                            <thead class="bg-clouds">
+                                <tr>
+                                    <td>
+                                        Command
+                                    </td>
+                                    <td>
+                                        Description
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        -rpcssl
+                                    </td>
+                                    <td>
+                                        Use OpenSSL (https) for JSON-RPC connections
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcsslcertificatechainfile=&lt;file.cert&gt;
+                                    </td>
+                                    <td>
+                                        Server certificate file (default: server.cert)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcsslprivatekeyfile=&lt;file.pem&gt;
+                                    </td>
+                                    <td>
+                                        Server private key (default: server.pem)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -rpcsslciphers=&lt;ciphers&gt;
+                                    </td>
+                                    <td>
+                                        Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--/config-->
+                        <!--Runtime:-->
+                        <table class="table table-hover table-condensed table-bordered">
+                            <caption>
+                                <h4>
+                                Runtime Commands
+                                </h4>
+                            </caption>
+                            <thead class="bg-clouds">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Parameters
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Requires unlocked wallet?
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        addmultisigaddress
+                                    </td>
+                                    <td>
+                                        &lt;nrequired&gt; &lt;'["key","key"]'&gt; [account]
+                                    </td>
+                                    <td>
+                                        Add a nrequired-to-sign multisignature address to the wallet. Each key is a bitcoin address or hex-encoded public key. If [account] is specified, assign address to [account].
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        addnode
+                                    </td>
+                                    <td>
+                                        &lt;node&gt; &lt;add|remove|onetry&gt;
+                                    </td>
+                                    <td>
+                                        Attempts add or remove &lt;node&gt; from the addnode list or try a connection to &lt;node&gt; once.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        backupwallet
+                                    </td>
+                                    <td>
+                                        &lt;destination&gt;
+                                    </td>
+                                    <td>
+                                        Safely copies wallet.dat to destination, which can be a directory or a path with filename.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        createmultisig
+                                    </td>
+                                    <td>
+                                        &lt;nrequired&gt; &lt;'["key","key"]'&gt;
+                                    </td>
+                                    <td>
+                                        Creates a multi-signature address and returns a json object
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        createrawtransaction
+                                    </td>
+                                    <td>
+                                        [{"txid":txid,"vout":n},...] {address:amount,...}
+                                    </td>
+                                    <td>
+                                        Creates a raw transaction spending given inputs.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        decoderawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt;
+                                    </td>
+                                    <td>
+                                        Produces a human-readable JSON object for a raw transaction.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        dumpprivkey
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Reveals the private key corresponding to &lt;bitcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        encryptwallet
+                                    </td>
+                                    <td>
+                                        &lt;passphrase&gt;
+                                    </td>
+                                    <td>
+                                        Encrypts the wallet with &lt;passphrase&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        execute
+                                    </td>
+                                    <td>
+                                        &lt;string::itemname&gt;
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaccount
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Returns the account associated with the given address.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaccountaddress
+                                    </td>
+                                    <td>
+                                        &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Returns the current bitcoin address for receiving payments to this account. If <account> does not exist, it will be created along with an associated new address that will be returned.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaddednodeinfo
+                                    </td>
+                                    <td>
+                                        &lt;dns&gt; [node]
+                                    </td>
+                                    <td>
+                                        Returns information about the given added node, or all added nodes.<br />
+                                        (Note that onetry addnodes are not listed here) If dns is false, only a list of added nodes will be provided, otherwise connected information will also be available.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaddressesbyaccount
+                                    </td>
+                                    <td>
+                                        &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Returns the list of addresses for the given account.
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getbalance
+                                    </td>
+                                    <td>
+                                        [account] [minconf=1]
+                                    </td>
+                                    <td>
+                                        If [account] is not specified, returns the server's total available balance.<br />
+                                        If [account] is specified, returns the balance in the account.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getbestblockhash
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns the hash of the best (tip) block in the longest block chain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblock
+                                    </td>
+                                    <td>
+                                        &lt;hash&gt; [verbose=true]
+                                    </td>
+                                    <td>
+                                        Returns information about the block with the given hash.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockbynumber
+                                    </td>
+                                    <td>
+                                        &lt;hash&gt;
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockcount
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns the number of blocks in the longest block chain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockhash
+                                    </td>
+                                    <td>
+                                        &lt;index&gt;
+                                    </td>
+                                    <td>
+                                        Returns hash of block in best-block-chain at &lt;index&gt;; index 0 is the genesis block
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblocktemplate
+                                    </td>
+                                    <td>
+                                        [params]
+                                    </td>
+                                    <td>
+                                        Returns data needed to construct a block to work on. See BIP_0022 for more info on params.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getconnectioncount
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns the number of connections to other nodes.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getdifficulty
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns the proof-of-work difficulty as a multiple of the minimum difficulty.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getinfo
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns an object containing various state info.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getmininginfo
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns an object containing mining-related information:
+                                        <ul>
+                                            <li>
+                                                blocks
+                                            </li>
+                                            <li>
+                                                currentblocksize
+                                            </li>
+                                            <li>
+                                                currentblocktx
+                                            </li>
+                                            <li>
+                                                difficulty
+                                            </li>
+                                            <li>
+                                                errors
+                                            </li>
+                                            <li>
+                                                networkhashps
+                                            </li>
+                                            <li>
+                                                pooledtx
+                                            </li>
+                                            <li>
+                                                Pool Mining
+                                            </li>
+                                            <li>
+                                                Testnet
+                                            </li>
+                                            <li>
+                                                Difficulty_PoB
+                                            </li>
+                                            <li>
+                                                Errors
+                                            </li>
+                                            <li>
+                                                PoB Mining Enabled
+                                            </li>
+                                            <li>
+                                                Active PoB Thread Count
+                                            </li>
+                                            <li>
+                                                Boinc Magnitude
+                                            </li>
+                                            <li>
+                                                PoB Thread Limit
+                                            </li>
+                                            <li>
+                                                PoB HashesPerSec
+                                            </li>
+                                            <li>
+                                                CPU Mining Project
+                                            </li>
+                                            <li>
+                                                CPU Mining RAC
+                                            </li>
+                                            <li>
+                                                CPU Mining Network RAC
+                                            </li>
+                                            <li>
+                                                GPU Mining Project
+                                            </li>
+                                            <li>
+                                                GPU Mining CPID
+                                            </li>
+                                            <li>
+                                                GPU Mining RAC
+                                            </li>
+                                            <li>
+                                                GPU Mining Network RAC
+                                            </li>
+                                            <li>
+                                                PoB Mining Errors
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getnetworkhashps
+                                    </td>
+                                    <td>
+                                        [blocks] [height]
+                                    </td>
+                                    <td>
+                                        Returns a recent hashes per second performance measurement while generating.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getnewaddress
+                                    </td>
+                                    <td>
+                                        [account]
+                                    </td>
+                                    <td>
+                                        Returns a new bitcoin address for receiving payments. If [account] is specified payments received with the address will be credited to [account].
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getpeerinfo
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns data about each connected node.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getrawmempool
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Replaced with getblocktemplate, submitblock, getrawmempool
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;txid&gt; [verbose=0]
+                                    </td>
+                                    <td>
+                                        Returns <a href="https://en.bitcoin.it/wiki/Raw_Transactions">raw transaction</a> representation for given transaction id.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getreceivedbyaccount
+                                    </td>
+                                    <td>
+                                        &lt;account&gt; [minconf=1]
+                                    </td>
+                                    <td>
+                                        Returns the total amount received by addresses with [account] in transactions with at least [minconf] confirmations. If [account] not provided return will include all transactions to all accounts.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getreceivedbyaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; [minconf=1]
+                                    </td>
+                                    <td>
+                                        Returns the amount received by &lt;bitcoinaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        gettransaction
+                                    </td>
+                                    <td>
+                                        &lt;txid&gt;
+                                    </td>
+                                    <td>
+                                        Adds signatures to a raw transaction and returns the resulting raw transaction.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        gettxout
+                                    </td>
+                                    <td>
+                                        &lt;txid&gt; &lt;n&gt; [includemempool=true]
+                                    </td>
+                                    <td>
+                                        Returns details about an unspent transaction output (UTXO)
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        gettxoutsetinfo
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns statistics about the unspent transaction output (UTXO) set
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getwork
+                                    </td>
+                                    <td>
+                                        [data]
+                                    </td>
+                                    <td>
+                                        If [data] is not specified, returns formatted hash data to work on: midstate, data, hash1, target. If [data] is specified, tries to solve the block and returns true if it was successful.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getworkex
+                                    </td>
+                                    <td>
+                                        [data, coinbase]
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        help
+                                    </td>
+                                    <td>
+                                        [command]
+                                    </td>
+                                    <td>
+                                        List commands, or get help for a command.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        importprivkey
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinprivkey&gt; [label] [rescan=true]
+                                    </td>
+                                    <td>
+                                        Adds a private key (as returned by dumpprivkey) to your wallet. This may take a while, as a rescan is done, looking for existing transactions. Optional [rescan] parameter added in 0.8.0.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        keypoolrefill
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Fills the keypool, requires wallet passphrase to be set.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listaccounts
+                                    </td>
+                                    <td>
+                                        [minconf=1]
+                                    </td>
+                                    <td>
+                                         Returns Object that has account names as keys, account balances as values.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listaddressgroupings
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns all addresses in the wallet and info used for coincontrol.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listitem
+                                    </td>
+                                    <td>
+                                        &lt;string::itemname&gt;
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listlockunspent
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns list of temporarily unspendable outputs.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listreceivedbyaccount
+                                    </td>
+                                    <td>
+                                        [minconf=1] [includeempty=false]
+                                    </td>
+                                    <td>
+                                        Returns an array of objects containing: account, amount, confirmations
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listreceivedbyaddress
+                                    </td>
+                                    <td>
+                                        [minconf=1] [includeempty=false]
+                                    </td>
+                                    <td>
+                                        Returns an array of objects containing: address, account, amount, confirmations. To get a list of accounts on the system, execute litecoind listreceivedbyaddress 0 true.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listsinceblock
+                                    </td>
+                                    <td>
+                                        [blockhash] [target-confirmations]
+                                    </td>
+                                    <td>
+                                        Get all transactions in blocks since block [blockhash], or all transactions if omitted.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listtransactions
+                                    </td>
+                                    <td>
+                                        [account] [count=10] [from=0]
+                                    </td>
+                                    <td>
+                                        Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided will return recent transaction from all accounts.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listunspent
+                                    </td>
+                                    <td>
+                                        [minconf=1] [maxconf=9999999] ["address",...]
+                                    </td>
+                                    <td>
+                                        Returns array of unspent transaction inputs in the wallet.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        lockunspent
+                                    </td>
+                                    <td>
+                                        unlock? [array-of-Objects]
+                                    </td>
+                                    <td>
+                                        Updates list of temporarily unspendable outputs
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        move
+                                    </td>
+                                    <td>
+                                        &lt;fromaccount&gt; &lt;toaccount&gt; &lt;amount&gt; [minconf=1] [comment]
+                                    </td>
+                                    <td>
+                                        Move from one account in your wallet to another
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendfrom
+                                    </td>
+                                    <td>
+                                        &lt;fromaccount&gt; &lt;togridcoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendmany
+                                    </td>
+                                    <td>
+                                        &lt;fromaccount&gt; {address:amount,...} [minconf=1] [comment]
+                                    </td>
+                                    <td>
+                                        Amounts are double-precision floating point numbers.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt;
+                                    </td>
+                                    <td>
+                                        Submits raw transaction (serialized, hex-encoded) to local node and network.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendtoaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendtoinvalidaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]
+                                    </td>
+                                    <td>???</td>
+                                    <td>???</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendtoself
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]
+                                    </td>
+                                    <td>???</td>
+                                    <td>???</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        setaccount
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        setmininput
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt;
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to the nearest 0.00000001
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        settxfee
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt;
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to the nearest 0.00000001
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        showblock
+                                    </td>
+                                    <td>
+                                        &lt;index&gt;
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        signmessage
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;message&gt;
+                                    </td>
+                                    <td>
+                                        Sign a message with the private key of an address.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        signrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex,"redeemScript":hex},...] [&lt;privatekey1&gt;,...] [sighashtype="ALL"]
+                                    </td>
+                                    <td>
+                                        Adds signatures to a raw transaction and returns the resulting raw transaction.
+                                    </td>
+                                    <td>
+                                        Y/N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        stop
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Stop Gridcoin server.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        submitblock
+                                    </td>
+                                    <td>
+                                        &lt;hex data&gt; [optional-params-obj]
+                                    </td>
+                                    <td>
+                                        Attempts to submit new block to network.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        upgrade
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Upgrade qt client.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        validateaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Return information about &lt;litecoinaddress&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        verifychain
+                                    </td>
+                                    <td>
+                                        [check level] [num blocks]
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                    <td>
+                                        ???
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        verifymessage
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;signature&gt; &lt;message&gt;
+                                    </td>
+                                    <td>
+                                        Verify a signed message.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- End of guide links -->

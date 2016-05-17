@@ -1,0 +1,192 @@
+﻿---
+title: "Gridcoin - Step 4: Earn Gridcoin"
+layout: layout
+---
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-gridcoin-setup.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 1</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->
+
+<!--TEST AREA-->
+<section style="padding-top:0px;background-color: #303030; padding-bottom: 25px;">
+    <div class="container" style="overflow:hidden;">
+            <div class="row" style="margin-top:10px;">
+                <div class='col-xs-12 col-sm-12 text-center' style="background-color: #282828;">
+                    <h4 style=" color:white; font-weight:bold;">
+                        Earn GRC via Proof of Stake
+                    </h4>
+                </div>
+            </div>
+
+            <!--prereqs-->
+            <div class="row features">
+                <div class="col-xs-12" style="background-color: #303030; padding-bottom: 1000px; margin-bottom: -1000px;">
+                    <div class="col-xs-12 col-sm-4">
+                        <a href="http://wiki.gridcoin.us/Proof-of-Research#Proof-of-Stake">
+                            <img src="/Images/FrontPage/icon01.png" alt="Graph" height="100" width="100" style="padding-top:15px; margin-bottom:-25px;">
+                            <h6 style="color:white; font-weight:bold;">
+                                PROOF-OF-STAKE
+                            </h6>
+                        </a>
+                        <ul style="list-style-type: none; padding-left: 0; color:#9A9899;">
+                            <li style="margin-bottom: 10px;">
+                                Gridcoin Research utilises proof of stake (POS) as it's primary distributed consensus mechanism.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                In Proof-of-Stake, currency is not mined, but rather minted as yearly compound interest.
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                As a mint mechanism Proof-of-Stake uses the stake of the holder itself. The larger a user's stake in gridcoin, the higher the probability that the user will mint a block.
+                            </li>
+                            <li style="text-align:center;">
+                                <a href="http://wiki.gridcoin.us/Proof-of-Research#Proof-of-Stake">
+                                    Read more about POS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
+                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
+                                <ul>
+                                    <li>
+                                        Once running an up-to-date fully synced client with a positive balance, all that is required is for you to unlock your wallet for 'staking only'.  
+                                    </li>
+                                    <li>
+                                        Once your wallet is unlocked, it will take up to 16 hours for your coins to fully start staking.
+                                    </li>
+                                    <li>
+                                        In order for your Gridcoin client to begin staking, it must locate coins to stake - newly acquired Gridcoin must mature (be present in your wallet) for 16 hours before it transfers from your balance into the 'staking balance' to which it begins competing to be used to create the next block.
+                                        <ul>
+                                            <li>
+                                                There are 960 blocks per day that you can attempt to stake. If you've got 1% of the total Gridcoin supply, you'll approximately stake 9.6 blocks per day.
+                                            </li>
+                                            <li>
+                                                The formula required to work out the quantity of coins to stake in a period of time is:
+                                                <ul>
+                                                    <li>
+                                                        <code>
+                                                            EstimatedDaysUntilStake=(1/(UserBalance/NetworkCoinSupply))/960
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <code>
+                                                            CoinsRequired=(1/(days*960))*NetworkCoinSupply
+                                                        </code>
+                                                    </li>
+                                                    <li>
+                                                        <b>Note</b>: The maximum payout window is approximately 182.5 days. This may (most likely will) increase in the future. 
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Best practice is to stake 24/7, since you have an opportunity to stake each block (even if your probability is low).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        If you're wanting to read about the proof of stake mechanism behind gridcoin, read <a href="http://blackcoin.co/blackcoin-pos-protocol-v2-whitepaper.pdf">blackcoin's pos v2 whitepaper</a>.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--/prereqs-->
+
+        </div>
+</section>
+<!--/TEST AREA-->
+
+<section style="padding-top:0px;background-color: #303030; padding-bottom: 25px;">
+    <div class="container" style="overflow:hidden;">
+        <!--/Contribute content-->
+        <!--Participate in community title-->
+        <div class='row' style="margin-top:10px;">
+            <div class='col-xs-12 col-sm-12 text-center' style="background-color: #282828;">
+                <h4 style=" color:white; font-weight:bold;">
+                    Participate in the community
+                </h4>
+            </div>
+        </div>
+        <!--/Participate in community title-->
+        <!--Social Media-->
+        <div class="row" style="text-align:center;">
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="https://twitter.com/GridcoinNetwork"><img src="/Images/Social/128-twitter.png" alt="twitter" /></a>
+            </div>
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="https://www.fb.com/gridcoins"><img src="/Images/Social/128-facebook.png" alt="facebook" /></a>
+            </div>
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="https://github.com/gridcoin/Gridcoin-Research"><img src="/Images/Social/128-github.png" style="background-color: #b0c4de;" alt="g+" /></a>
+            </div>
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="http://www.reddit.com/r/gridcoin"><img src="/Images/Social/128-reddit.png" alt="reddit" /></a>
+            </div>
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="https://cryptocointalk.com/forum/464-gridcoin-grc/"><img src="/Images/Social/128-forum.png" alt="cryptocointalk gridcoin" /></a>
+            </div>
+            <div class="col-xs-4 col-sm-2" style="margin-top:10px;">
+                <a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin"><img src="/Images/Social/128-mirc.png" alt="IRC" /></a>
+            </div>
+        </div>
+        <!--/Social Media-->
+    </div>
+</section>
+<!--Getting started section-->
+<section style="background-color: #40413c; padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-gridcoin-setup.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 1</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #2d2d2d;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-acquire-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Sync client & Acquire Gridcoin</h6>
+                </a>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/investor-earn-grc.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 3</h5>
+                    <div class="ribbon" style="margin-bottom:7px;">You are here</div>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Earn Gridcoin via POS</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Getting started section-->
