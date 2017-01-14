@@ -1,8 +1,8 @@
-﻿---
+---
 page.title: "Gridcoin - Step 2: BOINC Installation"
 ---
 <!--Getting started section-->
-<section style="background-color: #40413c; padding-bottom: 5px;">
+<section class="" style="background-color: #40413c; padding-bottom: 5px;">
     <div class="container" style="overflow:hidden;">
         <div class="row" style="margin-top:20px;">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
@@ -24,11 +24,11 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
 </section>
 <!--/Getting started section-->
 <!--TEST AREA-->
-<section style="padding-top: 0px; background-color: #303030; padding-bottom: 15px;">
+<section class="" style="padding-top: 0px; background-color: #303030; padding-bottom: 15px;">
     <!--Start of GRC Feature section-->
     <!--First row of features-->
     <div class="container" style="overflow:hidden;">
-        <div class="row features" style="background-color: #282828;">
+        <div class="row" style="background-color: #282828;">
             <div class="col-xs-12 col-sm-8">
                 <h4 style="text-align:left; color:white;">BOINC Introduction</h4>
                 <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
@@ -56,7 +56,7 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
         </div>
         <!--/Step 1-->
 
-        <div class="row features">
+        <div class="row">
             <div class="col-xs-12" style="background-color: #282828; margin-top:10px;">
                 <!--Tab Panel-->
                 <div role="tabpanel">
@@ -197,8 +197,7 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
                                             </li>
 
                                             <li style="margin-bottom: 5px; text-align:left; color:#9A9899;">
-                                                Several <a href="http://boinc.berkeley.edu/trac/wiki/Tools_for_Mac_OS_X" title="Tools for Mac OS X">tools for Mac OS X</a> are available
-                                                to:
+                                                Several tools for Mac OS X are available to:
                                             </li>
                                         </ul>
 
@@ -296,37 +295,7 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
 
                                         <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
                                             <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
-                                                If you want to use the packages from repositories, take
-                                                into account that there are two packages that can be
-                                                installed separately, one for BOINC Client and another for
-                                                <a href="http://boinc.berkeley.edu/trac/wiki/BOINC_Manager" title="BOINC Manager">
-                                                    BOINC
-                                                    Manager
-                                                </a>. Only the client part is required but you will
-                                                likely want to install the manager as well unless you
-                                                intend to manage the client from a remote host.
-                                            </li>
-
-                                            <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
-                                                Here are instructions for several well known Linux
-                                                distributions:
-                                                <ul>
-                                                    <li>
-                                                        <a href="http://boinc.berkeley.edu/trac/wiki/Installing_BOINC_on_Fedora" title="Installing BOINC on Fedora">Fedora</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="http://boinc.berkeley.edu/trac/wiki/Installing_BOINC_on_Ubuntu" title="Installing BOINC on Ubuntu">Ubuntu</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="http://boinc.berkeley.edu/trac/wiki/Installing_BOINC_on_Debian" title="Installing BOINC on Debian">Debian</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="http://boinc.berkeley.edu/trac/wiki/Installing_BOINC_on_Gentoo" title="Installing BOINC on Gentoo">Gentoo</a>
-                                                    </li>
-                                                </ul>
+                                                If you want to use the packages from repositories, take into account that there are two packages that can be installed separately, one for BOINC Client and another for the BOINC Manager. Only the client part is required but you will likely want to install the manager as well unless you intend to manage the client from a remote host.
                                             </li>
                                         </ul>
 
@@ -353,10 +322,10 @@ $ sh boinc_7.2.23_i686-pc-linux-gnu.sh
                                                         boinc : The BOINC core client.
                                                     </li>
                                                     <li>
-                                                        boincmgr : <a class="mw-redirect" href="/wiki/The_BOINC_Manager" title="The BOINC Manager">The BOINC Manager</a>.
+                                                        boincmgr : The BOINC Manager.
                                                     </li>
                                                     <li>
-                                                        boinccmd : A <a href="/wiki/Boinccmd_tool" title="Boinccmd tool">command line tool</a> for controlling a running core client.
+                                                        boinccmd : A command line tool for controlling a running core client.
                                                     </li>
                                                     <li>
                                                         run_client : A script that cd's into the BOINC directory and runs the core client.
@@ -439,14 +408,6 @@ $ ./run_manager
                                                 There is also useful documentation on other web
                                                 sites:
                                                 <ul>
-                                                    <li>
-                                                        <a class="external text" href="http://www.boinc-wiki.info/Building_the_BOINC_Client_Software"
-                                                           rel="nofollow">
-                                                            Building the BOINC Client
-                                                            Software
-                                                        </a> (from the Unofficial BOINC wiki)
-                                                    </li>
-
                                                     <li>
                                                         <a class="external text" href="http://www.spy-hill.net/help/boinc/unix.html" rel="nofollow">
                                                             Installing and Running the BOINC client
@@ -678,7 +639,7 @@ $ ./run_manager
                                                         <b>&lt;api_version&gt;</b>: the BOINC version number of the API the app uses.
                                                     </li>
                                                     <li>
-                                                        <b>&lt;coproc&gt;</b>: describes a coprocessor requirement. The <b>type</b> element can refer to <a href="http://boinc.berkeley.edu/trac/wiki/Client_configuration#Options" title="Client configuration"> a GPU type specified in cc_config.xml</a>.
+                                                        <b>&lt;coproc&gt;</b>: describes a coprocessor requirement. The <b>type</b> element can refer to a GPU type specified in cc_config.xml.
                                                     </li>
                                                     <li>
                                                         <b>&lt;flops&gt;</b>: the expected FLOPS of the application (for multi-thread and coprocessor apps).
@@ -722,7 +683,7 @@ $ ./run_manager
                                                 </a>.
                                             </li>
                                             <li style="margin-bottom: 10px; text-align:left; color:#9A9899;">
-                                                Read <a class="wiki" href="/trac/wiki/CoreClient">
+                                                Read <a class="wiki" href="http://boinc.berkeley.edu/trac/wiki/CoreClient">
                                                     Installing
                                                     the command-line client
                                                 </a>.
@@ -920,19 +881,6 @@ $ ./run_manager
 
                                             <tr>
                                                 <td>
-                                                    <a class="ext-link" href="http://www.godefroy.t.freesurf.fr/seti/">
-                                                        <span class="icon">
-                                                        </span>SETI@home and BOINC on Linux
-                                                    </a>
-                                                </td>
-
-                                                <td>Mandrake Linux</td>
-
-                                                <td>BOINC and SETI@home (graphical versions)</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
                                                     <a class="ext-link" href="http://boincpe.schreiter.info/">
                                                         <span class="icon">​</span>BOINCpe
                                                     </a>
@@ -970,31 +918,6 @@ $ ./run_manager
 
                                                 <td>6.10.58 and 6.12.x BOINC clients</td>
                                             </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <a class="ext-link" href="http://download.opensuse.org/repositories/home:/enzokiel/openSUSE_11.3_Update/">
-                                                        <span class="icon">​</span>http://download.opensuse.org/repositories/home:/enzokiel/openSUSE_11.3_Update/
-                                                    </a>
-                                                </td>
-
-                                                <td>32-bit and 64-bit Linux OpenSUSE 11.3</td>
-
-                                                <td>6.12.x BOINC client/ManagerGui Repository</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <a class="ext-link" href="http://web.os2power.com/yuri/SetiAtHome/">
-                                                        <span class="icon">
-                                                        </span>Yuri Dario
-                                                    </a>
-                                                </td>
-
-                                                <td>OS/2 Warp, eComStation</td>
-
-                                                <td>BOINC client and SETI@home</td>
-                                            </tr>
                                         </table>
                                     </div>
                                 </div>
@@ -1016,7 +939,7 @@ $ ./run_manager
             </div>
         </div>
         <!--/Step 2 banner-->
-            <div class="row features" style="background-color: #282828;">
+            <div class="row" style="background-color: #282828;">
                 <div class="col-xs-12 col-sm-4">
                     <h5 style="color:white;">Whitelist justification</h5>
                     <ul style="list-style-type: none;">
@@ -1051,7 +974,7 @@ $ ./run_manager
                 </div>
             </div>
         <!--Step 2 content-->
-        <div class="row features">
+        <div class="row">
             <div class="col-sm-12 hidden-xs" style="background-color: #282828; margin-top:10px;">
 
                 <!--Tab Panel-->
@@ -1062,8 +985,8 @@ $ ./run_manager
                     <!-- Nav tabs -->
                     <div style="text-align:center;">
                         <ul class="nav nav-pills" role="tablist" style="display: inline-block; padding-top:25px;">
-                            <li role="presentation"><a href="#Nvidia" aria-controls="Nvidia" role="tab" data-toggle="tab">Nvidia GPU Projects</a></li>
-                            <li role="presentation"><a href="#AMD" aria-controls="AMD" role="tab" data-toggle="tab">AMD GPU Projects</a></li>
+                            <li role="presentation"><a href="#Nvidia" aria-controls="Nvidia" role="tab" data-toggle="tab">Nvidia GPU Projects</a></li><!--
+                            <li role="presentation"><a href="#AMD" aria-controls="AMD" role="tab" data-toggle="tab">AMD GPU Projects</a></li>-->
                             <li role="presentation"><a href="#Multi-GPU" aria-controls="Multi-GPU" role="tab" data-toggle="tab">Multi-GPU Projects</a></li>
                             <li role="presentation"><a href="#CPU" aria-controls="CPU" role="tab" data-toggle="tab">CPU Projects</a></li>
                             <!--<li role="presentation"><a href="#Sensor" aria-controls="Sensor" role="tab" data-toggle="tab">Sensor Projects</a></li>-->
@@ -1125,8 +1048,38 @@ $ ./run_manager
                             </div>
                         </div>
                         <!--/Nvidia-->
-                        <!--AMD-->
+                        <!--AMD
                         <div role="tabpanel" class="tab-pane" id="AMD">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
+                                    <thead style="background-color:#383736;">
+                                        <tr>
+                                            <th style="width:20%;">
+                                                Project
+                                            </th>
+                                            <th style="width:40%;">
+                                                Goal
+                                            </th>
+                                            <th style="width:20%;">
+                                                Sponsor
+                                            </th>
+                                            <th style="width:20%;">
+                                                Compatability
+                                            </th>
+                                            <th style="width:20%">
+                                                Quick Links
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color:#3E3D3C;">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        /AMD-->
+                        <!--/Multi-GPU-->
+                        <div role="tabpanel" class="tab-pane" id="Multi-GPU">
                             <div class="col-sm-12 col-md-12 col-lg-12">
                                 <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
                                     <thead style="background-color:#383736;">
@@ -1167,53 +1120,6 @@ $ ./run_manager
                                                 <a href="http://milkyway.cs.rpi.edu/milkyway/team_members.php?teamid=6566" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="http://boinc.fzk.de/poem/">POEM@HOME</a>
-                                            </td>
-                                            <td>Models protein folding using Anfinsen's dogma</td>
-                                            <td>
-                                                <a href="http://www.int.kit.edu/wenzel.php">Karlsruhe Institute of Technology</a>
-                                            </td>
-                                            <td style="text-align:center;">
-                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
-                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
-                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
-                                            </td>
-                                            <td>
-                                                <a href="http://boinc.fzk.de/poem/team_display.php?teamid=3147" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://boinc.fzk.de/poem/team_members.php?teamid=3147" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--/AMD-->
-                        <!--/Multi-GPU-->
-                        <div role="tabpanel" class="tab-pane" id="Multi-GPU">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <table class="table table-hover table-condensed table-bordered" style="background-color:#303030; width:100%;">
-                                    <thead style="background-color:#383736;">
-                                        <tr>
-                                            <th style="width:20%;">
-                                                Project
-                                            </th>
-                                            <th style="width:40%;">
-                                                Goal
-                                            </th>
-                                            <th style="width:20%;">
-                                                Sponsor
-                                            </th>
-                                            <th style="width:20%;">
-                                                Compatability
-                                            </th>
-                                            <th style="width:20%">
-                                                Quick Links
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody style="background-color:#3E3D3C;">
                                         <tr>
                                             <td>
                                                 <a href="http://boinc.thesonntags.com/collatz/">Collatz Conjecture</a>
@@ -1326,7 +1232,7 @@ $ ./run_manager
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody style="background-color:#3E3D3C;">
+                                    <tbody style="background-color:#3E3D3C;"><!--
                                         <tr>
                                             <td>
                                                 <a href="http://volunteer.cs.und.edu/csg/">Gridcoin Finance</a>
@@ -1342,7 +1248,64 @@ $ ./run_manager
                                                 <a href="http://finance.gridcoin.us/team_display.php?teamid=5" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://finance.gridcoin.us/team_members.php?teamid=5&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
+                                        </tr>-->
+                                        <tr>
+                                            <td>
+                                                <a href="https://milkyway.cs.rpi.edu/milkyway/">Moo! Wrapper</a>
+                                            </td>
+                                            <td>
+                                                Moo! Wrapper brings together BOINC volunteer computing network resources and the Distributed.net projects. It allows a BOINC Client to participate in the RC5-72 challenge.
+                                            </td>
+                                            <td>
+                                                <a href="http://www.distributed.net/">Distributed.Net</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://milkyway.cs.rpi.edu/milkyway/team_members.php?teamid=6566" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://szdg.lpds.sztaki.hu/szdg/">SZTAKI Desktop Grid</a>
+                                            </td>
+                                            <td>
+                                                Mathematics, linguistics, physics, biology related goals.
+                                            </td>
+                                            <td>
+                                                <a href="http://www.sztaki.hu/">SZTAKI</a>, <a href="https://ec.europa.eu/research/fp7/index_en.cfm">EU FP7</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://szdg.lpds.sztaki.hu/szdg/team_display.php?teamid=3502" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://szdg.lpds.sztaki.hu/szdg/team_members.php?teamid=3502&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://atlasathome.cern.ch/">ATLAS@Home</a>
+                                            </td>
+                                            <td>
+                                                CERN: Searching for new particles and processes using head-on collisions of protons of extraordinary high energy.
+                                            </td>
+                                            <td>
+                                                <a href="http://atlas.ch/">ATLAS.CH</a>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://atlasathome.cern.ch/team_display.php?teamid=1869" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://atlasathome.cern.ch/team_members.php?teamid=1869&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr><!--
                                         <tr>
                                             <td>
                                                 <a href="http://volunteer.cs.und.edu/csg/">Citizen Science Grid</a>
@@ -1361,7 +1324,7 @@ $ ./run_manager
                                                 <a href="http://csgrid.org/csg/team_display.php?teamid=154" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://csgrid.org/csg/team_members.php?teamid=154&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr>-->
                                         <tr>
                                             <td>
                                                 <a href="http://burp.renderfarming.net/">BURP</a>
@@ -1384,7 +1347,7 @@ $ ./run_manager
                                             </td>
                                             <td>Various fields of Simulation, Data Analysis and Machine Learning.</td>
                                             <td>
-                                                <a href="www.distributeddatamining.org/ScientificPartners">Multiple Sponsors</a>
+                                                <a href="https://www.distributeddatamining.org/ScientificPartners">Multiple Sponsors</a>
                                             </td>
                                             <td style="text-align:center;">
                                                 <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
@@ -1447,22 +1410,6 @@ $ ./run_manager
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="http://findah.ucd.ie/">FIND@Home</a>
-                                            </td>
-                                            <td>docking simulations on malaria proteins</td>
-                                            <td><a href="http://www.ucd.ie/casl/">UCD CASL</a></td>
-                                            <td style="text-align:center;">
-                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
-                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
-                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
-                                            </td>
-                                            <td>
-                                                <a href="http://findah.ucd.ie/team_display.findphp?teamid=2198" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://findah.ucd.ie/team_members.php?teamid=2198" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
                                                 <a href="http://climateprediction.net/">climate prediction</a>
                                             </td>
                                             <td>Climate modelling and prediction</td>
@@ -1475,38 +1422,6 @@ $ ./run_manager
                                             <td>
                                                 <a href="http://climateapps2.oerc.ox.ac.uk/cpdnboinc/team_display.php?teamid=10427" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://climateapps2.oerc.ox.ac.uk/cpdnboinc/team_members.php?teamid=10427" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="http://aerospaceresearch.net/constellation/">constellation</a>
-                                            </td>
-                                            <td>Various aerospace related sciences and engineering</td>
-                                            <td>Rechenkraft.net, DGLR, Selfnet, and Shack</td>
-                                            <td style="text-align:center;">
-                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
-                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
-                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
-                                            </td>
-                                            <td>
-                                                <a href="http://aerospaceresearch.net/constellation/team_display.php?teamid=2177" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://aerospaceresearch.net/constellation/team_members.php?teamid=2177" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="http://convector.fsv.cvut.cz/">convector</a>
-                                            </td>
-                                            <td><a href="http://convector.fsv.cvut.cz//52_bar_truss.pdf">52 bar truss discrete optimization problem</a></td>
-                                            <td>Czech Technical University in Prague</td>
-                                            <td style="text-align:center;">
-                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
-                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
-                                                <img src="/Images/Platforms/osx.png" style="width:24px; height:24px;" alt="osx" />
-                                            </td>
-                                            <td>
-                                                <a href="http://convector.fsv.cvut.cz/team_display.php?teamid=172" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://convector.fsv.cvut.cz/team_members.php?teamid=172" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1570,7 +1485,6 @@ $ ./run_manager
                                             </td>
                                             <td>
                                                 <a href="http://boinc.gorlaeus.net/team_display.php?teamid=1629" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://boinc.gorlaeus.net/team_members.php?teamid=1629" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -1620,7 +1534,7 @@ $ ./run_manager
                                                 <a href="http://www.malariacontrol.net/team_display.php?teamid=4059" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://www.malariacontrol.net/team_members.php?teamid=4059" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr><!--
                                         <tr>
                                             <td>
                                                 <a href="http://mindmodeling.org/">MindModeling@home</a>
@@ -1636,7 +1550,7 @@ $ ./run_manager
                                                 <a href="http://mindmodeling.org/team_display.php?teamid=2415" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://mindmodeling.org/team_members.php?teamid=2415" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr>-->
                                         <tr>
                                             <td>
                                                 <a href="http://escatter11.fullerton.edu/nfs/">NFS@Home</a>
@@ -1685,7 +1599,7 @@ $ ./run_manager
                                                 <a href="http://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://boinc.bakerlab.org/rosetta/team_members.php?teamid=12575" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr><!--
                                         <tr>
                                             <td>
                                                 <a href="http://sat.isa.ru/pdsat/">SAT@home</a>
@@ -1700,7 +1614,7 @@ $ ./run_manager
                                                 <a href="http://sat.isa.ru/pdsat/team_display.php?teamid=2059" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://sat.isa.ru/pdsat/team_members.php?teamid=2059" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr>-->
                                         <tr>
                                             <td>
                                                 <a href="http://pogs.theskynet.org/pogs/">theSkyNet POGS</a>
@@ -1732,7 +1646,36 @@ $ ./run_manager
                                             </td>
                                             <td>
                                                 <a href="http://www.rechenkraft.net/yoyo/team_display.php?teamid=1475" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                                <a href="http://www.rechenkraft.net/yoyo/team_members.php?teamid=1475" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="https://boinc.vgtu.lt/vtuathome/index.php">VTGU</a>
+                                            </td>
+                                            <td>Distributed computing platform for scientists of <a href="">Vilnius Gediminas Technical University (VGTU)</a>.</td>
+                                            <td><a href="http://www.vgtu.lt/index.php?lang=2">Vilnius Gediminas Technical University</a></td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="https://boinc.vgtu.lt/vtuathome/team_display.php?teamid=1981" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="https://boinc.vgtu.lt/vtuathome/top_teams.php" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="http://srbase.my-firewall.org/sr5/">SRBase</a>
+                                            </td>
+                                            <td>Attempting to solve Sierpinski / Riesel Bases up to 1030.</td>
+                                            <td>The project is in collaboration with the <a href="http://www.mersenne.org/">Mersenne CRUS project</a>.</td>
+                                            <td style="text-align:center;">
+                                                <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
+                                                <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
+                                            </td>
+                                            <td>
+                                                <a href="http://srbase.my-firewall.org/sr5//team_display.php?teamid=99" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
+                                                <a href="http://srbase.my-firewall.org/sr5//team_members.php?teamid=99&offset=0&sort_by=expavg_credit" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
                                         </tr>
                                         <!--
@@ -1757,7 +1700,7 @@ $ ./run_manager
                             </div>
                         </div>
                         <!--/CPU-->
-                        <!--Sensor-->
+                        <!--Sensor
                         <div role="tabpanel" class="tab-pane" id="Sensor">
                             <table class="table table-hover table-condensed table-bordered" style="width:100%;">
                                 <thead style="background-color:#383736;">
@@ -1819,49 +1762,7 @@ $ ./run_manager
                                 </tbody>
                             </table>
                         </div>
-                        <!--/Sensor-->
-                        <!--ASIC-->
-                        <div role="tabpanel" class="tab-pane" id="ASIC">
-                            <table class="table table-hover table-condensed table-bordered" style="background-color:#383736; width:100%;">
-                                <thead>
-                                    <tr>
-                                        <th style="width:20%;">
-                                            Project
-                                        </th>
-                                        <th style="width:40%;">
-                                            Goal
-                                        </th>
-                                        <th style="width:20%;">
-                                            Sponsor
-                                        </th>
-                                        <th style="width:20%;">
-                                            Compatability
-                                        </th>
-                                        <th style="width:20%">
-                                            Quick Links
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody style="background-color:#3E3D3C;">
-                                    <tr>
-                                        <td>
-                                            <a href="#">Bitcoin Utopia</a>
-                                        </td>
-                                        <td>Mining Bitcoin on a large Pool and dedicating the rewards as charity towards other BOINC projects</td>
-                                        <td>Private, collect 10% of all Mined Bitcoins</td>
-                                        <td>
-                                            <img src="/Images/Platforms/windows.png" style="width:24px; height:24px;" alt="Windows" />
-                                            <img src="/Images/Platforms/linux.png" style="width:24px; height:24px;" alt="linux" />
-                                        </td>
-                                        <td>
-                                            <a href="http://www.bitcoinutopia.net/bitcoinutopia/team_display.php?teamid=1888" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
-                                            <a href="http://www.bitcoinutopia.net/bitcoinutopia/team_members.php?teamid=1888" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--/ASIC-->
+                        --/Sensor-->
                     </div>
                 </div>
             </div>
@@ -1889,7 +1790,7 @@ $ ./run_manager
         </div>
         <!--/Step 3 banner-->
         <!--Step 3 banner-->
-        <div class="row features" style="background-color: #282828;">
+        <div class="row" style="background-color: #282828;">
             <div class="col-xs-12">
                 This pool is under active development and may have issues/bugs from time to time. However things have been pretty stable and everything, including payments, are working normally.<br>
                 <br>
@@ -1972,7 +1873,7 @@ $ ./run_manager
 </section>
 <!--/TEST AREA-->
 <!--Getting started section-->
-<section style="background-color: #40413c; padding-bottom: 15px;">
+<section class="" style="background-color: #40413c; padding-bottom: 15px;">
     <div class="container" style="overflow:hidden;">
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
