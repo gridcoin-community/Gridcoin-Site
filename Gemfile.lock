@@ -33,6 +33,7 @@ GEM
     eventmachine (1.0.7)
     execjs (2.5.2)
     ffi (1.9.8)
+    ffi (1.9.8-x64-mingw32)
     haml (4.0.6)
       tilt
     hike (1.2.3)
@@ -121,9 +122,13 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   middleman (~> 3.3.12)
   middleman-livereload (~> 3.1.0)
   tzinfo-data
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.13.7
