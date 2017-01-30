@@ -19,23 +19,23 @@ layout: layout
         <div class="row">
             <div class="col-sm-12 alert alert-warning" style="text-align:center; margin-top:10px;">
                 <h5>
-                    The majority of this guide is tailored for Windows users.<br />
-                    Guides for Linux and Mac coming soon!
+                    This majority of this guide is tailored for Windows users.<br />
+                    Guides for Linux and MAC coming soon!
                 </h5>
             </div>
             <div class="col-sm-12">
                 <h4>Securing your wallet</h4>
                 <p>
-                    If your wallet.dat file is stolen, and it's unencrypted & you have no backup of the file, it's the equivalent of cash being stolen; there's no way of getting it back unless you catch the thief. Thusly, you must take proper precautions to prevent the loss/theft of your Gridcoin.
+                    If your wallet.dat file is stolen, and it's unencrypted & you have no backup of the file, it's the equivelant of cash being stolen; there's no way of getting it back unless you catch the theif. Thusly, you must take proper precautions to prevent the loss/theft of your gridcoin.
                 </p>
                 <h5>Wallet security recommendations:</h5>
                 <b>NOTE: PAPER WALLET INCOMPATIBLE WITH RESEARCH CLIENT/COINS!</b>
                 <ul>
                     <li>Create a <a href="http://walletgenerator.net/">paper wallet</a> and store it in a waterproof, safe environment.</li>
-                    <li>Backup the wallet.dat and gridcoinresearch.conf files on encrypted USB sticks and store them somewhere safe.</li>
-                    <li>Alternatively, store an encrypted zip/rar/tar on any form of storage medium and keep it safe.</li>
+                    <li>Backup the wallet.dat file on encrypted USB sticks and store them in a safe.</li>
+                    <li>Alternatively, store an encrypted zip/rar/volume on any form of storage medium and keep it safe.</li>
                     <li>Regularly check that your backups work - if you encrypt your wallet then forget the pass, you're in trouble..</li>
-                    <li>Read <a href="https://en.bitcoin.it/wiki/Securing_your_wallet">this wallet security guide</a> (for Bitcoin, but relevant to Gridcoin to some degree).</li>
+                    <li>Read <a href="https://en.bitcoin.it/wiki/Securing_your_wallet">this wallet security guide</a> (for bitcoin, but relevant to gridcoin to some degree).</li>
                 </ul>
             </div>
             <div class="col-sm-12">
@@ -43,31 +43,29 @@ layout: layout
                 <p>
                     One of the most common attack vectors is through your web browser, so take precautionary measures to minimize risk of loss of funds/exposure to malware.
                 </p>
-                <h5>Non-exhaustive browser security recommendation:</h5>
+                <h5>Non-extensive browser security recommendation:</h5>
                 <ul>
                     <li>Stop using internet explorer, switch to <a href="https://www.mozilla.org/en-US/firefox/desktop/">Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, or one of the many variants of the two.</li>
-                    <li>Do not use the same password for multiple sites. NEVER re-use a password!</li>
+                    <li>Do not use the same password for multiple sites.</li>
                     <li>Use long passwords! <a href="https://xkcd.com/936/">the longer, the more difficult to crack.</a></li>
-                    <li>Consider a password manager such as <a href="https://www.keepassx.org/">KeePassX</a> to create and store long/unique passwords.</li>
                     <li>Use 2 factor authentication like a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a>, or <a href="https://www.google.com/landing/2step/">GoogleAuth</a> on any website that offers it; it's a second layer of defence against phishing.</li>
-                    <li>If you've been sent a shortened link, either use a <a href="http://untiny.com/">link preview service</a> or do not click it!</li>
+                    <li>If you've been sent a shortened link, either use a link preview service or flat up don't click it!</li>
                     <li>Disable any extensions that have been installed by 3rd party software - java/toolbars/etc, minus antivirus.</li>
-                    <li>Keep plugins up-to-date (flash/java/etc).</li>
-                    <li>Use <a href="https://www.startpage.com/">StartPage</a> instead of Google.</li>
+                    <li>Update all plugins (flash/java/etc)</li>
+                    <li>Use duckduckgo instead of google: <a href="https://duckduckgo.com/">DuckDuckGo</a></li>
                 </ul>
 
-                <h5>Browser extension recommendations for extra security:</h5>
+                <h5>Firefox extension recommendation for extra security:</h5>
                 <ul>
-                    <li><a href="https://github.com/gorhill/uBlock/">uBlock Origin</a>: Eliminate adverts from the internet; adverts often are malicious! Both "AdBlock" extensions, Plus and Edge, are now considered out-of-date.</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-edge/?src=search">Adblock edge</a>: Eliminate adverts from the internet; adverts often are malicious! ABP has 'whitelisted' adverts.</li>
                     <li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=hp-dl-mostpopular">NoScript</a>: Nerfs scripts on the internet; you have to manually allow sites to run scripts. Can help prevent malicious scripts running.</li>
-                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/policeman/?src=cb-dl-toprated">Policeman</a>: Alternative to NoScript. Nerfs scripts on the internet.</li>
-                    <li><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>: An extension made by the EFF; Enforces an https (SSL) connection on sites whenever possible.</li>
+                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/policeman/?src=cb-dl-toprated">Policeman</a>: Alternative to noscript. Nerfs scripts on the internet.</li>
+                    <li><a href="https://www.eff.org/https-everywhere">Https everywhere</a>: An extension made by the EFF; Requests a https connection on all/most sites.</li>
                     <li><a href="https://addons.mozilla.org/en-us/firefox/addon/requestpolicy/">requestpolicy</a>: Protects against CSRF (Controls cross-site requests).</li>
-                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-controller/">Cookie Controller</a>: Manage site cookie permissions (browse & remove cookies).</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-controller/">Cookie Controller</a>: Manage site cookie permissions (Browse & remove cookies).</li>
                     <li><a href="https://code.google.com/p/https-finder/">https-finder</a>: Detects valid https pages as you browse.</li>
-                    <li><a href="https://addons.mozilla.org/En-us/firefox/addon/refcontrol/">RefControl</a>: Hides/forges your referers.</li>
-                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/?src=search">Lastpass</a>: Another secure password manager. Combine with a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a> and you'll have incredibly secure authentication online! Highly recommended!</li>
-                    <li><a href="https://github.com/dillbyrne/random-agent-spoofer/">Random Agent Spoofer</a>: Adding all these extensions makes your browser stick out like a sore thumb! Spoof your fingerprints!
+                    <li><a href="https://addons.mozilla.org/En-us/firefox/addon/refcontrol/">RefControl</a>: Hides/Forges your referers</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/?src=search">Lastpass</a>: A secure password manager. Combine with a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a> and you'll have incredibly secure authentication online! Highly reccomended!</li>
                 </ul>
             </div>
             <div class="col-sm-12">
@@ -90,18 +88,19 @@ layout: layout
             <div class="col-sm-12">
                 <h4>Securing your computer</h4>
                 <p>
-                    Most of these tips are a given, but it's good to remember that they are quite important to adhere to at all times.
+                    Most of these tips are a given, but it's good to remember to remember that they are quite important to adhere to.
                 </p>
                 <ul>
                     <li><a href="https://secunia.com/vulnerability_scanning/personal/">Use Secunia PSI</a> to keep software constantly up to date.</li>
-                    <li>Keep your operating system up to date (Windows updates/Ubuntu apt-get upgrade/Fedora yum -y upgrade/etc) & dont run a cracked version of your operating system (Good way to infect your PC & be a victim of ID theft).</li>
+                    <li>Keep your operating system up to date (windows updates/ubuntu apt-get upgrade/fedora yum -y upgrade/etc) & dont run a cracked version of your operating system (Good way to infect your pc & be a victim of ID theft).</li>
                     <li>Keep usage of cracked/pirated software/games to an absolute minimum; keygens and pirate software can be (usually are) a source of malware.</li>
                     <li>If you must install insecure software, run it in a <a href="http://www.sandboxie.com/">sandbox</a>!</li>
                     <li>Install an antivirus program (<a href="https://www.bitdefender.co.uk/">Bitdefender</a> paid versions are good!). Scan all files that you download from the internet, especially from forums & P2P sites/apps.</li>
                     <li>Keep offline backups of your important data.</li>
                     <li>Install theft prevention software on mobile devices, examples are: <a href="https://preyproject.com/">Prey</a>, <a href="https://lojack.absolute.com/en">Lojack</a>, etc.</li>
                     <li>Encrypt your devices' storage, especially if you've got a mobile wallet.</li>
-                    <li>Do not share any of your account credentials to anyone, don't write them down, and don't store them insecurely on your PC.</li>
+                    <li>Do not share any of your account credentials to anyone, don't write them down, and don't store them insecurely on your pc.</li>
+                    <li>If you want to securely store passwords on your pc (not browser), use <a href="">KeePass</a>.</li>
                 </ul>
             </div>
         </div>
