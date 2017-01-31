@@ -363,7 +363,7 @@ layout: layout
                                         -rpcport=&lt;port&gt;
                                     </td>
                                     <td>
-                                        Listen for JSON-RPC connections on &lt;port&gt; (default: 32760 or testnet: 32759)
+                                        Listen for JSON-RPC connections on &lt;port&gt; (default: 32749)
                                     </td>
                                 </tr>
                                 <tr>
@@ -623,7 +623,7 @@ layout: layout
                                         &lt;nrequired&gt; &lt;'["key","key"]'&gt; [account]
                                     </td>
                                     <td>
-                                        Add a nrequired-to-sign multisignature address to the wallet. Each key is a bitcoin address or hex-encoded public key. If [account] is specified, assign address to [account].
+                                        Add a nrequired-to-sign multisignature address to the wallet. Each key is a Gridcoin address or hex-encoded public key. If [account] is specified, assign address to [account].
                                     </td>
                                     <td>
                                         N
@@ -707,7 +707,7 @@ layout: layout
                                         &lt;gridcoinaddress&gt;
                                     </td>
                                     <td>
-                                        Reveals the private key corresponding to &lt;bitcoinaddress&gt;
+                                        Reveals the private key corresponding to &lt;gridcoinaddress&gt;
                                     </td>
                                     <td>
                                         Y
@@ -759,7 +759,7 @@ layout: layout
                                         &lt;account&gt;
                                     </td>
                                     <td>
-                                        Returns the current bitcoin address for receiving payments to this account. If &lt;account&gt; does not exist, it will be created along with an associated new address that will be returned.
+                                        Returns the current Gridcoin address for receiving payments to this account. If <account> does not exist, it will be created along with an associated new address that will be returned.
                                     </td>
                                     <td>
                                         N
@@ -773,7 +773,7 @@ layout: layout
                                         &lt;dns&gt; [node]
                                     </td>
                                     <td>
-                                        Returns information about the given added node, or all added nodes.<br />
+                                        Returns information about the given added node, or all added nodes.<br/>
                                         (Note that onetry addnodes are not listed here) If dns is false, only a list of added nodes will be provided, otherwise connected information will also be available.
                                     </td>
                                     <td>
@@ -800,7 +800,7 @@ layout: layout
                                         [account] [minconf=1]
                                     </td>
                                     <td>
-                                        If [account] is not specified, returns the server's total available balance.<br />
+                                        If [account] is not specified, returns the server's total available balance.<br/>
                                         If [account] is specified, returns the balance in the account.
                                     </td>
                                     <td>
@@ -1030,7 +1030,7 @@ layout: layout
                                         [account]
                                     </td>
                                     <td>
-                                        Returns a new bitcoin address for receiving payments. If [account] is specified payments received with the address will be credited to [account].
+                                        Returns a new Gridcoin address for receiving payments. If [account] is specified payments received with the address will be credited to [account].
                                     </td>
                                     <td>
                                         N
@@ -1096,7 +1096,7 @@ layout: layout
                                         &lt;gridcoinaddress&gt; [minconf=1]
                                     </td>
                                     <td>
-                                        Returns the amount received by &lt;bitcoinaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.
+                                        Returns the amount received by &lt;gridcoinaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.
                                     </td>
                                     <td>
                                         N
@@ -1284,7 +1284,7 @@ layout: layout
                                         [minconf=1] [includeempty=false]
                                     </td>
                                     <td>
-                                        Returns an array of objects containing: address, account, amount, confirmations. To get a list of accounts on the system, execute litecoind listreceivedbyaddress 0 true.
+                                        Returns an array of objects containing: address, account, amount, confirmations. To get a list of accounts on the system, execute gridcoind listreceivedbyaddress 0 true.
                                     </td>
                                     <td>
                                         N
@@ -1550,7 +1550,7 @@ layout: layout
                                     </td>
                                     <td></td>
                                     <td>
-                                        Upgrade qt client.
+                                        Upgrade Qt client.
                                     </td>
                                     <td>
                                         N
@@ -1564,7 +1564,7 @@ layout: layout
                                         &lt;gridcoinaddress&gt;
                                     </td>
                                     <td>
-                                        Return information about &lt;litecoinaddress&gt;.
+                                        Return information about &lt;gridcoinaddress&gt;.
                                     </td>
                                     <td>
                                         N
