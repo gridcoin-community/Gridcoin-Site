@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%= partial "/layouts/partials/head" %>
-  <body style="position:; width:100%; overflow-x:hidden; margin-top:0px; padding-top:0px;">
-  <%= partial "/layouts/partials/header" %>
-  <%= yield %>
-  <%= partial "/layouts/partials/footer" %>
-  <%= javascript_include_tag  "jquery.min", "bootstrap.min", "google-analytics" %>
+	<%= partial "/layouts/partials/head" %>
+	<body style="position:; width:100%; overflow-x:hidden; margin-top:0px; padding-top:0px;">
+	<%= partial "/layouts/partials/header" %>
+	<%= yield %>
+	<%= partial "/layouts/partials/footer" %>
+
+	<!--   Core JS Files   -->
+	<script src="/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="/assets/js/core/tether.min.js" type="text/javascript"></script>
+	<script src="/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+	<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+	<script src="/assets/js/plugins/bootstrap-switch.js"></script>
+	<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+	<script src="/assets/js/now-ui-kit.js" type="text/javascript"></script>
   </body>
 </html>
