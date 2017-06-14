@@ -22,10 +22,11 @@ cd Gridcoin-Site
 
 bundle install
 
-### For running the development web server:
-
-bundle exec middleman server
 
 ### For building the website:
 
 bundle exec middleman build
+
+### For running the development web server:
+
+bundle exec middleman server
