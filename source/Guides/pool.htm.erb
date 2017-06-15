@@ -16,7 +16,7 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
                 <a href="/Guides/pool.htm">
                     <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
                     <span class="label label-success" style="margin-bottom:7px; text-align:center;">You are here</span>
-                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Setup the pool</h6>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC &amp; Setup the pool</h6>
                 </a>
             </div>
         </div>
@@ -307,10 +307,10 @@ page.title: "Gridcoin - Step 2: BOINC Installation"
                                             <li style="margin-bottom: 10px; text-align:left;">Here is an example. The archive is downloaded to the desktop. It is then moved to the home directory (~). Finally BOINC is unpacked and installed. All of this can be done within a regular user account; root privileges are not needed.</li>
                                             <li>
                                                 <pre>
-$ mv ~/Desktop/boinc_7.2.23_i686-pc-linux-gnu.sh ~
-$ cd ~
-$ sh boinc_7.2.23_i686-pc-linux-gnu.sh
-</pre>
+                                                    $ mv ~/Desktop/boinc_7.2.23_i686-pc-linux-gnu.sh ~
+                                                    $ cd ~
+                                                    $ sh boinc_7.2.23_i686-pc-linux-gnu.sh
+                                                </pre>
                                             </li>
                                         </ul>
 
@@ -345,10 +345,10 @@ $ sh boinc_7.2.23_i686-pc-linux-gnu.sh
                                             </li>
                                             <li style="margin-bottom: 10px; text-align:left;">
                                                 <pre>
-$ cd ~/BOINC
-$ ./run_client --daemon
-$ ./run_manager
-</pre>
+                                                    $ cd ~/BOINC
+                                                    $ ./run_client --daemon
+                                                    $./run_manager
+                                                </pre>
                                             </li>
                                             <li style="margin-bottom: 10px; text-align:left;">
                                                 The BOINC working directory can be moved elsewhere as
@@ -583,44 +583,44 @@ $ ./run_manager
                                             </li>
                                             <li>
                                                 <pre style="text-align:left;">
-&lt;app_info&gt;
-&lt;app&gt;
-&lt;name&gt;setiathome_enhanced&lt;/name&gt;
-&lt;/app&gt;
-&lt;file_info&gt;
-&lt;name&gt;setiathome_6.6_windows_intelx86.exe&lt;/name&gt;
-&lt;executable/&gt;
-&lt;/file_info&gt;
-&lt;file_info&gt;
-&lt;name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/name&gt;
-&lt;executable/&gt;
-&lt;/file_info&gt;
-&lt;app_version&gt;
-&lt;app_name&gt;setiathome_enhanced&lt;/app_name&gt;
-&lt;version_num&gt;660&lt;/version_num&gt;
-&lt;api_version&gt;6.1.0&lt;/api_version&gt;
-[
-&lt;coproc&gt;
-&lt;type&gt;CUDA&lt;/type&gt;
-&lt;count&gt;1&lt;/count&gt;
-&lt;/coproc&gt;
-]
-[ &lt;plan_class&gt;cuda&lt;/plan_class&gt; ]
-[ &lt;flops&gt;X&lt;/flops&gt; ]
-[ &lt;avg_ncpus&gt;X&lt;/avg_ncpus&gt; ]
-[ &lt;max_ncpus&gt;X&lt;/max_ncpus&gt; ]
-[ &lt;cmdline&gt;args&lt;/cmdline&gt; ]
-&lt;file_ref&gt;
-&lt;file_name&gt;setiathome_6.6_windows_intelx86.exe&lt;/file_name&gt;
-&lt;main_program/&gt;
-&lt;/file_ref&gt;
-&lt;file_ref&gt;
-&lt;file_name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/file_name&gt;
-&lt;open_name&gt;graphics_app&lt;/open_name&gt;
-&lt;/file_ref&gt;
-&lt;/app_version&gt;
-&lt;/app_info&gt;
-</pre>
+                                                    &lt;app_info&gt;
+                                                    &lt;app&gt;
+                                                    &lt;name&gt;setiathome_enhanced&lt;/name&gt;
+                                                    &lt;/app&gt;
+                                                    &lt;file_info&gt;
+                                                    &lt;name&gt;setiathome_6.6_windows_intelx86.exe&lt;/name&gt;
+                                                    &lt;executable/&gt;
+                                                    &lt;/file_info&gt;
+                                                    &lt;file_info&gt;
+                                                    &lt;name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/name&gt;
+                                                    &lt;executable/&gt;
+                                                    &lt;/file_info&gt;
+                                                    &lt;app_version&gt;
+                                                    &lt;app_name&gt;setiathome_enhanced&lt;/app_name&gt;
+                                                    &lt;version_num&gt;660&lt;/version_num&gt;
+                                                    &lt;api_version&gt;6.1.0&lt;/api_version&gt;
+                                                    [
+                                                    &lt;coproc&gt;
+                                                    &lt;type&gt;CUDA&lt;/type&gt;
+                                                    &lt;count&gt;1&lt;/count&gt;
+                                                    &lt;/coproc&gt;
+                                                    ]
+                                                    [ &lt;plan_class&gt;cuda&lt;/plan_class&gt; ]
+                                                    [ &lt;flops&gt;X&lt;/flops&gt; ]
+                                                    [ &lt;avg_ncpus&gt;X&lt;/avg_ncpus&gt; ]
+                                                    [ &lt;max_ncpus&gt;X&lt;/max_ncpus&gt; ]
+                                                    [ &lt;cmdline&gt;args&lt;/cmdline&gt; ]
+                                                    &lt;file_ref&gt;
+                                                    &lt;file_name&gt;setiathome_6.6_windows_intelx86.exe&lt;/file_name&gt;
+                                                    &lt;main_program/&gt;
+                                                    &lt;/file_ref&gt;
+                                                    &lt;file_ref&gt;
+                                                    &lt;file_name&gt;setiathome_graphics_6.6_windows_intelx86.exe&lt;/file_name&gt;
+                                                    &lt;open_name&gt;graphics_app&lt;/open_name&gt;
+                                                    &lt;/file_ref&gt;
+                                                    &lt;/app_version&gt;
+                                                    &lt;/app_info&gt;
+                                                </pre>
                                             </li>
                                         </ul>
                                     </div>
@@ -1455,7 +1455,7 @@ $ ./run_manager
                                                 <a href="http://home.edges-grid.eu/home/team_members.php?teamid=2354" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
                                         </tr>
-                                        <tr>-->
+                                        <tr>
                                             <td>
                                                 <a href="http://www.enigmaathome.net/">Enigma@Home</a>
                                             </td>
@@ -1471,7 +1471,7 @@ $ ./run_manager
                                                 <a href="http://www.enigmaathome.net/team_display.php?teamid=2937" title="Gridcoin Team Link"><i class="fa fa-home fa-2x" style="color:black;"></i></a>
                                                 <a href="http://www.enigmaathome.net/team_members.php?teamid=2937" title="Team member rankings"><i class="fa fa-pie-chart fa-2x" style="color:black;"></i></a>
                                             </td>
-                                        </tr>
+                                        </tr>-->
                                         <tr>
                                             <td>
                                                 <a href="http://boinc.gorlaeus.net/">Leiden Classical</a>
@@ -1781,7 +1781,7 @@ $ ./run_manager
                 You can follow the pool.gridcoin.co forum thread on <a href="https://cryptocointalk.com/topic/43732-gridcoinco-pool-beta-new-gridcoin-pool-now-open/" target="_blank">CryptoCoinTalk</a> for all the latest updates and news regarding the pool; and to report any issues/bugs or leave some feedback!<br>
             </div>
             <div class="col-xs-12" style="text-align:left;">
-                <h5 style="color:white; font-weight:bold;">How to Get Started</h2>
+                <h5 style="color:white; font-weight:bold;">How to Get Started</h5>
                 <ul style="list-style-type: none; padding-left: 0;">
                     <li style="text-align:left; margin-bottom: 10px;">
                         <b>1.</b> Create an account <a href="http://pool.gridcoin.co/signup" target="_blank">here</a>.
@@ -1853,6 +1853,7 @@ $ ./run_manager
             </div>
         <!--/Step 3 banner-->
         </div>
+    </div>
     <!--End of GRC Feature Section-->
 </section>
 <!--/TEST AREA-->
@@ -1864,7 +1865,7 @@ $ ./run_manager
                 <a href="/Guides/pool.htm">
                     <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
                     <span class="label label-success" style="margin-bottom:7px; text-align:center;">You are here</span>
-                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC & Setup the pool</h6>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC &amp; Setup the pool</h6>
                 </a>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
