@@ -45,14 +45,14 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
         <div class="row">
             <div class="col-xs-12 col-sm-8">
                 <h4 style="text-align:left; color:white;">BOINC Introduction</h4>
-                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 10px; text-align:left;">
-                        First of all, if you're only investing in Gridcoin you can skip this guide in favour of immediately <a href="/Guides/gridcoin-install.htm" title="Gridcoin Client installation">installing the Gridcoin Wallet</a>.
-                    </li>
-
-                    <li style="margin-bottom: 10px; text-align:left;">
-                        In order to earn Gridcoin, you need to crunch one or more whitelisted <a href="https://boinc.berkeley.edu/">BOINC</a> projects within team Gridcoin. You must install the <a href="https://boinc.berkeley.edu/">BOINC</a> client, select several <a href="https://boinc.berkeley.edu/">BOINC</a> projects and get crunching!
-                    </li>
+                <p>First of all, if you're only investing in Gridcoin you can skip this guide in favour of immediately <a href="/Guides/gridcoin-install.htm" title="Gridcoin Client installation">installing the Gridcoin Wallet</a>.</p>
+                <p>In order to earn Gridcoin, you need to crunch one or more whitelisted <a href="https://boinc.berkeley.edu/">BOINC</a> projects within team Gridcoin. You must install the <a href="https://boinc.berkeley.edu/">BOINC</a> client, select several <a href="https://boinc.berkeley.edu/">BOINC</a> projects and get crunching!</p>
+                BOINC video introductions:
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=79rTDNjdOf8">David Anderson talks BOINC, Citizen Science, and Why We Still Need You!</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=--Vy5ee7DwE">
+Serge Berig - 
+BOINC: Compute for Good, Change the World</a></li>
                 </ul>
             </div>
             <div class="col-sm-4 hidden-xs">
@@ -60,24 +60,26 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
             </div>
         </div>
 
-        <div class="row">
-            <!-- 16:9 aspect ratio -->
-            <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
-                <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jX78dSvg8kg" allowfullscreen></iframe>
-                </div>
+        <div class='row' style="margin-bottom:25px; padding-top:10px;">
+            <div class='col-xs-12'>
+                <h4 style=" color:white; font-weight:bold;">Step 1A: Install BOINC</h4>
             </div>
         </div>
 
-
         <!--Step 1-->
-        <div class='row' style="margin-top:10px;">
-            <div class='col-xs-12'>
-                <h4 style=" color:white; font-weight:bold;">
-                    Step 1: Install BOINC
-                </h4>
-                <p>Navigate to the BOINC website, download and install your operating system's BOINC client. If you're not crunching projects which require VirtualBox you don't need to install BOINC+VirtualBox.</p>
-                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://boinc.berkeley.edu/download_all.php">BOINC client downloads</a><br/>
+        <div class="row" style="margin-top:10px;">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <p>Navigate to the <a href="https://boinc.berkeley.edu">BOINC website</a>, download and install the appropriate BOINC client on your each of the computers you wish to crunch BOINC work upon. If you're not crunching projects which require <a href="https://www.virtualbox.org/wiki/Downloadsl">VirtualBox</a> you don't need to install BOINC+VirtualBox.</p>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://boinc.berkeley.edu/download.php">BOINC client downloads</a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Here's some BOINC installation video tutorials:
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=laO_oMuY5xE">Rick's Performance Computing: BOINC install guide</li>
+                        <li><a href="https://www.youtube.com/watch?v=SiQ0Ro_bCZY">Pi my life up: Setting up BOINC on a Raspberry PI</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=3hKUU9YWCKE">Rasim Muratovic: Installing BOINC</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=jX78dSvg8kg">How To: Gridcoin + BOINC + Windows 7 Installation (Part 1 of 3)</a></li>
+                    </ul>
             </div>
         </div>
         <!--/Step 1-->
@@ -138,7 +140,7 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
         <!--/Step 3 banner-->
         <!--Step 3 banner-->
         <div class='row' style="margin-top:10px;">
-            <div class='col-xs-12 text-center' >
+            <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6' >
                 <h6 style="color:white; text-align:left;">
                     Foreword prior to proceeding:
                 </h6>
@@ -155,8 +157,12 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
                     <li style="margin-bottom: 10px; text-align:left;">
                         There are two methods of adding BOINC projects; these are to manually setup each project one at a time, or to use an account manager service to speed up the process.
                     </li>
+                </ul>
+            </div>
+            <div class='col-xs-12 col-sm-6 col-md-6 col-lg-6' >
+                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
                     <li style="text-align:left;">
-                        Pros of using an account manager:
+                        Advantages of using an account manager:
                         <ul>
                             <li>
                                 Single Sign On: One password for BOINC to remember.
@@ -170,7 +176,7 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
                         </ul>
                     </li>
                     <li style="text-align:left;">
-                        Cons of using an account manager:
+                        Disadvantages of using an account manager:
                         <ul>
                             <li>
                                 Single Sign On: If your account manager's credentials are compromised, then all of your boinc project accounts will be compromised.
@@ -182,278 +188,65 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
         </div>
         <!--/Step 3 banner-->
         <!--Step 3 content-->
+        <div class="row" style="margin-bottom:5px;">
+            <div class="col-xs-12">
+                <h4>Manually setting up projects</h4>
+                <ul>
+                    <li>
+                        After installing and starting the BOINC Manager, you are asked to add a project or use an account manager. Select the 'add a project' radio button.
+                    </li>
+                    <li>
+                        After clicking “Next“ choose a desired project.
+                    </li>
+                    <li>
+                        You will be prompted to either create an account or login to an existing one. For some projects (such as World Community Grid) you have to register directly on the homepage of the project. Remember, to use the same email address for your BOINC activities.
+                    </li>
+                    <li>
+                        You will be prompted with a registration confirmation. Once you have press the 'Finish' button, a web browser should launch with additional registration fields required. If not, go to the project homepage (you can definitely find it via Google). You have to find the “Your Account” button and press it. The project homepage of a different project can look different, but should have the same functions!
+                    </li>
+                    <li>
+                        Within the launched web page, enter your username (don't bother with country/post-code) then press OK.
+                    </li>
+                    <li>
+                        You'll be next be presented with a team search field, search for and join team 'Gridcoin'. Currently, team 'Gridcoin' membership is mandatory.
+                    </li>
+                    <li>
+                        Your computer will now be crunching work units for the chosen project within team Gridcoin.
+                    </li>
+                    <li>
+                        Repeat these steps for all projects you want to participate in.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="row">
-            <div class="col-sm-12" style=" margin-top:10px;">
-
-                <!--Tab Panel-->
-                <div role="tabpanel">
-                    <div class="col-xs-12" style="text-align:center;">
-                        <h6 style="color:white;">Select your prefered BOINC registration method:</h6>
-                    </div>
-                    <!-- Nav tabs -->
-                    <div style="text-align:center;">
-                            <a class="btn btn-simple btn-default" href="#ManualSetup" aria-controls="ManualSetup" role="tab" data-toggle="tab">Manual Setup</a>
-                            <a class="btn btn-simple btn-default" href="#AccountManager" aria-controls="AccountManager" role="tab" data-toggle="tab">Account Managers</a>
-                    </div>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content" style=" border:none;">
-                        <!--Manually Adding a Project-->
-                        <div role="tabpanel" class="tab-pane" id="ManualSetup">
-                            <div class="container">
-                                <div class="row" style="margin-bottom:5px;">
-                                    <h4 style="text-align:left; color:white;">Manually setting up projects</h4>
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-1.png">
-                                            <img alt="BOINC add project 1" class="aligncenter size-medium wp-image-209" height="182" src="../Images/boinc-client_files/BOINC-add-project-1-300x182.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                As an example, we will use the project <em>Leiden Classical</em>, a CPU only project.
-                                            </li>
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                After starting the BOINC Manager, you are asked to add a project or use an account manager. Select the 'add a project' radio button.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-2.png">
-                                            <img alt="BOINC add project 2" class="aligncenter size-medium wp-image-211" height="181" src="../Images/boinc-client_files/BOINC-add-project-2-300x181.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                After clicking “Next“ we choose the desired project.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-3.png">
-                                            <img alt="BOINC add project 3" class="aligncenter size-medium wp-image-212" height="181" src="../Images/boinc-client_files/BOINC-add-project-3-300x181.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                The following step, after clicking “Next”, is to open an account or login to an existing one. For some projects you have to register directly on the homepage of the project. Remember, the email address has to be the same for every project if you want to be paid in Gridcoins.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-4.png">
-                                            <img alt=" boinc add project 4" class="aligncenter size-medium wp-image-213" height="146" src="../Images/boinc-client_files/BOINC-add-project-4-300x146.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                The project is added now and will start with research-calculations if workunits are available. After pressing the “Finish” button the project homepage should open. If not, go to the project homepage (you can definitely find it via Google). You have to find the “Your Account” button and press it. The project homepage of a different project can look different, but should have the same functions!
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-5.png">
-                                            <img alt="Boinc login to account" height="89" src="../Images/boinc-client_files/BOINC-add-project-5-300x89.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                Log in to your account.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-6.png">
-                                            <img alt="finding team gridcoin" class="aligncenter size-medium wp-image-215" height="202" src="../Images/boinc-client_files/BOINC-add-project-6-300x202.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                After login, you have to join the Gridcoin team. Do this by clicking “find a team”.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-7.png">
-                                            <img alt="search for gridcoin" class="size-medium wp-image-216" height="254" src="../Images/boinc-client_files/BOINC-add-project-7-300x254.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                Search for Gridcoin.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-8.png">
-                                            <img alt="join team gridcoin" class="aligncenter size-medium wp-image-217" height="94" src="../Images/boinc-client_files/BOINC-add-project-8-300x94.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                Click on team Gridcoin and then “Join”.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-9.png">
-                                            <img alt="BOINC add project 9" class="aligncenter size-medium wp-image-218" height="300" src="../Images/boinc-client_files/BOINC-add-project-9-205x300.png" width="205">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                Repeat these steps for all projects you want to participate in.
-                                            </li>
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                In the simple view of the BOINC Manager the team is not displayed.
-                                                To see it change to the “Advanced View”.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-                                <!--Row-->
-                                <div class="row" style="margin-bottom:5px;">
-                                    <!--LEFT-->
-                                    <div class="col-xs-12 col-sm-6" style="text-align:center;">
-                                        <a href="../Images/boinc-client_files/BOINC-add-project-10.png">
-                                            <img alt="BOINC add project 10" class="aligncenter size-medium wp-image-219" height="93" src="../Images/boinc-client_files/BOINC-add-project-10-300x93.png" width="300">
-                                        </a>
-                                    </div>
-                                    <!--/LEFT-->
-                                    <!--RIGHT-->
-                                    <div class="col-xs-12 col-sm-6">
-                                        <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                            <li style="margin-bottom: 10px; text-align:left;">
-                                                If the team is not displayed yet, click on the project and then
-                                                on Update.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--/RIGHT-->
-                                </div>
-                                <!--/ROW-->
-
-                                <div class="row" style="margin-bottom:5px;">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            If you have added a whitelisted project and joined team Gridcoin, your computer should now be researching.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/Manually Adding a Project-->
-                        <!--Account Manager Section-->
-                        <div role="tabpanel" class="tab-pane active" id="AccountManager">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xs-12" style="margin-top:10px; text-align:left;">
-                                        <h4 style="text-align:left; color:white;">BOINC Account Manager Guide</h4>
-                                        <ul style="text-align: justify; padding-left: 0;">
-                                            <li style="color:#9A9899;">
-                                                Create a BAM! account <a href="http://boincstats.com/en/bam/register">here</a>.
-                                            </li>
-                                            <li style="color:#9A9899;">Wait for the activation mail, and activate your account.</li>
-                                            <li style="color:#9A9899;">Login to BAM! (the login box is at the top-right of <a href="http://boincstats.com">this page</a>).</li>
-                                            <li style="color:#9A9899;">Navigate to "<a href="http://boincstats.com/en/bam/signup/">Sign-up for projects</a>" in the 'BAM!' menu and click the 'Create account' icon (<img src="/Images/bam-icon.png" alt="icon" />) for every project you want to join.</li>
-                                            <li style="color:#9A9899;">
-                                                Follow these steps to join team Gridcoin in each project:
-                                                <ul>
-                                                    <li>Navigate to the <a href="http://boincstats.com/en/bam/teams/">Team</a> page.</li>
-                                                    <li>For each project you wish to contribute towards, tick the checkbox in the 3rd column.</li>
-                                                    <li>Click the green 'Change/Join team' button at the bottom of the list of projects.</li>
-                                                    <li>Enter 'Gridcoin' in the popup text field &amp; click the 'Search' button.</li>
-                                                    <li>The page will change to just the checked projects, and will show their respective results for the team 'Gridcoin' search query in a dropdown box.</li>
-                                                    <li>Select team 'Gridcoin' in each dropdown menu &amp; click the green 'Change/join team' button.</li>
-                                                    <li>Click the orange 'back to overview' button.</li>
-                                                </ul>
-                                            </li>
-                                            <li style="color:#9A9899;">Navigate to "<a href="http://boincstats.com/en/bam/projects/">My projects</a>" in the 'BAM!' menu and select the projects that you want all your new hosts to attach to by click the "Attach new host by default" icon.</li>
-                                            <li style="color:#9A9899;">Attach your BOINC client to BAM!. The instructions are <a href="http://boincstats.com/en/bam/attachInstruction">here</a>.</li>
-                                            <li style="color:#9A9899;">The client will make two connections to BAM!. It will connect to all projects that are set to default attach.</li>
-                                            <li style="color:#9A9899;">Done! There are more options in BAM! to fine-tune settings and hosts. Browse around and read the <a href="http://boincstats.com/en/page/faq">F.A.Q.</a> for details.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/Account Manager Section-->
-                    </div>
-                </div>
+            <div class="col-xs-12" style="margin-top:10px;">
+                <h4>BOINC Account Manager Guide</h4>
+                <ul>
+                    <li>
+                        Create a BAM! account <a href="http://boincstats.com/en/bam/register">here</a>.
+                    </li>
+                    <li>Wait for the activation mail, and activate your account.</li>
+                    <li>Login to BAM! (the login box is at the top-right of <a href="http://boincstats.com">this page</a>).</li>
+                    <li>Navigate to "<a href="http://boincstats.com/en/bam/signup/">Sign-up for projects</a>" in the 'BAM!' menu and click the 'Create account' icon (<img src="/Images/bam-icon.png" alt="icon" />) for every project you want to join.</li>
+                    <li>
+                        Follow these steps to join team Gridcoin in each project:
+                        <ul>
+                            <li>Navigate to the <a href="http://boincstats.com/en/bam/teams/">Team</a> page.</li>
+                            <li>For each project you wish to contribute towards, tick the checkbox in the 3rd column.</li>
+                            <li>Click the green 'Change/Join team' button at the bottom of the list of projects.</li>
+                            <li>Enter 'Gridcoin' in the popup text field &amp; click the 'Search' button.</li>
+                            <li>The page will change to just the checked projects, and will show their respective results for the team 'Gridcoin' search query in a dropdown box.</li>
+                            <li>Select team 'Gridcoin' in each dropdown menu &amp; click the green 'Change/join team' button.</li>
+                            <li>Click the orange 'back to overview' button.</li>
+                        </ul>
+                    </li>
+                    <li>Navigate to "<a href="http://boincstats.com/en/bam/projects/">My projects</a>" in the 'BAM!' menu and select the projects that you want all your new hosts to attach to by click the "Attach new host by default" icon.</li>
+                    <li>Attach your BOINC client to BAM!. The instructions are <a href="http://boincstats.com/en/bam/attachInstruction">here</a>.</li>
+                    <li>The client will make two connections to BAM!. It will connect to all projects that are set to default attach.</li>
+                    <li>Done! There are more options in BAM! to fine-tune settings and hosts. Browse around and read the <a href="http://boincstats.com/en/page/faq">F.A.Q.</a> for details.</li>
+                </ul>
             </div>
         </div>
         <!--/Step 3 content-->
@@ -462,7 +255,7 @@ page.title: "Gridcoin - Step 1: BOINC Installation"
 </section>
 <!--/TEST AREA-->
 <!--Getting started section-->
-<section data-background-color="black" style="background-color: #40413c; padding-bottom: 5px; padding-top: 5px;">
+<section data-background-color="black" style="padding-bottom: 5px; padding-top: 5px;">
     <div class="container" style="overflow:hidden;">
         <div class="row" style="margin-top:20px;">
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
