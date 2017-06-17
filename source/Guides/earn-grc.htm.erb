@@ -3,7 +3,7 @@ title: "Gridcoin - Step 4: Earn Gridcoin"
 layout: layout
 ---
 <!--Getting started section-->
-<section data-background-color="black" style="padding-bottom: 5px; padding-top:32px; margin-top: -20px;">
+<section data-background-color="black" style="padding-bottom: 5px; padding-top:52px; margin-top: -20px;">
     <div class="container" style="overflow:hidden;">
         <div class="row" style="margin-top:20px;">
             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
@@ -38,72 +38,6 @@ layout: layout
     </div>
 </section>
 <!--/Getting started section-->
-
-<!--TEST AREA-->
-<section data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-            <div class="row" style="margin-top:10px;">
-                <div class='col-xs-12 col-sm-12 text-center' style="">
-                    <h4>
-                        Earn GRC via Proof of Stake
-                    </h4>
-                </div>
-            </div>
-
-            <!--prereqs-->
-            <div class="row">
-                <div class="col-xs-12" style="">
-                    <ul style="text-align: justify; list-style-type: none; padding-left: 5px; padding-top:32px; margin-top: -20px;">
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            <ul>
-                                <li>
-                                    Once running an up-to-date fully synced client with a positive balance, all that is required is for you to unlock your wallet for 'staking only'.  
-                                </li>
-                                <li style="padding-top:10px;">
-                                    Once your wallet is unlocked, it will take up to 16 hours for your coins to fully start staking.
-                                </li>
-                                <li style="padding-top:10px;">
-                                    In order for your Gridcoin client to begin staking, it must locate coins to stake - newly acquired Gridcoin must mature (be present in your wallet) for 16 hours before it transfers from your balance into the 'staking balance' to which it begins competing to be used to create the next block.
-                                    <ul>
-                                        <li>
-                                            There are 960 blocks per day that you can attempt to stake. If you've got 1% of the total Gridcoin supply, you'll approximately stake 9.6 blocks per day.
-                                        </li>
-                                        <li>
-                                            The formula required to work out the quantity of coins to stake in a period of time is:
-                                            <ul>
-                                                <li>
-                                                    <code>
-                                                        EstimatedDaysUntilStake=(1/(UserBalance/NetworkCoinSupply))/960
-                                                    </code>
-                                                </li>
-                                                <li>
-                                                    <code>
-                                                        CoinsRequired=(1/(days*960))*NetworkCoinSupply
-                                                    </code>
-                                                </li>
-                                                <li>
-                                                    <b>Note</b>: The maximum payout window is approximately 182.5 days. This may (most likely will) increase in the future. 
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            Best practice is to stake 24/7, since you have an opportunity to stake each block (even if your probability is low).
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="padding-top:10px;">
-                                    If you're wanting to read about the proof of stake mechanism behind gridcoin, read <a href="http://blackcoin.co/blackcoin-pos-protocol-v2-whitepaper.pdf">blackcoin's pos v2 whitepaper</a>.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--/prereqs-->
-
-        </div>
-</section>
-<!--/TEST AREA-->
 
 <section data-background-color="black" style="padding-top:0px;padding-bottom: 25px; ">
         <div class="container" style="overflow:hidden;">
@@ -161,22 +95,22 @@ layout: layout
                                     </ul>
                                 </li>
                                 <li style="padding-top:10px;">
-                                    Register your CPID to the DPOR system via advertising a beacon:
+                                    Register your CPID on the Gridcoin blockchain by advertising a beacon:
                                     <ul>
                                         <li>
-                                            <b>Note:</b> A small balance of GRC is required in order to advertise your beacon (a smart transaction) in the DPOR system (currently costs approx 0.0011 GRC).
+                                            Note: A small balance of GRC is required in order to advertise your beacon (a smart transaction) in the DPOR system.
                                         </li>
                                         <li>
-                                            Temporarily, fully unlock (not for staking only) your wallet to allow for the beacon to be sent in the next step now.
+                                            Temporarily, fully unlock (not for staking only) your wallet to allow for the beacon transaction.
                                         </li>
                                         <li>
                                             Navigate to the debug console <code>Help | Debug window | Console</code>, enter the command <code>execute advertisebeacon</code> (Or wait for the beacon to be sent automatically).
                                             <ul>
                                                 <li>
-                                                    A small outbound smart transaction (approx 0.0001 GRC) will be sent from your wallet (this is the beacon). If this outbound transaction does not appear, your beacon has not been advertised & you should investigate why your client was unable to advertise it's beacon!
+                                                    A small outbound smart transaction will be sent from your wallet (this is the beacon).
                                                 </li>
                                                 <li>
-                                                    Once you've confirmed that the outbound smart transaction has been sent, you should lock your wallet then unlock your wallet for 'staking only' to begin securely staking.
+                                                    Once you've confirmed that the outbound smart transaction has been sent, you should lock your wallet.
                                                 </li>
                                             </ul>
                                         </li>
@@ -195,44 +129,18 @@ layout: layout
                                             In the output, search for your CPID. If not present, wait until the next superblock. When your CPID is present, continue to the next step.
                                         </li>
                                         <li>
-                                            If after a several superblocks your CPID is still not present, retry advertising your beacon.
+                                            If after a several superblocks your CPID is still not present, retry advertising your beacon again.
                                         </li>
                                     </ul>
                                 </li>
                                 <li style="padding-top:10px;">
-                                    Once CPID is present in the beacon report, sync the neural network:
+                                    Unlock your wallet for staking only, and upon staking a block you'll recieve your BOINC and POS earnings.
                                     <ul>
                                         <li>
-                                            Navigate to the debug console <code>Help | Debug window | Console</code>, enter the command <code>execute syncdpor2</code>.
+                                            Bear in mind, that earnings are dependent on both how much you are owed (from BOINC computation completed) and your Gridcoin balance interest. If you have a low balance and a low magnitude, you could stake a block (being rewarded POS+POR) only once every few weeks/months (consider using a pool instead).
                                         </li>
                                         <li>
-                                            If successful, the output will be '"syncing" : 1'.
-                                        </li>
-                                        <li>
-                                            Navigate to the neural network <code>Advanced | Neural Network</code>.
-                                        </li>
-                                        <li>
-                                            In the neural network window, there should be a progress bar showing the sync progress. Once fully synced, click the '<b>Refresh</b>' button and search for your CPID.
-                                        </li>
-                                        <li>
-                                            If your CPID is not present, verify that your cpid is present in the beaconreport (<b>previous step</b>). If it's present in the beaconreport, resync the neural network ("<b>execute syncdpor2</b>").
-                                        </li>
-                                        <li>
-                                            When your CPID is present, double clicking on your row provides a thorough breakdown for each project's individual magnitude calculation in a new window.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="padding-top:10px;">
-                                    Unlock your wallet for staking only, and upon staking you'll recieve DPOR earnings ontop of POS earnings.
-                                    <ul>
-                                        <li>
-                                            Bear in mind, that earnings are dependent on both how much you are owed (from BOINC computation completed) and your Gridcoin balance. If you have a low balance and a low magnitude, you could stake a block (being rewarded POS+POR) only once every few weeks/months.
-                                        </li>
-                                        <li>
-                                            The payout window has recently been increased from 14 days to 6 months, so even if you're only staking once every 5 months you'll earn your owed BOINC rewards.
-                                        </li>
-                                        <li>
-                                            If you're not satisfied with your staking rate, you need to increase your Gridcoin balance (due to the nature of proof of stake).
+                                            Best practice is to continuously stake 24/7 if possible, since you have an opportunity to stake each block (even if your probability is low) and coin age is not considered within the staking probability calculation.
                                         </li>
                                     </ul>
                                 </li>
@@ -242,55 +150,4 @@ layout: layout
                 </div>
             </div>
         </div>
-</section>
-
-
-<!--TEST AREA-->
-<section data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style="margin-top:10px;">
-            <div class='col-xs-12 col-sm-12 text-center' style="">
-                <h4>
-                    Tips
-                </h4>
-            </div>
-        </div>
-
-        <!--prereqs-->
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-6" style="">
-                <ul>
-                    <li style="margin-bottom: 10px; text-align:left;">
-                        Use the following website to get a birds-eye view of other researcher's efforts:
-                        <ul>
-                            <li>
-                                <a href="http://gridresearchcorp.com/">GridResearchCorp</a> : Block explorer, magnitude reports, network analysis, etc.
-                            </li>
-                            <li>
-                            <a href="http://www.gridcoin.co/" style="color:#707C34;">Katiee's GRC Magnitude/Earnings Calculator</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6" style="">
-                <ul>
-                    <li style="margin-bottom: 10px; text-align:left;">
-                        Further worthwhile reading:
-                        <ul>
-                            <li>
-                                <a href="security.htm">Security Guide</a>
-                            </li>
-                            <li>
-                                <a href="misc.htm">MISC BOINC Guides</a>
-                            </li>
-                            <li>
-                                <a href="http://wiki.gridcoin.us/FAQ">Gridcoin F.A.Q.</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </section>

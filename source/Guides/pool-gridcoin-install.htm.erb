@@ -2,544 +2,8 @@
 title: "Gridcoin - Step 1: Gridcoin Installation"
 layout: layout
 ---
-<!--Getting started section-->
-<section data-background-color="black" style="background-color: #40413c; padding-bottom: 5px; padding-top:32px; margin-top: -20px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style="margin-top:20px;">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
-                <a href="/Guides/pool-gridcoin-install.htm">
-                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
-                    <span class="label label-success" style="margin-bottom:7px; text-align:center;">You are here</span>
-                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
-                </a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #303030;padding-bottom: 1000px; margin-bottom: -1000px; ">
-                <a href="/Guides/pool.htm">
-                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
-                    <hr style="border-color: #40413c;" />
-                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC &amp; Setup the pool</h6>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/Getting started section-->
-<!--TEST AREA-->
-<section data-background-color="black" style="padding-top:0px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style=" padding-top: 30px;">
-                <div class="col-xs-12 col-sm-8">
-                    <h4 style="text-align:left; color:white;">Gridcoin Introduction</h4>
-                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            The following guides explain how to set up the Gridcoin Research wallet client on the platform of your choice.
-                        </li>
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            If you have not yet installed the BOINC client, you should read the <a href="/Guides/pool.htm">BOINC installation guide</a> to setup BOINC on the platform of your choice. The BOINC client has to be installed alongside the Gridcoin client in order to verify BOINC account ownership and to access local BOINC statistics.
-                        </li>
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            If you want to run Gridcoin in <a href="/Guides/investor-gridcoin-setup.htm">investor-mode only</a>, you do not need to install/run BOINC. In this case, you will only earn POS interest (you do not recieve DPOR payments due to a lack of BOINC crunching).
-                        </li>
-                        <li>
-                            Since you're using the pool, you do not need to add your email address to the gridcoinresearch.conf file. The setup process should be quicker than if you were participating in DPOR via solo-crunching, as you do not need to advertise a beacon to join the Neural Network.
-                        </li>
-                    </ul>
-                </div>
-                <div class="hidden-xs col-sm-4">
-                    <img src="/Images/grc-small.png" alt="Gridcoin Logo" style="padding-bottom:15px;" />
-                </div>
-        </div>
-    </div>
-</section>
-<!--TEST AREA-->
 
-<section data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-        <!--Step 1-->
-        <div class='row' style="margin-top:10px;">
-            <div class='col-xs-12 col-sm-12 text-center' style="">
-                <h4 style=" font-weight:bold;">
-                    Install the Gridcoin Research client on the platform of your choice
-                </h4>
-            </div>
-        </div>
-        <!--/Step 1-->
-        <div class="row" style="">
-            <!-- Tab panes -->
-            <div role="tabpanel">
-                <ul class="nav nav-pills" role="tablist" style="display: inline-block; padding-top:25px;">
-                    <li role="presentation" class="active"><a href="#Windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-                    <li role="presentation"><a href="#macOS" aria-controls="macOS" role="tab" data-toggle="tab">macOS</a></li>
-                    <li role="presentation"><a href="#CommunityPackages" aria-controls="CommunityPackages" role="tab" data-toggle="tab">Community Built Packages</a></li>
-                    <li role="presentation"><a href="#UbuntuCompile" aria-controls="UbuntuCompileGuide" role="tab" data-toggle="tab">Ubuntu Compiling Guide</a></li>
-                </ul>                        
-
-                <div class="tab-content" style="border:none;">
-                    <!--Windows-->
-                    <div role="tabpanel" class="tab-pane active" id="Windows">
-                        <div class="row">
-                        <div class="col-xs-12">
-                            <h6 style="text-align:left;">
-                                Installation (Microsoft Windows)
-                            </h6>
-                            <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                <li style="margin-bottom: 10px; text-align:left;">
-                                    Download the <a href="http://download.gridcoin.us/download/downloadstake/GridcoinResearch.msi">Gridcoin Research client</a>.
-                                </li>
-                                <li style="margin-bottom: 10px; text-align:left;">
-                                    Open the file in the download folder or directly from the Browser. If you are asked to run the file, click yes.
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
-
-                        <div class="row">
-                        <div class="col-sm-12" style="margin-bottom:5px;">
-                            <!--LEFT-->
-                            <div class="col-sm-6" style="text-align:center;">
-                                <img src="../Images/GRC-Install/1.jpg" alt="Next installation" />
-                            </div>
-                            <!--/LEFT-->
-                            <!--RIGHT-->
-                            <div class="col-sm-6">
-                                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 10px; text-align:left;">
-                                        Once the setup has begun, proceed by clicking the 'Next' button.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/RIGHT-->
-                        </div>
-                        </div>
-
-                        <div class="row">
-                        <div class="col-sm-12" style="margin-bottom:5px;">
-                            <!--LEFT-->
-                            <div class="col-sm-6" style="text-align:center;">
-                                <img src="../Images/GRC-Install/2.jpg" alt="Installation Location" />
-                            </div>
-                            <!--/LEFT-->
-                            <!--RIGHT-->
-                            <div class="col-sm-6">
-                                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 10px; text-align:left;">
-                                        At this stage, you can select where to install the Gridcoin Research client.
-                                    </li>
-                                    <li style="margin-bottom: 10px; text-align:left;">
-                                        It is advised for simplicity that you use the default suggested location. If you select a different install location, you'll need to specify this location in the gridcoin.conf file.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/RIGHT-->
-                        </div>
-                        </div>
-
-                        <div class="row">
-                        <div class="col-sm-12" style="margin-bottom:5px;">
-                            <!--LEFT-->
-                            <div class="col-sm-6" style="text-align:center;">
-                                <img src="../Images/GRC-Install/3.jpg" alt="Confirm Installation" style="padding-bottom:5px;" />
-                                <img src="../Images/GRC-Install/4.jpg" alt="Installing" />
-                            </div>
-                            <!--/LEFT-->
-                            <!--RIGHT-->
-                            <div class="col-sm-6">
-                                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 10px; text-align:left;">
-                                        Click on the “Next” button to install the program.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/RIGHT-->
-                        </div>
-                        </div>
-
-                        <div class="row">
-                        <div class="col-sm-12" style="margin-bottom:5px;">
-                            <!--LEFT-->
-                            <div class="col-sm-6" style="text-align:center;">
-                                <img src="../Images/GRC-Install/5.jpg" alt="Installed" />
-                            </div>
-                            <!--/LEFT-->
-                            <!--RIGHT-->
-                            <div class="col-sm-6">
-                                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                    <li style="margin-bottom: 10px; text-align:left;">
-                                        Once the install has completed, press the 'Close' button to exit the setup program.
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/RIGHT-->
-                        </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12" style="margin-bottom:5px;">
-                                <!--LEFT-->
-                                <div class="col-sm-6" style="text-align:center;">
-                                    <img src="../Images/GRC-Install/properties.jpg" alt="Properties" />
-                                </div>
-                                <!--/LEFT-->
-                                <!--RIGHT-->
-                                <div class="col-sm-6">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            After installing, navigate to the chosen Gridcoin installation folder &amp; execute these steps:
-                                            <ul>
-                                                <li>
-                                                    Create a shortcut of the gridcoinresearch.exe to place it on your desktop.
-                                                </li>
-                                                <li>
-                                                    Right-click on the shortcut on your desktop and go to the preferences.
-                                                </li>
-                                                <li>
-                                                    Within the preferences window, navigate to the 'Compatability tab and check 'Run this program as an administrator'. Click 'Apply' and close the Gridcoin properties window.
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/RIGHT-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12" style="margin-bottom:5px;">
-                                <!--LEFT-->
-                                <div class="col-sm-6" style="text-align:center;">
-                                    <img src="../Images/GRC-Install/6.jpg" alt="Firewall" />
-                                </div>
-                                <!--/LEFT-->
-                                <!--RIGHT-->
-                                <div class="col-sm-6">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            Launch the Gridcoin wallet by double-clicking on the shortcut created on the desktop.
-                                        </li>
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            If any firewall shows up, you have to allow Gridcoin past the firewall.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/RIGHT-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12" style="margin-bottom:5px;">
-                                <!--LEFT-->
-                                <div class="col-sm-6" style="text-align:center;">
-                                    <img src="../Images/GRC-Install/boincpool.png" alt="BOINC Email Query window" />
-                                </div>
-                                <!--/LEFT-->
-                                <!--RIGHT-->
-                                <div class="col-sm-6">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            Since you're using the pool, you should not enter your email when prompted to do so. Click the <b>cancel</b> button to skip the prompt & continue the conf generation step.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/RIGHT-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12" style="margin-bottom:5px;">
-                                <!--LEFT-->
-                                <div class="col-sm-6" style="text-align:center;">
-                                    <img src="../Images/GRC-Install/7.jpg" alt="Config Success" />
-                                </div>
-                                <!--/LEFT-->
-                                <!--RIGHT-->
-                                <div class="col-sm-6">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            A window should open stating that a new configuration file has been successfully created; click “OK” to proceed..
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/RIGHT-->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-12" style="margin-bottom:5px;">
-                                <!--LEFT-->
-                                <div class="col-sm-6" style="text-align:center;">
-                                    <img src="../Images/GRC-Install/skipped.png" alt="skipped" />
-                                </div>
-                                <!--/LEFT-->
-                                <!--RIGHT-->
-                                <div class="col-sm-6">
-                                    <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            Since you clicked “Cancel” at the email prompt, you'll be presented with a confirmation message.
-                                        </li>
-                                        <li style="margin-bottom: 10px; text-align:left;">
-                                            Proceed past this prompt to the Gridcoin client.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/RIGHT-->
-                            </div>
-                        </div>
-                    </div>
-                    <!--/Windows-->
-
-                    <!--macOS-->
-                    <div role="tabpanel" class="tab-pane" id="macOS" style="text-align:left;">
-                        <!--Debian Packages-->
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h5 style="color:white;">
-                                    macOS
-                                </h5>
-                                <ul>
-                                    <li>
-                                        The installation instructions previously available here were out of date. The most up to date instructions on how to install the Gridcoin client on macOS are:
-                                        <ul>
-                                            <li>
-                                                <a href="https://cryptocointalk.com/topic/13139-os-x-builds-feedback-bug-reporting/">Cryptocointalk macOS Build Support thread (Check the latest posts)</a>
-                                            </li>
-                                            <li>
-                                                <a href="http://wiki.gridcoin.us/OS_X_Guide">Gridcoin wiki macOS Installation guide</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/macOS-->
-                    <!--Community Built Packages-->
-                    <div role="tabpanel" class="tab-pane" id="CommunityPackages" style="text-align:left;">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h5 style="color:white;">
-                                    Disclaimer:
-                                </h5>
-                                <ul>
-                                    <li>These Gridcoin Research clients are made by the community; User discresion is advised &amp; the Gridcoin Team does not accept responsibility for any harm caused by user generated content (However unlikely it is to occur).</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!--Debian Packages-->
-                            <div class="col-xs-12">
-                                <h5 style="color:white;">
-                                    Debian Packages (Ubuntu)
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <a href="https://code.launchpad.net/~gridcoin/+archive/ubuntu/gridcoin-stable">Launchpad built ubuntu releases</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!--/Debian Packages-->
-                            <!--RPM Packages-->
-                            <div class="col-xs-12">
-                                <h5 style="color:white;">
-                                    RPM Packages (Opensuse/Fedora)
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <a href="https://build.opensuse.org/package/show/home:theMarix/gridcoin">Marix's OpenSuse &amp; Fedora RPMs</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/RPM Packages-->
-                        </div>
-                        <div class="row">
-                            <!--AUR Packages-->
-                            <div class="col-xs-12">
-                                <h5 style="color:white;">
-                                    AUR (Archlinux)
-                                </h5>
-                                <ul>
-                                    <li>
-                                        <a href="https://aur.archlinux.org/packages/gridcoinresearch-qt">Archlinux AUR package</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!--/AUR Packages-->
-                        </div>
-                    <!--/Community Built Packages-->
-                    </div>
-
-                    <!--Ubuntu Compiling Guide-->
-                    <div role="tabpanel" class="tab-pane" id="UbuntuCompile">
-
-                        <div class="row" style="text-align:left;">
-
-                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                <h5 style="text-align:left;">
-                                    Linux compiling guide located at the Gridcoin Wiki!
-                                </h5>
-                                <p>
-                                    This page used to display old mirrored content from the <a href="http://wiki.gridcoin.us/Linux_guide">Gridcoin Wiki Linux compiling guide</a>, however this page fell behind updates that were being made on the wiki article. If you want to compile the Gridcoin client on Linux, please do <a href="http://wiki.gridcoin.us/Linux_guide">navigate to the Gridcoin Wiki</a>.
-                                </p>
-                            </div>
-
-                            </div>
-                            <!--/Tab Panes-->
-                    </div>
-                        <!--/Tab Panel-->
-                </div>
-            </div>
-        <!--End of GRC Feature Section-->
-        </div>
-    </div>
-</section>
-
-<!--TEST AREA-->
-<section data-background-color="black" style="padding-top:0px;padding-bottom: 5px;">
-    <div class="container" style="overflow:hidden;">
-            <div class="row" style="margin-top:10px;">
-                <div class='col-xs-12 col-sm-12 text-center' style="">
-                    <h4 style=" font-weight:bold;">
-                        Once the Gridcoin client has been installed, sync the blockchain!
-                    </h4>
-                </div>
-            </div>
-
-            <!--prereqs-->
-            <div class="row">
-                <div class="col-xs-12" style="">
-                    <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            <ul>
-                                <li>
-                                    Prior to being able to stake or transfer Gridcoin to/from the Gridcoin client you need to fully sync the gridcoin client to the latest block on the blockchain (green tick under connections indicates a fully synced wallet)
-                                    <ul>
-                                        <li>
-                                        You can download a snapshot of the blockchain from within the client by clicking 'Rebuild block chain | Download Blocks'.
-                                        </li>
-                                        <li>
-                                            <b>Note</b>: The 'Download Blocks' feature require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
-                                        </li>
-                                        <li>
-                                        If you're having issues with 'Download Blocks', you can manually download the latest snapshot <a href="https://download.gridcoin.us/download/downloadstake/signed/snapshot.zip">here</a>.
-                                        </li>
-                                        <li>
-                                        <b>Note</b>: The snapshot will not fully sync your client, but will rather bring you up to 80-90% sync. Allow your client to manually sync after the snapshot has been implemented.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="padding-top: 10px;">
-                                    <b>If</b> you are unable to acquire connections to the Gridcoin network, attempt the following:
-                                    <ul>
-                                        <li>
-                                            Verify that your computer time is synced to your configured time server.
-                                        </li>
-                                        <li>
-                                            Investigate whether or not your ISP is blocking the P2P traffic.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li style="padding-top:10px;">
-                                    Regularly verify you're running the latest version of the gridcoin client, as there are frequent updates. Notices of updates are posted regularly on <a href="https://www.reddit.com/r/gridcoin">Reddit</a>/<a href="https://twitter.com/GridcoinNetwork">Twitter</a>/<a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin">IRC</a>.
-                                    <ul>
-                                        <li>
-                                            Both the 'Download Blocks' and 'Upgrade Client' features require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--/prereqs-->
-        </div>
-</section>
-<!--/TEST AREA-->
-
-<!-- TEST -->
-<section data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-            <div class="row" style="margin-top:10px;">
-                <div class='col-xs-12 col-sm-12 text-center' style="">
-                    <h4 style=" font-weight:bold;">
-                        Optional post-install configuration
-                    </h4>
-                </div>
-            </div>
-
-            <!--prereqs-->
-            <div class="row">
-                <div class="col-xs-12" style="">
-                    <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
-                        <li style="margin-bottom: 10px; text-align:left;">
-                            <ul>
-                                <li>
-                                    Addnode entries (Add these to gridcoinresearch.conf)
-                                    <ul>
-                                        <li>
-                                            <code>
-                                                addnode=node.gridcoin.us
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=gridcoin.asia
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=typh00n.net
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=sepulcher.wha.la
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=grc.z9.de
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=london.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=amsterdam.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=frankfurt.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=nyc.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=sf.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=texas.grcnode.co.uk
-                                            </code>
-                                            <br/>
-                                            <code>
-                                                addnode=hk.grcnode.co.uk
-                                            </code>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--/prereqs-->
-        </div>
-</section>
-<!--/TEST AREA-->
-
-<!--Getting started section-->
-<section data-background-color="black" style="background-color: #40413c; padding-bottom: 15px;">
+<section data-background-color="black" style="padding-bottom: 5px; padding-top:52px; margin-top: -20px;">
     <div class="container" style="overflow:hidden;">
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
@@ -559,4 +23,188 @@ layout: layout
         </div>
     </div>
 </section>
-<!--/Getting started section-->
+
+<section data-background-color="black" style="padding-top:0px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style=" padding-top: 30px;">
+            <div class="col-xs-12 col-sm-8 col-md-8">
+                <h4 style="text-align:left; color:white;">Gridcoin Introduction</h4>
+                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px; text-align:left;">
+                        The following guides explain how to set up the Gridcoin Research wallet client on the platform of your choice.
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left;">
+                        If you have not yet installed the BOINC client, you should read the <a href="/Guides/pool.htm">BOINC installation guide</a> to setup BOINC on the platform of your choice. The BOINC client has to be installed alongside the Gridcoin client in order to verify BOINC account ownership and to access local BOINC statistics.
+                    </li>
+                    <li style="margin-bottom: 10px; text-align:left;">
+                        If you want to run Gridcoin in <a href="/Guides/investor-gridcoin-setup.htm">investor-mode only</a>, you do not need to install/run BOINC.
+                    </li>
+                    <li>
+                        Since you're using the pool, you do not need to add your email address to the gridcoinresearch.conf file. The setup process should be quicker than if you were participating in DPOR via solo-crunching, as you do not need to advertise a beacon to join the Neural Network.
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-4 col-md-4">
+                <img src="/Images/grc-install.png" alt="Gridcoin Logo" />
+            </div>
+        </div>
+    </div>
+</section>
+<!--TEST AREA-->
+
+<section data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
+    <div class="container" style="overflow:hidden;">
+        <!--Step 1-->
+        <div class='row' style="margin-top:10px;">
+            <div class='col-xs-12 col-sm-12' style="">
+                <h4>
+                    Install the Gridcoin client
+                </h4>
+                <h5>
+                    Microsoft Windows
+                </h5>
+                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a class="btn btn-simple btn-default" style="margin:5px;" href="http://download.gridcoin.us/download/downloadstake/GridcoinResearch.msi">Download Windows Client</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5>
+                    macOS
+                </h5>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="http://wiki.gridcoin.us/OS_X_Guide">Wiki macOS guide</a>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://cryptocointalk.com/topic/13139-os-x-builds-feedback-bug-reporting/">macOS Build Support thread</a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5>
+                    Debian Packages (Ubuntu)
+                </h5>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://code.launchpad.net/~gridcoin/+archive/ubuntu/gridcoin-stable">Launchpad built ubuntu releases</a>
+                <ul>
+                    <li>sudo add-apt-repository ppa:gridcoin/gridcoin-stable</li>
+                    <li>sudo apt-get update</li>
+                    <li>sudo apt-get install gridcoinresearchd</li>
+                    <li>gridcoinresearchd</li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5>
+                    RPM Packages (Opensuse/Fedora)
+                </h5>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://build.opensuse.org/package/show/home:theMarix/gridcoin">OpenSuse/Fedora RPMs</a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5>
+                    AUR (Archlinux)
+                </h5>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://aur.archlinux.org/packages/gridcoinresearch-qt">Archlinux AUR package</a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5>
+                    Manually compile the Gridcoin client
+                </h5>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="http://wiki.gridcoin.us/Linux_guide">Linux compiling guide</a>
+                <a class="btn btn-simple btn-default" style="margin:5px;" href="https://github.com/gridcoin/Gridcoin-Research">Gridcoin GitHub Repo</a>
+                <h4>
+                    Initial client setup
+                </h4>
+                    <p>
+                        Once the client launches, enter your email address when prompted to do so. Your email is not public on the blockchain, don't share your BOINC email (malicious users could attack your BOINC presence).
+                    </p>
+                    <p>
+                        If you accidentally clicked 'Cancel' or you're switching from investor mode, you can simple enter your email address into the "gridcoinresearch.conf" config file manually. Use the following format within the conf file:
+                    </p>
+                    <h6>
+                        <span class="badge badge-default">
+                            email=youremail@yourprovider.com
+                        </span>
+                    </h6>
+            </div>
+        </div>
+        <!--End of GRC Feature Section-->
+    </div>
+</section>
+
+
+<section data-background-color="black" style="padding-top:0px;padding-bottom: 5px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row" style="margin-top:10px;">
+            <div class='col-xs-12 col-sm-12 text-center' style="">
+                <h4 style=" font-weight:bold;">
+                    Once the Gridcoin client has been installed, sync the blockchain!
+                </h4>
+            </div>
+        </div>
+
+        <!--prereqs-->
+        <div class="row">
+            <div class="col-xs-12" style="">
+                <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
+                    <li style="margin-bottom: 10px; text-align:left;">
+                        <ul>
+                            <li>
+                                Prior to being able to stake or transfer Gridcoin to/from the Gridcoin client you need to fully sync the gridcoin client to the latest block on the blockchain (green tick under connections indicates a fully synced wallet)
+                                <ul>
+                                    <li>
+                                    You can download a snapshot of the blockchain from within the client by clicking 'Rebuild block chain | Download Blocks'.
+                                    </li>
+                                    <li>
+                                        <b>Note</b>: The 'Download Blocks' feature require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
+                                    </li>
+                                    <li>
+                                    If you're having issues with 'Download Blocks', you can manually download the latest snapshot <a href="https://download.gridcoin.us/download/downloadstake/signed/snapshot.zip">here</a>.
+                                    </li>
+                                    <li>
+                                    <b>Note</b>: The snapshot will not fully sync your client, but will rather bring you up to 80-90% sync. Allow your client to manually sync after the snapshot has been implemented.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li style="padding-top: 10px;">
+                                <b>If</b> you are unable to acquire connections to the Gridcoin network, attempt the following:
+                                <ul>
+                                    <li>
+                                        Verify that your computer time is synced to your configured time server.
+                                    </li>
+                                    <li>
+                                        Investigate whether or not your ISP is blocking the P2P traffic.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li style="padding-top:10px;">
+                                Regularly verify you're running the latest version of the gridcoin client, as there are frequent updates. Notices of updates are posted regularly on <a href="https://www.reddit.com/r/gridcoin">Reddit</a>/<a href="https://twitter.com/GridcoinNetwork">Twitter</a>/<a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin">IRC</a>.
+                                <ul>
+                                    <li>
+                                        Both the 'Download Blocks' and 'Upgrade Client' features require the gridcoin client to be running as administrator in windows; without admin permissions these features will throw an error.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/prereqs-->
+    </div>
+</section>
+
+<section data-background-color="black" style="padding-bottom: 15px;">
+    <div class="container" style="overflow:hidden;">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/pool.htm">
+                    <h5 style="color:white;text-align:center;font-weight:bold;">Step 1</h5>
+                    <hr style="border-color: #40413c;" />
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold;">Setup BOINC &amp; Setup the pool</h6>
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-bottom: 1000px; margin-bottom: -1000px; ">
+                <a href="/Guides/pool-gridcoin-install.htm">
+                    <h5 style="color: white; text-align: center; font-weight: bold;">Step 2</h5>
+                    <span class="label label-success" style="margin-bottom:7px; text-align:center;">You are here</span>
+                    <h6 style="color: #707c34; margin-top: 0px; font-weight: bold; ">Setup Gridcoin Research Client</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
