@@ -1,5 +1,5 @@
 table, th, td {
-    border: 2px solid #4d4d4d;
+    border: 2px solid #434343;
 }
 
 table {
@@ -11,13 +11,14 @@ tbody {
 }
 
 td a:link, td a:visited, td a:active {
-	color: #88a13c !important;;
+	color: #88a13c !important;
 }
 
 td a:hover {
-	color: #93aa4f !important;;
+	color: #93aa4f !important;
 }
 
 th {
 	color: #88a13c;
+	border-bottom-color: #434343 !important;
 }
