@@ -39,7 +39,6 @@ title: "Gridcoin - Project Whitelist"
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h6 id="CPU" style="text-align:center;">CPU</h6>
                     <table class="table table-hover table-condensed">
                         <thead>
                             <tr>
@@ -59,19 +58,10 @@ title: "Gridcoin - Project Whitelist"
                                     GPU
                                 </th>
                                 <th>
-                                    Linux
-                                </th>
-                                <th>
-                                    Windows
-                                </th>
-                                <th>
-                                    MacOS
-                                </th>
-                                <th>
                                     Team
                                 </th>
                                 <th>
-                                    Thread
+                                    Stats
                                 </th>
                             </tr>
                         </thead>
@@ -88,25 +78,24 @@ title: "Gridcoin - Project Whitelist"
                                         <%= project.sponsor %>
                                     </td>
                                     <td>
-                                        <i class="fa fa-<%= project.cpu %>" aria-hidden="true"></i>
+                                        <% if project.cpu == "yes" %>
+                                          <i class="fa fa-check" aria-hidden="true"></i>
+                                        <% else %> 
+                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                        <% end %>
                                     </td>
                                     <td>
-                                        <i class="fa fa-<%= project.gpu %>" aria-hidden="true"></i>
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-<%= project.linux %>" aria-hidden="true"></i>
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-<%= project.windows %>" aria-hidden="true"></i>
-                                    </td>
-                                    <td>
-                                        <i class="fa fa-<%= project.macos %>" aria-hidden="true"></i>
+                                        <% if project.gpu == "yes" %>
+                                          <i class="fa fa-check" aria-hidden="true"></i>
+                                        <% else %> 
+                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                        <% end %>                                    
                                     </td>
                                     <td>
                                         <a href="<%= project.team %>" title="Gridcoin Team Link"><i class="fa fa-users" aria-hidden="true"></i></a>
                                     </td>
                                     <td>
-                                        <a href="<%= project.thread %>" title="Project Thread"><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
+                                        <a href="<%= project.stats %>" title="Project stats"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             <% end %>

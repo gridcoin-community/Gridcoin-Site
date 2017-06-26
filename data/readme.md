@@ -8,13 +8,10 @@ So that you don't need to mess around with HTML tables when adding a new BOINC p
   link: ""
   goal: ""
   sponsor: ""
-  cpu: "check"
-  gpu: "times"
-  linux: "check"
-  windows: "check"
-  macos: "check"
-  team: "Gridcoin Team Link"
-  thread: "Forum Link"
+  cpu: ""
+  gpu: ""
+  team: ""
+  stats: ""
 ```
 
 ## Field descriptions
@@ -25,11 +22,11 @@ goal: The purpose of the project
 sponsor: Who runs/funds the operation of the project
 cpu: Does the project provide CPU work?
 gpu: Does the project provide GPU work?
-linux: Does the project support linux?
-windows: Does the project support linux?
-macos: Does the project support linux?
 team: A hyperlink to team 'Gridcoin' within each BOINC project.
-thread: A hyperlink to the project's cryptocurrencytalk.com (Gridcoin forum) thread.
+stats: 
 
-## Icon usage
-The cpu/gpu/linux/windows/macos fields use the icons from fontawesome, specifically 'check' for yes, and 'times' for no.
+## To Do
+* OS support? Problem is that existing wiki entries for this data are 6+ years old.
+* GPU vendor support (Nvidia/AMD/Intel/Other)
+* ARM support?
+* Mouse hover info for vendor info, or additional columns?
