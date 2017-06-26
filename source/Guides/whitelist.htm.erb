@@ -1,4 +1,119 @@
 ---
 title: "Gridcoin - Project Whitelist"
 ---
-    <%= partial "/layouts/partials/whitelist" %>
+
+<section data-background-color="black" style="padding-bottom: 5px; padding-top:90px; margin-top: 0px;">
+        <!--Start of GRC Feature section-->
+        <!--First row of features-->
+        <div class="container" style="overflow:hidden;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <h5>Whitelist justification</h5>
+                    <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
+                    
+                    <h5>Discussion</h5>
+                    <p><a href="https://cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">CCT Whitelist thread</a></p>
+                    <p><a href="https://cryptocointalk.com/forum/2436-projects/">Projects subforum</a></p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <h5>Status Tracking</h5>
+                    <p><a href="https://gridcoinstats.eu/project">Gridcoinstats</a></p>
+                    <p>Whitelist verifiable within Windows client neural network (coming to linux soon).</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <h5>Please note:</h5>
+                    <p>You will only be rewarded Gridcoin for whitelisted BOINC projects.</p>
+                    <p>Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded Gridcoin.</p>
+                    <p>Want a project whitelisted? <a href="https://cryptocointalk.com/forum/2436-projects/">Create a thread about it</a>!
+                </div>
+            </div>
+        </div>
+        <!--/Second row of features-->
+        <!--End of GRC Feature Section-->
+    </section>
+
+    <section data-background-color="black" style="overflow-x: hidden;">
+        <!-- BOINC Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h6 id="CPU" style="text-align:center;">CPU</h6>
+                    <table class="table table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Project
+                                </th>
+                                <th>
+                                    Goal
+                                </th>
+                                <th>
+                                    Sponsor
+                                </th>
+                                <th>
+                                    CPU
+                                </th>
+                                <th>
+                                    GPU
+                                </th>
+                                <th>
+                                    Linux
+                                </th>
+                                <th>
+                                    Windows
+                                </th>
+                                <th>
+                                    MacOS
+                                </th>
+                                <th>
+                                    Team
+                                </th>
+                                <th>
+                                    Thread
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% data.whitelist.projects.each do |project| %>
+                                <tr>
+                                    <td>
+                                        <a href=<%= project.link %>><%= project.name %></a>
+                                    </td>
+                                    <td>
+                                        <%= project.goal %>
+                                    </td>
+                                    <td>
+                                        <%= project.sponsor %>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-<%= project.cpu %>" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-<%= project.gpu %>" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-<%= project.linux %>" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-<%= project.windows %>" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-<%= project.macos %>" aria-hidden="true"></i>
+                                    </td>
+                                    <td>
+                                        <a href="<%= project.team %>" title="Gridcoin Team Link"><i class="fa fa-users" aria-hidden="true"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href="<%= project.thread %>" title="Project Thread"><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
