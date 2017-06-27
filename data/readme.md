@@ -16,6 +16,7 @@ So that you don't need to mess around with HTML tables when adding a new BOINC p
 
 ## Field descriptions
 
+```
 name: Project's name
 link: Project's BOINC project homepage
 goal: The purpose of the project
@@ -23,7 +24,8 @@ sponsor: Who runs/funds the operation of the project
 cpu: Does the project provide CPU work?
 gpu: Does the project provide GPU work?
 team: A hyperlink to team 'Gridcoin' within each BOINC project.
-stats: 
+stats: A hyperlink to the project's gridcoinstats.eu page.  
+```
 
 ## To Do
 * OS support? Problem is that existing wiki entries for this data are 6+ years old.
