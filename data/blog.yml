@@ -1,0 +1,7 @@
+posts:
+- title: "Mandatory Gridcoin client update v3.6.0.2!"
+  link_primary_url: "https://github.com/gridcoin/Gridcoin-Research/releases/tag/3.6.0.2"
+  link_primary_text: "v3.6.0.2 release notes"
+  link_secondary_url: "https://github.com/gridcoin/Gridcoin-Research/releases/tag/3.6.0.2"
+  link_secondary_text: "Old v3.6.0.1 release notes"
+  content: "Please upgrade your Gridcoin client by block 1,010,001. See the linked release notes for the changelog."

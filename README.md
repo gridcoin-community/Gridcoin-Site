@@ -22,7 +22,6 @@ cd Gridcoin-Site
 
 bundle install
 
-
 ### For building the website:
 
 bundle exec middleman build
