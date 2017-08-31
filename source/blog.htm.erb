@@ -1,0 +1,40 @@
+---
+title: "Gridcoin - Blog"
+description: "This blog is for official announcements and important community updates."
+---
+
+<section  data-background-color="black" style="padding-bottom:15px; padding-top:100px;">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-4 col-md-4 col-lg-4" style="text-align:center;">
+                <img src="/Images/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC"  style="width: 200px;" />
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" style="margin-bottom:5px;">
+                <h3 style="text-align: center;">Welcome to the official Gridcoin blog!</h3>
+                <p style="margin-bottom: 10px;">
+                    We'll be posting Gridcoin and BOINC related announcements to this blog so as to improve communication across the entire community.
+                </p>
+                <p style="margin-bottom: 10px;">
+                    If you wish to publish a blog post, please either submit an <a href="https://github.com/gridcoin-community/Gridcoin-Site/issues/">issue</a> or a pull request on the <a href="https://github.com/gridcoin-community/Gridcoin-Site/pulls">Gridcoin website GitHub repo</a>, including your blog post in the blog data file.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section  data-background-color="black" style="overflow-x: hidden; height: 50vh; padding-bottom: 50px;">
+    <!-- BOINC Content -->
+    <div class="container">
+        <div class="row">
+            <% data.blog.posts.each do |post| %>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4><%= post.title %></h4>
+                    <p><%= post.content %></p>
+                    <a href="<%= post.link_primary_url %>"><%= post.link_primary_text %></a>
+                    <a href="<%= post.link_secondary_url %>"><%= post.link_secondary_text %></a>
+                    <hr/>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>

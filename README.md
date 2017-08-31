@@ -22,7 +22,6 @@ cd Gridcoin-Site
 
 bundle install
 
-
 ### For building the website:
 
 bundle exec middleman build
@@ -30,3 +29,7 @@ bundle exec middleman build
 ### For running the development web server:
 
 bundle exec middleman server
+
+## Interested in contributing towards the whitelist or the blog?
+
+Head on over to the [data subfolder](https://github.com/gridcoin-community/Gridcoin-Site/tree/master/data) to get more info.

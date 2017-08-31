@@ -1,20 +1,40 @@
-# Contributing towards the whitelist
-So that you don't need to mess around with HTML tables when adding a new BOINC project to the whitelist, we make use of data files in Middleman to generate a row for each project listed within the whitelist.yml file.
+# What are these pages?
 
-## Template
+To avoid manually editing html repetitively by hand, we make use of [templates](https://middlemanapp.com/basics/templating-language/) and [data files](https://middlemanapp.com/advanced/data-files/) for both the blog and the whitelist for the Gridcoin website.
+
+## Contributing towards the blog
+
+### Template
 
 ```
-- name: ""
-  link: ""
-  goal: ""
-  sponsor: ""
-  cpu: ""
-  gpu: ""
-  team: ""
-  stats: ""
+posts:
+- title: "text"
+  link_primary_url: "url"
+  link_primary_text: "text"
+  link_secondary_url: "url"
+  link_secondary_text: "text"
+  content: "text"
+```
+### How to submit blog post
+
+Either create an issue with the above template filled in, or submit a pull request with the template text prepended to the blog.yml data file.
+
+## Contributing towards the whitelist
+
+### Template
+
+```
+- name: "text"
+  link: "url"
+  goal: "text"
+  sponsor: "text"
+  cpu: "yes|no"
+  gpu: "yes|no"
+  team: "url"
+  stats: "url"
 ```
 
-## Field descriptions
+### Field descriptions
 
 ```
 name: Project's name
@@ -27,7 +47,7 @@ team: A hyperlink to team 'Gridcoin' within each BOINC project.
 stats: A hyperlink to the project's gridcoinstats.eu page.  
 ```
 
-## To Do
+### To Do
 * OS support? Problem is that existing wiki entries for this data are 6+ years old.
 * GPU vendor support (Nvidia/AMD/Intel/Other)
 * ARM support?
