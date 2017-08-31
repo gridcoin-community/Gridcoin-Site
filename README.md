@@ -16,7 +16,7 @@ sudo apt-get install git
 
 sudo apt-get install build-essential
 
-git clone https://github.com/grctest/Gridcoin-Site.git
+git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
 cd Gridcoin-Site
 
