@@ -11,7 +11,7 @@ tbody {
 }
 
 td a:link, td a:visited, td a:active {
-	color: #7d00f4 !important;
+	color: #FFFFFF !important;
 }
 
 td a:hover {
@@ -19,6 +19,6 @@ td a:hover {
 }
 
 th {
-	color: #7d00f4;
+	color: #FFFFFF;
 	border-bottom-color: #434343 !important;
 }
