@@ -2,7 +2,7 @@
 title: "Gridcoin - Project Whitelist"
 description: "The Gridcoin whitelist is a list of community-approved BOINC projects which are applicable for earning Gridcoin."
 ---
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:90px; margin-top: 0px;">
+<section  data-background-color="black" style="padding-bottom: 5px; padding-top:150px; margin-top: 0px;">
         <!--Start of GRC Feature section-->
         <!--First row of features-->
         <div class="container" style="overflow:hidden;">
@@ -16,17 +16,13 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                     <p><a href="https://cryptocurrencytalk.com/forum/2436-projects/">Projects subforum</a></p>
                 </div>
 
-                <div class="col-xs-12 col-sm-4">
-                    <h5>Status Tracking</h5>
-                    <p><a href="https://gridcoinstats.eu/project">Gridcoinstats</a></p>
-                    <p>Whitelist verifiable within Windows client neural network (coming to linux soon).</p>
-                </div>
-
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-8">
                     <h5>Please note:</h5>
                     <p>You will only be rewarded Gridcoin for whitelisted BOINC projects.</p>
                     <p>Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded Gridcoin.</p>
                     <p>Want a project whitelisted? <a href="https://cryptocurrencytalk.com/forum/2436-projects/">Create a thread about it</a>!
+                    <p>You can check whitelisted project details on <a href="https://gridcoinstats.eu/project">Gridcoinstats</a>.</p>
+                    <p>The whitelist is verifiable within the Windows client (coming to linux soon).</p>
                 </div>
             </div>
         </div>
@@ -38,9 +34,8 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
         <!-- BOINC Content -->
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <!--<table class="table table-hover table-condensed tablesorter" id="myTable" >-->
-                    <table class="table table-hover table-condensed">
+                <div class="hidden-sm-down col-md-12 col-lg-12">
+                    <table class="table table-hover table-condensed table-responsive">
                         <thead>
                             <tr>
                                 <th>
@@ -102,7 +97,53 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                             <% end %>
                         </tbody>
                     </table>
+                </div>
 
+                <div class="col-xs-12 col-sm-12 hidden-md-up">
+                    <table class="table table-hover table-condensed table-responsive">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Project
+                                </th>
+                                <th>
+                                    Sponsor
+                                </th>
+                                <th>
+                                    CPU
+                                </th>
+                                <th>
+                                    GPU
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% data.whitelist.projects.each do |project| %>
+                                <tr>
+                                    <td>
+                                        <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                    </td>
+                                    <td>
+                                        <%= project.sponsor %>
+                                    </td>
+                                    <td>
+                                        <% if project.cpu == "yes" %>
+                                          <i class="fa fa-check" aria-hidden="true"></i>
+                                        <% else %> 
+                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                        <% end %>
+                                    </td>
+                                    <td>
+                                        <% if project.gpu == "yes" %>
+                                          <i class="fa fa-check" aria-hidden="true"></i>
+                                        <% else %> 
+                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                        <% end %>                                    
+                                    </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
