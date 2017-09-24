@@ -1,6 +1,6 @@
 # What are these pages?
 
-To avoid manually editing html repetitively by hand, we make use of [templates](https://middlemanapp.com/basics/templating-language/) and [data files](https://middlemanapp.com/advanced/data-files/) for both the blog and the whitelist for the Gridcoin website.
+To avoid manually editing HTML repetitively by hand, we make use of [templates](https://middlemanapp.com/basics/templating-language/) and [data files](https://middlemanapp.com/advanced/data-files/) for both the blog and the whitelist for the Gridcoin website.
 
 ## Contributing towards the blog
 
