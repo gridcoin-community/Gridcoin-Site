@@ -1,4 +1,9 @@
 posts:
+- title: "Leisure Gridcoin client update v3.6.2.0!"
+  link_primary_url: "https://github.com/gridcoin/Gridcoin-Research/releases/tag/3.6.2.0"
+  link_primary_text: "v3.6.2.0 release notes"
+  link_secondary_url: ""
+  link_secondary_text: ""
 - title: "Multiple ongoing polls!"
   link_primary_url: "https://gridcoinstats.eu/poll"
   link_primary_text: "List of ongoing polls"
