@@ -2,13 +2,13 @@
 title: "Gridcoin - Project Whitelist"
 description: "The Gridcoin whitelist is a list of community-approved BOINC projects which are applicable for earning Gridcoin."
 ---
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:150px; margin-top: 0px;">
+<section  data-background-color="black" style="padding-bottom: 5px; padding-top:60px; margin-top: 0px;">
         <!--Start of GRC Feature section-->
         <!--First row of features-->
         <div class="container" style="overflow:hidden;">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
-                    <h5>Whitelist justification</h5>
+                    <h5>Whitelist Justification</h5>
                     <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
                     
                     <h5>Discussion</h5>
@@ -92,53 +92,6 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                                     </td>
                                     <td>
                                         <a href="<%= project.stats %>" title="Project stats"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                            <% end %>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 hidden-md-up">
-                    <table class="table table-hover table-condensed table-responsive">
-                        <thead>
-                            <tr>
-                                <th>
-                                    Project
-                                </th>
-                                <th>
-                                    Sponsor
-                                </th>
-                                <th>
-                                    CPU
-                                </th>
-                                <th>
-                                    GPU
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% data.whitelist.projects.each do |project| %>
-                                <tr>
-                                    <td>
-                                        <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
-                                    </td>
-                                    <td>
-                                        <%= project.sponsor %>
-                                    </td>
-                                    <td>
-                                        <% if project.cpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>
-                                    </td>
-                                    <td>
-                                        <% if project.gpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>                                    
                                     </td>
                                 </tr>
                             <% end %>
