@@ -1,4 +1,9 @@
 posts:
+- title: "Leisure Gridcoin client update v3.7.4.0!"
+  link_primary_url: "https://github.com/gridcoin/Gridcoin-Research/releases/tag/3.7.4.0"
+  link_primary_text: "v3.7.4.0 release notes"
+  link_secondary_url: ""
+  link_secondary_text: ""
 - title: "Leisure Gridcoin client update v3.7.3.0!"
   link_primary_url: "https://github.com/gridcoin/Gridcoin-Research/releases/tag/3.7.3.0"
   link_primary_text: "v3.7.3.0 release notes"
