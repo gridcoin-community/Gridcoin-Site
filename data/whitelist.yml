@@ -1,4 +1,12 @@
 projects:
+- name: "ODLK1"
+  link: "https://boinc.multi-pool.info/latinsquares/"
+  goal: "OLDK is building a database of canonical forms of diagonal Latin squares of the 10th order"
+  sponsor: ""
+  cpu: "yes"
+  gpu: "no"
+  team: "https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48"
+  stats: "https://gridcoinstats.eu/project/odlk1"
 - name: "Citizen Science Grid"
   link: "https://csgrid.org/csg/"
   goal: "Umbrella project for DNA@Home, SubsSet Sum@Home, and Wildlife@Home."
