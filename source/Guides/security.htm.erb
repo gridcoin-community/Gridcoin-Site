@@ -20,6 +20,73 @@ description: "A brief security guide for Gridcoin users."
                     <li>Read <a href="https://en.bitcoin.it/wiki/Securing_your_wallet">this wallet security guide</a> (for Bitcoin, but relevant to Gridcoin to some degree).</li>
                 </ul>
             </div>
+            <div class="col-sm-12">
+                <h4>Securing your browser</h4>
+                <p>
+                    One of the most common attack vectors is through your web browser, so take precautionary measures to minimize risk of loss of funds/exposure to malware.
+                </p>
+                <h5>Non-exhaustive browser security recommendation:</h5>
+                <ul>
+                    <li>Stop using internet explorer, switch to <a href="https://www.mozilla.org/en-US/firefox/desktop/">Firefox</a>, <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, or one of the many variants of the two.</li>
+                    <li>Do not use the same password for multiple sites. NEVER re-use a password!</li>
+                    <li>Use long passwords! <a href="https://xkcd.com/936/">the longer, the more difficult to crack.</a></li>
+                    <li>Consider a password manager such as <a href="https://www.keepassx.org/">KeePassX</a> to create and store long/unique passwords.</li>
+                    <li>Use 2 factor authentication like a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a>, or <a href="https://www.google.com/landing/2step/">GoogleAuth</a> on any website that offers it; it's a second layer of defence against phishing.</li>
+                    <li>If you've been sent a shortened link, either use a <a href="http://untiny.com/">link preview service</a> or do not click it!</li>
+                    <li>Disable any extensions that have been installed by 3rd party software - java/toolbars/etc, minus antivirus.</li>
+                    <li>Keep plugins up-to-date (flash/java/etc).</li>
+                    <li>Use <a href="https://www.startpage.com/">StartPage</a> instead of Google.</li>
+                </ul>
+
+                <h5>Browser extension recommendations for extra security:</h5>
+                <ul>
+                    <li><a href="https://github.com/gorhill/uBlock/">uBlock Origin</a>: Eliminate adverts from the internet; adverts often are malicious! Both "AdBlock" extensions, Plus and Edge, are now considered out-of-date.</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=hp-dl-mostpopular">NoScript</a>: Nerfs scripts on the internet; you have to manually allow sites to run scripts. Can help prevent malicious scripts running.</li>
+                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/policeman/?src=cb-dl-toprated">Policeman</a>: Alternative to NoScript. Nerfs scripts on the internet.</li>
+                    <li><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a>: An extension made by the EFF; Enforces an https (SSL) connection on sites whenever possible.</li>
+                    <li><a href="https://addons.mozilla.org/en-us/firefox/addon/requestpolicy/">requestpolicy</a>: Protects against CSRF (Controls cross-site requests).</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-controller/">Cookie Controller</a>: Manage site cookie permissions (browse &amp; remove cookies).</li>
+                    <li><a href="https://code.google.com/p/https-finder/">https-finder</a>: Detects valid https pages as you browse.</li>
+                    <li><a href="https://addons.mozilla.org/En-us/firefox/addon/refcontrol/">RefControl</a>: Hides/forges your referers.</li>
+                    <li><a href="https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/?src=search">Lastpass</a>: Another secure password manager. Combine with a <a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">Yubikey</a> and you'll have incredibly secure authentication online! Highly recommended!</li>
+                    <li><a href="https://github.com/dillbyrne/random-agent-spoofer/">Random Agent Spoofer</a>: Adding all these extensions makes your browser stick out like a sore thumb! Spoof your fingerprints!
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your communications</h4>
+                <p>
+                    It's crucial that your private communications online are not intercepted by any malicious entity; privacy is a human right, take yours back!
+                </p>
+                <ul>
+                    <li><a href="http://arstechnica.com/tech-policy/2014/12/newly-published-nsa-documents-show-agency-could-grab-all-skype-traffic/">Do <b>not</b> use skype!</a></li>
+                    <li>Use a VPN to evade censorship, MITM attacks &amp; totalitarian governments. <a href="http://torrentfreak.com/which-vpn-services-take-your-anonymity-seriously-2014-edition-140315/">Find the best vpn for you.</a></li>
+                    <li>Encrypt your private emails <a href="https://www.wefightcensorship.org/article/sending-encrypted-emails-using-thunderbird-and-pgphtml.html">using PGP.</a></li>
+                    <li>Always attempt to use multi-party encryption if performing group chat/conferences. At the very least, password protect chat rooms.</li>
+                    <li>Use OTR for 1-1 secure communications <a href="https://securityinabox.org/en/pidgin_main">(Pidgin + OTR)</a>, keep an eye out for multi-party OTR in the future.</li>
+                    <li>Don't share <b>ANY</b> of your personal information online. Use aliases.</li>
+                    <li>Use encrypted texting apps e.g. <a href="https://guardianproject.info/apps/chatsecure">Chatsecure</a></li>
+                    <li>Keep usage of social media to a minimum; if you're not paying for the service, <b><u>you're the product being sold.</u></b></li>
+                    <li>Do not use an email provider based in USA, instead use a <a href="http://prxbx.com/email/">secure alternative (link to list)</a>.</li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h4>Securing your computer</h4>
+                <p>
+                    Most of these tips are a given, but it's good to remember that they are quite important to adhere to at all times.
+                </p>
+                <ul>
+                    <li><a href="https://secunia.com/vulnerability_scanning/personal/">Use Secunia PSI</a> to keep software constantly up to date.</li>
+                    <li>Keep your operating system up to date (Windows updates/Ubuntu apt-get upgrade/Fedora yum -y upgrade/etc) &amp; dont run a cracked version of your operating system (Good way to infect your PC &amp; be a victim of ID theft).</li>
+                    <li>Keep usage of cracked/pirated software/games to an absolute minimum; keygens and pirate software can be (usually are) a source of malware.</li>
+                    <li>If you must install insecure software, run it in a <a href="http://www.sandboxie.com/">sandbox</a>!</li>
+                    <li>Install an antivirus program (<a href="https://www.bitdefender.co.uk/">Bitdefender</a> paid versions are good!). Scan all files that you download from the internet, especially from forums &amp; P2P sites/apps.</li>
+                    <li>Keep offline backups of your important data.</li>
+                    <li>Install theft prevention software on mobile devices, examples are: <a href="https://preyproject.com/">Prey</a>, <a href="https://lojack.absolute.com/en">Lojack</a>, etc.</li>
+                    <li>Encrypt your devices' storage, especially if you've got a mobile wallet.</li>
+                    <li>Do not share any of your account credentials to anyone, don't write them down, and don't store them insecurely on your PC.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
+<!-- End of FAQ Content -->
