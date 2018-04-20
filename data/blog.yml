@@ -1,6 +1,6 @@
 posts:
 - title: "The New Gridcoin Whitepaper has been released!"
-  link_primary_url: "https://docs.google.com/viewer?url=${https://github.com/gridcoin-community/Whitepaper/blob/master/Gridcoin_White_Paper_1.0.0.pdf}"
+  link_primary_url: "https://github.com/gridcoin-community/Whitepaper/blob/master/Gridcoin_White_Paper_1.0.0.pdf"
   link_primary_text: "Gridcoin Whitepaper 1.0.0"
   link_secondary_url: ""
   link_secondary_text: ""
