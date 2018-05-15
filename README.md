@@ -10,11 +10,11 @@ sudo apt-get install ruby-dev
 
 sudo apt-get install nodejs
 
+sudo apt-get install build-essential
+
 sudo gem install middleman
 
 sudo apt-get install git
-
-sudo apt-get install build-essential
 
 git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
