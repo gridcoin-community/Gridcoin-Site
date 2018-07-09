@@ -1678,9 +1678,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 a {
-  color: #f96332; }
+  color: #5411b3; }
 a:hover, a:focus {
-  color: #f96332; }
+  color: #5310B1; }
 
 h1, .h1 {
   font-size: 3.5em;
@@ -3384,7 +3384,7 @@ Created using IcoMoon - icomoon.io
 
 [data-background-color] {
   color: #FFFFFF; }
-[data-background-color] .title, [data-background-color] .social-description h2, [data-background-color] p, [data-background-color] h1, [data-background-color] h2, [data-background-color] h3, [data-background-color] h4, [data-background-color] h5, [data-background-color] h6, [data-background-color] a:not(.btn), [data-background-color] .icons-container i {
+[data-background-color] .title, [data-background-color] .social-description h2, [data-background-color] p, [data-background-color] h1, [data-background-color] h2, [data-background-color] h3, [data-background-color] h4, [data-background-color] h5, [data-background-color] h6, [data-background-color] .icons-container i {
   color: #FFFFFF; }
 [data-background-color] .description, [data-background-color] .social-description p {
   color: rgba(255, 255, 255, 0.8); }
