@@ -1678,9 +1678,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 a {
-  color: #5411b3; }
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
 a:hover, a:focus {
-  color: #5310B1; }
+  color: #93aa4f; }
 
 h1, .h1 {
   font-size: 3.5em;
