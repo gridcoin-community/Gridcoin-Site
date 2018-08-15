@@ -1,0 +1,1640 @@
+---
+title: "Gridcoin - RPC Reference"
+description: ""
+---<!--Intro-->
+<section  data-background-color="black" style="padding-bottom: 0px; padding-top:52px; margin-top: -20px;">
+    <div class="container">
+        <div class='row'>
+            <div class='col-xs-12 text-center'>
+                <h4 style="color:white; font-weight:bold; padding-top: 30px;">Gridcoin RPC Reference</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Intro-->
+
+    <div style="min-height:100%">
+        <section data-background-color="black">
+            <div class="container">
+                <div class="col-sm-12" style="padding-top:10px; padding-bottom:10px;">
+                    <div class="row">
+                        <caption>
+                            <h4>Wallet Commands</h4>
+                        </caption>
+                        <table class="table table-hover table-condensed">
+                            <thead data-background-color="black">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Parameters
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Requires unlocked wallet?
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        addmultisigaddress
+                                    </td>
+                                    <td>
+                                        &lt;nrequired&gt; &lt;'["key","key"]'&gt; [account]
+                                    </td>
+                                    <td>
+                                        Add a nrequired-to-sign multisignature address to the wallet. Each key is a Gridcoin address or hex-encoded public key. If [account] is specified, assign address to [account].
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        backupprivatekeys
+                                    </td>
+                                    <td>
+                                        &lt;destination&gt;
+                                    </td>
+                                    <td>
+                                        Backup wallet private keys to a file.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        backupwallet
+                                    </td>
+                                    <td>
+                                        &lt;destination&gt;
+                                    </td>
+                                    <td>
+                                        Safely copies wallet.dat to destination, which can be a directory or a path with filename.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        burn
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; [hex string]
+                                    </td>
+                                    <td>
+                                        Burns coins to the network.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        checkwallet
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Checks wallet.dat file to ensure it is not missing any coins.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        createrawtransaction
+                                    </td>
+                                    <td>
+                                        [{“txid” : “id”, “vout” : n},....] {“address” : amount, “data” : “hex”, ....}
+                                    </td>
+                                    <td>
+                                        Creates a raw transaction spending given inputs.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        decoderawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt;
+                                    </td>
+                                    <td>
+                                        Produces a human-readable JSON object for a raw transaction.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        decodescript
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt;
+                                    </td>
+                                    <td>
+                                        Decode a hex-encoded script.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        dumpprivkey
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Reveals the private key corresponding to &lt;gridcoinaddress&gt;.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        dumpwallet
+                                    </td>
+                                    <td>
+                                        &lt;filename&gt;
+                                    </td>
+                                    <td>
+                                        Dumps wallet to a specified filename.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        encryptwallet
+                                    </td>
+                                    <td>
+                                        &lt;passphrase&gt;
+                                    </td>
+                                    <td>
+                                        Encrypts the wallet with &lt;passphrase&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaccount
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Returns the account associated with the given address.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaccountaddress
+                                    </td>
+                                    <td>
+                                        &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Returns the current Gridcoin address for receiving payments to this account. If &lt;account&gt; does not exist, it will be created along with an associated new address that will be returned.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaddressbyaccount
+                                    </td>
+                                    <td>
+                                        &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Returns the list of addresses for the given account.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getbalance
+                                    </td>
+                                    <td>
+                                        [account] [minconf=1]
+                                    </td>
+                                    <td>
+                                        If [account] is not specified, returns the server's total available balance.<br/>
+                                        If [account] is specified, returns the balance in the account.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getnewaddress
+                                    </td>
+                                    <td>
+                                        [account]
+                                    </td>
+                                    <td>
+                                        Returns a new Gridcoin address for receiving payments. If [account] is specified payments received with the address will be credited to [account].
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;txid&gt; [verbose=0]
+                                    </td>
+                                    <td>
+                                        Returns <a href="https://en.bitcoin.it/wiki/Raw_Transactions">raw transaction</a> representation for given transaction id.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getreceivedbyaccount
+                                    </td>
+                                    <td>
+                                        &lt;account&gt; [minconf=1]
+                                    </td>
+                                    <td>
+                                        Returns the total amount received by addresses with [account] in transactions with at least [minconf] confirmations. If [account] not provided return will include all transactions to all accounts.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getreceivedbyaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; [minconf=1]
+                                    </td>
+                                    <td>
+                                        Returns the amount received by &lt;gridcoinaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        gettransaction
+                                    </td>
+                                    <td>
+                                        &lt;txid&gt;
+                                    </td>
+                                    <td>
+                                        Adds signatures to a raw transaction and returns the resulting raw transaction.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getwalletinfo
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Returns useful information about current wallet state.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        importprivkey
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinprivkey&gt; [label] [rescan=true]
+                                    </td>
+                                    <td>
+                                        Adds a private key (as returned by dumpprivkey) to your wallet. This may take a while, if a rescan is done looking for existing transactions.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        importwallet
+                                    </td>
+                                    <td>
+                                        &lt;filename&gt;
+                                    </td>
+                                    <td>
+                                        Imports an existing wallet.dat file.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        keypoolrefill
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Fills the keypool, requires wallet passphrase to be set.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listaccounts
+                                    </td>
+                                    <td>
+                                        [minconf=1]
+                                    </td>
+                                    <td>
+                                         Returns Object that has account names as keys, account balances as values.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listaddressgroupings
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Returns all addresses in the wallet and info used for coincontrol.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listreceivedbyaccount
+                                    </td>
+                                    <td>
+                                        [minconf=1] [includeempty=false]
+                                    </td>
+                                    <td>
+                                        Returns an array of objects containing: account, amount, confirmations
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listreceivedbyaddress
+                                    </td>
+                                    <td>
+                                        [minconf=1] [includeempty=false]
+                                    </td>
+                                    <td>
+                                        Returns an array of objects containing: address, account, amount, confirmations. To get a list of accounts on the system, gridcoind listreceivedbyaddress 0 true.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listsinceblock
+                                    </td>
+                                    <td>
+                                        [blockhash] [target-confirmations]
+                                    </td>
+                                    <td>
+                                        Get all transactions in blocks since block [blockhash], or all transactions if omitted.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listtransactions
+                                    </td>
+                                    <td>
+                                        [account] [count=10] [from=0]
+                                    </td>
+                                    <td>
+                                        Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided will return recent transaction from all accounts.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listunspent
+                                    </td>
+                                    <td>
+                                        [minconf=1] [maxconf=9999999] ["address",...]
+                                    </td>
+                                    <td>
+                                        Returns array of unspent transaction inputs in the wallet.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        makekeypair
+                                    </td>
+                                    <td>
+                                        [prefix]
+                                    </td>
+                                    <td>
+                                        Make a public/private key pair.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        move
+                                    </td>
+                                    <td>
+                                        &lt;fromaccount&gt; &lt;toaccount&gt; &lt;amount&gt; [minconf=1] [comment]
+                                    </td>
+                                    <td>
+                                        Move from one account in your wallet to another
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        rain
+                                    </td>
+                                    <td>
+                                        {"address":amount, "address":amount}
+                                    </td>
+                                    <td>
+                                        Rain on specific addresses with specific amounts.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        repairwallet
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Check wallet.dat for missing coins.  If any are found, attempt recovery.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        resendtx
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Resend any failed or unsent transactions.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        reservebalance
+                                    </td>
+                                    <td>
+                                        &lt;reserve=bool&gt; &lt;amount&gt;
+                                    </td>
+                                    <td>
+                                        Reserve an amount of coins that do not participate in staking.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendfrom
+                                    </td>
+                                    <td>
+                                        &lt;fromaccount&gt; &lt;togridcoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt;
+                                    </td>
+                                    <td>
+                                        Submits raw transaction (serialized, hex-encoded) to local node and network.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sendtoaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        setaccount
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;account&gt;
+                                    </td>
+                                    <td>
+                                        Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        settxfee
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt;
+                                    </td>
+                                    <td>
+                                        &lt;amount&gt; is a real and is rounded to the nearest 0.00000001
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        signmessage
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;message&gt;
+                                    </td>
+                                    <td>
+                                        Sign a message with the private key of an address.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        signrawtransaction
+                                    </td>
+                                    <td>
+                                        &lt;hex string&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex,"redeemScript":hex},...] [&lt;privatekey1&gt;,...] [sighashtype="ALL"]
+                                    </td>
+                                    <td>
+                                        Adds signatures to a raw transaction and returns the resulting raw transaction.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        unspentreport
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Display a report on unspent coins in the wallet.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        validateaddress
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt;
+                                    </td>
+                                    <td>
+                                        Return information about &lt;gridcoinaddress&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        validatepubkey
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinpubkey&gt;
+                                    </td>
+                                    <td>
+                                        Return information about &lt;gridcoinpubkey&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        verifymessage
+                                    </td>
+                                    <td>
+                                        &lt;gridcoinaddress&gt; &lt;signature&gt; &lt;message&gt;
+                                    </td>
+                                    <td>
+                                        Verify a signed message.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        walletlock
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Lock an encrypted wallet.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        walletpassphrase
+                                    </td>
+                                    <td>
+                                        &lt;passphrase&gt; &lt;timeout&gt; [stakingonly=bool]
+                                    </td>
+                                    <td>
+                                        Encrypt your wallet with a passphrase.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        walletpassphrasechange
+                                    </td>
+                                    <td>
+                                        &lt;oldpassphrase&gt; &lt;newpassphrase&gt;
+                                    </td>
+                                    <td>
+                                        Change an encrypted wallet's passphrase.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                            
+            <div class="container">
+                <div class="col-sm-12" style="padding-top:10px; padding-bottom:10px;">
+                    <div class="row">
+                        <caption>
+                            <h4>
+                                Mining Commands
+                            </h4>
+                        </caption>
+                        <table class="table table-hover table-condensed">
+                            <thead data-background-color="black">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Parameters
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Requires unlocked wallet?
+                                    </th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    advertisebeacon
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Send a beacon to the Neural Network for your CPID to claim POR rewards.
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    beaconreport
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Displays beacons and associated addresses.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    beaconstatus
+                                </td>
+                                <td>
+                                    [cpid]
+                                </td>
+                                <td>
+                                    Display beaconstatus on own or specified beacon.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    cpids
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Display project CPIDs for your BOINC account.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    currentneuralhash
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays current Neural Network contract hash.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    currentneuralreport
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays current Neural Network quorum hashes.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    explainmagnitude
+                                </td>
+                                <td>
+                                    [force=bool]
+                                </td>
+                                <td>
+                                    Request current information from the Neural Network about your magnitude by project.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    getmininginfo
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays mining-related information.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    lifetime
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Display lifetime payments for CPID as well as lifetime average magnitude.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    magnitude
+                                </td>
+                                <td>
+                                    [cpid]
+                                </td>
+                                <td>
+                                    Displays information for the magnitude of all cpids or the one specified.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    neuralhash
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays information about the popular neural hash.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    neuralreport
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays neural report for the network.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    resetcpids
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Reloads CPIDs from BOINC.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    rsa
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays RSA (Research Savings Account) report for your CPID
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    staketime
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Display estimated time to stake.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    superblockage
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Display time since last superblock.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    superblocks
+                                </td>
+                                <td>
+                                    [cpid]
+                                </td>
+                                <td>
+                                    Display data on recent superblocks.  Optional: Shows magnitude for a cpid for recent superblocks.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    syncdpor2
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Synchronize with the neural network
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    upgradedbeaconreport
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Display upgraded beacon report of the network.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    validcpids
+                                </td>
+                                <td>
+                                
+                                </td>
+                                <td>
+                                    Displays information about valid CPIDs (on team Gridcoin, same CPID) collected from BOINC.
+                                </td>
+                                <td>
+                                    N
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-sm-12" style="padding-top:10px; padding-bottom:50px;">
+                    <div class="row">
+                        <caption>
+                            <h4>
+                                Network Commands
+                            </h4>
+                        </caption>
+                        <table class="table table-hover table-condensed">
+                            <thead data-background-color="black">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Parameters
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Requires unlocked wallet?
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        addnode
+                                    </td>
+                                    <td>
+                                        &lt;node&gt; &lt;add|remove|onetry&gt;
+                                    </td>
+                                    <td>
+                                        Attempts add or remove &lt;node&gt; from the addnode list or try a connection to &lt;node&gt; once.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        addpoll
+                                    </td>
+                                    <td>
+                                        &lt;title&gt; &lt;days&gt; &lt;question&gt; &lt;answers&gt; &lt;sharetype&gt; &lt;url&gt;
+
+                                    </td>
+                                    <td>
+                                        Add a poll to the network. Requires 100K GRC balance
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        askforoutstandingblocks
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Force ask for outstandingblocks from network.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        currenttime
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Displays UTC Unix time as well as date and time in UTC.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        decryptphrase
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Decrypts phrase encrypted by encryptphrase.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        encryptphrase
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Encrypts phrase to be decryptable by decryptphrase.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getaddednodeinfo
+                                    </td>
+                                    <td>
+                                        &lt;dns&gt; [node]
+                                    </td>
+                                    <td>
+                                        Returns information about the given added node, or all added nodes.<br/>
+                                        (Note that onetry addnodes are not listed here) If dns is false, only a list of added nodes will be provided, otherwise connected information will also be available.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getbestblockhash
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns the hash of the best (tip) block in the longest block chain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblock
+                                    </td>
+                                    <td>
+                                        &lt;hash&gt; [verbose=true]
+                                    </td>
+                                    <td>
+                                        Returns information about the block with the given hash.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockbynumber
+                                    </td>
+                                    <td>
+                                        &lt;hash&gt;
+                                    </td>
+                                    <td>
+                                        Returns information about the block with the given block number.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockchaininfo
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Displays current state of the blockchain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockcount
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns the number of blocks in the longest block chain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getblockhash
+                                    </td>
+                                    <td>
+                                        &lt;index&gt;
+                                    </td>
+                                    <td>
+                                        Returns hash of block in best-block-chain at &lt;index&gt;; index 0 is the genesis block
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getcheckpoint
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        Show info of synchronized checkpoint.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getconnectioncount
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns the number of connections to other nodes.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getdifficulty
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns the current network difficulty.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getinfo
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns an object containing various state info.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getnettotals
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns information about network traffic, including bytes in, bytes out, and current time.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getnetworkinfo
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Displays network related information.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getpeerinfo
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Returns data about each connected node.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        getrawmempool
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Display all transactions waiting in the mempool.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listallpolldetails
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Lists all polls with details.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listallpolls
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Lists all polls.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listpolldetails
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Lists poll details.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listpollresults
+                                    </td>
+                                    <td>
+                                        &lt;pollname&gt; [showexpired=bool]
+                                    </td>
+                                    <td>
+                                        Displays results for specified poll.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        listpolls
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Lists all polls.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        memorypool
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Displays included and excluded memory pool transactions.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        networktime
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Displays current network time.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        ping
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Requests that a ping be sent to all other nodes, to measure ping time. Results provided in getpeerinfo, pingtime and pingwait fields are decimal seconds. Ping command is handled in queue with all other commands, so it measures processing backlog, not just network ping.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        reindex
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Re-index the block chain.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        restart
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Restarts the wallet.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        showblock
+                                    </td>
+                                    <td>
+                                        &lt;blocknumber&gt;
+                                    </td>
+                                    <td>
+                                        Returns all information about the block at &lt;index&gt;.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        stop
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        Stop Gridcoin server.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        vote
+                                    </td>
+                                    <td>
+                                        &lt;title&gt; &lt;answers&gt;
+                                    </td>
+                                    <td>
+                                        Vote on a specific poll with specified answers.
+                                    </td>
+                                    <td>
+                                        Y
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        votedetails
+                                    </td>
+                                    <td>
+                                        &lt;pollname&gt;
+                                    </td>
+                                    <td>
+                                        Displays vote details of a specified poll.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- THIS SEGMENT IS A WORK IN PROGRESS
+            <div class="container">
+                <div class="col-sm-12" style="padding-top:10px; padding-bottom:50px;">
+                    <div class="row">
+                        <caption>
+                            <h4>
+                                Developer Commands
+                            </h4>
+                        </caption>
+                        <table class="table table-hover table-condensed">
+                            <thead data-background-color="black">
+                                <tr>
+                                    <th>
+                                        Command
+                                    </th>
+                                    <th>
+                                        Parameters
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Requires unlocked wallet?
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        stop
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Stop Gridcoin server.
+                                    </td>
+                                    <td>
+                                        N
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+            -->
+        </section>
+    </div>
+        <!-- End of guide links -->
