@@ -15,7 +15,7 @@ projects:
   gpu: "no"
   team: "https://www.cosmologyathome.org/team_display.php?teamid=3637"
   stats: "https://gridcoinstats.eu/project/cosmology@home"
-  - name: "Distributed Hardware Evolution Project"
+- name: "Distributed Hardware Evolution Project"
   link: "https://www.dhep.ga/boinc/"
   goal: "DHEP allows you to host an island running a Genetic Algorithm in a coevolutionary setting synthesising future super-reliable electronics such as those used in autonomous vehicles, power stations, medical equipment, and aerospace."
   sponsor: "University of Sussex"
