@@ -10,7 +10,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 <div class="col-xs-12 col-sm-4">
                     <h5>Whitelist justification</h5>
                     <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
-                    
+
                     <h5>Discussion</h5>
                     <p><a href="https://cryptocurrencytalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">CCT Whitelist thread</a></p>
                     <p><a href="https://cryptocurrencytalk.com/forum/2436-projects/">Projects subforum</a></p>
@@ -32,7 +32,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 <div class='col-xs-12 col-sm-12 text-center' style="">
                     <h3>Greylist</h3>
                     <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
-                    <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">The official Greylist website</a> for daily updates on which projects are added and removed from the Greylist.</p>
+                    <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">This Gridcoin greylist monitoring website</a> for daily updates on which projects are added and removed from the Greylist.</p>
                     <p><a href="https://gridcoin.ddns.net/pages/project-list-process.php">This document</a> outlines the Greylist procedure for all whitelisted projects.</p>
                 </div>
             </div>
@@ -85,23 +85,23 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                                     </td>
                                     <td>
                                         <% if project.cpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                          ✔️
+                                        <% else %>
+                                          ❌
                                         <% end %>
                                     </td>
                                     <td>
                                         <% if project.gpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>                                    
+                                          ✔️
+                                        <% else %>
+                                          ❌
+                                        <% end %>
                                     </td>
                                     <td>
-                                        <a href="<%= project.team %>" title="Gridcoin Team Link"><i class="fa fa-users" aria-hidden="true"></i></a>
+                                        <a href="<%= project.team %>" title="Gridcoin Team Link">📊</a>
                                     </td>
                                     <td>
-                                        <a href="<%= project.stats %>" title="Project stats"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
+                                        <a href="<%= project.stats %>" title="Project stats">📈</a>
                                     </td>
                                 </tr>
                             <% end %>
@@ -138,17 +138,17 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                                     </td>
                                     <td>
                                         <% if project.cpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
+                                          ✔️
+                                        <% else %>
+                                          ❌
                                         <% end %>
                                     </td>
                                     <td>
                                         <% if project.gpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>                                    
+                                          ✔️
+                                        <% else %>
+                                          ❌
+                                        <% end %>
                                     </td>
                                 </tr>
                             <% end %>
