@@ -1,0 +1,12 @@
+div.dropdown a {
+  text-decoration:none;
+}
+
+div.dropdown a.dropdown-header {
+  color:black !important;
+}
+
+div.footer_placeholder a {
+  text-decoration:none;
+  font-weight:normal;
+}
