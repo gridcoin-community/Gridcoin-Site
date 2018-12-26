@@ -5,8 +5,14 @@ description: ""
 <section  data-background-color="black" style="padding-bottom: 0px; padding-top:52px; margin-top: -20px;">
     <div class="container">
         <div class='row'>
-            <div class='col-xs-12 text-center'>
-                <h4 style="color:white; font-weight:bold; padding-top: 30px;">Gridcoin RPC Reference</h4>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3 style="color:white; font-weight:bold; padding-top: 50px;">Gridcoin RPC Reference</h3>
+                <p>This page provides the commands available within the Gridcoin-Research client.</p>
+                <ul>
+                  <li><a href="#wallet_commands">Wallet Commands</a></li>
+                  <li><a href="#network_commands">Network Commands</a></li>
+                  <li><a href="#mining_commands">Mining Commands</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -16,38 +22,44 @@ description: ""
 <div style="min-height:100%;">
   <section data-background-color="black">
       <div class="container">
-        <div class="row">
-            <h3>Wallet commands</h3>
+        <div class="row" style="border-bottom: 1px dashed grey;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <a name="wallet_commands"></a>
+              <h4><b>Wallet commands</b></h4>
+            </div>
             <% data.wallet_commands.commands.each do |command| %>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border-bottom: 1px dashed grey;">
-                    <h4>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h5>
                       <b><%= command.command %></b>
                       <% if command.parameters != "" %>
                         <%= command.parameters %>
                       <% end %>
-                    </h4>
+                    </h5>
                     <p><%= command.description %></p>
                     <p>
                       <% if command.unlock == "Y" %>
                         Requires unlocked wallet
                       <% else %>
-                        Wallet unlock unneccessarry
+                        Doesn't require an unlocked wallet
                       <% end %>
                     </p>
                 </div>
             <% end %>
         </div>
 
-        <div class="row" style="padding-top:50px;">
-            <h3>Mining commands</h3>
+        <div class="row" style="padding-top:50px;border-bottom: 1px dashed grey;">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <a name="mining_commands"></a>
+            <h4><b>Mining commands</b></h4>
+          </div>
             <% data.mining_commands.commands.each do |command| %>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border-bottom: 1px dashed grey;">
-                    <h4>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h5>
                       <b><%= command.command %></b>
                       <% if command.parameters != "" %>
                         <%= command.parameters %>
                       <% end %>
-                    </h4>
+                    </h5>
                     <p><%= command.description %></p>
                     <p>
                       <% if command.unlock == "Y" %>
@@ -61,15 +73,18 @@ description: ""
         </div>
 
         <div class="row" style="padding-top:50px;">
-            <h3>Network commands</h3>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <a name="network_commands"></a>
+            <h4><b>Network commands</b></h4>
+          </div>
             <% data.network_commands.commands.each do |command| %>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border-bottom: 1px dashed grey;">
-                    <h4>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h5>
                       <b><%= command.command %></b>
                       <% if command.parameters != "" %>
                         <%= command.parameters %>
                       <% end %>
-                    </h4>
+                    </h5>
                     <p><%= command.description %></p>
                     <p>
                       <% if command.unlock == "Y" %>
