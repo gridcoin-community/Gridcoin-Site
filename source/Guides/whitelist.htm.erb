@@ -10,7 +10,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 <div class="col-xs-12 col-sm-4">
                     <h5>Whitelist justification</h5>
                     <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
-                    
+
                     <h5>Discussion</h5>
                     <p><a href="https://cryptocurrencytalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">CCT Whitelist thread</a></p>
                     <p><a href="https://cryptocurrencytalk.com/forum/2436-projects/">Projects subforum</a></p>
@@ -32,129 +32,170 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 <div class='col-xs-12 col-sm-12 text-center' style="">
                     <h3>Greylist</h3>
                     <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
-                    <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">The official Greylist website</a> for daily updates on which projects are added and removed from the Greylist.</p>
+                    <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">This Gridcoin greylist monitoring website</a> for daily updates on which projects are added and removed from the Greylist.</p>
                     <p><a href="https://gridcoin.ddns.net/pages/project-list-process.php">This document</a> outlines the Greylist procedure for all whitelisted projects.</p>
                 </div>
             </div>
         </div>
         <!--End of GRC Feature Section-->
-    </section>
+</section>
 
-    <section  data-background-color="black" style="overflow-x: hidden">
-        <!-- BOINC Content -->
-        <div class="container" style="margin-top:20px;">
-            <div class="row">
-                <div class="hidden-sm-down col-md-12 col-lg-12">
-                    <table class="table table-hover table-condensed table-responsive">
-                        <thead>
+<section data-background-color="black" style="overflow-x: hidden">
+    <!-- BOINC Content -->
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="hidden-md-down col-lg-12">
+                <table class="table table-hover table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                Goal
+                            </th>
+                            <th>
+                                Sponsor
+                            </th>
+                            <th>
+                                CPU
+                            </th>
+                            <th>
+                                GPU
+                            </th>
+                            <th>
+                                Team
+                            </th>
+                            <th>
+                                Stats
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.whitelist.projects.each do |project| %>
                             <tr>
-                                <th>
-                                    Project
-                                </th>
-                                <th>
-                                    Goal
-                                </th>
-                                <th>
-                                    Sponsor
-                                </th>
-                                <th>
-                                    CPU
-                                </th>
-                                <th>
-                                    GPU
-                                </th>
-                                <th>
-                                    Team
-                                </th>
-                                <th>
-                                    Stats
-                                </th>
+                                <td>
+                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                </td>
+                                <td>
+                                    <%= project.goal %>
+                                </td>
+                                <td>
+                                    <%= project.sponsor %>
+                                </td>
+                                <td>
+                                    <% if project.cpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
+                                <td>
+                                    <% if project.gpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
+                                <td>
+                                    <a href="<%= project.team %>" title="Gridcoin Team Link">📊</a>
+                                </td>
+                                <td>
+                                    <a href="<%= project.stats %>" title="Project stats">📈</a>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <% data.whitelist.projects.each do |project| %>
-                                <tr>
-                                    <td>
-                                        <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
-                                    </td>
-                                    <td>
-                                        <%= project.goal %>
-                                    </td>
-                                    <td>
-                                        <%= project.sponsor %>
-                                    </td>
-                                    <td>
-                                        <% if project.cpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>
-                                    </td>
-                                    <td>
-                                        <% if project.gpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>                                    
-                                    </td>
-                                    <td>
-                                        <a href="<%= project.team %>" title="Gridcoin Team Link"><i class="fa fa-users" aria-hidden="true"></i></a>
-                                    </td>
-                                    <td>
-                                        <a href="<%= project.stats %>" title="Project stats"><i class="fa fa-list-ol" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                            <% end %>
-                        </tbody>
-                    </table>
-                </div>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="col-xs-12 col-sm-12 hidden-md-up">
-                    <table class="table table-hover table-condensed table-responsive">
-                        <thead>
+            <div class="hidden-xs-down col-sm-12 hidden-md-up">
+                <table class="table table-hover table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                Sponsor
+                            </th>
+                            <th>
+                                CPU
+                            </th>
+                            <th>
+                                GPU
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.whitelist.projects.each do |project| %>
                             <tr>
-                                <th>
-                                    Project
-                                </th>
-                                <th>
-                                    Sponsor
-                                </th>
-                                <th>
-                                    CPU
-                                </th>
-                                <th>
-                                    GPU
-                                </th>
+                                <td>
+                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                </td>
+                                <td>
+                                    <%= project.sponsor %>
+                                </td>
+                                <td>
+                                    <% if project.cpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
+                                <td>
+                                    <% if project.gpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <% data.whitelist.projects.each do |project| %>
-                                <tr>
-                                    <td>
-                                        <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
-                                    </td>
-                                    <td>
-                                        <%= project.sponsor %>
-                                    </td>
-                                    <td>
-                                        <% if project.cpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>
-                                    </td>
-                                    <td>
-                                        <% if project.gpu == "yes" %>
-                                          <i class="fa fa-check" aria-hidden="true"></i>
-                                        <% else %> 
-                                          <i class="fa fa-times" aria-hidden="true"></i>
-                                        <% end %>                                    
-                                    </td>
-                                </tr>
-                            <% end %>
-                        </tbody>
-                    </table>
-                </div>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-xs-12 hidden-sm-up">
+                <table class="table table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Project
+                            </th>
+                            <th>
+                                CPU
+                            </th>
+                            <th>
+                                GPU
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.whitelist.projects.each do |project| %>
+                            <tr>
+                                <td>
+                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                </td>
+                                <td>
+                                    <% if project.cpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
+                                <td>
+                                    <% if project.gpu == "yes" %>
+                                      ✔️
+                                    <% else %>
+                                      ❌
+                                    <% end %>
+                                </td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </section>
+    </div>
+</section>
