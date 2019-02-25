@@ -2,22 +2,21 @@
 title: "Gridcoin - Step 2: Gridcoin Installation"
 description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to install a Gridcoin client."
 ---
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:60px; margin-top: 20px;">
-    <div class="container" style="overflow:hidden; margin-top:20px;">
-        <div class="row" style="text-align:center;">
-
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 10px; border: 2px dotted #40413c;">
-                <h5 style="color:white;font-weight:bold;">Step 1</h5>
-                <hr style="border-color: #40413c;" />
+<section class="grc-bgcolor guide-menu-top" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h5>Step 1</h5>
+                <hr />
                 <a href="/Guides/pool.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                         Setup BOINC &amp; Join a pool
                     </button>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #303030; border: 2px dotted #40413c;">
-                <h5 style="font-weight: bold;">Step 2</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h5>Step 2</h5>
+                <hr />
                 <a href="/Guides/pool-gridcoin-install.htm">
                     <button class="btn btn-success" id="Guide-Button">
                         Setup Gridcoin Research Client
@@ -28,19 +27,19 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-top:0px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style=" padding-top: 30px;">
+<section class="grc-bgcolor grclink" data-background-color="black">
+    <div class="container">
+        <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-8">
-                <h4 style="text-align:left; color:white;">Gridcoin Introduction</h4>
-                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 10px; text-align:left;">
+                <h4 class="text-bold">Gridcoin Introduction</h4>
+                <ul>
+                    <li>
                         The following guides explain how to set up the Gridcoin Research wallet client on the platform of your choice.
                     </li>
-                    <li style="margin-bottom: 10px; text-align:left;">
+                    <li >
                         If you have not yet installed the BOINC client, you should read the <a href="/Guides/pool.htm">BOINC installation guide</a> to setup BOINC on the platform of your choice. The BOINC client has to be installed alongside the Gridcoin client in order to verify BOINC account ownership and to access local BOINC statistics.
                     </li>
-                    <li style="margin-bottom: 10px; text-align:left;">
+                    <li>
                         If you want to run Gridcoin in <a href="/Guides/investor-gridcoin-setup.htm">investor-mode only</a>, you do not need to install/run BOINC.
                     </li>
                     <li>
@@ -49,82 +48,21 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
                 </ul>
             </div>
             <div class="hidden-xs col-sm-4 col-md-4">
-                <img src="/assets/img/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC" style="width: 200px; padding-top: 50px;">
+                <img src="/assets/img/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC" class="grclogoimg">
             </div>
         </div>
     </div>
 </section>
 <!--TEST AREA-->
 
-<section  data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-        <!--Step 1-->
-        <div class='row' style="margin-top:10px;">
-            <div class='col-xs-12 col-sm-12' style="">
+<%= partial "/layouts/partials/wallet_install" %>
+
+
+<section class="grc-bgcolor grclink" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-center">
                 <h4>
-                    Install the Gridcoin client
-                </h4>
-                <h5>
-                    Microsoft Windows
-                </h5>
-                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 10px;">
-                        <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://download.gridcoin.us/download/downloadstake/GridcoinResearch.msi">Download Windows Client</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Mac OS
-                </h5>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;font-weight:bold;" href="https://github.com/Git-Jiro/homebrew-jiro/releases">
-                        DMG packages
-                    </a>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="http://wiki.gridcoin.us/OS_X_Guide">Gridcoin wiki: Mac OS guide</a>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://cryptocointalk.com/topic/13139-os-x-builds-feedback-bug-reporting/">Mac OS Build Support thread</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Debian Packages (Ubuntu)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://code.launchpad.net/~gridcoin/+archive/ubuntu/gridcoin-stable">Launchpad built ubuntu releases</a>
-                <ul>
-                    <li>sudo add-apt-repository ppa:gridcoin/gridcoin-stable</li>
-                    <li>sudo apt-get update</li>
-                    <li>sudo apt-get install gridcoinresearch-qt</li>
-                    <li>gridcoinresearch</li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    RPM Packages (OpenSUSE/Fedora)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://software.opensuse.org/package/gridcoinresearch">OpenSuse/Fedora RPMs</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    AUR (Arch Linux)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://aur.archlinux.org/packages/gridcoinresearch-qt">Archlinux AUR package</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Manually compile the Gridcoin client
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="http://wiki.gridcoin.us/Linux_guide">Linux compiling guide</a>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://github.com/gridcoin/Gridcoin-Research">Gridcoin GitHub Repo</a>
-            </div>
-        </div>
-        <!--End of GRC Feature Section-->
-    </div>
-</section>
-
-
-<section  data-background-color="black" style="padding-top:0px;padding-bottom: 5px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style="margin-top:10px;">
-            <div class='col-xs-12 col-sm-12 text-center' style="">
-                <h4 style=" font-weight:bold;">
                     Once the Gridcoin client has been installed, sync the blockchain!
                 </h4>
             </div>
@@ -132,9 +70,9 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
 
         <!--prereqs-->
         <div class="row">
-            <div class="col-xs-12" style="">
-                <ul style="text-align: justify; list-style-type: none; padding-left: 5px;">
-                    <li style="margin-bottom: 10px; text-align:left;">
+            <div class="col-xs-12">
+                <ul>
+                    <li>
                         <ul>
                             <li>
                                 Prior to being able to stake or transfer Gridcoin to/from the Gridcoin client you need to fully sync the Gridcoin client to the latest block on the blockchain (green tick under connections indicates a fully synced wallet)
@@ -153,7 +91,7 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
                                     </li>
                                 </ul>
                             </li>
-                            <li style="padding-top: 10px;">
+                            <li>
                                 If you are unable to acquire connections to the Gridcoin network, attempt the following:
                                 <ul>
                                     <li>
@@ -164,7 +102,7 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
                                     </li>
                                 </ul>
                             </li>
-                            <li style="padding-top:10px;">
+                            <li>
                                 Regularly verify you're running the latest version of the Gridcoin client, as there are frequent updates. Notices of updates are posted regularly on <a href="https://www.reddit.com/r/gridcoin">Reddit</a>/<a href="https://twitter.com/GridcoinNetwork">Twitter</a>/<a href="https://kiwiirc.com/client/irc.freenode.net:6667/#gridcoin">IRC</a>.
                                 <ul>
                                     <li>
@@ -181,44 +119,35 @@ description: "Step 2 of the 'Pool Crunching' guide; Instructing users how to ins
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-
-        <div class='row' style="margin-top:10px;">
-          <!--
-            <div class='col-xs-12 col-sm-12' style="">
-                <a class="btn btn-simple btn-default" href="https://bitshares.openledger.info">Openledger</a>
-                <a class="btn btn-simple btn-default" href="https://market.rudex.org">RUDEX</a>
-                <a class="btn btn-simple btn-default" href="https://bitshares.org/">Bitshares-Light</a>
-            </div>
-          -->
-            <div class="col-xs-12 col-sm-12 col-md-12" style="padding-top: 15px;">
-                <h5>
+<section class="grc-bgcolor" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h5 class="text-bold">
                   Third party multi-wallets for Gridcoin
                 </h5>
-                <a class="btn btn-simple btn-default" href="https://holytransaction.com/">HolyTransaction</a>
-                <a class="btn btn-simple btn-default" href="https://coinomi.com/">Coinomi</a>
+                <a href="https://holytransaction.com/"><button class="btn btn-round grcbtn">HolyTransaction</button></a>
+                <a href="https://coinomi.com/"><button class="btn btn-round grcbtn">Coinomi</button></a>
             </div>
         </div>
-
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:30px; margin-top: 0px;">
-    <div class="container" style="overflow:hidden; margin-top:20px;">
-        <div class="row" style="text-align:center;">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #2d2d2d; padding-bottom: 10px; border: 2px dotted #40413c;">
-                <h5 style="color:white;font-weight:bold;">Step 1</h5>
-                <hr style="border-color: #40413c;" />
+<section class="grc-bgcolor guide-menu-bot" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h5>Step 1</h5>
+                <hr />
                 <a href="/Guides/pool.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                         Setup BOINC &amp; Join a pool
                     </button>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #303030; border: 2px dotted #40413c;">
-                <h5 style="font-weight: bold;">Step 2</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h5>Step 2</h5>
+                <hr />
                 <a href="/Guides/pool-gridcoin-install.htm">
                     <button class="btn btn-success" id="Guide-Button">
                         Setup Gridcoin Research Client
