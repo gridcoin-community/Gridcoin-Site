@@ -2,30 +2,30 @@
 title: "Gridcoin - Step 1: Gridcoin Installation"
 description: "Step 1 of the 'Investor mode' guide; Informing the user how to sync the Gridcoin client and where to acquire Gridcoin."
 ---
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:60px; margin-top: 20px;">
-    <div class="container" style="overflow:hidden; margin-top:20px; border: 2px dotted #40413c;">
-        <div class="row" style="text-align:center;">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #303030; padding-bottom: 5px;">
-                <h5 style="font-weight: bold;">Step 1</h5>
-                <hr style="border-color: #40413c;" />
+<section class="guide-menu-top grc-bgcolor" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 1</h5>
+                <hr />
                 <a href="/Guides/investor-gridcoin-setup.htm">
                     <button class="btn btn-success" id="Guide-Button">
                     Setup Gridcoin Research Client
                     </button>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #2d2d2d;">
-                <h5 style="font-weight: bold;">Step 2</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 2</h5>
+                <hr />
                 <a href="/Guides/investor-acquire-grc.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                     Sync client &amp; Acquire Gridcoin
                     </button>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #303030;">
-                <h5 style="font-weight: bold;">Step 3</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 3</h5>
+                <hr />
                 <a href="/Guides/investor-earn-grc.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                     Earn Gridcoin via POS
@@ -36,98 +36,30 @@ description: "Step 1 of the 'Investor mode' guide; Informing the user how to syn
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-top:0px;">
-    <div class="container" style="overflow:hidden;">
-        <div class="row" style=" padding-top: 30px;">
+<section class="invest-grc-setup grc-bgcolor" data-background-color="black">
+    <div class="container">
+        <div class="row text-center">
                 <div class="col-xs-12 col-sm-8">
-                    <h4 style="text-align:left; ">Gridcoin Introduction</h4>
+                    <h4 class="text-bold">Gridcoin Introduction</h4>
                     <p>The following guides explain how to set up the Gridcoin Research wallet client on the platform of your choice.</p>
                     <p>
                         If you want to run Gridcoin in investor-mode only, you do not need to install the BOINC client. In this case, you will only earn POS interest and not recieve DPOR payments due to a lack of BOINC research. The amount and frequency of interest depends on the quantity of coins you are holding in your wallet/client.
                     </p>
                 </div>
                 <div class="hidden-xs col-sm-4">
-                    <img src="/assets/img/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC" style="width: 200px; padding-top: 25px;">
+                    <img class="grclogoimg-pt25" src="/assets/img/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC">
                 </div>
         </div>
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-        <!--Step 1-->
-        <div class='row' style="margin-top:10px;">
-            <div class='col-xs-12 col-sm-12' style="">
-                <h4>
-                    Install the Gridcoin client
-                </h4>
-                <h5>
-                    Microsoft Windows
-                </h5>
-                <ul style="text-align: justify; list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 10px;">
-                        <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://download.gridcoin.us/download/downloadstake/GridcoinResearch.msi">Download Windows Client</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Mac OS
-                </h5>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;font-weight:bold;" href="https://github.com/Git-Jiro/homebrew-jiro/releases">
-                        DMG packages
-                    </a>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="http://wiki.gridcoin.us/OS_X_Guide">Gridcoin wiki: Mac OS guide</a>
-                    <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://cryptocointalk.com/topic/13139-os-x-builds-feedback-bug-reporting/">Mac OS Build Support thread</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Debian Packages (Ubuntu)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://code.launchpad.net/~gridcoin/+archive/ubuntu/gridcoin-stable">Launchpad built ubuntu releases</a>
-                <ul>
-                    <li>sudo add-apt-repository ppa:gridcoin/gridcoin-stable</li>
-                    <li>sudo apt-get update</li>
-                    <li>sudo apt-get install gridcoinresearch-qt</li>
-                    <li>gridcoinresearch</li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    RPM Packages (Opensuse/Fedora)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://software.opensuse.org/package/gridcoinresearch">OpenSuse/Fedora RPMs</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    AUR (Archlinux)
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://aur.archlinux.org/packages/gridcoinresearch-qt">Archlinux AUR package</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <h5>
-                    Manually compile the Gridcoin client
-                </h5>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="http://wiki.gridcoin.us/Linux_guide">Linux compiling guide</a>
-                <a class="btn btn-round" style="background-color:#4e0097;margin:5px;" href="https://github.com/gridcoin/Gridcoin-Research">Gridcoin GitHub Repo</a>
-                <h4>
-                    Initial client setup
-                </h4>
-                    <p>
-                        Once the client launches, a prompt will request an email address - do not enter an email address, rather click the 'Cancel' button and proceed past any additional prompts.
-                    </p>
-            </div>
-        </div>
+<%= partial "/layouts/partials/wallet_install" %>
 
-    </div>
-</section>
-
-<section  data-background-color="black" style="padding-top:0px;padding-bottom: 25px;">
-    <div class="container" style="overflow:hidden;">
-
-        <div class='row' style="margin-top:10px;">
+<section class="invest-grc-setup grc-bgcolor" data-background-color="black">
+    <div class="container">
+        <div class="row">
             <!--
-            <div class='col-xs-12 col-sm-12' style="">
+            <div class="col-xs-12 col-sm-12">
                 <h4>
                 </h4>
                 <p>If you're not interested in earning POS rewards, you can use several third party Gridcoin wallets to hold your GRC off centralized exchanges.</p>
@@ -140,42 +72,42 @@ description: "Step 1 of the 'Investor mode' guide; Informing the user how to syn
                 <a class="btn btn-simple btn-default" href="https://bitshares.org/">Bitshares-Light</a>
             </div>
           -->
-            <div class="col-xs-12 col-sm-12 col-md-12" style="padding-top: 15px;">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                 <h5>
                     Third party multi-wallets for Gridcoin
                 </h5>
-                <a class="btn btn-simple btn-default" href="https://holytransaction.com/">HolyTransaction</a>
-                <a class="btn btn-simple btn-default" href="https://coinomi.com/">Coinomi</a>
+                <a class="btn btn-round grcbtn" href="https://holytransaction.com/">HolyTransaction</a>
+                <a class="btn btn-round grcbtn" href="https://coinomi.com/">Coinomi</a>
             </div>
         </div>
 
     </div>
 </section>
 
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:30px; margin-top: 0px;">
-    <div class="container" style="overflow:hidden; margin-top:20px; border: 2px dotted #40413c;">
-        <div class="row" style="text-align:center;">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #303030; padding-bottom: 5px;">
-                <h5 style="font-weight: bold;">Step 1</h5>
-                <hr style="border-color: #40413c;" />
+<section class="guide-menu-bot grc-bgcolor" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 1</h5>
+                <hr />
                 <a href="/Guides/investor-gridcoin-setup.htm">
                     <button class="btn btn-success" id="Guide-Button">
                     Setup Gridcoin Research Client
                     </button>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #2d2d2d;">
-                <h5 style="font-weight: bold;">Step 2</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 2</h5>
+                <hr />
                 <a href="/Guides/investor-acquire-grc.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                     Sync client &amp; Acquire Gridcoin
                     </button>
                 </a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="background-color: #303030;">
-                <h5 style="font-weight: bold;">Step 3</h5>
-                <hr style="border-color: #40413c;" />
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h5>Step 3</h5>
+                <hr />
                 <a href="/Guides/investor-earn-grc.htm">
                     <button class="btn btn-simple" id="Guide-Button">
                     Earn Gridcoin via POS
