@@ -57,7 +57,7 @@ set :partials_dir, 'partials'
 
 set :layout, 'layout'
 
-activate: livereload
+activate :livereload
 # Build-specific configuration
 configure :build do
   
