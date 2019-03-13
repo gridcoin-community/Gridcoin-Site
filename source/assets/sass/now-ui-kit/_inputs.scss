@@ -1,11 +1,11 @@
-@include form-control-placeholder($medium-gray, 1);
+@include form-control-placeholder($default-color, .8);
 
 .form-control {
     background-color: $transparent-bg;
     border: 1px solid $light-gray;
     border-radius: $btn-round-radius;
     color: $black-color;
-    line-height: 1em;
+    line-height: normal;
     font-size: $font-size-small;
     @include transition-input-focus-color();
     @include box-shadow(none);
@@ -20,8 +20,8 @@
         outline: 0 !important;
         color: $black-color;
 
-        & + .input-group-addon,
-        & ~ .input-group-addon{
+        & + .input-group-text,
+        & ~ .input-group-text{
             border: 1px solid $primary-color;
             border-left: none;
             background-color: $transparent-bg;
@@ -35,6 +35,11 @@
         @include box-shadow(none);
     }
 
+    .has-success &:focus{
+        border-color: lighten($success-color, 5%);
+    }
+
+
     .has-danger &,
     .has-success &{
         &.form-control-success,
@@ -44,12 +49,12 @@
     }
 
     .has-danger &{
-        background-color: lighten($danger-color, 30%);
         border-color: lighten($danger-color, 30%);
         color: $danger-color;
+        background-color: rgba(222,222,222, .1);
 
         &:focus{
-            background-color: $opacity-gray-3;
+            background-color: $white-color;
         }
     }
 
@@ -68,9 +73,9 @@
         border-bottom-color: transparent;
     }
 
-    & + .input-group-addon{
-        background-color: $white-bg;
-    }
+    // & + .input-group-text{
+    //     background-color: $white-bg;
+    // }
 }
 
 .has-success,
@@ -80,7 +85,7 @@
         content: "\ea22";
         display: inline-block;
         position: absolute;
-        right: 35px;
+        right: 20px;
         top: 12px;
         color: $success-color;
         font-size: 11px;
@@ -104,10 +109,10 @@
 @include input-lg-padding($padding-large-vertical, $padding-input-horizontal);
 @include input-base-padding($padding-input-vertical, $padding-input-horizontal);
 
-.form-group.form-group-no-border,
-.input-group.form-group-no-border{
+.form-group.no-border,
+.input-group.no-border{
     .form-control,
-    .form-control + .input-group-addon{
+    .form-control + .input-group-text{
         background-color: $opacity-gray-3;
         border: medium none;
         &:focus,
@@ -120,15 +125,25 @@
 
     .form-control{
         &:focus{
-            & + .input-group-addon{
+            & + .input-group-text{
                 background-color: $opacity-gray-5;
             }
         }
     }
+    .input-group-prepend{
+      .input-group-text{
+          background-color: $opacity-gray-3;
+          border: none;
+          border-left: transparent !important;
+      }
+    }
 
-    .input-group-addon{
-        background-color: $opacity-gray-3;
-        border: none;
+    &.input-group-focus{
+        &.no-border{
+            .input-group-text{
+                background-color: $opacity-gray-5;
+            }
+        }
     }
 }
 
@@ -143,14 +158,18 @@
     }
 }
 
-.input-group-addon {
+.input-group-text {
     background-color: $white-bg;
     border: 1px solid $light-gray;
     border-radius: $btn-round-radius;
     color: $dark-background;
-    padding: $padding-base-vertical - 1 0 $padding-base-vertical - 1 $padding-base-horizontal - 1;
 
     @include transition-input-focus-color();
+
+    .input-group-focus &{
+      background-color: $white-bg;
+      border-color: $primary-color;
+    }
 
     .has-success &,
     .has-danger &{
@@ -168,38 +187,60 @@
         @include input-size($padding-base-vertical - 1, $padding-base-horizontal);
         padding-left: 18px;
     }
-}
 
-.input-group-focus{
-    .input-group-addon{
-        background-color: $white-bg;
-        border-color: $primary-color;
-    }
-
-    &.form-group-no-border{
-        .input-group-addon{
-            background-color: $opacity-gray-5;
-        }
+    i{
+        width: 17px;
     }
 }
 
 .input-group,
 .form-group{
     margin-bottom: 10px;
+    position: relative;
 }
 .input-group[disabled]{
-    .input-group-addon{
+    .input-group-text{
         background-color: $light-gray;
     }
 }
-.input-group .form-control:first-child,
-.input-group-addon:first-child,
+
+.input-group,
+.form-group{
+  .input-group-prepend{
+    margin-right: 0;
+
+    .input-group-text {
+      border-left: 1px solid #E3E3E3;
+    }
+  }
+  .input-group-append .input-group-text {
+    border-right: 1px solid #E3E3E3;
+    padding: 10px 18px 10px 0;
+  }
+
+  &.input-group-focus {
+    .input-group-prepend .input-group-text {
+      border-left: 1px solid #f96332;
+    }
+    .input-group-append .input-group-text {
+      border-right: 1px solid #f96332;
+    }
+    &.no-border{
+      .input-group-prepend .input-group-text{
+        border-left: transparent;
+      }
+    }
+  }
+}
+
+.input-group .form-control:first-of-type,
+.input-group-text:first-child,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
     border-right: 0 none;
 }
-.input-group .form-control:last-child,
-.input-group-addon:last-child,
+.input-group .form-control:last-of-type,
+.input-group-text:last-child,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child) {
     border-left: 0 none;
@@ -223,6 +264,7 @@
 }
 textarea.form-control{
     max-width: 100%;
+    max-height: 80px;
     padding: 10px 10px 0 0;
     resize: none;
     border: none;
@@ -242,7 +284,31 @@ textarea.form-control{
 .has-danger{
 
     &.form-group .form-control,
-    &.form-group.form-group-no-border .form-control{
+    &.form-group.no-border .form-control{
         padding-right: $padding-input-horizontal + 21;
     }
+}
+
+.form.form-newsletter .form-group{
+    float: left;
+    width: 78%;
+    margin-right: 2%;
+    margin-top: 9px;
+}
+
+.input-group .input-group-btn{
+    padding: 0 12px;
+}
+
+// Input files - hide actual input - requires specific markup in the sample.
+.form-group input[type=file] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
 }
