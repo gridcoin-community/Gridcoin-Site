@@ -35,25 +35,8 @@ body {
     font-weight: bold;
 }
 /*_Header.erb*/
-.navbar {
-    margin-top: -20px;
+#navheader {
     background-color: #7E11dE /*#9013FE is too light, #360166 is too dark, so we go in between-ish*/
-}
-.navbar button {
-    background-color: #360166;
-    font-weight: bold;
-}
-.navbar > div{
-    padding-top: 20px;
-}
-.navbar > .container > .row > div:nth-child(1) {
-    margin-top: 5px;
-}
-.navbar > .container > .row > div:nth-child(2) {
-    margin-top: 13px;
-}
-.navbar > .container > .row > div:nth-child(3) {
-    margin-top: 23px;
 }
 /*----End _header.erb----*/
 
