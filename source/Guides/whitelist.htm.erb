@@ -7,7 +7,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
         <!--First row of features-->
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-12 col-sm-4">
                     <h5>Whitelist justification</h5>
                     <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
 
@@ -16,7 +16,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                     <p><a href="https://cryptocurrencytalk.com/forum/2436-projects/">Projects subforum</a></p>
                 </div>
 
-                <div class="col-xs-12 col-sm-8">
+                <div class="col-12 col-sm-8">
                     <h5>Please note:</h5>
                     <p>You will only be rewarded Gridcoin for whitelisted BOINC projects.</p>
                     <p>Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded Gridcoin.</p>
@@ -29,7 +29,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
         <!--/Second row of features-->
         <div class="container">
             <div class="row">
-                <div class='col-xs-12 col-sm-12 text-center'>
+                <div class='col-12 col-sm-12 text-center'>
                     <h3>Greylist</h3>
                     <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
                     <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">This Gridcoin greylist monitoring website</a> for daily updates on which projects are added and removed from the Greylist.</p>
@@ -40,12 +40,12 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
         <!--End of GRC Feature Section-->
 </section>
 
-<section class="whitelist-2" data-background-color="black">
+<section class="whitelist-2">
     <!-- BOINC Content -->
     <div class="container">
-        <div class="row">
-            <div class="hidden-md-down col-lg-12">
-                <table class="table table-hover table-condensed table-responsive">
+        <div class="row text-center">
+            <div class="col-12 d-none d-md-block">
+                <table class="table table-sm table-dark table-hover table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>
@@ -71,7 +71,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                   <tbody>
                         <% data.whitelist.projects.each do |project| %>
                             <tr>
                                 <td>
@@ -109,8 +109,8 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 </table>
             </div>
 
-            <div class="hidden-xs-down col-sm-12 hidden-md-up">
-                <table class="table table-hover table-condensed table-responsive">
+            <div class="col-12 d-none d-sm-block d-md-none">
+                <table class="table table-sm table-dark table-hover table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>
@@ -156,8 +156,8 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                 </table>
             </div>
 
-            <div class="col-xs-12 hidden-sm-up">
-                <table class="table table-hover table-responsive">
+            <div class="col-12 d-sm-none">
+                <table class="table table-sm table-dark table-hover table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>
