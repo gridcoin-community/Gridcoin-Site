@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-	<%= partial "/layouts/partials/head" %>
+	{% include _head.htm %}
 	<body class="h-100 d-flex flex-column">
-	<%= partial "/layouts/partials/header" %>
-	<%= yield %>
-	<%= partial "/layouts/partials/footer" %>
+	{% include _header.htm %}
+	{{ content }}
+	{% include _footer.htm %}
 
 	<!--   Core JS Files   -->
 	<script src="/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>

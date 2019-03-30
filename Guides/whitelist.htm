@@ -72,39 +72,39 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         </tr>
                     </thead>
                     <tbody>
-                        <% data.whitelist.projects.each do |project| %>
+                        {% for project in site.data.whitelist.projects %}
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %>><%= project.name %></a>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>
                                 </td>
                                 <td>
-                                    <%= project.goal %>
+                                    {{ project.goal }}
                                 </td>
                                 <td>
-                                    <%= project.sponsor %>
+                                    {{ project.sponsor }}
                                 </td>
                                 <td>
-                                    <% if project.cpu == "yes" %>
+                                    {% if project.cpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                                 <td>
-                                    <% if project.gpu == "yes" %>
+                                    {% if project.gpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                                 <td>
-                                    <a href="<%= project.team %>" title="Gridcoin Team Link">📊</a>
+                                    <a href="{{ project.team }}" title="Gridcoin Team Link">📊</a>
                                 </td>
                                 <td>
-                                    <a href="<%= project.stats %>" title="Project stats">📈</a>
+                                    <a href="{{ project.stats }}" title="Project stats">📈</a>
                                 </td>
                             </tr>
-                        <% end %>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -128,30 +128,30 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         </tr>
                     </thead>
                     <tbody>
-                        <% data.whitelist.projects.each do |project| %>
+                        {% for project in site.data.whitelist.projects %}
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %>><%= project.name %></a>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>
                                 </td>
                                 <td>
-                                    <%= project.sponsor %>
+                                    {{ project.sponsor }}
                                 </td>
                                 <td>
-                                    <% if project.cpu == "yes" %>
+                                    {% if project.cpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                                 <td>
-                                    <% if project.gpu == "yes" %>
+                                    {% if project.gpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                             </tr>
-                        <% end %>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -172,27 +172,27 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         </tr>
                     </thead>
                     <tbody>
-                        <% data.whitelist.projects.each do |project| %>
+                        {% for project in site.data.whitelist.projects %}
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %>><%= project.name %></a>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>
                                 </td>
                                 <td>
-                                    <% if project.cpu == "yes" %>
+                                    {% if project.cpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                                 <td>
-                                    <% if project.gpu == "yes" %>
+                                    {% if project.gpu == "yes" %}
                                       ✔️
-                                    <% else %>
+                                    {% else %}
                                       ❌
-                                    <% end %>
+                                    {% endif %}
                                 </td>
                             </tr>
-                        <% end %>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
