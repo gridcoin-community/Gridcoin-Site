@@ -1,0 +1,40 @@
+---
+title: "Gridcoin - Blog"
+description: "This blog is for official announcements and important community updates."
+---
+
+<section class="blog grc-bgcolor grclink" data-background-color="black">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-4 col-md-4 col-lg-4 text-center">
+                <img src="/assets/img/LOGO/GRCLogoOnly_Purple_White_Solid.png" alt="GRC"/>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 text-center">
+                <h3 class="text-bold">Welcome to the official Gridcoin blog!</h3>
+                <p>
+                    We'll be posting Gridcoin and BOINC related announcements to this blog so as to improve communication across the entire community.
+                </p>
+                <p>
+                    If you wish to publish a blog post, please either submit an <a href="https://github.com/gridcoin-community/Gridcoin-Site/issues/">issue</a> or a pull request on the <a href="https://github.com/gridcoin-community/Gridcoin-Site/pulls">Gridcoin website GitHub repo</a>, including your blog post in the <a href="https://github.com/gridcoin-community/Gridcoin-Site/blob/master/data/blog.yml">blog data file</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content grc-bgcolor grclink" data-background-color="black">
+    <!-- BOINC Content -->
+    <div class="container">
+        <div class="row">
+            {% for post in site.data.blog.posts %}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.content }}</p>
+                    <a href="{{ post.link_primary_url }}">{{ post.link_primary_text }}</a>
+                    <a href="{{ post.link_secondary_url }}">{{ post.link_secondary_text }}</a>
+                    <hr/>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

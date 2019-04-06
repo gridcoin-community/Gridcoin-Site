@@ -1,0 +1,24 @@
+table, th, td {
+    border: 2px solid #434343;
+}
+
+table {
+	background-color:#303030;
+}
+
+tbody {
+	background-color:#3E3D3C;
+}
+
+td a:link, td a:visited, td a:active {
+	color: #FFFFFF !important;
+}
+
+td a:hover {
+	color: #93aa4f !important;
+}
+
+th {
+	color: #FFFFFF;
+	border-bottom-color: #434343 !important;
+}
