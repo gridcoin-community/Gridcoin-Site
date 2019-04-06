@@ -1,18 +1,12 @@
 # Gridcoin-Site
 Open source Gridcoin website
 
-Uses the Middleman static site generator.
-https://middlemanapp.com/
+Uses the Jekyll Site builder
+https://jekyllrb.com
 
-## Xubuntu guide:
+For installation of Jekyll please follow https://jekyllrb.com/docs/installation/ and pick your OS Guide.
 
-sudo apt-get install ruby-dev
-
-sudo apt-get install nodejs
-
-sudo apt-get install build-essential
-
-sudo gem install middleman
+## Ubuntu Linux guide:
 
 sudo apt-get install git
 
@@ -20,15 +14,11 @@ git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
 cd Gridcoin-Site
 
-bundle install
-
-### For building the website:
-
-bundle exec middleman build
+bundle install 
 
 ### For running the development web server:
 
-bundle exec middleman server
+bundle exec jekyll serve
 
 ## Interested in contributing towards the whitelist or the blog?
 
