@@ -16,6 +16,19 @@ cd Gridcoin-Site
 
 bundle install 
 
+## Windows guide
+Install Git for windows, https://git-scm.com/downloads
+
+Use Git GUI to clone gridcoin Repo
+--OR--
+Go to the location you store Git Repos and Rightclick -> Gitbash here
+git clone https://github.com/gridcoin-community/Gridcoin-Site.git
+
+Go to Gridcoin-Site folder (or whatever you specified whem pulling the repo)
+Shift+RightClick -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
+
+bundle install 
+
 ### For running the development web server:
 
 bundle exec jekyll serve

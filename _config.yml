@@ -21,6 +21,8 @@ destination: build
 sass:
   sass_dir: assets/sass
 
+exclude: ["README.md", "LICENSE"]
+
 #
 # Front Matter Defaults
 #
@@ -30,5 +32,4 @@ defaults:
     scope:
       path: ""
     values:
-      layout: layout
-
+      layout: default
