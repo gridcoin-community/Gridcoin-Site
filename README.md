@@ -3,31 +3,35 @@ Open source Gridcoin website
 
 Uses the Jekyll Site builder
 https://jekyllrb.com
+## Install Jekyll
 
 For installation of Jekyll please follow https://jekyllrb.com/docs/installation/ and pick your OS Guide.
 
-## Ubuntu Linux guide:
+# Build guides
+## Ubuntu Linux guide
 
-sudo apt-get install git
+1. sudo apt-get install git
 
-git clone https://github.com/gridcoin-community/Gridcoin-Site.git
+2. git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
-cd Gridcoin-Site
+3. cd Gridcoin-Site
 
-bundle install 
+4. bundle install 
 
 ## Windows guide
-Install Git for windows, https://git-scm.com/downloads
+1. Install Git for windows, https://git-scm.com/downloads
 
-Use Git GUI to clone gridcoin Repo
+2. Use Git GUI to clone gridcoin Repo
+
 --OR--
+
 Go to the location you store Git Repos and Rightclick -> Gitbash here
 git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
-Go to Gridcoin-Site folder (or whatever you specified whem pulling the repo)
+3. Go to Gridcoin-Site folder (or whatever you specified whem pulling the repo)
 Shift+RightClick -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
 
-bundle install 
+4. bundle install 
 
 ### For running the development web server:
 
