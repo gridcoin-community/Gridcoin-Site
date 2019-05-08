@@ -23,13 +23,11 @@ For installation of Jekyll please follow https://jekyllrb.com/docs/installation/
 
 2. Use Git GUI to clone gridcoin Repo
 
---OR--
+  --OR--
 
-Go to the location you store Git Repos and Rightclick -> Gitbash here
-git clone https://github.com/gridcoin-community/Gridcoin-Site.git
+  Go to the location you store Git Repos and Rightclick -> Gitbash here git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
-3. Go to Gridcoin-Site folder (or whatever you specified whem pulling the repo)
-Shift+RightClick -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
+3. Go to Gridcoin-Site folder (or whatever you specified whem pulling the repo) Shift+RightClick -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
 
 4. bundle install 
 
