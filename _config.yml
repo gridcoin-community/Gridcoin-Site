@@ -15,6 +15,7 @@ license_url: https://opensource.org/licenses/MIT
 #
 # Build settings
 #
+exclude: [README.md,LICENSE,"Reference Libraries","Old Data",Gemfile,Gemfile.lock]
 
 destination: build
 
