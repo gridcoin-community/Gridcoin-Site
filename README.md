@@ -37,4 +37,4 @@ bundle exec jekyll serve
 
 ## Interested in contributing towards the whitelist or the blog?
 
-Head on over to the [data subfolder](https://github.com/gridcoin-community/Gridcoin-Site/tree/master/data) to get more info.
+Head on over to the [data subfolder](_data/) to get more info.
