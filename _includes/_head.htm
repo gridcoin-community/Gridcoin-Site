@@ -4,9 +4,9 @@
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 
 	<!-- SEO Meta tags -->
-	<title><%= current_page.data.title %></title>
+	<title>{{ page.title | escape }}</title>
 	<meta name="author" content="https://github.com/grctest/Gridcoin-Site/graphs/contributors">
-	<meta name="description" content="<%= current_page.data.description %>">
+	<meta name="description" content="{{ page.description | escape }}">
 
 	<!--     Fonts and icons     -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />

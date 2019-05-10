@@ -1,35 +1,40 @@
 # Gridcoin-Site
 Open source Gridcoin website
 
-Uses the Middleman static site generator.
-https://middlemanapp.com/
+Uses the Jekyll Site builder
+https://jekyllrb.com
+## Install Jekyll
 
-## Xubuntu guide:
+For installation of Jekyll please follow https://jekyllrb.com/docs/installation/ and pick your OS Guide.
 
-sudo apt-get install ruby-dev
+# Build guides
+## Ubuntu Linux guide
 
-sudo apt-get install nodejs
+1. sudo apt-get install git
 
-sudo apt-get install build-essential
+2. git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
-sudo gem install middleman
+3. cd Gridcoin-Site
 
-sudo apt-get install git
+4. bundle install 
 
-git clone https://github.com/gridcoin-community/Gridcoin-Site.git
+## Windows guide
+1. Install Git for windows, https://git-scm.com/downloads
 
-cd Gridcoin-Site
+2. Use Git GUI to clone gridcoin Repo
 
-bundle install
+  --OR--
 
-### For building the website:
+2. Go to the location you store Git Repos and Rightclick -> Gitbash here git clone https://github.com/gridcoin-community/Gridcoin-Site.git
 
-bundle exec middleman build
+3. Go to Gridcoin-Site folder (or whatever you specified when pulling the repo) Shift+RightClick -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
+
+4. bundle install 
 
 ### For running the development web server:
 
-bundle exec middleman server
+bundle exec jekyll serve
 
 ## Interested in contributing towards the whitelist or the blog?
 
-Head on over to the [data subfolder](https://github.com/gridcoin-community/Gridcoin-Site/tree/master/data) to get more info.
+Head on over to the [data subfolder](_data/) to get more info.
