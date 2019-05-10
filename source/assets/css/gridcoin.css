@@ -1,0 +1,340 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: #1A2632;
+}
+.grc-bgcolor{
+    background-color: #1A2632;
+}
+.grcbtn {
+    background-color: #360166;
+    color: white;
+    margin: 5px;
+}
+.grcbtn:hover,.grcbtn:focus,.grcbtn:active,
+.grcbtn.active, .grcbtn:focus:active, .grcbtn:hover:active,
+.grcbtn.active:focus, .grcbtn.active:hover, .open > .grcbtn.dropdown-toggle,
+.open > .grcbtn.dropdown-toggle:focus, .open > .grcbtn.dropdown-toggle:hover {
+    background-color: #9013FE;
+}
+
+.grclogoimg {
+    width: 200px;
+    padding-top: 50px;
+}
+.grclogoimg-pt25 {
+    width: 200px;
+    padding-top: 25px;
+}
+.grclink a {
+    color: #9013FE;
+}
+.text-bold {
+    font-weight: bold;
+}
+/*_Header.erb*/
+.navbar {
+    margin-top: -20px;
+    background-color: #7E11dE /*#9013FE is too light, #360166 is too dark, so we go in between-ish*/
+}
+.navbar button {
+    background-color: #360166;
+    font-weight: bold;
+}
+.navbar > div{
+    padding-top: 20px;
+}
+.navbar > .container > .row > div:nth-child(1) {
+    margin-top: 5px;
+}
+.navbar > .container > .row > div:nth-child(2) {
+    margin-top: 13px;
+}
+.navbar > .container > .row > div:nth-child(3) {
+    margin-top: 23px;
+}
+/*----End _header.erb----*/
+
+/*_Footer.erb*/
+.gridcoin-footer {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    background-image:linear-gradient(#360166,#9013FE);
+}
+.gridcoin-footer a {
+    color: white;
+}
+.gridcoin-footer h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.gridcoin-footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+/*----End _footer.erb----*/
+
+/*Acqure-details.erb*/
+.acquire-details {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.acquire-details > div div:nth-child(2) ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.acquire-details > div div:nth-child(2) li {
+    padding-bottom: 15px;
+}
+/*----End Acquire-Details.erb----*/
+
+/*Aquire.erb*/
+.acquire-grc-top {
+    background-color: #1A2632;
+}
+.acquire-grc-top div>ul {
+    list-style-type: none;
+}
+.acquire-grc-top li {
+    padding-bottom: 10px;
+}
+.acquire-grc-bot div>ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+/*----End Aquire.erb----*/
+
+/*index.htm*/
+.intro {
+    margin-top: -20px;
+    padding-top: 150px;
+    padding-bottom: 65px;
+    background-image:linear-gradient(#9013FE,#360166);
+}
+.intro img {
+    padding-top: 15px;
+}
+.what-gridcoin {
+    padding-bottom: 15px;
+}
+.what-gridcoin > div > div {
+    padding-top: 75px;
+}
+.what-gridcoin > div > div > div {
+    margin-bottom: 5px;
+}
+
+.boinc {
+    padding-top: 25px;
+}
+.downloads {
+    padding-bottom: 50px;
+}
+.downloads div div:first-of-type div {
+    width:100%
+}
+.downloads div div:first-of-type p {
+    color: #2ac940;
+    font-weight: bold;
+}
+/*----End index.htm----*/
+
+/*Blog.htm*/
+.blog {
+    padding-bottom: 15px;
+    padding-top: 130px;
+}
+.blog img{
+    width: 200px;
+}
+.blog > div > div div:last-of-type {
+    margin-bottom: 5px;
+}
+.blog > div > div div:last-of-type p{
+    margin-bottom: 10px;
+}
+.blog-content {
+    padding-bottom: 50px;
+}
+/*----End Blog.htm----*/
+
+/*Contact.htm*/
+.contact {
+    padding-bottom: 20px;
+    padding-top: 140px;
+}
+.contact .row div:nth-child(1) {
+    padding-top: 5vh; 
+}
+.contact .row div:nth-child(3) {
+    padding-top: 30px; 
+}
+/*----End Contact.htm----*/
+
+/*Boinc_1a.erb*/
+.boinc-a {
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+.boinc-a .container div:nth-child(2) {
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+.boinc-a .container div:nth-child(3) {
+    margin-top: 10px;
+}
+/*----End boinc_1a.erb----*/
+
+/*Boinc_1b.erb*/
+.boinc-b {
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+.boinc-b .container div:nth-child(2) {
+    margin-top: 10px;
+}
+.boinc-b .container div:nth-child(2) div>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.boinc-b .container div:nth-child(2) li {
+    text-align: left;
+    margin-bottom: 10px;
+}
+/*----End boinc_1b.erb----*/
+
+/*Boinc_1c.erb*/
+.boinc-c {
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+/*----End boinc_1c.erb----*/
+/*Gridcoin-install.erb*/
+.grc-inst-sec-2 .row {
+    padding-top: 30px;
+}
+/*----End gridcoin instal.erb----*/
+/*whitelist.erb*/
+.whitelist {
+    padding-top: 140px;
+    padding-bottom: 5px;
+}
+.whitelist h5 {
+    font-weight: bold;
+}
+.whitelist-2 {
+    background-color: #1A2632;
+}
+.whitelist-2 a {
+    font-weight: bold;
+}
+/*----end whitelist.erb----*/
+/*terminology.htm*/
+.terminology-top {
+    padding-top: 140px;
+}
+.terminology-content {
+    padding-top: 10px;
+}
+.terminology-top .row > div {
+    width: 100%
+}
+/*end terminology.htm*/
+/*security.erb*/
+.security {
+    padding-top: 140px;
+}
+/*end security.erb*/
+/*Guide pages*/
+.guide-menu-top{
+    padding-top: 120px;
+}
+.guide-menu-top .row {
+    text-align: center;
+}
+.guide-menu-top .row div {
+    padding-bottom: 10px;
+    border: 2px dotted white;
+}
+.guide-menu-top h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.guide-menu-top hr {
+    border-color: white;
+}
+.guide-menu-bot {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.guide-menu-bot .row {
+    text-align: center;
+}
+.guide-menu-bot .row div {
+    padding-bottom: 10px;
+    border: 2px dotted white;
+}
+.guide-menu-bot h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.guide-menu-bot hr {
+    border-color: white;
+}
+
+/*Earn-GRC.htm*/
+.earnGRC {
+    padding-bottom: 25px;
+}
+.earnGRC div>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.earnGRC li {
+    padding-top: 10px;
+}
+/*----End Earn-GRC.htm----*/
+
+/*investerEarn-GRC.htm*/
+.invester-earnGRC div>ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.invester-earnGRC li {
+    padding-top: 10px;
+}
+/*----End investerEarn-GRC.htm----*/
+
+/*invester-GRC-setup.htm*/
+.invest-grc-setup {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+/*----End invester-grc-setup.htm----*/
+
+.grc-misc {
+    padding-top: 140px;
+}.grc-misc-content {
+    padding-bottom: 15px;
+}
+.grc-ref {
+    padding-top: 140px;
+}
+/*div.dropdown a {
+    text-decoration:none;
+  }
+  
+  div.dropdown a.dropdown-header {
+    color:black !important;
+  }
+  
+  div.footer_placeholder a {
+    text-decoration:none;
+    font-weight:normal;
+  }
+  */

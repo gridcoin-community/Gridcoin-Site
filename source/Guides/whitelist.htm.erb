@@ -2,10 +2,10 @@
 title: "Gridcoin - Project Whitelist"
 description: "The Gridcoin whitelist is a list of community-approved BOINC projects which are applicable for earning Gridcoin."
 ---
-<section  data-background-color="black" style="padding-bottom: 5px; padding-top:150px; margin-top: 0px;">
+<section class="whitelist grc-bgcolor grclink" data-background-color="black">
         <!--Start of GRC Feature section-->
         <!--First row of features-->
-        <div class="container" style="overflow:hidden;">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-4">
                     <h5>Whitelist justification</h5>
@@ -27,9 +27,9 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
             </div>
         </div>
         <!--/Second row of features-->
-        <div class="container" style="overflow:hidden">
-            <div class="row" style="margin-top:20px;">
-                <div class='col-xs-12 col-sm-12 text-center' style="">
+        <div class="container">
+            <div class="row">
+                <div class='col-xs-12 col-sm-12 text-center'>
                     <h3>Greylist</h3>
                     <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
                     <p>Please see <a href="https://gridcoin.ddns.net/pages/project-list.php">This Gridcoin greylist monitoring website</a> for daily updates on which projects are added and removed from the Greylist.</p>
@@ -40,9 +40,9 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
         <!--End of GRC Feature Section-->
 </section>
 
-<section data-background-color="black" style="overflow-x: hidden">
+<section class="whitelist-2" data-background-color="black">
     <!-- BOINC Content -->
-    <div class="container" style="margin-top:20px;">
+    <div class="container">
         <div class="row">
             <div class="hidden-md-down col-lg-12">
                 <table class="table table-hover table-condensed table-responsive">
@@ -75,7 +75,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         <% data.whitelist.projects.each do |project| %>
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                    <a href=<%= project.link %>><%= project.name %></a>
                                 </td>
                                 <td>
                                     <%= project.goal %>
@@ -131,7 +131,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         <% data.whitelist.projects.each do |project| %>
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                    <a href=<%= project.link %>><%= project.name %></a>
                                 </td>
                                 <td>
                                     <%= project.sponsor %>
@@ -175,7 +175,7 @@ description: "The Gridcoin whitelist is a list of community-approved BOINC proje
                         <% data.whitelist.projects.each do |project| %>
                             <tr>
                                 <td>
-                                    <a href=<%= project.link %> style="font-weight:bold;"><%= project.name %></a>
+                                    <a href=<%= project.link %>><%= project.name %></a>
                                 </td>
                                 <td>
                                     <% if project.cpu == "yes" %>
