@@ -26,15 +26,15 @@ description: "This blog is for official announcements and important community up
     <!-- BOINC Content -->
     <div class="container">
         <div class="row">
-            <% data.blog.posts.each do |post| %>
+            {% for post in site.data.blog.posts %}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h4><%= post.title %></h4>
-                    <p><%= post.content %></p>
-                    <a href="<%= post.link_primary_url %>"><%= post.link_primary_text %></a>
-                    <a href="<%= post.link_secondary_url %>"><%= post.link_secondary_text %></a>
+                    <h4>{{ post.title }}</h4>
+                    <p>{{ post.content }}</p>
+                    <a href="{{ post.link_primary_url }}">{{ post.link_primary_text }}</a>
+                    <a href="{{ post.link_secondary_url }}">{{ post.link_secondary_text }}</a>
                     <hr/>
                 </div>
-            <% end %>
+            {% endfor %}
         </div>
     </div>
 </section>
