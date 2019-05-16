@@ -28,24 +28,24 @@ description: ""
               <a name="wallet_commands"></a>
               <h4><b>Wallet commands</b></h4>
             </div>
-            <% data.wallet_commands.commands.each do |command| %>
+            {% for command in site.data.wallet_commands.commands %}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
-                      <b><%= command.command %></b>
-                      <% if command.parameters != "" %>
-                        <%= command.parameters %>
-                      <% end %>
+                      <b>{{ command.command }}</b>
+                      {% if command.parameters != "" %}
+                        {{ command.parameters }}
+                      {% endif %}
                     </h5>
-                    <p><%= command.description %></p>
+                    <p>{{ command.description }}</p>
                     <p>
-                      <% if command.unlock == "Y" %>
+                      {% if command.unlock == "Y" %}
                         Requires unlocked wallet
-                      <% else %>
+                      {% else %}
                         Doesn't require an unlocked wallet
-                      <% end %>
+                      {% endif %}
                     </p>
                 </div>
-            <% end %>
+            {% endfor %}
         </div>
 
         <div class="row" style="padding-top:50px;border-bottom: 1px dashed grey;">
@@ -53,24 +53,24 @@ description: ""
             <a name="mining_commands"></a>
             <h4><b>Mining commands</b></h4>
           </div>
-            <% data.mining_commands.commands.each do |command| %>
+            {% for command in site.data.mining_commands.commands %}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
-                      <b><%= command.command %></b>
-                      <% if command.parameters != "" %>
-                        <%= command.parameters %>
-                      <% end %>
+                      <b>{{ command.command }}</b>
+                      {% if command.parameters != "" %}
+                        {{ command.parameters }}
+                      {% endif %}
                     </h5>
-                    <p><%= command.description %></p>
+                    <p>{{ command.description }}</p>
                     <p>
-                      <% if command.unlock == "Y" %>
+                      {% if command.unlock == "Y" %}
                         Requires unlocked wallet
-                      <% else %>
+                      {% else %}
                         Wallet unlock unneccessarry
-                      <% end %>
+                      {% endif %}
                     </p>
                 </div>
-            <% end %>
+            {% endfor %}
         </div>
 
         <div class="row" style="padding-top:50px;">
@@ -78,24 +78,24 @@ description: ""
             <a name="network_commands"></a>
             <h4><b>Network commands</b></h4>
           </div>
-            <% data.network_commands.commands.each do |command| %>
+            {% for command in site.data.network_commands.commands %}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
-                      <b><%= command.command %></b>
-                      <% if command.parameters != "" %>
-                        <%= command.parameters %>
-                      <% end %>
+                      <b>{{ command.command }}</b>
+                      {% if command.parameters != "" %}
+                        {{ command.parameters }}
+                      {% endif %}
                     </h5>
-                    <p><%= command.description %></p>
+                    <p>{{ command.description }}</p>
                     <p>
-                      <% if command.unlock == "Y" %>
+                      {% if command.unlock == "Y" %}
                         Requires unlocked wallet
-                      <% else %>
+                      {% else %}
                         Wallet unlock unneccessarry
-                      <% end %>
+                      {% endif %}
                     </p>
                 </div>
-            <% end %>
+            {% endfor %}
         </div>
       </div>
   </section>
