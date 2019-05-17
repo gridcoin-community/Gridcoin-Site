@@ -92,18 +92,17 @@ body {
 /*----End Acquire-Details.erb----*/
 
 /*Aquire.erb*/
-.acquire-grc-top {
+.acquire-grc {
     background-color: #1A2632;
 }
-.acquire-grc-top div>ul {
+.acquire-grc div>ul {
     list-style-type: none;
 }
-.acquire-grc-top li {
+.acquire-grc ul>li{
+	padding-top: 10px;
+}
+.acquire-grc li {
     padding-bottom: 10px;
-}
-.acquire-grc-bot div>ul {
-    list-style-type: none;
-    padding-left: 5px;
 }
 /*----End Aquire.erb----*/
 
