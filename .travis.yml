@@ -1,0 +1,10 @@
+language: ruby
+sudo: false
+cache: bundler
+
+rvm:
+  - 2.5
+
+install: bundle install 
+
+script: bundle exec jekyll build
