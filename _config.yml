@@ -8,7 +8,7 @@ title: Gridcoin
 description: > # this ">" means to ignore newlines until "baseurl:"
   Gridcoin is a cryptocurrency which rewards volunteer distributed computation
   performed on the BOINC platform on top of Proof-of-Stake.
-baseurl: "Gridcoin-Site" # the subpath of your site, e.g. /blog
+baseurl: "/Gridcoin-Site" # the subpath of your site, e.g. /blog
 license: The MIT License
 license_url: https://opensource.org/licenses/MIT
 
