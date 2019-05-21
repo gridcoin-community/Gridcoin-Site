@@ -60,78 +60,78 @@ description: "Step 4 of the solo crunching guide; Instructing users how they can
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
                     <ul>
-						<li>
-							<h5 class="text-center">1) Check Your Projects</h5>
-							<ul>
-								<li>
-									a) Make sure any projects you crunch are on the <a href="../Guides/whitelist.htm">whitelist</a>. If it isn't on it, you will not be rewarded for it
-								</li>
-								<li>
-									b) Check that each project crunched is on team Gridcoin. You will not get rewarded if they are not on the team
-								</li>
-								<li>
-									c) Check that the CPIDs (cross project identifier) are the same across your projects. You can check on each project or check using <a href="https://www.boincstats.com/">boincstats</a>
-									<ul>
-										<li>
-											If you found differing CPIDs, use <a href="https://steemit.com/gridcoin/@dutch/the-definitive-guide-to-fixing-a-split-cpid-gridcoin-s-and-boinc-s-1-problem">this guide</a> 
-										</li>
-									</ul>
-								</li>
-								<li>
-									d) if you just started crunching, you may need to wait around 24 hours for statistics to sync
-								</li>
-							</ul>
-						</li>
-						<li>
-							<h5 class="text-center"> 2) Configure the Wallet </h5>
-							<ul>
-								<li>
-									a) In the wallet, go to the overiew page and check the message in the lower left. Makes sure it doesn't say INVESTOR
-									<ul>
-										<li>
-											If you see INVESTOR, check that you did all steps in Check Your Projects. If you setup BOINC in a non-default path, add it in the config (see <a href="../Guides/gridcoin-install.htm">Step 2</a>)
-										</li>
-										<li>
-											Note: BOINC is needed on the machine running the wallet. It needs to be connected to any project on your account (it can be suspended)
-										</li>
-									</ul>
-								</li>
-								<li>
-									b) Send a beacon
-								<ul>
-									<li>
-										I) Unlock your wallet fully if you've locked it
-									</li>
-									<li>
-										II) Go to the debug tab, then console, and enter "advertisebeacon" without quotes. A transaction should be sent
-									</li>
-									<li>
-										III) After it's been sent, Go to the console and run "beaconreport" without quotes. Check for your CPID. You may need to wait ~24 hours
-									</li>
-									<li>
-										IV) You can now lock your wallet again
-									</li>	
-								</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<h5 class="text-center">3) Running the Wallet to Stake</h5>
-							<ul>
-								<li>
-									a) Unlock the wallet for staking only if locked (is recommended to have it locked for security)
-								</li>
-								<li>
-									b) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards
-								</li>
-								<li>
-									c) Every 6 months, you will need to send a beacon again. Repeat the process shown in Configure the Wallet step b
-								</li>
-								<li>
-									d) Keep the wallet up to date as updates are released
-								</li>
-							</ul>
-						</li>
+                        <li>
+                            <h5 class="text-center">1) Check Your Projects</h5>
+                            <ul>
+                                <li>
+                                    a) Make sure any projects you crunch are on the <a href="../Guides/whitelist.htm">whitelist</a>. If it isn't on it, you will not be rewarded for it
+                                </li>
+                                <li>
+                                    b) Check that each project crunched is on team Gridcoin. You will not get rewarded if they are not on the team
+                                </li>
+                                <li>
+                                    c) Check that the CPIDs (cross project identifier) are the same across your projects. You can check on each project or check using <a href="https://www.boincstats.com/">boincstats</a>
+                                    <ul>
+                                        <li>
+                                            If you found differing CPIDs, use <a href="https://steemit.com/gridcoin/@dutch/the-definitive-guide-to-fixing-a-split-cpid-gridcoin-s-and-boinc-s-1-problem">this guide</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    d) if you just started crunching, you may need to wait around 24 hours for statistics to sync
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-center"> 2) Configure the Wallet </h5>
+                            <ul>
+                                <li>
+                                    a) In the wallet, go to the overiew page and check the message in the lower left. Makes sure it doesn't say INVESTOR
+                                    <ul>
+                                        <li>
+                                            If you see INVESTOR, check that you did all steps in Check Your Projects. If you setup BOINC in a non-default path, add it in the config (see <a href="../Guides/gridcoin-install.htm">Step 2</a>)
+                                        </li>
+                                        <li>
+                                            Note: BOINC is needed on the machine running the wallet. It needs to be connected to any project on your account (it can be suspended)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    b) Send a beacon
+                                <ul>
+                                    <li>
+                                        I) Unlock your wallet fully if you've locked it
+                                    </li>
+                                    <li>
+                                        II) Go to the debug tab, then console, and enter "advertisebeacon" without quotes. A transaction should be sent
+                                    </li>
+                                    <li>
+                                        III) After it's been sent, Go to the console and run "beaconreport" without quotes. Check for your CPID. You may need to wait ~24 hours
+                                    </li>
+                                    <li>
+                                        IV) You can now lock your wallet again
+                                    </li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-center">3) Running the Wallet to Stake</h5>
+                            <ul>
+                                <li>
+                                    a) Unlock the wallet for staking only if locked (is recommended to have it locked for security)
+                                </li>
+                                <li>
+                                    b) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards
+                                </li>
+                                <li>
+                                    c) Every 6 months, you will need to send a beacon again. Repeat the process shown in Configure the Wallet step b
+                                </li>
+                                <li>
+                                    d) Keep the wallet up to date as updates are released
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
