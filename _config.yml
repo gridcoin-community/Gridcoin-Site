@@ -15,7 +15,14 @@ license_url: https://opensource.org/licenses/MIT
 #
 # Build settings
 #
-exclude: [README.md,LICENSE,"Reference Libraries","Old Data",Gemfile,Gemfile.lock]
+exclude:
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Old Data
+  - README.md
+  - Reference Libraries
 
 destination: build
 
