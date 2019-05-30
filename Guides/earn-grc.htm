@@ -49,106 +49,86 @@ description: "Step 4 of the solo crunching guide; Instructing users how they can
         <div class="container">
             <!--Step 1-->
             <div class='row'>
-                <div class='col-xs-12 text-center'>
-                    <h4 class="text-bold">
-                        Earn GRC via DPOR
-                        <a name="DPOR"></a>
+                <div class='col-xs-12 col-sm-12 text-center'>
+                    <h4 class="text-bold text-center">
+                        Steps to Earn GRC via DPOR
                     </h4>
                 </div>
             </div>
             <!--/Step 1-->
             <!--Contibute content-->
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-12">
                     <ul>
                         <li>
-                            <b>Execute the following 5 steps to begin earning DPOR payments:</b>
+                            <h5 class="text-center">1) Check Your Projects</h5>
                             <ul>
                                 <li>
-                                    Verify that each project you're contributing towards has been attached to team Gridcoin &amp; that your projects are in fact <a href="../guides/whitelist.htm">whitelisted</a>. Contributing to projects outside of the whitelist will not give you any reward for those projects.
+                                    a) Make sure any projects you crunch are on the <a href="../Guides/whitelist.htm">whitelist</a>. If it isn't on it, you will not be rewarded for it
                                 </li>
                                 <li>
-                                    Verify that all of your BOINC projects are using the same CPID. If your projects are using multiple CPIDs issues will arise and you'll be unable to proceed!
+                                    b) Check that each project crunched is on team Gridcoin. You will not get rewarded if they are not on the team
+                                </li>
+                                <li>
+                                    c) Check that the CPIDs (cross project identifier) are the same across your projects. You can check on each project or check using <a href="https://www.boincstats.com/">boincstats</a>
                                     <ul>
                                         <li>
-                                            You can locate your CPID directly via the project's site, or via <a href="https://www.boincstats.com">boincstats</a>.
+                                            If you found differing CPIDs, use <a href="https://steemit.com/gridcoin/@dutch/the-definitive-guide-to-fixing-a-split-cpid-gridcoin-s-and-boinc-s-1-problem">this guide</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <b><u>Before proceeding</u>: you must verify that your Gridcoin client has detected your CPID.</b>
+                                    d) if you just started crunching, you may need to wait around 24 hours for statistics to sync
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-center"> 2) Configure the Wallet </h5>
+                            <ul>
+                                <li>
+                                    a) In the wallet, go to the overiew page and check the message in the lower left. Makes sure it doesn't say INVESTOR
                                     <ul>
                                         <li>
-                                            Navigate to the overview page, and verify that your CPID is showing in the bottom left messages section.
+                                            If you see INVESTOR, check that you did all steps in Check Your Projects. If you setup BOINC in a non-default path, add it in the config (see <a href="../Guides/gridcoin-install.htm">Step 2</a>)
                                         </li>
                                         <li>
-                                            If your CPID is not showing, and instead 'INVESTOR' is present, you must troubleshoot what's gone wrong.
-                                            <ul>
-                                                <li>
-                                                    BOINC stats take time to propagate, if you've been contributing towards BOINC for less than 24 hours then you should wait until the next day before proceeding (continue computing BOINC work units!).
-                                                </li>
-                                                <li>
-                                                    Verify your BOINC projects do not have split CPIDs (multiple cpids).
-                                                </li>
-                                                <li>
-                                                    Verify that you're a member of team Gridcoin for all projects.
-                                                </li>
-                                                <li>
-                                                    Did you install BOINC to a <b>non-default</b> location? You'll need to specify this location in the gridcoinresearch.conf file. These instructions are available back in step 2.
-                                                </li>
-                                            </ul>
+                                            Note: BOINC is needed on the machine running the wallet. It needs to be connected to any project on your account (it can be suspended)
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    Register your CPID on the Gridcoin blockchain by advertising a beacon:
-                                    <ul>
-                                        <li>
-                                            Note: A small balance of GRC is required in order to advertise your beacon (a smart transaction) in the DPOR system.
-                                        </li>
-                                        <li>
-                                            Temporarily, fully unlock (not for staking only) your wallet to allow for the beacon transaction.
-                                        </li>
-                                        <li>
-                                            Navigate to the debug console <code>Help | Debug window | Console</code>, enter the command <code>advertisebeacon</code> (Or wait for the beacon to be sent automatically).
-                                            <ul>
-                                                <li>
-                                                    A small outbound smart transaction will be sent from your wallet (this is the beacon).
-                                                </li>
-                                                <li>
-                                                    Once you've confirmed that the outbound smart transaction has been sent, you should lock your wallet.
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    b) Send a beacon
+                                <ul>
+                                    <li>
+                                        I) Unlock your wallet fully if you've locked it
+                                    </li>
+                                    <li>
+                                        II) Go to the debug tab, then console, and enter "advertisebeacon" without quotes. A transaction should be sent
+                                    </li>
+                                    <li>
+                                        III) After it's been sent, Go to the console and run "beaconreport" without quotes. Check for your CPID. You may need to wait ~24 hours
+                                    </li>
+                                    <li>
+                                        IV) You can now lock your wallet again
+                                    </li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5 class="text-center">3) Running the Wallet to Stake</h5>
+                            <ul>
+                                <li>
+                                    a) Unlock the wallet for staking only if locked. It is recommended to have it encrypted for security
                                 </li>
                                 <li>
-                                    Wait until your CPID is included in the next superblock
-                                    <ul>
-                                        <li>
-                                            There is a single superblock created daily to register new users &amp; update user BOINC stats, so it could take up to 24hrs before your CPID is registered fully.
-                                        </li>
-                                        <li>
-                                            Navigate to the debug console <code>Help | Debug window | Console</code>, enter the command <code>beaconreport</code>.
-                                        </li>
-                                        <li>
-                                            In the output, search for your CPID. If not present, wait until the next superblock. When your CPID is present, continue to the next step.
-                                        </li>
-                                        <li>
-                                            If after a several superblocks your CPID is still not present, try advertising your beacon again.
-                                        </li>
-                                    </ul>
+                                    b) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards
                                 </li>
                                 <li>
-                                    Unlock your wallet for staking only, and upon staking a block you'll receive your BOINC and POS earnings.
-                                    <ul>
-                                        <li>
-                                            Bear in mind, that earnings are dependent on both how much you are owed (from BOINC computation completed) and your Gridcoin balance interest. If you have a low balance, you could stake a block (being rewarded POS+POR) only once every few weeks/months (consider using a pool instead).
-                                        </li>
-                                        <li>
-                                            Best practice is to continuously stake 24/7 if possible, since you have an opportunity to stake each block (even if your probability is low) and coin age is not considered within the staking probability calculation.
-                                        </li>
-                                    </ul>
+                                    c) Every 6 months, you will need to send a beacon again. Repeat the process shown in Configure the Wallet step b
+                                </li>
+                                <li>
+                                    d) Keep the wallet up to date as updates are released
                                 </li>
                             </ul>
                         </li>
