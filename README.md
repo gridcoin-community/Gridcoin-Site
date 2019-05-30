@@ -31,6 +31,10 @@ For installation of Jekyll please follow https://jekyllrb.com/docs/installation/
 
 4. bundle install 
 
+### How to Update gems
+
+bundle update github-pages
+
 ### For running the development web server:
 
 bundle exec jekyll serve
