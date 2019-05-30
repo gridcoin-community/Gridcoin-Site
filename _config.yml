@@ -15,6 +15,7 @@ license_url: https://opensource.org/licenses/MIT
 #
 # Build settings
 #
+repository: gridcoin-community/Gridcoin-Site
 exclude:
   - .travis.yml
   - Gemfile
@@ -23,12 +24,16 @@ exclude:
   - Old Data
   - README.md
   - Reference Libraries
+  - CNAME
 
 destination: build
 
 sass:
   sass_dir: assets/sass
 
+gems:
+  - jekyll-sitemap
+  
 #
 # Front Matter Defaults
 #
