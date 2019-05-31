@@ -31,7 +31,7 @@ destination: build
 sass:
   sass_dir: assets/sass
 
-gems:
+plugins:
   - jekyll-sitemap
   
 #

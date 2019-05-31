@@ -33,7 +33,7 @@ For installation of Jekyll please follow https://jekyllrb.com/docs/installation/
 
 ### How to Update gems
 
-bundle update github-pages
+Delete Gemfile.lock and run bundle install
 
 ### For running the development web server:
 
