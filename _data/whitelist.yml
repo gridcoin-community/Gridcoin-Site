@@ -80,7 +80,7 @@ projects:
   team: "https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832"
   stats: "https://gridcoinstats.eu/project/World_Community_Grid"
 - name: "YAFU"
-  link: "http://yafu.myfirewall.org/"
+  link: "http://yafu.myfirewall.org/yafu"
   goal: "Factorize numbers of 70-130 digit length which are needed to bring Aliquot Sequences to a size of 130."
   sponsor: "Private"
   cpu: "yes"
