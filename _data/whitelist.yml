@@ -64,7 +64,7 @@ projects:
   team: "https://gene.disi.unitn.it/test/team_display.php?teamid=61"
   stats: "https://www.gridcoinstats.eu/project/tn-grid"
 - name: "Universe@home"
-  link: "https://www.universeathome.pl/universe/"
+  link: "https://universeathome.pl/universe/"
   goal: "Physics and Astronomy"
   sponsor: "University of Warsaw"
   cpu: "yes"
