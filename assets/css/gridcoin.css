@@ -110,34 +110,8 @@ body {
 .intro {
     margin-top: -20px;
     padding-top: 150px;
-    padding-bottom: 65px;
+    padding-bottom: 25px;
     background-image:linear-gradient(#9013FE,#360166);
-}
-.intro img {
-    padding-top: 15px;
-}
-.what-gridcoin {
-    padding-bottom: 15px;
-}
-.what-gridcoin > div > div {
-    padding-top: 75px;
-}
-.what-gridcoin > div > div > div {
-    margin-bottom: 5px;
-}
-
-.boinc {
-    padding-top: 25px;
-}
-.downloads {
-    padding-bottom: 50px;
-}
-.downloads div div:first-of-type div {
-    width:100%
-}
-.downloads div div:first-of-type p {
-    color: #2ac940;
-    font-weight: bold;
 }
 /*----End index.htm----*/
 
