@@ -23,7 +23,6 @@ exclude:
   - LICENSE
   - Old Data
   - README.md
-  - Reference Libraries
   - CNAME
 
 destination: build
