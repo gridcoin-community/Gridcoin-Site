@@ -19,7 +19,18 @@ body {
 .open > .grcbtn.dropdown-toggle:focus, .open > .grcbtn.dropdown-toggle:hover {
     background-color: #9013FE;
 }
+/* Fixes an issue with scrolling while having a Fixed-top collapsed navbar open.*/
+nav.navbar.fixed-top {
+    max-height: 100%;
+    overflow-y: auto;
+}
 
+@media (min-width: 992px) {
+    nav.navbar.fixed-top {
+        overflow-y: visible;
+    }
+}
+/*End Fix*/
 .grclogoimg {
     width: 200px;
     padding-top: 50px;
