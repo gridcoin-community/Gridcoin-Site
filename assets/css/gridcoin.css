@@ -4,6 +4,7 @@ body {
     margin-top: 0px;
     padding-top: 0px;
     background-color: #1A2632;
+    color: white;
 }
 .grc-bgcolor{
     background-color: #1A2632;
@@ -11,7 +12,6 @@ body {
 .grcbtn {
     background-color: #360166;
     color: white;
-    margin: 5px;
 }
 .grcbtn:hover,.grcbtn:focus,.grcbtn:active,
 .grcbtn.active, .grcbtn:focus:active, .grcbtn:hover:active,
