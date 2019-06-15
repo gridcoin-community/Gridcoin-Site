@@ -311,3 +311,6 @@ body {
     font-weight:normal;
   }
   */
+  .min-h-80{
+      min-height: 80%;
+  }

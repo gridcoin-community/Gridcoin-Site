@@ -6,7 +6,7 @@ description: ""
 <section class="grc-ref grc-bgcolor grclink" data-background-color="black">
     <div class="container">
         <div class='row'>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <h3 class="text-bold">Gridcoin RPC Reference</h3>
                 <p>This page provides the commands available within the Gridcoin-Research client.</p>
                 <ul>
@@ -24,12 +24,12 @@ description: ""
   <section class="grc-bgcolor" data-background-color="black">
       <div class="container">
         <div class="row" style="border-bottom: 1px dashed grey;">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
               <a name="wallet_commands"></a>
               <h4><b>Wallet commands</b></h4>
             </div>
             {% for command in site.data.wallet_commands.commands %}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
                       <b>{{ command.command }}</b>
                       {% if command.parameters != "" %}
@@ -49,12 +49,12 @@ description: ""
         </div>
 
         <div class="row" style="padding-top:50px;border-bottom: 1px dashed grey;">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <a name="mining_commands"></a>
             <h4><b>Mining commands</b></h4>
           </div>
             {% for command in site.data.mining_commands.commands %}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
                       <b>{{ command.command }}</b>
                       {% if command.parameters != "" %}
@@ -74,12 +74,12 @@ description: ""
         </div>
 
         <div class="row" style="padding-top:50px;">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <a name="network_commands"></a>
             <h4><b>Network commands</b></h4>
           </div>
             {% for command in site.data.network_commands.commands %}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <h5>
                       <b>{{ command.command }}</b>
                       {% if command.parameters != "" %}
