@@ -5,14 +5,20 @@ body {
     padding-top: 0px;
     background-color: #1A2632;
     color: white;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
 }
 .grc-bgcolor{
     background-color: #1A2632;
 }
 .grcbtn {
+    border-radius: 50rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin: .25rem !important;
     background-color: #360166;
     color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 .grcbtn:hover,.grcbtn:focus,.grcbtn:active,
 .grcbtn.active, .grcbtn:focus:active, .grcbtn:hover:active,
@@ -26,20 +32,20 @@ body {
 }
 .nav-link.grcbtn {
     font-size: 0.8rem;
-    border-radius: 50rem;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    margin: .25rem !important;
+}
+.dropdown-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: lightgray;
 }
 /* Fixes an issue with scrolling while having a Fixed-top collapsed navbar open.*/
-nav.navbar.fixed-top {
-    max-height: 100%;
-    overflow-y: auto;
+.nav-item .dropdown-menu {
+    max-height: 50vh;
+    overflow-y: auto;   
 }
-
 @media (min-width: 992px) {
-    nav.navbar.fixed-top {
-        overflow-y: visible;
+    .nav-item .dropdown-menu {
+        max-height: 85vh;
     }
 }
 /*End Fix*/
