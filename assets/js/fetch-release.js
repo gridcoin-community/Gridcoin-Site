@@ -11,5 +11,8 @@ function getLatestRelease() {
 }
 
  $(document).ready(function() {
-   getLatestRelease();
+    getLatestRelease();
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip() //Enabled bootstrap tooltips.
+    })
 }); 
