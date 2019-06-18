@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth; /*Added to html for chrome and opera */
+}
 body {
     width: 100%;
     overflow-x: hidden;
@@ -6,6 +9,11 @@ body {
     background-color: #1A2632;
     color: white;
     font-family: "Montserrat", sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 .grc-bgcolor{
     background-color: #1A2632;
@@ -32,6 +40,9 @@ body {
 }
 .nav-link.grcbtn {
     font-size: 0.8rem;
+}
+.navbar-toggler-icon {
+    font-size: 1rem !important;
 }
 .dropdown-header {
     text-transform: uppercase;
@@ -324,5 +335,5 @@ body {
   }
   */
   .min-h-80{
-      min-height: 80%;
+      min-height: 80vh;
   }
