@@ -1,25 +1,65 @@
+html{
+    scroll-behavior: smooth; /*Added to html for chrome and opera */
+}
 body {
     width: 100%;
     overflow-x: hidden;
     margin-top: 0px;
     padding-top: 0px;
     background-color: #1A2632;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 .grc-bgcolor{
     background-color: #1A2632;
 }
 .grcbtn {
+    border-radius: 50rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin: .25rem !important;
     background-color: #360166;
     color: white;
-    margin: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 .grcbtn:hover,.grcbtn:focus,.grcbtn:active,
 .grcbtn.active, .grcbtn:focus:active, .grcbtn:hover:active,
 .grcbtn.active:focus, .grcbtn.active:hover, .open > .grcbtn.dropdown-toggle,
 .open > .grcbtn.dropdown-toggle:focus, .open > .grcbtn.dropdown-toggle:hover {
     background-color: #9013FE;
+    color: white;
 }
-
+.grcbtn:focus, .grcbtn.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.35);
+}
+.nav-link.grcbtn {
+    font-size: 0.8rem;
+}
+.navbar-toggler-icon {
+    font-size: 1rem !important;
+}
+.dropdown-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: lightgray;
+}
+/* Fixes an issue with scrolling while having a Fixed-top collapsed navbar open.*/
+.nav-item .dropdown-menu {
+    max-height: 50vh;
+    overflow-y: auto;   
+}
+@media (min-width: 992px) {
+    .nav-item .dropdown-menu {
+        max-height: 85vh;
+    }
+}
+/*End Fix*/
 .grclogoimg {
     width: 200px;
     padding-top: 50px;
@@ -36,24 +76,7 @@ body {
 }
 /*_Header.erb*/
 .navbar {
-    margin-top: -20px;
     background-color: #7E11dE /*#9013FE is too light, #360166 is too dark, so we go in between-ish*/
-}
-.navbar button {
-    background-color: #360166;
-    font-weight: bold;
-}
-.navbar > div{
-    padding-top: 20px;
-}
-.navbar > .container > .row > div:nth-child(1) {
-    margin-top: 5px;
-}
-.navbar > .container > .row > div:nth-child(2) {
-    margin-top: 13px;
-}
-.navbar > .container > .row > div:nth-child(3) {
-    margin-top: 23px;
 }
 /*----End _header.erb----*/
 
@@ -312,5 +335,5 @@ body {
   }
   */
   .min-h-80{
-      min-height: 80%;
+      min-height: 80vh;
   }
