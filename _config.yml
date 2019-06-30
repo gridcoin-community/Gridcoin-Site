@@ -27,9 +27,6 @@ exclude:
 
 destination: build
 
-sass:
-  sass_dir: assets/sass
-
 plugins:
   - jekyll-sitemap
   
