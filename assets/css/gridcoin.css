@@ -60,6 +60,12 @@ body {
     }
 }
 /*End Fix*/
+/* devteam.htm*/
+.devcard {
+    text-align: center;
+    color: black;
+}
+/* End devteam.htm */
 .grclogoimg {
     width: 200px;
     padding-top: 50px;
