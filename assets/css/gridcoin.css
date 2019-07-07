@@ -15,6 +15,9 @@ body {
         scroll-behavior: auto;
     }
 }
+.list-style-none {
+    list-style-type: none;
+}
 .grc-bgcolor{
     background-color: #1A2632;
 }
@@ -38,6 +41,9 @@ body {
 .grcbtn:focus, .grcbtn.focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.35);
 }
+.nav-pills .nav-link.active {
+    background-color: #360166;
+}
 .nav-link.grcbtn {
     font-size: 0.8rem;
 }
@@ -60,12 +66,6 @@ body {
     }
 }
 /*End Fix*/
-/* devteam.htm*/
-.devcard {
-    text-align: center;
-    color: black;
-}
-/* End devteam.htm */
 .grclogoimg {
     width: 200px;
     padding-top: 50px;
@@ -76,6 +76,7 @@ body {
 }
 .grclink a {
     color: #9013FE;
+    font-weight: bold;
 }
 .text-bold {
     font-weight: bold;
