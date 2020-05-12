@@ -338,3 +338,8 @@ body {
   .min-h-80{
       min-height: 80vh;
   }
+  .docs-container{
+    padding-top: 130px;
+    text-align:left;
+    margin: 0 auto;
+  }
