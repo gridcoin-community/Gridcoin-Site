@@ -338,3 +338,22 @@ body {
   .min-h-80{
       min-height: 80vh;
   }
+  .docs-container{
+    padding-top: 130px;
+    text-align:left;
+    margin: 0 auto;
+  }
+  .docs-container table{
+    border-collapse: collapse;
+    border:2px solid #ffffff;
+ }
+
+ .docs-container th{
+    border:2px solid #ffffff;
+    padding: 10px;
+ }
+
+ .docs-container td{
+    border:1px solid #ffffff;
+    text-align: center;
+ }
