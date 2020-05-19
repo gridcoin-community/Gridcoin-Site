@@ -361,3 +361,7 @@ body {
  .docs-container li{
     line-height: 1.5em;
  }
+
+ .docs-container code{
+    white-space:pre;
+ }
