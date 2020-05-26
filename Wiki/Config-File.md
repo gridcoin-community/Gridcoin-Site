@@ -102,10 +102,10 @@ behavior. See [Testnet](Testnet "wikilink") for more
 The list of addnodes you provide are the nodes that your client will
 attempt to establish outbound connections with. The basic configuration
 file does not include addnodes. A full current list of addnodes can be
-found [List of Addnodes](List-of-Addnodes "wikilink")
+found [List of Addnodes](Addnodes "wikilink")
 
 If your system fails to sync, check your [List of
-Addnodes](List-of-Addnodes "wikilink") against the current list.
+Addnodes](Addnodes "wikilink") against the current list.
 
 Ensure you don't have an addnode=your own ip, or you will end up banning
 yourself (because when the node sends itself the first message, the
