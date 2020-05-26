@@ -19,9 +19,13 @@ macOS:   `/Users/<username>/Library/Application Support/GridcoinResearch`
 Linux:   `/home/<username>/.GridcoinResearch`
 
 ### Mainnet
-| Node | Region |    
-| ---- | ------ |
-| **Online (connected within the last 24 hours)** |
+
+------------
+
+#### Online (connected within the last 24 hours)
+
+| Node | Region |
+|----|-----|
 | addnode-us-central.cycy.me                 | US-central |
 | by.gridcoin.pl                             | Belarus |
 | ch.gridcoin.pl                             | Switzerland |
@@ -41,7 +45,13 @@ Linux:   `/home/<username>/.GridcoinResearch`
 | seeds.gridcoin.ifoggz-network.xyz          | Canada |
 | tarmoilves.eu                              | Estonia |
 | vancouver01.gridcoin.ifoggz-network.xyz    | Canada |
-| **Unreachable (offline or reached max connections)** |
+
+------------
+
+#### Unreachable (offline or reached max connections)
+
+| Node | Region |    
+| ---- | ------ |
 | grcexplorer.neuralminer.io                 | US |
 | gridcoin.asia                              | Unknown |
 | gridcoin.bunnyfeet.fi                      | US-west |
@@ -50,7 +60,13 @@ Linux:   `/home/<username>/.GridcoinResearch`
 | gridcoins.org                              | UK |
 | nl.gridcoin.pl                             | Netherlands |
 | nuad.de                                    | Germany |
-| **Dead (hostname resolution failed):** |               
+
+------------
+
+#### Dead (hostname resolution failed)
+
+| Node | Region |    
+| ---- | ------ |
 | cloud.sparlin.me                           | Unknown |
 | grcmagnitude.com                           | Unknown |
 | grcnode.nems.space                         | US |
@@ -69,9 +85,13 @@ Linux:   `/home/<username>/.GridcoinResearch`
 | toronto01.gridcoin.ifoggz-network.xyz      | Canada |
 
 ### Testnet
+
+------------
+
+#### Online (connected within the last 24 hours)
+
 | Node | Region |    
 | ---- | ------ |
-| **Online (connected within the last 24 hours):** |    
 |addnode-us-central.cycy.me                 | US-central|
 |ec2-3-81-39-58.compute-1.amazonaws.com     | US-east|
 |gridcoin.ddns.net                          | UK|
@@ -79,7 +99,13 @@ Linux:   `/home/<username>/.GridcoinResearch`
 |gridhost.ddns.net                          | UK|
 |tarmoilves.eu                              | Estonia|
 |testnet.dihelix.com                        | US|
-|**Unreachable (offline or reached max connections):** |
+
+------------
+
+#### Unreachable (offline or reached max connections)
+
+| Node | Region |    
+| ---- | ------ |
 |ormgas.com                                 | Sweden|
 |test.grcpool.com                           | US-east|
 |testnet.grcnode.co.uk                      | Netherlands|
