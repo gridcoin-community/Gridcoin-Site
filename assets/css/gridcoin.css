@@ -371,3 +371,9 @@ body {
  .docs-container code{
     white-space:pre;
  }
+
+ .docs-menu{
+     width: 75%;
+     margin: 0px auto 16px auto;
+     /* 16px gives spacing on the bottom on mobile when collapsed*/
+ }
