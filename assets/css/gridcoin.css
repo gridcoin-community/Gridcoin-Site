@@ -338,6 +338,12 @@ body {
   .min-h-80{
       min-height: 80vh;
   }
+  .highlight { 
+      /* applies to markdown rendering on four space indented code block  */
+      background-color: #454d55;
+      color: white;
+      padding-left: 2px;
+   }
   .docs-container{
     padding-top: 130px;
     text-align:left;
@@ -356,4 +362,12 @@ body {
  .docs-container td{
     border:1px solid #ffffff;
     text-align: center;
+ }
+
+ .docs-container li{
+    line-height: 1.5em;
+ }
+
+ .docs-container code{
+    white-space:pre;
  }
