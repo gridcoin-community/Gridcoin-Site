@@ -121,7 +121,7 @@ scientific computations instead of securing the blockchain.
     <https://boincstats.com/en/stats/-1/team/detail/118094994/overview>
   - Gridcoinstats: <https://gridcoinstats.eu/>
   - Nuad.de: <https://www.nuad.de/block-explorer/>
-  - NeuralMiner.io: <https://GRCexplorer.neuralminer.io/>
+  - Gridcoin.network: <https://gridcoin.network/>
   - Netsoft:
     <http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php>
   - SETIBZH: <https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=>
