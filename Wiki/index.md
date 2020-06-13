@@ -51,9 +51,6 @@ work is not only used to measure the subsidy and provide a unique
 alternative to classic work measuring Proof-of-Work schemes, but
 actually complements the security of the Proof-of-Stake system.
 
-  - [Release Info
-    (Github)](https://github.com/gridcoin-community/Gridcoin-Research/releases)
-
 ## Metrics
 
 **[Gridcoin-Classic](Gridcoin-Classic "wikilink") - Retired**
@@ -113,88 +110,72 @@ scientific computations instead of securing the blockchain.
 
 ## Official Resources
 
-  - Website: <https://gridcoin.us/>
-  - BOINCstats:
-    <https://boincstats.com/en/stats/-1/team/detail/118094994/overview>
-  - Gridcoinstats: <https://gridcoinstats.eu/>
-  - Nuad.de: <https://www.nuad.de/block-explorer/>
-  - Gridcoin.network: <https://gridcoin.network/>
-  - Netsoft:
-    <http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php>
-  - SETIBZH: <https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=>
-  - Free-DC Stats:
-    <https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin>
-  - Statseb.fr Forum Badges:
-    <https://signature.statseb.fr/index.py?action=team_badge&teamid=100454>
-  - Project Whitelist and Blacklist:
-    <https://gridcoin.ddns.net/pages/project-list.php>
+  - [Website](https://gridcoin.us/)
+  - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
+  - [Gridcoinstats](https://gridcoinstats.eu/)
+  - [Gridcoin.network](https://gridcoin.network/)
+  - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
+  - [SETIBZH](https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=)
+  - [Free-DC Stats](https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin)
+  - [Statseb.fr Forum Badges](https://signature.statseb.fr/index.py?action=team_badge&teamid=100454)
+  - [Project Whitelist and Blacklist](https://gridcoin.ddns.net/pages/project-list.php)
 
 <!-- end list -->
 
   - Source Code:
-      - Gridcoin-Research:
-        <https://github.com/gridcoin-community/Gridcoin-Research>
-      - Gridcoin-Classic (**retired**):
-        <https://github.com/gridcoin/Gridcoin-master>
+      - [Gridcoin-Research](https://github.com/gridcoin-community/Gridcoin-Research)
+      - [Gridcoin-Classic (**retired**)](https://github.com/gridcoin/Gridcoin-master)
 
 <!-- end list -->
 
   - Various resources:
       - Gridcoin's GitHub community organization:
         <https://github.com/gridcoin-community>
-          - Website Development:
-            <https://github.com/gridcoin-community/Gridcoin-Site>
-          - Gridcoin Tasks:
-            <https://github.com/gridcoin-community/Gridcoin-Tasks>
-          - Marketing images:
-            <https://github.com/gridcoin-community/Gridcoin-Marketing>
-          - Fan Site: <https://gridcoin.science>
-          - Fan Site: <https://gridcoin.io>
+          - [Website Development](https://github.com/gridcoin-community/Gridcoin-Site)
+          - [Gridcoin Tasks](https://github.com/gridcoin-community/Gridcoin-Tasks)
+          - [Marketing images](https://github.com/gridcoin-community/Gridcoin-Marketing)
+          - [Fan Site (Gridcoin Science)](https://gridcoin.science)
 
 <!-- end list -->
 
-  - Images:
-      - Launchpad: <https://launchpad.net/gridcoin>
-      - AUR Qt: <https://aur.archlinux.org/packages/gridcoinresearch-qt>
-      - AUR daemon:
-        <https://aur.archlinux.org/packages/gridcoinresearchd/>
+  - Downloads:
+      - [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases0
+      - [Launchpad](https://launchpad.net/gridcoin)
+      - [AUR Qt](https://aur.archlinux.org/packages/gridcoinresearch-qt)
+      - [AUR daemon](https://aur.archlinux.org/packages/gridcoinresearchd/)
 
 <!-- end list -->
 
   - Exchanges:
-      - Txbit: <https://txbit.io/Trade/GRC/BTC>
-      - SouthXchange: <https://www.southxchange.com/Market/Book/GRC/BTC>
+      - [Txbit](https://txbit.io/Trade/GRC/BTC)
+      - [SouthXchange](https://www.southxchange.com/Market/Book/GRC/BTC)
 
 <!-- end list -->
 
   - Other Places To Trade:
-      - MarketGrid: <https://www.reddit.com/r/MarketGrid/>
-      - Gridcoin-OTC Telegram: <https://t.me/localgridcoins>
-      - Gridcoin-OTC IRC:
-        <https://kiwiirc.com/client/irc.snoonet.org:6697/#gridcoin-otc>
+      - [MarketGrid](https://www.reddit.com/r/MarketGrid/)
+      - [Gridcoin-OTC Telegram](https://t.me/localgridcoins)
+      - [Gridcoin-OTC IRC](https://kiwiirc.com/client/irc.snoonet.org:6697/#gridcoin-otc)
 
 <!-- end list -->
 
   - 3rd-Party wallets:
-      - Coinomi: <https://coinomi.com/>
-      - HolyTransaction: <https://holytransaction.com/>
+      - [Coinomi](https://coinomi.com/)
+      - [HolyTransaction](https://holytransaction.com/)
 
 <!-- end list -->
 
   - Forums:
-      - Cryptocurrencytalk:
-        <https://cryptocurrencytalk.com/forum/464-gridcoin-grc/>
-      - Cryptocurrencytalk macOS:
-        <https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/>
-      - Bitcointalk: <https://bitcointalk.org/index.php?topic=324118.0>
-      - Steemit: <https://steemit.com/created/gridcoin>
-      - Steemit Community: <https://steemit.com/created/hive-161364>
-      - Reddit: <https://reddit.com/r/gridcoin>
-      - Reddit (ru): <https://reddit.com/r/russiangridcoin>
-      - Gridcoin Telegram: <https://t.me/gridcoin>
-      - Discord: <https://discord.me/page/gridcoin>
-      - Slack:
-        <https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTUzMmY0YjdiNzYxYzQ0MDc3MGE1NjQ3Nzg2NWMzZTUzMjAwZjdhMWI1YWUzMDE4YzQyZjVjMjMzOTc1M2RmMmM/>
+      - [Cryptocurrencytalk](https://cryptocurrencytalk.com/forum/464-gridcoin-grc/)
+      - [Cryptocurrencytalk macOS](https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/)
+      - [Bitcointalk](https://bitcointalk.org/index.php?topic=324118.0)
+      - [Steemit](https://steemit.com/created/gridcoin)
+      - [Steemit Community](https://steemit.com/created/hive-161364)
+      - [Reddit](https://reddit.com/r/gridcoin)
+      - [Reddit (ru)](https://reddit.com/r/russiangridcoin)
+      - [Gridcoin Telegram](https://t.me/gridcoin)
+      - [Discord](https://discord.me/page/gridcoin)
+      - [Slack](https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTUzMmY0YjdiNzYxYzQ0MDc3MGE1NjQ3Nzg2NWMzZTUzMjAwZjdhMWI1YWUzMDE4YzQyZjVjMjMzOTc1M2RmMmM/)
       - IRC: #gridcoin (must be registered with NickServ) on Freenode
           or
           <https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin-help>
@@ -202,26 +183,24 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - Social Media:
-      - Twitter: <https://twitter.com/GridcoinNetwork>
-      - YouTube:
-        <https://www.youtube.com/c/GridcoinNetwork>
-      - Tumblr: <https://gridcoin.tumblr.com/>
-      - Facebook: <https://facebook.com/gridcoins>
+      - [Twitter](https://twitter.com/GridcoinNetwork)
+      - [YouTube](https://www.youtube.com/c/GridcoinNetwork)
+      - [Tumblr](https://gridcoin.tumblr.com/)
+      - [Facebook](https://facebook.com/gridcoins)
 
   - Charts:
-      - Coinmarketcap: <https://coinmarketcap.com/currencies/gridcoin/>
-      - CoinGecko: <https://coingecko.com/en/coins/gridcoin-research>
-      - CoinCap: <http://www.coincap.io/GRC>
-      - Github contribution:
-        <https://github.com/gridcoin-community/Gridcoin-Research/graphs/contributors>
+      - [Coinmarketcap](https://coinmarketcap.com/currencies/gridcoin/)
+      - [CoinGecko](https://coingecko.com/en/coins/gridcoin-research)
+      - [CoinCap](http://www.coincap.io/GRC)
+      - [Github contributions](https://github.com/gridcoin-community/Gridcoin-Research/graphs/contributors)
         
 <!-- end list -->
 
   - Faucets:
-    - Freegridco.in: <https://freegridco.in/>
-    - Gridcoin Switzerland: <https://gridcoin.ch/faucet>
+    - [Freegridco.in](https://freegridco.in/)
+    - [Gridcoin Switzerland](https://gridcoin.ch/faucet)
 
 ## Other Wikis
 
-  - Wikipedia: <https://en.wikipedia.org/wiki/Gridcoin>
-  - Russian Wiki: <https://reddit.com/r/russiangridcoin/wiki/>
+  - [Wikipedia](https://en.wikipedia.org/wiki/Gridcoin)
+  - [Russian Reddit Wiki](https://reddit.com/r/russiangridcoin/wiki/)
