@@ -129,8 +129,7 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - Various resources:
-      - Gridcoin's GitHub community organization:
-        <https://github.com/gridcoin-community>
+      - [Gridcoin's GitHub community organization](https://github.com/gridcoin-community)
           - [Website Development](https://github.com/gridcoin-community/Gridcoin-Site)
           - [Gridcoin Tasks](https://github.com/gridcoin-community/Gridcoin-Tasks)
           - [Marketing images](https://github.com/gridcoin-community/Gridcoin-Marketing)
@@ -139,7 +138,7 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - Downloads:
-      - [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases0
+      - [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
       - [Launchpad](https://launchpad.net/gridcoin)
       - [AUR Qt](https://aur.archlinux.org/packages/gridcoinresearch-qt)
       - [AUR daemon](https://aur.archlinux.org/packages/gridcoinresearchd/)
