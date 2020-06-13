@@ -20,8 +20,7 @@ flexibility to be rewarded for virtually any type of computational
 process.
 
 Gridcoin was launched on October 16th, 2013 by Rob Halförd, following an
-announcement
-[CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/).
+announcement on [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/).
 
 The coin compensates the coin miners (researchers) for participating in
 [BOINC](BOINC "wikilink") projects that may lead to advances in
@@ -97,7 +96,7 @@ progress.
 
 ## Comparison to Bitcoin
 
-Bitcoin is consuming approximately 42.69 TWh according to
+Bitcoin is consuming approximately 59.31 TWh according to
 [Digiconomist](https://digiconomist.net/bitcoin-energy-consumption).
 Although controversial in modeling this figure, it shows that a lot of
 unnecessary energy is used by Bitcoin's SHA-256 algorithm, which could
@@ -151,7 +150,6 @@ scientific computations instead of securing the blockchain.
             <https://github.com/gridcoin-community/Gridcoin-Tasks>
           - Marketing images:
             <https://github.com/gridcoin-community/Gridcoin-Marketing>
-          - Fan Site: <https://gridcoin.network>
           - Fan Site: <https://gridcoin.science>
           - Fan Site: <https://gridcoin.io>
 
@@ -166,14 +164,7 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - Exchanges:
-      - C-Cex: <https://c-cex.com/?p=grc-btc> (GRC/BTC and GRC/USD
-        trading pairs)
-      - Bittrex: <https://bittrex.com/Market/?MarketName=BTC-GRC>
-      - HolyTransaction: <https://holytransaction.com/>
-      - BTSABC: <https://bit.btsabc.org/#/market/OPEN.GRC_OPEN.BTC>
-      - Bitshares-Light: <https://bitshares.org/>
-      - RUDEX: <https://staging.rudex.org/#/market/OPEN.GRC_OPEN.BTC>
-      - Flyp.me: <https://flyp.me/>
+      - Txbit: <https://txbit.io/Trade/GRC/BTC>
       - SouthXchange: <https://www.southxchange.com/Market/Book/GRC/BTC>
 
 <!-- end list -->
@@ -187,8 +178,8 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - 3rd-Party wallets:
-      - CoinVault: <https://coinvault.io>
       - Coinomi: <https://coinomi.com/>
+      - HolyTransaction: <https://holytransaction.com/>
 
 <!-- end list -->
 
@@ -199,9 +190,9 @@ scientific computations instead of securing the blockchain.
         <https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/>
       - Bitcointalk: <https://bitcointalk.org/index.php?topic=324118.0>
       - Steemit: <https://steemit.com/created/gridcoin>
+      - Steemit Community: <https://steemit.com/created/hive-161364>
       - Reddit: <https://reddit.com/r/gridcoin>
       - Reddit (ru): <https://reddit.com/r/russiangridcoin>
-      - Rocket.Chat: <https://chat.gridcoin.io/channel/general>
       - Gridcoin Telegram: <https://t.me/gridcoin>
       - Discord: <https://discord.me/page/gridcoin>
       - Slack:
@@ -219,21 +210,18 @@ scientific computations instead of securing the blockchain.
       - Tumblr: <https://gridcoin.tumblr.com/>
       - Facebook: <https://facebook.com/gridcoins>
 
-<!-- end list -->
-
-  - Android Apps:
-      - Gridcoin Faucet:
-        <https://play.google.com/store/apps/details?id=ml.gridcoin.faucet>
-        ( can be used every 3 hours )
-
-<!-- end list -->
-
   - Charts:
       - Coinmarketcap: <https://coinmarketcap.com/currencies/gridcoin/>
       - CoinGecko: <https://coingecko.com/en/coins/gridcoin-research>
       - CoinCap: <http://www.coincap.io/GRC>
       - Github contribution:
         <https://github.com/gridcoin-community/Gridcoin-Research/graphs/contributors>
+        
+<!-- end list -->
+
+  - Faucets:
+    - Freegridco.in: <https://freegridco.in/>
+    - Gridcoin Switzerland: <https://gridcoin.ch/faucet>
 
 ## Other Wikis
 
