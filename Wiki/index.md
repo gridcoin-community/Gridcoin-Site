@@ -112,13 +112,17 @@ scientific computations instead of securing the blockchain.
 
   - [Website](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
-  - [Gridcoinstats](https://gridcoinstats.eu/)
-  - [Gridcoin.network](https://gridcoin.network/)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
   - [SETIBZH](https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=)
   - [Free-DC Stats](https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin)
   - [Statseb.fr Forum Badges](https://signature.statseb.fr/index.py?action=team_badge&teamid=100454)
   - [Project Whitelist and Blacklist](https://gridcoin.ddns.net/pages/project-list.php)
+
+<!-- end list -->
+
+  - Block Explorers:
+      - [Gridcoinstats](https://gridcoinstats.eu/)
+      - [Gridcoin.network](https://gridcoin.network/)
 
 <!-- end list -->
 
