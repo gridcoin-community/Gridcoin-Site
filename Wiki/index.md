@@ -111,6 +111,8 @@ scientific computations instead of securing the blockchain.
 ## Official Resources
 
   - [Website](https://gridcoin.us/)
+  <!-- TODO -->
+  <!-- [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
   - [SETIBZH](https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=)
