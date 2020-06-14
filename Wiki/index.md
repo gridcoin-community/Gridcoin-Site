@@ -109,10 +109,8 @@ Proof-of-Stake allows miners to dedicate their compute resources towards
 scientific computations instead of securing the blockchain.
 
 ## Official Resources
-
+  <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
   - [Website](https://gridcoin.us/)
-  <!-- TODO -->
-  <!-- [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
   - [SETIBZH](https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=)
@@ -181,9 +179,7 @@ scientific computations instead of securing the blockchain.
       - [Gridcoin Telegram](https://t.me/gridcoin)
       - [Discord](https://discord.me/page/gridcoin)
       - [Slack](https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTUzMmY0YjdiNzYxYzQ0MDc3MGE1NjQ3Nzg2NWMzZTUzMjAwZjdhMWI1YWUzMDE4YzQyZjVjMjMzOTc1M2RmMmM/)
-      - IRC: #gridcoin (must be registered with NickServ) on Freenode
-          or
-          <https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin-help>
+      - IRC: [#gridcoin](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin) and [#gridcoin-help](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin-help) on freenode.
 
 <!-- end list -->
 
