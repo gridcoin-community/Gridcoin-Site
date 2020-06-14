@@ -21,7 +21,7 @@ pool.
 ## I have connections but the number of blocks does not increase. What can I do?
 
 If you have connections you should be fine and the wallet will sort
-itself out.
+itself out. If after a few hours your number of blocks still doesn't increase check to make sure you're using the latest version of the wallet.
 
 ## I had a magnitude for some time but it dropped to 0. What happened?
 
@@ -102,7 +102,7 @@ ticked.
 ## How long does it take to start receiving Research (mining) credit?
 
 This depends on several factors. You must have some coins to begin with,
-some have started with as few as 100 coins. You must send a "beacon",
+some have started with as few as 100 coins, but the general recommendation now is around 5000. You must send a "beacon",
 this is how your information is populated into the Neural Network which
 controls payments, see [Mining setup](Mining-Setup "wikilink"). You must
 have over 100 RAC on at least 1 whitelisted BOINC project before you can
@@ -138,39 +138,6 @@ BOINC email address if it is empty:
 These lines should already suffice. Else, find more at [GridcoinResearch
 Config
 file](Gridcoinresearch-Config-File "wikilink")
-
-## I did a `rsa` to find out how much reward I can expect from PoR. What does it tell me?
-
-*This information is partly outdated and will be updated once the
-Research Age feature is live. This should be the case in the end of
-September
-2015*
-
-`    "RSA Report" : "Research Savings Account Report - Generated 1422562593"`  
-`    `  
-`    "Payment Window" : This is the look-back period`
-
-`    "CPID" : This is your CPID, the Cross Project Identifier within BOINC network`  
-`    "Magnitude" : This is your current Magnitude and will be reported the next PoR block you post`  
-`    "Payment Magnitude" : This is your Magnitude as it appears to the network based on your reported magnitude in the look-back period`  
-`    "Payment Timespan (Days)" : This the age of your CPID, the lower of the look-back period or when the first PoR block with your CPID appears in the blockchain`  
-`    "Magnitude Accuracy" : This is the number of times the network checked your magnitude against netsoft* `  
-`    "Long Term Owed (14 days)" : Magnitude * Magnitude Multiplier * 14`  
-`    "Payments (14 days)" : What your CPID has been paid in the look-back period`  
-`    "InterestPayments (14 days)" : In addition to your PoR payment any interest you are owed on stakeable coins is paid, this is a sum of those payments in the look-back period`  
-`    "Last Payment Time" : the last time you were paid a PoR payment`  
-`    "Total Owed" : Long Term Owed (14 days) - Payments (14 days) with a cap of the current maximum payment amount in the PoR Payment Schedule**`  
-`    "Next Expected Payment" : 50% of Total Owed with a cap defined in the PoR Payment Schedule`  
-`    "Daily Paid" : Payments (14 days) / look-back period`  
-`    "Daily Owed" : Long Term Owed (14 days) / look-back period`  
-`    "Registered Payment Time" : depreciated `
-
-  - Magnitude Accuracy is how many times other nodes verified your
-    magnitude by actually parsing the XML as a 3rd party. This creates a
-    weighted magnitude the consensus agrees on.
-      - Total Owed is not your RSA balance, the RSA balance is not
-        listed in the report but can be found by Long Term Owed (14
-        days) - Payments (14 days)
 
 ## How can I tell if I've mined a block?
 
@@ -209,8 +176,7 @@ therefore takes a number of weeks of consistent BOINC work on a
 specified project, for RAC to increase to sustainable levels.
 
 Have a look here:
-<http://www.gridresearchcorp.com/gridcoin/?result&t=Whitelisted_Project_Leaderboard>
-. If your hardware is not strong or compatible, you should keep away
+<http://quickmag.ml/cgi-bin/script.cgi>. If your hardware is not strong or compatible, you should keep away
 from some projects. For example, GPUGRID is very popular for high end
 GPUs so the team RAC is high. My GTX 770 got me RAC way above 10k but
 the magnitude was smaller than 10. So I decided to let others work on
@@ -220,10 +186,7 @@ There are also overrun CPU projects or projects that do not provide
 constant work unit (WU) flow.
 
 Try different projects and see whether your hardware can keep up a high
-magnitude. You can review your outcome magnitude in the Neural Network.
-Go to Advanced -\> Neural Network and search for your CPID. Then you can
-double click to drill into your participation or have a look here:
-<http://www.gridresearchcorp.com/gridcoin/?result&t=CPID_Leaderboard>
+magnitude. You can review your outcome magnitude in the wallet.
 
 Anyway, if you like a project you should support it, to keep the BOINC
 spirit up ;) I like the LHC and everything concerning CERN so I keep
@@ -234,22 +197,22 @@ Additionally, you might want to re-visit the projects you contribute to,
 you don't want to contribute CPU power to a project that allows GPUs its
 like trying to mine Bitcoin with your PC, you are competing with the
 wrong equipment. You might start by visiting this list:
-<http://wiki.gridcoin.us/Current_BOINC_Whitelist> and make sure you
+<https://boinc.berkeley.edu/projects.php> and make sure you
 aren't using your CPU for projects that have the ATI or Nvidia icon. You
 can also maximize your magnitude by finding projects that have smaller
 team RAC (just make sure they have work available) on the network report
 which you can find here:
-<http://www.gridresearchcorp.com/gridcoin/?result&t=Whitelisted_Project_Leaderboard>
+<https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin>
 
-# Staking (Interest)
+# Staking
 
 ## How is the amount of stake-reward calculated?
 
 The stake reward is calculated by two combined
 algorithms.
 
-`Proof of Stake rewards based on an annual interest rate. An interest block contains only interest and occurs when you are fully paid in your research or an investor without research activity.`  
-`Proof of Research rewards for BOINC contribution, though research activity. A PoR block is a combined payment of interest and research reward.`
+`Proof of Stake rewards will give you 10 GRC for each block you stake  
+`Proof of Research rewards for BOINC contribution, though research activity. A PoR block is a combined payment 10 GRC and research reward.`
 
 ## The wallet says "Not Staking because you don't have mature coins" , how long does it take for coins to mature?
 
@@ -289,8 +252,6 @@ process).
 
 Well, if you encrypt your wallet and enter `walletpassphrase
 \[passphrase\] 86400`, that would unlock it for 24 hours for staking.
-Alternatively to auto-unlock for staking when you start Gridcoin see:
-<http://wiki.gridcoin.us/Wallet_Auto-unlock_for_staking>
 
 Your wallet file remains encrypted and since you do not have to enable
 external RPC access for mining anymore, it's safe aside from physical
@@ -320,18 +281,6 @@ to unlock only for staking type
 
 `walletpassphrase PASSWORD TIMEOUT true`
 
-Also there is an autounlock feature. You need to encrypt your password
-and set a line in config....
-
-to encrypt your password type
-
-`execute encrypt YourPassPhrase`
-
-copy that encrypted password and add a line in the config file in
-%appdata%/Roaming/Gridcoinresearch
-
-`autounlock=YourENCRYPTEDPassPhrase`
-
 ## How do you turn staking on and off?
 
 `walletpassphrase "your passphrase in double quotes" timeout true`
@@ -344,7 +293,7 @@ only.
 
 ## Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project now that has Gridcoin as a Team Name?
 
-Running "list projects" in console will list all the whitelisted
+Running "projects" in console will list all the whitelisted
 projects you could possibly contribute to that would help your Gridcoin
 Research
 wallet.
@@ -411,15 +360,11 @@ away from team Gridcoin for that project.
 ## How can I see my Researching Status?
 
 If you have some BOINC credits, you are in team Gridcoin and your email
-is correct in the gridcoinresearch.conf file you should see a list of
-the projects you are participating in when entering "*list cpids*" to
+is correct in the gridcoinresearch.conf file. You should see a list of
+
+your magnitude in each project when entering "*explainmagnitude*" to
 the debug console of the wallet (Help -\> Debug Window -\> Console). It
 may take 24-48 hours for new accounts to be populated.
-
-If you then type `rsa` you will see your Research Savings Account
-which displays, among other information of your research status, what
-you are owed. This is the payment you can expect within the near
-future.
 
 ## What does "diff" exactly measure? What does it tell if it's high or low?
 
@@ -449,16 +394,6 @@ coin age for your node.
 
 The network stake weight is the sum of coin age mined in the last 72
 blocks by the network.
-
-## What is RSA?
-
-The RSA is the "Research Savings Account" that keeps track of your
-overall owed amount.
-
-## What command to get RSA using the headless wallet?
-
-`rsaweight` gives the value the client will use when it forwards the
-block.
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
@@ -509,7 +444,7 @@ But that is a little longer :)
 ## How do I upgrade the Gridcoin wallet client?
 
 Download the installer from
-[Gridcoin.us](http://download.gridcoin.us/download/downloadstake/GridcoinResearch.msi)
+[Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
 and install over your previous installation.
 
 Deleting the appdata folder is not recommended.
@@ -581,11 +516,7 @@ Try this:
     GridcoinResearch.conf file and the folders walletbackups and testnet
     if present. For windows '%appdata%/Roaming/GridcoinResearch', For
     Linux '\~/.GridcoinResearch'
-4.  To get a quick start to Syncing, In the Gridcoin UI, Go to Rebuild
-    Block Chain -\> Download Blocks. This will download the latest
-    snapshot of the blockchain and speed things up.
-5.  You can also get the snapshot manually
-    [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip)
+4.  You can also get the snapshot [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip)
     and extract it to the Gridcoin data folder. For windows -\>
     '%appdata%/Roaming/GridcoinResearch', For Linux
     '\~/.GridcoinResearch.
@@ -611,7 +542,7 @@ explorer will sync up with you and your connected nodes at some point.
 
 Ensure you have upgraded to latest wallet version.
 
-Try downloading blocks (Press Rebuild Block Chain -\> Download Blocks).
+Try using the snapshot you can get it [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
 While it downloads, delete the peers.dat in
 %appdata%\\Roaming\\GridcoinResearch - you may have a bad peer group.
 
@@ -621,12 +552,11 @@ you are not banned by good nodes because of earlier behavior.
 
 ## I certainly fell off the consensus chain, how to get back on?
 
-First ensure you are running the latest version
+1. ensure you are running the latest version
 
-Second try to restart the client
+2. try to restart the client
 
-Third try to used downloadblocks feature (Press Rebuild Blockchain -\>
-Download Blocks).
+3. try to use the [snapshot](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
 
 If you tried each of the steps above and are sure you are running the
 correct version
@@ -646,8 +576,9 @@ the technical support forum:
 
 ## I still can't get connections. How can I test, whether the net is down or my node is misconfigured?
 
-Open Windows/Linux command box and enter "telnet node.gridcoin.us
-32749". If there is no response, your Firewall might have blocked the
+First install telnet for your respective os.
+
+Then open your command box and enter `telnet addnode-us-central.cycy.me 32749`. If there is no response, your Firewall might have blocked the
 port. Otherwise your configuration might be wrong or your node has been
 temporary banned by the
 network.
@@ -724,14 +655,7 @@ can.
 ## How to get out of the loop of cycling app crashes (Microsoft Visual C++ Runtime Library Assertion failed)?
 
 Delete the content of the folder called 'txleveldb' in
-%appdata%\\Roaming\\GridcoinResearch and restart. Once your wallet is
-up, you have connections and its synching use download blocks
-feature.
-
-## I can't rebuild block chain as it stays at 0 blocks, and clicking download blocks doesn't help!
-
-Try doing this from command prompt as administrator: grcrestarter
-downloadblocks
+%appdata%\\Roaming\\GridcoinResearch and restart.
 
 ## Is there a getting started booster for new clients?
 
