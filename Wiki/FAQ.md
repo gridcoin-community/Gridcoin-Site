@@ -220,7 +220,8 @@ process).
 
 ## Do I have to leave my wallet unencrypted to be able to stake?
 
-Well, if you encrypt your wallet and enter `walletpassphrase
+If you encrypt your wallet, you will need to unlock it to be able to stake.
+If you only want to stake, make sure to leave unlock for staking checked when unlocking the wallet.
 \[passphrase\] 86400`, that would unlock it for 24 hours for staking.
 
 Your wallet file remains encrypted and since you do not have to enable
