@@ -109,17 +109,7 @@ earned.
 
 ## Is it true that someone would not lose reward if blocks are created on a fork?
 
-YES! If you find a block on a fork your "owed" balance will be reduced
-on that fork but it won't be reduced on the main block chain because
-that block wasn't really found by you on that fork. So once you sync
-back up with the main chain you will see the block you found change to
-an orphan (with the ?) and the balance in your research savings account
-will increase by that amount so that when you find a block on the main
-chain you will be paid for the research you are owed. This is what makes
-this method so much more fair, than the old PoW system. With
-Proof-of-Research as long as you find enough blocks in a 2 week window
-to be paid your full reward within the payout rules you will receive all
-the rewards you earned in the same period.
+If you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear since they shouldn't have shown up in the first place. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
 
 ## What should I put in my config-file for Gridcoin-Research?
 
