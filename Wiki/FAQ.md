@@ -144,19 +144,15 @@ Yes, there are pools at <https://grcpool.com/> and
 
 ## I am BOINCing nonstop but my magnitude is very low. What can I do?
 
-Regarding your magnitude: You should have an eye on your RAC and the
-project total RAC within team Gridcoin. Be aware that BOINC RAC is
-measured weekly, with the most recent week being higher weighted, the
-next week being weighted at half of the recent week and so on, it
-therefore takes a number of weeks of consistent BOINC work on a
-specified project, for RAC to increase to sustainable levels.
+RAC is a rolling average over the past month. It is weighted to increase the value of more recent contributions. Gridcoin relies on the RAC values provided by the project to calculate your magnitude. 
 
-Have a look here:
-<http://quickmag.ml/cgi-bin/script.cgi>. If your hardware is not strong or compatible, you should keep away
-from some projects. For example, GPUGRID is very popular for high end
-GPUs so the team RAC is high. My GTX 770 got me RAC way above 10k but
-the magnitude was smaller than 10. So I decided to let others work on
-that project.
+However, you can't just compare your RAC between projects because different projects use different systems for how they calculate the RAC. Because of this the magnitude calculation also takes into account the total RAC for other crunchers earning Gridcoin.
+
+Depending on your hardware you may want to keep away from some projects.
+
+You can see estimated magnitude levels for your hardware here: http://quickmag.ml/cgi-bin/script.cgi
+
+Unfortunately data for some whitelisted projects like WCG are not available so they won't be included in the estimate.
 
 There are also overrun CPU projects or projects that do not provide
 constant work unit (WU) flow.
@@ -164,10 +160,8 @@ constant work unit (WU) flow.
 Try different projects and see whether your hardware can keep up a high
 magnitude. You can review your outcome magnitude in the wallet.
 
-Anyway, if you like a project you should support it, to keep the BOINC
-spirit up ;) I like the LHC and everything concerning CERN so I keep
-participating although it's not really worth it regarding GRC because
-they sometimes have an unstable WU feed.
+Anyway, if you like a project you should still support it, to keep the BOINC
+spirit up.
 
 Additionally, you might want to re-visit the projects you contribute to,
 you don't want to contribute CPU power to a project that allows GPUs its
