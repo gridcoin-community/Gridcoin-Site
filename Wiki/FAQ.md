@@ -113,16 +113,7 @@ If you stake on a fork, the stake you see is not actually legitimate. When your 
 
 ## What should I put in my config-file for Gridcoin-Research?
 
-Please find gridcoinresearch.conf in your
-%appdata%\\roaming\\gridcoinresearch folder and insert a line for your
-BOINC email address if it is empty:
-
-`email=YourBoincEmail`  
-`addnode=node.gridcoin.us`
-
-These lines should already suffice. Else, find more at [GridcoinResearch
-Config
-file](Gridcoinresearch-Config-File "wikilink")
+Please check here [this page](https://gridcoin.us/Wiki/Config-File)
 
 ## How can I tell if I've mined a block?
 
@@ -141,7 +132,7 @@ generate.
 ## Reward calculation: what is magnitude?
 
 The reward calculation is based on the relative contribution of a user
-to the total contribution of team Gridcoin. This is being calculated
+to the total contribution from other crunchers earning Gridcoin. This is being calculated
 within every project and the sum of the relative contributions is the
 magnitude which is being used to calculate the reward. Besides the
 research rewards, each mined block contains interest.
