@@ -230,7 +230,7 @@ access or perhaps memory leakage.
 
 ## Can I stake with encrypted wallet?
 
-Yes, but you have to unlock it first. It's okay to unlock it "for
+Yes, but you have to unlock it first. It's recommended to unlock it "for
 staking only".
 
 The console walletpassphrase command does what clicking the lock button
@@ -604,24 +604,22 @@ Try starting Gridcoin with option '-rescan'. Go in debug and do
 
 ## What needs to happen to be added to the chain as a newbie?
 
-1\) All the normal prerequisites mentioned: Team Gridcoin, Verified
-Netsoft RAC \> 100 in at least 1 project, correct email in the
-gridcoinresearch.conf.
+1. All the normal prerequisites mentioned: RAC > 100 in at least 1 project, correct email in the
+gridcoinresearch.conf, being in a recognised team.
 
-2\) A GRC balance \~100. Staking at a minimum of 16 hours so the
+2. A balance that is > 5000 GRC is recommended. Staking at a minimum of 16 hours so the
 stakeable coins are mature.
 
-3\) The wallet has to be fully unlocked (untick "for staking only")
+3. The wallet has to be fully unlocked (untick "for staking only")
 until it automatically sends a beacon. You can force the wallet to do so
 once it recognizes your CPID. Go to the debug console and do
 `advertisebeacon force`.
 
-4\) Once #3 is fulfilled, that node should be in the Neural Network
+4. Once #3 is fulfilled, that node should be in the Network
 within 12 hours.
 
 Check the balance first and see how long the node has been online. Let
-the wallet run as often as you
-can.
+the wallet run as often as you can, as it will increase your chance of staking.
 
 ## How to get out of the loop of cycling app crashes (Microsoft Visual C++ Runtime Library Assertion failed)?
 
