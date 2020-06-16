@@ -347,7 +347,6 @@ body {
   .docs-container{
     padding-top: 130px;
     text-align:left;
-    margin: 0 auto;
   }
   .docs-container table{
     border-collapse: collapse;
@@ -370,4 +369,10 @@ body {
 
  .docs-container code{
     white-space:pre;
+ }
+
+ .docs-menu{
+     width: 270px;
+     margin: 0px auto 16px auto;
+     /* 16px gives spacing on the bottom on mobile when collapsed*/
  }
