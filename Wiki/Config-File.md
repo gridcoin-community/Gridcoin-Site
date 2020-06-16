@@ -97,6 +97,23 @@ behavior. See [Testnet](Testnet "wikilink") for more
     #upnp=false
     #externalip=<Your IP Address>
 
+    #############################################################################
+    ############################## Other Entries ################################
+    #############################################################################
+
+    ## See detailed Other Entries description section below.
+
+    #debug=true
+    #debug=<category>
+
+    #enablestakesplit=1
+    #stakingefficiency=<percentage between 75 and 98, defaults to 90>
+    #minstakesplitvalue=<value in GRC, minimum and defaults to 800>
+
+    #enablesidestaking=1
+    #sidestake=<address>,<allocation percentage>
+
+
 ## Addnodes
 
 The list of addnodes you provide are the nodes that your client will
@@ -119,5 +136,48 @@ taken directly from Bitcoin, and you can find a list which explains a
 lot of these options here: <https://en.bitcoin.it/wiki/Running_Bitcoin>
 
 **debug=true**
+**debug=<category>**
 
-Let your node receive tons of extra messages in debug.log.
+Let your node receive tons of extra messages in debug.log. From the 4.1.0.0
+release onward, logging can also be enabled by category. You can see a list
+of categories by issuing the command "logging". Note that not all categories
+are available yet, as the wallet is transiting from the traditional debug
+flags to these categories.
+
+Some Gridcoin specific other entries:
+
+**enablestakesplit=1**
+**stakingefficiency=<percentage between 75 and 98, defaults to 90>**
+**minstakesplitvalue=<value in GRC, minimum and defaults to 800>**
+
+enablestakesplit=1 will enable the automatic splitting of UTXO's in the
+coinstake transaction (stake outputs). Zero is the default (disabled).
+
+stakingefficiency=xx is an integer that specifies the desired staking
+efficiency. This is constrained by the code to be between 75% and 98%,
+in case an unreasonable value is provided.
+
+minstakesplitvalue=xxx is an integer that specifies the minimum UTXO size
+desired post split to provide a secondary control on UTXO size. If
+difficulty drops and a high efficiency is specified, the efficiency alone
+would split UTXO's into amounts smaller than the user desires. This will
+prevent that from occurring. If a user specifies less than 800 GRC, then
+the code uses 800 GRC. Note that the stake splitter uses a 160 block
+averaging interval for calculating the difficulty to smooth out the
+difficulty swings.
+
+**enablesidestaking=1**
+**sidestake=<address>,<allocation percentage>**
+
+You can specify multiple sidetake entries, just like addnode or connect.
+Note that the total number of ouputs for the coinstake is limited
+to 8 in block version 10+, and vout[0] must be empty, so that gives 7
+usable outputs. One must always be reserved for the actual coinstake
+output (return), so that leaves up to 6 usuable outputs for rewards
+distribution. You can specify more than six entries for sidestaking.
+If more than six are specified, six entries per stake are randomly
+chosen from the list.
+
+Note that the total of all of the percentages can add up to less than
+100%, in which cases the leftover reward will be returned back
+to the staker on the coinstake(s).
