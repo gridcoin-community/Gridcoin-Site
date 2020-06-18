@@ -66,7 +66,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     require `nrequired` people to approve of a transaction. The maximum number 
     keys is 16.
     Example usage: `addmultisigaddress 2 '["key1","key2","key3"]'`
-
+    
 
 * addredeemscript `<redeemScript> [account]`
   * Adds a reedemscript specified in hex to the wallet. Will return the address
@@ -75,7 +75,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     [Bitcoin's reedemscript Wiki Page](https://bitcoin.org/en/glossary/redeem-script) 
     on it. For information about the concept of a pay to script hash see 
     [Bitcoin's Pay To Script Hash wiki page](https://en.bitcoin.it/wiki/Pay_to_script_hash)
-
+  
 * backupprivatekeys
   * *Requires the wallet to be fully unlocked*
 
@@ -84,7 +84,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     like this: `Address: ADDRESS, Secret: PRIVATE KEY`. File location and 
     `"result": true` will be given if it successes, otherwise it will show 
     an error message. 
-
+  
 * backupwallet
   * Creates a backup of the wallet.dat and gridcoinresearch.conf files 
     (it also adds dates in the backup files' names). Returns if it was 
@@ -139,7 +139,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
      `UTXOs consolidated: NUMBER` and `Output UTXO value: AMOUNT` where `NUMBER`
      and `AMOUNT` are numbers. Other errors will show error messages with error:
      whatever error.
-
+  
 * createrawtransaction `[{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...}`
   * Creates a hex version of a transaction from raw JSON data. First parameter 
     is the inputs, the second parameter is the outputs. Returns the hex encoding 
@@ -148,7 +148,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * decoderawtransaction `<hex string>`
   * Takes in a raw hexadecimal encoding of a transaction and converts into JSON.
     Does the opposite of the createsrawtransaction command. 
-
+     
 * decodescript `<hex string>`
   * Takes in the raw hexidecimal form of a transaction script and returns it in
     JSON form. Example Usage:  
@@ -220,7 +220,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * getnewpubkey `[account]`
   * Creates a new address and returns the hexadecimal form of the address. If an 
     account is given, the address will go into that account
-
+    
 * getrawtransaction `<txid> [verbose=bool]`
   * Lists out the raw hexidecimal data from a transaction. If verbose is given
     as true, it will list it as JSON data with other transaction information.
@@ -467,7 +467,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     private keys that, if given, will be the only keys used to sign the transaction. 
     `[sighashtype]` is a string with one of: ALL, NONE, SINGLE or 
     ALL|ANYONECANPAY, NONE|ANYONECANPAY, SINGLE|ANYONECANPAY.
-
+    
     Returns with:
       * hex : raw transaction with signature(s) (hex-encoded string)
       * complete : 1 if transaction has a complete set of signature (0 if not)
@@ -509,164 +509,130 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
   * Changes the passphrase on a wallet if encrypted. Changes from 
  `<oldpassphrase>` to `<newpassphrase>`. Make sure to use a secure passphrase
 
-"account" : the account of the receiving addresses
-"amount" : total amount received by addresses with this account
-"confirmations" : number of confirmations of the most recent transaction included|N|
-|listreceivedbyaddress|[minconf=1] [includeempty=false]|Returns an array of objects containing:
+## Mining
 
-"address" : receiving address
-"account" : the account of the receiving address
-"amount" : total amount received by the address
-"confirmations" : number of confirmations of the most recent transaction included
+* advertisebeacon
+   * *Requires the wallet to be fully unlocked*
+ 
+   * Sends out a beacon (only applicable to solo mining). On success returns
+     `"result", "SUCCESS`, `"cpid": YOUR CPID`, `"public_key":BEACON KEY`
 
-To get a list of accounts on the system, execute:
-$ gridcoinresearchd listreceivedbyaddress 0 true|N|
-|listsinceblock|[blockhash] [target-confirmations]|Get all transactions in blocks since block [blockhash], or all transactions if omitted. [target-confirmations] intentionally does not affect the list of returned transactions, but only affects the returned "lastblock" value.1|N|
-|listtransactions|[account] [count=10] [from=0]|Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided it'll return recent transactions from all accounts.
-Example, to show 100 transactions for the default account, skipping the last 20:
-$ gridcoinresearchd listtransactions "" 100 20|N|
-|listunspent|[minconf=1] [maxconf=999999]|Returns array of unspent transaction inputs in the wallet.|N|
-|listlockunspent||Returns list of temporarily unspendable outputs||
-|lockunspent|<unlock?> [array-of-objects]|Updates list of temporarily unspendable outputs||
-|sendrawtransaction||Submits raw transaction (serialized, hex-encoded) to local node and network.|N|
-|sendtoaddress|[comment] [comment-to]|is a real and is rounded to 8 decimal places. Returns the transaction ID  if successful. 
-Comment fields are for sending wallet only and are not sent with the transaction.|Y|
-|setaccount||Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.|N|
-|setgenerate|[genproclimit]|is true or false to turn generation on or off.
-Generation is limited to [genproclimit] processors, -1 is unlimited.|N|
-|settxfee||is a real and is rounded to the nearest 0.00000001|N|
-|signmessage||Sign a message with the private key of an address.|Y|
-|signrawtransaction|[{"txid":txid,"vout":n,"scriptPubKey":hex},...] [,...]|Adds signatures to a raw transaction and returns the resulting raw transaction.|Y/N|
-|stop||Stop Gridcoin server.|N|
-|validateaddress||Return information about .|N|
-|verifymessage||Verify a signed message.|N|
-|walletlock||Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked.|N|
-|walletpassphrase||Stores the wallet decryption key in memory for  seconds.|N|
-|walletpassphrasechange||Changes the wallet passphrase from  to .|N|
-{% endcapture %}
-{{table | newline_to_br | strip_newlines | replace: "|<br />",newline | remove: "<br />"}}
+* beaconreport
+  * Returns a JSON list of all valid beacons on the network (as of where the 
+    wallet is synced to). 
 
-{% comment %} 
-  See comments at the bottom for explination of how the capture works and why its needed
-  for the wbesite
-{% endcomment %}
+* beaconstatus `[cpid]`
+  * Displays information about your beacon or the beacon for `[cpid]`. On 
+    success returns:
+      * cpid (your cpid or `[cpid]`)
+      * active (if it's currently active and not expired)
+      * expired (if the beacon is expired)
+      * renewable (if the beacon is old enough to be renewed)
+      * timestamp (when the beacon was advertised)
+      * address (the address that send the beacon transaction)address
+      * public_key (the public key of the beacon)
+      * magnitude (magnitude corresponding with the beacon)
+      * is_mine (if this is about your beacon or not)
+  
+* explainmagnitude 
+  * Shows what your magnitude is per project. On success returns JSON 
+    containing every project and the magnitude recorded on the
+    network from your CPID.
+    
+* getmininginfo
 
-
-## Generic List of Commands
-
-  - execute commands
-      - Usage: execute <string::itemname> <string::parameter>
-      - Found in code:
-        <https://github.com/gridcoin/Gridcoin-Research/blob/733c1078253e4e17d43c256cb15e730ea73c9b9a/src/rpcblockchain.cpp#L1411>
-      - list of Commands
-          - restorepoint
-          - reboot
-          - neuralrequest
-          - advertisebeacon
-          - syncdpor2
-          - gatherneuralhashes
-          - beaconstatus
-          - beaconreport
-          - neuralreport
-          - myneuralhash
-          - superblockage
-          - unusual - not finished
-          - neuralhash
-          - vote
-            <title>
-            <answer>
-          - addpoll
-            <title>
-            <days> <question> \<answer1;answer2;answer\#\> <ShareType>
-              - Sharetype -
-                1=Magnitude,2=Balance,3=Both,4=CPIDCount,5=ParticipantCount
-              - note that you must use underscores in place of spaces
-          - votedetails
-            <title>
-          - listpolls
-          - listpolldetails
-          - listpollresults
-            <title>
-          - staketime
-          - testnewcontract
-          - rac <cpid>
-          - encrypt <passphrase>
-          - testboinckey
-          - genboinckey
-          - encryptphrase <phrase> - not working that I can tell
-          - decryptphrase <phrase> - not working that I can tell
-          - contract - not finished
-          - wcgtest - a testing command
-          - syncrac
-          - dportally
-          - superblockaverage
-          - getlistof <keytype>
-              - beacon
-              - neuralsecurity
-              - poll
-              - project
-              - vote
-              - superblock
-          - listdata <key>
-          - chainrsa <cpid>- not working that I can tell
-          - testcpidv2
-          - testcpidv2
-          - DISABLE\_WINDOWS\_ERROR\_REPORTING
-          - testcpid
-          - reindex
-          - downloadblocks
-          - executecode
-          - volatilecode
-          - startwireframe
-          - tally
-          - testhash
-          - resetcpids
-          - backupwallet
-          - restorewallet
-          - resendwallettx
-          - postcpid
-          - encrypt\_deprecated
-          - findrac
-  - list commands
-      - Usage: list <string::itemname>
-      - Found in code:
-        <https://github.com/gridcoin/Gridcoin-Research/blob/733c1078253e4e17d43c256cb15e730ea73c9b9a/src/rpcblockchain.cpp#L3143>
-      - list of Commands
-          - networktime
-          - rsaweight
-          - explainmagnitude
-          - magnitude
-          - debug3
-          - currenttime
-          - magnitudecsv
-          - opencontracts
-          - detailmagnitudecsv
-          - mymagnitude
-          - rsa
-          - projects
-          - leder <magnitude>
-          - network
-          - validcpids
-          - cpids
-
-<!-- end list -->
-
-1.  From block timestamp, unless transaction was already in memory pool
-    then the local time when the client added the transaction to its
-    memory pool
+* lifetime
+* magnitude <cpid>
+* myneuralhash
+* neuralhash
+* neuralreport
+* resetcpids
+* staketime
+* superblockage
+* superblocks [lookback [displaycontract [cpid]]]
+* syncdpor2
+* upgradedbeaconreport
 
 
+## Developer
 
-{% comment %}
-  Explanation on the captures from above:
+* addkey <action> <keytype> <keyname> <keyvalue>
+* archivescraperlog takes no arguments and results in immediate archiving of the scraper log
+* currentcontractaverage
+* debug <bool>
+* debug10 <bool>
+* debug2 <bool>
+* debug3 <bool>
+* debug4 <bool>
+* debugnet <bool>
+* deletecscrapermanifest <hash>
+* dportally
+* exportstats1 [maxblocks agregate [endblock]] 
+* forcequorum
+* gatherneuralhashes
+* getblockstats mode [startheight [endheight]]
+* getlistof <keytype>
+* getmpart <hash>
+* getrecentblocks detail count
+* getsupervotes mode superblock
+* listdata <keytype>
+* listmanifests [bool details]
+* listprojects
+* memorizekeys
+* network
+* neuralrequest
+* projects
+* readconfig
+* readdata <key>
+* refhash <walletaddress>
+* reorganize <hash>
+* savescraperfilemanifest <hash>
+* sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
+* sendalert2 <privatekey> <id> <subverlist> <cancellist> <expire> <priority> <message>
+* sendblock <blockhash>
+* sendrawcontract <contract>
+* sendscraperfilemanifest
+* superblockaverage
+* tally
+* tallyneural
+* testnewcontract
+* testnewsb
+* versionreport
+* writedata <key> <value>
 
-  The first capture labled newline just captures a newline so that it can be used for replacement (escape codes don't work).
-  The Second caputre gets the table then it's then fed to a few filters.
-  The filters replace the newlines in the table's text with <br>, then it replaces only <br>'s after
-  pipes, then it removes all other <br>'s. This makes it so that if you have something go over in text length such as:
-       | Text too long to fit on
-       one line and be legible |
-       
-  it will ignore all the newlines in between and just put in the one after the pipe to make the table work
-{% endcomment %}
+## Network
 
+* addnode <node> <add|remove|onetry>
+* addpoll <title> <days> <question> <answer1;answer2...> <sharetype> <url>
+* askforoutstandingblocks
+* clearbanned: Clear all banned IPs.
+* currenttime
+* getaddednodeinfo <dns> [node]
+* getbestblockhash
+* getblock <hash> [bool:txinfo]
+* getblockbynumber <number> [bool:txinfo]
+* getblockchaininfo
+* getblockcount
+* getblockhash <index>
+* getcheckpoint
+* getconnectioncount
+* getdifficulty
+* getinfo
+* getnettotals
+* getnetworkinfo
+* getpeerinfo
+* getrawmempool
+* listallpolldetails
+* listallpolls
+* listbanned: List all banned IPs/subnets.
+* listpolldetails
+* listpollresults <pollname> [bool:showexpired]
+* listpolls
+* memorypool
+* networktime
+* ping
+* setban <ip or subnet> <command> [bantime] [absolute]: add or remove an IP/Subnet from the banned list.
+* showblock <index>
+* stop
+* vote <title> <answer1;answer2...>
+* votedetails <pollname>
