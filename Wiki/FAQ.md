@@ -34,17 +34,16 @@ console.
 
 ## Why is Gridcoin (GRC) special?
 
-Gridcoin allows  Nearly all computing power (up to
-98% efficiency) can be directed at beneficial scientific and medical
+Almost all of your computing power can be directed at beneficial scientific and medical
 research while crunching Gridcoin.
 
-See list of [Advantages &
+See the list of [Advantages &
 Features](Advantages_&_Features "wikilink").
 
 ## How could 'useful' work for a cryptocurrency be verified without repeating the work or trusting a central server?
 
 In Gridcoin, work units are given out by distributed project nodes
-within the BOINC network which use their independent calculation to
+within the BOINC network which uses their independent calculation to
 reward research. Gridcoin compares participants in each project by their
 subsidiary credits earned in BOINC to measure performance in relation to
 dynamic inner project network average.
@@ -53,7 +52,7 @@ BOINC has been rewarding scientific work units in a credit system since
 2003. In case a project maintainer maliciously decides to give out more
 credits than appropriate, it only affects the inner project competition.
 The maximum share of new Gridcoins for this project stays the same
-percentage (subject to number of total projects). And projects can be
+percentage (subject to the number of total projects). And projects can be
 removed by a blockchain vote.
 
 Security in Gridcoin is derived from Blackcoin's industry-leading
@@ -97,7 +96,7 @@ ticked.
 
 ## How long does it take to start receiving Research (mining) credit?
 
-This depends on several factors. You must have some coins to begin with, the general recommendation currently is around 5000 (at the time of writing this that would stake on average about once a month). You must send a "beacon",
+This depends on several factors. You must have some coins, to begin with, the general recommendation currently is around 5000 (at the time of writing this that would stake on average about once a month). You must send a "beacon",
 this is how your information is populated into the Network which
 controls payments, see [Mining setup](Mining-Setup "wikilink"). You must
 have over 100 RAC on at least 1 whitelisted BOINC project before you can
@@ -119,11 +118,7 @@ Please check here [this page](https://gridcoin.us/Wiki/Config-File)
 
 First look at the transaction list for "PoR" payments.
 
-If you don't have any PoR yet, do a "list mymagnitude" in the debug
-console and look for the savings account balance "owed". That will be
-what you accrue for your first payment. It has to be higher than the
-subsidyschedule max block / 10, IE 40 right now in order to actually
-generate.
+You can also lookup your address on a block explorer.
 
 ## Reward calculation: what is RAC?
 
@@ -131,11 +126,7 @@ generate.
 
 ## Reward calculation: what is magnitude?
 
-The reward calculation is based on the relative contribution of a user
-to the total contribution from other crunchers earning Gridcoin. This is being calculated
-within every project and the sum of the relative contributions is the
-magnitude which is being used to calculate the reward. Besides the
-research rewards, each mined block contains interest.
+Magnitude is calculated separately for each project. When calculating research rewards, a user 's magnitude across every project is added together.
 
 ## Is it possible to join a pool?
 
@@ -152,7 +143,7 @@ Depending on your hardware you may want to keep away from some projects.
 
 You can see estimated magnitude levels for your hardware here: http://quickmag.ml/cgi-bin/script.cgi
 
-Unfortunately data for some whitelisted projects like WCG are not available so they won't be included in the estimate.
+Unfortunately, data for some whitelisted projects like WCG are not available so they won't be included in the estimate.
 
 There are also overrun CPU projects or projects that do not provide
 constant work unit (WU) flow.
@@ -166,27 +157,38 @@ spirit up.
 Additionally, you might want to re-visit the projects you contribute to,
 you don't want to contribute CPU power to a project that allows GPUs its
 like trying to mine Bitcoin with your PC, you are competing with the
-wrong equipment. You might start by visiting this list:
-<https://boinc.berkeley.edu/projects.php> and make sure you
-aren't using your CPU for projects that have the ATI or Nvidia icon. You
-can also maximize your magnitude by finding projects that have smaller
-team RAC (just make sure they have work available) on the network report
-which you can find here:
-<https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin>
+wrong equipment. You might start by visiting the [BOINC project list](https://boinc.berkeley.edu/projects.php) and make sure you
+aren't using your CPU for projects that have the Radeon or Nvidia icon.
+
+# Pool Crunching
+
+## Is it possible to join a pool?
+
+Yes, there are currently 2 operational pools:
+* [GRCPool](https://grcpool.com/)
+* [Arikado Pool](https://grc.arikado.ru/)
+
+## I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
+
+That is perfectly normal when pool-mining you do work for the pool's
+account and as a reward get transactions from the pool for the work you
+did. Because of this you do not work for your own CPID and have no
+magnitude.
+
+## I am crunching for the pool but even though I work on projects this is not shown on the profile page of the pool. What can I do?
+
+Make sure you remove all existing projects, which use your account, from the BOINC manager before
+syncing to the pool. 
 
 # Staking
 
 ## How is the amount of stake-reward calculated?
 
-The stake reward is calculated by two combined
-algorithms.
+Proof of Stake rewards will give you 10 GRC for each block you stake. If you are not in investor mode you will also receive your BOINC rewards on top of the 10 in the same block.
 
-`Proof of Stake rewards will give you 10 GRC for each block you stake  
-`Proof of Research rewards for BOINC contribution, though research activity. A PoR block is a combined payment 10 GRC and research reward.`
+## The wallet says "Not Staking because you don't have mature coins", how long does it take for coins to mature?
 
-## The wallet says "Not Staking because you don't have mature coins" , how long does it take for coins to mature?
-
-It takes about 16 hours for GRC to become mature from the time of
+It takes 16 hours for GRC to become mature from the time of
 arrival in your wallet. After a specific set of coins have Staked, they
 will need to mature again for 16 hours before they can Stake again.
 
@@ -195,11 +197,11 @@ will need to mature again for 16 hours before they can Stake again.
 You may have a balance reserved in stake. If this ever happens to you do
 this in the console:
 
-`reservebalance true AMOUNT`
+`reservebalance true AMOUNT`
 
 Where AMOUNT is the amount you want to send
 
-Wait a few blocks
+Wait for a few blocks
 
 Then send
 it.
@@ -213,22 +215,12 @@ balance.
 
 ## I lose my stakeweight after receiving PoR? The "maturecoin-creationprocess" is starting again after each mined PoR?
 
-Yes that is normal, because your node builds up a set of stakeable coins
+Yes that is normal because your node builds up a set of stakeable coins
 and once you stake them the process takes about 4 more hours to get new
 mature coins, unless some have been found in between (it's a constant
 process).
 
-## Do I have to leave my wallet unencrypted to be able to stake?
-
-If you encrypt your wallet, you will need to unlock it to be able to stake.
-If you only want to stake, make sure to leave unlock for staking checked when unlocking the wallet.
-\[passphrase\] 86400`, that would unlock it for 24 hours for staking.
-
-Your wallet file remains encrypted and since you do not have to enable
-external RPC access for mining anymore, it's safe aside from physical
-access or perhaps memory leakage.
-
-## Can I stake with encrypted wallet?
+## Can I stake with an encrypted wallet?
 
 Yes, but you have to unlock it first. It's recommended to unlock it "for
 staking only".
@@ -242,21 +234,21 @@ To lock Type
 
 to unlock for a certain time type
 
-`walletpassphrase PASSWORD TIMEOUT`
+`walletpassphrase PASSWORD TIMEOUT`
 
 to unlock type
 
-`walletpassphrase PASSWORD`
+`walletpassphrase PASSWORD`
 
 to unlock only for staking type
 
-`walletpassphrase PASSWORD TIMEOUT true`
+`walletpassphrase PASSWORD TIMEOUT true`
 
 ## How do you turn staking on and off?
 
-`walletpassphrase "your passphrase in double quotes" timeout true`
+`walletpassphrase "your passphrase in double quotes" timeout true`
 
-where timeout is a number of seconds, e.g. 10000 and true is a toggle
+where timeout is the number of seconds, e.g. 10000 and true is a toggle
 that unlocks the wallet for staking
 only.
 
@@ -264,7 +256,7 @@ only.
 
 ## Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project now that has Gridcoin as a Team Name?
 
-Running "projects" in console will list all the whitelisted
+Running "projects" in the console will list all the whitelisted
 projects you could possibly contribute to that would help your Gridcoin
 Research
 wallet.
@@ -296,31 +288,16 @@ machine (press "Update" in the BOINC software when a project which shows
 0 contribution is
 selected).
 
-## BOINC: For our accounts, we used to have to use our Gridcoin address as our usernames for those accounts. Is that the case still, and if so, should we change our address info over to the "new" client addresses? Like under BAM/BOINC Stats, our stats/info isn't searchable via e-mail address but is via username. Just wondering what we can/should use for going forward.
-
-Changing your BOINC name to a Gridcoin Address is not needed anymore.
-Now just set "email=" in the gridcoinresearch.config file, ensure you
-are in team Gridcoin in each project, that should do
-it.
-
 ## Instead of discussing every single BOINC project to be added, is there any shared guidelines to be used for accepting or rejecting them?
 
-No, but there may be a defined process one day. Currently, decisions are
-placed individually due to a vote within the blockchain. The discussed
-project is then added or deleted from the dynamic whitelist.
-
-As far as hardware requirements, projects should be able to run on both
-64 and 32 bit OSes. Some BOINC projects are limited to architecture. We
-definitely need a set of guidelines to follow before adding a project to
-the whitelist. It is favorable to choose projects that are accessible
-to the masses.
+https://github.com/gridcoin-community/Gridcoin-Tasks/issues/227
 
 ## How do I delete a project from my list of CPIDs?
 
-We used to support detaching but a vote was made to calculate magnitude
+We used to support detaching but a vote was made to calculate the magnitude
 on every project you still have valid RAC on; so GRC does not support
 detaching projects (it was supposed to prevent gaming the system). There
-is no difference if you score 0 on a projects, as all are taken into
+is no difference if you score 0 on projects, as all are taken into
 account equally.
 
 If you insist on not being paid for a specific project, change your team
@@ -344,7 +321,7 @@ algorithm has to make the next block to keep block minting periods at a
 stable 90 seconds rate into the future.
 
 When a lot of researchers are eligible at the same time for a block,
-diff rises to slow down minting. In contrast when no one is online
+diff rises to slow down minting. In contrast, when no one is online
 mining, diff will drop to lure in miners to keep our blocks staking at
 once per 90 seconds.
 
@@ -368,7 +345,7 @@ blocks by the network.
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
-Create shortcut that links to the actual GRC program in Program Files
+Create a shortcut that links to the actual GRC program in Program Files
 directory and add the function at the end of the target, then properly
 name them for the function to execute:
 
@@ -380,7 +357,7 @@ Add the command to execute at the end of the 'Target:' line like
 "C:\\Program Files (x86)\\GridcoinResearch\\gridcoinresearch.exe"
 -rescan .
 
-Rename the shortcut like 'GRC rescan'.
+Rename the shortcut to something like 'GRC rescan'.
 
 Then go to Advanced and tick on run as Administrator.
 
@@ -390,7 +367,7 @@ Line function.
 This way it is simpler and faster for newbies than CLI and
 batch.
 
-## How could I check whether my local block is the same as on a explorer?
+## How could I check whether my local block is the same as on an explorer?
 
 After you double click on the tx in the list, write down the block
 number (not hash).
@@ -401,14 +378,14 @@ showblock blocknumber
 
 And compare the details with details from explorer.
 
-Btw, just for fyi, if you do want to get a block by hash, you would have
+If you do want to get a block by hash, you would have
 to:
 
 getblockhash blocknumber
 
 getblock blockhash
 
-But that is a little longer :)
+But that is a little longer
 
 # Upgrade
 
@@ -418,7 +395,8 @@ Download the installer from
 [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
 and install over your previous installation.
 
-Deleting the appdata folder is not recommended.
+Do not delete the appdata\\GridcoinResearch folder. This contains
+data like your keys which let you access your coins
 
 # Backup
 
@@ -444,12 +422,11 @@ The quick and easy way.
     address and copy the address down.
 3.  Close client and rename wallet.dat to somethingelse.bak
 4.  Rename wallet.bak to wallet.dat
-5.  Start client and send all coins to the address you copied down in
-    step 2.
+5.  Start the client and send all coins to the address you copied down in step 2.
 6.  Make sure you get at least 10 confirmation for the transaction.
 7.  Close client and rename wallet.dat to wallet.bak and rename
     somethingelse.bak to wallet.dat
-8.  Start client and enjoy your new wallet.
+8.  Start the client and enjoy your new wallet.
 
 The reason why you should never dump private keys or wallet is that if
 your PC is compromised, you probably won't know it and the moment you
@@ -461,16 +438,14 @@ to start staking again.
 
 ## What should I do to recover an old backup of my wallet?
 
-Backup wallet.dat.
+1. Backup wallet.dat.
+2. Look for the walletbackups folder.
+3. Find the most recent backup.
+4. Shutdown the wallet
+5. Copy it to the data directory and rename it to wallet.dat.
+6. Restart the wallet.
 
-Look for the %appdata%\\Roaming\\GridcoinResearch\\walletbackups folder.
-
-Find the youngest backup.
-
-Copy it to the %appdata%\\Roaming\\GridcoinResearch directory and rename
-it wallet.dat.
-
-Restart.
+Restart the wallet.
 
 If you have no backup you will have to do the -salvagewallet as starting
 option.
@@ -481,16 +456,11 @@ option.
 
 Try this:
 
-1.  Make sure Gridcoin is running as an administrator.
-2.  Close the client
-3.  Clean out your Gridcoin Appdata folder EXCEPT wallet.dat, your
-    GridcoinResearch.conf file and the folders walletbackups and testnet
-    if present. For windows '%appdata%/Roaming/GridcoinResearch', For
-    Linux '\~/.GridcoinResearch'
-4.  You can also get the snapshot [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip)
-    and extract it to the Gridcoin data folder. For windows -\>
-    '%appdata%/Roaming/GridcoinResearch', For Linux
-    '\~/.GridcoinResearch.
+1.  Close the client
+2.  Clean out your Gridcoin data folder EXCEPT for wallet.dat, your
+    GridcoinResearch.conf file and the folders walletbackups and testnet, if present.
+3.  You can also get the snapshot [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip)
+    and extract it to the Gridcoin data folder.
 
 There is also an [official
 thread](https://cryptocointalk.com/topic/20303-gridcoin-proof-of-research-connection-sync-problem-thread/)
@@ -499,11 +469,11 @@ for sync problem if it didn't work.
 ## How could I test whether I am in sync with the network?
 
 Compare your highest block number with the one listed at
-<http://www.gridresearchcorp.com/gridcoin/>
+[gridcoinstats.eu](https://gridcoinstats.eu/block)
 
 When the explorer is clearly ahead of you (\> 9 blocks) and increasing
 about every 90 seconds, your node is most likely on the fork. You can
-wait till it syncs or rebuild the block chain.
+wait till it syncs or rebuild the blockchain.
 
 When you are clearly ahead of the explorer and / or the explorer has
 stopped incrementing on a regular basis, it's more likely that the
@@ -547,14 +517,16 @@ the technical support forum:
 
 ## I still can't get connections. How can I test, whether the net is down or my node is misconfigured?
 
-First install telnet for your respective os.
+First, install telnet for your respective os.
 
 Then open your command box and enter `telnet addnode-us-central.cycy.me 32749`. If there is no response, your Firewall might have blocked the
-port. Otherwise your configuration might be wrong or your node has been
-temporary banned by the
+port. Otherwise, your configuration might be wrong or your node may have been
+temporarily banned by the
 network.
 
 ## When syncing from zero, the sync gets stuck or pauses for an untimely duration. What to do next?
+
+Make sure you're on the latest wallet version.
 
 Syncing may seem to take longer with growing blockchain. If you get
 stuck use 'reboot client'
@@ -564,8 +536,8 @@ stuck use 'reboot client'
 ## What is Gridcoin Classic
 
 Gridcoin Classic was the first iteration of Gridcoin. Gridcoin classic
-is no longer used and all coins where converted to Gridcoin Research
-coins via Proof of Burn. The Burn process ended April 20, 2015. If you
+is no longer used and all coins were converted to Gridcoin Research
+coins via Proof of Burn. The Burn process ended on April 20, 2015. If you
 missed the Burn deadline, your coins are now in the possession of the
 Gridcoin Foundation and can no longer be claimed.
 
@@ -579,9 +551,9 @@ Gridcoin Foundation and can no longer be claimed.
 
 Testnet is just like production (regular wallet), except it uses a
 different port and a different directory; so you copy your
-gridcoinresearch.conf down a level (%appdir%/gridcoinresearch/testnet)
+gridcoinresearch.conf down a level in the data folder
 and everything works almost the same, except the diff rules make it
-slightly easier and of course all the money is fake. The data files are
+slightly easier. And of course, all the money is fake. The data files are
 stored one directory down also. You will have to start
 Gridcoinresearch.exe with -testnet flag, for example due to the creation
 of a shortcut with this flag.
