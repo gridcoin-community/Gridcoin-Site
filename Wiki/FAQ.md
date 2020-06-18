@@ -3,7 +3,12 @@ title: FAQ
 layout: wiki
 ---
 
-# Most frequent asked questions
+# Frequently Asked Questions
+
+You will see a lot of references to the data folder in this FAQ here are the default locations:
+| Windows | Linux | MacOS |
+|-|-|-|
+| `%appdata%/GridcoinResearch` | `~/.GridcoinResearch` | `~/Library/Application Support/GridcoinResearch` |
 
 ## I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
 
@@ -83,7 +88,7 @@ Next, go to Help -\> Debug Window, go to the Console tab and type
 `advertisebeacon` without the quotes.
 
 This will (if successful) send a small transaction at the cost of
--0.00011 GRC. This should add your CPID with the next superblock.
+1 GRC. This should add your CPID with the next superblock.
 
 To see if your CPID is included, go to the Console and type `beaconreport`. 
 
@@ -106,17 +111,17 @@ account" for a rolling 14 day period. You have up to 2 full weeks to
 stake a block without losing any research credit
 earned.
 
-## Is it true that someone would not lose reward if blocks are created on a fork?
+## What happens if I stake on a fork?
 
-If you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear since they shouldn't have shown up in the first place. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
+When you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
 
 ## What should I put in my config-file for Gridcoin-Research?
 
-Please check here [this page](https://gridcoin.us/Wiki/Config-File)
+Please check [the config file page](Config-File "wikilink")
 
 ## How can I tell if I've mined a block?
 
-First look at the transaction list for "PoR" payments.
+If you are using the GUI you will see a transaction with a gold icon. 
 
 You can also lookup your address on a block explorer.
 
@@ -130,8 +135,9 @@ Magnitude is calculated separately for each project. When calculating research r
 
 ## Is it possible to join a pool?
 
-Yes, there are pools at <https://grcpool.com/> and
-<https://grc.arikado.ru/>
+Yes, there are currently 2 operational pools:
+* [GRCPool](https://grcpool.com/)
+* [Arikado Pool](https://grc.arikado.ru/)
 
 ## I am BOINCing nonstop but my magnitude is very low. What can I do?
 
@@ -301,13 +307,13 @@ is no difference if you score 0 on projects, as all are taken into
 account equally.
 
 If you insist on not being paid for a specific project, change your team
-away from team Gridcoin for that project.
+away from a recognised team for that project.
 
 # Status
 
 ## How can I see my Researching Status?
 
-If you have some BOINC credits, you are in team Gridcoin and your email
+If you have some BOINC credits, you are in a recognised team and your email
 is correct in the gridcoinresearch.conf file. You should see a list of
 
 your magnitude in each project when entering "*explainmagnitude*" to
@@ -316,8 +322,8 @@ may take 24-48 hours for new accounts to be populated.
 
 ## What does "diff" exactly measure? What does it tell if it's high or low?
 
-Difficulty (diff) is a variable int representing how hard the PoS
-algorithm has to make the next block to keep block minting periods at a
+Difficulty (diff) is a number that represents how hard the PoS
+algorithm has to work to keep block minting periods at a
 stable 90 seconds rate into the future.
 
 When a lot of researchers are eligible at the same time for a block,
@@ -325,23 +331,10 @@ diff rises to slow down minting. In contrast, when no one is online
 mining, diff will drop to lure in miners to keep our blocks staking at
 once per 90 seconds.
 
-Another way to look at diff is how many distinct PoR miners are eligible
-during any one minute to stake. When diff is @20, it means 20 miners
-were on-line that minute with solutions, so diff is rising to keep
-emission steady.
-
 It's very similar to PoW diff. The big advantage we have in this version
 with PoR is we can accommodate thousands of new miners without seizing
 the chain with the RSA (Research Savings Account) and the 90 seconds
 block times.
-
-## What does stake weight mean?
-
-The personal stake weight it how many coins are eligible for staking \*
-coin age for your node.
-
-The network stake weight is the sum of coin age mined in the last 72
-blocks by the network.
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
@@ -349,13 +342,11 @@ Create a shortcut that links to the actual GRC program in Program Files
 directory and add the function at the end of the target, then properly
 name them for the function to execute:
 
-Example with -rescan option: Make a new shortcut to "C:\\Program Files
-(x86)\\GridcoinResearch\\gridcoinresearch.exe" or "C:\\Program
-Files\\GridcoinResearch\\gridcoinresearch.exe"
+Example with -rescan option: Make a new shortcut to 
+`"C:\Program Files\GridcoinResearch\gridcoinresearch.exe"`
 
 Add the command to execute at the end of the 'Target:' line like
-"C:\\Program Files (x86)\\GridcoinResearch\\gridcoinresearch.exe"
--rescan .
+`"C:\Program Files\GridcoinResearch\gridcoinresearch.exe" -rescan`
 
 Rename the shortcut to something like 'GRC rescan'.
 
@@ -395,15 +386,14 @@ Download the installer from
 [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
 and install over your previous installation.
 
-Do not delete the appdata\\GridcoinResearch folder. This contains
-data like your keys which let you access your coins
+**Do not delete the data folder.** This contains important data like your keys which let you access your coins.
 
 # Backup
 
 ## What can I do if I didn't save a prior version of wallet.dat?
 
 The wallet has an automated backup in place that will make daily backups
-(once every 24 hours) into %appdata%\\gridcoinresearch\\walletbackups.
+(once every 24 hours) into walletbackups in the data folder.
 
 ## Which is the best practice to save my new wallet?
 
@@ -428,27 +418,16 @@ The quick and easy way.
     somethingelse.bak to wallet.dat
 8.  Start the client and enjoy your new wallet.
 
-The reason why you should never dump private keys or wallet is that if
-your PC is compromised, you probably won't know it and the moment you
-dump your keys, someone on the listening side will get your private key,
-and therefore get your coins.
-
-Yes. You will lose your coin stake, and it will take 4 hours for coins
-to start staking again.
-
 ## What should I do to recover an old backup of my wallet?
 
 1. Backup wallet.dat.
 2. Look for the walletbackups folder.
 3. Find the most recent backup.
 4. Shutdown the wallet
-5. Copy it to the data directory and rename it to wallet.dat.
+5. Copy it to the the data directory and rename it to wallet.dat.
 6. Restart the wallet.
 
-Restart the wallet.
-
-If you have no backup you will have to do the -salvagewallet as starting
-option.
+If it still doesn't start you can try using the -salvagewallet flag.
 
 # Sync
 
@@ -479,41 +458,15 @@ When you are clearly ahead of the explorer and / or the explorer has
 stopped incrementing on a regular basis, it's more likely that the
 explorer will sync up with you and your connected nodes at some point.
 
-## How to get back in sync fast?
+## How do I get in sync fast?
 
-Ensure you have upgraded to latest wallet version.
+Ensure you are running the latest wallet version.
 
-Try using the snapshot you can get it [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
-While it downloads, delete the peers.dat in
-%appdata%\\Roaming\\GridcoinResearch - you may have a bad peer group.
+You can try using the snapshot which you can get [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
+While it downloads, delete the peers.dat in your data folder - you may have a bad peer group.
 
-While the client restarts after the download blocks, you can also try to
-switch off/on your router if you get a new IP with that, to make sure
+You can also try to reboot your router to attempt to get a new IP, to make sure
 you are not banned by good nodes because of earlier behavior.
-
-## I certainly fell off the consensus chain, how to get back on?
-
-1. ensure you are running the latest version
-
-2. try to restart the client
-
-3. try to use the [snapshot](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
-
-If you tried each of the steps above and are sure you are running the
-correct version
-
-Backup your wallet.dat file
-
-Close the Gridcoin-Research wallet
-
-In the roaming folder delete all but gridcoinresearch.conf and
-wallet.dat and the wallet backup folder.
-
-Check your [List of Addnodes](List_of_Addnodes "wikilink")
-
-Start Gridcoin-Research and wait. If you continue to have trouble visit
-the technical support forum:
-<https://cryptocointalk.com/forum/2380-technical-support/>
 
 ## I still can't get connections. How can I test, whether the net is down or my node is misconfigured?
 
@@ -545,7 +498,7 @@ Gridcoin Foundation and can no longer be claimed.
 
 ## Where can I find the source?
 
-<https://github.com/gridcoin-community/Gridcoin-Research>
+[On Github](https://github.com/gridcoin-community/Gridcoin-Research)
 
 ## How could I participate in testnet?
 
@@ -555,24 +508,14 @@ gridcoinresearch.conf down a level in the data folder
 and everything works almost the same, except the diff rules make it
 slightly easier. And of course, all the money is fake. The data files are
 stored one directory down also. You will have to start
-Gridcoinresearch.exe with -testnet flag, for example due to the creation
-of a shortcut with this flag.
-
-For Windows, simply add testnet=1 to gridcoinresearch.conf file. The
-wallet will automatically create the necessary directories. To revert to
-normal wallet, change it to testnet=0.
+the wallet with the -testnet flag.
 
 # Troubleshoot
 
-## After reloading blockchain some coins are no longer in my wallet
+## Some of my coins have disappeared.
 
 Try running the client with "-rescan" or run the console command
 "repairwallet".
-
-## My wallet has smaller balance than last time. How to fix?
-
-Try starting Gridcoin with option '-rescan'. Go in debug and do
-"repairwallet" or "rebuilt block chain" to fix the local amount.
 
 ## What needs to happen to be added to the chain as a newbie?
 
@@ -585,10 +528,10 @@ stakeable coins are mature.
 3. The wallet has to be fully unlocked (untick "for staking only")
 until it automatically sends a beacon. You can force the wallet to do so
 once it recognizes your CPID. Go to the debug console and do
-`advertisebeacon force`.
+`advertisebeacon`.
 
 4. Once #3 is fulfilled, that node should be in the Network
-within 12 hours.
+within 25 hours.
 
 Check the balance first and see how long the node has been online. Let
 the wallet run as often as you can, as it will increase your chance of staking.
@@ -596,31 +539,4 @@ the wallet run as often as you can, as it will increase your chance of staking.
 ## How to get out of the loop of cycling app crashes (Microsoft Visual C++ Runtime Library Assertion failed)?
 
 Delete the content of the folder called 'txleveldb' in
-%appdata%\\Roaming\\GridcoinResearch and restart.
-
-## Is there a getting started booster for new clients?
-
-New node setups can show connections icon (even at zero connections) but
-stick at 0% sync progress. Hover over where the green tick would be when
-synced to confirm.
-
-Turn off BOINC or set CPU to below 100%.
-
-Use download blocks and wallet restart and/or gracefully close wallet
-(Ctrl Q), copy a populated peers.dat (bigger than 2kB in files size) and
-paste it as an overwrite to %appdata%/gridcoinresearch (you can type
-this in Windows search field) and then start wallet (elevated; right
-click, run as administrator).
-
-When it starts back up it takes a while so be patient and if it looks
-like it is not responding, just ignore it or click 'wait for the program
-to respond'. You should eventually see the connections icon showing zero
-connections and it will flash very briefly on. You can check the debug
-log and see an entry 'socket closed' when the flash happens. Then use
-download blocks and after that process you should have syncing right
-upto 'up to date/100%). The debug log should show something like
-<http://pastebin.com/1uEpDB79>
-
-If you don't get syncing after doing download blocks, check the size of
-your peers.dat. If it still 2kB then it did not overwrite or save and
-you will need to repeat the process.
+the data folder and restart.
