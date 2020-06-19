@@ -10,31 +10,6 @@ You will see a lot of references to the data folder in this FAQ here are the def
 |-|-|-|
 | `%appdata%/GridcoinResearch` | `~/.GridcoinResearch` | `~/Library/Application Support/GridcoinResearch` |
 
-## I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
-
-That is perfectly normal, when pool-mining you do work for the pool's
-account and as a reward get transactions from the pool for the work you
-did. Because of this you do not work for your own CPID and have no
-magnitude.
-
-## I am crunching for the pool but even though I work on projects this is not shown on the profile page of the pool. What can I do?
-
-Make sure you remove all existing projects from the BOINC manager before
-syncing to the pool. Then you can add new projects from the page of the
-pool.
-
-## I have connections but the number of blocks does not increase. What can I do?
-
-If you have connections you should be fine and the wallet will sort
-itself out. If after a few hours your number of blocks still doesn't increase check to make sure you're using the latest version of the wallet.
-
-## I had a magnitude for some time but it dropped to 0. What happened?
-
-The reason for this is most likely that you have to resend your beacon,
-which should be done every 6 months. For this either unlock your wallet
-so that it sends automatically or type `advertisebeacon` in the
-console.
-
 # Gridcoin & Science
 
 ## Why is Gridcoin (GRC) special?
@@ -99,7 +74,7 @@ CPID isn't included after a few superblocks, try resending your beacon
 Lock your wallet again, but this time unlock it with "for staking only"
 ticked.
 
-## How long does it take to start receiving Research (mining) credit?
+## How long does it take to start receiving Research (Crunching) credit?
 
 This depends on several factors. You must have some coins, to begin with, the general recommendation currently is around 5000 (at the time of writing this that would stake on average about once a month). You must send a "beacon",
 this is how your information is populated into the Network which
@@ -110,10 +85,6 @@ Network, all research credits you earn will accrue in a "savings
 account" for a rolling 14 day period. You have up to 2 full weeks to
 stake a block without losing any research credit
 earned.
-
-## What happens if I stake on a fork?
-
-When you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
 
 ## What should I put in my config-file for Gridcoin-Research?
 
@@ -131,13 +102,14 @@ You can also lookup your address on a block explorer.
 
 ## Reward calculation: what is magnitude?
 
-Magnitude is calculated separately for each project. When calculating research rewards, a user 's magnitude across every project is added together.
+Magnitude is calculated separately for each project. When calculating research rewards, a user's magnitude across every project is added together.
 
-## Is it possible to join a pool?
+## I had a magnitude for some time but it dropped to 0. What happened?
 
-Yes, there are currently 2 operational pools:
-* [GRCPool](https://grcpool.com/)
-* [Arikado Pool](https://grc.arikado.ru/)
+The reason for this is most likely that you have to resend your beacon,
+which should be done every 6 months. For this either unlock your wallet
+so that it sends automatically or type `advertisebeacon` in the
+console.
 
 ## I am BOINCing nonstop but my magnitude is very low. What can I do?
 
@@ -214,10 +186,7 @@ it.
 
 ## When I get an interest/mining payment, a portion of my GRC looks to be moving from my total balance into the "Stake" line of the wallet balance. Is that correct?
 
-Every 4 hours the wallet is on-line, it looks for old coins that can
-accrue interest and moves them from 'Balance' to 'Stake' then it works
-on staking. Once staked, it moves the staked balance back to
-balance.
+Yes. It means that those coins are currently on cooldown so they aren't able to stake for the next 16 hours.
 
 ## I lose my stakeweight after receiving PoR? The "maturecoin-creationprocess" is starting again after each mined PoR?
 
@@ -258,6 +227,10 @@ where timeout is the number of seconds, e.g. 10000 and true is a toggle
 that unlocks the wallet for staking
 only.
 
+## What happens if I stake on a fork?
+
+When you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
+
 # BOINC
 
 ## Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project now that has Gridcoin as a Team Name?
@@ -280,13 +253,12 @@ propagate.
 ## I use BOINC with one username but on a few machines - is it enough to have one wallet with the proper boinc\_project\_email address, or do I have to have a separate wallet on each machine?
 
 You only need one wallet for each BOINC account/CPID (Cross Project
-Identifier). You can use BAM (BOINC Account Manager) to combine more
-projects in one CPID. Here is a guide
-<http://grcnation.com/en/bam-boinc-account-manager/> . Your reward is
-based on the credit in your BOINC account/CPID. You can point as many
+Identifier). You can use an account manager to combine more
+projects in one CPID. Your reward is
+based on the credit on your CPID. You can point as many
 machines and resources to a single account as you want and only need a
 single wallet to receive your reward. You do have to set "email=" in the
-config file to your BOINC/BAM email and must be running the wallet on a
+config file to your BOINC email and must be running the wallet on a
 machine that has BOINC installed and is associated with all BOINC
 projects you would like to get credit for (they can be set to not
 retrieve new work) and each project must show at least some RAC on that
@@ -303,7 +275,7 @@ https://github.com/gridcoin-community/Gridcoin-Tasks/issues/227
 We used to support detaching but a vote was made to calculate the magnitude
 on every project you still have valid RAC on; so GRC does not support
 detaching projects (it was supposed to prevent gaming the system). There
-is no difference if you score 0 on projects, as all are taken into
+is no difference if you score 0 on a project, as all are taken into
 account equally.
 
 If you insist on not being paid for a specific project, change your team
@@ -330,11 +302,6 @@ When a lot of researchers are eligible at the same time for a block,
 diff rises to slow down minting. In contrast, when no one is online
 mining, diff will drop to lure in miners to keep our blocks staking at
 once per 90 seconds.
-
-It's very similar to PoW diff. The big advantage we have in this version
-with PoR is we can accommodate thousands of new miners without seizing
-the chain with the RSA (Research Savings Account) and the 90 seconds
-block times.
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
@@ -382,9 +349,7 @@ But that is a little longer
 
 ## How do I upgrade the Gridcoin wallet client?
 
-Download the installer from
-[Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
-and install over your previous installation.
+Download the installer from [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases) or your package manager and install over your previous installation.
 
 **Do not delete the data folder.** This contains important data like your keys which let you access your coins.
 
@@ -392,8 +357,7 @@ and install over your previous installation.
 
 ## What can I do if I didn't save a prior version of wallet.dat?
 
-The wallet has an automated backup in place that will make daily backups
-(once every 24 hours) into walletbackups in the data folder.
+The wallet has an automated backup in place that will make backups every 24 hours into the walletbackups folder inside of your data folder.
 
 ## Which is the best practice to save my new wallet?
 
@@ -445,6 +409,8 @@ There is also an [official
 thread](https://cryptocointalk.com/topic/20303-gridcoin-proof-of-research-connection-sync-problem-thread/)
 for sync problem if it didn't work.
 
+You can also try running the wallet as an administrator.
+
 ## How could I test whether I am in sync with the network?
 
 Compare your highest block number with the one listed at
@@ -463,12 +429,13 @@ explorer will sync up with you and your connected nodes at some point.
 Ensure you are running the latest wallet version.
 
 You can try using the snapshot which you can get [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
+
 While it downloads, delete the peers.dat in your data folder - you may have a bad peer group.
 
 You can also try to reboot your router to attempt to get a new IP, to make sure
 you are not banned by good nodes because of earlier behavior.
 
-## I still can't get connections. How can I test, whether the net is down or my node is misconfigured?
+## I can't get connections. How can I test whether the net is down or my node is misconfigured?
 
 First, install telnet for your respective os.
 
@@ -502,13 +469,9 @@ Gridcoin Foundation and can no longer be claimed.
 
 ## How could I participate in testnet?
 
-Testnet is just like production (regular wallet), except it uses a
-different port and a different directory; so you copy your
-gridcoinresearch.conf down a level in the data folder
-and everything works almost the same, except the diff rules make it
-slightly easier. And of course, all the money is fake. The data files are
-stored one directory down also. You will have to start
-the wallet with the -testnet flag.
+Start the client with the -testnet flag.
+
+[More info can be found here.](Testnet "wikilink")
 
 # Troubleshoot
 
