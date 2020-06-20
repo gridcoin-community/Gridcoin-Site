@@ -132,11 +132,8 @@ magnitude. You can review your outcome magnitude in the wallet.
 Anyway, if you like a project you should still support it, to keep the BOINC
 spirit up.
 
-Additionally, you might want to re-visit the projects you contribute to,
-you don't want to contribute CPU power to a project that allows GPUs its
-like trying to mine Bitcoin with your PC, you are competing with the
-wrong equipment. You might start by visiting the [BOINC project list](https://boinc.berkeley.edu/projects.php) and make sure you
-aren't using your CPU for projects that have the Radeon or Nvidia icon.
+Additionally, you might not want to use your CPU to crunch for projects with GPU WUs.
+You can find CPU only projects by visiting the [BOINC project list](https://boinc.berkeley.edu/projects.php) and looking out for projects that have the Radeon or Nvidia icon.
 
 # Pool Crunching
 
