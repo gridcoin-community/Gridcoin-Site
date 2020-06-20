@@ -42,8 +42,9 @@ Proof-of-Stake.
 
 ## How do I start crunching?
 
-First, [Get some coins](Get_some_coins "wikilink"), then see [Mining
-setup](Mining-Setup "wikilink").
+Consult these guides: 
+* [Solo](https://gridcoin.us/Guides/boinc-install.htm)
+* [Pool](https://gridcoin.us/Guides/pool.htm)
 
 ## My CPID is not in the network, What do I do?
 
@@ -73,18 +74,6 @@ CPID isn't included after a few superblocks, try resending your beacon
 
 Lock your wallet again, but this time unlock it with "for staking only"
 ticked.
-
-## How long does it take to start receiving Research (Crunching) credit?
-
-This depends on several factors. You must have some coins, to begin with, the general recommendation currently is around 5000 (at the time of writing this that would stake on average about once a month). You must send a "beacon",
-this is how your information is populated into the Network which
-controls payments, see [Mining setup](Mining-Setup "wikilink"). You must
-have over 100 RAC on at least 1 whitelisted BOINC project before you can
-send a beacon to receive Research credit. After your CPID is in the
-Network, all research credits you earn will accrue in a "savings
-account" for a rolling 14 day period. You have up to 2 full weeks to
-stake a block without losing any research credit
-earned.
 
 ## What should I put in my config-file for Gridcoin-Research?
 
@@ -185,13 +174,6 @@ it.
 
 Yes. It means that those coins are currently on cooldown so they aren't able to stake for the next 16 hours.
 
-## I lose my stakeweight after receiving PoR? The "maturecoin-creationprocess" is starting again after each mined PoR?
-
-Yes that is normal because your node builds up a set of stakeable coins
-and once you stake them the process takes about 4 more hours to get new
-mature coins, unless some have been found in between (it's a constant
-process).
-
 ## Can I stake with an encrypted wallet?
 
 Yes, but you have to unlock it first. It's recommended to unlock it "for
@@ -250,8 +232,8 @@ propagate.
 ## I use BOINC with one username but on a few machines - is it enough to have one wallet with the proper boinc\_project\_email address, or do I have to have a separate wallet on each machine?
 
 You only need one wallet for each BOINC account/CPID (Cross Project
-Identifier). You can use an account manager to combine more
-projects in one CPID. Your reward is
+Identifier). Optionally, you can use an account manager to help maintain
+projects in under CPID and avoid CPID splits. Your reward is
 based on the credit on your CPID. You can point as many
 machines and resources to a single account as you want and only need a
 single wallet to receive your reward. You do have to set "email=" in the
@@ -385,7 +367,7 @@ The quick and easy way.
 2. Look for the walletbackups folder.
 3. Find the most recent backup.
 4. Shutdown the wallet
-5. Copy it to the the data directory and rename it to wallet.dat.
+5. Copy it to the data directory and rename it to wallet.dat.
 6. Restart the wallet.
 
 If it still doesn't start you can try using the -salvagewallet flag.
@@ -394,19 +376,20 @@ If it still doesn't start you can try using the -salvagewallet flag.
 
 ## I have lots of connections, but synchronizing stopped at a certain block. What should I do?
 
-Try this:
+Just try to just wait it out the wallet should automatically fix itself.
+
+If it still hasn't gone up after a few hours try this:
 
 1.  Close the client
 2.  Clean out your Gridcoin data folder EXCEPT for wallet.dat, your
     GridcoinResearch.conf file and the folders walletbackups and testnet, if present.
-3.  You can also get the snapshot [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip)
-    and extract it to the Gridcoin data folder.
+3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot which you can get [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
+
+You can also try running the wallet as an administrator.
 
 There is also an [official
 thread](https://cryptocointalk.com/topic/20303-gridcoin-proof-of-research-connection-sync-problem-thread/)
 for sync problem if it didn't work.
-
-You can also try running the wallet as an administrator.
 
 ## How could I test whether I am in sync with the network?
 
@@ -476,25 +459,6 @@ Start the client with the -testnet flag.
 
 Try running the client with "-rescan" or run the console command
 "repairwallet".
-
-## What needs to happen to be added to the chain as a newbie?
-
-1. All the normal prerequisites mentioned: RAC > 100 in at least 1 project, correct email in the
-gridcoinresearch.conf, being in a recognised team.
-
-2. A balance that is > 5000 GRC is recommended. Staking at a minimum of 16 hours so the
-stakeable coins are mature.
-
-3. The wallet has to be fully unlocked (untick "for staking only")
-until it automatically sends a beacon. You can force the wallet to do so
-once it recognizes your CPID. Go to the debug console and do
-`advertisebeacon`.
-
-4. Once #3 is fulfilled, that node should be in the Network
-within 25 hours.
-
-Check the balance first and see how long the node has been online. Let
-the wallet run as often as you can, as it will increase your chance of staking.
 
 ## How to get out of the loop of cycling app crashes (Microsoft Visual C++ Runtime Library Assertion failed)?
 
