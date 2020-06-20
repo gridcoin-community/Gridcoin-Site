@@ -382,6 +382,6 @@ body {
     margin-top: -76px;
     padding-top: 76px;
     z-index: -1;
- }
-/*These two things adjusts the anchors to account for the navbar and have the dropdown work properly on mobile  
+    /*This adjusts the anchors to account for the navbar and have the dropdown work properly on mobile  
 (doesn't change anything visually except where you scroll to on link#anchor)*/
+ }
