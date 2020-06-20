@@ -294,13 +294,14 @@ may take 24-48 hours for new accounts to be populated.
 
 ## What does "diff" exactly measure? What does it tell if it's high or low?
 
-Difficulty (diff) is a number that represents how hard the PoS
-algorithm has to work to keep block minting periods at a
-stable 90 seconds rate into the future.
+A staking hash that is generated that is LESS than the target will stake. So the smaller the target (higher the diff) the LOWER the probability of staking. 
 
-When a lot of wallets are eligible at the same time for a block the difficulty rises to slow down minting.
+This also means that diff is directly proportional to that average net coins staking on the network.
 
-In constrast, when not a lot of wallets are online to stake, the difficulty will drop to lure in miners to keep the blocks staking at an average of 90 seconds.
+TL;DR:
+When more coins are staking the difficulty increases which makes it harder to stake and vice versa.
+
+The formulas to calculate diff may be found in section 2.1 of the [bluepaper](https://www.gridcoin.world/GRC_V8_Bluepaper_ETTS%20final.pdf).
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
