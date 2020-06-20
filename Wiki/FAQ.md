@@ -298,10 +298,9 @@ Difficulty (diff) is a number that represents how hard the PoS
 algorithm has to work to keep block minting periods at a
 stable 90 seconds rate into the future.
 
-When a lot of researchers are eligible at the same time for a block,
-diff rises to slow down minting. In contrast, when no one is online
-mining, diff will drop to lure in miners to keep our blocks staking at
-once per 90 seconds.
+When a lot of wallets are eligible at the same time for a block the difficulty rises to slow down minting.
+
+In constrast, when not a lot of wallets are online to stake, the difficulty will drop to lure in miners to keep the blocks staking at an average of 90 seconds.
 
 ## How to call commands when starting Gridcoin Wallet on Windows?
 
