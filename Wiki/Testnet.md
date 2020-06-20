@@ -84,6 +84,10 @@ to do, feel free to ask a question on the channel
           there's not a standard type of build for MacOS as of the time of 
           writing
 
+5. Get Testnet Coins
+    * Testnet coins can be gotten from various users on `#testnet` on Slack.
+      Ask on that channel and give a testnet address for users to send coins to.
+
 # The Config File 
 **Make sure to change the `CHANGE_ME` value to something unique** (don't copy this line into the config)
 
