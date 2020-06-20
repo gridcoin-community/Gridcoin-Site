@@ -43,13 +43,8 @@ computational resources were still being wasted. The BOINC work was only
 used to measure the subsidy that was supposed to be minted with the
 block. Gridcoin-Research makes scrypt mining and Proof-of-Work hashing
 obsolete. With the change to Gridcoin-Research and the
-[Proof-of-Research](Proof-of-Research "wikilink") algorithm, nearly all
-of the energy goes to science; The compute power to secure the block
-chain is minimal. In the
-[Proof-of-Research](Proof-of-Research "wikilink") algorithm, the BOINC
-work is not only used to measure the subsidy and provide a unique
-alternative to classic work measuring Proof-of-Work schemes, but
-actually complements the security of the Proof-of-Stake system.
+Proof-of-Stake algorithm, nearly all of the energy goes to science; 
+The compute power to secure the block chain is minimal.
 
 ## Metrics
 
@@ -65,14 +60,14 @@ actually complements the security of the Proof-of-Stake system.
   - Reward: variable
   - Premined: 0%
 
-**Gridcoin-Research [Proof-of-Research](Proof-of-Research "wikilink")**
+**Gridcoin-Research Proof-of-Stake**
 
   - Launch: October 11th, 2014
   - By: Rob Halförd
-  - Algorithm: [Proof-of-Research](Proof-of-Research "wikilink"), Reward
-    based on Research contribution to BOINC secured via Proof-of-Stake
-  - Supply: See [Proof-of-Research](Proof-of-Research "wikilink"),
-    inflation target approximately 3% per year
+  - Algorithm: Proof of Stake. Reward based on 10 GRC + Research contribution to 
+    BOINC
+  - Supply: 10 new GRC per Block (~9600 GRC per day) and ~28000 new GRC per day 
+    from research rewards.
   - Block time: 90 Seconds
   - Premined: 0% - Initial distribution based on Proof-of-Burn from
     Gridcoin Classic - Research Foundation Block = 340,569,880
