@@ -135,8 +135,8 @@ Most of Gridcoin's config file flags and command line arguments are
 taken directly from Bitcoin, and you can find a list which explains a
 lot of these options here: <https://en.bitcoin.it/wiki/Running_Bitcoin>
 
-**debug=true**
-**debug=<category>**
+**debug=true**  
+**debug=\<category>**
 
 Let your node receive tons of extra messages in debug.log. From the 4.1.0.0
 release onward, logging can also be enabled by category. You can see a list
@@ -146,9 +146,9 @@ flags to these categories.
 
 Some Gridcoin specific other entries:
 
-**enablestakesplit=1**
-**stakingefficiency=<percentage between 75 and 98, defaults to 90>**
-**minstakesplitvalue=<value in GRC, minimum and defaults to 800>**
+**enablestakesplit=1**  
+**stakingefficiency=\<percentage between 75 and 98, defaults to 90>**  
+**minstakesplitvalue=\<value in GRC, minimum and defaults to 800>**
 
 enablestakesplit=1 will enable the automatic splitting of UTXO's in the
 coinstake transaction (stake outputs). Zero is the default (disabled).
@@ -166,8 +166,8 @@ the code uses 800 GRC. Note that the stake splitter uses a 160 block
 averaging interval for calculating the difficulty to smooth out the
 difficulty swings.
 
-**enablesidestaking=1**
-**sidestake=<address>,<allocation percentage>**
+**enablesidestaking=1**  
+**sidestake=\<address>,\<allocation percentage>**
 
 You can specify multiple sidetake entries, just like addnode or connect.
 Note that the total number of ouputs for the coinstake is limited
