@@ -174,7 +174,3 @@ Note that this is not an exhaustive list
 # Contacts
 
 General questions about testnet can often go on the `#testnet` channel on Slack.
-
-If you have specific concerns or questions, these can be directed to the testnet 
-coordinator. As of 2020, @Barton26 is the Gridcoin testnet coordinator. He helps 
-coordinate the testing of releases and generally helps monitor testnet.
