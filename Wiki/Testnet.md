@@ -6,7 +6,7 @@ layout: wiki
 # Introduction
 
 Testnet (test network) is a separate blockchain meant for testing new features 
-of Gridcoin. It helps catch issue before a release so they don't end up in the
+of Gridcoin. It helps catch issues before a release so they don't end up in the
 final versions. The coins on testnet don't have actual value since they are just 
 for testing purposes. Want to help test? See the [How To Help Section](#how-to-help) 
 for more info
@@ -14,7 +14,7 @@ for more info
 Secondarily it also can be used to help test scripts or services that interact 
 with Gridcoin without using real coins. This does not guarantee that your
 program will work on the main network (mainnet), but it can be helpful. Make sure 
-to note some of differences in the [Different To Mainnet Section](#difference-to-mainnet)
+to note some of differences in the [Difference To Mainnet Section](#difference-to-mainnet)
 
 # How To Help
 
@@ -176,5 +176,5 @@ Note that this is not an exhaustive list
 General questions about testnet can often go on the `#testnet` channel on Slack.
 
 If you have specific concerns or questions, these can be directed to the testnet 
-coordinated. As of 2020, @Barton26 is the Gridcoin testnet coordinator. He helps 
+coordinator. As of 2020, @Barton26 is the Gridcoin testnet coordinator. He helps 
 coordinate the testing of releases and generally helps monitor testnet.
