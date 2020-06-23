@@ -376,3 +376,12 @@ body {
      margin: 0px auto 16px auto;
      /* 16px gives spacing on the bottom on mobile when collapsed*/
  }
+
+ .docs-container h1, .docs-container h2, .docs-container h3, .docs-container h4, .docs-container h5, .docs-container h6{
+    position: relative;
+    margin-top: -76px;
+    padding-top: 76px;
+    z-index: -1;
+    /*This adjusts the anchors to account for the navbar and have the dropdown work properly on mobile  
+(doesn't change anything visually except where you scroll to on link#anchor)*/
+ }
