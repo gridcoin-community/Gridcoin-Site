@@ -1,0 +1,215 @@
+---
+title: Gridcoin Wiki
+layout: wiki-de
+---
+
+## Gridcoin Einführung
+
+Gridcoin (Ticker: GRC) ist eine dezentrale, mathematische,
+open source Kryptowährung (digitaler Vermögenswert). 
+Gridcoin ist, neben seiner Energieeffizienz, auch die
+erste und derzeit einzige Kryptowährung, die Einzelpersonen
+für wissenschafftliche Beiträge belohnt und peer-to-peer 
+Transaktionen kryptographisch vollzieht, ohne dabei auf 
+eine zentrale Instanz zur Verteilung der Belohnungen angewiesen 
+zu sein. Gridcoin ist das erste Blockchain Protokoll welches 
+einen funktionierenden Algorithmus zum Nachweis und Belohnung von 
+geleisteter [BOINC](https://en.wikipedia.org/wiki/Berkeley_Open_Infrastructure_for_Network_Computing)
+(Berkeley Open Infrastructure for Network Computing) Rechenarbeit,
+wobei es sich um quasi nahezu jeglichen Computerprozess handeln 
+kann, liefert.
+
+Durch die zur Verfügung gestellte Computerkapazitäten und den damit 
+ausgeführte Rechenprozessen bietet Gridcoin der Menschheit einen Nutzen. 
+Es gibt keine Einschränkungen für ein einzelnes BOINC Projekt, was zur
+Folge hat, dass so gut wie jeder Computervorgang belohnt werden kann.
+
+Einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) zufolge, wurde Gridcoin am 16. Oktober 2013 von 
+Rob Halförd gegründet.
+
+Die Coin entschädigt die "Miner" für ihren Beitrag in [BOINC](BOINC "wikilink")
+Projekten, welche Fortschritte in Bereichen wie Medizin, Biologie, 
+Mathematik, Klimaforschung, Partikel- oder Astrophysik erzielen können
+und somit erfolgreiche wissenschaftliche Arbeit für die Menschheit zur Folge 
+haben können.
+
+Gridcoin entlohnt die Nutzer für die Bereitstellung ihrer Computer, 
+indem es die Proof-of-Stake Methode anwendet. Diese ist im Gegensatz 
+zum rechenintensiven und somit hitzeerzeugenden Proof-of Work Algorithmus
+deutlich ressourcenschonender und energieeffizient. Gridcoin unterscheidet 
+sich von anderen wissenschaftlichen Kryptowährungen durch seine Fähigkeit, 
+viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer 
+wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die 
+"project whitelist", über welche die Community abstimmt, begrenzt.
+
+Es gab in der Vergangenheit einen Wechsel vom originalen [Gridcoin-Classic](Gridcoin-Classic "wikilink")
+zu "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen 
+Proof-of-Work Hybriden, wodurch die Computer die halbe Rechenzeit mit "Hashing" beschäftigte,
+während sie die andere Hälfte ihren Beitrag zur Wissenschaft leisteten; Zwar eine
+Verbesserung zu Bitcoin, es wurden aber immer noch Computerressourcen vergeudet.
+Die BOINC Arbeit wurde nur dazu genutzt, um die Beihilfe zu messen, welche mit dem
+Block geschürft wurde. 
+
+Gridcoin-Research macht verschlüsseltes Mining und Proof-of-Work hashing obsolet.
+Mit dem Wechsel zu Gridcoin-Research und damit zum Proof-of-Stake Algorithmus, wird
+nun nahezu die ganze Energie der wissenschaft übergeben. Die Rechenarbeit die jetzt
+zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
+
+
+
+## Metrics
+
+**[Gridcoin-Classic](Gridcoin-Classic "wikilink") - Retired**
+
+  - Start: 16. Oktober 2013
+  - Ende: 20. April 2015
+  - Von: Rob Halförd
+  - Algorithmus: Scrypt Proof-of-Work
+  - Angebot: 40 Million Approx.
+  - Block Zeit: 2.5 Minutes
+  - Retarget: Every 30 Minutes
+  - Belohnung: variabel
+  - Vorgefertigt: 0%
+
+**Gridcoin-Research Proof-of-Stake**
+
+  - Start: 11. Oktober 2014
+  - Von: Rob Halförd
+  - Algorithmus: Proof of Stake. Belohnung basierend auf 10 GRC + die geleistete
+    Forschungsarbeit auf BOINC
+  - Angebot: 10 GRC je neuem Block (~9600 GRC pro Tag) und ~28000 neue GRC für
+    Forschungsbelohnungen
+  - Block Zeit: 90 Seconds
+  - Vorgefertigt: 0% - Die anfängliche Verteilung basierte auf Proof-of-Burn von
+    Gridcoin Classic - Research Foundation Block = 340,569,880
+
+## P2P
+
+Gridcoin ermöglicht peer to peer (P2P) Transaktionen weltweit und nahezu in
+Echtzeit, wofür nur sehr geringe Gebühren fällig werden.
+Der Code ist open source und erlaubt es jedem am Erfolg und in der 
+Entwicklung teilzuhaben. Open Source ist in der Regel sicherer, da
+jeder den Code einsehen kann und ihn im Bedarf verbessern kann.
+
+Der Erfolg von BOINC beruht hauptsächlich auf seinem Credit System, welches
+einen Wettbewerb zwischen den Nutzern ermöglicht. Gridcoin erweitert dies,
+indem es einen austauschbaren Maßstab hinzufügt. Teilnehmer können nun
+ihren eigenen Beitrag einsehen und haben mit der Blockchain ein Dokument für
+den wissenschaftlichen Fortschritt.
+
+
+## Vergleich zu Bitcoin
+
+Bitcoin verbraucht geschätzt 59.31 TWh, laut
+[Digiconomist](https://digiconomist.net/bitcoin-energy-consumption).
+Diese Zahl wird zwar viel diskutiert, sie zeigt aber sicherlich, dass
+eine Menge Energie von Bitcoin's SHA-256 Algorithmus verbraucht wird.
+Diese Energie könnte für weitaus sinnvollere Kalkulationen verwendet werden.
+Gridcoin basiert auf Dem Protokoll von Bitcoin, sodass es effektiv mit
+normaler "Verbraucher-Hardware" geschürft werden kann.
+Es ist somit unwahrscheinlich, dass diese Hardware künftig durch spezialisierte
+ASIC Mining Chips ersetzt wird.
+
+Gridcoin Research basiert auf dem Proof-of-Stake Algorithmus, der deutlich
+energieeffizienter ist. Energieeffizienz wurde bereits bei der Veröffentlichung
+von Peercoin, der ersten Proof-of-Stake Coin, verkündet. Prof-of-Stake erlaubt es
+den Schürfern ihre Computerressourcen ganz der Wissenschaft zu widmen, anstatt
+sie zur Unterhaltung der Blockchain zu verschwenden.
+
+## Offizielle Seiten
+  <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
+  - [Website](https://gridcoin.us/)
+  - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
+  - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
+  - [SETIBZH](https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=)
+  - [Free-DC Stats](https://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin)
+  - [Statseb.fr Forum Badges](https://signature.statseb.fr/index.py?action=team_badge&teamid=100454)
+  - [Project Whitelist and Blacklist](https://gridcoin.ddns.net/pages/project-list.php)
+
+<!-- end list -->
+
+  - Block Explorer:
+      - [Gridcoinstats](https://gridcoinstats.eu/)
+      - [Gridcoin.network](https://gridcoin.network/)
+
+<!-- end list -->
+
+  - Quellcode:
+      - [Gridcoin-Research](https://github.com/gridcoin-community/Gridcoin-Research)
+      - [Gridcoin-Classic (**retired**)](https://github.com/gridcoin/Gridcoin-master)
+
+<!-- end list -->
+
+  - Weitere Quellen:
+      - [Gridcoin's GitHub community organization](https://github.com/gridcoin-community)
+          - [Website Development](https://github.com/gridcoin-community/Gridcoin-Site)
+          - [Gridcoin Tasks](https://github.com/gridcoin-community/Gridcoin-Tasks)
+          - [Marketing images](https://github.com/gridcoin-community/Gridcoin-Marketing)
+          - [Fan Site (Gridcoin Science)](https://gridcoin.science)
+
+<!-- end list -->
+
+  - Downloads:
+      - [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases)
+      - [Launchpad](https://launchpad.net/gridcoin)
+      - [AUR Qt](https://aur.archlinux.org/packages/gridcoinresearch-qt)
+      - [AUR daemon](https://aur.archlinux.org/packages/gridcoinresearchd/)
+
+<!-- end list -->
+
+  - Handelsplätze:
+      - [Txbit](https://txbit.io/Trade/GRC/BTC)
+      - [SouthXchange](https://www.southxchange.com/Market/Book/GRC/BTC)
+
+<!-- end list -->
+
+  - Weitere Trading Möglichkeiten:
+      - [MarketGrid](https://www.reddit.com/r/MarketGrid/)
+      - [Gridcoin-OTC Telegram](https://t.me/localgridcoins)
+      - [Gridcoin-OTC IRC](https://kiwiirc.com/client/irc.snoonet.org:6697/#gridcoin-otc)
+
+<!-- end list -->
+
+  - 3rd-Party Wallets:
+      - [Coinomi](https://coinomi.com/)
+      - [HolyTransaction](https://holytransaction.com/)
+
+<!-- end list -->
+
+  - Foren:
+      - [Cryptocurrencytalk](https://cryptocurrencytalk.com/forum/464-gridcoin-grc/)
+      - [Cryptocurrencytalk macOS](https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/)
+      - [Bitcointalk](https://bitcointalk.org/index.php?topic=324118.0)
+      - [Steemit](https://steemit.com/created/gridcoin)
+      - [Steemit Community](https://steemit.com/created/hive-161364)
+      - [Reddit](https://reddit.com/r/gridcoin)
+      - [Reddit (ru)](https://reddit.com/r/russiangridcoin)
+      - [Gridcoin Telegram](https://t.me/gridcoin)
+      - [Discord](https://discord.me/page/gridcoin)
+      - [Slack](https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTUzMmY0YjdiNzYxYzQ0MDc3MGE1NjQ3Nzg2NWMzZTUzMjAwZjdhMWI1YWUzMDE4YzQyZjVjMjMzOTc1M2RmMmM/)
+      - IRC: [#gridcoin](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin) and [#gridcoin-help](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin-help) on freenode.
+
+<!-- end list -->
+
+  - Soziale Medien:
+      - [Twitter](https://twitter.com/GridcoinNetwork)
+      - [YouTube](https://www.youtube.com/c/GridcoinNetwork)
+      - [Tumblr](https://gridcoin.tumblr.com/)
+      - [Facebook](https://facebook.com/gridcoins)
+
+  - Charts:
+      - [Coinmarketcap](https://coinmarketcap.com/currencies/gridcoin/)
+      - [CoinGecko](https://coingecko.com/en/coins/gridcoin-research)
+      - [CoinCap](http://www.coincap.io/GRC)
+      - [Github contributions](https://github.com/gridcoin-community/Gridcoin-Research/graphs/contributors)
+        
+<!-- end list -->
+
+  - Faucets (kostenlose GRC):
+    - [Freegridco.in](https://freegridco.in/)
+    - [Gridcoin Switzerland](https://gridcoin.ch/faucet)
+
+## Andere Wikis
+
+  - [Wikipedia](https://en.wikipedia.org/wiki/Gridcoin)
+  - [Russian Reddit Wiki](https://reddit.com/r/russiangridcoin/wiki/)
