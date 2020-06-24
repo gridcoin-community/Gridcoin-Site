@@ -27,7 +27,7 @@ Folge hat, dass so gut wie jeder Computervorgang belohnt werden kann.
 Einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) zufolge, wurde Gridcoin am 16. Oktober 2013 von 
 Rob Halförd gegründet.
 
-Die Coin entschädigt die "Miner" für ihren Beitrag in [BOINC](BOINC "wikilink")
+Die Coin entschädigt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
 Projekten, welche Fortschritte in Bereichen wie Medizin, Biologie, 
 Mathematik, Klimaforschung, Partikel- oder Astrophysik erzielen können
 und somit erfolgreiche wissenschaftliche Arbeit für die Menschheit zur Folge 
@@ -42,7 +42,7 @@ viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer
 wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die 
 "project whitelist", über welche die Community abstimmt, begrenzt.
 
-Es gab in der Vergangenheit einen Wechsel vom originalen [Gridcoin-Classic](Gridcoin-Classic "wikilink")
+Es gab in der Vergangenheit einen Wechsel vom originalen [Gridcoin-Classic](gridcoin-classic "wikilink")
 zu "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen 
 Proof-of-Work Hybriden, wodurch die Computer die halbe Rechenzeit mit "Hashing" beschäftigte,
 während sie die andere Hälfte ihren Beitrag zur Wissenschaft leisteten; Zwar eine
@@ -59,7 +59,7 @@ zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
 
 ## Metrics
 
-**[Gridcoin-Classic](Gridcoin-Classic "wikilink") - Retired**
+**[Gridcoin-Classic](gridcoin-classic "wikilink") - Retired**
 
   - Start: 16. Oktober 2013
   - Ende: 20. April 2015

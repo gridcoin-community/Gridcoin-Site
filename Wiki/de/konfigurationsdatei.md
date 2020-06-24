@@ -16,7 +16,7 @@ layout: wiki-de
 Hinweis: Der Eintrag *testnet=1* in der Konfigurationsdatei 
 wird nicht unterstüzt. Das Argument *-testnet* muß in der Kommandozeile definiert werden.
 In der Konfigurationsdatei führt das Schlüsselwort *testnet* zu einem unvorhersehbaren 
-Verhalten. Siehe [Testnet](Testnet "wikilink") für weitere Informationen.
+Verhalten. Siehe [Testnet](testnet "wikilink") für weitere Informationen.
 
 
 ## Standard Konfigurationsdatei
@@ -25,7 +25,7 @@ Verhalten. Siehe [Testnet](Testnet "wikilink") für weitere Informationen.
     ################ Beispiel der Datei gridcoinresearch.conf ###################
     #############################################################################
     ##
-    ## Für weiterführende Informationen siehe [Testnet](Testnet "wikilink")
+    ## Für weiterführende Informationen siehe [Testnet](testnet "wikilink")
     ##
     ## 	  Standardverzeichnis gridcoinresearch.conf :
     ##
@@ -118,10 +118,10 @@ Verhalten. Siehe [Testnet](Testnet "wikilink") für weitere Informationen.
 
 Der Client stellt ausgehende Verbindungen mit den Knoten (Nodes) der Liste 
 der angegebenen Addnodes her. Die Standardkonfiguration enthält keine Einträge.
-Eine vollständige Liste aktueller Addnodes  ist hier [List of Addnodes](Addnodes "wikilink") zu finden.
+Eine vollständige Liste aktueller Addnodes  ist hier [List of Addnodes](addnodes "wikilink") zu finden.
 
 Falls die Syncronisation fehlschlägt, überprüfe die Liste der Addnodes [List of
-Addnodes](Addnodes "wikilink").
+Addnodes](addnodes "wikilink").
 
 Die Liste der Addnodes, welche aus IP-Adressen besteht, darf keinen Eintrag mit der eigenen IP enthalten. Ein Eintrag eines Addnodes mit der eigenen IP führt zur Verbannung. 
 
