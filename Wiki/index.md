@@ -23,7 +23,7 @@ Gridcoin was launched on October 16th, 2013 by Rob Halförd, following an
 announcement on [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/).
 
 The coin compensates the coin miners (researchers) for participating in
-[BOINC](BOINC "wikilink") projects that may lead to advances in
+[BOINC](boinc "wikilink") projects that may lead to advances in
 medicine, biology, mathematics, science, climatology, particle and
 astrophysics, thus providing real benefits to humanity. Gridcoin
 compensates researchers for contributing computational power towards
@@ -35,7 +35,7 @@ is only limited by what is currently broadcast over the BOINC network,
 and the project whitelist decided upon by community consensus.
 
 There was a change from the original Gridcoin protocol
-([Gridcoin-Classic](Gridcoin-Classic "wikilink")) to Gridcoin-Research,
+([Gridcoin-Classic](gridcoin-classic "wikilink")) to Gridcoin-Research,
 the actual Gridcoin. Gridcoin-Classic used a hybrid Proof-of-Work which
 allowed each computer to spend half of the time hashing, and half of the
 time contributing to science; An improvement on Bitcoin, but

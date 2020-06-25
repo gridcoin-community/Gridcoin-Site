@@ -18,7 +18,7 @@ Almost all of your computing power can be directed at beneficial scientific and 
 research while crunching Gridcoin.
 
 See the list of [Advantages &
-Features](Advantages_&_Features "wikilink").
+Features](advantages&features "wikilink").
 
 ## How could 'useful' work for a cryptocurrency be verified without repeating the work or trusting a central server?
 
@@ -77,7 +77,7 @@ ticked.
 
 ## What should I put in my config-file for Gridcoin-Research?
 
-Please check [the config file page](Config-File "wikilink")
+Please check [the config file page](config-file "wikilink")
 
 ## How can I tell if I've mined a block?
 
@@ -451,7 +451,7 @@ Gridcoin Foundation and can no longer be claimed.
 
 Start the client with the -testnet flag.
 
-[More info can be found here.](Testnet "wikilink")
+[More info can be found here.](testnet "wikilink")
 
 # Troubleshoot
 

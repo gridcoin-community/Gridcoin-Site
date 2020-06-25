@@ -101,7 +101,7 @@ to do, feel free to ask a question on the channel
     ## TESTNET USERS MUST JOIN THE #testnet CHANNEL ON SLACK
     ##
     ## For further details on this configuration file please see:
-    ## https://gridcoin.us/Wiki/Cofig-File
+    ## https://gridcoin.us/wiki/config-file
     ##
     ## Default testnet gridcoinresearch.conf location:
     ##

@@ -16,7 +16,7 @@ layout: wiki
 Note: It is not supported to enter *testnet=1* flag into configuration
 file. It *must* be specified on the command line in the form of
 *-testnet* argument. Keyword testnet in configuration file has undefined
-behavior. See [Testnet](Testnet "wikilink") for more
+behavior. See [Testnet](testnet "wikilink") for more
     information.
 
 ## Basic Configuration File
@@ -25,7 +25,7 @@ behavior. See [Testnet](Testnet "wikilink") for more
     #################### Example gridcoinresearch.conf file #####################
     #############################################################################
     ##
-    ## For further details on this configuration file please see [Testnet](Testnet "wikilink")
+    ## For further details on this configuration file please see [Testnet](testnet "wikilink")
     ##
     ## Default gridcoinresearch.conf location:
     ##
@@ -40,7 +40,7 @@ behavior. See [Testnet](Testnet "wikilink") for more
     ####################### Required Settings (All OS's) ########################
     #############################################################################
 
-    ## Community provided list of addnodes available at [List of Addnodes](List-of-Addnodes "wikilink")
+    ## Community provided list of addnodes available at [List of Addnodes](addnodes "wikilink")
     #~~~~~Copy & Paste Addnodes here~~~~~
 
 
@@ -119,10 +119,10 @@ behavior. See [Testnet](Testnet "wikilink") for more
 The list of addnodes you provide are the nodes that your client will
 attempt to establish outbound connections with. The basic configuration
 file does not include addnodes. A full current list of addnodes can be
-found [List of Addnodes](Addnodes "wikilink")
+found [List of Addnodes](addnodes "wikilink")
 
 If your system fails to sync, check your [List of
-Addnodes](Addnodes "wikilink") against the current list.
+Addnodes](addnodes "wikilink") against the current list.
 
 Ensure you don't have an addnode=your own ip, or you will end up banning
 yourself (because when the node sends itself the first message, the
