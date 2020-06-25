@@ -132,7 +132,7 @@ Die meisten Einstellungen der Konfigurationsdatei und der Befehlszeilenargumente
 **debug=true**  
 **debug=\<Kategorie>**
 
-Diese Option erlaubt eine detaillierte Auflistung von sämtlichen Meldungen zum Debuggen. Ab der Version 4.1.0.0 besteht die Möglichkeit die Meldungen nach Katgorien zu sortieren. 
+Diese Option erlaubt eine detaillierte Auflistung von sämtlichen Meldungen zum Debuggen. Ab der Version 4.1.0.0 besteht die Möglichkeit, die Meldungen nach Katgorien zu sortieren. 
 Dieses Protokoll wird mit dem Kommando "logging" erstellt. 
 Hinweis: Derzeit sind nicht alle Kategorien verfügbar, da das Wallet von der traditionellen Protokollierung auf die kategorisierte Protokollierung umgestellt wird.
 
