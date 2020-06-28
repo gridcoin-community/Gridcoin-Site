@@ -53,14 +53,14 @@ Verhalten. Siehe [Testnet](testnet "wikilink") für weitere Informationen.
     email=
 
     ## Port 32749/TCP offen; erorderlich für eingehende Verbindungen 
-    ## (Deise Einstellung ist nicht zwingend notwendig, wird aber sehr empfohlen)
+    ## (Diese Einstellung ist nicht zwingend notwendig, wird aber sehr empfohlen)
     listen=1
 
     ## Erforderlich für Headless set-ups
     #daemon=1
 
     #############################################################################
-    ############# RPC Einstellungen fpr Fernzugriff und Headless Benutzer #######
+    ############# RPC Einstellungen für Fernzugriff und Headless Benutzer #######
     ############ Warnung: Nutze ein sicheres Passwort und schütze dein System ###
     #############################################################################
 
@@ -73,7 +73,7 @@ Verhalten. Siehe [Testnet](testnet "wikilink") für weitere Informationen.
 
     #############################################################################
     ######################## Optionale BOINC Einstellungen#######################
-    #### (wird benötigt falls BOINC mnicht im Standardverzeichnis liegt ) #######
+    #### (wird benötigt falls BOINC nicht im Standardverzeichnis installiert ist ) #######
     #############################################################################
 
     ## Windows (Hinweis: Die doppelten backslashes sind notwendig)
@@ -120,10 +120,10 @@ Der Client stellt ausgehende Verbindungen mit den Knoten (Nodes) der Liste
 der angegebenen Addnodes her. Die Standardkonfiguration enthält keine Einträge.
 Eine vollständige Liste aktueller Addnodes  ist hier [List of Addnodes](addnodes "wikilink") zu finden.
 
-Falls die Syncronisation fehlschlägt, überprüfe die Liste der Addnodes [List of
+Falls die Synchronisation fehlschlägt, überprüfe die Liste der Addnodes [List of
 Addnodes](addnodes "wikilink").
 
-Die Liste der Addnodes, welche aus IP-Adressen besteht, darf keinen Eintrag mit der eigenen IP enthalten. Ein Eintrag eines Addnodes mit der eigenen IP führt zur Verbannung. 
+Die Liste der Addnodes, welche aus IP-Adressen besteht, darf keinen Eintrag mit der eigenen IP enthalten. Ein Eintrag eines Addnodes mit der eigenen IP führt dazu, dass der eigene Client im Netzwerk blockiert wird. 
 
 ## Weitere Einträge
 
@@ -144,7 +144,7 @@ Weitere Gridcoin spezifische Einstellungen:
 
 enablestakesplit=1 aktiviert die automatische Aufspaltung von UXTO's in den Coinstake-Tranaktionen (stake output). Null ist die Standardeinstellung, also deaktiviert. 
 
-stakingefficiency=xx Wird als Integer Zahl angegeben und entpricht der gewünschten Stake Effizienz. Dieser Wert wird durch den Programmcode kontrolliert auf Werte von 75% bis 98% beschränkt, falls unsinnige Werte angegeben werden.
+stakingefficiency=xx Wird als ganze Zahl angegeben und entpricht der gewünschten Stake Effizienz. Dieser Wert wird durch den Programmcode kontrolliert auf Werte von 75% bis 98% beschränkt, falls unsinnige Werte angegeben werden.
 
 minstakesplitvalue=xxx Dieser Wert wird als Integer Zahl angegeben und definiert die kleinste UTXO Größe nach dem Teilen um eine sekundäre Kontrolle der UTXO  Größe zu ermöglichen. Wenn der Schwierigkeitsgrad sinkt, es aber eine hohe Effizienz angegeben wird, würde allein die Effizienz die UTXO in kleinere Mengen aufteilen als es gewünscht ist. Dies wird hierdurch verhindert. Falls ein Benutzer weniger als 800 GRC angibt, greift der Programmcode ein und setzt den Wert automatisch auf 800 GRC. Zur Berechnung der Schwierigkeit und Glättung der Schwierigkeisschwankungen wird ein Mittelwert über 160 Blöcke gebildet. .
 

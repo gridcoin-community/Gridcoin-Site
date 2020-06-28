@@ -21,11 +21,9 @@ kann, liefert.
 
 Durch die zur Verfügung gestellte Computerkapazitäten und den damit 
 ausgeführte Rechenprozessen bietet Gridcoin der Menschheit einen Nutzen. 
-Es gibt keine Einschränkungen für ein einzelnes BOINC Projekt, was zur
-Folge hat, dass so gut wie jeder Computervorgang belohnt werden kann.
+Prinzipiell gibt es keine Einschränkungen, für welche BOINC Projekte Nutzer mit Gridcoins belohnt werden können. Gridcoin nutzt jedoch eine Whitelist und es lassen sich nur mit Projekten auf der Whitelist Gridcoins verdienen. Um ein Projekt auf die Whitelist zu bringen, kann eine dezentrale Abstimmung auf der Blockchain gestartet werden. Ist die Mehrheit der Nutzer dafür, so wird das Projekt in die Whitelist aufgenommen.
 
-Einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) zufolge, wurde Gridcoin am 16. Oktober 2013 von 
-Rob Halförd gegründet.
+Gridcoin wurde am 16. Oktober 2013 von einem anonymen Programmierer mit dem Pseudonym Rob Halförd gegründet, wie man einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) entnehmen kann.
 
 Die Coin entschädigt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
 Projekten, welche Fortschritte in Bereichen wie Medizin, Biologie, 
@@ -33,11 +31,11 @@ Mathematik, Klimaforschung, Partikel- oder Astrophysik erzielen können
 und somit erfolgreiche wissenschaftliche Arbeit für die Menschheit zur Folge 
 haben können.
 
-Gridcoin entlohnt die Nutzer für die Bereitstellung ihrer Computer, 
-indem es die Proof-of-Stake Methode anwendet. Diese ist im Gegensatz 
+Neue Blöcke werden in Gridcoin durch den Proof of Stake Mechanismus generiert.
+Diese ist im Gegensatz 
 zum rechenintensiven und somit hitzeerzeugenden Proof-of Work Algorithmus
 deutlich ressourcenschonender und energieeffizient. Gridcoin unterscheidet 
-sich von anderen wissenschaftlichen Kryptowährungen durch seine Fähigkeit, 
+sich von anderen Kryptowährungen mit dem Ziel das Mining für sinnvolle Berechnungen zu nutzen, durch seine Fähigkeit, 
 viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer 
 wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die 
 "project whitelist", über welche die Community abstimmt, begrenzt.
@@ -50,9 +48,9 @@ Verbesserung zu Bitcoin, es wurden aber immer noch Computerressourcen vergeudet.
 Die BOINC Arbeit wurde nur dazu genutzt, um die Beihilfe zu messen, welche mit dem
 Block geschürft wurde. 
 
-Gridcoin-Research macht verschlüsseltes Mining und Proof-of-Work hashing obsolet.
+Gridcoin-Research macht Proof of Work überflüssig.
 Mit dem Wechsel zu Gridcoin-Research und damit zum Proof-of-Stake Algorithmus, wird
-nun nahezu die ganze Energie der wissenschaft übergeben. Die Rechenarbeit die jetzt
+nun nahezu die ganze Energie für wissenschaftliche Berechnungen verwendet. Die Rechenarbeit, die jetzt
 zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
 
 
@@ -87,15 +85,10 @@ zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
 
 Gridcoin ermöglicht peer to peer (P2P) Transaktionen weltweit und nahezu in
 Echtzeit, wofür nur sehr geringe Gebühren fällig werden.
-Der Code ist open source und erlaubt es jedem am Erfolg und in der 
-Entwicklung teilzuhaben. Open Source ist in der Regel sicherer, da
+Der Code ist open source und erlaubt es jedem, an der Entwicklung mitzuarbeiten. Open Source ist in der Regel sicherer, da
 jeder den Code einsehen kann und ihn im Bedarf verbessern kann.
 
-Der Erfolg von BOINC beruht hauptsächlich auf seinem Credit System, welches
-einen Wettbewerb zwischen den Nutzern ermöglicht. Gridcoin erweitert dies,
-indem es einen austauschbaren Maßstab hinzufügt. Teilnehmer können nun
-ihren eigenen Beitrag einsehen und haben mit der Blockchain ein Dokument für
-den wissenschaftlichen Fortschritt.
+BOINC nutzt ein Credit System, welches Nutzer dazu anspornt, Rechenleistung zu spenden. Die Credits erlauben es dann, sich mit anderen Nutzern zu vergleichen. Gridcoin fügt dem ganzen nun noch einen finanziellen Anreiz hinzu. Je mehr Rechenleistung jemand spendet, desto mehr Gridcoins verdient er damit.
 
 
 ## Vergleich zu Bitcoin
@@ -110,11 +103,8 @@ normaler "Verbraucher-Hardware" geschürft werden kann.
 Es ist somit unwahrscheinlich, dass diese Hardware künftig durch spezialisierte
 ASIC Mining Chips ersetzt wird.
 
-Gridcoin Research basiert auf dem Proof-of-Stake Algorithmus, der deutlich
-energieeffizienter ist. Energieeffizienz wurde bereits bei der Veröffentlichung
-von Peercoin, der ersten Proof-of-Stake Coin, verkündet. Prof-of-Stake erlaubt es
-den Schürfern ihre Computerressourcen ganz der Wissenschaft zu widmen, anstatt
-sie zur Unterhaltung der Blockchain zu verschwenden.
+Gridcoin Research basiert auf dem Proof of Stake Algorithmus, der deutlich
+energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätzlich Gridcoins verdienen, wenn sie mit ihrer Rechenleistung BOINC Projekte unterstützen.
 
 ## Offizielle Seiten
   <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
