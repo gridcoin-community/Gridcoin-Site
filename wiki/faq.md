@@ -1,6 +1,8 @@
 ---
 title: FAQ
 layout: wiki
+redirect_from:
+  - "/Wiki/FAQ"
 ---
 
 # Frequently Asked Questions

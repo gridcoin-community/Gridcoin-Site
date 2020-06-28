@@ -1,7 +1,12 @@
 ---
 title: Gridcoin Wiki
 layout: wiki
+redirect_from:
+  - "/Wiki/"
 ---
+{% comment %} Redirects (redirect_from) are on pages that existed when the wiki used /Wiki/* instead of /wiki/* {% endcomment %}
+{% comment %} Or on pages replaced other pages on the website. {% endcomment %}
+
 
 ## Gridcoin Introduction
 

@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Testnet
 layout: wiki
+redirect_from:
+  - "/Wiki/Testnet"
 ---
 
 # Introduction

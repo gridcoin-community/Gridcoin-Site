@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Konfigurationsdatei
 layout: wiki-de
+redirect_from:
+  - "/Wiki/de/konfigurationsdatei"
 ---
 
 ## Standardverzeichnis der Datei gridcoinresearch.conf 

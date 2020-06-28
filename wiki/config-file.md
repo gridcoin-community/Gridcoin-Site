@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Config File
 layout: wiki
+redirect_from:
+  - "/Wiki/Config-File"
 ---
 
 ## Default gridcoinresearch.conf location

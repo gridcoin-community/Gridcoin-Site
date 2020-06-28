@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Addnodes
 layout: wiki
+redirect_from:
+  - "/Wiki/Addnodes"
 ---
 
 
