@@ -5,7 +5,7 @@ layout: wiki-de
 
 ## Gridcoin Einführung
 
-Gridcoin (Ticker: GRC) ist eine dezentrale, mathematische,
+Gridcoin (Ticker: GRC) ist eine dezentrale,
 open source Kryptowährung (digitaler Vermögenswert). 
 Gridcoin ist, neben seiner Energieeffizienz, auch die
 erste und derzeit einzige Kryptowährung, die Einzelpersonen
