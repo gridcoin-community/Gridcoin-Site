@@ -98,8 +98,8 @@ Bitcoin verbraucht geschätzt 59.31 TWh, laut
 Diese Zahl wird zwar viel diskutiert, sie zeigt aber sicherlich, dass
 eine Menge Energie von Bitcoin's SHA-256 Algorithmus verbraucht wird.
 Diese Energie könnte für weitaus sinnvollere Kalkulationen verwendet werden.
-Gridcoin basiert auf Dem Protokoll von Bitcoin, sodass es effektiv mit
-normaler "Verbraucher-Hardware" geschürft werden kann.
+Gridcoin basiert auf dem Protokoll von Bitcoin und kann mit
+normaler "Verbraucher-Hardware" geschürft werden.
 Es ist somit unwahrscheinlich, dass diese Hardware künftig durch spezialisierte
 ASIC Mining Chips ersetzt wird.
 
