@@ -5,7 +5,7 @@ layout: wiki-de
 
 ## Gridcoin Einführung
 
-Gridcoin (Ticker: GRC) ist eine dezentrale,
+Gridcoin (Ticker: GRC) ist eine dezentrale
 open source Kryptowährung (digitaler Vermögenswert). 
 Gridcoin ist, neben seiner Energieeffizienz, auch die
 erste und derzeit einzige Kryptowährung, die Einzelpersonen
@@ -19,13 +19,13 @@ geleisteter [BOINC](https://en.wikipedia.org/wiki/Berkeley_Open_Infrastructure_f
 wobei es sich um quasi nahezu jeglichen Computerprozess handeln 
 kann, liefert.
 
-Durch die zur Verfügung gestellte Computerkapazitäten und den damit 
-ausgeführte Rechenprozessen bietet Gridcoin der Menschheit einen Nutzen. 
+Durch die zur Verfügung gestellte Rechenzeit und den damit 
+ausgeführten Berechnungen bietet Gridcoin einen Mehrwert. 
 Prinzipiell gibt es keine Einschränkungen, für welche BOINC Projekte Nutzer mit Gridcoins belohnt werden können. Gridcoin nutzt jedoch eine Whitelist und es lassen sich nur mit Projekten auf der Whitelist Gridcoins verdienen. Um ein Projekt auf die Whitelist zu bringen, kann eine dezentrale Abstimmung auf der Blockchain gestartet werden. Ist die Mehrheit der Nutzer dafür, so wird das Projekt in die Whitelist aufgenommen.
 
 Gridcoin wurde am 16. Oktober 2013 von einem anonymen Programmierer mit dem Pseudonym Rob Halförd gegründet, wie man einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) entnehmen kann.
 
-Die Coin entschädigt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
+Die Coin belohnt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
 Projekten, welche Fortschritte in Bereichen wie Medizin, Biologie, 
 Mathematik, Klimaforschung, Partikel- oder Astrophysik erzielen können
 und somit erfolgreiche wissenschaftliche Arbeit für die Menschheit zur Folge 
@@ -34,14 +34,14 @@ haben können.
 Neue Blöcke werden in Gridcoin durch den Proof of Stake Mechanismus generiert.
 Diese ist im Gegensatz 
 zum rechenintensiven und somit hitzeerzeugenden Proof-of Work Algorithmus
-deutlich ressourcenschonender und energieeffizient. Gridcoin unterscheidet 
+ ressourcenschonender und deutlich energieeffizienter. Gridcoin unterscheidet 
 sich von anderen Kryptowährungen mit dem Ziel das Mining für sinnvolle Berechnungen zu nutzen, durch seine Fähigkeit, 
 viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer 
 wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die 
 "project whitelist", über welche die Community abstimmt, begrenzt.
 
-Es gab in der Vergangenheit einen Wechsel vom originalen [Gridcoin-Classic](gridcoin-classic "wikilink")
-zu "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen 
+Es gab in der Vergangenheit einen Wechsel vom ursprünglichen [Gridcoin-Classic](gridcoin-classic "wikilink")
+zum "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen 
 Proof-of-Work Hybriden, wodurch die Computer die halbe Rechenzeit mit "Hashing" beschäftigte,
 während sie die andere Hälfte ihren Beitrag zur Wissenschaft leisteten; Zwar eine
 Verbesserung zu Bitcoin, es wurden aber immer noch Computerressourcen vergeudet.
@@ -50,9 +50,7 @@ Block geschürft wurde.
 
 Gridcoin-Research macht Proof of Work überflüssig.
 Mit dem Wechsel zu Gridcoin-Research und damit zum Proof-of-Stake Algorithmus, wird
-nun nahezu die ganze Energie für wissenschaftliche Berechnungen verwendet. Die Rechenarbeit, die jetzt
-zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
-
+nun nahezu die vollständige Rechenleistung der Wissenschaft zur Verfügung gestellt. Der Anteil der Berechnung welcher 
 
 
 ## Metrics
@@ -86,7 +84,7 @@ zur Auffrechterhaltung der Blockchain notwendig ist, ist minimal.
 Gridcoin ermöglicht peer to peer (P2P) Transaktionen weltweit und nahezu in
 Echtzeit, wofür nur sehr geringe Gebühren fällig werden.
 Der Code ist open source und erlaubt es jedem, an der Entwicklung mitzuarbeiten. Open Source ist in der Regel sicherer, da
-jeder den Code einsehen kann und ihn im Bedarf verbessern kann.
+jeder den Code einsehen kann und ihn bei Bedarf verbessern kann.
 
 BOINC nutzt ein Credit System, welches Nutzer dazu anspornt, Rechenleistung zu spenden. Die Credits erlauben es dann, sich mit anderen Nutzern zu vergleichen. Gridcoin fügt dem ganzen nun noch einen finanziellen Anreiz hinzu. Je mehr Rechenleistung jemand spendet, desto mehr Gridcoins verdient er damit.
 
@@ -187,7 +185,7 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
       - [Tumblr](https://gridcoin.tumblr.com/)
       - [Facebook](https://facebook.com/gridcoins)
 
-  - Charts:
+  - Übersichten, Statistiken und Marktkapitalisierung:
       - [Coinmarketcap](https://coinmarketcap.com/currencies/gridcoin/)
       - [CoinGecko](https://coingecko.com/en/coins/gridcoin-research)
       - [CoinCap](http://www.coincap.io/GRC)

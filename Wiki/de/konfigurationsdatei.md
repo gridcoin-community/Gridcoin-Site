@@ -48,7 +48,7 @@ Verhalten. Siehe [Testnet](testnet "wikilink") für weitere Informationen.
 
     ## E-Mailadresse des BOINC Kontos
     ## Leer lassen oder INVESTOR eintragen um im Pool zu rechnen oder im Investormodus zu agieren
-    ## Hinweis: Das Feld PrimaryCPID ist ceraltet und wird seit der Version Denise 
+    ## Hinweis: Das Feld PrimaryCPID ist veraltet und wird seit der Version Denise 
 	## nicht mehr unterstützt.
     email=
 
