@@ -33,24 +33,23 @@ haben können.
 
 Neue Blöcke werden in Gridcoin durch den Proof of Stake Mechanismus generiert.
 Diese ist im Gegensatz 
-zum rechenintensiven und somit hitzeerzeugenden Proof-of Work Algorithmus
- ressourcenschonender und deutlich energieeffizienter. Gridcoin unterscheidet 
-sich von anderen Kryptowährungen mit dem Ziel das Mining für sinnvolle Berechnungen zu nutzen, durch seine Fähigkeit, 
-viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer 
-wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die 
+zum rechenintensiven Proof of Work Algorithmus
+ressourcenschonender und deutlich energieeffizienter. Gridcoin unterscheidet
+sich von anderen Kryptowährungen mit dem Ziel das Mining für sinnvolle Berechnungen zu nutzen, durch seine Fähigkeit,
+viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer
+wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die
 "project whitelist", über welche die Community abstimmt, begrenzt.
 
 Es gab in der Vergangenheit einen Wechsel vom ursprünglichen [Gridcoin-Classic](gridcoin-classic "wikilink")
-zum "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen 
-Proof-of-Work Hybriden, wodurch die Computer die halbe Rechenzeit mit "Hashing" beschäftigte,
-während sie die andere Hälfte ihren Beitrag zur Wissenschaft leisteten; Zwar eine
-Verbesserung zu Bitcoin, es wurden aber immer noch Computerressourcen vergeudet.
-Die BOINC Arbeit wurde nur dazu genutzt, um die Beihilfe zu messen, welche mit dem
-Block geschürft wurde. 
+zum "Gridcoin-Research", der eigentlichen Gridcoin. Gridcoin-Classic nutzte einen
+Proof of Work Hybriden, wodurch die Computer die Hälfte ihrer Rechenzeit ihren
+Beitrag zur Wissenschaft leisteten und die andere Hälfte mit "Hashing" verbrachten.
+Zwar eine Verbesserung zu Bitcoin, aber es wurden immer noch Computerressourcen
+vergeudet.
 
 Gridcoin-Research macht Proof of Work überflüssig.
 Mit dem Wechsel zu Gridcoin-Research und damit zum Proof-of-Stake Algorithmus, wird
-nun nahezu die vollständige Rechenleistung der Wissenschaft zur Verfügung gestellt. Der Anteil der Berechnung welcher 
+nun nahezu die vollständige Rechenleistung der Wissenschaft zur Verfügung gestellt. Der Anteil der Berechnung welcher
 
 
 ## Metrics
@@ -151,7 +150,7 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
 
 <!-- end list -->
 
-  - Weitere Trading Möglichkeiten:
+  - Weitere Möglichkeiten zum Handeln von GRC:
       - [MarketGrid](https://www.reddit.com/r/MarketGrid/)
       - [Gridcoin-OTC Telegram](https://t.me/localgridcoins)
       - [Gridcoin-OTC IRC](https://kiwiirc.com/client/irc.snoonet.org:6697/#gridcoin-otc)
