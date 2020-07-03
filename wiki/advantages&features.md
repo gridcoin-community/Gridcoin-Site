@@ -39,7 +39,22 @@ needing to fork and split the community.
 
 ### Comparison to CureCoin
 
+One advantage is how Gridcoin rewards many different projects while CureCoin only 
+rewards folding@home and no other project. Gridcoin is designed around rewarding 
+BOINC projects which allows it to reward many existing and any newly created BOINC
+projects instead of just one project (folding@home) that doesn't use BOINC. This 
+allows for more areas of study rewarded and more scientists running 
+and starting projects. 
 
+Secondly, CureCoin's system uses Proof of Work which makes it use much more power 
+and energy on the network instead of on the Science. Gridcoin uses Proof of Stake
+which is much more energy efficient and makes the vast majority of the computation 
+involved with Gridcoin useful scientific work.
+
+Third, Gridcoin has more active development and community. For comparison
+[here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
+is Gridcoin's development activity in the last month and [here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
+is CureCoin's. 
 
 ### Comparison to Byteball
 
