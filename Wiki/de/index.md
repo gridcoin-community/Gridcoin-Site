@@ -94,8 +94,8 @@ BOINC nutzt ein Credit System, welches Nutzer dazu anspornt, Rechenleistung zu s
 Bitcoin verbraucht geschätzt 59.31 TWh, laut
 [Digiconomist](https://digiconomist.net/bitcoin-energy-consumption).
 Diese Zahl wird zwar viel diskutiert, sie zeigt aber sicherlich, dass
-eine Menge Energie von Bitcoin's SHA-256 Algorithmus verbraucht wird.
-Diese Energie könnte für weitaus sinnvollere Kalkulationen verwendet werden.
+eine Menge Rechenleistung von Bitcoins SHA-256 Algorithmus verbraucht wird.
+Diese Rechenleistung könnte für weitaus sinnvollere Berechnungen verwendet werden.
 Gridcoin basiert auf dem Protokoll von Bitcoin und kann mit
 normaler "Verbraucher-Hardware" geschürft werden.
 Es ist somit unwahrscheinlich, dass diese Hardware künftig durch spezialisierte
