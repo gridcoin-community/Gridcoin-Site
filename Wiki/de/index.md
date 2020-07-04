@@ -35,8 +35,8 @@ Neue Blöcke werden in Gridcoin durch den Proof of Stake Mechanismus generiert.
 Diese ist im Gegensatz 
 zum rechenintensiven Proof of Work Algorithmus
 ressourcenschonender und deutlich energieeffizienter. Gridcoin unterscheidet
-sich von anderen Kryptowährungen mit dem Ziel das Mining für sinnvolle Berechnungen zu nutzen, durch seine Fähigkeit,
-viele verschiedene Arten von Projekten unterstützen zu können. Die Zahl derer
+sich von anderen wissenschaftlichen Kryptowährungen durch die Möglichkeit,
+viele verschiedene Projekte zu unterstützen. Die Zahl derer
 wird im Grunde nur durch die momentan aktiven BOINC Projekte und durch die
 "project whitelist", über welche die Community abstimmt, begrenzt.
 
