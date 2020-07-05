@@ -26,10 +26,8 @@ Prinzipiell gibt es keine Einschränkungen, für welche BOINC Projekte Nutzer mi
 Gridcoin wurde am 16. Oktober 2013 von einem anonymen Programmierer mit dem Pseudonym Rob Halförd gegründet, wie man einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) entnehmen kann.
 
 Die Coin belohnt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
-Projekten, welche Fortschritte in Bereichen wie Medizin, Biologie, 
-Mathematik, Klimaforschung, Partikel- oder Astrophysik erzielen können
-und somit erfolgreiche wissenschaftliche Arbeit für die Menschheit zur Folge 
-haben können.
+Projekten für Medizin, Biologie, Mathematik, Klimaforschung, Partikel- oder Astrophysik.
+Die "Miner" unterstützen damit erfolgreich wissenschaftliche Forschung.
 
 Neue Blöcke werden in Gridcoin durch den Proof of Stake Mechanismus generiert.
 Diese ist im Gegensatz 
