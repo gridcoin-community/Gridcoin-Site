@@ -7,17 +7,13 @@ layout: wiki-de
 
 Gridcoin (Ticker: GRC) ist eine dezentrale
 open source Kryptowährung (digitaler Vermögenswert). 
-Gridcoin ist, neben seiner Energieeffizienz, auch die
-erste und derzeit einzige Kryptowährung, die Einzelpersonen
-für wissenschafftliche Beiträge belohnt und peer-to-peer 
-Transaktionen kryptographisch vollzieht, ohne dabei auf 
-eine zentrale Instanz zur Verteilung der Belohnungen angewiesen 
-zu sein. Gridcoin ist das erste Blockchain Protokoll welches 
-einen funktionierenden Algorithmus zum Nachweis und Belohnung von 
-geleisteter [BOINC](https://en.wikipedia.org/wiki/Berkeley_Open_Infrastructure_for_Network_Computing)
-(Berkeley Open Infrastructure for Network Computing) Rechenarbeit,
-wobei es sich um quasi nahezu jeglichen Computerprozess handeln 
-kann, liefert.
+Das Erstellen von neuen Blöcken auf der Gridcoin Blockchain ist dank der Verwendung
+des Proof of Stake Konsensus-Mechanismus sehr energieeffizient. Gridcoin ist die
+erste und derzeit einzige Kryptowährung, die Einzelpersonen dafür belohnt, dass
+sie ihre Rechenleistung für wissenschafftliche Forschung zur Verfügung stellen.
+Dabei werden alle Transaktionen kryptographisch sicher und ohne eine zentrale Instanz abgewickelt.
+Nutzer, die ihre Rechenleistung [BOINC Projekten](https://en.wikipedia.org/wiki/Berkeley_Open_Infrastructure_for_Network_Computing)
+(Berkeley Open Infrastructure for Network Computing) zur Verfügung stellen, können damit Gridcoins verdienen
 
 Durch die zur Verfügung gestellte Rechenzeit und den damit 
 ausgeführten Berechnungen bietet Gridcoin einen Mehrwert. 
