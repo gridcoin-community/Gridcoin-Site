@@ -45,8 +45,8 @@ Proof-of-Stake.
 ## How do I start crunching?
 
 Consult these guides: 
-* [Solo](https://gridcoin.us/Guides/boinc-install.htm)
-* [Pool](https://gridcoin.us/Guides/pool.htm)
+* [Solo](../guides/boinc-install.htm)
+* [Pool](../guides/pool.htm)
 
 ## My CPID is not in the network, What do I do?
 
