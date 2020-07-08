@@ -43,7 +43,8 @@ vergeudet.
 
 Gridcoin-Research macht Proof of Work überflüssig.
 Mit dem Wechsel zu Gridcoin-Research und damit zum Proof-of-Stake Algorithmus, wird
-nun nahezu die vollständige Rechenleistung der Wissenschaft zur Verfügung gestellt. Der Anteil der Berechnung welcher
+nun nahezu die vollständige Rechenleistung der Wissenschaft zur Verfügung gestellt. Der Anteil der 
+Rechenleistung welcher der Sicherung der Blockchain dient, ist gering.
 
 
 ## Metrics
