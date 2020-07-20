@@ -361,16 +361,6 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     and or incorrect balances. `[minconf]` is ignored. `[comment]` is just a 
     comment
 
-* rain `[UniValue](UniValue::VARR)`
-  * *Requires the wallet to be fully unlocked*
-
-  * Rains Gridcoin to a list of a addresses. If you are looking to rain to 
-    crunchers of a project, use rainbymagnitude instead . Addresses and amounts 
-    should be given as a single string like this `ADDRESS<COL>AMOUNT<ROW>`. Note 
-    that there is not any closing tag (`</>`) with COL or ROW. On success it 
-    will return `Rain successful: Sent AMOUNT.` where `AMOUNT` is the amount 
-    sent. 
-
 * rainbymagnitude `<whitelisted project> <amount> [message]`
   * *Requires the wallet to have converged scraper statistics* 
 
@@ -545,31 +535,18 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * magnitude <cpid>
 * myneuralhash
 * neuralhash
-* neuralreport
 * resetcpids
 * staketime
 * superblockage
 * superblocks [lookback [displaycontract [cpid]]]
-* syncdpor2
-* upgradedbeaconreport
-
 
 ## Developer
 
 * addkey <action> <keytype> <keyname> <keyvalue>
-* archivescraperlog takes no arguments and results in immediate archiving of the scraper log
 * currentcontractaverage
 * debug <bool>
-* debug10 <bool>
-* debug2 <bool>
-* debug3 <bool>
-* debug4 <bool>
-* debugnet <bool>
 * deletecscrapermanifest <hash>
-* dportally
 * exportstats1 [maxblocks agregate [endblock]] 
-* forcequorum
-* gatherneuralhashes
 * getblockstats mode [startheight [endheight]]
 * getlistof <keytype>
 * getmpart <hash>
@@ -578,9 +555,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * listdata <keytype>
 * listmanifests [bool details]
 * listprojects
-* memorizekeys
 * network
-* neuralrequest
 * projects
 * readconfig
 * readdata <key>
@@ -590,12 +565,8 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
 * sendalert2 <privatekey> <id> <subverlist> <cancellist> <expire> <priority> <message>
 * sendblock <blockhash>
-* sendrawcontract <contract>
 * sendscraperfilemanifest
 * superblockaverage
-* tally
-* tallyneural
-* testnewcontract
 * testnewsb
 * versionreport
 * writedata <key> <value>
