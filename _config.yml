@@ -29,6 +29,7 @@ destination: build
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from #run after sitemap to not include redirects in sitemap.xml
   
 #
 # Front Matter Defaults

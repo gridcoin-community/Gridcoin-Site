@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Wiki
 layout: wiki-de
+redirect_from:
+  - "/Wiki/de"
 ---
 
 ## Gridcoin Einführung

@@ -1,6 +1,8 @@
 ---
 title: Gridcoin Scraper 
 layout: wiki
+redirect_from:
+  - "/Wiki/Scraper"
 ---
 
 The Scraper as described below meets or exceeds the definition of a blockchain Oracle and as such the Scraper system is being renamed the Gridcoin Oracle. See https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841 and https://cryptobriefing.com/what-is-blockchain-oracle/.

@@ -1,6 +1,9 @@
 ---
 title: RPC Commands
 layout: wiki
+redirect_from:
+  - "/Dev/rpc-reference.htm"
+  - "/Wiki/RPC"
 ---
 
 Enter RPC commands in the console visible at menu help - debug window -
