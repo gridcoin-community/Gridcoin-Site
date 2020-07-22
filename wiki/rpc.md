@@ -530,6 +530,77 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     network from your CPID.
     
 * getmininginfo
+  * {% include _start_dropdown.htm
+      dropdown-header="Returns JSON with information related to staking (click to expand)"
+    %}
+    * `blocks` --- Current block the wallet is on
+
+    * `stakeweight` --- Amount of balance that's staking
+
+      * combined --- Total weight of your coins staking
+
+      * value --- The amount in GRC of your coins staking
+
+    * `netstakeweight` --- Estimate of the network's total stake weight
+
+    * `netstakingGRCvalue` --- Estimate of the total amount of the network that is staking
+
+    * `staking` --- True/False on wether or not you are staking
+
+    * `mining-error` --- Reason why the wallet is not staking. Value is `None` if there are no problem
+
+    * `time-to-stake_days` --- Estimated number of days it will take to stake with ~63% chance of occurring
+
+    * `expectedtime` --- Estimated time to stake in seconds. Note the seconds will likely be very off, since the time between stakes varies a fair amount
+
+    * `mining-version` --- Version of the staking protocol being used. Only changes on mandatory updates
+
+    * `mining-created` --- Number of stakes made including rejected ones since the most recent time wallet was turn online to now
+
+    * `mining-accepted` --- Number of stakes made and accepted under the same time period as mining-created
+
+    * `mining-kernels-found` --- Number of potential stakes found including those rejected by the wallet or network
+
+    * `stake-splitting` --- Information about what the wallet is doing in terms of stake-splitting
+
+      * stake-splitting-enabled ---  True/False on if the wallet is set to split stakes into multiple UTXOs. If false, this will be the only value in this category.
+
+      * stake-splitting-params --- configuration and calculated values for stake splitting
+
+        * min-stake-split-value --- Smallest stake size to split into multiple UTXOs (defaults to 800)
+
+        * efficiency --- The target efficiency. Is between 75 to 98 and defaults to 90. Efficiency is the average % over time of how many coins are able to stake
+
+        * stake-split-UTXO-size-for-target-efficiency --- The size a UTXO needs to cause a split. Only splits if its efficiency is worse than the target efficiency, and at least `min-stake-split-value` or higher.
+
+    * `side-staking` -- information about what the wallet is doing in terms of side-staking
+
+      * side-staking-enabled --- True/False on if the wallet is set to share stake rewards with other addresses
+
+      * side-staking-allocations --- list of addresses and percentages for side staking
+
+    * `difficulty` --- information about the difficulty of the network
+      * current --- Shows current difficulty which determines how hard or easy it is to stake
+
+      * target --- Shows the Proof of Stake target which helps determine if a stake is valid and how easy or hard it is to stake
+
+    * `errors` ---  a string with various different warnings and messages. Is the same as the message on the bottom in the GUI
+
+    * `pooledtx` --- number of transactions in the memory pool (transaction not yet in a block)
+
+    * `testnet` --- True/False on if the wallet is running on testnet
+
+    * `CPID` --- The CPID (cross project identifier) sent to the network. If an investor or pool mining, it will show up as `INVESTOR`
+
+    * `Magnitude Unit` --- Amount in GRC paid out per unit of magnitude (only shows up if `CPID`s is valid)
+
+    * `BoincRewardPending` --- Amount in GRC that the wallet is owed for BOINC rewards
+
+    * `researcher_status` --- If you are staking only will be `Staking Only - REASON` where `REASON` is some string explaining why you are not able to stake. If you are able to earn research rewards will be `Eligible for Research Rewards`.
+
+    * `current_poll` --- Title of the most recent poll (first 80 characters). If there are no polls, this will show `No current polls`.
+
+    {% include _end_dropdown.htm %}
 
 * lifetime
 * magnitude <cpid>
