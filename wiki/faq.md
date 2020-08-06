@@ -8,6 +8,7 @@ redirect_from:
 # Frequently Asked Questions
 
 You will see a lot of references to the data folder in this FAQ here are the default locations:
+
 | Windows | Linux | MacOS |
 |-|-|-|
 | `%appdata%/GridcoinResearch` | `~/.GridcoinResearch` | `~/Library/Application Support/GridcoinResearch` |
