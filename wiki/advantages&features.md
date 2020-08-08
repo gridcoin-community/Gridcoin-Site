@@ -19,7 +19,7 @@ While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin)
-* [Comparison to Byteball](#comparision-to-byteball)
+* [Comparison to OByte](#comparision-to-obyte)
 * [Comparison to PrimeCoin](#comparison-to-primecoin)
 * [Comparison to Tokens](#comparison-to-tokens)
 
@@ -61,7 +61,31 @@ Third, Gridcoin has a more active development and community. For comparison
 is Gridcoin's development activity in the last month and [here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
 is CureCoin's. 
 
-### Comparison to Byteball
+### Comparison to OByte 
+---
+#### What's OByte?
+Obyte (formally byteball) is a cryptocurrency that focuses on various different 
+aspects such as smart contracts. Among other bots, it has a bot that distributes out 
+OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
+  
+(note you can earn both Gridcoin and OBytes at the same time)
+
+
+#### Why's Gridcoin Different?
+OByte's main focus is different from Gridcoin. The science aspect is a secondary
+or tertiary goal for the project. Because of this, a much smaller percentage of 
+coins are sent for science and a higher percentage goes to other distribution 
+methods. 
+
+Further, for the bot itself, it only rewards World Community Grid and no other 
+BOINC project. This means if you want to work on any other project, you can't
+earn OBytes for it. With Gridcoin there is a list of 18 project you can contribute 
+to (as of 2020-08-08)
+
+The system is heavily centralized by happening through one bot that could stop 
+at any point. The funding to this bot comes entirely through a grant from a fund 
+controlled currently by 4 people, but in Gridcoin, coins are distributed 
+as the new coins in the network and not through a single fund or bot at all.
 
 ### Comparison to Tokens
 
