@@ -20,7 +20,7 @@ they are limited in other various ways (most are heavily centralized among other
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin)
 * [Comparison to OByte](#comparision-to-obyte)
-* [Comparison to PrimeCoin](#comparison-to-primecoin)
+* [Comparison to Primecoin](#comparison-to-primecoin)
 * [Comparison to Tokens](#comparison-to-tokens)
 
 Additionally, Gridcoin's system of scrapers offers a scalable system that 
@@ -86,6 +86,28 @@ The system is heavily centralized by happening through one bot that could stop
 at any point. The funding to this bot comes entirely through a grant from a fund 
 controlled currently by 4 people, but in Gridcoin, coins are distributed 
 as the new coins in the network and not through a single fund or bot at all.
+
+### Comparison to Primecoin
+---
+#### What's Primecoin
+Primecoin is a crytpocurrency that uses a proof of work algorithm to 
+find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prime numbers.
+
+
+#### Why's Gridcoin Different?
+Primecoin can only find prime numbers and do no other scientific computation. 
+With Gridcoin work on fighting disease, finding asteroids, and much more can be 
+rewarded.
+
+Further, any expansion of Primecoin to other computations would have to work
+as a proof of work algorithm which requires properties that not many
+scientific problems have (see the challenges in using primes in 
+[Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf))  
+
+Additionally, there is currently more development and active community around 
+Gridcoin than Primecoin. For comparison [here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
+is Gridcoin's development activity in the last month and [here](https://github.com/primecoin/primecoin/pulse/monthly)
+is Primecoin's. 
 
 ### Comparison to Tokens
 
