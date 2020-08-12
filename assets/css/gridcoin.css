@@ -69,7 +69,7 @@ body {
     padding-top: 25px;
 }
 .grclink a {
-    color: #9013FE;
+    color: #3f9bff;
 }
 .text-bold {
     font-weight: bold;
@@ -384,4 +384,8 @@ body {
     z-index: -1;
     /*This adjusts the anchors to account for the navbar and have the dropdown work properly on mobile  
 (doesn't change anything visually except where you scroll to on link#anchor)*/
+ }
+ 
+ .docs-container a{
+     color: #3f9bff;
  }
