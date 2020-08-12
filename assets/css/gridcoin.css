@@ -385,7 +385,9 @@ body {
     /*This adjusts the anchors to account for the navbar and have the dropdown work properly on mobile  
 (doesn't change anything visually except where you scroll to on link#anchor)*/
  }
- 
+ .docs-container hr{
+    border-top: 1px solid #fff
+ } 
  .docs-container a{
      color: #3f9bff;
  }
