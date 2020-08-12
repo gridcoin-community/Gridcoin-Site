@@ -7,7 +7,7 @@ redirect_from:
 
 # Frequently Asked Questions
 
-You will see a lot of references to the data folder in this FAQ here are the default locations:
+You will see a lot of references to the data folder in this FAQ. Here are the default locations:
 
 | Windows | Linux | MacOS |
 |-|-|-|
@@ -316,7 +316,7 @@ This also means that diff is directly proportional to that average net coins sta
 TL;DR:
 When more coins are staking the difficulty increases which makes it harder to stake and vice versa.
 
-The formulas to calculate diff may be found in section 2.1 of the [bluepaper](https://www.gridcoin.world/GRC_V8_Bluepaper_ETTS%20final.pdf).
+The formulas to calculate diff may be found in section 2.1 of the [staking bluepaper](/assets/img/grc-bluepaper-section-1.pdf).
 
 ---
 ### How to call commands when starting Gridcoin Wallet on Windows?
