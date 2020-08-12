@@ -110,4 +110,25 @@ is Gridcoin's development activity in the last month and [here](https://github.c
 is Primecoin's. 
 
 ### Comparison to Tokens
+---
+#### What Are These Tokens
+There are a variety of tokens that have tried/are trying to reward scientific 
+work. 
 
+#### Why's Gridcoin Different
+Most of these tokens are heavily centralized because only one person/group 
+decides how they should be distributed. Many of these tokens have suddenly
+stopped because the people behind the projects decided to stop giving tokens out.
+
+With Gridcoin there are systems in place that give no one person or group 
+the ability to control distribution. The systems in place such as the [scrapers](scraper "wikilink")
+proof of stake, and others allow for a much more decentralized system.
+
+Further, a major factor limiting the various tokens is that they lack an existing
+community and have to build this up. Whereas with Gridcoin, the community already
+exists. 
+
+Additionally, because these aren't cryptocurrencies and are tokens, the ability
+to set fees and other aspects is limited. For instance on ethereum, to move
+tokens around you would have to spend ethereum from the ethereum gas transaction 
+fees.
