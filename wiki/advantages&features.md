@@ -44,22 +44,34 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
 
 
 #### Why's Gridcoin Different?
-One advantage is how Gridcoin rewards many different projects while CureCoin only 
-rewards folding@home and no other project. Gridcoin is designed around rewarding 
-BOINC projects which allows it to reward many existing and any newly created BOINC
-projects instead of just one project (folding@home) that doesn't use BOINC. This 
-allows for more areas of study rewarded and more scientists running 
-and starting projects. 
 
-Secondly, CureCoin's system uses Proof of Work which makes it use much more power 
-and energy on the network instead of on the Science. Gridcoin uses Proof of Stake
-which is much more energy efficient and makes the vast majority of the computation 
-involved with Gridcoin useful scientific work.
+* CureCoin only rewards folding@home --- Gridcoin rewards many projects   
+    * CureCoin is designed only for folding@home
+        * Only one project can be rewarded
+        * Expansion requires rework of the system
 
-Third, Gridcoin has a more active development and community. For comparison
-[here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
-is Gridcoin's development activity in the last month and [here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
-is CureCoin's. 
+    * Gridcoin is designed for BOINC projects
+        * Rewards many existing projects and allows for rewarding newly created BOINC projects
+        * More rewarded areas of study and more scientists running and starting projects. 
+
+^
+^
+
+* CureCoin involves Proof of Work ---  Gridcoin uses Proof of Stake
+    * More energy used in Proof of Work
+        * Less used energy on scientific work in CureCoin
+    
+    * With Gridcoin more energy goes directly to science
+        * Less energy used by Proof of Stake
+
+^
+^
+
+* Gridcoin has more active development and community
+    * Comparison of development activity in the last month:
+        * [Gridcoin's here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
+        * [CureCoin's here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
+ 
 
 ### Comparison to OByte 
 ---
@@ -72,20 +84,34 @@ OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 
 
 #### Why's Gridcoin Different?
-OByte's main focus is different from Gridcoin. The science aspect is a secondary
-or tertiary goal for the project. Because of this, a much smaller percentage of 
-coins are sent for science and a higher percentage goes to other distribution 
-methods. 
 
-Further, for the bot itself, it only rewards World Community Grid and no other 
-BOINC project. This means if you want to work on any other project, you can't
-earn OBytes for it. With Gridcoin there is a list of 18 project you can contribute 
-to (as of 2020-08-08)
+* OByte's main focus is different from Gridcoin 
+    * Science aspect is a secondary or tertiary goal
+        * Fewer OBytes sent to reward science and more goes to other distribution methods
 
-The system is heavily centralized by happening through one bot that could stop 
-at any point. The funding to this bot comes entirely through a grant from a fund 
-controlled currently by 4 people, but in Gridcoin, coins are distributed 
-as the new coins in the network and not through a single fund or bot at all.
+    * For Gridcoin science is a primary goal
+        * Larger percentage rewards science 
+
+^
+^
+
+* OByte's bots are heavily centralized 
+    * Happening through one bot that could stop at any point
+    * The funding to this bot comes entirely through a grant from a fund controlled currently by 4 people
+
+    * In Gridcoin, coins are distributed as new coins in the network not through a single fund or bot
+
+^
+^
+
+* OByte only rewards World Community Grid and no other BOINC project. 
+    * On any other project, you can't earn OBytes for it
+
+    * With Gridcoin there are 18 project you can contribute to (as of 2020-08-08)
+
+^
+^
+
 
 ### Comparison to Primecoin
 ---
@@ -95,19 +121,22 @@ find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prim
 
 
 #### Why's Gridcoin Different?
-Primecoin can only find prime numbers and do no other scientific computation. 
-With Gridcoin work on fighting disease, finding asteroids, and much more can be 
+* Primecoin can only find prime numbers and do no scientific computation 
+    * Limited by Proof of Work algorithm 
+        * Any expansion of Primecoin to other work would need
+        to be a Proof of Work algorithm which need abilities that many
+        scientific problems lack 
+            * See the challenges with even using primes in [Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf)
+    * With Gridcoin work on fighting disease, finding asteroids, and much more can be 
 rewarded.
 
-Further, any expansion of Primecoin to other computations would have to work
-as a proof of work algorithm which requires properties that not many
-scientific problems have (see the challenges in using primes in 
-[Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf))  
+^
+^
 
-Additionally, there is currently more development and active community around 
-Gridcoin than Primecoin. For comparison [here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
-is Gridcoin's development activity in the last month and [here](https://github.com/primecoin/primecoin/pulse/monthly)
-is Primecoin's. 
+*  Gridcoin has more active development and community
+    * Comparison of development activity in the last month:
+        * [Gridcoin's here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
+        * [Primecoin's here](https://github.com/primecoin/primecoin/pulse/monthly)
 
 ### Comparison to Tokens
 ---
@@ -116,19 +145,38 @@ There are a variety of tokens that have tried/are trying to reward scientific
 work. 
 
 #### Why's Gridcoin Different
-Most of these tokens are heavily centralized because only one person/group 
-decides how they should be distributed. Many of these tokens have suddenly
-stopped because the people behind the projects decided to stop giving tokens out.
+* Most of these tokens are heavily centralized 
+    * one person/group decides how they should be distributed
+        * Many of these tokens have suddenly stopped because the people behind 
+          the projects decided to stop giving tokens out.
 
-With Gridcoin there are systems in place that give no one person or group 
-the ability to control distribution. The systems in place such as the [scrapers](scraper "wikilink")
-proof of stake, and others allow for a much more decentralized system.
+    * Gridcoin has systems in place to not give one person or group the 
+      ability to control distribution. 
+        * The [Scrapers](scraper "wikilink"), Proof of Stake, and more allow for 
+          a much more decentralized system.
 
-Further, a major factor limiting the various tokens is that they lack an existing
-community and have to build this up. Whereas with Gridcoin, the community already
-exists. 
+^
+^
 
-Additionally, because these aren't cryptocurrencies and are tokens, the ability
-to set fees and other aspects is limited. For instance on ethereum, to move
-tokens around you would have to spend ethereum from the ethereum gas transaction 
-fees.
+* New tokens lack an existing community
+    * Have to spend even more time on marketing, outreach, getting more 
+      developers, etc
+
+    * With Gridcoin, the community already exists
+        * Able to help keep growth from it
+        * Larger number of people to help with development, marketing, 
+          site building, and more
+          
+
+^
+^
+
+* Tokens are limited in setting fees and changing other aspects
+    * Tokens don't run on their own network --- limited by system of the
+    network they run on
+        * For instance for erc20 tokens on ethereum, to move tokens around you have 
+          to spend ethereum to do it with the fees from the ethereum network itself
+
+    * Gridcoin runs on its own network 
+        * The fees can be changed if the community decides to 
+        * Other network level changes have and can be made
