@@ -26,13 +26,13 @@ things) see:
 Additionally, Gridcoin's system of scrapers offers a scalable system that 
 minimizes that amount of centralization. Scrapers get BOINC statistics 
 (which determine rewards) from the projects and then compress them down to only 
-the useful stats --- reducing data sent and stored. The also wallet compares the 
+the useful stats --- reducing data sent and stored. The wallet compares the 
 data from each scraper against each other limiting the trust needed. Scrapers are 
 run by several trusted members of the community located around the world. 
 Read more about scrapers on the [Scraper Wiki Page](Scraper "wikilink")
 
 Further, Gridcoin has a voting system to help keep Gridcoin aligned with the
-community and have meaningful discussions. Voting help reduce conflicts by
+community and have meaningful discussions. Voting helps reduce conflicts by
 not having unexpected changes and having a way to voice your opinion without 
 needing to fork and split the community.
 
@@ -104,7 +104,7 @@ OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 ^
 ^
 
-* OByte only rewards World Community Grid and no other BOINC project. 
+* OByte only rewards World Community Grid and no other BOINC project
     * On any other project, you can't earn OBytes for it
 
     * With Gridcoin there are 18 project you can contribute to (as of 2020-08-08)
@@ -128,7 +128,7 @@ find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prim
         scientific problems lack 
             * See the challenges with even using primes in [Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf)
     * With Gridcoin work on fighting disease, finding asteroids, and much more can be 
-rewarded.
+    rewarded.
 
 ^
 ^
@@ -146,7 +146,7 @@ work.
 
 #### Why's Gridcoin Different
 * Most of these tokens are heavily centralized 
-    * one person/group decides how they should be distributed
+    * One person/group decides how they should be distributed
         * Many of these tokens have suddenly stopped because the people behind 
           the projects decided to stop giving tokens out.
 
