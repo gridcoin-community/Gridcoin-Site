@@ -88,7 +88,7 @@ OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 * OByte's main focus is different from Gridcoin 
     * Science aspect is a secondary or tertiary goal
         * Fewer OBytes sent to reward science and more goes to other distribution methods
-
+    
     * For Gridcoin science is a primary goal
         * Larger percentage rewards science 
 
@@ -97,7 +97,8 @@ OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 
 * OByte's bots are heavily centralized 
     * Happening through one bot that could stop at any point
-    * The funding to this bot comes entirely through a grant from a fund controlled currently by 4 people
+        * Funding to this bot comes entirely through a grant from a fund 
+          controlled currently by 4 people
 
     * In Gridcoin, coins are distributed as new coins in the network not through a single fund or bot
 
@@ -124,11 +125,12 @@ find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prim
 * Primecoin can only find prime numbers and do no scientific computation 
     * Limited by Proof of Work algorithm 
         * Any expansion of Primecoin to other work would need
-        to be a Proof of Work algorithm which need abilities that many
-        scientific problems lack 
+          to be a Proof of Work algorithm which need abilities that many
+          scientific problems lack 
             * See the challenges with even using primes in [Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf)
-    * With Gridcoin work on fighting disease, finding asteroids, and much more can be 
-    rewarded.
+
+    * With Gridcoin more can be rewarded such as fighting disease, finding 
+      asteroids, and much more
 
 ^
 ^
@@ -160,7 +162,8 @@ work.
 
 * New tokens lack an existing community
     * Have to spend even more time on marketing, outreach, getting more 
-      developers, etc
+    developers, etc.
+        * Chicken and egg problem
 
     * With Gridcoin, the community already exists
         * Able to help keep growth from it
