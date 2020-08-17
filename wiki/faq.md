@@ -20,7 +20,7 @@ Almost all of your computing power can be directed at beneficial scientific and 
 research while crunching Gridcoin.
 
 See the list of [Advantages &
-Features](advantages&features "wikilink").
+Features](advantages-and-features "wikilink").
 
 ## How could 'useful' work for a cryptocurrency be verified without repeating the work or trusting a central server?
 
