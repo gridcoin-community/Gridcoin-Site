@@ -108,7 +108,7 @@ Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 * OByte only rewards World Community Grid and no other BOINC project
     * On any other project, you can't earn OBytes for it
 
-    * With Gridcoin there are 18 project you can contribute to (as of 2020-08-08)
+    * With Gridcoin there are {{ site.data.whitelist.projects.size }} projects you can contribute to
 
 ^
 ^
