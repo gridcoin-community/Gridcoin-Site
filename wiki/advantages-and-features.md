@@ -19,7 +19,7 @@ While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin)
-* [Comparison to OByte](#comparision-to-obyte)
+* [Comparison to OByte](#comparison-to-obyte)
 * [Comparison to Primecoin](#comparison-to-primecoin)
 * [Comparison to Tokens](#comparison-to-tokens)
 
@@ -39,11 +39,11 @@ needing to fork and split the community.
 
 ### Comparison to CureCoin
 ---
-#### What's CureCoin?
+#### What Is CureCoin?
 CureCoin is a cryptocurrency that aims to reward folding@home work
 
 
-#### Why's Gridcoin Different?
+#### Why Gridcoin Is Different
 
 * CureCoin only rewards folding@home --- Gridcoin rewards many projects   
     * CureCoin is designed only for folding@home
@@ -75,15 +75,15 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
 
 ### Comparison to OByte 
 ---
-#### What's OByte?
-Obyte (formally byteball) is a cryptocurrency that focuses on various different 
+#### What Is OByte?
+OByte (formally Byteball) is a cryptocurrency that focuses on various different
 aspects such as smart contracts. Among other bots, it has a bot that distributes out 
-OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
+Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
   
-(note you can earn both Gridcoin and OBytes at the same time)
+(note you can earn both Gridcoin and Bytes at the same time)
 
 
-#### Why's Gridcoin Different?
+#### Why Gridcoin Is Different
 
 * OByte's main focus is different from Gridcoin 
     * Science aspect is a secondary or tertiary goal
@@ -116,21 +116,21 @@ OBytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 
 ### Comparison to Primecoin
 ---
-#### What's Primecoin
+#### What Is Primecoin?
 Primecoin is a crytpocurrency that uses a proof of work algorithm to 
 find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prime numbers.
 
 
-#### Why's Gridcoin Different?
+#### Why Gridcoin Is Different
 * Primecoin can only find prime numbers and do no scientific computation 
     * Limited by Proof of Work algorithm 
-        * Any expansion of Primecoin to other work would need
-          to be a Proof of Work algorithm which need abilities that many
-          scientific problems lack 
+        * Any expansion of Primecoin to other types of computations would need
+          to fit a Proof of Work algorithm. These algorithms need abilities that
+          many scientific problems lack
             * See the challenges with even using primes in [Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf)
 
     * With Gridcoin more can be rewarded such as fighting disease, finding 
-      asteroids, and much more
+      asteroids, and many other types of science
 
 ^
 ^
@@ -142,11 +142,11 @@ find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prim
 
 ### Comparison to Tokens
 ---
-#### What Are These Tokens
+#### What Are These Tokens?
 There are a variety of tokens that have tried/are trying to reward scientific 
 work. 
 
-#### Why's Gridcoin Different
+#### Why Gridcoin Is Different
 * Most of these tokens are heavily centralized 
     * One person/group decides how they should be distributed
         * Many of these tokens have suddenly stopped because the people behind 
@@ -163,7 +163,7 @@ work.
 * New tokens lack an existing community
     * Have to spend even more time on marketing, outreach, getting more 
     developers, etc.
-        * Chicken and egg problem
+        * Have to overcome the chicken and egg problem for adoption
 
     * With Gridcoin, the community already exists
         * Able to help keep growth from it
