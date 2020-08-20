@@ -8,11 +8,11 @@ layout: wiki
 
 ### General Advantages
 
-One of the main advantages to Gridcoin is that crunching ("mining")
+One of the main advantages of Gridcoin is that crunching ("mining")
 does useful scientific research. Crunching helps science in areas like fighting 
 diseases, finding asteroids, understanding subatomic particles, and more. In other
 cryptocurrencies, mining doesn't produce any meaningful results. This means that 
-regardless of the number of Gridcoin you earn, crunching alone achieve something 
+regardless of the number of Gridcoin you earn, crunching alone achieves something 
 useful.
 
 While there are some other cryptocurrencies that try and reward scientific work,
@@ -122,7 +122,7 @@ find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prim
 
 
 #### Why Gridcoin Is Different
-* Primecoin can only find prime numbers and do no scientific computation 
+* Primecoin can only find prime numbers and do no other scientific computation 
     * Limited by Proof of Work algorithm 
         * Any expansion of Primecoin to other types of computations would need
           to fit a Proof of Work algorithm. These algorithms need abilities that
