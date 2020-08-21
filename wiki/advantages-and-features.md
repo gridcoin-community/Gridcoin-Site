@@ -19,7 +19,7 @@ While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin)
-* [Comparison to OByte](#comparison-to-obyte)
+* [Comparison to Obyte](#comparison-to-obyte)
 * [Comparison to Primecoin](#comparison-to-primecoin)
 * [Comparison to Tokens](#comparison-to-tokens)
 
@@ -73,10 +73,10 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
         * [CureCoin's here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
  
 
-### Comparison to OByte 
+### Comparison to Obyte 
 ---
-#### What Is OByte?
-OByte (formally Byteball) is a cryptocurrency that focuses on various different
+#### What Is Obyte?
+Obyte (formally Byteball) is a cryptocurrency that focuses on various different
 aspects such as smart contracts. Among other bots, it has a bot that distributes out 
 Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
   
@@ -85,9 +85,9 @@ Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 
 #### Why Gridcoin Is Different
 
-* OByte's main focus is different from Gridcoin 
+* Obyte's main focus is different from Gridcoin 
     * Science aspect is a secondary or tertiary goal
-        * Fewer OBytes sent to reward science and more goes to other distribution methods
+        * Fewer Obytes sent to reward science and more goes to other distribution methods
     
     * For Gridcoin science is a primary goal
         * Larger percentage rewards science 
@@ -95,7 +95,7 @@ Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 ^
 ^
 
-* OByte's bots are heavily centralized 
+* Obyte's bots are heavily centralized 
     * Happening through one bot that could stop at any point
         * Funding to this bot comes entirely through a grant from a fund 
           controlled currently by 4 people
@@ -105,8 +105,8 @@ Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 ^
 ^
 
-* OByte only rewards World Community Grid and no other BOINC project
-    * On any other project, you can't earn OBytes for it
+* Obyte only rewards World Community Grid and no other BOINC project
+    * On any other project, you can't earn Obytes for it
 
     * With Gridcoin there are {{ site.data.whitelist.projects.size }} projects you can contribute to
 
