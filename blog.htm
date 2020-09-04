@@ -31,7 +31,7 @@ description: "This blog is for official announcements and important community up
                     <h4>{{ post.title }}</h4>
                     <p>{{ post.content }}</p>
                     <a href="{{ post.link_primary_url }}">{{ post.link_primary_text }}</a>
-                    <a href="{{ post.link_secondary_url }}">{{ post.link_secondary_text }}</a>
+                    <a href="{{ post.link_secondary_url }}"><br>{{ post.link_secondary_text }}</a>
                     <hr/>
                 </div>
             {% endfor %}
