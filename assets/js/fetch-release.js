@@ -11,13 +11,14 @@ function getLatestRelease() {
 
             data.assets.forEach(function(assetFile) {
 
-                if (assetFile.name.endsWith("win64-setup.exe")){
+                if (assetFile.name.endsWith("win64-setup.exe") || assetFile.name.endsWith("win64-setup-hotfix.exe")){ 
+                    //hotfixes come after in alphabetical order so the link will end up being the hotfix over the non-hotfix
 
                     $('#64-bit-windows').attr('href', assetFile.browser_download_url).show()
 
                 } 
 
-                if (assetFile.name.endsWith("win32-setup.exe")){
+                if (assetFile.name.endsWith("win32-setup.exe") || assetFile.name.endsWith("win32-setup-hotfix.exe")){
 
                     $('#32-bit-windows').attr('href', assetFile.browser_download_url).show()
 
