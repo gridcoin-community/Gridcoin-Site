@@ -8,6 +8,8 @@ redirect_from:
 
 # Introduction
 
+*This page is a work in progress*
+
 RPC commands are a way to preform various actions on the wallet or get 
 information from the wallet through text. They can take in parameters
 to tell the command more information. They are run like `command parameter`.
@@ -89,7 +91,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
   * Creates a backup of the wallet.dat and gridcoinresearch.conf files 
     (it also adds dates in the backup files' names). Returns if it was 
     successful for each file The files will be created in the walletbackups 
-    folder. See the [Config Wiki Page](Config-File) to find the location for 
+    folder. See the [Config Wiki Page](config-file) to find the location for 
     your operating system of the walletbackups folder and other Gridcoin files 
 
 * burn `<amount> [hex string]`
@@ -603,59 +605,71 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     {% include _end_dropdown.htm %}
 
 * lifetime
-* magnitude <cpid>
+* magnitude `<cpid>`
 * myneuralhash
 * neuralhash
 * resetcpids
 * staketime
 * superblockage
-* superblocks [lookback [displaycontract [cpid]]]
+* superblocks `[lookback [displaycontract [cpid]]]`
 
 ## Developer
 
-* addkey <action> <keytype> <keyname> <keyvalue>
+* addkey `<action> <keytype> <keyname> <keyvalue>`
+* archivelog `<log>`
+* auditsnapshotaccrual
+* comparesnapshotaccrual
+* convergencereport `[convergence_cache_details]`
 * currentcontractaverage
-* debug <bool>
+* debug `<bool>`
+* debug10 `<bool>`
 * deletecscrapermanifest <hash>
-* exportstats1 [maxblocks agregate [endblock]] 
-* getblockstats mode [startheight [endheight]]
-* getlistof <keytype>
-* getmpart <hash>
-* getrecentblocks detail count
-* getsupervotes mode superblock
-* listdata <keytype>
-* listmanifests [bool details]
+* exportstats1 `[maxblocks aggregate [endblock]] `
+* getblockstats `mode [startheight [endheight]]`
+* getlistof `<keytype>`
+* getmpart `<hash>`
+* getrecentblocks `detail count`
+* getsupervotes `mode superblock`
+* inspectaccrualsnapshot `<height>`
+* listdata `<keytype>`
+* listmanifests `[bool details] [manifest hash]`
 * listprojects
+* logging `[json array category adds] [json array category removes]`
 * network
+* parseaccrualsnapshot `<filespec>`
+* parselegacysb
 * projects
 * readconfig
-* readdata <key>
-* refhash <walletaddress>
-* reorganize <hash>
-* savescraperfilemanifest <hash>
-* sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
-* sendalert2 <privatekey> <id> <subverlist> <cancellist> <expire> <priority> <message>
-* sendblock <blockhash>
+* readdata `<key>`
+* refhash `<walletaddress>`
+* reorganize `<hash>`
+* savescraperfilemanifest `<hash>`
+* scraperreport
+* sendalert `<message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]`
+* sendalert2 `<privatekey> <id> <subverlist> <cancellist> <expire> <priority> <message>`
+* sendblock `<blockhash>`
 * sendscraperfilemanifest
 * superblockaverage
-* testnewsb
-* versionreport
-* writedata <key> <value>
+* testnewsb `[hint bits]`
+* versionreport `<lookback:int> <full:bool>`
+* writedata `<key> <value>`
+
 
 ## Network
 
-* addnode <node> <add|remove|onetry>
-* addpoll <title> <days> <question> <answer1;answer2...> <sharetype> <url>
+* addnode `<node> <add|remove|onetry>`
+* addpoll `<title> <days> <question> <answer1;answer2...> <sharetype> <url>`
 * askforoutstandingblocks
-* clearbanned: Clear all banned IPs.
+* clearbanned
+  * Clear all banned IPs.
 * currenttime
-* getaddednodeinfo <dns> [node]
+* getaddednodeinfo `<dns> [node]`
 * getbestblockhash
-* getblock <hash> [bool:txinfo]
-* getblockbynumber <number> [bool:txinfo]
+* getblock `<hash> [bool:txinfo]`
+* getblockbynumber `<number> [bool:txinfo]`
 * getblockchaininfo
 * getblockcount
-* getblockhash <index>
+* getblockhash `<index>`
 * getcheckpoint
 * getconnectioncount
 * getdifficulty
@@ -666,15 +680,24 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 * getrawmempool
 * listallpolldetails
 * listallpolls
-* listbanned: List all banned IPs/subnets.
+* listbanned
+  * List all banned IPs/subnets.
 * listpolldetails
-* listpollresults <pollname> [bool:showexpired]
+* listpollresults `<pollname> [bool:showexpired]`
 * listpolls
 * memorypool
 * networktime
 * ping
-* setban <ip or subnet> <command> [bantime] [absolute]: add or remove an IP/Subnet from the banned list.
-* showblock <index>
+* setban `<ip or subnet> <command> [bantime] [absolute]`
+  * add or remove an IP/Subnet from the banned list.
+* showblock `<index>`
 * stop
-* vote <title> <answer1;answer2...>
-* votedetails <pollname>
+
+## Voting
+
+* addpoll `<title> <days> <question> <answer1;answer2...> <weighttype> <url>`
+* getpollresults `<poll_title_or_id>`
+* getvotingclaim `<poll_or_vote_id>`
+* listpolls `( showfinished )`
+* votebyid `<poll_id> <choice_id_1> ( choice_id_2... )`
+* votedetails `<poll_title_or_id>`
