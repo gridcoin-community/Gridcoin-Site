@@ -163,7 +163,6 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - 3rd-Party wallets:
-      - [Coinomi](https://coinomi.com/)
       - [HolyTransaction](https://holytransaction.com/)
 
 <!-- end list -->

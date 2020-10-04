@@ -155,7 +155,6 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
 <!-- end list -->
 
   - 3rd-Party Wallets:
-      - [Coinomi](https://coinomi.com/)
       - [HolyTransaction](https://holytransaction.com/)
 
 <!-- end list -->
