@@ -1,161 +1,184 @@
+---
 projects:
-- name: "Cosmology@Home"
-  link: "https://www.cosmologyathome.org/"
-  goal: "Darkmatter/Universe Model Research"
-  sponsor: "Department of Astronomy at the University of Illinois at Urbana-Champaign"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://www.cosmologyathome.org/team_display.php?teamid=3637"
-  stats: "https://gridcoinstats.eu/project/cosmology@home"
+- name: Amicable Numbers
+  link: https://sech.me/boinc/Amicable/
+  goal: Amicable Numbers is an independent research project that uses Internet-connected
+    computers to find new amicable pairs. Currently searching the 10^20 range.
+  sponsor: Private
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://sech.me/boinc/Amicable/team_display.php?teamid=1806
+  stats: https://gridcoinstats.eu/project/Amicable_Numbers
 
-- name: "LHC@Home"
-  link: "https://lhcathome.cern.ch/lhcathome/index.php"
-  goal: "Accelerator Physics"
-  sponsor: "CERN"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://lhcathome.cern.ch/lhcathome/team_display.php?teamid=8128"
-  stats: "https://gridcoinstats.eu/project/lhc@home_classic"
+- name: Asteroids@home
+  link: https://asteroidsathome.net/boinc/
+  goal: Asteroid research - it uses photometric measurements of asteroids observed
+    by professional big all-sky surveys as well as 'backyard' astronomers. The data
+    is processed using the lightcurve inversion method and a 3D shape model of an
+    asteroid together with the rotation period and the direction of the spin axis
+    are derived.
+  sponsor: Charles University in Prague
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
+  stats: https://gridcoinstats.eu/project/asteroids@home
 
-- name: "NFS@Home"
-  link: "https://escatter11.fullerton.edu/nfs/"
-  goal: "Lattice sieving step in Number Field Sieve factorization of large integers. Many public key algorithms, including the RSA algorithm, rely on the fact that the publicly available modulus cannot be factored. If it is factored, the private key can be easily calculated."
-  sponsor: "California State University Fullerton"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353"
-  stats: "https://gridcoinstats.eu/project/nfs@home"
+- name: Collatz Conjecture
+  link: https://boinc.thesonntags.com/collatz/
+  goal: Attempting to disprove the Collatz Conjecture.
+  sponsor: Private
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://boinc.thesonntags.com/collatz/team_display.php?teamid=3029
+  stats: https://gridcoinstats.eu/project/collatz_conjecture
 
-- name: "NumberFields@home"
-  link: "https://numberfields.asu.edu/NumberFields/"
-  goal: "Research in number theory. Number theorists can mine the data for interesting patterns to help them formulate conjectures about number fields."
-  sponsor: "Arizona State University, school of Mathematics"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://numberfields.asu.edu/NumberFields/team_display.php?teamid=2069"
-  stats: "https://gridcoinstats.eu/project/numberfields@home"
+- name: Cosmology@Home
+  link: https://www.cosmologyathome.org/
+  goal: Darkmatter/Universe Model Research
+  sponsor: Department of Astronomy at the University of Illinois at Urbana-Champaign
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://www.cosmologyathome.org/team_display.php?teamid=3637
+  stats: https://gridcoinstats.eu/project/cosmology@home
 
-- name: "ODLK1"
-  link: "https://boinc.multi-pool.info/latinsquares/"
-  goal: "OLDK is building a database of canonical forms of diagonal Latin squares of the 10th order"
-  sponsor: ""
-  cpu: "yes"
-  gpu: "no"
-  team: "https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48"
-  stats: "https://gridcoinstats.eu/project/odlk1"
+- name: Einstein@home
+  link: https://einsteinathome.org
+  goal: Search for spinning neutron (pulsars) stars using data from the LIGO gravitational-wave
+    detectors, the Arecibo radio telescope, and the Fermi gamma-ray satellite
+  sponsor: Univ. of Wisconsin - Milwaukee, Max Planck Institute
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://einsteinathome.org/community/teams/185236
+  stats: https://gridcoinstats.eu/project/einstein@home
 
-- name: "Rosetta@Home"
-  link: "https://boinc.bakerlab.org/rosetta/"
-  goal: "Protein structure prediction that may ultimately lead to finding cures for some major human diseases."
-  sponsor: "University of Washington"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575"
-  stats: "https://gridcoinstats.eu/project/rosetta@home"
+- name: GPUgrid
+  link: https://www.gpugrid.net/
+  goal: Full-atom molecular simulations of proteins
+  sponsor: Private Sponsors, accept donations in Bitcoin
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://www.gpugrid.net/team_display.php?teamid=3493
+  stats: https://gridcoinstats.eu/project/gpugrid
 
-- name: "SRBase"
-  link: "http://srbase.my-firewall.org/sr5/"
-  goal: "Attempting to solve Sierpinski / Riesel Bases up to 1030."
-  sponsor: "The project is in collaboration with the Mersenne CRUS project."
-  cpu: "yes"
-  gpu: "no"
-  team: "http://srbase.my-firewall.org/sr5//team_display.php?teamid=99"
-  stats: "https://gridcoinstats.eu/project/srbase"
+- name: LHC@Home
+  link: https://lhcathome.cern.ch/lhcathome/index.php
+  goal: Accelerator Physics
+  sponsor: CERN
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://lhcathome.cern.ch/lhcathome/team_display.php?teamid=8128
+  stats: https://gridcoinstats.eu/project/lhc@home_classic
 
-- name: "TN-Grid"
-  link: "https://gene.disi.unitn.it/test/"
-  goal: "The gene@home project is an implementation of the PC-IM algorithm, whose purpose is to expand Gene Regulatory Networks (GRN). Each network is a graph that specifies the causal relationships inside this set of genes, and helps in studying the gene expression phenomenon: the process through which the DNA is transcribed into RNA and the RNA translated into proteins."
-  sponsor: "National Research Council of Italy (CNR)"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://gene.disi.unitn.it/test/team_display.php?teamid=61"
-  stats: "https://www.gridcoinstats.eu/project/tn-grid"
+- name: Milkyway@home
+  link: http://milkyway.cs.rpi.edu/milkyway/
+  goal: Creation of a 3D map of the Milky Way galaxy using data gathered by the Sloan
+    Digital Sky Survey. This project enables research in both astroinformatics and
+    computer science.
+  sponsor: Rensselaer Polytechnic Institute
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
+  stats: https://gridcoinstats.eu/project/milkyway@home
 
-- name: "Universe@home"
-  link: "https://universeathome.pl/universe/"
-  goal: "Physics and Astronomy"
-  sponsor: "University of Warsaw"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://universeathome.pl/universe/team_display.php?teamid=1822"
-  stats: "https://gridcoinstats.eu/project/universe@home"
+- name: NFS@Home
+  link: https://escatter11.fullerton.edu/nfs/
+  goal: Lattice sieving step in Number Field Sieve factorization of large integers.
+    Many public key algorithms, including the RSA algorithm, rely on the fact that
+    the publicly available modulus cannot be factored. If it is factored, the private
+    key can be easily calculated.
+  sponsor: California State University Fullerton
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353
+  stats: https://gridcoinstats.eu/project/nfs@home
+- name: NumberFields@home
+  link: https://numberfields.asu.edu/NumberFields/
+  goal: Research in number theory. Number theorists can mine the data for interesting
+    patterns to help them formulate conjectures about number fields.
+  sponsor: Arizona State University, school of Mathematics
+  cpu: 'yes'
+  gpu: 'yes'
+  team: https://numberfields.asu.edu/NumberFields/team_display.php?teamid=2069
+  stats: https://gridcoinstats.eu/project/numberfields@home
 
-- name: "World Community Grid"
-  link: "https://www.worldcommunitygrid.org/"
-  goal: "FightAIDS@home, Smash Childhood Cancer, fight Tuberculosis, research better materials for solar panels."
-  sponsor: "Sponsored by the IBM responsibility initiative"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832"
-  stats: "https://gridcoinstats.eu/project/World_Community_Grid"
+- name: ODLK1
+  link: https://boinc.multi-pool.info/latinsquares/
+  goal: OLDK is building a database of canonical forms of diagonal Latin squares of
+    the 10th order
+  sponsor: ''
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48
+  stats: https://gridcoinstats.eu/project/odlk1
 
-- name: "YAFU"
-  link: "http://yafu.myfirewall.org/yafu"
-  goal: "Factorize numbers of 70-130 digit length which are needed to bring Aliquot Sequences to a size of 130."
-  sponsor: "Private"
-  cpu: "yes"
-  gpu: "no"
-  team: "http://yafu.myfirewall.org/yafu/team_display.php?teamid=260"
-  stats: "https://gridcoinstats.eu/project/yafu"
+- name: Rosetta@Home
+  link: https://boinc.bakerlab.org/rosetta/
+  goal: Protein structure prediction that may ultimately lead to finding cures for
+    some major human diseases.
+  sponsor: University of Washington
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575
+  stats: https://gridcoinstats.eu/project/rosetta@home
 
-- name: "yoyo@home"
-  link: "https://www.rechenkraft.net/yoyo/"
-  goal: "Brings existing distributed computing projects to the BOINC world using the BOINC Wrapper technology"
-  sponsor: "Supported by Rechenkraft.net e.V. , accept private Donations, also accept Bitcoin"
-  cpu: "yes"
-  gpu: "no"
-  team: "https://www.rechenkraft.net/yoyo/team_display.php?teamid=1475"
-  stats: "https://gridcoinstats.eu/project/yoyo@home"
-- name: "Amicable Numbers"
-  link: "https://sech.me/boinc/Amicable/"
-  goal: "Amicable Numbers is an independent research project that uses Internet-connected computers to find new amicable pairs. Currently searching the 10^20 range."
-  sponsor: "Private"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://sech.me/boinc/Amicable/team_display.php?teamid=1806"
-  stats: "https://gridcoinstats.eu/project/Amicable_Numbers"
+- name: SRBase
+  link: http://srbase.my-firewall.org/sr5/
+  goal: Attempting to solve Sierpinski / Riesel Bases up to 1030.
+  sponsor: The project is in collaboration with the Mersenne CRUS project.
+  cpu: 'yes'
+  gpu: 'no'
+  team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
+  stats: https://gridcoinstats.eu/project/srbase
 
-- name: "Asteroids@home"
-  link: "https://asteroidsathome.net/boinc/"
-  goal: "Asteroid research - it uses photometric measurements of asteroids observed by professional big all-sky surveys as well as 'backyard' astronomers. The data is processed using the lightcurve inversion method and a 3D shape model of an asteroid together with the rotation period and the direction of the spin axis are derived."
-  sponsor: "Charles University in Prague"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://asteroidsathome.net/boinc/team_display.php?teamid=2218"
-  stats: "https://gridcoinstats.eu/project/asteroids@home"
-
-- name: "Collatz Conjecture"
-  link: "https://boinc.thesonntags.com/collatz/"
-  goal: "Attempting to disprove the Collatz Conjecture."
-  sponsor: "Private"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://boinc.thesonntags.com/collatz/team_display.php?teamid=3029"
-  stats: "https://gridcoinstats.eu/project/collatz_conjecture"
-
-- name: "Einstein@home"
-  link: "https://einsteinathome.org"
-  goal: "Search for spinning neutron (pulsars) stars using data from the LIGO gravitational-wave detectors, the Arecibo radio telescope, and the Fermi gamma-ray satellite"
-  sponsor: "Univ. of Wisconsin - Milwaukee, Max Planck Institute"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://einsteinathome.org/community/teams/185236"
-  stats: "https://gridcoinstats.eu/project/einstein@home"
-
-- name: "GPUgrid"
-  link: "https://www.gpugrid.net/"
-  goal: "Full-atom molecular simulations of proteins"
-  sponsor: "Private Sponsors, accept donations in Bitcoin"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://www.gpugrid.net/team_display.php?teamid=3493"
-  stats: "https://gridcoinstats.eu/project/gpugrid"
+- name: TN-Grid
+  link: https://gene.disi.unitn.it/test/
+  goal: 'The gene@home project is an implementation of the PC-IM algorithm, whose
+    purpose is to expand Gene Regulatory Networks (GRN). Each network is a graph that
+    specifies the causal relationships inside this set of genes, and helps in studying
+    the gene expression phenomenon: the process through which the DNA is transcribed
+    into RNA and the RNA translated into proteins.'
+  sponsor: National Research Council of Italy (CNR)
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://gene.disi.unitn.it/test/team_display.php?teamid=61
+  stats: https://www.gridcoinstats.eu/project/tn-grid
   
-- name: "Milkyway@home"
-  link: "http://milkyway.cs.rpi.edu/milkyway/"
-  goal: "Creation of a 3D map of the Milky Way galaxy using data gathered by the Sloan Digital Sky Survey. This project enables research in both astroinformatics and computer science."
-  sponsor: "Rensselaer Polytechnic Institute"
-  cpu: "yes"
-  gpu: "yes"
-  team: "https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566"
-  stats: "https://gridcoinstats.eu/project/milkyway@home"
+- name: Universe@home
+  link: https://universeathome.pl/universe/
+  goal: Physics and Astronomy
+  sponsor: University of Warsaw
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://universeathome.pl/universe/team_display.php?teamid=1822
+  stats: https://gridcoinstats.eu/project/universe@home
+
+- name: World Community Grid
+  link: https://www.worldcommunitygrid.org/
+  goal: FightAIDS@home, Smash Childhood Cancer, fight Tuberculosis, research better
+    materials for solar panels.
+  sponsor: Sponsored by the IBM responsibility initiative
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
+  stats: https://gridcoinstats.eu/project/World_Community_Grid
+
+- name: YAFU
+  link: http://yafu.myfirewall.org/yafu
+  goal: Factorize numbers of 70-130 digit length which are needed to bring Aliquot
+    Sequences to a size of 130.
+  sponsor: Private
+  cpu: 'yes'
+  gpu: 'no'
+  team: http://yafu.myfirewall.org/yafu/team_display.php?teamid=260
+  stats: https://gridcoinstats.eu/project/yafu
+  
+- name: yoyo@home
+  link: https://www.rechenkraft.net/yoyo/
+  goal: Brings existing distributed computing projects to the BOINC world using the
+    BOINC Wrapper technology
+  sponsor: Supported by Rechenkraft.net e.V. , accept private Donations, also accept
+    Bitcoin
+  cpu: 'yes'
+  gpu: 'no'
+  team: https://www.rechenkraft.net/yoyo/team_display.php?teamid=1475
+  stats: https://gridcoinstats.eu/project/yoyo@home
