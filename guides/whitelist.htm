@@ -85,14 +85,14 @@ redirect_from:
                                 <td>
                                     {{ project.sponsor }}
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.cpu}}">{% comment %} uses either table-color-yes or table-color-no for the class (green or red coloring) {% endcomment %}
                                     {% if project.cpu == "yes" %}
                                       ✔️
                                     {% else %}
                                       ❌
                                     {% endif %}
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.gpu}}">
                                     {% if project.gpu == "yes" %}
                                       ✔️
                                     {% else %}
@@ -138,14 +138,14 @@ redirect_from:
                                 <td>
                                     {{ project.sponsor }}
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.cpu}}"> 
                                     {% if project.cpu == "yes" %}
                                       ✔️
                                     {% else %}
                                       ❌
                                     {% endif %}
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.gpu}}">
                                     {% if project.gpu == "yes" %}
                                       ✔️
                                     {% else %}
@@ -179,14 +179,14 @@ redirect_from:
                                 <td>
                                     <a href="{{ project.link }}">{{ project.name }}</a>
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.cpu}}">
                                     {% if project.cpu == "yes" %}
                                       ✔️
                                     {% else %}
                                       ❌
                                     {% endif %}
                                 </td>
-                                <td>
+                                <td class="table-color-{{project.gpu}}">
                                     {% if project.gpu == "yes" %}
                                       ✔️
                                     {% else %}
