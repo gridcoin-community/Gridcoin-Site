@@ -1,5 +1,5 @@
 ---
-title: Gridcoin Wiki
+title: Gridcoin Wiki Home
 layout: wiki
 redirect_from:
   - "/Wiki/"
@@ -110,6 +110,7 @@ scientific computations instead of securing the blockchain.
 
 ## Official Resources
   <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
+  - [Other Wiki Pages](pages "wikilink")
   - [Website](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
