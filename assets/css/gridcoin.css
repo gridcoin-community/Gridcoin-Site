@@ -228,6 +228,13 @@ body {
 .whitelist-2 a {
     font-weight: bold;
 }
+.table-color-yes{
+    background-color: green;
+}
+.table-color-no{
+    background-color: darkred;
+}
+
 /*----end whitelist.erb----*/
 /*terminology.htm*/
 .terminology-top {
