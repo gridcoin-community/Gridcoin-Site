@@ -91,6 +91,7 @@ projects:
   gpu: 'no'
   team: https://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353
   stats: https://gridcoinstats.eu/project/nfs@home
+  
 - name: NumberFields@home
   link: https://numberfields.asu.edu/NumberFields/
   goal: Research in number theory. Number theorists can mine the data for interesting
