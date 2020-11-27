@@ -53,7 +53,7 @@ The compute power to secure the block chain is minimal.
 
 ## Metrics
 
-**[Gridcoin-Classic](Gridcoin-Classic "wikilink") - Retired**
+**[Gridcoin-Classic](gridcoin-classic "wikilink") - Retired**
 
   - Launched: October 16th, 2013
   - Retired: April 20th, 2015
