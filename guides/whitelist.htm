@@ -47,7 +47,7 @@ redirect_from:
     <div class="mb-4">There are a total of {{ site.data.whitelist.projects.size }} projects whitelisted. Note that some could currently be on the greylist</div>
     <!-- BOINC Content -->
     <div class="container">
-        <div class="row text-center">
+        <div class="row text-center mb-5">
             <div class="col-12 d-none d-md-block">
                 <table class="table table-sm table-dark table-hover table-striped table-bordered">
                     <thead>
@@ -66,6 +66,9 @@ redirect_from:
                             </th>
                             <th>
                                 GPU
+                            </th>
+                            <th>
+                                GDPR Stats Export
                             </th>
                             <th>
                                 Team
@@ -101,6 +104,13 @@ redirect_from:
                                       ❌
                                     {% endif %}
                                 </td>
+                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}> {% comment %} Add warning color for background only if it requires it. No color otherwise {% endcomment %}
+                                    {% if project.gdpr == "yes" %}
+                                        <a href={{project.gdpr-enable-steps}}>required<span class="oi oi-warning"></span></a>
+                                    {% else %}
+                                      not required
+                                    {% endif %}
+                                </td>
                                 <td>
                                     <a href="{{ project.team }}" title="Gridcoin Team Link">📊</a>
                                 </td>
@@ -121,13 +131,13 @@ redirect_from:
                                 Project
                             </th>
                             <th>
-                                Sponsor
-                            </th>
-                            <th>
                                 CPU
                             </th>
                             <th>
                                 GPU
+                            </th>
+                            <th>
+                                GDPR Stats Export 
                             </th>
                         </tr>
                     </thead>
@@ -136,9 +146,6 @@ redirect_from:
                             <tr>
                                 <td>
                                     <a href="{{ project.link }}">{{ project.name }}</a>
-                                </td>
-                                <td>
-                                    {{ project.sponsor }}
                                 </td>
                                 <td class="table-color-{{project.cpu}}"> 
                                     {% if project.cpu == "yes" %}
@@ -152,6 +159,13 @@ redirect_from:
                                       ✔️
                                     {% else %}
                                       ❌
+                                    {% endif %}
+                                </td>
+                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
+                                    {% if project.gdpr == "yes" %}
+                                    <a href={{project.gdpr-enable-steps}}>required<span class="oi oi-warning"></span></a>
+                                    {% else %}
+                                      not required
                                     {% endif %}
                                 </td>
                             </tr>
@@ -172,6 +186,9 @@ redirect_from:
                             </th>
                             <th>
                                 GPU
+                            </th>
+                            <th>
+                                GDPR Stats Export
                             </th>
                         </tr>
                     </thead>
@@ -195,11 +212,31 @@ redirect_from:
                                       ❌
                                     {% endif %}
                                 </td>
+                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
+                                    {% if project.gdpr == "yes" %}
+                                        <a href={{project.gdpr-enable-steps}}><span class="oi oi-warning"></span></a>
+                                    {% endif %}
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
+        <h3 id="about-gdpr" class="anchor-adjust">About GDPR</h3>
+            <p>GDPR is a law in the European Union for data privacy. Some projects have
+            interpreted it to mean that to you have to opt in for sharing any BOINC 
+            stats to other people. To earn Gridcoin you must enable this because
+            otherwise Gridcoin can't see how much work you are doing and reward it</p>
+
+            <p>Currently the whitelisted projects that require this are:<br>
+            {% for project in site.data.whitelist.projects %}
+                {% if project.gdpr == "yes" %}
+                    {{project.name}} (<a href={{project.gdpr-enable-steps}}>steps to enable</a>)<br>
+                {% endif %}
+            {% endfor %}</p>
     </div>
+    </div>
+    
+
 </section>

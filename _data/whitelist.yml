@@ -7,6 +7,7 @@ projects:
   sponsor: Private
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'no'
   team: https://sech.me/boinc/Amicable/team_display.php?teamid=1806
   stats: https://gridcoinstats.eu/project/Amicable_Numbers
 
@@ -20,6 +21,7 @@ projects:
   sponsor: Charles University in Prague
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'no'
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
   stats: https://gridcoinstats.eu/project/asteroids@home
 
@@ -29,6 +31,7 @@ projects:
   sponsor: Private
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'no'
   team: https://boinc.thesonntags.com/collatz/team_display.php?teamid=3029
   stats: https://gridcoinstats.eu/project/collatz_conjecture
 
@@ -38,6 +41,7 @@ projects:
   sponsor: Department of Astronomy at the University of Illinois at Urbana-Champaign
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://www.cosmologyathome.org/team_display.php?teamid=3637
   stats: https://gridcoinstats.eu/project/cosmology@home
 
@@ -48,6 +52,8 @@ projects:
   sponsor: Univ. of Wisconsin - Milwaukee, Max Planck Institute
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'yes'
+  gdpr-enable-steps: https://einsteinathome.org/content/gdpr-new-website-features-and-statistics-export-option
   team: https://einsteinathome.org/community/teams/185236
   stats: https://gridcoinstats.eu/project/einstein@home
 
@@ -57,6 +63,7 @@ projects:
   sponsor: Private Sponsors, accept donations in Bitcoin
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'no'
   team: https://www.gpugrid.net/team_display.php?teamid=3493
   stats: https://gridcoinstats.eu/project/gpugrid
 
@@ -66,6 +73,8 @@ projects:
   sponsor: CERN
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'yes'
+  gdpr-enable-steps: 'https://lhcathome.cern.ch/lhcathome/forum_thread.php?id=4918'
   team: https://lhcathome.cern.ch/lhcathome/team_display.php?teamid=8128
   stats: https://gridcoinstats.eu/project/lhc@home_classic
 
@@ -77,6 +86,7 @@ projects:
   sponsor: Rensselaer Polytechnic Institute
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'no'
   team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
   stats: https://gridcoinstats.eu/project/milkyway@home
 
@@ -89,6 +99,7 @@ projects:
   sponsor: California State University Fullerton
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353
   stats: https://gridcoinstats.eu/project/nfs@home
   
@@ -99,6 +110,8 @@ projects:
   sponsor: Arizona State University, school of Mathematics
   cpu: 'yes'
   gpu: 'yes'
+  gdpr: 'yes'
+  gdpr-enable-steps: 'https://numberfields.asu.edu/NumberFields/forum_thread.php?id=355#2134'
   team: https://numberfields.asu.edu/NumberFields/team_display.php?teamid=2069
   stats: https://gridcoinstats.eu/project/numberfields@home
 
@@ -109,6 +122,7 @@ projects:
   sponsor: ''
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48
   stats: https://gridcoinstats.eu/project/odlk1
 
@@ -119,6 +133,7 @@ projects:
   sponsor: University of Washington
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575
   stats: https://gridcoinstats.eu/project/rosetta@home
 
@@ -128,6 +143,7 @@ projects:
   sponsor: The project is in collaboration with the Mersenne CRUS project.
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
   stats: https://gridcoinstats.eu/project/srbase
 
@@ -141,6 +157,7 @@ projects:
   sponsor: National Research Council of Italy (CNR)
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://gene.disi.unitn.it/test/team_display.php?teamid=61
   stats: https://www.gridcoinstats.eu/project/tn-grid
   
@@ -150,6 +167,8 @@ projects:
   sponsor: University of Warsaw
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'yes'
+  gdpr-enable-steps: https://www.reddit.com/r/gridcoin/comments/ega7k5/universehome_requires_consent_for_stats_export/
   team: https://universeathome.pl/universe/team_display.php?teamid=1822
   stats: https://gridcoinstats.eu/project/universe@home
 
@@ -160,6 +179,8 @@ projects:
   sponsor: Sponsored by the IBM responsibility initiative
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'yes'
+  gdpr-enable-steps: https://www.worldcommunitygrid.org/ms/viewDataSharing.action
   team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
   stats: https://gridcoinstats.eu/project/World_Community_Grid
 
@@ -170,6 +191,7 @@ projects:
   sponsor: Private
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: http://yafu.myfirewall.org/yafu/team_display.php?teamid=260
   stats: https://gridcoinstats.eu/project/yafu
   
@@ -181,5 +203,6 @@ projects:
     Bitcoin
   cpu: 'yes'
   gpu: 'no'
+  gdpr: 'no'
   team: https://www.rechenkraft.net/yoyo/team_display.php?teamid=1475
   stats: https://gridcoinstats.eu/project/yoyo@home
