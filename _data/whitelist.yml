@@ -142,7 +142,7 @@ projects:
   goal: Attempting to solve Sierpinski / Riesel Bases up to 1030.
   sponsor: The project is in collaboration with the Mersenne CRUS project.
   cpu: 'yes'
-  gpu: 'no'
+  gpu: 'yes'
   gdpr: 'no'
   team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
   stats: https://gridcoinstats.eu/project/srbase
