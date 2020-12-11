@@ -234,6 +234,13 @@ body {
 .table-color-no{
     background-color: darkred;
 }
+.table-color-gdpr-yes{ /* warns that you need to enable stats */
+    background-color: #999900;
+}
+.table-color-gdpr-yes a{ /* makes the link underlined and not a hard to read blue*/
+    color: inherit;
+    text-decoration: underline;
+}
 
 /*----end whitelist.erb----*/
 /*terminology.htm*/
