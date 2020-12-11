@@ -224,10 +224,15 @@ redirect_from:
             </div>
         </div>
         <h3 id="about-gdpr" class="anchor-adjust">About GDPR</h3>
-            <p>GDPR is a law in the European Union for data privacy. Some projects have
-            interpreted it to mean that to you have to opt in for sharing any BOINC 
-            stats to other people. To earn Gridcoin you must enable this because
-            otherwise Gridcoin can't see how much work you are doing and reward it</p>
+            <p>GDPR is a law in the European Union on data privacy. Some projects have
+            interpreted it to mean that to sharing BOINC stats to anyone requires opting in. 
+            Solo crunchers must enable it to be rewarded because otherwise Gridcoin can't see how much work 
+            you've done and figure out how much you are owed</p>
+            
+            <p>NOTE: <u>Only solo crunchers on these projects need to follow these steps</u>.
+            Pool cruncher don't need to because your pool has already done it
+            </p>
+            
 
             <p>Currently the whitelisted projects that require this are:<br>
             {% for project in site.data.whitelist.projects %}
