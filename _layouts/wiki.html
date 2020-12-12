@@ -6,7 +6,7 @@
         <div class="min-h-80 docs-container container-fluid">
             <div class="row">
                 <div class="col-xl-3">
-                    <details class="docs-menu">
+                    <details class="docs-menu" id="docs-menu">
                         <summary>Other Wiki Pages (click to view)</summary>
                         <ul>
                             {% for page in site.pages %}
@@ -30,5 +30,13 @@
         <script src="/assets/js/core/jquery-3.4.1.min.js" type="text/javascript"></script>
         <script src="/assets/js/core/bootstrap-4.3.1.bundle.min.js" type="text/javascript"></script>
         <script src="/assets/js/details-element-polyfill.js" type="text/javascript"></script>
+        <script> //open by dropdown default if on Desktop, but not on Mobile
+            const maxCollapseWidth = parseInt(
+                getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-xl')
+            );
+            if (screen.width > maxCollapseWidth){
+                document.getElementById("docs-menu").open = true;
+            }
+        </script>
     </body>
 </html>
