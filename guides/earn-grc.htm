@@ -52,89 +52,149 @@ redirect_from:
             <!--Step 1-->
             <div class='row'>
                 <div class='col-12 col-sm-12 text-center'>
-                    <h4 class="text-bold text-center">
+                    <h2 class="text-bold text-center">
                         Steps to Earn GRC via DPOR
-                    </h4>
+                    </h2>
                 </div>
             </div>
             <!--/Step 1-->
             <!--Contibute content-->
             <div class="row">
                 <div class="col-12 col-sm-12">
-                    <ul>
+                    <h5 class="text-center"> 1) Configure the Wallet </h5>
+                        <div class="text-center mb-4"><i><small>If you don't use the GUI, go to <a href="#non-gui">the non-gui steps</a>. Ignore this if you don't know what this means</small></i></div>
+                        a) In the wallet, click on the beacon button and then select Solo ("Beacon" may display as "Action Needed")
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-config-start.png" alt="image with three options and the solo button selected">
+                        <figcaption class="text-center mb-4">
+                            If your wallet doesn't look like the image above, press the "Start Over" button
+                        </figcaption>
+                        b) Press next and enter the email you used on your BOINC projects
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-email.png" alt="image showing a textbox asking for your BOINC email">
+                        <figcaption class="text-center mb-4">  
+                            Enter your email for your BOINC projects, and don't enter example@example.com
+                        </figcaption> 
+                        c) Click next and make sure you see a check mark (✔️) next to the field labeled CPID. If you do not, go to the <a href="#troubleshooting">troubleshooting section</a> 
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-overview.png" alt="image showing an overview of information in the wallet about your BOINC account">
+                        <figcaption class="text-center mb-4">
+                            Note that your CPID and email will be different than in the image above
+                        </figcaption>
+                        d) Click next and then press the advertise beacon button
+                        <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/send-beacon.png" alt="image showing a button that has send beacon on it">
+                        e) You should now see the screen below saying you have a pending beacon. If you see any errors go to the <a href="#troubleshooting">troubleshooting section</a> 
+                        <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/beacon-has-sent.png" alt="image showing a lighthouse with yellow to represent a pending beacon and a check mark saying press next to continue ">
+                        f) Press next and then press the copy button or write down the code. You will need this for step g
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-username-steps.png" alt="image showing the wallet's instructions on how to change your username and the code the wallet wants you to change to">
+                        <figcaption class="text-center mb-4">
+                            Make sure to copy the code on your wallet and not the code above. Each code is different
+                        </figcaption>  
+                        g) If you press next you should now see the screen below
+                        <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/pending-beacon-status.png" alt="image showing the wallet's instructions on how to change your username and the code the wallet wants you to change to">
+                        h) Go to BOINC and click a whitelisted project you work on. Click on the Your Account button under Project web pages. If not listed, click on Home page and look for a setting or account options page on the website
+                        <div class="row mb-4"> 
+                            <div class="col-xl">
+                                <img class="img-fluid" width="682" src="/assets/img/guide/boinc-advanced-view-website.png" alt="image of the advanced view in BOINC showing a project selected and the your account option being clicked under the column Project web pages">
+                                <figcaption class="text-center">
+                                    Advanced View
+                                </figcaption>
+                            </div>
+                            <div class="col-xl">
+                                <img class="img-fluid" width="682" src="/assets/img/guide/boinc-simple-view-website.png" style="margin-top:6px" alt="image of the simple view in BOINC showing a dropdown from clicking the project web page button and the your account option being clicked">
+                                <figcaption class="text-center mt-xl-5 pt-xl-3">  <!--- align to the height of advanced view with padding and margins (non-cropped screenshots have 9px of transparent pixels on top)-->
+                                    Simple View
+                                </figcaption>
+                            </div>
+                        </div>
+                        i) If you see the page below, click on the other account info link. If you see something else, look for a place to change your username
+                        <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/boinc-account-overview.png" alt="image what some BOINC account pages look like with the other account info link underlined">
+                        j) Change your username temporarily to the code in your wallet until the beacon verifies (takes ~24-48 hours). This proves to the network that you own your account and are not trying to steal rewards from someone
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/boinc-account-username-change.png" alt="image what the name change screen looks like with an example code filled in for the username">
+                        <figcaption class="text-center mb-4">
+                            Your BOINC project may look different. Don't use the exact code above. Use the code that was in your wallet
+                        </figcaption>
+                        k) After ~24-48 hours your beacon should validate and you should see something like the screen below. After you see this, you can now change your username to whatever you want
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/valid-beacon-screen.png" alt="image showing the beacon page showing the words everything looks good and a checkmark">
+                    <h5 class="text-center mt-5">2) Running the Wallet to Stake</h5>
+                        <div class="mb-5 pb-2">
+                            l) <u>If locked</u>, unlock the wallet for "Staking Only". It is recommended to have it encrypted for security. 
+                            <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-unlock.png" alt="image showing the unlock menu that appears after press the unlock button. Shows 'for staking only' checked and a textbox to enter your password">
+                            <figcaption class="text-center mb-4">
+                                Screen after the Unlock Wallet button is pressed. Doesn't apply or show as an option if the wallet has not been encrypted
+                            </figcaption>
+                            m) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards. Make sure you see a green up arrow symbol like below
+                            <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-staking.png" alt="image showing a green up arrow being hovered over saying 'staking' and numbers about how likely it is to stake">
+                            <figcaption class="text-center mb-4">
+                                Your numbers will be different when you hover over the icon. Make sure the icon is green and upward. If it isn't, hover over it to see what issues are going on
+                            </figcaption>
+                            <p class="mb-4">n) Every 6 months, you will need to renew your beacon. This can be done by pressing the beacon button then clicking on the renew button<p>
+                            o) Keep the wallet up to date as updates are released
+                        </div>
+                <h4 id="troubleshooting" class="text-center text-bold anchor-adjust">Troubleshooting</h4>
+                <h5 class="text-center">Q: My Wallet Is Not Staking</h5>
+                    <li>Hover over the icon with the arrow to see why it is not staking</li>
+                    <li>Check that the wallet is unlocked</li>
+                    <li>Run the diagnostics under the help tab</li>
+                    <li>If you see that your wallet is out of sync, try waiting a few hours leaving the wallet to sync</li>
+                    <li>If the "verify clock" test has failed, check that your timezone on your computer is correct and that the time is also correct</li>
+                    <li>If you see the ETTS (estimated time to stake) check has failed, consider either getting more coins or following the pool guide</li>
+                <h5 class="text-center mt-5">Q: My Balance is Too Low To Send a Beacon</h5>
+                    <li>You need around 5000 GRC to stake often while solo mining. If you don't have enough for a beacon, you will not meet this. Consider following the <a href="/guides/pool.htm">pool guide</a> which does not have this requirement, or buying/obtaining 5000 GRC</li>
+                <h5 class="text-center mt-5">Q: My Beacon Isn't Being Verified</h5>
+                    <li>Make sure you are crunching under your own account in BOINC and that the project is on the <a href="/guides/whitelist.htm">whitelist</a></li>
+                    <li>Make sure you changed your username</li>
+                    <li>Check if your project is one that requires you to enable stats export
+                        <ul>
+                            <li>Go to <a href="/guides/whitelist.htm#about-gdpr">the whitelist page</a> and see if your project requires it</li>
+                            <li>If you see your project requires it, follow the steps to enable it that are linked next to your project</li>
+                        </ul>
+                    </li>
+                    <li>Try waiting if all of the above are correct and its been less than 48 hours</li>
+                <h5 class="text-center mt-5">General Help</h5>
+                    <div class="mb-5 pb-4">
                         <li>
-                            <h5 class="text-center">1) Check Your Projects</h5>
+                            Try running the diagnostic (located under the help tab) and check that everything passes
+                        </li>
+                        <li>
+                            Make sure any projects you crunch are on the <a href="/guides/whitelist.htm">whitelist</a>. If it isn't on it, you will not be rewarded for it
+                        </li>
+                        <li>
+                            Check that the CPIDs (cross project identifier) are the same across your project 
                             <ul>
                                 <li>
-                                    a) Make sure any projects you crunch are on the <a href="../guides/whitelist.htm">whitelist</a>. If it isn't on it, you will not be rewarded for it
-                                </li>
-                                <li>
-                                    b) Check that each project crunched is on team Gridcoin. You will not get rewarded if they are not on the team
-                                </li>
-                                <li>
-                                    c) Check that the CPIDs (cross project identifier) are the same across your projects. You can check on each project or check using <a href="https://www.boincstats.com/">boincstats</a>
-                                    <ul>
-                                        <li>
-                                            If you found differing CPIDs, use <a href="https://steemit.com/gridcoin/@dutch/the-definitive-guide-to-fixing-a-split-cpid-gridcoin-s-and-boinc-s-1-problem">this guide</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    d) if you just started crunching, you may need to wait around 24 hours for statistics to sync
+                                    If you found differing CPIDs, make sure you are using the same account. If you are on the same account, use <a href="https://steemit.com/gridcoin/@dutch/the-definitive-guide-to-fixing-a-split-cpid-gridcoin-s-and-boinc-s-1-problem">this guide</a> to help fix issues
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <h5 class="text-center"> 2) Configure the Wallet </h5>
-                            <ul>
-                                <li>
-                                    a) In the wallet, go to the overiew page and check the message in the lower left. Makes sure it doesn't say INVESTOR
-                                    <ul>
-                                        <li>
-                                            If you see INVESTOR, check that you did all steps in Check Your Projects. If you setup BOINC in a non-default path, add it in the config (see <a href="../guides/gridcoin-install.htm">Step 2</a>)
-                                        </li>
-                                        <li>
-                                            Note: BOINC is needed on the machine running the wallet. It needs to be connected to any project on your account (it can be suspended)
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    b) Send a beacon
-                                <ul>
-                                    <li>
-                                        I) Unlock your wallet fully if you've locked it
-                                    </li>
-                                    <li>
-                                        II) Go to the debug tab, then console, and enter "advertisebeacon" without quotes. A transaction should be sent
-                                    </li>
-                                    <li>
-                                        III) After it's been sent, Go to the console and run "beaconreport" without quotes. Check for your CPID. You may need to wait ~24 hours
-                                    </li>
-                                    <li>
-                                        IV) You can now lock your wallet again
-                                    </li>
-                                </ul>
-                                </li>
-                            </ul>
+                            If you just started crunching, you may need to wait around 24-48 hours for statistics to sync
                         </li>
                         <li>
-                            <h5 class="text-center">3) Running the Wallet to Stake</h5>
-                            <ul>
-                                <li>
-                                    a) Unlock the wallet for staking only if locked. It is recommended to have it encrypted for security
-                                </li>
-                                <li>
-                                    b) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards
-                                </li>
-                                <li>
-                                    c) Every 6 months, you will need to send a beacon again. Repeat the process shown in Configure the Wallet step b
-                                </li>
-                                <li>
-                                    d) Keep the wallet up to date as updates are released
-                                </li>
-                            </ul>
+                            Still not working? Try going to one of the community platforms (such as Reddit or Discord) and ask for help there. A full list of platforms is at the header and footer of this site 
                         </li>
-                    </ul>
+                    </div>
+                <h5 class="text-center anchor-adjust text-bold" id="non-gui">Configure the Wallet (non-GUI steps)</h5>
+                <li>
+                    I) Unlock your wallet fully if you've locked it
+                </li>
+                <li>
+                    II) Run the command <code>advertisebeacon</code> and make note of the <code>verification_code</code>. If you lose track of the code, get it again with <code>beaconstatus</code>
+                </li>
+                <li>
+                    III) Login to one of your BOINC projects web pages and change your username to the verification code (you can change it back after your beacon validates)
+                </li>
+                <li>
+                    IV) You can now lock your wallet again (you can unlock your wallet for staking too). 
+                </li>
+                <li>
+                    V) Wait for your beacon to validate (check it with <code>beaconstatus</code>)
+                </li>
+                <li>
+                    VI) Leave your wallet running and unlocked for staking as close as possible to 24/7. This will allow your wallet to stake and earn your rewards
+                </li>
+                <li>
+                    Note: BOINC is needed on the machine running the wallet. It needs to be connected to any project on your account (it can be suspended)
+                    If you setup BOINC in a non-default path, add it in the config (see <a href="../guides/gridcoin-install.htm">Step 2</a>)
+                </li>
+
                 </div>
             </div>
         </div>
