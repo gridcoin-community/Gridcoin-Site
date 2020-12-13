@@ -18,6 +18,14 @@ body {
 .grc-bgcolor{
     background-color: #1A2632;
 }
+
+.anchor-adjust{
+    position: relative;
+    margin-top: -76px;
+    padding-top: 76px;
+/* adjusts any anchors to match with the banner. Similar to the one done with .doc-container h1-h6*/
+}
+
 .grcbtn {
     border-radius: 50rem;
     padding-left: 1rem !important;
@@ -234,6 +242,13 @@ body {
 .table-color-no{
     background-color: darkred;
 }
+.table-color-gdpr-yes{ /* warns that you need to enable stats */
+    background-color: #999900;
+}
+.table-color-gdpr-yes a{ /* makes the link underlined and not a hard to read blue*/
+    color: inherit;
+    text-decoration: underline;
+}
 
 /*----end whitelist.erb----*/
 /*terminology.htm*/
@@ -383,7 +398,6 @@ body {
      margin: 0px auto 16px auto;
      /* 16px gives spacing on the bottom on mobile when collapsed*/
  }
-
  .docs-container h1, .docs-container h2, .docs-container h3, .docs-container h4, .docs-container h5, .docs-container h6{
     position: relative;
     margin-top: -76px;
