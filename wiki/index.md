@@ -205,3 +205,4 @@ scientific computations instead of securing the blockchain.
 
   - [Wikipedia](https://en.wikipedia.org/wiki/Gridcoin)
   - [Russian Reddit Wiki](https://reddit.com/r/russiangridcoin/wiki/)
+  - [Old Gridcoin Wiki](https://github.com/gridcoin-community/Gridcoin-Wiki/wiki)
