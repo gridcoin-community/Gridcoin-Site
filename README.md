@@ -1,7 +1,17 @@
 # Gridcoin-Site
 Open source Gridcoin website
 
-Uses the Jekyll Site builder
+## Want to edit the wiki?
+See more information about that process [here](https://gridcoin.us/wiki/wiki-editing)
+
+## Interested in contributing towards the whitelist or the blog?
+
+Head on over to the [data folder](_data/) to get more info.
+
+
+# Building Locally
+
+This uses the Jekyll Site builder
 https://jekyllrb.com
 ## Install Jekyll
 
@@ -38,7 +48,3 @@ Delete Gemfile.lock and run bundle install
 ### For running the development web server:
 
 bundle exec jekyll serve
-
-## Interested in contributing towards the whitelist or the blog?
-
-Head on over to the [data subfolder](_data/) to get more info.
