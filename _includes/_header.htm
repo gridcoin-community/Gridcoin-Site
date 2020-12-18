@@ -88,14 +88,9 @@
                             </a>
                         <div class="dropdown-menu" aria-labelledby="trade-dropdown">
                             <h6 class="dropdown-header text-center">Exchanges</h6>
-                            <!--
-                                <a class="dropdown-item" href="https://bitshares.openledger.info/#/market/OPEN.GRC_OPEN.BTC"><i class="fa fa-exchange"></i> OpenLedger</a>
-                            -->
-                            <!--
-                            <a class="dropdown-item" href="https://market.rudex.org/#/asset/RUDEX.GRC">RUDEX</a>
-                            -->
-                            <a class="dropdown-item" href="https://www.southxchange.com/Market/Book/GRC/BTC">SouthXchange</a>
-                            <a class="dropdown-item" href="https://txbit.io/Asset/GRC">Txbit.io</a>
+                            {% for exchange in site.data.exchanges.centralized-exchanges %}
+                            <a class="dropdown-item" href="{{exchange.link}}">{{exchange.name}}</a>
+                            {% endfor %}
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header text-center">3rd party wallets</h6>
                             <a class="dropdown-item" href="https://holytransaction.com/">HolyTransaction</a>
