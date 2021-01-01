@@ -32,36 +32,16 @@
                     </li>
                 </ul>
             </div>
-            <!--
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <h3>Decentralized exchanges</h3>
-                <ul>
-                    <li>
-                        <a href="https://market.rudex.org/#/asset/RUDEX.GRC">
-                            <img src="../assets/img/Exchanges/RUDEX.png" alt="RUDEX" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://openledger.io/#/market/OPEN.GRC_OPEN.BTC">
-                            <img src="../assets/img/Exchanges/OL.png" alt="OpenLedger" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            -->
             <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                 <h3>Centralized exchanges</h3>
                 <ul>
+                    {% for exchange in site.data.exchanges.centralized-exchanges %}
                     <li>
-                        <a href="https://www.southxchange.com/Market/Book/GRC/BTC">
-                            <img width="300" src="../assets/img/Exchanges/southxchange-light.png" alt="SouthXchange" />
+                        <a href="{{exchange.link}}">
+                            <img width="300" src="{{exchange.image}}" alt="{{exchange.name}}">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://txbit.io/Asset/GRC">
-                            <img width="300" src="../assets/img/Exchanges/txbit.svg" alt="Txbit.io" />
-                        </a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

@@ -142,8 +142,9 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
 <!-- end list -->
 
   - Handelsplätze:
-      - [Txbit](https://txbit.io/Trade/GRC/BTC)
-      - [SouthXchange](https://www.southxchange.com/Market/Book/GRC/BTC)
+      {%- for exchange in site.data.exchanges.centralized-exchanges %}
+      - [{{exchange.name}}]({{exchange.link}})
+      {%- endfor %}
 
 <!-- end list -->
 

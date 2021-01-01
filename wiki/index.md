@@ -149,10 +149,12 @@ scientific computations instead of securing the blockchain.
       - [AUR daemon](https://aur.archlinux.org/packages/gridcoinresearchd/)
 
 <!-- end list -->
-
+  {% comment %} This lists out all the exchanges from _data/exchanges.yml {% endcomment %}
   - Exchanges:
-      - [Txbit](https://txbit.io/Trade/GRC/BTC)
-      - [SouthXchange](https://www.southxchange.com/Market/Book/GRC/BTC)
+      {%- for exchange in site.data.exchanges.centralized-exchanges %}
+      - [{{exchange.name}}]({{exchange.link}})
+      {%- endfor %}
+
 
 <!-- end list -->
 
