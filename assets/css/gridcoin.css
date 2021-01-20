@@ -412,3 +412,7 @@ body {
  .docs-container a{
      color: #3f9bff;
  }
+.docs-container blockquote {
+    border-left: 3px solid grey;
+    padding-left: 20px;
+}
