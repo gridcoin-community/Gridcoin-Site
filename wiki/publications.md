@@ -20,7 +20,7 @@ Note that this includes non-whitelisted projects and is missing some papers
 * [Distributed Consensus Technologies in Cryptocurrency Applications](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.674.1781&rep=rep1&type=pdf)
 * [Breaking and Fixing Gridcoin](https://www.usenix.org/system/files/conference/woot17/woot17-paper-grothe.pdf) (Gridcoin's system now looks different from when this was released)
 * [One of a kind: The tail of citizen science volunteers](https://doi.org/10.1002/pra2.45)
-* [Sidecoin: a Snapshot Mechanism for Bootstrapping a Blockch](https://arxiv.org/pdf/1501.01039.pdf)
+* [Sidecoin: a Snapshot Mechanism for Bootstrapping a Blockchain](https://arxiv.org/pdf/1501.01039.pdf)
 
 ### Books
 * [A Look at the Underbelly of Distributed Platforms](https://doi.org/10.2200/S01022ED1V01Y202006CSL011)

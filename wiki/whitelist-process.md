@@ -32,7 +32,7 @@ The overall process looks like this:
           to its past
 ^
 *   Number of Zero Credit Days (ZCD) is less than or equal to 7 out of the last 20 days
-    * Means that there can't be more than 6 days out of the last 20 that the project didn't give out
+    * Means that there can't be more than 7 days out of the last 20 that the project didn't give out
       credits
 ^
 *   The project has a clear description of the what it does and the project 
@@ -86,7 +86,7 @@ to see people able to earn rewards for the project.
 
 # Greylisting
 
-If a whitelist project gets a WAS that is red or a ZCD that is above 6, 
+If a whitelist project gets a WAS that is red or a ZCD that is above 7, 
 it will be temporarily put on the greylist. Projects on the greylist act as if they
 aren't whitelisted (no one earns anything from these projects). As soon as the
 project meets both requirements again, they will be put off the greylist and 
