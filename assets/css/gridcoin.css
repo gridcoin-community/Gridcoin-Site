@@ -416,3 +416,6 @@ body {
     border-left: 3px solid grey;
     padding-left: 20px;
 }
+.docs-container li >  p + ul { /* Decrease larger <p> spacing from a bullet point to its sub bullet points */
+    margin-top: -1.0em; /* negative margins used instead of selecting the <p> element because that's really tricky or potentially impossible*/
+}
