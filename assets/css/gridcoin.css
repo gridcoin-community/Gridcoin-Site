@@ -67,6 +67,11 @@ body {
         max-height: 85vh;
     }
 }
+/*work around to get check marks & other special chars to render as white text*/
+.text-special-color-white{
+    color:transparent;
+    text-shadow: 0 0 0 white;
+}
 /*End Fix*/
 .grclogoimg {
     width: 200px;
