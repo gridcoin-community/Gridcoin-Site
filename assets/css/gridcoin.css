@@ -344,28 +344,16 @@ body {
 .grc-ref {
     padding-top: 140px;
 }
-/*div.dropdown a {
-    text-decoration:none;
-  }
-  
-  div.dropdown a.dropdown-header {
-    color:black !important;
-  }
-  
-  div.footer_placeholder a {
-    text-decoration:none;
-    font-weight:normal;
-  }
-  */
-  .min-h-80{
-      min-height: 80vh;
-  }
-  .highlight { 
-      /* applies to markdown rendering on four space indented code block  */
-      background-color: #454d55;
-      color: white;
-      padding-left: 2px;
-   }
+.min-h-80{
+    min-height: 80vh;
+}
+.highlight { 
+    /* applies to markdown rendering on four space indented code block  */
+    background-color: #454d55;
+    color: white;
+    padding-left: 2px;
+}
+/* wiki */
   .docs-container{
     padding-top: 130px;
     text-align:left;
