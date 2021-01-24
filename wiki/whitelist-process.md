@@ -109,7 +109,10 @@ Gridcoin has a list of projects that it rewards called the whitelist. People cru
 The main advantage of being on the whitelist is that more people will be interested in crunching on your project. Whitelisting usually leads to a large increase in users on the project increasing the available computing power. This could help you expand the scope of the work computed and or get faster results. Secondly, being on the whitelist helps increase awareness of the project. More people will see that the project exists since people using Gridcoin will often look at the whitelist to decide what to use BOINC for.
 
 ## What are the disadvantages?
-Similar to the main advantage, whitelisting generally leads to a large number of users. There also are a few bots that will gather statistics to help distribute Gridcoin for the amount of work done. These both can potentially put extra strain on your servers. Secondly, this can potentially incentivize more cheating because people now can earn money from credits. However it also incentivises people to try and catch cheating since they would be losing out on the Gridcoin gained by the cheater 
+Similar to the main advantage, whitelisting generally leads to a large number of users. There also are a few bots ([scrapers](scraper "wikilink")) that will gather statistics to help distribute Gridcoin for the amount of work done. Currently in 2021 there are 11 scrapers. The scrapers pull the users.gz file
+around once every 24 hours. The scrapers and the increase in users can potentially put extra strain on your servers. 
+
+Secondly, this can potentially incentivize more cheating because people now can earn money from credits. However it also incentivises people to try and catch cheating since they would be losing out on the Gridcoin gained by the cheater 
 
 ## What's the whitelisting process?
 The first step is making sure you as the admin of the project want to be whitelisted. If you, somewhere public you should say that you were interested and a date when they would want this to happen (anywhere that someone could check such as project forums, Reddit, etc). Following this, find someone to make a poll for you on Gridcoin. Lastly if the community votes votes "yes", then you
