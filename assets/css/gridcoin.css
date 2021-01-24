@@ -73,6 +73,11 @@ body {
     text-shadow: 0 0 0 white;
 }
 /*End Fix*/
+dfn{
+    text-decoration: 1px dotted underline;
+    cursor: help;
+    font-style: normal;
+}
 .grclogoimg {
     width: 200px;
     padding-top: 50px;
