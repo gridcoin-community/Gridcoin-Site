@@ -11,6 +11,18 @@ The Gridcoin network encompasses multiple types of BOINC projects, each one with
 
 The Gridcoin network has a Total Magnitude of 115,000 that is evenly distributed across all whitelisted projects. As there are currently 16 whitelisted projects, this results in a Project Magnitude of 7,187.5. This Project Magnitude is distributed among its Gridcoin crunchers in proportion to their RAC. Lastly, each Cruncher's Magnitude is calculated by adding the total sum of their magnitudes across all whitelisted projects. This calculation is illustrated through the examples below. 
 
+# Impact
+
+By distributing the Total Magnitude of 115,000 equally across all projects, the Gridcoin Network ensures that less popular projects would provide higher returns for crunchers. This creates an incentive for crunching power to be distributed evenly across the whitelisted projects, thereby ensuring that all whitelisted projects benefit equally from the network.
+
+# Rewards Calculation
+
+GRC rewards for crunching is determined per superblock, which have a current rate of c. 1 superblock per day, and can be calculated from a cruncher's magnitude according to the following formula:
+
+- GRC per Superblock = Cruncher's Magnitude / 4
+
+These pending rewards are updated by the second in the GRC wallet.
+
 #### Example 1
 
 Adam is crunching exclusively on World Community Grid. His RAC is as follows:
@@ -43,12 +55,4 @@ Eve's Magnitude in each project would then be:
 
 Eve's Total Magnitude would then be 3.5938 + 5.0312 + 3.234375 = 11.859375
 
-# Impact
 
-By distributing the Total Magnitude of 115,000 equally across all projects, the Gridcoin Network ensures that less popular projects would provide higher returns for crunchers. This creates an incentive for crunching power to be distributed evenly across the whitelisted projects, thereby ensuring that all whitelisted projects benefit equally from the network.
-
-# GRC Calculation
-
-GRC is determined per superblock, which have a current rate of c. 1 superblock per day, and can be calculated from a cruncher's magnitude according to the following formula:
-
-- GRC per Superblock = Cruncher's Magnitude / 4
