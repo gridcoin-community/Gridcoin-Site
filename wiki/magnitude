@@ -9,7 +9,7 @@ The Gridcoin network encompasses multiple types of BOINC projects, each one with
 
 # Methodology
 
-The Gridcoin network has a **Total Magnitude** of 115,000 that is evenly distributed across all whitelisted projects. As there are currently 16 whitelisted projects, this results in a **Project Magnitude** of 7,187.5. This Project Magnitude is distributed among its Gridcoin crunchers in proportion to their RAC. Lastly, each **Cruncher's Magnitude** is calculated by adding the total sum of their magnitudes across all whitelisted projects. This calculation is illustrated through the examples below. 
+The Gridcoin network has a Total Magnitude of 115,000 that is evenly distributed across all whitelisted projects. As there are currently 16 whitelisted projects, this results in a Project Magnitude of 7,187.5. This Project Magnitude is distributed among its Gridcoin crunchers in proportion to their RAC. Lastly, each Cruncher's Magnitude is calculated by adding the total sum of their magnitudes across all whitelisted projects. This calculation is illustrated through the examples below. 
 
 #### Example 1
 
