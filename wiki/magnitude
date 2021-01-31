@@ -17,11 +17,11 @@ By distributing the Total Magnitude of 115,000 equally across all projects, the 
 
 # Rewards Calculation
 
-GRC rewards for crunching is determined per superblock, which have a current rate of c. 1 superblock per day, and can be calculated from a cruncher's magnitude according to the following formula:
+Gridcoin rewards for crunching are determined by magnitude. Magnitude updates every superblock which happen nearly once per 24 hours. The reward can be calculated from a cruncher's magnitude according to the following formula:
 
-- GRC per Superblock = Cruncher's Magnitude / 4
+- Gridcoin per Day = Cruncher's Magnitude / 4
 
-These pending rewards are updated by the second in the GRC wallet.
+The pending rewards themselves are updated by the second in the Gridcoin wallet.
 
 # Examples
 
@@ -56,4 +56,3 @@ Eve's Magnitude in each project would then be:
 - Rosetta@home: (9,000/20,000,000)*7,187.5 = 3.234375
 
 Eve's Total Magnitude would then be 3.5938 + 5.0312 + 3.234375 = 11.859375
-
