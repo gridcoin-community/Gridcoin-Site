@@ -23,6 +23,8 @@ GRC rewards for crunching is determined per superblock, which have a current rat
 
 These pending rewards are updated by the second in the GRC wallet.
 
+# Examples
+
 #### Example 1
 
 Adam is crunching exclusively on World Community Grid. His RAC is as follows:
@@ -54,5 +56,4 @@ Eve's Magnitude in each project would then be:
 - Rosetta@home: (9,000/20,000,000)*7,187.5 = 3.234375
 
 Eve's Total Magnitude would then be 3.5938 + 5.0312 + 3.234375 = 11.859375
-
 
