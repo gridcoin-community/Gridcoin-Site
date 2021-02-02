@@ -14,7 +14,7 @@ Gridcoin-Classic to modern Gridcoin (referred to here as Gridcoin-Research
 to clarify between it and Gridcoin-Classic). The unclaimed coins from the 
 transition went into a foundation fund. After this transition, 
 Gridcoin-Research went to a Proof-of-Work and Proof-of-Stake hybrid then 
-later on to Proof-of-Stake system with research rewards on top of staking.
+later on to Proof-of-Stake system with research rewards on top of [staking](staking "wikilink").
 
 
 ## Gridcoin-Classic to Gridcoin-Research Conversion

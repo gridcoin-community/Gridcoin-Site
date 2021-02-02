@@ -5,6 +5,15 @@ redirect_from:
   - "/Wiki/Config-File"
 ---
 
+## Background
+
+The config file is a file that can change list of different options. When you update
+or change the file, make sure to restart the wallet to make the changes go into
+effect
+
+In the GUI you can open it to edit by clicking the Setting tab then Open Config File. 
+Alternatively you can go to the file in the location below and edit it there 
+
 ## Default gridcoinresearch.conf location
 
     Windows:  %AppData%\GridcoinResearch\
@@ -12,14 +21,6 @@ redirect_from:
     Linux:    ~/.GridcoinResearch/
 
     macOS:    /Users/USERNAME/Library/Application Support/GridcoinResearch/
-
-## Testnet
-
-Note: It is not supported to enter *testnet=1* flag into configuration
-file. It *must* be specified on the command line in the form of
-*-testnet* argument. Keyword testnet in configuration file has undefined
-behavior. See [Testnet](testnet "wikilink") for more
-    information.
 
 ## Basic Configuration File
 
@@ -183,3 +184,10 @@ chosen from the list.
 Note that the total of all of the percentages can add up to less than
 100%, in which cases the leftover reward will be returned back
 to the staker on the coinstake(s).
+
+## Testnet
+
+Note: It is not supported to enter *testnet=1* flag into configuration
+file. It *must* be specified on the command line in the form of
+*-testnet* argument. Keyword testnet in configuration file has undefined
+behavior. See the [Testnet](testnet "wikilink") page for more information.
