@@ -110,7 +110,7 @@ such as `-testnet`
   * `-rpcconnect=<ip>`      Send commands to node running on `<ip>` (default: 127.0.0.1)
   * `-rpcthreads=<n>`       Set the number of threads to service RPC calls (default: 4)
   * `-blocknotify=<cmd>`    Execute command when the best block changes (%s in cmd is replaced by block hash)
-  * `-walletnotify=<cmd>`   Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)
+  * `-walletnotify=<cmd>`   Exshouldn't have to look something up after seeing the first sentence ecute command when a wallet transaction changes (%s in cmd is replaced by TxID)
   * `-confchange`           Require a confirmations for change (default: 0)
   * `-enforcecanonical`     Enforce transaction scripts to use canonical PUSH operators (default: 1)
   * `-alertnotify=<cmd>`    Execute command when a relevant alert is received (%s in cmd is replaced by message)
@@ -140,7 +140,7 @@ such as `-testnet`
 ## SSL options: 
 Note that **using SSL for RPC is not recommended**. It is discouraged because
 it implies that it can be used over unsafe connections. RPC with SSL
-is still not safe over this you 
+is still not safe over the broader internet or any other unsafe connection 
 
 If you still have some application that is not like that, see the old version of the 
 [Bitcoin Wiki for SSL setup instructions](https://en.bitcoin.it/w/index.php?title=Enabling_SSL_on_original_client_daemon&oldid=33159)
@@ -151,8 +151,9 @@ If you still have some application that is not like that, see the old version of
   * `-rpcsslciphers=<ciphers>`                Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)
 
 ## Update/Snapshot options:
-Aimed mostly for use for users running the headless version of the wallet so they
-can use the built in snapshot tool too
+Snapshot options are mostly for users running the headless version of the wallet 
+so they can use the built in snapshot tool too. Update options are for both headless
+and GUI users
 
   * `-snapshotdownload`           Download and apply latest snapshot
   * `-snapshoturl=<url>`          Optional: Specify url of snapshot.zip file (ex: https://sub.domain.com/location/snapshot.zip)
