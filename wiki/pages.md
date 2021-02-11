@@ -26,7 +26,7 @@ Example: if page.layout == 'wiki' -> if page.layout == 'wiki-de'
 {% for page in site.pages %}
     {% if page.layout == 'wiki'%}
 
-* [ {{page.title}} ]( {{page.url}} )
+* [ {{page.title}} ]( {{page.url}} "wikilink")
 
     {% endif %}
 {% endfor %}
@@ -37,7 +37,7 @@ Example: if page.layout == 'wiki' -> if page.layout == 'wiki-de'
 {% for page in site.pages %}
     {% if page.layout == 'wiki-de'%}
 
-* [ {{page.title}} ]( {{page.url}} )
+* [ {{page.title}} ]( {{page.url}} "wikilink")
 
     {% endif %}
 {% endfor %}

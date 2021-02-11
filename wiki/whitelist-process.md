@@ -7,7 +7,7 @@ layout: wiki
 # Notice
 
 Are you a project admin? Jump to the [information for project admins](#information-for-project-admins "wikilink") section  
-Looking for what projects are on the whitelist? Go to [this whitelist page](/guides/whitelist.htm)
+Looking for what projects are on the whitelist? Go to [this whitelist page](/guides/whitelist.htm "sitelink")
 
 # General Overview
 

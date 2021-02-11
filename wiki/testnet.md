@@ -10,13 +10,13 @@ redirect_from:
 Testnet (test network) is a separate blockchain meant for testing new features 
 of Gridcoin. It helps catch issues before a release so they don't end up in the
 final versions. The coins on testnet don't have actual value since they are just 
-for testing purposes. Want to help test? See the [How To Help Section](#how-to-help) 
+for testing purposes. Want to help test? See the [How To Help Section](#how-to-help "wikilink") 
 for more info
 
 Secondarily it also can be used to help test scripts or services that interact 
 with Gridcoin without using real coins. This does not guarantee that your
 program will work on the main network (mainnet), but it can be helpful. Make sure 
-to note some of differences in the [Difference To Mainnet Section](#difference-to-mainnet)
+to note some of differences in the [Difference To Mainnet Section](#difference-to-mainnet "wikilink")
 
 # How To Help
 
@@ -44,7 +44,7 @@ to do, feel free to ask a question on the channel
         3. Go to the testnet folder then right click -> new -> Text Document
         4. Right click -> Rename  and enter `gridcoinresearch.conf`
         5. Right click on the file and hit edit (if it asks you what to use, you can use notepad)
-        6. Copy in the config file and **change `CHANGE_ME` to something unique**. Use this [testnet config file](#the-config-file)
+        6. Copy in the config file and **change `CHANGE_ME` to something unique**. Use this [testnet config file](#the-config-file "wikilink")
         7. Save the file and exit the text editor
     * On MacOS
         1. Go to `~/Library/Application/Support/GridcoinResearch/` 
@@ -54,13 +54,13 @@ to do, feel free to ask a question on the channel
         3. Right click and create a new file (any type works) and rename it
         to `gridcoinresearch.conf`
         4. Double click to open the file
-        5. Copy in the config file and **change `CHANGE_ME`to something unique**. Use this [testnet config file](#the-config-file)
+        5. Copy in the config file and **change `CHANGE_ME`to something unique**. Use this [testnet config file](#the-config-file "wikilink")
         6. Save the file and exit TextEditor
     * On Linux
         1. Go to `~/.GricoinResearch`
         2. Make a folder labeled `testnet` there
         3. Create a file called `gridcoinresearch.conf`
-        4. Edit it and copy in the config file and **change `CHANGE_ME` to something unique**. Use this [testnet config file](#the-config-file)
+        4. Edit it and copy in the config file and **change `CHANGE_ME` to something unique**. Use this [testnet config file](#the-config-file "wikilink")
 
 4. Running the wallet
     * You can have both a testnet and mainnet version of the wallet running at

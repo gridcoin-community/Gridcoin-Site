@@ -91,7 +91,7 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
   * Creates a backup of the wallet.dat and gridcoinresearch.conf files 
     (it also adds dates in the backup files' names). Returns if it was 
     successful for each file The files will be created in the walletbackups 
-    folder. See the [Config Wiki Page](config-file) to find the location for 
+    folder. See the [Config Wiki Page](config-file "wikilink") to find the location for 
     your operating system of the walletbackups folder and other Gridcoin files 
 
 * burn `<amount> [hex string]`

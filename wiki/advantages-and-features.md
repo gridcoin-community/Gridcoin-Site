@@ -18,10 +18,10 @@ useful.
 While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
-* [Comparison to CureCoin](#comparison-to-curecoin)
-* [Comparison to Obyte](#comparison-to-obyte)
-* [Comparison to Primecoin](#comparison-to-primecoin)
-* [Comparison to Tokens](#comparison-to-tokens)
+* [Comparison to CureCoin](#comparison-to-curecoin "wikilink")
+* [Comparison to Obyte](#comparison-to-obyte "wikilink")
+* [Comparison to Primecoin](#comparison-to-primecoin "wikilink")
+* [Comparison to Tokens](#comparison-to-tokens "wikilink")
 
 Additionally, Gridcoin's system of scrapers offers a scalable system that 
 minimizes that amount of centralization. Scrapers get BOINC statistics 

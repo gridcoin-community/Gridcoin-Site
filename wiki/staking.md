@@ -98,7 +98,7 @@ doesn't actually know that you contributed to a pool.
 
 ---
 ## More Reading
-More technical information about staking can be found in the [staking blue paper](/assets/img/grc-bluepaper-section-1.pdf).
+More technical information about staking can be found in the [staking blue paper](/assets/img/grc-bluepaper-section-1.pdf "sitelink").
 This goes into much further details of the statistics involved and more.
 
 
