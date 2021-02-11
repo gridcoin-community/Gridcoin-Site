@@ -419,3 +419,24 @@ body {
 .docs-container li >  p + ul { /* Decrease larger <p> spacing from a bullet point to its sub bullet points */
     margin-top: -1.0em; /* negative margins used instead of selecting the <p> element because that's really tricky or potentially impossible*/
 }
+/*add icon for external links in the wiki*/
+.docs-container a::after{
+    content:"";
+    width:1ch;
+    height:1ch;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(/assets/img/wiki/external_link.svg);
+    margin-left: 0.1ch;
+    margin-right:0.2ch;
+}
+
+/* don't add anything on intra-wiki or intra-site links*/
+.docs-container a[title="wikilink"]::after, 
+.docs-container a[title="sitelink"]::after,
+.docs-menu a::after{
+    width:0px;
+    height: 0px;
+    margin:0px;
+}
