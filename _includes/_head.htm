@@ -6,6 +6,7 @@
 	<!-- SEO Meta tags -->
 	<title>{{ page.title | escape }}</title>
 	<meta name="description" content="{{ page.description | escape }}">
+	<link rel="canonical" href="https://gridcoin.us{{ page.url | replace:'index.html',''}}"> {% comment %}domain hardcoded to avoid any issues with CNAME{% endcomment %}
 
 	<!--     Fonts and icons     -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
