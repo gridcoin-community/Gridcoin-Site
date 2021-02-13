@@ -435,6 +435,8 @@ body {
 /* don't add anything on intra-wiki or intra-site links*/
 .docs-container a[title="wikilink"]::after, 
 .docs-container a[title="sitelink"]::after,
+.docs-container .footnote::after,
+.docs-container .reversefootnote::after,
 .docs-menu a::after{
     width:0px;
     height: 0px;
