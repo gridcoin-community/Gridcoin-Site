@@ -31,7 +31,7 @@ data from each scraper against each other limiting the trust needed. Scrapers ar
 run by several trusted members of the community located around the world. 
 Read more about scrapers on the [Scraper Wiki Page](Scraper "wikilink")
 
-Further, Gridcoin has a voting system to help keep Gridcoin aligned with the
+Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by
 not having unexpected changes and having a way to voice your opinion without 
 needing to fork and split the community.

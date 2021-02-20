@@ -58,7 +58,7 @@ aren't interested and that's ok. There are plenty of reasons such as server capa
 concerns that are completely valid for why they wouldn't want to be whitelisted
 
 ### Whitelist poll
-If the admins approves, a whitelist poll can be made. Currently 
+If the admins approves, a whitelist [poll](voting "wikilink") can be made. Currently 
 polls can only be made by people with over a balance of 100 thousand Gridcoin. 
 It doesn't cost 100k GRC --- you just need to have 100k GRC. The aim of this is 
 to reduce the number of spam in polls. If you do not have 100k GRC, try to find someone 

@@ -12,7 +12,7 @@ Gridcoin Classic was the first version of Gridcoin launched in 2013. It used
 a Proof of Work hybrid system. In 2014 there was a transition from 
 Gridcoin-Classic to modern Gridcoin (referred to here as Gridcoin-Research 
 to clarify between it and Gridcoin-Classic). The unclaimed coins from the 
-transition went into a foundation fund. After this transition, 
+transition went into a [foundation](foundation "wikilink") fund. After this transition, 
 Gridcoin-Research went to a Proof-of-Work and Proof-of-Stake hybrid then 
 later on to Proof-of-Stake system with research rewards on top of [staking](staking "wikilink").
 

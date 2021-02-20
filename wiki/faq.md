@@ -492,7 +492,7 @@ Gridcoin Classic was the first iteration of Gridcoin. Gridcoin classic
 is no longer used and all coins were converted to Gridcoin Research
 coins via Proof of Burn. The Burn process ended on April 20, 2015. If you
 missed the Burn deadline, your coins are now in the possession of the
-Gridcoin Foundation and can no longer be claimed.
+[Gridcoin Foundation](foundation "wikilink") and can no longer be claimed.
 
 ---
 # Development
