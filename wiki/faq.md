@@ -27,7 +27,7 @@ See the list of [Advantages &
 Features](advantages-and-features "wikilink").
 
 ---
-### How could 'useful' work for a cryptocurrency be verified without repeating the work or trusting a central server?
+### How can useful work in a cryptocurrency be verified without repeating the work or trusting a central server?
 
 In Gridcoin, work units are given out by distributed project nodes
 within the BOINC network which uses their independent calculation to
@@ -42,8 +42,7 @@ The maximum share of new Gridcoins for this project stays the same
 percentage (subject to the number of total projects). And projects can be
 removed by a blockchain vote.
 
-Security in Gridcoin is derived from Blackcoin's industry-leading
-Proof-of-Stake.
+Security in Gridcoin is based on Proof-of-Stake.
 
 ---
 # Crunching (Research & Mining Equivalent)
@@ -104,7 +103,7 @@ You can also lookup your address on a block explorer.
 ---
 ### Reward calculation: what is magnitude?
 
-Magnitude is calculated separately for each project. When calculating research rewards, a user's magnitude across every project is added together.
+Magnitude is calculated separately for each project. When calculating research rewards, a user's magnitude across every project is added together. See the [magnitude wiki page](magnitude "wikilink")
 
 ---
 ### I had a magnitude for some time but it dropped to 0. What happened?
@@ -152,10 +151,9 @@ Yes, there are currently 2 operational pools:
 ---
 ### I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
 
-That is perfectly normal when pool-mining you do work for the pool's
-account and as a reward get transactions from the pool for the work you
-did. Because of this you do not work for your own CPID and have no
-magnitude.
+On the beacon menu, make sure to click on "Pool" instead of investor or solo. Click
+start over if you don't see a selection option. This doesn't technically matter, 
+but it will help get rid of error messages that aren't relevant to you
 
 ---
 ### I am crunching for the pool but even though I work on projects this is not shown on the profile page of the pool. What can I do?
@@ -299,12 +297,12 @@ away from a recognised team for that project.
 ---
 ### How can I see my Researching Status?
 
-If you have some BOINC credits, you are in a recognised team and your email
-is correct in the gridcoinresearch.conf file. You should see a list of
+Press the beacon button and if you go through the steps for setup, you should see
+an overview of all the relevant information. You can also click on the project tab
+for information on a per project level
 
-your magnitude in each project when entering "*explainmagnitude*" to
-the debug console of the wallet (Help -\> Debug Window -\> Console). It
-may take 24-48 hours for new accounts to be populated.
+Without using the GUI, you can also see a list of your magnitude in each project 
+by using the `explainmagnitude` [RPC command](rpc "wikilink")
 
 ---
 ### What does "diff" exactly measure? What does it tell if it's high or low?
@@ -349,16 +347,16 @@ number (not hash).
 
 Then do
 
-showblock blocknumber
+`showblock blocknumber`
 
 And compare the details with details from explorer.
 
 If you do want to get a block by hash, you would have
 to:
 
-getblockhash blocknumber
+`getblockhash blocknumber`
 
-getblock blockhash
+`getblock blockhash`
 
 But that is a little longer
 
@@ -412,7 +410,10 @@ The quick and easy way.
 5. Copy it to the data directory and rename it to wallet.dat.
 6. Restart the wallet.
 
-If it still doesn't start you can try using the -salvagewallet flag.
+If it still doesn't start you can try using the `-salvagewallet` flag. This will
+try to pull whatever it can out of the wallet.dat file and will create a new
+file. Rename that new file to wallet.dat and try launching the wallet again
+without the `-salvagewallet` flag
 
 ---
 # Sync
@@ -425,13 +426,14 @@ Just try to just wait it out the wallet should automatically fix itself.
 If it still hasn't gone up after a few hours try this:
 
 1.  Close the client
-2.  Clean out your Gridcoin data folder EXCEPT for wallet.dat, your
-    GridcoinResearch.conf file and the folders walletbackups and testnet, if present.
-3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot (File -> Snapshot Download) or you can download [here](https://snapshot.gridcoin.us/snapshot.zip).
+2.  In your Gridcoin data folder, delete the accrual folder, the txleveldb folder, 
+and blk00*.dat (with * being any number).
+3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot
+ which you can use by clicking on File -> Snapshot or using the `-snapshotdownload` [command line argument](cmd-options "wikilink") 
 
 You can also try running the wallet as an administrator.
 
-There is also an [official
+There is also an [
 thread](https://cryptocointalk.com/topic/20303-gridcoin-proof-of-research-connection-sync-problem-thread/)
 for sync problem if it didn't work.
 
@@ -502,21 +504,30 @@ missed the Burn deadline, your coins are now in the possession of the
 ---
 ### How could I participate in testnet?
 
-Start the client with the -testnet flag.
-
-[More info can be found here.](testnet "wikilink")
+Read the how to help section on the [testnet wiki page](testnet "wikilink")
 
 ---
-# Troubleshoot
+# Troubleshooting
 
 ---
 ### Some of my coins have disappeared.
 
-Try running the client with "-rescan" or run the console command
-"repairwallet".
+Try running the client with `-rescan` or run the console command
+`repairwallet`.
 
----
-### How to get out of the loop of cycling app crashes (Microsoft Visual C++ Runtime Library Assertion failed)?
+### Error when sending a transaction
 
-Delete the content of the folder called 'txleveldb' in
-the data folder and restart.
+First, check that you have your wallet unlocked fully. If you have it locked
+for staking only, you will need to re-lock it and then unlock fully. Try
+sending the transaction after that. If you don't have it locked at all, you can 
+ignore this.
+
+If you see `Error: the transaction was rejected` or you see 
+an error saying "not enough fees", you may have too many small UTXOs (what's
+leftover from a transaction you received) to send a transaction. There is a
+maximums transaction size and so if a transaction tries to include to many UTXOs, 
+it can be impossible to send. To fix this, you can try consolidating them using the
+`consolidateunspent` [rpc](rpc "wikilink") command. For each of your addresses,
+try running `consolidateunspent <address> 50`. After this finishes, try sending
+the transaction again. This may require multiple rounds of the command if you
+have a lot of small transactions
