@@ -1,4 +1,9 @@
 posts:
+- title: "Mandatory Gridcoin client update v5.1.0.0!"
+  link_primary_url: "https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.1.0.0"
+  link_primary_text: "v5.1.0.0 release notes"
+  link_secondary_url: "https://www.reddit.com/r/gridcoin/comments/jmenwf/gridcoin_5100mandatory_gladys_release/"
+  link_secondary_text: "v5.1.0.0 reddit post"
 - title: "Mandatory Gridcoin client update v5.0.0.0!"
   link_primary_url: "https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.0.0.0"
   link_primary_text: "v5.0.0.0 release notes"

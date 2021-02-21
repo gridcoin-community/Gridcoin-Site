@@ -329,22 +329,22 @@ dfn{
 }
 /*----End Earn-GRC.htm----*/
 
-/*investerEarn-GRC.htm*/
-.invester-earnGRC div>ul {
+/*noncruncherEarn-GRC.htm*/
+.noncruncher-earnGRC div>ul {
     list-style-type: none;
     padding-left: 0;
 }
-.invester-earnGRC li {
+.noncruncher-earnGRC li {
     padding-top: 10px;
 }
-/*----End investerEarn-GRC.htm----*/
+/*----End noncruncherEarn-GRC.htm----*/
 
-/*invester-GRC-setup.htm*/
-.invest-grc-setup {
+/*noncruncher-GRC-setup.htm*/
+.noncruncher-grc-setup {
     padding-top: 25px;
     padding-bottom: 25px;
 }
-/*----End invester-grc-setup.htm----*/
+/*----End noncruncher-grc-setup.htm----*/
 
 .grc-misc {
     padding-top: 140px;

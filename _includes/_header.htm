@@ -2,6 +2,7 @@
     <div class="container justify-content-center">
         <div class="row">
             <div class="mx-auto">
+                <a href="#main" class="sr-only sr-only-focusable bg-dark text-light">Jump to Content</a>
                 <a name="Nav"></a> <!-- Nav link, returning user to top of website -->
                 <a class="navbar-brand" href="/" rel="tooltip" data-toggle="tooltip" title="Gridcoin - Securely rewarding BOINC computation on top of POS!" data-placement="bottom"><img src="/assets/img/grc-title2.png" alt="Gridcoin title" /></a>
                 <button class="navbar-toggler navbar-dark grcbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +72,7 @@
                             <h6 class="dropdown-header text-center">Main Guides</h6>
                             <a class="dropdown-item" href="/guides/boinc-install.htm">Solo-Crunching</a>
                             <a class="dropdown-item" href="/guides/pool.htm">Pool-Crunching</a>
-                            <a class="dropdown-item" href="/guides/investor-gridcoin-setup.htm">Investor mode</a>
+                            <a class="dropdown-item" href="/guides/noncruncher-gridcoin-setup.htm">Non-Cruncher</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header text-center">Other Guides</h6>
                             <a class="dropdown-item" href="/guides/whitelist.htm">Project Whitelist</a>
@@ -94,9 +95,6 @@
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header text-center">3rd party wallets</h6>
                             <a class="dropdown-item" href="https://holytransaction.com/">HolyTransaction</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Where to spend</h6>
-                            <a class="dropdown-item" href="https://cointopay.com/M_MarketOverview.jsp">Cointopay Marketplace</a>
                         </div>
                     </div>
                     <!--    Pool/Stats Links    -->
@@ -128,7 +126,7 @@
                         </div>
                     </div>
                     <div class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
-                        <a href="/#Downloads"class="nav-link btn grcbtn">
+                        <a href="/#Downloads"class="nav-link btn grcbtn" role="tooltip" title="Downloads" aria-label="downloads" data-toggle="tooltip">
                             <span class="oi oi-data-transfer-download"></span>
                         </a>
                     </div>
