@@ -60,7 +60,7 @@ See what this looks like in general on with [GitHub's guide to editing files](ht
 
 2. Press add file then press create new file
 
-3. Type the name of the page you want to create (in lowercase)
+3. Type the name of the page you want to create (in lowercase) and end with `.md`
 
 4. When creating the page add this at the top
    ```
@@ -93,6 +93,21 @@ See what this looks like in general on with [GitHub's guide to editing files](ht
      b) If it has been a while (5+ days) you can try pinging the developers.  Don't
       overuse this, but it can be helpful when things just sometimes get missed
 
+
+# Non-Standard Things
+
+There are somethings you may see that are not part of standard markdown. Some
+are extra features such as footnotes and some are not markdown at all and are
+part of [liquid](https://shopify.github.io/liquid/) which
+helps automate and pull data from other parts of the site. You do not 
+have to use these when writing, but know what they are if you run into them
+
+Things between {% raw %} `{% comment %}` and `{% endcomment %}` {% endraw %} are just
+comments to let you know whats going on somewhere. They are often put there
+when things that are non-standard are there. They will not show up in the actual
+wiki page
+
+{% comment %} Use raw tags to ignore comments and let them go into text {% endcomment %}
 
 # Contacts
 
