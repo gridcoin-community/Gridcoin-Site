@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="22" height="22" version="1.0" viewBox="0 0 110 110" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata>
+<svg width="22" height="22" version="1.0" viewBox="0 0 110 110" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="linGrad" x1="55" x2="55" y1="12.5" y2="55" gradientTransform="rotate(-30 54.748 55.046)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
