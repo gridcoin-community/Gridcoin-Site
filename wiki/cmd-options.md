@@ -110,7 +110,7 @@ such as `-testnet`
   * `-rpcconnect=<ip>`      Send commands to node running on `<ip>` (default: 127.0.0.1)
   * `-rpcthreads=<n>`       Set the number of threads to service RPC calls (default: 4)
   * `-blocknotify=<cmd>`    Execute command when the best block changes (%s in cmd is replaced by block hash)
-  * `-walletnotify=<cmd>`   Exshouldn't have to look something up after seeing the first sentence ecute command when a wallet transaction changes (%s in cmd is replaced by TxID)
+  * `-walletnotify=<cmd>`   Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)
   * `-confchange`           Require a confirmations for change (default: 0)
   * `-enforcecanonical`     Enforce transaction scripts to use canonical PUSH operators (default: 1)
   * `-alertnotify=<cmd>`    Execute command when a relevant alert is received (%s in cmd is replaced by message)
