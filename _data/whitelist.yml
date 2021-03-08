@@ -90,6 +90,17 @@ projects:
   team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
   stats: https://gridcoinstats.eu/project/milkyway@home
 
+- name: Minecraft@Home
+  link: https://minecraftathome.com/
+  goal: Enables the study of the fundamental laws of Minecraft to answer 
+        unanswered questions regarding the features and true limits of the game.
+  sponsor: Private
+  cpu: 'yes'
+  gpu: 'yes'
+  gdpr: 'no'
+  team: https://minecraftathome.com/minecrafthome/team_display.php?teamid=1840
+  stats: https://gridcoinstats.eu/project/minecraft@home
+
 - name: NFS@Home
   link: https://escatter11.fullerton.edu/nfs/
   goal: Lattice sieving step in Number Field Sieve factorization of large integers.
