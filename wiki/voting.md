@@ -29,9 +29,7 @@ mentioned `listpoll` command)
 # How Votes Are Weighted
 
 How much your vote counts is weighted based off of your balance plus (for solo crunchers) 
-your [magnitude](magnitude "wikilink"). It is weighted off of the values for these 
-*before* the start of a poll. This is to limit issues of trying to gain more influence
-after learning of a poll.
+your [magnitude](magnitude "wikilink").
 
 The formula for exactly how it's weighted can be found [here](#11-vote-weight-and-active-vote-weight "wikilink")
 
