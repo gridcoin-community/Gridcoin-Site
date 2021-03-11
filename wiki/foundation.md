@@ -6,12 +6,12 @@ description: Information about the Gridcoin foundation fund
 
 # Introduction
 
-The Gridcoin foundation is a fund used for development, sever cost, or
+The Gridcoin foundation is a fund used for development, server costs, or
 for any expenses or uses approved in [polls](voting "wikilink"). 
 
 The foundation is currently on the address `bc3NA8e8E3EoTL1qhRmeprbjWcmuoZ26A2`. 
 Donations there are accepted and welcome. It is a [multi-sig](https://en.wikipedia.org/wiki/Multisignature) wallet with 
-three different keyholders (iFoggz, ravonn, and quezacoatl) and requires 
+three different keyholders (Jim Owens, ravon, and ifoggz) and requires 
 at least two of them to agree (sign with their keys) before any funds can be sent. 
 
 As of February 2021, the Foundation has around 30 million Gridcoin. You can
@@ -29,7 +29,7 @@ the funds.
 
 The longest running use of foundation funds so far has been compensating development. Originally
 developers would invoice this through CryptoCurrencyTalk[^3], but it is now done through the Gridcoin Discord
-on the `#conpensation` channel
+on the `#compensation` channel
 
 # Things to Note
 
