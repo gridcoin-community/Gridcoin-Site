@@ -39,7 +39,7 @@ what types of polls there were and what each poll type needs to pass
 
 
 All polls but the opinion/casual polls require:
-* A main discussion thread on GitHub or reddit
+* A main discussion thread on GitHub or Reddit
 * Secondary discussion threads on GitHub, Reddit, and Steemit with links to each
 in each thread
 * Unbiased poll phrasing and options
@@ -55,10 +55,10 @@ in the [active vote weight](#active-vote-weight "wikilink") section
 
 ## Requirements for Funding
 Any poll that requests funding must state:
-* Intended use of funds
-* The date of work begin
-* The date of work end
-* Total funding requested (denoted in GRC)
+* The intended use of funds
+* The date that the work begins (or began)
+* The date that the work ends (or ended)
+* Total amount of funding requested (in GRC)
 * When funds are released
 * How funds are released
 * The payee's name or alias
