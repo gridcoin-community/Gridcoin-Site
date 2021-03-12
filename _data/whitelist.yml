@@ -95,7 +95,7 @@ projects:
   goal: Enables the study of the fundamental laws of Minecraft to answer 
         unanswered questions regarding the features and true limits of the game.
   sponsor: Private
-  cpu: 'yes'
+  cpu: 'no'
   gpu: 'yes'
   gdpr: 'no'
   team: https://minecraftathome.com/minecrafthome/team_display.php?teamid=1840
