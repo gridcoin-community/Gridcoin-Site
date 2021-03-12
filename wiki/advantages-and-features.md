@@ -18,10 +18,10 @@ useful.
 While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
-* [Comparison to CureCoin](#comparison-to-curecoin)
-* [Comparison to Obyte](#comparison-to-obyte)
-* [Comparison to Primecoin](#comparison-to-primecoin)
-* [Comparison to Tokens](#comparison-to-tokens)
+* [Comparison to CureCoin](#comparison-to-curecoin "wikilink")
+* [Comparison to Obyte](#comparison-to-obyte "wikilink")
+* [Comparison to Primecoin](#comparison-to-primecoin "wikilink")
+* [Comparison to Tokens](#comparison-to-tokens "wikilink")
 
 Additionally, Gridcoin's system of scrapers offers a scalable system that 
 minimizes that amount of centralization. Scrapers get BOINC statistics 
@@ -31,7 +31,7 @@ data from each scraper against each other limiting the trust needed. Scrapers ar
 run by several trusted members of the community located around the world. 
 Read more about scrapers on the [Scraper Wiki Page](Scraper "wikilink")
 
-Further, Gridcoin has a voting system to help keep Gridcoin aligned with the
+Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by
 not having unexpected changes and having a way to voice your opinion without 
 needing to fork and split the community.

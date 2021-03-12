@@ -51,8 +51,8 @@ Proof-of-Stake.
 ---
 ### How do I start crunching?
 Consult these guides: 
-* [Solo](../guides/boinc-install.htm)
-* [Pool](../guides/pool.htm)
+* [Solo](/guides/boinc-install.htm "sitelink")
+* [Pool](/guides/pool.htm "sitelink")
 
 ---
 ### My CPID is not in the network, What do I do?
@@ -316,7 +316,7 @@ This also means that diff is directly proportional to that average net coins sta
 TL;DR:
 When more coins are staking the difficulty increases which makes it harder to stake and vice versa.
 
-The formulas to calculate diff may be found in section 2.1 of the [staking bluepaper](/assets/img/grc-bluepaper-section-1.pdf).
+The formulas to calculate diff may be found in section 2.1 of the [staking bluepaper](/assets/img/grc-bluepaper-section-1.pdf "sitelink").
 
 ---
 ### How to call commands when starting Gridcoin Wallet on Windows?
@@ -492,7 +492,7 @@ Gridcoin Classic was the first iteration of Gridcoin. Gridcoin classic
 is no longer used and all coins were converted to Gridcoin Research
 coins via Proof of Burn. The Burn process ended on April 20, 2015. If you
 missed the Burn deadline, your coins are now in the possession of the
-Gridcoin Foundation and can no longer be claimed.
+[Gridcoin Foundation](foundation "wikilink") and can no longer be claimed.
 
 ---
 # Development
