@@ -1,6 +1,7 @@
 ---
 title: Staking
 layout: wiki
+description: Overview of what staking is, how to stake, what the rewards are, and much more
 ---
 
 # Introduction
@@ -25,15 +26,20 @@ constant block rewards or CBR). This is to incentivize people to stake because
 more people staking helps increase the security of the network. 
 
 Previously (below v4.0.0.0) Gridcoin used a percentage based system, 
-but lower difficulty (low number of people staking) which caused
+but had lower difficulty (low number of people staking) which caused
 a fair number of issues. See the [More Reading](#more-reading "wikilink") section
 for info about when this changed
 
 ## How To Stake
 If you are using the GUI, look for the ![Green Up Arrow Icon](/assets/img/wiki/staking_on.svg)
-icon to see if you are staking. If instead you see a different colored down arrow,
-hover over to see why it says you are not staking. Make sure you keep seeing this
-and just leave your wallet running --- your wallet will keep attempting to stake
+icon to see if you are staking. Make sure you keep seeing that icon
+and just leave your wallet running --- your wallet will keep attempting to stake.
+If instead you see a different colored down arrow, hover over it to see why it says you are not staking
+
+When you eventually stake, you will see ![Purple Gridcoin Logo](/assets/img/wiki/tx_por.svg)
+if you are a solo cruncher or ![Golden Gridcoin Logo](/assets/img/wiki/tx_pos.svg)
+if you are not. If you have [sidestaking](#sidestaking "wikilink") enabled, you
+will also see the same icon with a red indent as well
 
 You need to keep your wallet running to stake because every 16 seconds, your wallet 
 will look to see if you "won a coin flip" of sorts to see if it can stake. If you do, your 
@@ -82,6 +88,30 @@ you try to make transaction in certain situations --- not staking.
 
 When none of your coins are on cooldown, how large/small your UTXOs are will not 
 change your odds of staking.
+
+
+## Sidestaking
+
+When you stake, you can choose to send a percentage of your rewards to other
+addresses. This is called sidestaking. 
+
+With sidestaking enabled you will see additional icons when you stake. If you
+are a solo cruncher you will see one or more of ![Purple Gridcoin Icon With Red Indent](/assets/img/wiki/tx_por_side_stake_sent.svg).
+If not you will see one or more of ![Golden Gridcoin Icon With Red Indent](/assets/img/wiki/tx_pos_side_stake_sent.svg)
+
+If you receive someone's sidestake, you will see a special icon as well. If from a solo cruncher you'll see ![Purple Gridcoin Icon With Green Indent](/assets/img/wiki/tx_por_side_stake_receive.svg). If not, ![Golden Gridcoin Icon With Green Indent](/assets/img/wiki/tx_pos_side_stake_receive.svg) will show up
+  
+  
+  
+To send sidestakes to other addresses when you stake, 
+go to your [config file](config-file "wikilink") and add 
+
+```
+enablesidestaking=1
+sidestake=<address>,<allocation percentage>
+```
+with `<address>` and `<allocation percentage>` being values that you change.
+See the [config file](config-file "wikilink") wiki page for more information
 
 
 ## The Pools
