@@ -430,7 +430,7 @@ If it still hasn't gone up after a few hours try this:
 1.  Close the client
 2.  Clean out your Gridcoin data folder EXCEPT for wallet.dat, your
     GridcoinResearch.conf file and the folders walletbackups and testnet, if present.
-3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot which you can get [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
+3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot (File -> Snapshot Download) or you can download [here](https://snapshot.gridcoin.us/snapshot.zip).
 
 You can also try running the wallet as an administrator.
 
@@ -457,7 +457,7 @@ explorer will sync up with you and your connected nodes at some point.
 
 Ensure you are running the latest wallet version.
 
-You can try using the snapshot which you can get [Here](http://download.gridcoin.us/download/downloadstake/signed/snapshot.zip).
+You can try using a snapshot (File -> Snapshot Download) or you can download from [here](https://snapshot.gridcoin.us/snapshot.zip) and apply it manually.
 
 While it downloads, delete the peers.dat in your data folder - you may have a bad peer group.
 
