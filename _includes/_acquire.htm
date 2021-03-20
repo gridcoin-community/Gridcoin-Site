@@ -16,13 +16,14 @@
                         Before your wallet can do anything, it needs to be synced (the green tick under connections means you are synced)
                     </li>
                     <li>
-                        If you don't want to sync from 0, then you can download a snapshot of the blockchain <a href="https://download.gridcoin.us/download/downloadstake/signed/snapshot.zip">here</a>.
+                        If you don't want to sync from 0, then you can download a snapshot of the blockchain from clicking File -> Snapshot Download or using the <code>-snapshotdownload</code> command line argument
                         <ul>
                             <li>
-                                To use, open the folder (Linux = .GridcoinResearch/, Windows = %appdata%\GridcoinResearch) and replace all files from the snapshot <b>except wallet.dat and gridcoinresearch.conf</b>
+                                The snapshot will only bring you up to 80-90% sync. Allow it to continue syncing after the snapshot has been extracted.
                             </li>
                             <li>
-                                The snapshot will only bring you up to 80-90% sync. Allow it to continue syncing after the snapshot has been extracted.
+                                If you want to apply it directly, you can download the snapshot <a href="https://snapshot.gridcoin.us/snapshot.zip">here</a>.
+                                To use this, open the folder (Linux = .GridcoinResearch/, Windows = %appdata%\GridcoinResearch) and delete <b>only</b> the blk00x.dat files, txleveldb folder, and the accrual folder, and copy the files from the snapshot
                             </li>
                         </ul>
                     </li>
