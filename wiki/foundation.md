@@ -45,4 +45,4 @@ future purpose and use of the foundation is up to the community to decide
 
 [^1]: Not referring to the actual artist. They used Rob Halförd as a username/pseudonym
 [^2]: See <https://steemit.com/gridcoin/@barton26/gridcoin-foundation-wallet-is-now-multi-sig>
-[^3]: See the old thread here <https://cryptocurrencytalk.com/topic/85404-developer-compensation-retired/>
+[^3]: See the old thread here <https://web.archive.org/web/20201109034508/https://cryptocurrencytalk.com/topic/85404-developer-compensation-retired/>

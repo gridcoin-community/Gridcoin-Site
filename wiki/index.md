@@ -24,8 +24,8 @@ There are no limitations to a single BOINC project, providing the
 flexibility to be rewarded for virtually any type of computational
 process.
 
-Gridcoin was launched on October 16th, 2013 by Rob Halförd, following an
-announcement on [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/).
+Gridcoin was launched on October 16th, 2013 by Rob Halförd, following [an
+announcement on CryptocurrencyTalk](https://web.archive.org/web/20150622170203/cryptocointalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/).
 
 The coin compensates the coin miners (researchers) for participating in
 [BOINC](boinc "wikilink") projects that may lead to advances in
@@ -171,8 +171,6 @@ scientific computations instead of securing the blockchain.
 <!-- end list -->
 
   - Forums:
-      - [Cryptocurrencytalk](https://cryptocurrencytalk.com/forum/464-gridcoin-grc/)
-      - [Cryptocurrencytalk macOS](https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/)
       - [Bitcointalk](https://bitcointalk.org/index.php?topic=324118.0)
       - [Steemit](https://steemit.com/created/gridcoin)
       - [Steemit Community](https://steemit.com/created/hive-161364)

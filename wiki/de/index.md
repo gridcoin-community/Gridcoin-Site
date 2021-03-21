@@ -21,7 +21,7 @@ Durch die zur Verfügung gestellte Rechenzeit und den damit
 ausgeführten Berechnungen bietet Gridcoin einen Mehrwert. 
 Prinzipiell gibt es keine Einschränkungen, für welche BOINC Projekte Nutzer mit Gridcoins belohnt werden können. Gridcoin nutzt jedoch eine Whitelist und es lassen sich nur mit Projekten auf der Whitelist Gridcoins verdienen. Um ein Projekt auf die Whitelist zu bringen, kann eine dezentrale Abstimmung auf der Blockchain gestartet werden. Ist die Mehrheit der Nutzer dafür, so wird das Projekt in die Whitelist aufgenommen.
 
-Gridcoin wurde am 16. Oktober 2013 von einem anonymen Programmierer mit dem Pseudonym Rob Halförd gegründet, wie man einer Nachricht auf [CryptocurrencyTalk](https://cryptocurrencytalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) entnehmen kann.
+Gridcoin wurde am 16. Oktober 2013 von einem anonymen Programmierer mit dem Pseudonym Rob Halförd gegründet, wie man einer Nachricht auf [CryptocurrencyTalk](https://web.archive.org/web/20150622170203/cryptocointalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) entnehmen kann.
 
 Die Coin belohnt die "Miner" für ihren Beitrag in [BOINC](boinc "wikilink")
 Projekten für Medizin, Biologie, Mathematik, Klimaforschung, Partikel- oder Astrophysik.
@@ -161,8 +161,6 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
 <!-- end list -->
 
   - Foren:
-      - [Cryptocurrencytalk](https://cryptocurrencytalk.com/forum/464-gridcoin-grc/)
-      - [Cryptocurrencytalk macOS](https://cryptocurrencytalk.com/topic/13139-os-x-builds-feedback-bug-reporting/)
       - [Bitcointalk](https://bitcointalk.org/index.php?topic=324118.0)
       - [Steemit](https://steemit.com/created/gridcoin)
       - [Steemit Community](https://steemit.com/created/hive-161364)

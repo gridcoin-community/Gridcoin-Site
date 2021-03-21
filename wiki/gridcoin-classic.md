@@ -64,6 +64,6 @@ development bounties, etc.
 
 The following CCT threads were used for discussion of disposition of the
 coins:
-* <https://cryptocurrencytalk.com/topic/26169-gridcoin-foundation-thread/>
-* <https://cryptocurrencytalk.com/topic/31314-discussion-leftover-burn-process-coins-what-should-be-their-fate/>
-* <https://cryptocurrencytalk.com/topic/37900-poll-disposition-of-coins-remaining-in-foundation/?mode=show>
+* <https://web.archive.org/web/20150417132330/https://cryptocointalk.com/topic/26169-gridcoin-foundation-thread//>
+* <https://web.archive.org/web/20150417040443/https://cryptocointalk.com/topic/31314-discussion-leftover-burn-process-coins-what-should-be-their-fate/>
+* <https://web.archive.org/web/20160119120234/https://cryptocointalk.com/topic/38199-foundation-block-coin-distribution-promotion-and-development-discussion/>

@@ -105,7 +105,7 @@ This goes into much further details of the statistics involved and more.
 The reward amounts currently used were chosen through a poll titled ["Constant Block Reward (cbr) Proposal And Poll"](http://main.gridcoinstats.eu/poll/22c2ee5e0c049ce93acc6f40d0430f6335367da1c3f61c66d211863cb346600d/1/ended:2). 
 The 75/25 option was chosen meaning a 75% to 25% split of new coins between crunchers and non-crunchers respectively.
 If you would like an in depth reading about the economics of it see either the 
-[reddit](https://www.reddit.com/r/gridcoin/comments/8bcrlz/constant_block_reward_cbr_value_proposal_and_poll/), [github](https://github.com/gridcoin-community/economics/issues/1), or [CCT](https://cryptocurrencytalk.com/topic/101374-constant-block-reward-cbr-value-proposal-and-poll/) thread. This went into
+[reddit](https://www.reddit.com/r/gridcoin/comments/8bcrlz/constant_block_reward_cbr_value_proposal_and_poll/), [github](https://github.com/gridcoin-community/economics/issues/1), or [steem](https://steemit.com/gridcoin/@jringo/constant-block-reward-cbr-value-proposal-and-poll) thread. This went into
 effect on version 4.0.0.0 after a hard fork (see [this reddit post for more information](https://www.reddit.com/r/gridcoin/comments/9pgg7m/gridcoin_mandatory_update_4000_released_cbr/) for details)
 
 ---
