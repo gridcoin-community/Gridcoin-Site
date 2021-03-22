@@ -386,9 +386,6 @@ The wallet has an automated backup in place that will make backups every 24 hour
 Different methods were discussed in the Gridcoin Community Classroom
 \#003: <https://www.youtube.com/watch?v=JxrjUwX5XvA>
 
-ref:
-<https://cryptocurrencytalk.com/topic/1331-new-coin-launch-announcement-grc-gridcoin/?view=findpost&p=158422>
-
 ---
 ### How to compress my wallet getting rid of orphans?
 
