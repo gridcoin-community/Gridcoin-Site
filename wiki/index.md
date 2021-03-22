@@ -124,6 +124,7 @@ scientific computations instead of securing the blockchain.
   - Block Explorers:
       - [Gridcoinstats](https://gridcoinstats.eu/)
       - [Gridcoin.network](https://gridcoin.network/)
+      - [Gridcoin.ch](https://gridcoin.ch/dashboard)
 
 <!-- end list -->
 

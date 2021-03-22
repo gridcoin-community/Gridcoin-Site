@@ -115,6 +115,7 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
   - Block Explorer:
       - [Gridcoinstats](https://gridcoinstats.eu/)
       - [Gridcoin.network](https://gridcoin.network/)
+      - [Gridcoin.ch](https://gridcoin.ch/dashboard)
 
 <!-- end list -->
 
