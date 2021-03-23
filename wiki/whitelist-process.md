@@ -80,7 +80,7 @@ of 40% or greater, and the above steps are met, the project is now on the whitel
 
 ### What Happens Next
 
-Now the project is on the whitelist. In the next superblock, you will start
+Now the project is on the whitelist. In the next [superblock](superblock "wikilink"), you will start
 to see people able to earn rewards for the project. 
 
 

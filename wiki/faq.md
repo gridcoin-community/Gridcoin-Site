@@ -72,7 +72,7 @@ Next, go to Help -\> Debug Window, go to the Console tab and type
 `advertisebeacon` without the quotes.
 
 This will (if successful) send a small transaction at the cost of
-1 GRC. This should add your CPID with the next superblock.
+1 GRC. This should add your CPID with the next [superblock](superblock "wikilink").
 
 To see if your CPID is included, go to the Console and type `beaconreport`. 
 
