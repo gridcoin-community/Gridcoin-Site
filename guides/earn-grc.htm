@@ -113,21 +113,33 @@ redirect_from:
                         </figcaption>
                         k) After ~24-48 hours your beacon should validate and you should see something like the screen below. After you see this, you can now change your username to whatever you want
                         <img class="img-fluid mx-auto d-block" src="/assets/img/guide/valid-beacon-screen.png" alt="image showing the beacon page showing the words everything looks good and a checkmark">
+                        l) Some projects require you to enable stats exports. If any of yours do, follow the steps for those project to enable it. Currently required by:
+                            <ul class="text-center">
+                                {%- for project in site.data.whitelist.projects -%}
+                                {%- if project.gdpr == "yes" -%}
+                                <li class="pt-0"><ul>{{project.name}} (<a href={{project.gdpr-enable-steps}}>steps to enable</a>)</ul></li>
+                                {%- endif -%}
+                                {%- endfor -%}
+                            </ul>
                     <h5 class="text-center mt-5">2) Running the Wallet to Stake</h5>
                         <div class="mb-5 pb-2">
                             <p class="text-center"><sup>See the <a href="/wiki/staking.html">staking wiki page</a> for more details on what staking is</sup></p>
-                            l) <u>If locked</u>, unlock the wallet for "Staking Only". It is recommended to have it encrypted for security. 
+                            m) <u>If locked</u>, unlock the wallet for "Staking Only". It is recommended to have it encrypted for security. 
                             <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-unlock.png" alt="image showing the unlock menu that appears after press the unlock button. Shows 'for staking only' checked and a textbox to enter your password">
                             <figcaption class="text-center mb-4">
                                 Screen after the Unlock Wallet button is pressed. Doesn't apply or show as an option if the wallet has not been encrypted
                             </figcaption>
-                            m) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards. Make sure you see a green up arrow symbol like below
+                            n) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards. Make sure you see a green up arrow symbol like below
                             <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-staking.png" alt="image showing a green up arrow being hovered over saying 'staking' and numbers about how likely it is to stake">
                             <figcaption class="text-center mb-4">
                                 Your numbers will be different when you hover over the icon. Make sure the icon is green and upward. If it isn't, hover over it to see what issues are going on
                             </figcaption>
-                            <p class="mb-4">n) Every 6 months, you will need to renew your beacon. This can be done by pressing the beacon button then clicking on the renew button<p>
-                            o) Keep the wallet up to date as updates are released
+                            o) <u>Every 6 months</u>, you will need to renew your beacon. You can do this by clicking the beacon button then renew and then click "Advertise Beacon"
+                            <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-renew.png" alt="image showing a button in the center labeled advertise beacon and text above it saying your beacon is eligible for renewal">
+                            <figcaption class="text-center mb-4">
+                                Image of the screen that shows up when you need to renew your beacon. 
+                            </figcaption>
+                            p) Keep the wallet up to date as updates are released
                         </div>
                 <h4 id="troubleshooting" class="text-center text-bold anchor-adjust">Troubleshooting</h4>
                 <h5 class="text-center">Q: My Wallet Is Not Staking</h5>
