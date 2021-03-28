@@ -41,3 +41,13 @@ Example: if page.layout == 'wiki' -> if page.layout == 'wiki-de'
 
     {% endif %}
 {% endfor %}
+
+## Svenska (Swedish)
+
+{% for page in site.pages %}
+    {% if page.layout == 'wiki-sv'%}
+
+* [ {{page.title}} ]( {{page.url}} "wikilink")
+
+    {% endif %}
+{% endfor %}

@@ -396,6 +396,9 @@ dfn{
      margin: 0px auto 16px auto;
      /* 16px gives spacing on the bottom on mobile when collapsed*/
  }
+ .docs-menu-sv{
+     width: 295px; /*Looks cleaner on one slightly longer line than having a word on two*/
+ }
  .docs-container h1, .docs-container h2, .docs-container h3, .docs-container h4, .docs-container h5, .docs-container h6{
     position: relative;
     margin-top: -76px;
