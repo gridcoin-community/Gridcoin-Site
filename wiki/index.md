@@ -201,6 +201,7 @@ scientific computations instead of securing the blockchain.
   - Faucets:
     - [Freegridco.in](https://freegridco.in/)
     - [Gridcoin Switzerland](https://gridcoin.ch/faucet)
+    - [Gridcoinstats](https://gridcoinstats.eu/faucet)
 
 ## Other Wikis
 
