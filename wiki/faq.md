@@ -151,7 +151,7 @@ Yes, there are currently 2 operational pools:
 ---
 ### I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
 
-On the beacon menu, make sure to click on "Pool" instead of investor or solo. Click
+On the beacon menu, make sure to click on "Pool" button at the start. Click
 start over if you don't see a selection option. This doesn't technically matter, 
 but it will help get rid of error messages that aren't relevant to you
 
@@ -433,10 +433,6 @@ and blk00*.dat (with * being any number).
 
 You can also try running the wallet as an administrator.
 
-There is also an [
-thread](https://cryptocointalk.com/topic/20303-gridcoin-proof-of-research-connection-sync-problem-thread/)
-for sync problem if it didn't work.
-
 ---
 ### How could I test whether I am in sync with the network?
 
@@ -528,6 +524,6 @@ leftover from a transaction you received) to send a transaction. There is a
 maximums transaction size and so if a transaction tries to include to many UTXOs, 
 it can be impossible to send. To fix this, you can try consolidating them using the
 `consolidateunspent` [rpc](rpc "wikilink") command. For each of your addresses,
-try running `consolidateunspent <address> 50`. After this finishes, try sending
+try running `consolidateunspent <address>`. After this finishes, try sending
 the transaction again. This may require multiple rounds of the command if you
 have a lot of small transactions
