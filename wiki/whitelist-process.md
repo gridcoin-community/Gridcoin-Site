@@ -74,13 +74,13 @@ A whitelist poll must have
 
 *   A "Yes" option, a "No" option, and an "Abstain" option
 
-A whitelist poll is approved if the majority vote yes, it gets an
+A whitelist poll is approved if the majority (excluding abstentions) vote yes, it gets an
 [active vote weight](https://github.com/gridcoin-community/Gridcoin-Tasks/issues/227#:~:text=Active%20vote-weight) 
 of 40% or greater, and the above steps are met, the project is now on the whitelist
 
 ### What Happens Next
 
-Now the project is on the whitelist. In the next superblock, you will start
+Now the project is on the whitelist. In the next [superblock](superblock "wikilink"), you will start
 to see people able to earn rewards for the project. 
 
 

@@ -7,7 +7,7 @@ redirect_from:
 
 
 # Gridcoin addnodes
-### Background
+## Background
 Addnodes are nodes (wallets) that your wallet will try to connect to when it
 starts up. Adding more can help if you have a low connection count because it
 will get more chances to find other nodes
@@ -15,12 +15,20 @@ will get more chances to find other nodes
 You can add these into your config file with `addnode=ADDNODE`. 
 See the [config file](config-file "wikilink") page about how to change your config
 
-You can also add the node with the command: `addnode <node>
-<add|remove|onetry>` in the debug console.
+You can also add the node with the command: `addnode <node> <add|remove|onetry>` 
+in the debug console.
 
-Last updated: Sun Jan 17 23:14:40 UTC 2021
+
+
+## List Of Addnodes
+
+Tables with a list of addnodes, their domain name, and their region. See [cycy's hourly updating list](https://addnode.cycy.me)
+if you want another source of addnodes
+
 
 ### Mainnet
+
+List of addnodes for the main network. This is the one you most likely care about
 
 ------------
 
@@ -33,11 +41,13 @@ Last updated: Sun Jan 17 23:14:40 UTC 2021
 | ec2-3-81-39-58.compute-1.amazonaws.com     | US-east |
 | fi.gridcoin.pl                             | Finland |
 | grcnode.tahvok.com                         | Germany |
+| grcnode.thefoxie.eu                        | Germany |
 | gridcoin.network                           | France |
 | gridhost.ddns.net                          | UK |
 | node.gridcoin.network                      | France |
 | pl.gridcoin.pl                             | Poland |
 | seeds.gridcoin.ifoggz-network.xyz          | Canada |
+| swe.tplinkdns.com                          | Sweden |
 | tarmoilves.eu                              | Estonia |
 | vancouver01.gridcoin.ifoggz-network.xyz    | Canada |
 
@@ -93,6 +103,8 @@ Last updated: Sun Jan 17 23:14:40 UTC 2021
 
 ### Testnet
 
+List of addnodes for the [test network](testnet "wikilink")
+
 ------------
 
 #### Online (connected within the last 24 hours)
@@ -103,6 +115,7 @@ Last updated: Sun Jan 17 23:14:40 UTC 2021
 | ec2-3-81-39-58.compute-1.amazonaws.com     | US-east |
 | gridcoin.ddns.net                          | UK |
 | gridhost.ddns.net                          | UK |
+| swe.tplinkdns.com                          | Sweden |
 | tarmoilves.eu                              | Estonia |
 
 ------------

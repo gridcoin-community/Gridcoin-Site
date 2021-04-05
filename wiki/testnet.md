@@ -87,8 +87,12 @@ to do, feel free to ask a question on the channel
           writing
 
 5. Get Testnet Coins
-    * Testnet coins can be gotten from various users on `#testnet` on Slack.
+    * Testnet coins can be obtained from various users on `#testnet` on Slack.
       Ask on that channel and give a testnet address for users to send coins to.
+      
+    * Some smaller amount testnet coins can obtained through faucets for testnet 
+        * [Testnet version of freegridco.in](https://test.freegridco.in/)
+        * [Testnet version of gridcoinstats.eu's faucet](https://testnet.gridcoinstats.eu/faucet)
 
 # The Config File 
 **Make sure to change the `CHANGE_ME` value to something unique** (don't copy this line into the config)
@@ -172,6 +176,12 @@ Note that this is not an exhaustive list
 
 * Testnet doesn't have any checkpoints
     * Helps with creating private chains for small scale testing 
+
+* The fourth digit for version number is used
+    * Differentiates wallet versions from mainnet where it is always `.0` at the end
+    * Keeps track of different changes in testing
+    * Example: `5.1.0.1` or `5.1.0.12` would be testnet versions whereas
+     `5.1.0.0` is a mainnet version
 
 # Contacts
 

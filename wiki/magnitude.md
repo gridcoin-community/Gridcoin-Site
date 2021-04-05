@@ -17,7 +17,7 @@ By distributing the Total Magnitude of 115,000 equally across all projects, the 
 
 # Rewards Calculation
 
-Gridcoin rewards for crunching are determined by magnitude. Magnitude updates every superblock which happen nearly once per 24 hours. The reward can be calculated from a cruncher's magnitude according to the following formula:
+Gridcoin rewards for crunching are determined by magnitude. Magnitude updates every [superblock](superblock "wikilink") which happen nearly once per 24 hours. The reward can be calculated from a cruncher's magnitude according to the following formula:
 
 - Gridcoin per Day = Cruncher's Magnitude / 4
 
