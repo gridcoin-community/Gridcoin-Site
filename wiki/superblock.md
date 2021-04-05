@@ -24,7 +24,7 @@ Note that it doesn't really change anything for you as a staker other than just 
 If at least 60% (rounded up) of the scrapers exactly match[^2], a superblock can be made (when it's due)
 4. Someone stakes and they include the new data from the scrapers
 
-Note that this is just a brief overview and there are many security and other mechanisms left out in the description
+Note that this is just a brief overview and there are many security mechanisms and other parts left out in the description
 
 # What Exactly Is In a Superblock
 
