@@ -195,6 +195,7 @@ beräkningar istället för att säkerställa blockkedjan.
   - Faucets:
     - [Freegridco.in](https://freegridco.in/)
     - [Gridcoin Switzerland](https://gridcoin.ch/faucet)
+    - [Gridcoinstats](https://gridcoinstats.eu/faucet)
 
 ## Andra Wikis
 
