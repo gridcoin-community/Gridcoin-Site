@@ -191,6 +191,7 @@ energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätz
   - Faucets (kostenlose GRC):
     - [Freegridco.in](https://freegridco.in/)
     - [Gridcoin Switzerland](https://gridcoin.ch/faucet)
+    - [Gridcoinstats](https://gridcoinstats.eu/faucet)
 
 ## Andere Wikis
 
