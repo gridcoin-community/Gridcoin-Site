@@ -4,7 +4,7 @@ Open source Gridcoin website
 ## Want to edit the wiki?
 See more information about that process [here](https://gridcoin.us/wiki/wiki-editing)
 
-## Interested in contributing towards the whitelist or the blog?
+## Interested in contributing towards the whitelist?
 
 Head on over to the [data folder](_data/) to get more info.
 
