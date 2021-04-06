@@ -156,25 +156,6 @@ dfn{
 }
 /*----End index.htm----*/
 
-/*Blog.htm*/
-.blog {
-    padding-bottom: 15px;
-    padding-top: 130px;
-}
-.blog img{
-    width: 200px;
-}
-.blog > div > div div:last-of-type {
-    margin-bottom: 5px;
-}
-.blog > div > div div:last-of-type p{
-    margin-bottom: 10px;
-}
-.blog-content {
-    padding-bottom: 50px;
-}
-/*----End Blog.htm----*/
-
 /*Contact.htm*/
 .contact {
     padding-bottom: 20px;
