@@ -189,7 +189,7 @@ projects:
     materials for solar panels.
   sponsor: Sponsored by the IBM responsibility initiative
   cpu: 'yes'
-  gpu: 'no'
+  gpu: 'yes'
   gdpr: 'yes'
   gdpr-enable-steps: https://www.worldcommunitygrid.org/ms/viewDataSharing.action
   team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
