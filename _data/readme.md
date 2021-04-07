@@ -1,23 +1,6 @@
 # What are these pages?
 
-To avoid manually editing HTML repetitively by hand, we make use of [templates](https://middlemanapp.com/basics/templating-language/) and [data files](https://middlemanapp.com/advanced/data-files/) for both the blog and the whitelist for the Gridcoin website.
-
-## Contributing towards the blog
-
-### Template
-
-```
-posts:
-- title: "text"
-  link_primary_url: "url"
-  link_primary_text: "text"
-  link_secondary_url: "url"
-  link_secondary_text: "text"
-  content: "text"
-```
-### How to submit blog post
-
-Either create an issue with the above template filled in, or submit a pull request with the template text prepended to the blog.yml data file.
+To avoid manually editing HTML repetitively by hand, we make use of [templates](https://middlemanapp.com/basics/templating-language/) and [data files](https://middlemanapp.com/advanced/data-files/) for the whitelist for the Gridcoin website.
 
 ## Contributing towards the whitelist
 
