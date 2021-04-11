@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+    {% include _head.htm %}
+    <body>
+        {% include _header.htm %}
+        <div class="min-h-80 container-fluid search-container" id="main" role="main">{{ content | strip_newlines }}</div>
+        {% include _footer.htm %}
+
+        <!--   Core JS Files   -->
+        <script src="/assets/js/core/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="/assets/js/core/bootstrap-4.6.0.bundle.min.js" type="text/javascript"></script>
+        <script src="/assets/js/lunr.min.js" type="text/javascript"></script>    
+        <script src="/assets/js/search.js" type="text/javascript"></script>
+    </body>
+</html>

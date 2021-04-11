@@ -436,3 +436,11 @@ dfn{
     bottom: 0px;
     z-index: 1040;
 }
+/* search.htm */
+.search-container{
+    padding-top: 130px;
+}
+.search-container li{
+    list-style-type: none;
+}
+/* end search.html */
