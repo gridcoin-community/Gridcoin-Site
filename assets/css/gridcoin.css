@@ -424,3 +424,15 @@ dfn{
     height: 0px;
     margin:0px;
 }
+
+#cookies-eu-banner {
+    width:inherit;
+    background: #7E11dE;
+    color: #fff;
+    padding: 6px;
+    font-size: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1040;
+}
