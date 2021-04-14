@@ -22,10 +22,11 @@ It is accessible from File -> Snapshot Download or the `-snapshotdownload` [star
 ## Manual method
 1. [Download the snapshot](https://snapshot.gridcoin.us/snapshot.zip)
 2. [Verify the checksum (IMPORTANT)](https://snapshot.gridcoin.us/snapshot.zip.sha256)
-3. Delete the following folders: `txleveldb` & `accrual` from your Gridcoin data directory.
-4. Delete the `blk****.dat` files from your Gridcoin data directory.
-5. Extract the snapshot zip into your Gridcoin data directory.
-6. Restart the wallet and get into sync.
+3. Shutdown your wallet.
+4. Delete the following folders: `txleveldb` & `accrual` from your Gridcoin data directory.
+5. Delete the `blk****.dat` files from your Gridcoin data directory.
+6. Extract the snapshot zip into your Gridcoin data directory.
+7. Restart the wallet and get into sync.
 
 ## Creating your own snapshot
 1. Shutdown your wallet.
