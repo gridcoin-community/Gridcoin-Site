@@ -37,19 +37,17 @@ List of addnodes for the main network. This is the one you most likely care abou
 | Node | Region |
 |----|-----|
 | addnode-us-central.cycy.me                 | US-central |
-| ch.gridcoin.pl                             | Switzerland|
 | ec2-3-81-39-58.compute-1.amazonaws.com     | US-east |
-| fi.gridcoin.pl                             | Finland |
 | grcnode.tahvok.com                         | Germany |
 | grcnode.thefoxie.eu                        | Germany |
 | gridcoin.network                           | France |
 | gridhost.ddns.net                          | UK |
 | node.gridcoin.network                      | France |
-| pl.gridcoin.pl                             | Poland |
 | seeds.gridcoin.ifoggz-network.xyz          | Canada |
 | swe.tplinkdns.com                          | Sweden |
 | tarmoilves.eu                              | Estonia |
 | vancouver01.gridcoin.ifoggz-network.xyz    | Canada |
+| seed.gridcoin.pl                           | Europe |
 
 ------------
 
@@ -74,9 +72,7 @@ List of addnodes for the main network. This is the one you most likely care abou
 
 | Node | Region |    
 | ---- | ------ |
-| by.gridcoin.pl                             | Belarus |
 | cloud.sparlin.me                           | Unknown |
-| de.gridcoin.pl                             | Germany |
 | grcexplorer.neuralminer.io                 | US |
 | grcmagnitude.com                           | Unknown |
 | grcnode.nems.space                         | US |
@@ -88,17 +84,12 @@ List of addnodes for the main network. This is the one you most likely care abou
 | gridcoin.crypto.fans                       | Germany |
 | gridcoin.univunix.com                      | Luxembourg |
 | ils.gridcoin.co.il                         | Canada |
-| is.gridcoin.pl                             | Iceland |
 | london.grcnode.co.uk                       | UK |
-| nl.gridcoin.pl                             | Netherlands |
-| no.gridcoin.pl                             | Norway |
 | node.gridcoin.us                           | US |
 | node.gridcoinapp.xyz                       | Germany |
 | quebec.gridcoin.co.il                      | Canada |
 | seattle.gridcoin.stablenode.net            | US-west |
 | toronto01.gridcoin.ifoggz-network.xyz      | Canada |
-| uk.gridcoin.pl                             | UK |
-
 ------------
 
 ### Testnet
