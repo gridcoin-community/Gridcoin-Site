@@ -45,7 +45,7 @@ For installation of Jekyll please follow https://jekyllrb.com/docs/installation/
 ### WSL notes
 If you're running through WSL you need to use the flag `--force-polling` or it will not regenerate automatically on changes.
 
-If you wish to accesss it from another device you need to use [this workaround](https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723). Remember to change the ports that are opened.
+If you wish to access it from another device you need to use [this workaround](https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723). Remember to change the ports that are opened.
 
 ### How to Update gems
 
