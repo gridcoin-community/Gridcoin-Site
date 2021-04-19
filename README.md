@@ -29,6 +29,11 @@ For installation of Jekyll please follow https://jekyllrb.com/docs/installation/
 4. bundle install 
 
 ## Windows guide
+
+If you're running through WSL you need to use the flag `--force-polling` or it will not regenerate automatically on changes.
+
+If you wish to accesss it from another device you need to use [this workaround](https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723). Remember to change the ports that are opened.
+
 1. Install Git for windows, https://git-scm.com/downloads
 
 2. Use Git GUI to clone gridcoin Repo
