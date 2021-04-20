@@ -47,7 +47,7 @@ in each thread
 
 Each category has its own requirements which are listed in the [poll types](#poll-types "wikilink") section of this page 
 
-To pass, a poll must get a majority of the vote and must be at or above the poll's
+To pass, a poll must get a majority of the vote (excluding abstentions) and must be at or above the poll's
 active vote weight (AVW) requirement. AVW is an estimate how much voting
 weight is from users who are active on the network. It is described in more detail 
 in the [active vote weight](#active-vote-weight "wikilink") section
