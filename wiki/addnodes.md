@@ -24,7 +24,7 @@ You shouldn't need to add them manually as a few are hardcoded into the wallet.
 ## List Of Addnodes
 
 Tables with a list of addnodes, their domain name, and their region. See [cycy's hourly updating list](https://addnode.cycy.me)
-if you want another source of addnodes. The status on this page is not updated frequently.
+if you want another source of addnodes. The status on this wiki page is not updated frequently.
 
 
 ### Mainnet
