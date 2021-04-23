@@ -1,13 +1,13 @@
 ---
 centralized-exchanges:
   - name: SouthXchange
-    image: /assets/img/Exchanges/southxchange-light.png
+    image: /assets/img/exchanges/southxchange-light.png
     link: https://www.southxchange.com/Market/Book/GRC/BTC
   
   - name: Txbit.io
-    image: /assets/img/Exchanges/txbit.svg
+    image: /assets/img/exchanges/txbit.svg
     link: https://txbit.io/Asset/GRC
   
   - name: Flyp.me
-    image: /assets/img/Exchanges/flypme.png
+    image: /assets/img/exchanges/flypme.png
     link: https://flyp.me/
