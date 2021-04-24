@@ -38,9 +38,9 @@ These are included in the default config.
 
 | Node | Region |
 |-|-|
-| addnode=addnode-us-central.cycy.me | US-central |
-| addnode=ec2-3-81-39-58.compute-1.amazonaws.com | US-east |
-| addnode=gridcoin.crypto.fans | Unknown |
+| addnode-us-central.cycy.me | US-central |
+| ec2-3-81-39-58.compute-1.amazonaws.com | US-east |
+| gridcoin.crypto.fans | Unknown |
 | gridcoin.ddns.net | UK |
 | london.grcnode.co.uk | UK |
 | seeds.gridcoin.ifoggz-network.xyz | Canada |
