@@ -18,8 +18,6 @@ See the [config file](config-file "wikilink") page about how to change your conf
 You can also add the node with the command: `addnode <node> <add|remove|onetry>` 
 in the debug console.
 
-You shouldn't need to add them manually as a few are hardcoded into the wallet.
-
 
 ## List Of Addnodes
 
