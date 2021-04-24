@@ -87,7 +87,8 @@ List of addnodes for the [test network](testnet "wikilink")
 
 | Node | Region |
 | ---- | ------ |
-| gridcoin.ddns.net                       | UK |
+| addnode-us-central.cycy.me | US-central |
+| ec2-3-81-39-58.compute-1.amazonaws.com  | US-east |
 | gridhost.ddns.net                       | UK |
 | swe.tplinkdns.com                       | Sweden |
 | tarmoilves.eu                           | Estonia |
@@ -98,7 +99,9 @@ List of addnodes for the [test network](testnet "wikilink")
 
 | Node | Region |
 | ---- | ------ |
+| gridcoin.ddns.net                       | UK |
 | gridcoin.network                        | France |
 | ormgas.com                              | Sweden |
+| test.grcpool.com                        | US-east |
 | testnet.dihelix.com                     | US |
 | vancouver01.gridcoin.ifoggz-network.xyz | Canada |
