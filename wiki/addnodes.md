@@ -33,6 +33,21 @@ List of addnodes for the main network. This is the one you most likely care abou
 
 ------------
 
+#### Default
+These are included in the default config. 
+
+| Node | Region |
+|-|-|
+| addnode=addnode-us-central.cycy.me | US-central |
+| addnode=ec2-3-81-39-58.compute-1.amazonaws.com | US-east |
+| addnode=gridcoin.crypto.fans | Unknown |
+| gridcoin.ddns.net | UK |
+| london.grcnode.co.uk | UK |
+| seeds.gridcoin.ifoggz-network.xyz | Canada |
+| seed.gridcoin.pl | Europe |
+| www.grcpool.com | US-east |
+
+
 #### Online (connected within the last 24 hours)
 
 | Node | Region |
@@ -45,7 +60,6 @@ List of addnodes for the main network. This is the one you most likely care abou
 | swe.tplinkdns.com                       | Sweden |
 | tarmoilves.eu                           | Estonia |
 | vancouver01.gridcoin.ifoggz-network.xyz | Canada |
-| seed.gridcoin.pl                        | Europe |
 
 ------------
 
@@ -62,7 +76,6 @@ List of addnodes for the main network. This is the one you most likely care abou
 | node1.chick3nman.com                    | US-central |
 | nuad.de                                 | Germany |
 | seattle.grcnode.deluxe-host.net         | US-west |
-| vancouver01.gridcoin.ifoggz-network.xyz | Canada |
 
 ------------
 
