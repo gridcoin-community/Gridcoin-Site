@@ -44,12 +44,18 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 4. Run `bundle install`
 
-### How to Update gems
+## How to Update gems
 
 Delete Gemfile.lock and run `bundle install`
 
-### For running the development web server
+## For running the development web server
 
 ```sh
 bundle exec jekyll serve
 ```
+
+### WSL notes
+
+If you're running through WSL you need to use the flag `--force-polling` with the above command or it will not regenerate automatically on changes.
+
+If you wish to access it from another device you need to use [this workaround](https://github.com/microsoft/WSL/issues/4150#issuecomment-504209723). Remember to change the ports that are opened.
