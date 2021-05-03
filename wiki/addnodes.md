@@ -21,7 +21,7 @@ in the debug console.
 
 ## List Of Addnodes
 
-Tables with a list of addnodes, their domain name, and their region. 
+Tables with a list of addnodes, and their region. 
 
 The status on this wiki page is not updated frequently.
 
