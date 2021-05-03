@@ -21,14 +21,16 @@ in the debug console.
 
 ## List Of Addnodes
 
-Tables with a list of addnodes, their domain name, and their region. See [cycy's hourly updating list](https://addnode.cycy.me)
-if you want another source of addnodes. The status on this wiki page is not updated frequently.
+Tables with a list of addnodes, their domain name, and their region. 
+
+The status on this wiki page is not updated frequently.
 
 
 ### Mainnet
 
-List of addnodes for the main network. This is the one you most likely care about
+List of addnodes for the main network. These are the ones you most likely care about.
 
+See [cycy's hourly updating list](https://addnode.cycy.me) for a more up to date status.
 ------------
 
 #### Default
@@ -79,6 +81,8 @@ These are included in the default config.
 
 List of addnodes for the [test network](testnet "wikilink")
 
+[cycy's hourly updating list](https://addnode.cycy.me/testnet)
+
 ------------
 
 #### Online (connected within the last 24 hours)
@@ -88,6 +92,7 @@ List of addnodes for the [test network](testnet "wikilink")
 | addnode-us-central.cycy.me | US-central |
 | ec2-3-81-39-58.compute-1.amazonaws.com  | US-east |
 | gridhost.ddns.net                       | UK |
+| ormgas.com                              | Sweden |
 | swe.tplinkdns.com                       | Sweden |
 | tarmoilves.eu                           | Estonia |
 
@@ -99,7 +104,6 @@ List of addnodes for the [test network](testnet "wikilink")
 | ---- | ------ |
 | gridcoin.ddns.net                       | UK |
 | gridcoin.network                        | France |
-| ormgas.com                              | Sweden |
 | test.grcpool.com                        | US-east |
 | testnet.dihelix.com                     | US |
 | vancouver01.gridcoin.ifoggz-network.xyz | Canada |
