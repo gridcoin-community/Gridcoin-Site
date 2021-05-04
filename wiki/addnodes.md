@@ -15,6 +15,8 @@ will get more chances to find other nodes
 You can add these into your config file with `addnode=ADDNODE`. 
 See the [config file](config-file "wikilink") page about how to change your config
 
+**Make sure you have at least a few addnodes in your config or you won't be able to connect to the network.**
+
 You can also add the node with the command: `addnode <node> <add|remove|onetry>` 
 in the debug console.
 
@@ -31,6 +33,7 @@ The status on this wiki page is not updated frequently.
 List of addnodes for the main network. These are the ones you most likely care about.
 
 See [cycy's hourly updating list](https://addnode.cycy.me) for a more up to date status.
+
 ------------
 
 #### Default
