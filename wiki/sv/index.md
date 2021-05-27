@@ -187,7 +187,6 @@ beräkningar istället för att säkerställa blockkedjan.
   - Listor:
       - [Coinmarketcap](https://coinmarketcap.com/currencies/gridcoin/)
       - [CoinGecko](https://coingecko.com/en/coins/gridcoin-research)
-      - [CoinCap](http://www.coincap.io/GRC)
       - [Github contributions](https://github.com/gridcoin-community/Gridcoin-Research/graphs/contributors)
         
 <!-- end list -->
