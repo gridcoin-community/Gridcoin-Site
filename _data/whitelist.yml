@@ -158,6 +158,16 @@ projects:
   team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
   stats: https://gridcoinstats.eu/project/srbase
 
+- name: SiDock@Home
+  link: https://www.sidock.si/sidock/
+  goal: Works on drug discovery with COVID-19 as its primary focus
+  sponsor: COVID.SI project
+  cpu: 'yes'
+  gpu: 'no'
+  gdpr: 'no'
+  team: https://www.sidock.si/sidock/team_display.php?teamid=54
+  stats: https://www.gridcoinstats.eu/project/sidock@home
+
 - name: TN-Grid
   link: https://gene.disi.unitn.it/test/
   goal: 'The gene@home project is an implementation of the PC-IM algorithm, whose
