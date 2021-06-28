@@ -114,6 +114,7 @@ layout:
       }
   }
 
+  //reference: https://learn.cloudcannon.com/jekyll/jekyll-search-using-lunr-js/
   function getQueryVariable(variable) {
       var query = window.location.search.substring(1);
       var vars = query.split('&');
