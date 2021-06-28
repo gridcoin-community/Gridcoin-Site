@@ -25,7 +25,7 @@ layout:
           return null; //doesn't make sense to look if it matched only in the tile
       }
 
-      const positions = matches["content"].position
+      const positions = matches["content"].position;
 
       var diff = 0;
 
@@ -43,7 +43,7 @@ layout:
           //seeks backward until space or start of the string
       }
 
-      return i
+      return i;
   }
 
   function displaySearchResults(results, store) {
@@ -58,20 +58,20 @@ layout:
 
               var li = document.createElement('li');
 
-              var h3 = document.createElement('h3')
+              var h3 = document.createElement('h3');
               var a = document.createElement('a');
               a.href = item.url;
               a.textContent = item.title;
 
-              h3.appendChild(a)
+              h3.appendChild(a);
               li.appendChild(h3);
 
-              var p = document.createElement('p')
+              var p = document.createElement('p');
 
-              var matchData = Object.values(result.matchData.metadata)[0]
+              var matchData = Object.values(result.matchData.metadata)[0];
               //workaround for weird bug where some search terms don't get the correct label
 
-              var matchCount = determineMatchesToShow(matchData)
+              var matchCount = determineMatchesToShow(matchData);
 
               if (matchCount !== null) {
                   var positions = matchData["content"].position;
@@ -98,7 +98,7 @@ layout:
 
               } else {
                   //if only title or other matches, just put first 150 chars 
-                  p.textContent = item.content.substring(0, 150) + "..."
+                  p.textContent = item.content.substring(0, 150) + "...";
               }
 
               li.appendChild(p);
@@ -138,7 +138,7 @@ layout:
           this.field('title', {boost: 10});
           this.field('content');
 
-          this.metadataWhitelist = ['position']
+          this.metadataWhitelist = ['position'];
 
           for (key in pageData) {
               this.add({
