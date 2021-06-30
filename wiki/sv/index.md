@@ -172,7 +172,7 @@ beräkningar istället för att säkerställa blockkedjan.
       - [Reddit](https://reddit.com/r/gridcoin)
       - [Reddit (ru)](https://reddit.com/r/russiangridcoin)
       - [Gridcoin Telegram](https://t.me/gridcoin)
-      - [Discord](https://discord.me/page/gridcoin)
+      - [Discord](https://discord.gg/jf9XX4a)
       - [Slack](https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTUzMmY0YjdiNzYxYzQ0MDc3MGE1NjQ3Nzg2NWMzZTUzMjAwZjdhMWI1YWUzMDE4YzQyZjVjMjMzOTc1M2RmMmM/)
       - IRC: [#gridcoin](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin) and [#gridcoin-help](https://kiwiirc.com/client/irc.freenode.net:6697/#gridcoin-help) on freenode.
 
