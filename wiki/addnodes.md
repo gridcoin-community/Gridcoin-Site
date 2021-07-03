@@ -37,7 +37,7 @@ See [cycy's hourly updating list](https://addnode.cycy.me) for a more up to date
 ------------
 
 #### Default
-These are included in the default config. 
+These are included in the default config, but if you leave them out of the config, it will not connect to these addnodes 
 
 | Node | Region |
 |-|-|
