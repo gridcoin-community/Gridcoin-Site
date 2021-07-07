@@ -606,8 +606,6 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
 
 * lifetime
 * magnitude `<cpid>`
-* myneuralhash
-* neuralhash
 * resetcpids
 * staketime
 * superblockage
