@@ -55,6 +55,7 @@ These are included in the default config, but if you leave them out of the confi
 |----|-----|
 | grcnode.tahvok.com                      | Germany |
 | grcnode.thefoxie.eu                     | Germany |
+| grc.leftist.eu                          | Germany |
 | gridcoin.network                        | France |
 | gridhost.ddns.net                       | UK |
 | node.gridcoin.network                   | France |
