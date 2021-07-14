@@ -35,8 +35,8 @@ reward research. Gridcoin compares participants in each project by their
 subsidiary credits earned in BOINC to measure performance in relation to
 dynamic inner project network average.
 
-BOINC has been rewarding scientific work units in a credit system since
-2003. In case a project maintainer maliciously decides to give out more
+BOINC has been rewarding scientific work units in a credit system since 2003. 
+In case a project maintainer maliciously decides to give out more
 credits than appropriate, it only affects the inner project competition.
 The maximum share of new Gridcoins for this project stays the same
 percentage (subject to the number of total projects). And projects can be
