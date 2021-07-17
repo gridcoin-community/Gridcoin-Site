@@ -20,7 +20,7 @@ into running the Gridcoin network. The aim is to put more instead into science.
 ## Staking Rewards
 When you stake, you receive newly minted coins. You 
 get 10 GRC + [research rewards](#research-rewards "wikilink"). If you are a solo 
-cruncher, rewards from research are added on top. Pool cruncher (see [the pool](#the-pools "wikilink") section) and non-crunchers 
+cruncher, rewards from research are added on top. [Pool](pools "wikilink") cruncher (see [the pool](#the-pools "wikilink") section) and non-crunchers 
 will only get 10 GRC when they stake. This 10 GRC is always there (called 
 constant block rewards or CBR). This is to incentivize people to stake because 
 more people staking helps increase the security of the network. 
@@ -75,7 +75,7 @@ hour cooldown where they won't be able to stake.
 
 ### Stakesplit
 If you see a lot of coins on cooldown frequently, try using adding `enablestakesplit=1`
-in your wallet's config file and then restarting. This will split up large [UTXOs](#utxos "wikilink")
+in your wallet's config file and then restarting. This will split up large [UTXOs](utxos "wikilink")
 when they stake to reduce the amount of coins on cooldown. See the 
 [config file](config-file "wikilink") wiki page for more details about how to configure this
 
@@ -136,7 +136,7 @@ The reward amounts currently used were chosen through a poll titled ["Constant B
 The 75/25 option was chosen meaning a 75% to 25% split of new coins between crunchers and non-crunchers respectively.
 If you would like an in depth reading about the economics of it see either the 
 [reddit](https://www.reddit.com/r/gridcoin/comments/8bcrlz/constant_block_reward_cbr_value_proposal_and_poll/), [github](https://github.com/gridcoin-community/economics/issues/1), or [steem](https://steemit.com/gridcoin/@jringo/constant-block-reward-cbr-value-proposal-and-poll) thread. This went into
-effect on version 4.0.0.0 after a hard fork (see [this reddit post for more information](https://www.reddit.com/r/gridcoin/comments/9pgg7m/gridcoin_mandatory_update_4000_released_cbr/) for details)
+effect on version 4.0.0.0 after a [hard fork](forks#hard-forks "wikilink") (see [this reddit post for more information](https://www.reddit.com/r/gridcoin/comments/9pgg7m/gridcoin_mandatory_update_4000_released_cbr/) for details)
 
 ---
 ## Definitions
@@ -150,8 +150,3 @@ block X.
 
 ### Research Rewards
 The amount you have earned from doing work on BOINC with your computer
-
-### UTXOs
-UTXOs (unspent transaction output) are what's leftover from a transaction you 
-received. Gridcoin and many other cryptocurrencies base most of how they operate
-on UTXOs under the hood. Under the hood staking looks at UTXOs

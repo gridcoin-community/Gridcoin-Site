@@ -115,8 +115,8 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     (absolute value, does not subtract)
     . 
 * consolidatemsunspent `<address> <multi-sig-type> <block-start> <block-end> <max-grc> <max-inputs>`
-  * Applies to multisignature addresses only and searches for UTXOs smaller than
-    `<max-grc>` to combine into one UTXO. `<address>` is the multisignature
+  * Applies to multisignature addresses only and searches for [UTXOs](utxos "wikilink") 
+    smaller than `<max-grc>` to combine into one UTXO. `<address>` is the multisignature
     address, `<multi-sig-type>` is a number which tells many signatures you 
     have and how many are total (1 = 2 out of 3  
     2 = 3 out of 4   

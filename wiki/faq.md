@@ -233,7 +233,7 @@ only.
 ---
 ### What happens if I stake on a fork?
 
-When you stake on a fork, the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
+When you stake on a [fork](forks "wikilink"), the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
 
 ---
 # BOINC
