@@ -23,6 +23,13 @@
                 <div class="col-xl-6" id="main" role="main">
                     {{ content  }}
                 </div>
+                <div class="col-xl-3">
+                    <details class="docs-toc">
+                        <summary>Inhaltsverzeichnis (zum Anzeigen klicken)</summary>
+                        {% assign cur_page = page.path | split: "/" | last%}
+                        {% include _wiki_toc.md page=cur_page %}
+                    </details>
+                </div>
             </div>
         </div>
         {% include _footer.htm %}
