@@ -236,6 +236,22 @@ only.
 When you stake on a [fork](forks "wikilink"), the stake you see is not actually legitimate. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
 
 ---
+
+### My pending rewards are stuck at 16384 GRC
+
+If you see your pending rewards at 16384 GRC, you have hit the maximum amount
+Gridcoin that can be sent per stake. When you stake you will only earn 16384 GRC
+and any amount of extra work done will not be included. If you keep hitting this
+limit, make sure you are running your wallet to stake 24/7 (or close to it). If you are, 
+you should get more Gridcoin to stake more frequently. 
+
+If you want to get an estimate of how likely you are to stake *before* that limit, you can try solving 
+for probability using:
+`16384/(magnitude/4) = -ln( 1 - Probability ) * 10000 / Balance * Difficulty`
+
+Note: It is highly unlikely for most users to run into this limit. It requires a very
+high magnitude to possibly run into this
+
 # BOINC
 
 ---
