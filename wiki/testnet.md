@@ -167,7 +167,7 @@ Note that this is not an exhaustive list
     * This can make testnet more unstable than mainnet
     * Sometimes the wallet will receive more bad data than on mainnet 
 
-* Cooldown happens faster
+* Cooldown happens faster (1 hr vs 16 hrs)
     * Makes it easier to test things relating to staking
 
 * Addresses are formatted differently
