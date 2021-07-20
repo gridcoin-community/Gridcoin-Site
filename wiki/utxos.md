@@ -31,11 +31,11 @@ After an output is used up, they are no longer UTXOs and become spent transactio
 
 ### Example 1
 
-You only ever received 50 Gridcoin in a transaction from bob and you want to send 
-25 Gridcoin to alice.
+You only ever received 50 Gridcoin in a transaction from Bob and you want to send 
+25 Gridcoin to Alice.
 
 You would use up that 50 Gridcoin UTXO to in a transaction as an input and have 
-two outputs: one to alice with the 25 Gridcoin and another to yourself 
+two outputs: one to Alice with the 25 Gridcoin and another to yourself 
 with the leftover 25 Gridcoin (you must use up all of a UTXO). 
 
 You went from having 1 UTXO that was 50 Gridcoin large to having 1 new UTXO that
@@ -43,13 +43,13 @@ is 25 Gridcoin large. The 50 Gridcoin output is now spent and cannot be used aga
 
 
 ### Example 2
-Suppose you wanted to send your 400 Gridcoin of your balance of 500 Gridcoin 
-to alice and bob. You have only ever received 5 transactions each 
+Suppose you wanted to send 400 Gridcoin of your balance of 500 Gridcoin 
+to Alice and Bob. You have only ever received 5 transactions each 
 made of 100 Gridcoin
 
 To make this transaction you would use 4 UTXOs (totals 400 Gridcoin) 
-as an input and you would have two outputs: one to bob of 200 Gridcoin and one 
-to alice with 200 Gridcoin. No output to yourself is needed here
+as an input and you would have two outputs: one to Bob of 200 Gridcoin and one 
+to Alice with 200 Gridcoin. No output to yourself is needed here
 
 You went from having 5 UTXO that were 100 Gridcoin large to having 1 UTXO that
 is 100 Gridcoin large. Four of the five 100 Gridcoin outputs are now spent 
@@ -158,7 +158,7 @@ attack more difficult
 
 Since staking creates a new UTXO, that UTXO goes on cooldown. This means that
 when you stake, part of your balance will be offline and unable to stake. Thus
-making your balance split across smaller UTXOs will make staking more efficient 
+having your balance split across smaller UTXOs will make staking more efficient 
 since less of your total balance will be offline after a stake. 
 
 More efficient staking can be achieved with adding `stakesplit=1` to your
@@ -177,7 +177,7 @@ makes transaction validation much more complex
 # Other Miscellaneous Notes
 
 * You can control which exact UTXOs are used as inputs and created as outputs
-using the coin control feature in the GUI. If on Ingrid (5.2.1.0) or higher this
+using the coin control feature in the GUI. If on Ingrid (5.3.1.0) or higher this
 is the dropdown that shows when you send a transaction
 
 
@@ -185,7 +185,7 @@ is the dropdown that shows when you send a transaction
 by the number of inputs and output and not directly with the number of Gridcoin moved
 
 * Trying to use too many UTXOs as either an input or an output in one transaction 
-can make a transaction to be too big in bytes to send. This can be fixed
+can make a transaction too big in bytes to send. This can be fixed
 by either making multiple transaction or consolidating your UTXOs if inputs are 
 the problem. See the [troubleshooting section of the FAQ](faq#troubleshooting "wikilink") for
 how to consolidate your UTXO

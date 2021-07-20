@@ -1,7 +1,7 @@
 ---
 title: Forks
 layout: wiki
-description: Information about what forks are, the different types of forks any more
+description: Information about what forks are, the different types of forks and more
 ---
 
 # Introduction
@@ -24,7 +24,7 @@ wallets
 
 ## Diagram Explanation
 
-![diagram showing a chain of blocks on the top labeled original chain with a split and a second chain at the bottom labeled forked chain ](/assets/img/wiki/fork-diagram.svg){: class="img-fluid w-100"}
+![diagram showing a chain of blocks on the top labeled original chain with a split and a second chain at the bottom labeled forked chain](/assets/img/wiki/fork-diagram.svg){: class="img-fluid w-100"}
 
 *May be harder to see on mobile, so the top chain is labeled "original chain" and the bottom is "forked chain". Each square is labeled "block"*
 {% comment %}The {: class="img-fluid w-100"} makes it a full width image that scales with screen size{% endcomment %}
