@@ -138,13 +138,19 @@ Think of it as if your coins were part of a "raffle" and your UTXOs were a chunk
 of "tickets". No matter how you segment your "tickets" (total GRC), you still 
 have the same odds of "winning" (staking).
 
-## Reward Coinbase Transaction 
+## Reward Coinstake Transaction 
 
 The UTXO that staked is used up and a new special transaction 
-is formed to send rewards. This special transaction uses your existing 
-UTXO and something called a coinbase[^2] as inputs to send you your rewards 
-for staking. Coinbases are where the new coins come from. 
-They are also how the very first UTXOs on the network were made
+is formed to send rewards. This special transaction is called a coinstake. A coinstake uses
+your staked UTXO as an input, but it's allowed to send more coins than the input[^2]
+to send you your rewards for staking. Coinstake are where the new coins come from. They include the new
+coins and fees from other transactions in the block.
+Coinstakes (and coinbases) are also how the very first UTXOs on the network were made.
+
+Note that in Proof of Work cryptocurrencies, this is called a coinbase[^3]
+instead of a coinstake. Gridcoin technically does still have a coinbase transaction[^4],
+in every block but they are not used any more (since block 2049 --- the last PoW block). The coinstake
+is where the actual reward comes from after then
 
 The new UTXO from staking is unable to used in as an input for the next 100 blocks,
 and like any UTXO, it will also undergo a cooldown for staking
@@ -152,7 +158,7 @@ and like any UTXO, it will also undergo a cooldown for staking
 
 ## Relation to Cooldown & Efficiency
 
-When a new UTXO is created, it is unable to stake for the first 16 hours[^3].
+When a new UTXO is created, it is unable to stake for the first 16 hours[^5].
 This time is called a cooldown. The aim of the cooldown is to make a 51% 
 attack more difficult
 
@@ -193,5 +199,7 @@ how to consolidate your UTXO
 
 # Footnotes
 [^1]: Not literally --- there's no physical "bill" for them 
-[^2]: A coinbase transaction is what the company Coinbase is named after, but they are otherwise unrelated to the actual coinbase transaction
-[^3]: This is not an approximation of the number of blocks. It is defined in the code in terms of time
+[^2]: It's not allowed to send as many coins as you want --- just what you are owed for staking (new coins) and the fees from the transactions in the block (not new coins)
+[^3]: A coinbase transaction is what the company Coinbase is named after, but they are otherwise unrelated to the actual coinbase transaction
+[^4]: The coinbase transaction is the 0th (index 0) transaction in every block and the coinstake is the 1st (index 1) transaction in the block since 2049
+[^5]: This is not an approximation of the number of blocks. It is defined in the code in terms of time
