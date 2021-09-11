@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="22" height="22" version="1.0" viewBox="0 0 110 110" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <linearGradient id="linGrad" x1="55" x2="55" y1="12.5" y2="55" gradientTransform="rotate(-30 54.748 55.046)" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#fff" offset="0"/>
-   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
-  </linearGradient>
-  <radialGradient id="radGrad" cx="55" cy="55" r="101" fy="80.25" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#d5fc00" offset="0"/>
-   <stop stop-color="#6bbb03" offset=".45"/>
-   <stop stop-color="#589903" offset="1"/>
-  </radialGradient>
- </defs>
- <circle cx="55" cy="55" r="47.5" fill="url(#radGrad)" stroke="#296c29" stroke-width="6"/>
- <circle cx="55" cy="55" r="44" fill="none" stroke="#e1f0ca" stroke-opacity=".75"/>
- <polygon transform="rotate(-90,55,55)" points="25 48.582 25 61.418 60.384 61.418 42.686 79.116 60.884 79.116 85 55 60.884 30.884 42.686 30.884 60.384 48.582" fill="#096000"/>
- <path d="m33.693 18.074c13.62-7.8638 29.788-7.328 42.504-0.0025-0.01394 14.675-7.6335 28.945-21.254 36.809-13.62 7.8638-29.788 7.3276-42.504 0.0021 0.01394-14.675 7.6338-28.945 21.254-36.808z" fill="url(#linGrad)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" version="1.0" viewBox="0 0 110 110" xml:space="preserve"><defs><linearGradient id="linGrad" x1="55" x2="55" y1="12.5" y2="55" gradientTransform="rotate(-30 54.748 55.046)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><radialGradient id="radGrad" cx="55" cy="55" r="101" fy="80.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#d5fc00"/><stop offset=".45" stop-color="#6bbb03"/><stop offset="1" stop-color="#589903"/></radialGradient></defs><circle cx="55" cy="55" r="47.5" fill="url(#radGrad)" stroke="#296c29" stroke-width="6"/><circle cx="55" cy="55" r="44" fill="none" stroke="#e1f0ca" stroke-opacity=".75"/><polygon fill="#096000" points="25 48.582 25 61.418 60.384 61.418 42.686 79.116 60.884 79.116 85 55 60.884 30.884 42.686 30.884 60.384 48.582" transform="rotate(-90,55,55)"/><path fill="url(#linGrad)" d="m33.693 18.074c13.62-7.8638 29.788-7.328 42.504-0.0025-0.01394 14.675-7.6335 28.945-21.254 36.809-13.62 7.8638-29.788 7.3276-42.504 0.0021 0.01394-14.675 7.6338-28.945 21.254-36.808z"/></svg>
