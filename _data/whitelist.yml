@@ -67,17 +67,6 @@ projects:
   team: https://www.gpugrid.net/team_display.php?teamid=3493
   stats: https://gridcoinstats.eu/project/gpugrid
 
-- name: LHC@Home
-  link: https://lhcathome.cern.ch/lhcathome/index.php
-  goal: Accelerator Physics
-  sponsor: CERN
-  cpu: 'yes'
-  gpu: 'no'
-  gdpr: 'yes'
-  gdpr-enable-steps: 'https://lhcathome.cern.ch/lhcathome/forum_thread.php?id=4918'
-  team: https://lhcathome.cern.ch/lhcathome/team_display.php?teamid=8128
-  stats: https://gridcoinstats.eu/project/lhc@home_classic
-
 - name: Milkyway@home
   link: http://milkyway.cs.rpi.edu/milkyway/
   goal: Creation of a 3D map of the Milky Way galaxy using data gathered by the Sloan
@@ -204,17 +193,6 @@ projects:
   gdpr-enable-steps: https://www.worldcommunitygrid.org/ms/viewDataSharing.action
   team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
   stats: https://gridcoinstats.eu/project/World_Community_Grid
-
-- name: YAFU
-  link: http://yafu.myfirewall.org/yafu
-  goal: Factorize numbers of 70-130 digit length which are needed to bring Aliquot
-    Sequences to a size of 130.
-  sponsor: Private
-  cpu: 'yes'
-  gpu: 'no'
-  gdpr: 'no'
-  team: http://yafu.myfirewall.org/yafu/team_display.php?teamid=260
-  stats: https://gridcoinstats.eu/project/yafu
   
 - name: yoyo@home
   link: https://www.rechenkraft.net/yoyo/
