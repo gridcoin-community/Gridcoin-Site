@@ -21,7 +21,7 @@ track how much it currently has [here on Gridcoinstats.eu](https://main.gridcoin
 
 The foundation was started with the transition from [Gridcoin-Classic](gridcoin-classic "wikilink")
 to modern day Gridcoin. The coins that were not converted were originally 
-put into an address run by the pseudonymous founder Rob Halförd[^1] on the address `SFLRgjBx5HAtR5dedegRLUbQVS6ejvdu6j` (don't send coins to that address --- it is no longer in use).
+put into an address run by the pseudonymous founder Rob Halförd[^1].
 
 In 2019 it was transferred over to its current multisignature address[^2]. This
 helped deal with some of the concerns of just one person having control over 
