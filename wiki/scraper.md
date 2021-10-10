@@ -5,7 +5,7 @@ redirect_from:
   - "/Wiki/Scraper"
 ---
 
-The Scraper as described below meets or exceeds the definition of a blockchain Oracle and as such the Scraper system is being renamed the Gridcoin Oracle. See https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841 and https://cryptobriefing.com/what-is-blockchain-oracle/.
+The Scraper as described below meets or exceeds the definition of a blockchain Oracle and as such the Scraper system is being renamed the Gridcoin Oracle. See <https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841> and <https://cryptobriefing.com/what-is-blockchain-oracle/>.
 
 The previous .NET Visual Basic based distributed computing statistics gathering system, referred to as the Gridcoin “Neural Network,” was not really a neural network. It was actually a rules based system for gathering 3rd party distributed computing statistics (currently from BOINC projects) off blockchain, summarizing and normalizing them, and then providing a mechanism for the nodes in the network to agree on the statistics and put them on the blockchain in summarized form once a day. (This is referred to as a superblock.) The research rewards are then calculated and generated for/by staking wallets that perform research via the distributed computing platform BOINC, confirmed by other nodes in accordance with blockchain protocols (referred to as Proof-of-Research).
 
