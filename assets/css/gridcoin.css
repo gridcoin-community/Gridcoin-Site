@@ -417,13 +417,25 @@ dfn{
 /* don't add anything on intra-wiki or intra-site links*/
 .docs-container a[title="wikilink"]::after, 
 .docs-container a[title="sitelink"]::after,
-.docs-container .footnote::after,
 .docs-container .reversefootnote::after,
 .docs-toc a::after,
 .docs-menu a::after{
+    background-image: none;
     width:0px;
     height: 0px;
     margin:0px;
+}
+/* make footnotes look like [1] for better visibility */
+.docs-container .footnote::before{
+    content:"[";
+    padding-right:0.1ch;
+}
+.docs-container .footnote::after{
+    content:"]";
+    padding-left: 0.1ch;
+    /* reset values set for external link icon */
+    margin:0px;
+    background-image: none;
 }
 .docs-toc {
     background-color: #343434;

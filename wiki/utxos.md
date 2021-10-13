@@ -11,7 +11,7 @@ An unspent transaction output (UTXO) is what's left over from a transaction.
 Under the hood of most cryptocurrencies, Gridcoin included, everything runs
 on this concept.
 
-UTXOs are like bills[^1]. When you receive a transaction, you get a "bill" of a
+UTXOs are like bills.[^1]When you receive a transaction, you get a "bill" of a
 specific size. When you send a transaction you make "bills" of other sizes. 
 To make a transaction you must use up those "bills" exactly
 
@@ -142,14 +142,14 @@ have the same odds of "winning" (staking).
 
 The UTXO that staked is used up and a new special transaction 
 is formed to send rewards. This special transaction is called a coinstake. A coinstake uses
-your staked UTXO as an input, but it's allowed to send more coins than the input[^2]
-to send you your rewards for staking. Coinstake are where the new coins come from. They include the new
+your staked UTXO as an input, but it's allowed to send more coins than the input[^2]to 
+send you your rewards for staking. Coinstake are where the new coins come from. They include the new
 coins and fees from other transactions in the block.
 Coinstakes (and coinbases) are also how the very first UTXOs on the network were made.
 
-Note that in Proof of Work cryptocurrencies, this is called a coinbase[^3]
-instead of a coinstake. Gridcoin technically does still have a coinbase transaction[^4],
-in every block but they are not used any more (since block 2049 --- the last PoW block). The coinstake
+Note that in Proof of Work cryptocurrencies, this is called a coinbase[^3]instead 
+of a coinstake. Gridcoin technically does still have a coinbase transaction,[^4]in 
+every block but they are not used any more (since block 2049 --- the last PoW block). The coinstake
 is where the actual reward comes from after then
 
 The new UTXO from staking is unable to used in as an input for the next 100 blocks,
@@ -158,9 +158,8 @@ and like any UTXO, it will also undergo a cooldown for staking
 
 ## Relation to Cooldown & Efficiency
 
-When a new UTXO is created, it is unable to stake for the first 16 hours[^5].
-This time is called a cooldown. The aim of the cooldown is to make a 51% 
-attack more difficult
+When a new UTXO is created, it is unable to stake for the first 16 hours.[^5]This time 
+is called a cooldown. The aim of the cooldown is to make a 51% attack more difficult
 
 Since staking creates a new UTXO, that UTXO goes on cooldown. This means that
 when you stake, part of your balance will be offline and unable to stake. Thus
