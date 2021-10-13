@@ -21,7 +21,7 @@ Note that it doesn't really change anything for you as a staker other than just 
 1. A previous superblock is made and a 24 hour clock starts for the next superblock to be due[^1]
 2. Stats are independently gathered by the [scrapers](scraper "wikilink") from the BOINC projects
 3. Those stats are sent out to each wallet which compare them and check that they match. 
-If at least 60% (rounded up) of the scrapers exactly match[^2], a superblock can be made (when it's due)
+If at least 60% (rounded up) of the scrapers exactly match,[^2] a superblock can be made (when it's due)
 4. Someone stakes and they include the new data from the scrapers
 
 Note that this is just a brief overview and there are many security mechanisms and other parts left out in the description

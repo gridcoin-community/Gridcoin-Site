@@ -71,7 +71,7 @@ on that fork.
 
 ## Summary
 
-Hard Forks are almost always intentional[^1]. Hard forks are what happen when there 
+Hard Forks are almost always intentional.[^1]Hard forks are what happen when there 
 are protocol level changes that are irreconcilable with the previous version of the wallet. 
 The old wallets will reject the blocks after a hardfork from the newer version of 
 the wallet because the new wallets are using features not allowed in the older version.

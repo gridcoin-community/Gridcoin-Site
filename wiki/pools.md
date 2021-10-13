@@ -11,7 +11,7 @@ it so that users don't need to have any Gridcoin to earn rewards for BOINC.
 
 # How it Works
 
-Everyone on the pool uses the pool account(s)[^1], so they are all crunching as
+Everyone on the pool uses the pool account(s),[^1]so they are all crunching as
 if the pool was a single user. When the pool [stakes](staking "wikilink"), it earns all those
 rewards and distributes it out to all the users based on how much they
 contributed to it.
@@ -34,8 +34,8 @@ have much less direct influence over the blockchain than in other cryptocurrenci
 ## Difference to Other PoS Staking Pools
 
 Unlike Proof of Stake pools, no one sends any coins to the pool for it to stake.
-While a pool like this could still work in Gridcoin, this is not how the main pools[^2]
-run. The current pools acquired enough Gridcoin to stake at a reasonable rate 
+While a pool like this could still work in Gridcoin, this is not how the main pools
+run.[^2]The current pools acquired enough Gridcoin to stake at a reasonable rate 
 before they started operating as their main purpose is sending out BOINC
 rewards
 
