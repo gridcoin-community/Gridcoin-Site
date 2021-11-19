@@ -1,7 +1,7 @@
 ---
 centralized-exchanges:
   - name: SouthXchange
-    image: /assets/img/exchanges/southxchange-light.png
+    image: /assets/img/exchanges/southxchange.png
     link: https://www.southxchange.com/Market/Book/GRC/BTC
   
   - name: Txbit.io
