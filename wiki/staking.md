@@ -31,10 +31,10 @@ a fair number of issues. See the [More Reading](#more-reading "wikilink") sectio
 for info about when this changed
 
 ## How To Stake
-If you are using the GUI, look for the ![Green Up Arrow Icon](/assets/img/wiki/staking_on.svg)
+If you are using the GUI, look for the ![Fully Lit Stacked Squares Icon](/assets/img/wiki/staking_on.svg)
 icon to see if you are staking. Make sure you keep seeing that icon
 and just leave your wallet running --- your wallet will keep attempting to stake.
-If instead you see a different colored down arrow, hover over it to see why it says you are not staking
+If instead you see a red or unlit icon, hover over it to see why it says you are not staking
 
 When you eventually stake, you will see ![Purple Gridcoin Logo](/assets/img/wiki/tx_por.svg)
 if you are a solo cruncher or ![Golden Gridcoin Logo](/assets/img/wiki/tx_pos.svg)
@@ -54,7 +54,7 @@ other people on the network have that are trying to stake (called difficulty).
 The amount of research you've done will only affect your reward --- not your odds
 of staking. 
 
-To see your odds, hover over the ![Green Up Arrow Icon](/assets/img/wiki/staking_on.svg) icon.
+To see your odds, hover over the ![Fully Lit Stacked Squares Icon](/assets/img/wiki/staking_on.svg) icon.
 You will see an estimate for how frequently you are likely to stake. Unfortunately
 since staking is probability based, your actual time to stake can vary more or less time than what's shown.
 
