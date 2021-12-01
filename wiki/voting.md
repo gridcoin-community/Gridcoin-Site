@@ -132,7 +132,7 @@ to pass
 ## Whitelist
 
 Polls to remove or add projects to the whitelist. For an overview of the process
-that must be completed beforhand to add a project, please view the 
+that must be completed beforehand to add a project, please view the 
 [whitelist process](whitelist-process "wikilink") wiki page. For the removal of a project, 
 there must be an attempt at contact with the project admin before making the poll 
  
