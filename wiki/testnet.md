@@ -39,7 +39,7 @@ to do, feel free to ask a question on the channel
 
 3. Configuring the wallet (don't run the wallet until step 4)
     * On Windows
-        1. Go to `%appdata%/GricoinResearch` by pressing the Windows Key then Q and entering that path to get there. 
+        1. Go to `%appdata%/GridcoinResearch` by pressing the Windows Key then Q and entering that path to get there. 
         2. Click on New Folder and type `testnet` and press enter. 
         3. Go to the testnet folder then right click -> new -> Text Document
         4. Right click -> Rename  and enter `gridcoinresearch.conf`
@@ -57,7 +57,7 @@ to do, feel free to ask a question on the channel
         5. Copy in the config file and **change `CHANGE_ME`to something unique**. Use this [testnet config file](#the-config-file "wikilink")
         6. Save the file and exit TextEditor
     * On Linux
-        1. Go to `~/.GricoinResearch`
+        1. Go to `~/.GridcoinResearch`
         2. Make a folder labeled `testnet` there
         3. Create a file called `gridcoinresearch.conf`
         4. Edit it and copy in the config file and **change `CHANGE_ME` to something unique**. Use this [testnet config file](#the-config-file "wikilink")
@@ -146,7 +146,7 @@ to do, feel free to ask a question on the channel
     ########### (Required if BOINC installed to non-default location) ###########
     #############################################################################
 
-    ## Windows (Note the double backslashes are neccessary)
+    ## Windows (Note the double backslashes are necessary)
     #boincdatadir=C:\\ProgramData\\BOINC\\
     #boincappdir=C:\\Program Files\\BOINC\\
 

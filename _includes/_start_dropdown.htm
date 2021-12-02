@@ -1,7 +1,7 @@
 <details markdown="{{ include.markdown_type | default: "block" }}"> 
     <summary>{{ include.dropdown-header | default: "dropdown (click to expand)" }}</summary>
 
-{% comment %} The "| defualt:" are what are set if no the parameters are given" {% endcomment %}
+{% comment %} The "| default:" are what are set if no the parameters are given" {% endcomment %}
 {% comment %} dropdown-header is an arg given in the include {% endcomment %}
 {% comment %} <details> needs to have markdown= otherwise the markdown inside won't be rendered {% endcomment %}
 {% comment %} The <details> tag is closed in _end_markdown_dropdown {% endcomment %}

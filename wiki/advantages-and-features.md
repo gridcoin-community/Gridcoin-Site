@@ -117,7 +117,7 @@ Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
 ### Comparison to Primecoin
 ---
 #### What Is Primecoin?
-Primecoin is a crytpocurrency that uses a proof of work algorithm to 
+Primecoin is a cryptocurrency that uses a proof of work algorithm to 
 find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prime numbers.
 
 
