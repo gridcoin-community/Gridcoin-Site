@@ -1,8 +1,5 @@
 function updateDownloads(data) {
     document.getElementById("wallet-version").textContent  = 'Current Wallet Version: ' + data.name;
-    
-    String.prototype.includes = String.prototype.includes || function (val, start) {'use strict'; return this.indexOf(val, start) !== -1; };
-    //IE11 support
 
     var has64BitHotfix = false;
     var has32BitHotfix = false;
