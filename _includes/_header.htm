@@ -1,141 +1,139 @@
 <nav class="navbar navbar-expand-lg fixed-top shadow">
-    <div class="container justify-content-center">
-        <div class="row">
-            <div class="mx-auto">
-                <a href="#main" class="sr-only sr-only-focusable bg-dark text-light">Jump to Content</a>
-                <a name="Nav"></a> <!-- Nav link, returning user to top of website -->
-                <a class="navbar-brand" href="/" rel="tooltip" data-toggle="tooltip" title="Gridcoin - Securely rewarding BOINC computation on top of POS!" data-placement="bottom"><img src="/assets/img/grc-title.svg" alt="Gridcoin logo with text stating Gridcoin on the right" style="width: 205px; height: 50px;"/></a>
-                <button class="navbar-toggler navbar-dark grcbtn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <div class="navbar-nav">
-                    <!--    Community Links    -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Community
+    <div class="mx-auto d-lg-flex d-block flex-lg-nowrap">
+        <a href="#main" class="visually-hidden-focusable bg-dark text-light">Jump to Content</a>
+        <a name="Nav"></a> <!-- Nav link, returning user to top of website -->
+        <a class="navbar-brand" href="/" rel="tooltip" data-bs-toggle="tooltip" title="Gridcoin - Securely rewarding BOINC computation on top of POS!" data-placement="bottom"><img src="/assets/img/grc-title.svg" alt="Gridcoin logo with text stating Gridcoin on the right" style="width: 205px; height: 50px;"/></a>
+        <button class="navbar-toggler navbar-dark grcbtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav">
+                <!--    Community Links    -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="community-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Community
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="community-dropdown">
+                        <h6 class="dropdown-header text-center">Gridcoin Community</h6>
+                        <a class="dropdown-item" href="/contact.htm">Contact Us</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/gridcoins">Facebook</a>
+                        <a class="dropdown-item" href="https://github.com/gridcoin-community/Gridcoin-Research">Github</a>
+                        <a class="dropdown-item" href="https://www.reddit.com/r/gridcoin">Reddit</a>
+                        <a class="dropdown-item" href="https://steemit.com/trending/gridcoin">Steemit</a>
+                        <a class="dropdown-item" href="https://twitter.com/GridcoinNetwork">Twitter</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Chat</h6>
+                        <a class="dropdown-item" href="https://t.me/BOINC_Telegram">BOINC Telegram</a>
+                        <a class="dropdown-item" href="https://t.me/gridcoin">Gridcoin Telegram</a>
+                        <a class="dropdown-item" href="https://discord.gg/jf9XX4a">Discord</a>
+                        <a class="dropdown-item" href="https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTE4N2I3ZWZjYWJlZGM1Zjg3MTUyMDhiN2M5NmRmZTA2NDA0ZmY1ZTFmOGM3ZGU2YTBkOTdhNTk2ZjkzMGZkODY">Slack</a>
+                        <a class="dropdown-item" href="https://jq.qq.com/?_wv=1027&k=5fDyjCV">Gridcoin 中国 qq 群</a>
+                    </div>
+                </div>
+                <!--    Resource Links    -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="resource-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="resource-dropdown">
+                        <h6 class="dropdown-header text-center">Publications</h6>
+                        <a class="dropdown-item" href="/assets/docs/whitepaper.pdf">Gridcoin Whitepaper</a>
+                        <a class="dropdown-item" href="/assets/docs/grc-bluepaper-section-1.pdf">Gridcoin Staking Bluepaper</a>
+                        <a class="dropdown-item" href="/wiki/publications.html">Publications Mentioning Gridcoin</a>
+                        <a class="dropdown-item" href="https://boinc.berkeley.edu/wiki/Publications_by_BOINC_projects">BOINC Project Publications</a>
+                        <a class="dropdown-item" href="https://scholar.google.co.uk/scholar?q=BOINC">BOINC Academic Articles</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">GRC Info</h6>
+                        <a class="dropdown-item" href="/wiki/">Gridcoin Wiki</a>
+                        <a class="dropdown-item" href="/search.htm">Search this Site</a>
+                        <a class="dropdown-item" href="https://github.com/gridcoin-community/Gridcoin-Marketing">Gridcoin Marketing and Media Files</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Development</h6>
+                        <a class="dropdown-item" href="https://github.com/gridcoin-community">Github Repositories</a>
+                        <a class="dropdown-item" href="/wiki/team-and-contributors.html">Team & Contributors</a>
+                        <a class="dropdown-item" href="/wiki/rpc.html">RPC Wiki Page</a>
+                        <a class="dropdown-item" href="/#Downloads">Wallet Downloads</a>
+                        <a class="dropdown-item" href="https://snapshot.gridcoin.us/snapshot.zip">Official Snapshot</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Tools</h6>
+                        <a class="dropdown-item" href="https://signature.statseb.fr/">Forum Signatures</a>
+                    </div>
+                </div>
+                <!--    Guide Links    -->
+                <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="guide-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Guides
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="community-dropdown">
-                            <h6 class="dropdown-header text-center">Gridcoin Community</h6>
-                            <a class="dropdown-item" href="/contact.htm">Contact Us</a>
-                            <a class="dropdown-item" href="https://www.facebook.com/gridcoins">Facebook</a>
-                            <a class="dropdown-item" href="https://github.com/gridcoin-community/Gridcoin-Research">Github</a>
-                            <a class="dropdown-item" href="https://www.reddit.com/r/gridcoin">Reddit</a>
-                            <a class="dropdown-item" href="https://steemit.com/trending/gridcoin">Steemit</a>
-                            <a class="dropdown-item" href="https://twitter.com/GridcoinNetwork">Twitter</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Chat</h6>
-                            <a class="dropdown-item" href="https://t.me/BOINC_Telegram">BOINC Telegram</a>
-                            <a class="dropdown-item" href="https://t.me/gridcoin">Gridcoin Telegram</a>
-                            <a class="dropdown-item" href="https://discord.gg/jf9XX4a">Discord</a>
-                            <a class="dropdown-item" href="https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTE4N2I3ZWZjYWJlZGM1Zjg3MTUyMDhiN2M5NmRmZTA2NDA0ZmY1ZTFmOGM3ZGU2YTBkOTdhNTk2ZjkzMGZkODY">Slack</a>
-                            <a class="dropdown-item" href="https://jq.qq.com/?_wv=1027&k=5fDyjCV">Gridcoin 中国 qq 群</a>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="guide-dropdown">
+                        <h6 class="dropdown-header text-center">Main Guides</h6>
+                        <a class="dropdown-item" href="/guides/boinc-install.htm">Solo-Crunching</a>
+                        <a class="dropdown-item" href="/guides/pool.htm">Pool-Crunching</a>
+                        <a class="dropdown-item" href="/guides/noncruncher-gridcoin-setup.htm">Non-Cruncher</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Other Guides</h6>
+                        <a class="dropdown-item" href="/guides/whitelist.htm">Project Whitelist</a>
+                        <a class="dropdown-item" href="/guides/security.htm">Security</a>
+                        <a class="dropdown-item" href="/guides/misc.htm">Misc. Guides</a>
+                        <a class="dropdown-item" href="/guides/terminology.htm">Terminology</a>
+                        <a class="dropdown-item" href="/wiki/faq.html">Gridcoin FAQ</a>
                     </div>
-                    <!--    Resource Links    -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="resource-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Resources
+                </div>
+                <!--    Trade Links    -->
+                <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="trade-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trade/Spend
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="resource-dropdown">
-                            <h6 class="dropdown-header text-center">Publications</h6>
-                            <a class="dropdown-item" href="/assets/docs/whitepaper.pdf">Gridcoin Whitepaper</a>
-                            <a class="dropdown-item" href="/assets/docs/grc-bluepaper-section-1.pdf">Gridcoin Staking Bluepaper</a>
-                            <a class="dropdown-item" href="/wiki/publications.html">Publications Mentioning Gridcoin</a>
-                            <a class="dropdown-item" href="https://boinc.berkeley.edu/wiki/Publications_by_BOINC_projects">BOINC Project Publications</a>
-                            <a class="dropdown-item" href="https://scholar.google.co.uk/scholar?q=BOINC">BOINC Academic Articles</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">GRC Info</h6>
-                            <a class="dropdown-item" href="/wiki/">Gridcoin Wiki</a>
-                            <a class="dropdown-item" href="/search.htm">Search this Site</a>
-                            <a class="dropdown-item" href="https://github.com/gridcoin-community/Gridcoin-Marketing">Gridcoin Marketing and Media Files</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Development</h6>
-                            <a class="dropdown-item" href="https://github.com/gridcoin-community">Github Repositories</a>
-                            <a class="dropdown-item" href="/wiki/team-and-contributors.html">Team & Contributors</a>
-                            <a class="dropdown-item" href="/wiki/rpc.html">RPC Wiki Page</a>
-                            <a class="dropdown-item" href="/#Downloads">Wallet Downloads</a>
-                            <a class="dropdown-item" href="https://snapshot.gridcoin.us/snapshot.zip">Official Snapshot</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Tools</h6>
-                            <a class="dropdown-item" href="https://signature.statseb.fr/">Forum Signatures</a>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="trade-dropdown">
+                        <h6 class="dropdown-header text-center">Exchanges</h6>
+                        {% for exchange in site.data.exchanges.centralized-exchanges %}
+                        <a class="dropdown-item" href="{{exchange.link}}">{{exchange.name}}</a>
+                        {% endfor %}
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">3rd party wallets</h6>
+                        <a class="dropdown-item" href="https://holytransaction.com/">HolyTransaction</a>
                     </div>
-                    <!--    Guide Links    -->
-                    <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="guide-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Guides
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="guide-dropdown">
-                            <h6 class="dropdown-header text-center">Main Guides</h6>
-                            <a class="dropdown-item" href="/guides/boinc-install.htm">Solo-Crunching</a>
-                            <a class="dropdown-item" href="/guides/pool.htm">Pool-Crunching</a>
-                            <a class="dropdown-item" href="/guides/noncruncher-gridcoin-setup.htm">Non-Cruncher</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Other Guides</h6>
-                            <a class="dropdown-item" href="/guides/whitelist.htm">Project Whitelist</a>
-                            <a class="dropdown-item" href="/guides/security.htm">Security</a>
-                            <a class="dropdown-item" href="/guides/misc.htm">Misc. Guides</a>
-                            <a class="dropdown-item" href="/guides/terminology.htm">Terminology</a>
-                            <a class="dropdown-item" href="/wiki/faq.html">Gridcoin FAQ</a>
-                        </div>
-                    </div>
-                    <!--    Trade Links    -->
-                    <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="trade-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Trade/Spend
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="trade-dropdown">
-                            <h6 class="dropdown-header text-center">Exchanges</h6>
-                            {% for exchange in site.data.exchanges.centralized-exchanges %}
-                            <a class="dropdown-item" href="{{exchange.link}}">{{exchange.name}}</a>
-                            {% endfor %}
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">3rd party wallets</h6>
-                            <a class="dropdown-item" href="https://holytransaction.com/">HolyTransaction</a>
-                        </div>
-                    </div>
-                    <!--    Pool/Stats Links    -->
-                    <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="pool-stats-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Pool/Stats
-                            </a>
-                        <div class="dropdown-menu" aria-labelledby="pool-stats-dropdown">
-                            <h6 class="dropdown-header text-center">Gridcoin Pools</h6>
-                            <a class="dropdown-item" href="https://www.grcpool.com/">grcpool</a>
-                            <a class="dropdown-item" href="https://grc.arikado.ru/">Arikado Pool</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Block Explorers</h6>
-                            <a class="dropdown-item" href="https://www.gridcoinstats.eu/block">GridcoinStats</a>
-                            <a class="dropdown-item" href="https://gridcoin.network/">Gridcoin.network</a>
-                            <a class="dropdown-item" href="https://gridcoin.ch/dashboard">Gridcoin.ch</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Team Stats</h6>
-                            <a class="dropdown-item" href="https://boincstats.com/en/stats/-1/team/detail/118094994/projectList">Boincstats</a>
-                            <a class="dropdown-item" href="http://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin">Free-DC</a>
-                            <a class="dropdown-item" href="http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php">Netsoft</a>
-                            <a class="dropdown-item" href="https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=">SETIBZH</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header text-center">Exchange Stats</h6>
-                            <a class="dropdown-item" href="https://coinmarketcap.com/currencies/gridcoin/">Coinmarketcap</a>
-                            <a class="dropdown-item" href="https://www.coingecko.com/en/coins/gridcoin-research">CoinGecko</a>
-                            <a class="dropdown-item" href="https://www.worldcoinindex.com/coin/gridcoin">WorldCoinIndex</a>
-                            <a class="dropdown-item" href="https://www.cryptocompare.com/coins/grc/overview">CryptoCompare</a>
-                        </div>
-                    </div>
-                    <div class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
-                        <a href="/#Downloads"class="nav-link btn grcbtn" role="tooltip" title="Downloads" aria-label="downloads" data-toggle="tooltip">
-                            <span class="oi oi-data-transfer-download"></span>
+                </div>
+                <!--    Pool/Stats Links    -->
+                <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle btn grcbtn" id="pool-stats-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pool/Stats
                         </a>
+                    <div class="dropdown-menu" aria-labelledby="pool-stats-dropdown">
+                        <h6 class="dropdown-header text-center">Gridcoin Pools</h6>
+                        <a class="dropdown-item" href="https://www.grcpool.com/">grcpool</a>
+                        <a class="dropdown-item" href="https://grc.arikado.ru/">Arikado Pool</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Block Explorers</h6>
+                        <a class="dropdown-item" href="https://www.gridcoinstats.eu/block">GridcoinStats</a>
+                        <a class="dropdown-item" href="https://gridcoin.network/">Gridcoin.network</a>
+                        <a class="dropdown-item" href="https://gridcoin.ch/dashboard">Gridcoin.ch</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Team Stats</h6>
+                        <a class="dropdown-item" href="https://boincstats.com/en/stats/-1/team/detail/118094994/projectList">Boincstats</a>
+                        <a class="dropdown-item" href="http://stats.free-dc.org/stats.php?page=teambycpid&team=Gridcoin">Free-DC</a>
+                        <a class="dropdown-item" href="http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php">Netsoft</a>
+                        <a class="dropdown-item" href="https://statsbzh.boinc-af.org/team.php?name=R3JpZGNvaW4=">SETIBZH</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header text-center">Exchange Stats</h6>
+                        <a class="dropdown-item" href="https://coinmarketcap.com/currencies/gridcoin/">Coinmarketcap</a>
+                        <a class="dropdown-item" href="https://www.coingecko.com/en/coins/gridcoin-research">CoinGecko</a>
+                        <a class="dropdown-item" href="https://www.worldcoinindex.com/coin/gridcoin">WorldCoinIndex</a>
+                        <a class="dropdown-item" href="https://www.cryptocompare.com/coins/grc/overview">CryptoCompare</a>
                     </div>
-                    <div class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" >
-                        <a href="/search.htm"class="nav-link btn grcbtn" role="tooltip" title="Search this site" aria-label="Search this site" data-toggle="tooltip">
-                            <span class="oi oi-magnifying-glass"></span>
-                        </a>
-                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="/#Downloads"class="nav-link btn grcbtn" role="tooltip" title="Downloads" aria-label="downloads" data-bs-toggle="tooltip">
+                        <span class="oi oi-data-transfer-download"></span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="/search.htm"class="nav-link btn grcbtn" role="tooltip" title="Search this site" aria-label="Search this site" data-bs-toggle="tooltip">
+                        <span class="oi oi-magnifying-glass"></span>
+                    </a>
                 </div>
             </div>
         </div>
+        
     </div>
 </nav>

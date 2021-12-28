@@ -154,6 +154,20 @@ dfn{
     padding-bottom: 25px;
     background-image:linear-gradient(#9013FE,#360166);
 }
+.table-custom-dark{
+    --bs-table-bg: #343a40;
+    --bs-table-striped-bg: #3e444a;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #43494e;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #373b3e;
+}
+.text-brighter-green{ /* brighter than bootstrap text-success */
+    color:#28a745;
+}
 /*----End index.htm----*/
 
 /*Contact.htm*/
@@ -228,17 +242,22 @@ dfn{
     font-weight: bold;
 }
 .table-color-yes{
-    background-color: green;
+    --bs-table-bg: green;
+    --bs-table-striped-bg: green;
+    --bs-table-hover-bg:#009100;
 }
 .table-color-no{
-    background-color: darkred;
+    --bs-table-bg: darkred;
+    --bs-table-striped-bg: darkred;
+    --bs-table-hover-bg:#aa0000;
 }
 .table-color-gdpr-yes{ /* warns that you need to enable stats */
-    background-color: #999900;
+    --bs-table-bg: #999900;
+    --bs-table-striped-bg: #999900;
+    --bs-table-hover-bg:#c1c100;
 }
-.table-color-gdpr-yes a{ /* makes the link underlined and not a hard to read blue*/
+.table-color-gdpr-yes a{ /* change color to match table text because blue is hard to read*/
     color: inherit;
-    text-decoration: underline;
 }
 
 /*----end whitelist.erb----*/
@@ -459,5 +478,8 @@ dfn{
 }
 .search-container li{
     list-style-type: none;
+}
+.max-width-25{
+    max-width: 25%;
 }
 /* end search.html */

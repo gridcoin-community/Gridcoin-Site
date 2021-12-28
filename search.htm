@@ -5,15 +5,14 @@ description: Let you look for information on this site
 ---
 <div class="row justify-content-center">
   <noscript><div class="col-12 mb-5"><b class="h1">This requires Javascript to work since searching is done client side. Either enable Javascript or try using a search engine and prefix it with <code>site:gridcoin.us</code> instead</b></div></noscript>
-  <div class="col-md-8 offset-md-3 col-auto">
-    <label class="sr-only" for="search-box">Search</label>
+  <div class="col-md-5 col-auto">
+    <label class="visually-hidden" for="search-box">Search</label>
     <form action="/search.htm" class="form-inline" method="get">
-        <div class="input-group col-md-8">
-          <div class="input-group-prepend">
-            <div class="input-group-text"><span class="oi oi-magnifying-glass"></span></div>
-          </div>
+        <div class="input-group">
+          
+          <div class="input-group-text"><span class="oi oi-magnifying-glass"></span></div>
           <input type="text" placeholder="your search" id="search-box" name="query" class="form-control text-dark">
-          <input type="submit" value="search" class="form-control btn btn-primary col-md-3">
+          <input type="submit" value="search" class="form-control btn btn-primary max-width-25">
         </div>
     </form>
   </div>

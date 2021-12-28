@@ -51,6 +51,6 @@ function getLatestRelease() {
  $(document).ready(function () {
     getLatestRelease();
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip(); //Enabled bootstrap tooltips.
+        $('[data-bs-toggle="tooltip"]').tooltip(); //Enabled bootstrap tooltips.
     })
 });
