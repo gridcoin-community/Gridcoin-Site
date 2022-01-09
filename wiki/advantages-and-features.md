@@ -29,7 +29,7 @@ minimizes that amount of centralization. Scrapers get BOINC statistics
 the useful stats --- reducing data sent and stored. The wallet compares the 
 data from each scraper against each other limiting the trust needed. Scrapers are 
 run by several trusted members of the community located around the world. 
-Read more about scrapers on the [Scraper Wiki Page](Scraper "wikilink")
+Read more about scrapers on the [Scraper Wiki Page](scraper "wikilink")
 
 Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by

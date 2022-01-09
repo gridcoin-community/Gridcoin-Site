@@ -42,7 +42,7 @@ Verhalten. Siehe [Testnet](testnet "wikilink") für weitere Informationen.
     ############ Erforderliche Einstellungen (Alle Betriebssysteme) #############
     #############################################################################
 
-    ## Von der Community bereitgestellte Liste verfügbare Addnodes [Addnodes](Addnodes "wikilink")
+    ## Von der Community bereitgestellte Liste verfügbare Addnodes [Addnodes](addnodes "wikilink")
     #~~~~~Addnodes kopieren und hier einfügen~~~~~
 
 

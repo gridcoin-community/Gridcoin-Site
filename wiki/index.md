@@ -109,7 +109,7 @@ Proof-of-Stake allows miners to dedicate their compute resources towards
 scientific computations instead of securing the blockchain.
 
 ## Official Resources
-  <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
+  - [Team and Contributors](team-and-contributors "wikilink")
   - [Other Wiki Pages](pages "wikilink")
   - [Website](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
