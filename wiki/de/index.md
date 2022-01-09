@@ -101,7 +101,7 @@ Gridcoin Research basiert auf dem Proof of Stake Algorithmus, der deutlich
 energieeffizienter ist als der Proof of Work Algorithmus. Nutzer können zusätzlich Gridcoins verdienen, wenn sie mit ihrer Rechenleistung BOINC Projekte unterstützen.
 
 ## Offizielle Seiten
-  <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
+  <!-- TODO: team and contributors -->
   - [Website](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)

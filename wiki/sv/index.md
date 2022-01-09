@@ -103,7 +103,7 @@ Proof-of-Stake låter användarna använda sin datorkraft till vetenskapliga
 beräkningar istället för att säkerställa blockkedjan.
 
 ## Officiella Resurser
-  <!-- TODO: [Volunteers, Roles & Privileges](Volunteers,-Roles,-&-Privileges "wikilink") -->
+  <!-- TODO: team and contributors -->
   - [Andra wikisidor](pages "wikilink")
   - [Hemsida](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
