@@ -285,23 +285,50 @@ description: "Gridcoin is a cryptocurrency which rewards volunteer distributed c
         </div>
         <div class="row">
             <!--GRC Research Downloads-->
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 mb-4">
               <h4>Windows & Linux</h4>
               <!-- the 64/32 bit windows direct links won't be displayed while loading -->
-              <a id="64-bit-windows" class="btn rounded-pill grcbtn m-1" style="display:none"> 
+              <a id="win64" class="btn rounded-pill grcbtn m-1" style="display:none"> 
                 64-bit Windows
-              </a><br>
-              <a id="32-bit-windows" class="btn rounded-pill grcbtn m-1" style="display:none">
+              </a>
+              <div id="win64-version-warn" class="text-warning fst-italic" style="display:none">
+                Using Old Version:
+              </div>
+              <br>
+              <a id="win32" class="btn rounded-pill grcbtn m-1" style="display:none">
                 32-bit Windows
-              </a><br>
+              </a>
+              <div id="win32-version-warn" class="text-warning fst-italic" style="display:none">
+                Using Old Version:
+              </div>
+              <br>
               <a class="btn rounded-pill grcbtn m-1" href="https://github.com/gridcoin-community/Gridcoin-Research/releases/latest">
                   Download via GitHub
-              </a><br />
+              </a>
+              <br>
             </div>
-            <div class="col-12 col-sm-6">
-              <h4>MacOS</h4>
-              <a class="btn rounded-pill grcbtn m-1" href="https://github.com/Git-Jiro/homebrew-jiro/releases">
-                  Download via GitHub
+            <div class="col-12 col-sm-6 mb-4">
+              <h4>macOS</h4>
+              <a id="macos" class="btn rounded-pill grcbtn m-1" style="display:none">
+                macOS Intel
+              </a>
+              <div id="macos-version-warn" class="text-warning fst-italic" style="display:none">
+                  Using Old Version:
+              </div>
+              <br>
+              <a id="macos_arm" class="btn rounded-pill grcbtn m-1" style="display:none">
+                macOS Apple Silicon
+              </a>
+              <div id="macos_arm-version-warn" class="text-warning fst-italic" style="display:none">
+                Using Old Version:
+              </div>
+              <br>
+              <a class="btn rounded-pill grcbtn m-1" href="https://github.com/gridcoin-community/Gridcoin-Research/releases/latest">
+                Download via GitHub
+              </a>
+              <br>
+              <a class="btn rounded-pill grcbtn m-1" href="https://github.com/Git-Jiro/homebrew-jiro/">
+                Download via Homebrew
               </a>
             </div>
             <div class="col-12 col-sm-6">
