@@ -1,53 +1,99 @@
-function updateDownloads(data) {
-    document.getElementById("wallet-version").textContent  = 'Current Wallet Version: ' + data.name;
+const allPlatforms = ["win64", "win32", "macos_arm", "macos"];
+var platformsMissed = [...allPlatforms];
 
-    var has64BitHotfix = false;
-    var has32BitHotfix = false;
+function show(element){
+    element.style.display = "";
+}
+ 
+function doOtherPlatformsMatch(targetPlatform, name){
+    
+    for (let comparePlatform of allPlatforms){
 
-    const windows64el = document.getElementById("64-bit-windows")
-    const windows32el = document.getElementById("32-bit-windows")
+        if (comparePlatform.length >= targetPlatform.length // don't match macos for macos_arm but do the other way around 
+            && comparePlatform !== targetPlatform 
+            && name.includes(targetPlatform)
+            && name.includes(comparePlatform)
+            ){
+            return true;
+        }
+        
+    }
 
+    return false;
+}
 
-    data.assets.forEach(function (assetFile) {
+function updateDownloads(data, platforms=allPlatforms, previousVersion=false) {
+    
+    if(!previousVersion){
+        document.getElementById("wallet-version").textContent  = 'Current Wallet Version: ' + data.name;
+    }
+
+    let hotfixes = [];
+
+    for (let assetFile of data.assets) {
         
         const name = assetFile.name;
         const downloadURL = assetFile.browser_download_url;
 
         if (name.includes(".SHA256")) {
-            //ignore the checksums (note can't use "continue" so else if statements are used)
+            continue;
         }
-        else if (name.includes("win64") && name.includes("hotfix")) {
 
-            has64BitHotfix = true;
-            windows64el.href = downloadURL;
-            windows64el.style.display=""; //show the button
+        for (let platform of platforms){
+            if (name.includes(platform) && !doOtherPlatformsMatch(platform,name)){
 
-        }
-        else if (name.includes("win64") && !has64BitHotfix) {
-            
-            windows64el.href = downloadURL;
-            windows64el.style.display = ""; 
+                if (name.includes("hotfix")){
+                    hotfixes.push(platform);
+                } else if (hotfixes.includes(platform)){
+                    break; //if a hotfix already exists, don't update the file
+                } 
+                
+                const platformButton = document.getElementById(platform);
+                platformButton.href = downloadURL;
+                show(platformButton);
 
-        }
-        else if (name.includes("win32") && name.includes("hotfix")) {
-            
-            has32BitHotfix = true;
-            windows32el.href = downloadURL;
-            windows32el.style.display="";
-            
-        }
-        else if (name.includes("win32") && !has32BitHotfix) {
+                if (name.includes("min")){
+                    const startOfMinVersion = name.indexOf("min-") + 4; 
+                    const endOfFilename = name.lastIndexOf(".");
+                    const minVersion = name.slice(startOfMinVersion, endOfFilename);
 
-            windows32el.href = downloadURL;
-            windows32el.style.display="";
+                    platformButton.textContent += " (min OS: " + minVersion + ")";
+                }
+
+                if(previousVersion){
+                    const versionWarn = document.getElementById(platform + "-version-warn");
+                    versionWarn.textContent += data.name;
+                    show(versionWarn);
+                }
+
+                platformsMissed = platformsMissed.filter(value => value !== platform); //remove platform from missed list
+                
+                break;
+            }
         }
-    })
+    }
+}
+
+function fillInMissing(){
+    if(platformsMissed.length > 0){
+        fetch("https://api.github.com/repos/gridcoin-community/Gridcoin-Research/releases")
+            .then(releases => releases.json())
+            .then(releases =>{
+                for (let release of releases){
+                    updateDownloads(release, platformsMissed, true);
+                    if (platformsMissed.length === 0){
+                        break;
+                    }
+                }
+            })
+    }
 }
 
 if (document.getElementById("wallet-version")){ //only get version data on pages where version number and download links are needed
     fetch("https://api.github.com/repos/gridcoin-community/Gridcoin-Research/releases/latest")
         .then(response => response.json())
         .then(updateDownloads)
+        .then(fillInMissing)
 }
 
 //Enable bootstrap tooltips.
