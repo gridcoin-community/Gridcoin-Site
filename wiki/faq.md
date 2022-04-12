@@ -256,7 +256,7 @@ high magnitude to possibly run into this.
 # BOINC
 
 ---
-### Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project now that has Gridcoin as a Team Name?
+### Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project?
 
 Running "projects" in the console will list all the whitelisted
 projects you could possibly contribute to that would help your Gridcoin
@@ -268,11 +268,8 @@ wallet.
 
 That means you aren't participating in those projects or the e-mail
 address you have in the conf file doesn't match the e-mail address used
-in your BOINC manager on that machine. For every project you join, you
-also have to join the Gridcoin team on that project. Any changes about
-e-mail address on a project or team membership on a project take around
-a day to
-propagate.
+in your BOINC manager on that machine. Any changes about e-mail address on a
+project take around a day to propagate.
 
 ---
 ### I use BOINC with one username but on a few machines - is it enough to have one wallet with the proper boinc\_project\_email address, or do I have to have a separate wallet on each machine?
@@ -304,9 +301,6 @@ on every project you still have valid RAC on; so GRC does not support
 detaching projects (it was supposed to prevent gaming the system). There
 is no difference if you score 0 on a project, as all are taken into
 account equally.
-
-If you insist on not being paid for a specific project, change your team
-away from a recognised team for that project.
 
 ---
 # Status

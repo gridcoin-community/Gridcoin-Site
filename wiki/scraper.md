@@ -1,40 +1,106 @@
 ---
 title: Gridcoin Scraper 
+description: Overview of what the scrapers are, how they work, their history, and why they are used
 layout: wiki
 redirect_from:
   - "/Wiki/Scraper"
 ---
 
-The Scraper as described below meets or exceeds the definition of a blockchain Oracle and as such the Scraper system is being renamed the Gridcoin Oracle. See <https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841> and <https://cryptobriefing.com/what-is-blockchain-oracle/>.
+# Overview
 
-The previous .NET Visual Basic based distributed computing statistics gathering system, referred to as the Gridcoin “Neural Network,” was not really a neural network. It was actually a rules based system for gathering 3rd party distributed computing statistics (currently from BOINC projects) off blockchain, summarizing and normalizing them, and then providing a mechanism for the nodes in the network to agree on the statistics and put them on the blockchain in summarized form once a day. (This is referred to as a superblock.) The research rewards are then calculated and generated for/by staking wallets that perform research via the distributed computing platform BOINC, confirmed by other nodes in accordance with blockchain protocols (referred to as Proof-of-Research).
+Scrapers are the bots[^1]that get statistics of how much work each user on the
+network did. They independently pull data from each [BOINC](boinc "wikilink") 
+project and send it to the network. Each wallet compares the data from
+one scraper to all others to ensure it is correct
 
-This existing system had a number of serious defects and had been in need of replacement for some time. In October 2018 Jim Owens began a project which originally had the goal of fully implementing Paul Jensen’s prototype statistics proxy program. (See <https://github.com/gridcoin-community/ScraperProxy>). As this project progressed, it became apparent that this was more properly scoped as a complete rewrite of the existing “Neural Network” subsystem, and should be written entirely in C++ as part of the core wallet. The scraper has been developed on the integrated_scraper branch in the author’s Github repository fork of Gridcoin and was merged into the development branch of the official Gridcoin repository on February 25, 2019. (See <https://github.com/jamescowens/Gridcoin-Research> and <https://github.com/gridcoin-community/Gridcoin-Research/commit/989665d699fb9753cd2d519c39ed347d4298652f>).
+Once the data has been pulled, it will go into a [superblock](superblock "wikilink")
+at almost exactly 24 hours from the previous superblock.[^2]This updates the
+network with the new data thus updating how much each user earns. 
 
-After several months of testing and refinement on the testnet network, the Core Developers released the new Scraper as the highlight of the Denise milestone release (4.0.3.0). Despite the significant amount of new code (\>10000 lines of C++ representing more than 250 hours of development time), it was designed to be rolled out in a leisure release, as the initial version is protocol compatible with the existing “Neural Network.”
+As of January 2022 there are 6 scrapers on the main network. 
 
-The new Scraper consists of three major parts:
+# Rational
 
-1.  The actual scraper handles the downloading of stats files from the BOINC projects, and the filtering, compression, and publishing (with hashes and signatures) of the stats files to the network. This was designed and written by Jim Owens. (“Scraper”)
+The scraper system is designed to be scalable. It aims to minimizes the amount of
+trust required in each scraper and avoid placing large amounts of load on
+the project servers. 
 
-2.  The scraper networking code uses the wallet messaging system in an elegant fashion to automatically distribute the compressed, hashed, and signed stats files to all of the nodes. The author is grateful to Tomas Brada (tomasbrod) for writing a very elegant approach for this part. (“Scraper Net”)
+In addition, some projects require credential tokens to download stats[^3]. Getting
+these tokens is not automated and requires doing it manually. Using the scraper
+system allows each scraper to get their own token without requiring that ordinary
+users go through the process just to run the wallet
 
-3.  The interface to the "neural network", which interfaces the core wallet to the scraper and together with the existing functions in the core wallet, provides the core “neural network” functionality. The author is grateful to Marco Nilsson (ravon) for this contribution. (“NN”) This is going to be renamed the Research Rewards module from "neural network" in Elizabeth to better reflect its functionality.
+This system came about because the previous system was running into limitations.
+In the past, random parts of the network would download the stats from projects, 
+and it caused tremendous load on servers. The problem only grew more severe
+as time progressed. At one point a stats mirror was put in place, but this 
+came with other issues like centralization concerns. The current scraper system fixed this by 
+reducing the number of downloads needed to function while still not entirely depending on one user's download.
 
-Old vs. New Scraper Comparison
-==============================
+As an additional benefit, the scrapers are able to reduce the amount
+of data sent out to the network by only including users with a beacon
+--- saving several hundreds of megabytes of data. 
 
-| Category                     | Old VB .NET                                                                                                                                                                                                                                            | New Native C++                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scalability                  | Severely limited. No support for removal of team requirement.                                                                                                                                                                                          | High - At least 20x current capacity - while maintaining constant low load on BOINC statistics sites. Fully supports the removal of the team requirement, which is scheduled for the Elizabeth Milestone (4.1.0.0).                                                                                                                                                                                                                                                                                                     |
-| Cross Platform Compatibility | Windows only - Requires GUI.                                                                                                                                                                                                                           | Completely cross platform - supports all platforms the wallet supports - currently Win64, Win32, Linux (Intel 64 and 32 bit, ARM 64 and 32 bit), and MacOS (Intel 64 bit) and can be run daemon-only (headless).                                                                                                                                                                                                                                                                                                        |
-| Reliability/Availability     | Low - due to single point of failure for old scraper                                                                                                                                                                                                   | High - Support for multiple scrapers, cross-verified by the nodes, with a configurable (nominally 48 hour) statistics retention period, ensures scraper outages are transparent.                                                                                                                                                                                                                                                                                                                                        |
-| Security                     | Poor - Single scraper model allowed the possibility of a man in the middle attack                                                                                                                                                                      | Very High - Each scraper must be authorized to publish statistics to the network. Each scraper hashes and signs all statistics and these hashes and signatures are checked and cross-verified by all nodes. Unauthorized scrapers’ statistics are deleted and they are banned from the network.                                                                                                                                                                                                                         |
-| Network Bandwidth Use        | High - the original scraper simply forwarded uncompressed and unfiltered statistics files (\>300 MB for a complete set), the same as when the nodes downloaded them directly                                                                           | Extremely Low - the new scrapers download the stats, filter, and compress them, reducing \>300 MB of statistics to 4-5 MB for a 48 hour retention period. Statistics are shared in two stages: the statistics directory is “pushed”, and then the actual statistics are “pulled” by the nodes to get the statistics the node does not already have. This minimizes network traffic. Since the messages are signed, they can be forwarded by intermediate nodes, just like other network messages, such as transactions. |
-| Client CPU Use               | High - the “Neural Net” on each node could eat up at least 1 CPU for up to 30 minutes for processing the statistics.                                                                                                                                   | Extremely Low - the normal nodes process the scraper statistics in under three seconds for a typical Intel CPU. This ensures the CPU goes towards computing not administration.                                                                                                                                                                                                                                                                                                                                         |
-| Client Disk Use              | High - up to 2 GB used on the client drive. Significant disk loading during operation                                                                                                                                                                  | None - All scraper statistics are compressed and stored in memory                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Client Memory Use            | Moderate. The .NET runtime adds overhead to the wallet                                                                                                                                                                                                 | Low - Very little additional memory required (\<50 MB).                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| BOINC Server Resource Use    | High - The old scraper sometimes downloaded statistics files over and over that were already downloaded. If the single scraper was down, each node would fall back to downloading its own statistics, crushing the BOINC servers (250+ nodes at once). | Low - Typically five scrapers in operation - each downloads statistics files for a 4 hour window before the superblock is due, only downloading changed statistics. This results in a constant, low load on the BOINC servers only during the 4 hour window regardless of the size of the Gridcoin network.                                                                                                                                                                                                             |
-| Maintainability              | Low - Used non-native development and build tool chain (Microsoft Visual Studio .NET) that is not open source and also does not play well with core wallet. This hampered development, testing, and the release process.                               | High - Written to conform to Gridcoin’s coding standards and 100% C++, well commented, with a modular design that is easily extensible, and completely integrated into core wallet.                                                                                                                                                                                                                                                                                                                                     |
+# History
 
-The milestone release Elizabeth is planned to be a mandatory and will include a number of protocol upgrades that will necessitate a mandatory version and build on the new scraper functionality introduced in Denise. The Gridcoin team requirement will be removed.
+The current scraper system was first released as part of the 4.0.3 (Denise) release and 
+replaced the old "neural network" (unrelated to machine learning). It took 
+over 10000 lines of new code and 250+ hours of development and testing. The 
+scrapers were further improved in the 4.0.5 (Elizabeth) and the 
+5.0.0 (Fern) mandatory release.  
+
+A more through table with comparison of the old system and new system along with
+a timeline can be found below
+
+* {% include _start_dropdown.htm 
+     dropdown-header="Click to view the comparison"
+     markdown-type="block"
+  %}
+
+  | Category | Old VB .NET | Current Native C++ |
+  |---|---|---|
+  | Scalability | Severely limited and had no support for other BOINC teams. | High - At least 20x current capacity - while maintaining constant low load on BOINC statistics sites. Fully supported the removal of the team requirement in 5.0.0 (Fern) |
+  | Cross Platform Compatibility | Windows only - Required GUI. | Completely cross platform - supports all platforms the wallet supports - currently Win64, Win32, Linux (Intel 64 and 32 bit, ARM 64 and 32 bit), and MacOS (Intel 64 bit) and can be run daemon-only (headless). |
+  | Reliability/Availability | Low - due to single point of failure for old scraper | High - Support for multiple scrapers, cross-verified by the nodes, with a configurable (nominally 48 hour) statistics retention period, ensures scraper outages are transparent. |
+  | Security | Poor - Single scraper model allowed the possibility of a man in the middle attack | Very High - Each scraper must be authorized to publish statistics to the network. Each scraper hashes and signs all statistics and these hashes and signatures are checked and cross-verified by all nodes. Unauthorized scrapers’ statistics are deleted and they are banned from the network. |
+  | Network Bandwidth Use | High - the original scraper simply forwarded uncompressed and unfiltered statistics files (\>300 MB for a complete set), the same as when the nodes downloaded them directly | Extremely Low - the new scrapers download the stats, filter, and compress them, reducing \>300 MB of statistics to 4-5 MB for a 48 hour retention period. Statistics are shared in two stages: the statistics directory is “pushed”, and then the actual statistics are “pulled” by the nodes to get the statistics the node does not already have. This minimizes network traffic. Since the messages are signed, they can be forwarded by intermediate nodes, just like other network messages, such as transactions. |
+  | Client CPU Use | High - the “Neural Net” on each node could eat up at least 1 CPU for up to 30 minutes for processing the statistics. | Extremely Low - the normal nodes process the scraper statistics in under three seconds for a typical Intel CPU. This ensures the CPU goes towards computing not administration. |
+  | Client Disk Use | High - up to 2 GB used on the client drive. Significant disk loading during operation | None - All scraper statistics are compressed and stored in memory |
+  | Client Memory Use | Moderate. The .NET runtime added overhead to the wallet | Low - Very little additional memory required (\<50 MB). |
+  | BOINC Server Resource Use | High - The old scraper sometimes downloaded statistics files over and over that were already downloaded. If the single scraper was down, each node would fall back to downloading its own statistics, crushing the BOINC servers (250+ nodes at once). | Low - Typically 6 scrapers in operation - each downloads statistics files for a 4 hour window before the superblock is due, only downloading changed statistics. This results in a constant, low load on the BOINC servers only during the 4 hour window regardless of the size of the Gridcoin network. |
+  | Maintainability | Low - Used non-native development and build tool chain (Microsoft Visual Studio .NET) that is not open source and also does not play well with core wallet. This hampered development, testing, and the release process. | High - Written to conform to Gridcoin’s coding standards and 100% C++, well commented, with a modular design that is easily extensible, and completely integrated into core wallet. |  
+
+  {% include  _end_dropdown.htm %}
+
+* {% include _start_dropdown.htm 
+     dropdown-header="Click to view a timeline"
+  %}
+    | Time | Event |
+    | ---  | ----- |
+    | 2014 | modern version of Gridcoin started |
+    | Jul 2017 (v3.5.9.1) | Stats mirror put in place (no longer in use)
+    | May 2019 (v4.0.3)   | Current scraper system introduced
+    | Aug 2019 (v4.0.5)   | Scraper system improved and a some non-Gridcoin BOINC teams were able to earn Gridcoin
+    | Sep 2020 (v5.0.0)   | Old system fully removed, scrapers improved, and team requirement removed
+
+  {% include _end_dropdown.htm %}
+
+# Miscellaneous
+
+* Note that not anyone can publish data as a scraper nor pretend to be another
+scraper. All wallets check that the data is correctly signed and from an authorized scraper
+
+* To see which scrapers are publishing data, run the `convergencereport` [RPC](rpc "wikilink")
+command. This will show you which scraper's data were included in the last superblock
+and if any were excluded or not publishing.
+
+
+* The actual data is sent through the wallet's messaging system. The full 
+data can be seen by running `listmanifest true` as an RPC command 
+
+
+# Footnotes
+
+[^1]: They are oracles for those more familiar with that term
+[^2]: Assuming the data between scrapers matches and other criteria are met. See the [superblock](superblock "wikilink") wiki page for more information
+[^3]: This is mainly because of how these projects interpret GDPR
