@@ -12,7 +12,7 @@ You will see a lot of references to the data folder in this FAQ. Here are the de
 | Windows | Linux | MacOS |
 |-|-|-|
 | `%appdata%/GridcoinResearch` | `~/.GridcoinResearch` | `~/Library/Application Support/GridcoinResearch` |
- 
+
 <br> {% comment %} normal newline (from two spaces) doesn't work after a table for some reason {% endcomment %}
 
 # Gridcoin & Science
@@ -35,7 +35,7 @@ reward research. Gridcoin compares participants in each project by their
 subsidiary credits earned in BOINC to measure performance in relation to
 dynamic inner project network average.
 
-BOINC has been rewarding scientific work units in a credit system since 2003. 
+BOINC has been rewarding scientific work units in a credit system since 2003.
 In case a project maintainer maliciously decides to give out more
 credits than appropriate, it only affects the inner project competition.
 The maximum share of new Gridcoins for this project stays the same
@@ -49,7 +49,7 @@ Security in Gridcoin is based on Proof-of-Stake.
 
 ---
 ### How do I start crunching?
-Consult these guides: 
+Consult these guides:
 * [Solo](/guides/boinc-install.htm "sitelink")
 * [Pool](/guides/pool.htm "sitelink")
 
@@ -74,7 +74,7 @@ Next, go to Help -\> Debug Window, go to the Console tab and type
 This will (if successful) send a small transaction at the cost of
 1 GRC. This should add your CPID with the next [superblock](superblock "wikilink").
 
-To see if your CPID is included, go to the Console and type `beaconreport`. 
+To see if your CPID is included, go to the Console and type `beaconreport`.
 
 If your CPID is not included, wait for the next superblock. In case your
 CPID isn't included after a few superblocks, try resending your beacon
@@ -91,7 +91,7 @@ Please check [the config file page](config-file "wikilink")
 ---
 ### How can I tell if I've mined a block?
 
-If you are using the GUI you will see a transaction with a gold icon. 
+If you are using the GUI you will see a transaction with a gold icon.
 
 You can also lookup your address on a block explorer.
 
@@ -116,7 +116,7 @@ console.
 ---
 ### I am BOINCing nonstop but my magnitude is very low. What can I do?
 
-RAC is a rolling average over the past month. It is weighted to increase the value of more recent contributions. Gridcoin relies on the RAC values provided by the project to calculate your magnitude. 
+RAC is a rolling average over the past month. It is weighted to increase the value of more recent contributions. Gridcoin relies on the RAC values provided by the project to calculate your magnitude.
 
 However, you can't just compare your RAC between projects because different projects use different systems for how they calculate the RAC. Because of this the magnitude calculation also takes into account the total RAC for other crunchers earning Gridcoin.
 
@@ -152,14 +152,14 @@ Yes, there are currently 2 operational pools:
 ### I am crunching for the pool but the wallet still shows INVESTOR and 0 magnitude. Is that ok?
 
 On the beacon menu, make sure to click on "Pool" button at the start. Click
-start over if you don't see a selection option. This doesn't technically matter, 
+start over if you don't see a selection option. This doesn't technically matter,
 but it will help get rid of error messages that aren't relevant to you
 
 ---
 ### I am crunching for the pool but even though I work on projects this is not shown on the profile page of the pool. What can I do?
 
 Make sure you remove all existing projects, which use your account, from the BOINC manager before
-syncing to the pool. 
+syncing to the pool.
 
 ---
 # Staking
@@ -233,7 +233,7 @@ only.
 ---
 ### What happens if I stake on a fork?
 
-When you stake on a [fork](forks "wikilink"), the stake you see is not actually a real stake on the main chain. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again. 
+When you stake on a [fork](forks "wikilink"), the stake you see is not actually a real stake on the main chain. When your wallet figures out that it is on a fork, you will see these rewards disappear as the wallet corrects itself. This process happens automatically. While frustrating, once off of the fork, you are still able to stake again.
 
 ---
 
@@ -242,10 +242,10 @@ When you stake on a [fork](forks "wikilink"), the stake you see is not actually 
 If you see your pending rewards at 16384 GRC, you have hit the maximum amount of
 Gridcoin that can be sent per stake. When you stake you will only earn 16384 GRC
 and any amount of extra work done will not be included. If you keep hitting this
-limit, make sure you are running your wallet to stake 24/7 (or close to it). If you are, 
-you should get more Gridcoin to stake more frequently. 
+limit, make sure you are running your wallet to stake 24/7 (or close to it). If you are,
+you should get more Gridcoin to stake more frequently.
 
-If you want to get an estimate of how likely you are to stake *before* that limit, you can try solving 
+If you want to get an estimate of how likely you are to stake *before* that limit, you can try solving
 for that probability using:
 `16384/(magnitude/4) = -ln( 1 - Probability ) * 10000 / Balance * Difficulty`.  
 The probability there are the odds that you stake at least once at any point before that limit (it's a confidence interval).
@@ -253,6 +253,70 @@ The probability there are the odds that you stake at least once at any point bef
 Note: It is highly unlikely for most users to run into this limit. It requires a very
 high magnitude to possibly run into this.
 
+---
+# Manual Reward Claim
+
+---
+### What is Manual Reward Claim (MRC)?
+
+Manual Reward Claim (MRC) is a feature in the official Gridcoin wallet [release version 5.4.0.0.](https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.4.0.0)
+When you earn BOINC credits in solo crunching mode, you will soon accumulate
+GRC that is owed to you. This GRC doesn't exist yet and you can claim it via two
+methods, staking or MRC.
+
+MRC allows a user to claim their owed GRC without the requirement of having a
+large amount of GRC to stake it (like in previous versions).
+
+MRC was made to solve the issue of new users being unable to claim rewards
+without either acquiring GRC first or using a pool.
+
+---
+### If I have enough GRC to stake, do I need to use MRC?
+
+No. MRC is optional. If you would like to advance the payment of your owed GRC
+without having to wait for your next stake, then you are able to issue a MRC
+request from the wallet.
+
+---
+### How often can I make a MRC request?
+
+Once every 14 days is the most often you can make a MRC request.
+Note that if you have only just created your Gridcoin wallet and advertised your
+beacon, you will need to wait 14 days until your first request.
+
+---
+### Are there any fees associated with the MRC request?
+
+Yes. The following is a summary of the fees:
+
+- Blockchain transaction fee: This fee is the usual fee that is required to send
+a transaction over the Gridcoin blockchain and is usually insignificant. This
+fee is charged when you make the MRC request.
+
+- MRC fee: This is the fee that is charged after the MRC request is processed
+and is applied to the rewards that you have claimed. The fee starts at 40% of
+the owed GRC at the 14-day interval since the last claim (or beacon creation)
+and decreases by `40% * 14/(number of days since last claim)`.
+
+The recipients of the MRC fee is as follows:
+
+- The [Gridcoin Foundation](foundation "wikilink") receives 80% of the fee
+
+- The staker of the block which contains the MRC request will get 20% of the fee
+
+---
+### When will it be possible to make MRC requests?
+
+MRC requests will be possible at a block height of 2671700 which is
+approximately August 31st 2022.
+
+---
+### Which address will receive the MRC reward? Can I redirect it?
+
+The GRC address which issued the last beacon will receive the GRC reward. It is
+not possible to redirect this reward to a different address.
+
+---
 # BOINC
 
 ---
@@ -312,13 +376,13 @@ Press the beacon button and if you go through the steps for setup, you should se
 an overview of all the relevant information. You can also click on the project tab
 for information on a per project level
 
-Without using the GUI, you can also see a list of your magnitude in each project 
+Without using the GUI, you can also see a list of your magnitude in each project
 by using the `explainmagnitude` [RPC command](rpc "wikilink")
 
 ---
 ### What does "diff" exactly measure? What does it tell if it's high or low?
 
-A staking hash that is generated that is LESS than the target will stake. So the smaller the target (higher the diff) the LOWER the probability of staking. 
+A staking hash that is generated that is LESS than the target will stake. So the smaller the target (higher the diff) the LOWER the probability of staking.
 
 This also means that diff is directly proportional to that average net coins staking on the network.
 
@@ -334,7 +398,7 @@ Create a shortcut that links to the actual GRC program in Program Files
 directory and add the function at the end of the target, then properly
 name them for the function to execute:
 
-Example with -rescan option: Make a new shortcut to 
+Example with -rescan option: Make a new shortcut to
 `"C:\Program Files\GridcoinResearch\gridcoinresearch.exe"`
 
 Add the command to execute at the end of the 'Target:' line like
@@ -388,7 +452,7 @@ Download the installer from [Github](https://github.com/gridcoin-community/Gridc
 ### What can I do if I didn't save a prior version of wallet.dat?
 
 The wallet has an automated backup in place that will make backups every 24 hours into the walletbackups folder inside of your data folder.
-  
+
 ---
 ### Which is the best practice to save my new wallet?
 
@@ -437,10 +501,10 @@ Just try to just wait it out the wallet should automatically fix itself.
 If it still hasn't gone up after a few hours try this:
 
 1.  Close the client
-2.  In your Gridcoin data folder, delete the accrual folder, the txleveldb folder, 
+2.  In your Gridcoin data folder, delete the accrual folder, the txleveldb folder,
 and blk00*.dat (with * being any number).
 3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot
- which you can use by clicking on File -> Snapshot or using the `-snapshotdownload` [command line argument](cmd-options "wikilink") 
+ which you can use by clicking on File -> Snapshot or using the `-snapshotdownload` [command line argument](cmd-options "wikilink")
 
 You can also try running the wallet as an administrator.
 
@@ -526,13 +590,13 @@ Try running the client with `-rescan` or run the console command
 
 First, check that you have your wallet unlocked fully. If you have it locked
 for staking only, you will need to re-lock it and then unlock fully. Try
-sending the transaction after that. If you don't have it locked at all, you can 
+sending the transaction after that. If you don't have it locked at all, you can
 ignore this.
 
-If you see `Error: the transaction was rejected` or you see 
+If you see `Error: the transaction was rejected` or you see
 an error saying "not enough fees", you may have too many small UTXOs (what's
 leftover from a transaction you received) to send a transaction. There is a
-maximums transaction size and so if a transaction tries to include to many UTXOs, 
+maximums transaction size and so if a transaction tries to include to many UTXOs,
 it can be impossible to send. To fix this, you can try consolidating them using the
 `consolidateunspent` [rpc](rpc "wikilink") command. For each of your addresses,
 try running `consolidateunspent <address>`. After this finishes, try sending
