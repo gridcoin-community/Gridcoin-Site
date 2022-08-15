@@ -259,7 +259,7 @@ high magnitude to possibly run into this.
 ---
 ### What is Manual Reward Claim (MRC)?
 
-Manual Reward Claim (MRC) is a feature in the official Gridcoin wallet [release version 5.4.0.0.](https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.4.0.0)
+Manual Reward Claim (MRC) is a feature in the official Gridcoin wallet [release version 5.4.0.0](https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.4.0.0).
 When you earn BOINC credits in solo crunching mode, you will soon accumulate
 GRC that is owed to you. This GRC doesn't exist yet and you can claim it via two
 methods, staking or MRC.
@@ -313,8 +313,56 @@ approximately August 31st 2022.
 ---
 ### Which address will receive the MRC reward? Can I redirect it?
 
-The GRC address which issued the last beacon will receive the GRC reward. It is
-not possible to redirect this reward to a different address.
+The GRC address which issued the last beacon from your wallet will receive the GRC reward. It is
+not possible to redirect this reward to a different address unless you send GRC from this address manually.
+
+In your wallet, this address will appear as "Beacon Rain Address".
+
+---
+### What happens if the MRC queue is full?
+
+Each block on the Gridcoin blockchain can handle 9 MRC requests at a time. If
+this limit has been exceeded and you make a MRC request, it will likely be
+cancelled and the fee refunded to you when the next block is staked.
+
+If you want to ensure that your MRC request is fulfilled, then use the
+"Fee Boost" field in the MRC screen to increase your chances of getting paid
+in the next block by increasing the fees you pay.
+
+---
+### Why did my MRC request seem to disappear without action?
+
+There are a few reasons this may happen.
+One possibility is that you made the MRC request right before a new block has
+been staked, which means your transaction did not get picked up quick enough and
+hence became 'stale'.
+
+Another possibility is that your position in the MRC queue was high enough that
+your request was not fulfilled in the current block. Hence, you will have to
+make another request.
+
+In all instances, the fees that you pay for the MRC request will be refunded to
+your Gridcoin wallet.
+
+---
+### Is there a command-line tool I can use to make MRC requests?
+
+Yes. The command is `createmrcrequest [dry_run [force [fee]]]`.
+
+Running this command without any arguments will attempt to submit a MRC request
+onto the network.
+
+`dry_run` - If set to true, will show you the details about the MRC request you
+just made but does not actually send it to the network. (Default: `false`)
+
+`force` - If set to true, will send the MRC request no matter what. This can
+only be used on the testnet. (Default: `false`)
+
+`fee` - The fee amount to override the caluclated transaction fee for the MRC
+request. If the fee here is higher than that of the calculated one, then you
+will be placed higher in the MRC queue. You can use this in conjunction with the
+`dry_run` option in order to see what position in the queue you will skip to
+depending on the fee.
 
 ---
 # BOINC
