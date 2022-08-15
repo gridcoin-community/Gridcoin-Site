@@ -358,7 +358,7 @@ just made but does not actually send it to the network. (Default: `false`)
 `force` - If set to true, will send the MRC request no matter what. This can
 only be used on the testnet. (Default: `false`)
 
-`fee` - The fee amount to override the caluclated transaction fee for the MRC
+`fee` - The fee amount to override the calculated transaction fee for the MRC
 request. If the fee here is higher than that of the calculated one, then you
 will be placed higher in the MRC queue. You can use this in conjunction with the
 `dry_run` option in order to see what position in the queue you will skip to
