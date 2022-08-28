@@ -259,16 +259,16 @@ high magnitude to possibly run into this.
 ---
 ### What is Manual Reward Claim (MRC)?
 
-Manual Reward Claim (MRC) is a feature in the official Gridcoin wallet [release version 5.4.0.0](https://github.com/gridcoin-community/Gridcoin-Research/releases/tag/5.4.0.0).
-When you earn BOINC credits in solo crunching mode, you will soon accumulate
-GRC that is owed to you. This GRC doesn't exist yet and you can claim it via two
-methods, staking or MRC.
+Manual Reward Claim (MRC) is a feature in v5.4.0.0. When you earn BOINC credits
+in solo crunching mode, you accumulate owed Gridcoin. This GRC doesn't exist yet
+and you can claim it via two methods, staking or MRC.
 
 MRC allows a user to claim their owed GRC without the requirement of having a
 large amount of GRC to stake it (like in previous versions).
 
 MRC was made to solve the issue of new users being unable to claim rewards
-without either acquiring GRC first or using a pool.
+without either acquiring GRC first or using a pool. Note that you have to pay a
+small amount of GRC as a fee for using the MRC service.
 
 ---
 ### If I have enough GRC to stake, do I need to use MRC?
@@ -283,6 +283,9 @@ request from the wallet.
 Once every 14 days is the most often you can make a MRC request.
 Note that if you have only just created your Gridcoin wallet and advertised your
 beacon, you will need to wait 14 days until your first request.
+
+Note that you may not want to claim on such a frequent interval because the fee
+for doing so is much higher than if you were to wait for longer.
 
 ---
 ### Are there any fees associated with the MRC request?
@@ -313,8 +316,9 @@ approximately August 31st 2022.
 ---
 ### Which address will receive the MRC reward? Can I redirect it?
 
-The GRC address which issued the last beacon from your wallet will receive the GRC reward. It is
-not possible to redirect this reward to a different address unless you send GRC from this address manually.
+The GRC address which issued the last beacon from your wallet will receive the
+GRC reward. It is not possible to redirect this reward to a different address
+unless you send GRC from this address manually.
 
 In your wallet, this address will appear as "Beacon Rain Address".
 
