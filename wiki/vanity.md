@@ -12,10 +12,10 @@ This allows the creation of addresses such as: **SDeLtA**zzaNkvom9HzVgdHHGToEjZ7
 1. Download the latest release of [vanitygen-plusplus](https://github.com/10gic/vanitygen-plusplus)
 2. Disconnect your computer from the internet (optional)
 3. Run the program:
-Linux CPU: `./vanitygen -C GRC -o results.txt -i -k YOUR_PREFIX`  
-Linux GPU (OpenCL): `./oclvanitygen -C GRC -o results.txt -i -k YOUR_PREFIX`  
-Windows CPU: `vanitygen.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
-Windows GPU (OpenCL): `oclvanitygen.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Linux CPU: `./vanitygen++ -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Linux GPU (OpenCL): `./oclvanitygen++ -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Windows CPU: `vanitygen++.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Windows GPU (OpenCL): `oclvanitygen++.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
 
  * `-C GRC` : Chooses to generate Gridcoin addresses
  * `-o results.txt` : saves the matches to results.txt  
