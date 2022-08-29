@@ -9,11 +9,11 @@ Vanity addresses are personalized addresses that are created with the intention 
 This allows the creation of addresses such as: **SDeLtA**zzaNkvom9HzVgdHHGToEjZ7sYipp
 
 # Generating Vanity Addresses
-1. Download the latest release of [vanitygen-plus](https://github.com/exploitagency/vanitygen-plus)
+1. Download the latest release of [vanitygen-plusplus for linux](https://github.com/10gic/vanitygen-plusplus) or [vanitygen-plusplus for windows](https://github.com/AngelTs/vanitygen-plusplus-ported-for-VS2019)
 2. Disconnect your computer from the internet (optional)
 3. Run the program:
-Linux CPU: `./vanitygen -C GRC -o results.txt -i -k YOUR_PREFIX`  
-Linux GPU (OpenCL): `./oclvanitygen -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Linux CPU: `./vanitygen++ -C GRC -o results.txt -i -k YOUR_PREFIX`  
+Linux GPU (OpenCL): `./oclvanitygen++ -C GRC -o results.txt -i -k YOUR_PREFIX`  
 Windows CPU: `vanitygen.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
 Windows GPU (OpenCL): `oclvanitygen.exe -C GRC -o results.txt -i -k YOUR_PREFIX`  
 
