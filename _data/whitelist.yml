@@ -11,20 +11,6 @@ projects:
   team: https://sech.me/boinc/Amicable/team_display.php?teamid=1806
   stats: https://gridcoinstats.eu/project/Amicable_Numbers
 
-- name: Asteroids@home
-  link: https://asteroidsathome.net/boinc/
-  goal: Asteroid research - it uses photometric measurements of asteroids observed
-    by professional big all-sky surveys as well as 'backyard' astronomers. The data
-    is processed using the lightcurve inversion method and a 3D shape model of an
-    asteroid together with the rotation period and the direction of the spin axis
-    are derived.
-  sponsor: Charles University in Prague
-  cpu: 'yes'
-  gpu: 'yes'
-  gdpr: 'no'
-  team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
-  stats: https://gridcoinstats.eu/project/asteroids@home
-
 - name: Collatz Conjecture
   link: https://boinc.thesonntags.com/collatz/
   goal: Attempting to disprove the Collatz Conjecture.
@@ -78,17 +64,6 @@ projects:
   gdpr: 'no'
   team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
   stats: https://gridcoinstats.eu/project/milkyway@home
-
-- name: Minecraft@Home
-  link: https://minecraftathome.com/
-  goal: Enables the study of the fundamental laws of Minecraft to answer 
-        unanswered questions regarding the features and true limits of the game.
-  sponsor: Private
-  cpu: 'no'
-  gpu: 'yes'
-  gdpr: 'no'
-  team: https://minecraftathome.com/minecrafthome/team_display.php?teamid=1840
-  stats: https://gridcoinstats.eu/project/minecraft@home
 
 - name: NFS@Home
   link: https://escatter11.fullerton.edu/nfs/
