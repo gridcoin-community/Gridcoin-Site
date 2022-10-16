@@ -507,7 +507,13 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
    * *Requires the wallet to be fully unlocked*
  
    * Sends out a beacon (only applicable to solo mining). On success returns
-     `"result", "SUCCESS`, `"cpid": YOUR CPID`, `"public_key":BEACON KEY`
+     `"result", "SUCCESS"`, `"cpid": YOUR CPID`, `"public_key": BEACON KEY`
+
+* revokebeacon `<cpid>`
+  * *Requires wallet to be fully unlocked*
+
+  * Revokes a beacon (only applicable to solo mining). On success returns
+    `"result", "SUCCESS"`, `"cpid": YOUR CPID`, `"public_key": BEACON KEY`
 
 * beaconreport
   * Returns a JSON list of all valid beacons on the network (as of where the 
