@@ -96,7 +96,7 @@ and if any were excluded or not publishing.
 
 
 * The actual data is sent through the wallet's messaging system. The full 
-data can be seen by running `listmanifest true` as an RPC command 
+data can be seen by running `listmanifests true` as an RPC command 
 
 
 # Footnotes
