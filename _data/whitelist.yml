@@ -25,26 +25,6 @@ projects:
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
   stats: https://gridcoinstats.eu/project/asteroids@home
 
-- name: Collatz Conjecture
-  link: https://boinc.thesonntags.com/collatz/
-  goal: Attempting to disprove the Collatz Conjecture.
-  sponsor: Private
-  cpu: 'yes'
-  gpu: 'yes'
-  gdpr: 'no'
-  team: https://boinc.thesonntags.com/collatz/team_display.php?teamid=3029
-  stats: https://gridcoinstats.eu/project/collatz_conjecture
-
-- name: Cosmology@Home
-  link: https://www.cosmologyathome.org/
-  goal: Darkmatter/Universe Model Research
-  sponsor: Department of Astronomy at the University of Illinois at Urbana-Champaign
-  cpu: 'yes'
-  gpu: 'no'
-  gdpr: 'no'
-  team: https://www.cosmologyathome.org/team_display.php?teamid=3637
-  stats: https://gridcoinstats.eu/project/cosmology@home
-
 - name: Einstein@home
   link: https://einsteinathome.org
   goal: Search for spinning neutron (pulsars) stars using data from the LIGO gravitational-wave
@@ -126,16 +106,6 @@ projects:
   team: https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575
   stats: https://gridcoinstats.eu/project/rosetta@home
 
-- name: SRBase
-  link: http://srbase.my-firewall.org/sr5/
-  goal: Attempting to solve Sierpinski / Riesel Bases up to 1030.
-  sponsor: The project is in collaboration with the Mersenne CRUS project.
-  cpu: 'yes'
-  gpu: 'yes'
-  gdpr: 'no'
-  team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
-  stats: https://gridcoinstats.eu/project/srbase
-
 - name: SiDock@Home
   link: https://www.sidock.si/sidock/
   goal: Works on drug discovery with COVID-19 as its primary focus
@@ -145,6 +115,16 @@ projects:
   gdpr: 'no'
   team: https://www.sidock.si/sidock/team_display.php?teamid=54
   stats: https://www.gridcoinstats.eu/project/sidock@home
+
+- name: SRBase
+  link: http://srbase.my-firewall.org/sr5/
+  goal: Attempting to solve Sierpinski / Riesel Bases up to 1030.
+  sponsor: The project is in collaboration with the Mersenne CRUS project.
+  cpu: 'yes'
+  gpu: 'yes'
+  gdpr: 'no'
+  team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
+  stats: https://gridcoinstats.eu/project/srbase
 
 - name: TN-Grid
   link: https://gene.disi.unitn.it/test/
