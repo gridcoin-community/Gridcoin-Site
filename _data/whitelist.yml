@@ -11,6 +11,20 @@ projects:
   team: https://sech.me/boinc/Amicable/team_display.php?teamid=1806
   stats: https://gridcoinstats.eu/project/Amicable_Numbers
 
+- name: Asteroids@home
+  link: https://asteroidsathome.net/boinc/
+  goal: Asteroid research - it uses photometric measurements of asteroids observed
+    by professional big all-sky surveys as well as 'backyard' astronomers. The data
+    is processed using the lightcurve inversion method and a 3D shape model of an
+    asteroid together with the rotation period and the direction of the spin axis
+    are derived.
+  sponsor: Charles University in Prague
+  cpu: 'yes'
+  gpu: 'yes'
+  gdpr: 'no'
+  team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
+  stats: https://gridcoinstats.eu/project/asteroids@home
+
 - name: Collatz Conjecture
   link: https://boinc.thesonntags.com/collatz/
   goal: Attempting to disprove the Collatz Conjecture.
