@@ -54,8 +54,6 @@ Delete Gemfile.lock and run `bundle install`
 bundle exec jekyll serve
 ```
 
-If you have a problem running the command above, add `vendor` at the section exclude in the _config.yml file.
-
 ### WSL notes
 
 If you're running through WSL you need to use the flag `--force-polling` with the above command or it will not regenerate automatically on changes.
