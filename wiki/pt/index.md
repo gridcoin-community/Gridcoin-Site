@@ -1,6 +1,8 @@
 ---
-title: Gridcoin Wiki Start
-layout: wiki
+title: Introdução ao Wiki do Gridcoin
+layout: wiki-pt
+redirect_from:
+  - "/Wiki/pt/"
 ---
 
 ## Introdução ao Gridcoin
@@ -9,13 +11,13 @@ Gridcoin (Ticker: GRC) é um ativo digital descentralizado, de código aberto e 
 
 Gridcoin foi lançado em 16 de outubro de 2013 por Rob Halförd, após um [anúncio](https://web.archive.org/web/20150622170203/cryptocointalk.com/topic/1416-gridcoin-grc-information-classic-in-retirement/) no CryptocurrencyTalk. 
 
-A moeda compensa os mineradores (pesquisadores) pela participação em projetos do [BOINC](boinc "wikilink") que podem levar a avanços na medicina, biologia, matemática, ciência, climatologia, partículas e astrofísica, proporcionando benefícios reais à humanidade. A Gridcoin compensa os pesquisadores por contribuírem com poder computacional para a pesquisa BOINC usando um processo Proof-of-Stake com eficiência energética, em vez de gerar calor e usar poder computacional para um algoritmo Proof-of-Work. O Gridcoin difere de outras criptomoedas científicas em sua capacidade de suportar muitos tipos diferentes de projetos científicos e é limitado apenas pelo que é atualmente transmitido pela rede BOINC e pela lista de permissões do projeto decidida por consenso da comunidade. 
+A moeda compensa os mineradores (pesquisadores) pela participação em projetos do [BOINC](../boinc "wikilink") que podem levar a avanços na medicina, biologia, matemática, ciência, climatologia, partículas e astrofísica, proporcionando benefícios reais à humanidade. A Gridcoin compensa os pesquisadores por contribuírem com poder computacional para a pesquisa BOINC usando um processo Proof-of-Stake com eficiência energética, em vez de gerar calor e usar poder computacional para um algoritmo Proof-of-Work. O Gridcoin difere de outras criptomoedas científicas em sua capacidade de suportar muitos tipos diferentes de projetos científicos e é limitado apenas pelo que é atualmente transmitido pela rede BOINC e pela lista de permissões do projeto decidida por consenso da comunidade. 
 
-Houve uma mudança do protocolo Gridcoin original ([Gridcoin-Classic](gridcoin-classic "wikilink")) para Gridcoin-Research, o atual Gridcoin. O Gridcoin-Classic usava uma prova de trabalho híbrida que permitia que cada computador gastasse metade do tempo fazendo hash e metade do tempo contribuindo para a ciência; Uma melhoria em relação ao Bitcoin, mas os recursos computacionais ainda estavam sendo desperdiçados. O trabalho do BOINC foi usado apenas para medir o subsídio que deveria ser cunhado com o bloco. No Gridcoin-Research isto torna obsoletos a mineração de criptografia e o hash de prova de trabalho. Com a mudança para o Gridcoin-Research e o algoritmo Proof-of-Stake, quase toda a energia vai para a ciência; O poder computacional gasto para proteger a blockchain é mínimo.
+Houve uma mudança do protocolo Gridcoin original ([Gridcoin-Classic](../gridcoin-classic "wikilink")) para Gridcoin-Research, o atual Gridcoin. O Gridcoin-Classic usava uma prova de trabalho híbrida que permitia que cada computador gastasse metade do tempo fazendo hash e metade do tempo contribuindo para a ciência; Uma melhoria em relação ao Bitcoin, mas os recursos computacionais ainda estavam sendo desperdiçados. O trabalho do BOINC foi usado apenas para medir o subsídio que deveria ser cunhado com o bloco. No Gridcoin-Research isto torna obsoletos a mineração de criptografia e o hash de prova de trabalho. Com a mudança para o Gridcoin-Research e o algoritmo Proof-of-Stake, quase toda a energia vai para a ciência; O poder computacional gasto para proteger a blockchain é mínimo.
 
 ## Métricas
 
-**[Gridcoin-Classic](gridcoin-classic "wikilink") - Aposentado**
+**[Gridcoin-Classic](../gridcoin-classic "wikilink") - Aposentado**
 
    - Lançado: 16 de outubro de 2013
    - Aposentado: 20 de abril de 2015
@@ -70,8 +72,8 @@ cálculos científicos em vez de proteger o blockchain.
 
 ## Links oficiais
 
-  - [Team and Contributors](team-and-contributors "wikilink")
-  - [Other Wiki Pages](pages "wikilink")
+  - [Team and Contributors](../team-and-contributors "wikilink")
+  - [Other Wiki Pages](../pages "wikilink")
   - [Website](https://gridcoin.us/)
   - [BOINCstats](https://boincstats.com/en/stats/-1/team/detail/118094994/overview)
   - [Netsoft](http://www.boinc.netsoft-online.com/e107_plugins/boinc/bp_home.php)
