@@ -45,7 +45,7 @@ such as `-testnet`
 
 ^
 * On Linux 
-  * can be used by running wallet with `gridcoinresearchd -OPTION` or `gridcoinresarch-qt -OPTION` for the headless and GUI version of the wallet respectively.
+  * can be used by running wallet with `gridcoinresearchd -OPTION` or `gridcoinresearch-qt -OPTION` for the headless and GUI version of the wallet respectively.
 
   * For the desktop or application list:
     * edit the `Exec=` line of the gridcoinresearch-qt.desktop file to include the arguments after the program name

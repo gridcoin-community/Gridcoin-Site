@@ -49,7 +49,7 @@ over 10000 lines of new code and 250+ hours of development and testing. The
 scrapers were further improved in the 4.0.5 (Elizabeth) and the 
 5.0.0 (Fern) mandatory release.  
 
-A more through table with comparison of the old system and new system along with
+A more thorough table with comparison of the old system and new system along with
 a timeline can be found below
 
 * {% include _start_dropdown.htm 
