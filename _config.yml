@@ -24,6 +24,7 @@ exclude:
   - Old Data
   - README.md
   - CNAME
+  - vendor
 
 destination: build
 
