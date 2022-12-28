@@ -654,3 +654,18 @@ it can be impossible to send. To fix this, you can try consolidating them using 
 try running `consolidateunspent <address>`. After this finishes, try sending
 the transaction again. This may require multiple rounds of the command if you
 have a lot of small transactions.
+
+### Cannot read configuration file. Please check the path and format of the file
+
+First, check you delete the `%appdata%/GridcoinResearch` folder. You should not remove this folder.
+If this folder is not at your `%appdata%`, recreate the folder and add your wallet.data and gridcoinresearch.conf into.
+
+### How can I move my data folder?
+
+1. Close your wallet
+2. Move your entire data from A:\ to B:\
+The default location is `%appdata%\GridcoinResearch`
+3. After you move the entire contents, right click at the Gridcoin Icon, select properties, and add the `-choosedatadir` to the end
+4. Run Gridcoin.
+5. It will show the dialog dialog box to choose the data directory. Choose the new location where did you moved your files. 
+6. Done!
