@@ -174,3 +174,13 @@ projects:
   gdpr: 'no'
   team: https://www.rechenkraft.net/yoyo/team_display.php?teamid=1475
   stats: https://gridcoinstats.eu/project/yoyo@home
+  
+- name: Folding@Home
+  link: https://foldingathome.org
+  goal: Simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. NOT a BOINC project, see crunching guides for how to setup account. 
+  sponsor: Folding@home Consortium
+  cpu: 'yes'
+  gpu: 'yes'
+  gdpr: 'no'
+  team: https://stats.foldingathome.org/team/226804
+  stats: https://foldingathome.org/statistics/
