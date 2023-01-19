@@ -664,13 +664,6 @@ have a lot of small transactions.
 ## Windows Only
 
 ---
-
-### Cannot read configuration file. Please check the path and format of the file
-
-First, check you delete the `%appdata%/GridcoinResearch` folder. You should not remove this folder.
-If this folder is not at your `%appdata%`, recreate the folder and add the files `wallet.dat` and `gridcoinresearch.conf` inside the folder.
-
----
 ### How can I move my data folder?
 
 1. Close your wallet.
