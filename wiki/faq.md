@@ -633,11 +633,16 @@ Read the how to help section on the [testnet wiki page](testnet "wikilink")
 # Troubleshooting
 
 ---
+
+## General
+
+---
 ### Some of my coins have disappeared.
 
 Try running the client with `-rescan` or run the console command
 `repairwallet`.
 
+---
 ### Error when sending a transaction
 
 First, check that you have your wallet unlocked fully. If you have it locked
@@ -654,3 +659,21 @@ it can be impossible to send. To fix this, you can try consolidating them using 
 try running `consolidateunspent <address>`. After this finishes, try sending
 the transaction again. This may require multiple rounds of the command if you
 have a lot of small transactions.
+
+---
+## Windows Only
+
+---
+### How can I move my data folder?
+
+1. Close your wallet.
+2. Move all data from the current location to the new location. The default location of the data is `%appdata%\GridcoinResearch`.
+3. After you move the contents of the folder, right click the Gridcoin Shortcut, select properties, and add `-choosedatadir` to the end.
+
+4. Run the wallet.
+5. It will show the dialog box to choose the data directory. 
+6. Choose the new location.
+7. Right-click the Gridcoin Shortcut, select properties, and remove `-choosedatadir`
+
+
+---
