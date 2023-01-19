@@ -674,10 +674,12 @@ If this folder is not at your `%appdata%`, recreate the folder and add the files
 ### How can I move my data folder?
 
 1. Close your wallet.
-2. Move your entire data from actual location to the new location. The default location of the data is `%appdata%\GridcoinResearch`.
-3. After you move the entire contents, right click at the Gridcoin Icon, select properties, and add the `-choosedatadir` to the end.
-4. Run Gridcoin.
-5. It will show the dialog dialog box to choose the data directory. 
+2. Move all data from the current location to the new location. The default location of the data is `%appdata%\GridcoinResearch`.
+3. After you move the entire contents, right click the Gridcoin Shortcut, select properties, and add `-choosedatadir` to the end.
+4. Run the wallet.
+5. It will show the dialog box to choose the data directory. 
 6. Choose the new location.
+7. Right-click the Gridcoin Shortcut, select properties, and remove `-choosedatadir`
+
 
 ---
