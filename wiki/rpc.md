@@ -114,17 +114,15 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     nBalanceInQuestion showing the amount involved in those transactions 
     (absolute value, does not subtract)
     . 
-* consolidatemsunspent `<address> <multi-sig-type> <block-start> <block-end> <max-grc> <max-inputs>`
-  * Applies to multisignature addresses only and searches for [UTXOs](utxos "wikilink") 
-    smaller than `<max-grc>` to combine into one UTXO. `<address>` is the multisignature
-    address, `<multi-sig-type>` is a number which tells many signatures you 
-    have and how many are total (1 = 2 out of 3  
-    2 = 3 out of 4   
-    3 -> 3 out of 5   
-    4 ->  4 out of 5). `<block-start>` is the first block you want to search for
-    UTXOs from. `<block-end>` is the block number where you want the search to
-    stop. `<max-grc>` is the largest transaction size to combine. `<max-inputs>`
-    is the maximum number of transactions to consolidate. 
+* consolidatemsunspent `consolidatemsunspent <address> <block-start> <block-end> [max-grc] [max-inputs]`
+  * Applies to multisignature addresses only and searches for [UTXOs](utxos "wikilink"). 
+    `<address>` is the multisignature. `<block-start>` is the first block you
+    want to search for UTXOs from. `<block-end>` is the block number where you
+    want the search to stop. Optional argument `[max-grc]` sets the maximum
+    grc amount to include in halfords. Optional argument `[max-inputs]` is the
+    maximum number of transactions to consolidate. max-inputs will be overrided
+    when the maximum amount of inputs specified exceeds what is possible.
+
 * consolidateunspent `<address> [[UTXO size [maximum number of inputs]]`
   * **This does not help with staking** the only exception to this is if you
     are combining transactions under 0.0125 GRC, otherwise this will not help
