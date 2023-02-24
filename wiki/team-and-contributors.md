@@ -187,7 +187,7 @@ text="Chocolatey Package Manager"
 {% include _create_card.htm
 src="https://github.com/git-jiro.png"
 alt_text="Avatar of Martin Schimandl"
-title=" Martin Schimandl (git-giro)"
+title=" Martin Schimandl (git-jiro)"
 text="MacOS Package Manager"
 %}
 
