@@ -88,7 +88,7 @@ Development polls are for changing some parts of Gridcoin at a protocol level.
 For instance changing the amounts for rewards would be a development poll.
 
 These types of polls require a minimum duration of 6 weeks (42 days) and
-development polls require an AVW of more than 50% to pass.
+development polls require an AVW of more than 35% to pass.
 
 ## Marketing
 
@@ -96,7 +96,7 @@ Polls that propose marketing initiatives. For instance could be a plan
 to run an ad
 
 Marketing polls require a minimum duration of 3 weeks (21 days) and an AWV
-of 40% or more to pass
+of 20% or more to pass
 
 Example: [Gridcoin Marketing And Engagement Initiative](http://main.gridcoinstats.eu/poll/e00f2fbcc5ebf3137d65ef6ff0ac4f624d19b744c77fcf93a43096066bd40e60/1/ended:1) 
 
@@ -108,7 +108,7 @@ to reach out to new places or keep up relations. Can also be retroactive to
 reimburse outreach as well
 
 Outreach polls require a minimum duration of 3 weeks (21 days) and an AVW of
-40% or more to pass
+20% or more to pass
 
 Example: [Boinc Workshop Reimbursement Poll - Outreach](http://main.gridcoinstats.eu/poll/dfcd0785ab079bf8cbe1f7b1c411670836d6f369c356895df1dfcdbe81952b1b/1/ended:1)
 or [Updated White Paper Proposal](http://main.gridcoinstats.eu/poll/933e3c1e9c7413f3b64e0d312a5ec004d161638a78ec238cbf6bc26e15f77d5a/1/ended:1)
@@ -118,7 +118,7 @@ or [Updated White Paper Proposal](http://main.gridcoinstats.eu/poll/933e3c1e9c74
 Mostly for changing the requirements of the polls. Defined in the currently voted in standard 
 as "any proposal which seeks to modify the management or organizational structure of Gridcoin." 
 
-Management polls require a minium duration of 3 weeks (21 days) and an AVW of 20%
+Management polls require a minium duration of 3 weeks (21 days) and an AVW of 15%
 or more to pass  
 
 ## Community
@@ -150,7 +150,7 @@ Additionally, before a poll is made to whitelist there must be:
 * An agreed add date with both the Gridcoin whitelist administrator and project admin
 
 Whitelist polls have a minimum duration of 3 weeks (21 days) and require an 
-AVW of 40% or more 
+AVW of 20% or more 
 
 
 Valid Example: [[whitelist] Remove Project Drug Discovery From The Whitelist?](http://main.gridcoinstats.eu/poll/32eb3a9b578533f69abd77e8dbf0026bcfca1148cd805c54dabf14bca395f226/1/ended:1)
