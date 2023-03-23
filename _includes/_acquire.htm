@@ -13,7 +13,7 @@
             <div class="col-12">
                 <ul>
                     <li>
-                        Before your wallet can do anything, it needs to be synced (the green tick under connections means you are synced)
+                        Before your wallet can do anything, it needs to be synced. The cloud icon at the bottom right of the wallet shows your sync status, you can hover the mouse over it for detailed information. A green cloud means it is fully synced. Note that the first time you run the wallet, it may take several hours to fully sync depending on your computer and internet connection speed.
                     </li>
                     <li>
                         If you don't want to sync from 0, then you can download a snapshot of the blockchain from clicking File -> Snapshot Download or using the <code>-snapshotdownload</code> command line argument
@@ -21,17 +21,13 @@
                             <li>
                                 The snapshot will only bring you up to 80-90% sync. Allow it to continue syncing after the snapshot has been extracted.
                             </li>
-                            <li>
-                                If you want to apply it directly, you can download the snapshot <a href="https://snapshot.gridcoin.us/snapshot.zip">here</a>.
-                                To use this, open the folder (Linux = .GridcoinResearch/, Windows = %appdata%\GridcoinResearch) and delete <b>only</b> the blk00x.dat files, txleveldb folder, and the accrual folder, and copy the files from the snapshot
-                            </li>
                         </ul>
                     </li>
                     <li>
                         If you are unable to acquire connections to the Gridcoin network, attempt the following:
                         <ul>
                             <li>
-                                Verify you're running the latest version of the Gridcoin client, as there are frequent updates. Updates are posted on the <a href="https://github.com/gridcoin-community/Gridcoin-Research/releases">GitHub Release Page</a>.
+                                Verify you're running the latest version of the Gridcoin client, as there are frequent updates. Check the <a href="/#Downloads">downloads page for the most recent version</a>.
                             </li>
                             <li>
                                 Verify that your computer's time is in the correct timezone.
@@ -67,17 +63,14 @@
             <div class="col-12">
                 <ul>
                     <li>
-                        In Gridcoin's Proof-of-Stake (PoS) system, BOINC rewards are given when users stake, along with an additional 10 GRC.
+                        In Gridcoin's Proof-of-Stake (PoS) system, BOINC rewards are given when a user stakes, along with an additional 10 GRC.
                     </li>
                     <li>
-                        Since Gridcoin 5.4 you don't have to stake on your own to get BOINC rewards. Instead you can get your rewards by clicking a button and paying a small fee.
+                        Since Gridcoin 5.4 you don't have to stake on your own to get BOINC rewards. Instead you can get your rewards by clicking a button and paying a small fee to have somebody else stake for you via an MRC request.
                         See <a href="https://gridcoin.us/wiki/faq.html#what-is-manual-reward-claim-mrc">this wiki entry</a> for further details.
                     <ul>
                         <li>
                             For monthly staking, a balance of 5000 GRC is recommended.
-                        </li>
-                        <li>
-                            The rate you are rewarded for your BOINC work is the rate you mint PoS blocks because BOINC rewards are layered on top of these blocks.
                         </li>
                         <li>
                             Note: Your balance does not affect the amount of the payout, only how frequent. You also need to wait around 16 hours before any coins received are able to stake.
