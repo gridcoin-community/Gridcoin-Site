@@ -168,7 +168,7 @@ projects:
   goal: Brings existing distributed computing projects to the BOINC world using the
     BOINC Wrapper technology
   sponsor: Supported by Rechenkraft.net e.V. , accept private Donations, also accept
-    Bitcoin
+    Bitcoin and Gridcoin
   cpu: 'yes'
   gpu: 'no'
   gdpr: 'no'
