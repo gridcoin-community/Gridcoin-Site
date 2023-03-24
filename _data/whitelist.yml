@@ -155,7 +155,7 @@ projects:
   link: https://www.worldcommunitygrid.org/
   goal: FightAIDS@home, Smash Childhood Cancer, fight Tuberculosis, research better
     materials for solar panels.
-  sponsor: Sponsored by the IBM responsibility initiative
+  sponsor: Krembil Research Institute
   cpu: 'yes'
   gpu: 'yes'
   gdpr: 'yes'
