@@ -109,7 +109,7 @@ projects:
 - name: SiDock@Home
   link: https://www.sidock.si/sidock/
   goal: Works on drug discovery with COVID-19 as its primary focus
-  sponsor: COVID.SI project. Accepts Gridcoin donations
+  sponsor: COVID.SI project. Accepts Gridcoin and BTC donations
   cpu: 'yes'
   gpu: 'no'
   gdpr: 'no'
