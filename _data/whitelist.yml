@@ -178,7 +178,7 @@ projects:
 - name: Folding@Home
   link: https://foldingathome.org
   goal: Simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. NOT a BOINC project, see crunching guides for how to setup account. 
-  sponsor: Folding@home Consortium (multiple universities) accepts BTC donations
+  sponsor: Folding@home Consortium (multiple universities), accepts BTC donations
   cpu: 'yes'
   gpu: 'yes'
   gdpr: 'no'
