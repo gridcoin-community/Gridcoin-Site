@@ -109,7 +109,7 @@ projects:
 - name: SiDock@Home
   link: https://www.sidock.si/sidock/
   goal: Works on drug discovery with COVID-19 as its primary focus
-  sponsor: COVID.SI project
+  sponsor: COVID.SI project. Accepts Gridcoin and BTC donations
   cpu: 'yes'
   gpu: 'no'
   gdpr: 'no'
@@ -155,7 +155,7 @@ projects:
   link: https://www.worldcommunitygrid.org/
   goal: FightAIDS@home, Smash Childhood Cancer, fight Tuberculosis, research better
     materials for solar panels.
-  sponsor: Sponsored by the IBM responsibility initiative
+  sponsor: Krembil Research Institute
   cpu: 'yes'
   gpu: 'yes'
   gdpr: 'yes'
@@ -168,7 +168,7 @@ projects:
   goal: Brings existing distributed computing projects to the BOINC world using the
     BOINC Wrapper technology
   sponsor: Supported by Rechenkraft.net e.V. , accept private Donations, also accept
-    Bitcoin
+    Bitcoin and Gridcoin
   cpu: 'yes'
   gpu: 'no'
   gdpr: 'no'
@@ -178,7 +178,7 @@ projects:
 - name: Folding@Home
   link: https://foldingathome.org
   goal: Simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. NOT a BOINC project, see crunching guides for how to setup account. 
-  sponsor: Folding@home Consortium
+  sponsor: Folding@home Consortium (multiple universities), accepts BTC donations
   cpu: 'yes'
   gpu: 'yes'
   gdpr: 'no'

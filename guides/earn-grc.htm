@@ -78,7 +78,7 @@ redirect_from:
                         <figcaption class="text-center mb-4">
                             Note that your CPID and email will be different than in the image above
                         </figcaption>
-                        d) Click next and then press the advertise beacon button. The beacon will cost less than 1 GRC to send. If you don't have 1 GRC, go to the previous step to see ways to acquire some for free. If you have GRC but receive an error about an insufficient balance, your transaction your GRC was received during must wait a few minutes to confirm, so try again in 15 minutes.
+                        d) Click next and then press the advertise beacon button. The beacon will cost less than 1 GRC to send. If you don't have 1 GRC, go to the previous step to see ways to acquire some for free. If you have GRC but receive an error about an insufficient balance, your GRC was received but you must wait a few minutes for the transaction to confirm, so try again in 15 minutes.
                         <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/send-beacon.png" alt="image showing a button that has send beacon on it">
                         e) You should now see the screen below saying you have a pending beacon. If you see any errors go to the <a href="#troubleshooting">troubleshooting section</a> 
                         <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/beacon-has-sent.png" alt="image showing a lighthouse with yellow to represent a pending beacon and a check mark saying press next to continue ">
@@ -153,6 +153,11 @@ redirect_from:
                 <h5 class="text-center mt-5">Q: My Balance is Too Low To Send a Beacon</h5>
                     <li>You need around 1 GRC to send a beacon. If you recently received some GRC, you will need to wait a few minutes for the transaction to be confirmed before using that GRC for a beacon.</li>
                     <li>You can use faucets to get free GRC for sending a Beacon: <a href="https://www.gridcoinstats.eu/faucet">Gridcoinstats.eu</a>, <a href="https://gridcoin.ch/faucet">Gridcoin.ch</a>. Our discord is a great place to ask for a few free GRC to get started</li>
+                <h5 class="text-center mt-5">Q: I See Multiple CPIDs or Receive a CPID Mismatch Error</h5>
+                    <li>Make sure all your BOINC projects are attached <b>using the same e-mail address</b>. Remove any that aren't.</li>
+                    <li>It could be that you did components of both the pool and solo mining guide. To detatch pool projects in BOINC go to Tools -> Stop using account manager and then manually remove any projects added by the pool</li>
+                    <li>It can take some time for CPID's to "settle" onto one final CPID. Go to BOINC's advanced view (view -> advanced). Go to projects tab. Select each project and select "update"</li>
+                    <li>After these steps, restart the crunching wizard in the wallet. If the problem persists, go to one of our support channels for help.</li>
                 <h5 class="text-center mt-5">Q: My Beacon Isn't Being Verified</h5>
                     <li>Make sure you are crunching under your own account in BOINC and that the project is on the <a href="/guides/whitelist.htm">whitelist</a></li>
                     <li>Make sure you changed your username</li>
