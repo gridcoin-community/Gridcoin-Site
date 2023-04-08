@@ -23,7 +23,7 @@ They can be run in a few main ways:
 in a terminal. 
  * this requires configuring the gridcoinresearch.conf with `rpcuser=gridcoinrpc`   
    and `rpcpassword=[LONG_PASSWORD]` and `rpcallowip=127.0.0.1` replacing 
-   `[LONG_PASSWORD]` with something long (you do not have to memorize it)
+   `[LONG_PASSWORD]` with something long (you do not have to memorize it). If you only want to allow access from localhost, do not add an rpcallowip line as it opens the port to any IP but only allows commands from the IPs specified.
 
 If you want to understand more about the technicals of RPC as a protocol (used by
 more than just Gridcoin) see the [RPC Wikipedia page](https://en.wikipedia.org/wiki/Remote_procedure_call)

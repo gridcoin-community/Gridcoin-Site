@@ -106,7 +106,7 @@ such as `-testnet`
   * `-rpcuser=<user>`       Username for [JSON-RPC](rpc "wikilink") connections
   * `-rpcpassword=<pw>`     Password for JSON-RPC connections
   * `-rpcport=<port>`       Listen for JSON-RPC connections on `<port>` (default: 15715 or testnet: 25715)
-  * `-rpcallowip=<ip>`      Allow JSON-RPC connections from specified IP address
+  * `-rpcallowip=<ip>`      Allow JSON-RPC connections from specified IP address. Note this is not needed to allow commands from localhost and enabling this will open the port on all interfaces even if it only accepts commands from the IP given
   * `-rpcconnect=<ip>`      Send commands to node running on `<ip>` (default: 127.0.0.1)
   * `-rpcthreads=<n>`       Set the number of threads to service RPC calls (default: 4)
   * `-blocknotify=<cmd>`    Execute command when the best block changes (%s in cmd is replaced by block hash)
