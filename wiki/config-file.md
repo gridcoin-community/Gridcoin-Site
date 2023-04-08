@@ -68,8 +68,7 @@ Alternatively you can go to the file in the location below and edit it there
     #############################################################################
 
     #server=1
-    #rpcallowip=127.0.0.1
-    #rpcallowip=<IP Address of Remote System>
+    #rpcallowip=<IP Address of Remote System> NOTE that if you only want to connect with localhost, you do not need to specify rpcallowip. This is only if you want to connect outside of localhost!
     #rpcport=<Port for RPC Communication>
     #rpcuser=<A Username for RPC>
     #rpcpassword=<A GOOD Password for RPC>
