@@ -96,10 +96,14 @@ redirect_from:
                                     {% endif %}
                                 </td>
                                 <td class="table-color-{{project.gpu}}">
-                                    {% if project.gpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
+                                    {% if project.gpu == "no" %}
+                                      ❌                                    
+                                    {% endif %}
+                                    {% if project.nvidia == "yes" %}
+                                      <img src="/assets/img/nvidia_badge.png" height="50">                                       
+                                    {% endif %}
+                                    {% if project.amd == "yes" %}
+                                      <img src="/assets/img/amd_badge.png" height="50">
                                     {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}> {% comment %} Add warning color for background only if it requires it. No color otherwise {% endcomment %}
