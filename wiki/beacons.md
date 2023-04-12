@@ -9,7 +9,7 @@ layout: wiki
 Beacons are what tie a user to their work on BOINC. They are only required
 for solo crunching and have a fee of 0.5 GRC + transaction fees. To keep a beacon
 active, it must be renewed every 6 months. Beacons automatically renew if your wallet
-is open and unlocked for staking.
+is open and unlocked staking (which wallets are by default).
 
 See [the last step](/guides/earn-grc.htm "sitelink") of the solo crunching guide 
 for the process of sending a beacon. Note that BOINC and the Gridcoin wallet
