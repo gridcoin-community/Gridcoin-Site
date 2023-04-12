@@ -141,6 +141,16 @@ redirect_from:
                             </figcaption>
                             p) Keep the wallet up to date as updates are released
                         </div>
+<h5 class="text-center mt-5">3) Bonus Step: Sidestake to Help Gridcoin's Development</h5>
+                        <div class="mb-5 pb-2">
+                            <p>Gridcoin has a fun feature called <i>sidestaking</i> which enables you to donate a portion of each stake you make to Gridcoin's development. This isn't required of course, but it helps us add new features and make sure more people can learn about Gridcoin!</p>
+<ol>
+<li>Go to the hamburger menu (top left of wallet) and select Help -> Debug window -> Console</li>
+<li>Type in the following two commands followed by enter. Be sure to change 5 to the percent you want to donate</li>
+<li><code>enablesidestaking=1</code></li>
+<li><code>sidestake=S5CSzXD3SkTA9xGGpeBtoNJpyryACBR9RD,5</code></li>
+</ol>
+                        </div>
                 <h4 id="troubleshooting" class="text-center text-bold anchor-adjust">Troubleshooting</h4>
                 <h5 class="text-center">Q: My Wallet Is Not Staking</h5>
                     <li>Hover over the icon with the arrow to see why it is not staking</li>
@@ -155,10 +165,11 @@ redirect_from:
                     <li>You can use faucets to get free GRC for sending a Beacon: <a href="https://www.gridcoinstats.eu/faucet">Gridcoinstats.eu</a>, <a href="https://gridcoin.ch/faucet">Gridcoin.ch</a>. Our discord is a great place to ask for a few free GRC to get started</li>
                 <h5 class="text-center mt-5">Q: I See Multiple CPIDs or Receive a CPID Mismatch Error</h5>
                     <li>Make sure all your BOINC projects are attached <b>using the same e-mail address</b>. Remove any that aren't.</li>
-                    <li>It could be that you did components of both the pool and solo mining guide. To detatch pool projects in BOINC go to Tools -> Stop using account manager and then manually remove any projects added by the pool</li>
-                    <li>It can take some time for CPID's to "settle" onto one final CPID. Go to BOINC's advanced view (view -> advanced). Go to projects tab. Select each project and select "update"</li>
+                    <li>If you did components of both the pool and solo mining guide (you should only pick one), detach pool projects in BOINC go to Tools -> Stop using account manager and then manually remove any projects added by the pool</li>
+                    <li>It can take some time for CPID's to "settle" onto one final CPID. You can hurry this process along using <a href="/wiki/faq.html#i-get-an-e-mail-mismatch-or-split-cpid-error-in-the-solo-crunching-wizard-in-the-wallet" target="_blank">these steps</a></li>
                     <li>After these steps, restart the crunching wizard in the wallet. If the problem persists, go to one of our support channels for help.</li>
                 <h5 class="text-center mt-5">Q: My Beacon Isn't Being Verified</h5>
+                    <li>Beacons typically take up to 24 hours to verify</li>
                     <li>Make sure you are crunching under your own account in BOINC and that the project is on the <a href="/guides/whitelist.htm">whitelist</a></li>
                     <li>Make sure you changed your username</li>
                     <li>Check if your project is one that requires you to enable stats export
