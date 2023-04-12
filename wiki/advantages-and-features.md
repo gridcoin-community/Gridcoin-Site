@@ -22,8 +22,7 @@ things) see:
 * [Comparison to Tokens](#comparison-to-tokens "wikilink")
 
 Additionally, Gridcoin's system of scrapers (often called "oracles") offers a scalable system that 
-minimizes that amount of centralization. In fact, it was one of the first cryptocurrencies
-to implement a federated oracle system. Scrapers get BOINC statistics 
+minimizes that amount of centralization. Scrapers get BOINC statistics 
 (which determine rewards) from the projects and then compress them down to only 
 the useful stats --- reducing data sent and stored. The wallet compares the 
 data from each scraper against each other limiting the trust needed. Scrapers are 
