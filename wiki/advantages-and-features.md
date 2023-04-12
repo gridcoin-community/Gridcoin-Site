@@ -35,6 +35,12 @@ participates in network consensus, and it can proceed even without scrapers or a
 rewards whatsoever. Thousands of nodes staking with millions of coins are online every day 
 participating in consensus, making Gridcoin more decentralized than many other cryptocurrencies.
 
+Many blockchain projects try to do "everything" including smart contracts. Gridcoin does not support smart
+contracts, which helps keep the total chain size manageable (around 4.5GB after 10 years of operation). 
+Smaller chain size means a "full node" can be run on consumer hardware, greatly increasing decentralization compared
+to chains like Ethereum which require enterprise-grade servers, bandwidth, availability, and coin investment. Gridcoin
+focuses on what it does best: rewarding scientific computing and being a cryptocurrency.
+
 Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by
 not having unexpected changes and having a way to voice your opinion without 
