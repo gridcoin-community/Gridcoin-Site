@@ -61,7 +61,7 @@ First, make sure you are using the same e-mail address for each BOINC project yo
 
 Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address and publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks the oldest CPID and tells the projects to use it going forward.
 
-This probably usually resolves itself, but you can help it along by doing the following:
+This usually resolves itself, but you can help it along by doing the following:
 1. Go to BOINC's advanced view (view  (in menu) -> advanced view)
 2. Go to "projects" tab
 3. For each project, click on the project and select "no new tasks" on the left
