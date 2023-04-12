@@ -63,13 +63,6 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
 ^
 ^
 
-* CureCoin involves Proof of Work ---  Gridcoin uses Proof of Stake
-    * More energy used in Proof of Work
-        * Less used energy on scientific work in CureCoin
-    
-    * With Gridcoin more energy goes directly to science
-        * Less energy used by Proof of Stake
-
 ^
 ^
 
