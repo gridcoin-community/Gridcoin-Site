@@ -7,6 +7,8 @@ redirect_from:
 
 # Frequently Asked Questions
 
+If you are having any troubles with the Gridcoin wallet, make sure you are on the latest version before trying to solve them.
+
 You will see a lot of references to the data folder in this FAQ. Here are the default locations:
 
 | Windows | Linux | MacOS |
@@ -42,7 +44,7 @@ The maximum share of new Gridcoins for this project stays the same
 percentage (subject to the number of total projects). And projects can be
 removed by a blockchain vote.
 
-Security in Gridcoin is based on Proof-of-Stake.
+Security in Gridcoin is based on Proof-of-Stake. Network consensus is not dependent on BOINC rewards working properly or even existing. Even if every BOINC project shut down tomorrow, Gridcoin's blockchain would continue making new blocks and functioning as expected (sending and receiving transactions), minus the minting of rewards for BOINC users.
 
 ---
 # Crunching (Research & Mining Equivalent)
@@ -50,38 +52,45 @@ Security in Gridcoin is based on Proof-of-Stake.
 ---
 ### How do I start crunching?
 Consult these guides:
-* [Solo](/guides/boinc-install.htm "sitelink")
+* [Solo](/guides/boinc-install.htm "sitelink") (recommended method)
 * [Pool](/guides/pool.htm "sitelink")
 
 ---
-### My CPID is not in the network, What do I do?
+### I get an "e-mail mismatch" or "split CPID" error in the solo crunching wizard in the wallet?
+First, make sure you are using the same e-mail address for each BOINC project you are attached to.
 
-If you are in the pool, this is normal. If you are attempting to
-solo-stake, go through the following:
+Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address and publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks which one it likes best (usually the oldest) and then tells the projects to use it going forward.
 
-If you have just begun your BOINC journey it is quite possible your work
-units haven't been verified by the necessary servers. Don't Panic,
-Gridcoin is a game of patience. Just relax, take a day or two, and see
-if the problem persists. If so, proceed to the following steps.
+This probably usually resolves itself, but you can help it along by doing the following:
+1. Go to BOINC's advanced view (view  (in menu) -> advanced view)
+2. Go to "projects" tab
+3. For each project, click on the project and select "no new tasks" on the left
+4. Go to your tasks tab and cancel all existing tasks (this is needed, otherwise BOINC may not actually "update" when requested in subsequent steps)
+5. Back in the projects tab, for each project, select "allow new tasks" and press "update", then press "no new tasks" when complete and abort any tasks it downloaded. The project update process will take about 10 seconds for each project. You can monitor this progress by going to tools -> event log
+6. In the solo crunching wizard, press the "refresh" button to see if your CPIDs have all matched up. You may have to do step 5 one more time.
+7. Once fixed, you can re-allow new tasks on each project and continue crunching
 
-To ensure your wallet is fully unlocked, lock your wallet with a
-passphrase (make it LONG, a password manager like KeePass is
-recommended) and then unlock it with "for staking only" UNticked.
+Note that if one of the projects you are attached to is not online, you may not be able to update it. You can just remove the project for now and add it back later, it should converge onto the CPID the rest of your projects use. You can always check in the solo crunching wizard to make sure all your CPIDs are the same. If they change, you may have to repeat this process again and make a new beacon if your CPID changes.
 
-Next, go to Help -\> Debug Window, go to the Console tab and type
-`advertisebeacon` without the quotes.
 
-This will (if successful) send a small transaction at the cost of
-1 GRC. This should add your CPID with the next [superblock](superblock "wikilink").
+---
+### How can I increase my magnitude or earn more GRC? How are rewards calculated?
 
-To see if your CPID is included, go to the Console and type `beaconreport`.
+If you just started solo crunching or switched BOINC projects, it will take a week or two for your RAC to "ramp up". 
 
-If your CPID is not included, wait for the next superblock. In case your
-CPID isn't included after a few superblocks, try resending your beacon
-(`advertisebeacon`).
+The GRC you are awarded is based on your magnitude. Your magnitude is based on RAC ("recent average credit") which is a rolling average over the past month. Gridcoin relies on the RAC values provided by the project to calculate your magnitude.
 
-Lock your wallet again, but this time unlock it with "for staking only"
-ticked.
+However, you can't just compare your RAC <i>between</i> projects because different projects use different systems for how they allocate credit. Because of this, your magnitude is your RAC earned on a project relative to other Gridcoin crunchers. Your "total magnitude" is the magnitude you have earned on each project, added together.
+
+You can see estimated magnitude levels for your hardware here: http://quickmag.ml/cgi-bin/script.cgi. Unfortunately, data for some whitelisted projects like WCG are not available so they won't be included in the estimate.
+
+See <a href="/guides/optimization.htm">our guide for picking optimal projects</a>
+. 
+Try different projects and see whether your hardware can keep up a high
+magnitude. You can review your outcome magnitude in the wallet.
+
+Anyway, if you like a project you should still support it, to keep the BOINC
+spirit up.
 
 ---
 ### What should I put in my config-file for Gridcoin-Research?
@@ -89,7 +98,7 @@ ticked.
 Please check [the config file page](config-file "wikilink")
 
 ---
-### How can I tell if I've mined a block?
+### How can I tell if I've staked a block?
 
 If you are using the GUI you will see a transaction with a gold icon.
 
@@ -101,42 +110,13 @@ You can also lookup your address on a block explorer.
 <https://en.wikipedia.org/wiki/BOINC_Credit_System#Recent_average_credit>
 
 ---
-### Reward calculation: what is magnitude?
-
-Magnitude is calculated separately for each project. When calculating research rewards, a user's magnitude across every project is added together. See the [magnitude wiki page](magnitude "wikilink")
-
----
 ### I had a magnitude for some time but it dropped to 0. What happened?
 
 The reason for this is most likely that you have to resend your beacon,
-which should be done every 6 months. For this either unlock your wallet
-so that it sends automatically or type `advertisebeacon` in the
-console.
-
----
-### I am BOINCing nonstop but my magnitude is very low. What can I do?
-
-RAC is a rolling average over the past month. It is weighted to increase the value of more recent contributions. Gridcoin relies on the RAC values provided by the project to calculate your magnitude.
-
-However, you can't just compare your RAC between projects because different projects use different systems for how they calculate the RAC. Because of this the magnitude calculation also takes into account the total RAC for other crunchers earning Gridcoin.
-
-Depending on your hardware you may want to keep away from some projects.
-
-You can see estimated magnitude levels for your hardware here: http://quickmag.ml/cgi-bin/script.cgi
-
-Unfortunately, data for some whitelisted projects like WCG are not available so they won't be included in the estimate.
-
-There are also overrun CPU projects or projects that do not provide
-constant work unit (WU) flow.
-
-Try different projects and see whether your hardware can keep up a high
-magnitude. You can review your outcome magnitude in the wallet.
-
-Anyway, if you like a project you should still support it, to keep the BOINC
-spirit up.
-
-Additionally, you might not want to use your CPU to crunch for projects with GPU WUs.
-You can find CPU only projects by visiting the [BOINC project list](https://boinc.berkeley.edu/projects.php) and looking out for projects that have the Radeon or Nvidia icon.
+which should be done every 6 months. Normally, this happens automatically
+every six months if your wallet is open. If your wallet is locked (it is
+unlocked by default), unlock your wallet so that it sends automatically 
+or type `advertisebeacon` in the console. 
 
 ---
 # Pool Crunching
@@ -165,9 +145,9 @@ syncing to the pool.
 # Staking
 
 ---
-### How is the amount of stake-reward calculated?
+### What do I get for staking a block?
 
-Proof of Stake rewards will give you 10 GRC for each block you stake. If you are not in investor mode you will also receive your BOINC rewards on top of the 10 in the same block.
+Proof of Stake rewards will give you 10 GRC for each block you stake plus fees for any transaction in that block. If you are a solo cruncher, you will also receive your BOINC rewards ("accrued rewards") in wallet. You also get the good feeling of knowing you have contributed to Gridcoin's network security and decentralization.
 
 ---
 ### The wallet says "Not Staking because you don't have mature coins", how long does it take for coins to mature?
@@ -307,11 +287,6 @@ The recipients of the MRC fee is as follows:
 
 - The staker of the block which contains the MRC request will get 20% of the fee
 
----
-### When will it be possible to make MRC requests?
-
-MRC requests will be possible at a block height of 2671700 which is
-approximately August 31st 2022.
 
 ---
 ### Which address will receive the MRC reward? Can I redirect it?
@@ -374,10 +349,11 @@ depending on the fee.
 ---
 ### Choosing BOINC projects: In BOINC, is there still a defined whitelist of "projects" or can we use any project?
 
-Running "projects" in the console will list all the whitelisted
-projects you could possibly contribute to that would help your Gridcoin
-Research
-wallet.
+Only crunching for projects on the whitelist will earn you GRC. You can find the current whitelist in your wallet by going to the solo crunching wizard and going to projects.
+You can also run "projects" in the console to list all the whitelisted
+projects. This website <a href="/guides/whitelist.htm">also displays the whitelist</a>, but "greylisting" may not be reflected there. Projects
+are usually greylisted due to low work availability or the project website undergoing maintenance. These interruptions
+are usually brief in nature. You cannot earn GRC for your crunching on a project while it is greylisted.
 
 ---
 ### If it says "non participating project" does that mean that they aren't accepted for Gridcoin purposes?
@@ -388,21 +364,17 @@ in your BOINC manager on that machine. Any changes about e-mail address on a
 project take around a day to propagate.
 
 ---
-### I use BOINC with one username but on a few machines - is it enough to have one wallet with the proper boinc\_project\_email address, or do I have to have a separate wallet on each machine?
+### Can I crunch BOINC on multiple machines? Do I need to install the wallet on each of them?
 
-You only need one wallet for each BOINC account/CPID (Cross Project
-Identifier). Optionally, you can use an account manager to help maintain
-projects in under CPID and avoid CPID splits. Your reward is
-based on the credit on your CPID. You can point as many
-machines and resources to a single account as you want and only need a
-single wallet to receive your reward. You do have to set "email=" in the
-config file to your BOINC email and must be running the wallet on a
-machine that has BOINC installed and is associated with all BOINC
+You only need one wallet for each BOINC e-mail address/CPID (Cross Project
+Identifier). Your reward is
+based on the credit on your CPID. You can crunch on as many devices as you want under a 
+single e-mail account and only need a single wallet to receive your reward. You must be running the wallet on a
+machine that has BOINC installed and is associated with *all* BOINC
 projects you would like to get credit for (they can be set to not
-retrieve new work) and each project must show at least some RAC on that
-machine (press "Update" in the BOINC software when a project which shows
-0 contribution is
-selected).
+retrieve new work if you don't want to crunch them on that machine).
+
+You can install the wallet on as many other machines as you'd like, but only one wallet should be in "solo crunching" mode for each e-mail address used for BOINC. Put the other wallets in "investor" mode.
 
 ---
 ### Instead of discussing every single BOINC project to be added, is there any shared guidelines to be used for accepting or rejecting them?
@@ -410,23 +382,13 @@ selected).
 https://github.com/gridcoin-community/Gridcoin-Tasks/issues/227
 
 ---
-### How do I delete a project from my list of CPIDs?
-
-We used to support detaching but a vote was made to calculate the magnitude
-on every project you still have valid RAC on; so GRC does not support
-detaching projects (it was supposed to prevent gaming the system). There
-is no difference if you score 0 on a project, as all are taken into
-account equally.
-
----
 # Status
 
 ---
-### How can I see my Researching Status?
+### How can I check my solo crunching/beacon is setup correctly?
 
-Press the beacon button and if you go through the steps for setup, you should see
-an overview of all the relevant information. You can also click on the project tab
-for information on a per project level
+Go to the solo crunching wizard in the wallet. You can click on the project tab
+for information on a per-project level
 
 Without using the GUI, you can also see a list of your magnitude in each project
 by using the `explainmagnitude` [RPC command](rpc "wikilink")
@@ -493,7 +455,9 @@ But that is a little longer
 ---
 ### How do I upgrade the Gridcoin wallet client?
 
-Download the installer from [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases) or your package manager and install over your previous installation.
+1. Exit the wallet fully so it is not running. Be sure to check your system tray.
+
+2. Download the installer from [Github](https://github.com/gridcoin-community/Gridcoin-Research/releases) or your package manager and install over your previous installation.
 
 **Do not delete the data folder.** This contains important data like your keys which let you access your coins.
 
@@ -558,6 +522,8 @@ and blk00*.dat (with * being any number).
 3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot
  which you can use by clicking on File -> Snapshot or using the `-snapshotdownload` [command line argument](cmd-options "wikilink")
 
+Note that this problem is often caused by anti-virus software or firewalls. Be sure Gridcoin is not being blocked by your security software.
+
 You can also try running the wallet as an administrator.
 
 ---
@@ -579,7 +545,7 @@ explorer will sync up with you and your connected nodes at some point.
 
 Ensure you are running the latest wallet version.
 
-You can try using a snapshot (File -> Snapshot Download) or you can download from [here](https://snapshot.gridcoin.us/snapshot.zip) and apply it manually.
+You can try using a snapshot (File -> Snapshot Download)
 
 While it downloads, delete the peers.dat in your data folder - you may have a bad peer group.
 
