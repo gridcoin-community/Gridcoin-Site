@@ -19,7 +19,9 @@ While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin "wikilink")
+* [Comparison to Primecoin](#comparison-to-primecoin "wikilink")
 * [Comparison to Tokens](#comparison-to-tokens "wikilink")
+
 
 Additionally, Gridcoin's system of scrapers (often called "oracles") offers a scalable system that 
 minimizes that amount of centralization. Scrapers get BOINC statistics 
@@ -73,6 +75,34 @@ CureCoin is a cryptocurrency that aims to reward folding@home work. Note you can
     * Comparison of development activity in the last month:
         * [Gridcoin's here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
         * [CureCoin's here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
+
+
+### Comparison to Primecoin
+---
+
+#### What Is Primecoin?
+Primecoin is a cryptocurrency that uses a proof of work algorithm to 
+find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prime numbers.
+
+
+#### Why Gridcoin Is Different
+* Primecoin can only find prime numbers and do no other scientific computation 
+    * Limited by Proof of Work algorithm 
+        * Any expansion of Primecoin to other types of computations would need
+          to fit a Proof of Work algorithm. These algorithms need abilities that
+          many scientific problems lack
+            * See the challenges with even using primes in [Primecoin's whitepaper](https://primecoin.io/bin/primecoin-paper.pdf)
+
+    * With Gridcoin more can be rewarded such as fighting disease, finding 
+      asteroids, and many other types of science
+
+^
+^
+
+*  Gridcoin has more active development and community
+    * Comparison of development activity in the last month:
+        * [Gridcoin's here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
+        * [Primecoin's here](https://github.com/primecoin/primecoin/pulse/monthly)
 
 ### Comparison to Tokens
 ---
