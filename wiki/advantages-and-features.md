@@ -23,13 +23,19 @@ things) see:
 * [Comparison to Primecoin](#comparison-to-primecoin "wikilink")
 * [Comparison to Tokens](#comparison-to-tokens "wikilink")
 
-Additionally, Gridcoin's system of scrapers offers a scalable system that 
-minimizes that amount of centralization. Scrapers get BOINC statistics 
+Additionally, Gridcoin's system of scrapers (often called "oracles") offers a scalable system that 
+minimizes that amount of centralization. In fact, it was one of the first cryptocurrencies
+to implement a federated oracle system. Scrapers get BOINC statistics 
 (which determine rewards) from the projects and then compress them down to only 
 the useful stats --- reducing data sent and stored. The wallet compares the 
 data from each scraper against each other limiting the trust needed. Scrapers are 
 run by several trusted members of the community located around the world. 
 Read more about scrapers on the [Scraper Wiki Page](scraper "wikilink")
+
+Scrapers and BOINC rewards are seperated from network consensus. Every Gridcoin wallet 
+participates in network consensus, and it can proceed even without scrapers or any BOINC 
+rewards whatsoever. Thousands of nodes staking with millions of coins are online every day 
+participating in consensus, making Gridcoin more decentralized than many other cryptocurrencis.
 
 Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by
