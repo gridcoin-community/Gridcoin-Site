@@ -19,17 +19,28 @@ While there are some other cryptocurrencies that try and reward scientific work,
 they are limited in other various ways (most are heavily centralized among other 
 things) see:
 * [Comparison to CureCoin](#comparison-to-curecoin "wikilink")
-* [Comparison to Obyte](#comparison-to-obyte "wikilink")
 * [Comparison to Primecoin](#comparison-to-primecoin "wikilink")
 * [Comparison to Tokens](#comparison-to-tokens "wikilink")
 
-Additionally, Gridcoin's system of scrapers offers a scalable system that 
+
+Additionally, Gridcoin's system of scrapers (often called "oracles") offers a scalable system that 
 minimizes that amount of centralization. Scrapers get BOINC statistics 
 (which determine rewards) from the projects and then compress them down to only 
 the useful stats --- reducing data sent and stored. The wallet compares the 
 data from each scraper against each other limiting the trust needed. Scrapers are 
 run by several trusted members of the community located around the world. 
 Read more about scrapers on the [Scraper Wiki Page](scraper "wikilink")
+
+Scrapers and BOINC rewards are seperated from network consensus. Every Gridcoin wallet 
+participates in network consensus, and it can proceed even without scrapers or any BOINC 
+rewards whatsoever. Thousands of nodes staking with millions of coins are online every day 
+participating in consensus, making Gridcoin more decentralized than many other cryptocurrencies.
+
+Many blockchain projects try to do "everything" including smart contracts. Gridcoin does not support smart
+contracts, which helps keep the total chain size manageable (around 4.5GB after 10 years of operation). 
+Smaller chain size means a "full node" can be run on consumer hardware, greatly increasing decentralization compared
+to chains like Ethereum which require enterprise-grade servers, bandwidth, availability, and coin investment. Gridcoin
+focuses on what it does best: rewarding scientific computing and being a cryptocurrency.
 
 Further, Gridcoin has a [voting system](voting "wikilink") to help keep Gridcoin aligned with the
 community and have meaningful discussions. Voting helps reduce conflicts by
@@ -40,12 +51,12 @@ needing to fork and split the community.
 ### Comparison to CureCoin
 ---
 #### What Is CureCoin?
-CureCoin is a cryptocurrency that aims to reward folding@home work
+CureCoin is a cryptocurrency that aims to reward folding@home work. Note you can earn Curecoin as the same time as Gridcoin for folding@home.
 
 
 #### Why Gridcoin Is Different
 
-* CureCoin only rewards folding@home --- Gridcoin rewards many projects   
+* CureCoin only rewards folding@home --- Gridcoin rewards many projects
     * CureCoin is designed only for folding@home
         * Only one project can be rewarded
         * Expansion requires rework of the system
@@ -57,13 +68,6 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
 ^
 ^
 
-* CureCoin involves Proof of Work ---  Gridcoin uses Proof of Stake
-    * More energy used in Proof of Work
-        * Less used energy on scientific work in CureCoin
-    
-    * With Gridcoin more energy goes directly to science
-        * Less energy used by Proof of Stake
-
 ^
 ^
 
@@ -71,51 +75,11 @@ CureCoin is a cryptocurrency that aims to reward folding@home work
     * Comparison of development activity in the last month:
         * [Gridcoin's here](https://github.com/gridcoin-community/Gridcoin-Research/pulse/monthly) 
         * [CureCoin's here](https://github.com/cygnusxi/CurecoinSource/pulse/monthly)
- 
-
-### Comparison to Obyte 
----
-#### What Is Obyte?
-Obyte (formally Byteball) is a cryptocurrency that focuses on various different
-aspects such as smart contracts. Among other bots, it has a bot that distributes out 
-Bytes for work on [World Community Grid](https://www.worldcommunitygrid.org)
-  
-(note you can earn both Gridcoin and Bytes at the same time)
-
-
-#### Why Gridcoin Is Different
-
-* Obyte's main focus is different from Gridcoin 
-    * Science aspect is a secondary or tertiary goal
-        * Fewer Obytes sent to reward science and more goes to other distribution methods
-    
-    * For Gridcoin science is a primary goal
-        * Larger percentage rewards science 
-
-^
-^
-
-* Obyte's bots are heavily centralized 
-    * Happening through one bot that could stop at any point
-        * Funding to this bot comes entirely through a grant from a fund 
-          controlled currently by 4 people
-
-    * In Gridcoin, coins are distributed as new coins in the network not through a single fund or bot
-
-^
-^
-
-* Obyte only rewards World Community Grid and no other BOINC project
-    * On any other project, you can't earn Obytes for it
-
-    * With Gridcoin there are {{ site.data.whitelist.projects.size }} projects you can contribute to
-
-^
-^
 
 
 ### Comparison to Primecoin
 ---
+
 #### What Is Primecoin?
 Primecoin is a cryptocurrency that uses a proof of work algorithm to 
 find [Cunningham chains](https://en.wikipedia.org/wiki/Cunningham_chain) of prime numbers.

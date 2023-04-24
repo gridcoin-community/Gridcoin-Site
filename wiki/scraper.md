@@ -19,7 +19,7 @@ network with the new data thus updating how much each user earns.
 
 As of January 2022 there are 6 scrapers on the main network. 
 
-# Rational
+# Rationale
 
 The scraper system is designed to be scalable. It aims to minimizes the amount of
 trust required in each scraper and avoid placing large amounts of load on

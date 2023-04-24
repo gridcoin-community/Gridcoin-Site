@@ -19,7 +19,7 @@ into running the Gridcoin network. The aim is to put more instead into science.
 
 ## Staking Rewards
 When you stake, you receive newly minted coins. You 
-get 10 GRC + [research rewards](#research-rewards "wikilink"). If you are a solo 
+get 10 GRC + any fees for transactions in the block + [research rewards](#research-rewards "wikilink"). If you are a solo 
 cruncher, rewards from research are added on top. [Pool](pools "wikilink") cruncher (see [the pool](#the-pools "wikilink") section) and non-crunchers 
 will only get 10 GRC when they stake. This 10 GRC is always there (called 
 constant block rewards or CBR). This is to incentivize people to stake because 
