@@ -111,9 +111,7 @@ redirect_from:
                         <figcaption class="text-center mb-4">
                             Your BOINC project may look different. Don't use the exact code above. Use the code that was in your wallet
                         </figcaption>
-                        k) After ~24-48 hours your beacon should validate and you should see something like the screen below. After you see this, you can now change your username to whatever you want
-                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/valid-beacon-screen.png" alt="image showing the beacon page showing the words everything looks good and a checkmark">
-                        l) Some projects require you to enable stats exports. If any of yours do, follow the steps for those project to enable it. Currently required by:
+                        Some projects require you to enable stats exports. If any of yours do, follow the steps for those project to enable it. If you skip this step, your beacon will not validate and you will not earn GRC for your BOINC crunching. Currently required by:
                             <ul class="text-center">
                                 {%- for project in site.data.whitelist.projects -%}
                                 {%- if project.gdpr == "yes" -%}
@@ -121,25 +119,28 @@ redirect_from:
                                 {%- endif -%}
                                 {%- endfor -%}
                             </ul>
+
+                        k) After ~24-48 hours your beacon should validate and you should see something like the screen below. After you see this, you can now change your username to whatever you want
+                        <img class="img-fluid mx-auto d-block" src="/assets/img/guide/valid-beacon-screen.png" alt="image showing the beacon page showing the words everything looks good and a checkmark">
                     <h5 class="text-center mt-5">2) Running the Wallet to Stake</h5>
                         <div class="mb-5 pb-2">
                             <p class="text-center"><sup>See the <a href="/wiki/staking.html">staking wiki page</a> for more details on what staking is</sup></p>
-                            m) <u>If you locked the wallet (not locked by default)</u>, unlock the wallet for "Staking Only". It is recommended to have it encrypted for security. 
+                            l) <u>If you locked the wallet (not locked by default)</u>, unlock the wallet for "Staking Only". It is recommended to have it encrypted for security. 
                             <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-unlock.png" alt="image showing the unlock menu that appears after press the unlock button. Shows 'for staking only' checked and a textbox to enter your password">
                             <figcaption class="text-center mb-4">
                                 Screen after the Unlock Wallet button is pressed. Doesn't apply or show as an option if the wallet has not been encrypted
                             </figcaption>
-                            n) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards. Make sure you see a filled in stack of squares in the bottom right like below
+                            m) Run the wallet close to 24/7. When your wallet is off, you miss chances to stake blocks and earn rewards. Make sure you see a filled in stack of squares in the bottom right like below
                             <img class="img-fluid mx-auto d-block" src="/assets/img/guide/wallet-staking.png" alt="image showing a filled in stack of squares being hovered over saying 'staking' and numbers about how likely it is to stake">
                             <figcaption class="text-center mb-4">
                                 Your numbers will be different when you hover over the icon. Make sure the icon is lit and is not red or unlit. If it isn't, hover over it to see what issues are going on. Note that the "average" time to stake is an estimate, sometimes you may stake 5 times more often than "expected" and sometimes you may take 5x as long to stake as "expected".
                             </figcaption>
-                            o) <u>Every 6 months</u>, your beacon will renew automatically if your wallet is open and unlocked for staking.
+                            n) <u>Every 6 months</u>, your beacon will renew automatically if your wallet is open and unlocked for staking.
                             <img class="img-fluid mx-auto d-block" src="/assets/img/guide/beacon-renew.png" alt="image showing a button in the center labeled advertise beacon and text above it saying your beacon is eligible for renewal">
                             <figcaption class="text-center mb-4">
                                 Image of the screen that shows up when you need to renew your beacon. 
                             </figcaption>
-                            p) Keep the wallet up to date as updates are released
+                            o) Keep the wallet up to date as updates are released
                         </div>
 <h5 class="text-center mt-5">3) Bonus Step: Sidestake to Help Gridcoin's Development</h5>
                         <div class="mb-5 pb-2">
