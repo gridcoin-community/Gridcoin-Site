@@ -9,6 +9,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'no'
   gdpr: 'no'
   team: https://sech.me/boinc/Amicable/team_display.php?teamid=1806
   stats: https://gridcoinstats.eu/project/Amicable_Numbers
@@ -25,6 +26,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
   stats: https://gridcoinstats.eu/project/asteroids@home
@@ -38,6 +40,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'yes'
   gdpr: 'yes'
   gdpr-enable-steps: https://einsteinathome.org/content/gdpr-new-website-features-and-statistics-export-option
   team: https://einsteinathome.org/community/teams/185236
@@ -51,6 +54,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://www.gpugrid.net/team_display.php?teamid=3493
   stats: https://gridcoinstats.eu/project/gpugrid
@@ -65,6 +69,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
   stats: https://gridcoinstats.eu/project/milkyway@home
@@ -80,6 +85,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://escatter11.fullerton.edu/nfs/team_display.php?teamid=2353
   stats: https://gridcoinstats.eu/project/nfs@home
@@ -93,6 +99,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'yes'
   gdpr: 'yes'
   gdpr-enable-steps: 'https://numberfields.asu.edu/NumberFields/forum_thread.php?id=355#2134'
   team: https://numberfields.asu.edu/NumberFields/team_display.php?teamid=2069
@@ -107,6 +114,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48
   stats: https://gridcoinstats.eu/project/odlk1
@@ -120,6 +128,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575
   stats: https://gridcoinstats.eu/project/rosetta@home
@@ -132,6 +141,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://www.sidock.si/sidock/team_display.php?teamid=54
   stats: https://www.gridcoinstats.eu/project/sidock@home
@@ -144,6 +154,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'yes'
   gdpr: 'no'
   team: http://srbase.my-firewall.org/sr5//team_display.php?teamid=99
   stats: https://gridcoinstats.eu/project/srbase
@@ -160,6 +171,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://gene.disi.unitn.it/test/team_display.php?teamid=61
   stats: https://www.gridcoinstats.eu/project/tn-grid
@@ -172,6 +184,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'yes'
   gdpr-enable-steps: https://www.reddit.com/r/gridcoin/comments/ega7k5/universehome_requires_consent_for_stats_export/
   team: https://universeathome.pl/universe/team_display.php?teamid=1822
@@ -186,6 +199,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'yes'
   gdpr: 'yes'
   gdpr-enable-steps: https://www.worldcommunitygrid.org/ms/viewDataSharing.action
   team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
@@ -201,6 +215,7 @@ projects:
   gpu: 'no'
   nvidia: 'no'
   amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://www.rechenkraft.net/yoyo/team_display.php?teamid=1475
   stats: https://gridcoinstats.eu/project/yoyo@home
@@ -213,6 +228,7 @@ projects:
   gpu: 'yes'
   nvidia: 'yes'
   amd: 'yes'
+  intel: 'yes'
   gdpr: 'no'
   team: https://stats.foldingathome.org/team/226804
   stats: https://foldingathome.org/statistics/
