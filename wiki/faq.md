@@ -59,7 +59,7 @@ Consult these guides:
 ### I get an "e-mail mismatch" or "split CPID" error in the solo crunching wizard in the wallet?
 First, make sure you are using the same e-mail address for each BOINC project you are attached to.
 
-Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address and publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks the oldest CPID and tells the projects to use it going forward.
+Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address. BOINC projects publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks the oldest CPID and tells all the projects to use it going forward.
 
 This usually resolves itself, but you can help it along by doing the following:
 1. Go to BOINC's advanced view (view  (in menu) -> advanced view)
@@ -642,4 +642,3 @@ have a lot of small transactions.
 7. Right-click the Gridcoin Shortcut, select properties, and remove `-choosedatadir`
 
 
----
