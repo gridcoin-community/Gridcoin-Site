@@ -157,11 +157,15 @@ redirect_from:
                                     {% endif %}
                                 </td>
                                 <td class="table-color-{{project.gpu}}">
-                                    {% if project.gpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
-                                    {% endif %}
+                                  {% if project.gpu == "no" %}
+                                  ❌                                    
+                                  {% endif %}
+                                  {% if project.nvidia == "yes" %}
+                                    <img src="/assets/img/nvidia_badge.png" height="40">                                       
+                                  {% endif %}
+                                  {% if project.amd == "yes" %}
+                                    <img src="/assets/img/amd_badge.png" height="50">
+                                  {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
                                     {% if project.gdpr == "yes" %}
@@ -208,11 +212,15 @@ redirect_from:
                                     {% endif %}
                                 </td>
                                 <td class="table-color-{{project.gpu}}">
-                                    {% if project.gpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
-                                    {% endif %}
+                                  {% if project.gpu == "no" %}
+                                    ❌                                    
+                                  {% endif %}
+                                  {% if project.nvidia == "yes" %}
+                                    <img src="/assets/img/nvidia_badge.png" height="40">                                       
+                                  {% endif %}
+                                  {% if project.amd == "yes" %}
+                                    <img src="/assets/img/amd_badge.png" height="50">
+                                  {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
                                     {% if project.gdpr == "yes" %}
