@@ -62,9 +62,9 @@ projects:
     computer science.
   sponsor: Rensselaer Polytechnic Institute
   cpu: 'yes'
-  gpu: 'yes'
-  nvidia: 'yes'
-  amd: 'yes'
+  gpu: 'no'
+  nvidia: 'no'
+  amd: 'no'
   gdpr: 'no'
   team: https://milkyway.cs.rpi.edu/milkyway/team_display.php?teamid=6566
   stats: https://gridcoinstats.eu/project/milkyway@home
