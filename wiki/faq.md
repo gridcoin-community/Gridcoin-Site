@@ -59,7 +59,7 @@ Consult these guides:
 ### I get an "e-mail mismatch" or "split CPID" error in the solo crunching wizard in the wallet?
 First, make sure you are using the same e-mail address for each BOINC project you are attached to.
 
-Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address and publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks the oldest CPID and tells the projects to use it going forward.
+Some context: CPIDs are IDs assigned to you by BOINC projects based on your e-mail address. BOINC projects publish user stats by CPID (which Gridcoin uses to calculate your rewards). When you first attach to a project, it gives you a CPID (so all projects will have different ones). Your BOINC client then picks the oldest CPID and tells all the projects to use it going forward.
 
 This usually resolves itself, but you can help it along by doing the following:
 1. Go to BOINC's advanced view (view  (in menu) -> advanced view)
@@ -270,22 +270,32 @@ for doing so is much higher than if you were to wait for longer.
 ---
 ### Are there any fees associated with the MRC request?
 
-Yes. The following is a summary of the fees:
+Yes. The fee decreases the longer you wait between requests and helps fund 
+development. After a few MRC requests, you will probably have enough GRC to 
+stake on your own and skip MRC fees entirely. As a bonus, if you stake a 
+block with somebody else's MRC request, you collect a portion of their fee.
+
+The fee has two components:
 
 - Blockchain transaction fee: This fee is the usual fee that is required to send
 a transaction over the Gridcoin blockchain and is usually insignificant. This
 fee is charged when you make the MRC request.
 
 - MRC fee: This is the fee that is charged after the MRC request is processed
-and is applied to the rewards that you have claimed. The fee starts at 40% of
-the owed GRC at the 14-day interval since the last claim (or beacon creation)
-and decreases by `40% * 14/(number of days since last claim)`.
+and is applied to the rewards that you have claimed. The fee is equivalent to 
+roughly 5.6 days of crunching. If you request every two weeks (14 days), 5.6
+days is 40% of that. If you request every six weeks, it is 13%. 
 
 The recipients of the MRC fee is as follows:
 
 - The [Gridcoin Foundation](foundation "wikilink") receives 80% of the fee
 
 - The staker of the block which contains the MRC request will get 20% of the fee
+
+The math:
+The fee starts at 40% of the owed GRC at the 14-day interval since the last 
+claim (or beacon creation) and decreases by `40% * 14/(number of days since last 
+claim)`.
 
 
 ---
@@ -640,6 +650,3 @@ have a lot of small transactions.
 5. It will show the dialog box to choose the data directory. 
 6. Choose the new location.
 7. Right-click the Gridcoin Shortcut, select properties, and remove `-choosedatadir`
-
-
----
