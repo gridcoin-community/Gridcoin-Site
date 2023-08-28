@@ -376,15 +376,16 @@ project take around a day to propagate.
 ---
 ### Can I crunch BOINC on multiple machines? Do I need to install the wallet on each of them?
 
-You only need one wallet for each BOINC e-mail address/CPID (Cross Project
-Identifier). Your reward is
-based on the credit on your CPID. You can crunch on as many devices as you want under a 
-single e-mail account and only need a single wallet to receive your reward. You must be running the wallet on a
-machine that has BOINC installed and is associated with *all* BOINC
-projects you would like to get credit for (they can be set to not
-retrieve new work if you don't want to crunch them on that machine).
+Yes. The typical setup is to have one machine with the wallet in solo crunching mode and
+BOINC. BOINC should be attached to <b>all</b> projects you are crunching, though you can
+set any projects you don't want to crunch on that machine to "no new tasks". You can install
+BOINC on as many other devices as you want, so long as you use the same e-mail address for 
+BOINC, you will receive credit for that work. There is no need to install the wallet on 
+the other machines, and doing so may cause you problems.
 
-You can install the wallet on as many other machines as you'd like, but only one wallet should be in "solo crunching" mode for each e-mail address used for BOINC. Put the other wallets in "investor" mode.
+Multiple wallets: If you want Gridcoin installed on multiple devices, such as for identity
+seperation purposes, make sure that each wallet is a <i>seperate</i> wallet (do not copy a wallet.dat from one machine and try to run it on another), and that you only have <b>one</b> wallet in solo crunching mode for each e-mail address/CPID you use for BOINC. Any other wallets should be set to "investor" mode. Being in "solo crunching" mode means the wallet
+will make beacons and attempt to "claim" a BOINC e-mail address/CPID. If you have multiple wallets competing for this claim, it will get messy quickly.
 
 ---
 ### Instead of discussing every single BOINC project to be added, is there any shared guidelines to be used for accepting or rejecting them?
