@@ -3,6 +3,7 @@ title: Snapshots
 layout: wiki
 ---
 
+# An official snapshot is no longer provided due to abuse. This page is retained for historical purposes.
 # Overview
 Snapshots are a copy of the blockchain at a particular point in time.
 Snapshots can help newer users to get into sync faster than syncing from 0.
@@ -20,8 +21,8 @@ Snapshots can now be downloaded and applied automatically by the wallet.
 It is accessible from File -> Snapshot Download or the `-snapshotdownload` [startup option](cmd-options "wikilink")
 
 ## Manual method
-1. [Download the snapshot](https://snapshot.gridcoin.us/snapshot.zip)
-2. [Verify the checksum (IMPORTANT)](https://snapshot.gridcoin.us/snapshot.zip.sha256)
+1. Download the snapshot
+2. Verify the checksum (IMPORTANT)
 3. Shutdown your wallet.
 4. Delete the following folders: `txleveldb` & `accrual` from your Gridcoin data directory.
 5. Delete the `blk****.dat` files from your Gridcoin data directory.
