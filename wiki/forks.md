@@ -91,7 +91,7 @@ version of the wallet and starting the wallet back up. If the hardfork was recen
 or if your wallet has been offline since before the hardfork, your wallet might
 be able to correct it itself. If it was a while ago or the wallet has not been
 able to correct itself after running for a while, you may need to either sync 
-from zero or use a [snapshot](snapshot "wikilink")
+from zero
 
 
 # Soft Forks

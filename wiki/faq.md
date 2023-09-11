@@ -530,8 +530,7 @@ If it still hasn't gone up after a few hours try this:
 1.  Close the client
 2.  In your Gridcoin data folder, delete the accrual folder, the txleveldb folder,
 and blk00*.dat (with * being any number).
-3.  Restart the wallet and wait for it to sync. If you don't want to wait you can also use the snapshot
- which you can use by clicking on File -> Snapshot or using the `-snapshotdownload` [command line argument](cmd-options "wikilink")
+1.  Restart the wallet and wait for it to sync.
 
 Note that this problem is often caused by anti-virus software or firewalls. Be sure Gridcoin is not being blocked by your security software.
 
@@ -555,8 +554,6 @@ explorer will sync up with you and your connected nodes at some point.
 ### How do I get in sync fast?
 
 Ensure you are running the latest wallet version.
-
-You can try using a snapshot (File -> Snapshot Download)
 
 While it downloads, delete the peers.dat in your data folder - you may have a bad peer group.
 
