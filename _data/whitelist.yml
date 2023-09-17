@@ -24,7 +24,7 @@ projects:
   cpu: 'yes'
   gpu: 'yes'
   nvidia: 'yes'
-  amd: 'no'
+  amd: 'yes'
   gdpr: 'no'
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
   stats: https://gridcoinstats.eu/project/asteroids@home
