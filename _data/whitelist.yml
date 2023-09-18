@@ -25,7 +25,7 @@ projects:
   cpu: 'yes'
   gpu: 'yes'
   nvidia: 'yes'
-  amd: 'no'
+  amd: 'yes'
   intel: 'no'
   gdpr: 'no'
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218

@@ -151,9 +151,8 @@ If you still have some application that is not like that, see the old version of
   * `-rpcsslciphers=<ciphers>`                Acceptable ciphers (default: TLSv1.2+HIGH:TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!3DES:@STRENGTH)
 
 ## Update/Snapshot options:
-Snapshot options are mostly for users running the headless version of the wallet 
-so they can use the built in snapshot tool too. Update options are for both headless
-and GUI users
+Snapshot options are for developer use on the headless version of the wallet 
+Update options are for both headless and GUI users
 
   * `-snapshotdownload`           Download and apply latest snapshot
   * `-snapshoturl=<url>`          Optional: Specify url of snapshot.zip file (ex: https://sub.domain.com/location/snapshot.zip)
