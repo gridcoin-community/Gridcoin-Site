@@ -104,6 +104,9 @@ redirect_from:
                                     {% if project.amd == "yes" %}
                                       <img src="/assets/img/amd_badge.png" height="50">
                                     {% endif %}
+                                    {% if project.intel == "yes" %}
+                                    <img src="/assets/img/intel_badge.png" height="40">
+                                    {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}> {% comment %} Add warning color for background only if it requires it. No color otherwise {% endcomment %}
                                     {% if project.gdpr == "yes" %}
@@ -165,6 +168,9 @@ redirect_from:
                                   {% if project.amd == "yes" %}
                                     <img src="/assets/img/amd_badge.png" height="50">
                                   {% endif %}
+                                  {% if project.intel == "yes" %}
+                                    <img src="/assets/img/intel_badge.png" height="40">
+                                  {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
                                     {% if project.gdpr == "yes" %}
@@ -220,6 +226,9 @@ redirect_from:
                                   {% if project.amd == "yes" %}
                                     <img src="/assets/img/amd_badge.png" height="50">
                                   {% endif %}
+                                  {% if project.intel == "yes" %}
+                                    <img src="/assets/img/intel_badge.png" height="40">
+                                  {% endif %}
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
                                     {% if project.gdpr == "yes" %}
@@ -254,3 +263,6 @@ redirect_from:
     
 
 </section>
+<div class="container">
+    <p>GeForce is a trademark, or registered trademark, of NVIDIA Corporation. // Radeon is a trademark, or registered trademark, of Advanced Micro Devices, Inc. // Arc is a trademark, or registered trademark, of Intel Corporation.</p>
+</div>
