@@ -89,7 +89,7 @@ redirect_from:
                         </figcaption>  
                         g) If you press next you should now see the screen below
                         <img class="img-fluid mx-auto d-block mb-4" src="/assets/img/guide/pending-beacon-status.png" alt="image showing the wallet's instructions on how to change your username and the code the wallet wants you to change to">
-                        h) Go to BOINC and click a whitelisted project you work on. Click on the Your Account button under Project web pages. If not listed, click on Home page and look for a setting or account options page on the website
+                        h) Go to BOINC and click a whitelisted project you work on. Click on the Your Account button under Project web pages. If not listed, click on Home page and look for a setting or account options page on the website. <b>Note that the project you choose must be on the whitelist and not currently greylisted</b>. You can check if a project is actively whitelisted by going to menu > settings > researcher wizard and checking the projects tab.
                         <div class="row mb-4"> 
                             <div class="col-xl">
                                 <img class="img-fluid" width="682" src="/assets/img/guide/boinc-advanced-view-website.png" alt="image of the advanced view in BOINC showing a project selected and the your account option being clicked under the column Project web pages">
@@ -141,7 +141,15 @@ redirect_from:
                             </figcaption>
                             o) Keep the wallet up to date as updates are released
                         </div>
-<h5 class="text-center mt-5">3) Bonus Step: Sidestake to Help Gridcoin's Development</h5>
+<h5 class="text-center mt-5">4) Claiming Your Rewards</h5>
+                  <div class="mb-5 pb-2">
+                            <p>Your crunching will accrue rewards (shown as "pending reward" in wallet). This reward is based on a rolling average of your credit on BOINC projects called RAC (recent average credit), which means it will "ramp up" when you start crunching and "ramp down" when you stop. It will take approximately <i>two weeks</i> to reach your maximum average daily reward. There are two ways to claim your rewards: an MRC request or staking a block. </p>
+                            <ol>
+                              <li>You can make an MRC request at most every two weeks (you must wait two weeks for your first request). The longer you wait between requests, the lower the fee will be. The fee funds development and pays a staker to stake a block for you. To make a request, click the purple hand icon.</li>      
+                              <li>You can stake a block. You will need approximately $60 USD worth of Gridcoin to stake <i>on average</i> once a month. Staking collects your rewards with no fees and you also collect fees from other transactions in the block you stake</li>
+                            </ol>
+                  </div>
+<h5 class="text-center mt-5">5) Bonus Step: Sidestake to Help Gridcoin's Development</h5>
                         <div class="mb-5 pb-2">
                             <p>Gridcoin has a fun feature called <i>sidestaking</i> which enables you to donate a portion of each stake you make to Gridcoin's development. This isn't required of course, but it helps us add new features and make sure more people can learn about Gridcoin!</p>
                             <ol>
@@ -172,12 +180,13 @@ redirect_from:
                     <li>After these steps, restart the crunching wizard in the wallet. If the problem persists, go to one of our support channels for help.</li>
                 <h5 class="text-center mt-5">Q: My Beacon Isn't Being Verified</h5>
                     <li>Beacons typically take up to 24 hours to verify</li>
-                    <li>Make sure you are crunching under your own account in BOINC and that the project is on the <a href="/guides/whitelist.htm">whitelist</a></li>
+                    <li>Make sure you are crunching under your own account in BOINC and that the project is on the <a href="/guides/whitelist.htm">whitelist</a></li>. Make sure your project is not temporarily greylisted. In the wallet go to menu > settings > researcher wizard > projects and verify your project is listed there (greylisted projects do not appear).
                     <li>Make sure you changed your username</li>
                     <li>Check if your project is one that requires you to enable stats export
                         <ul>
                             <li>Go to <a href="/guides/whitelist.htm#about-gdpr">the whitelist page</a> and see if your project requires it</li>
                             <li>If you see your project requires it, follow the steps to enable it that are linked next to your project</li>
+                            <li>Wait another 24 hours after enabling GDPR export</li>
                         </ul>
                     </li>
                     <li>Try waiting if all of the above are correct and its been less than 48 hours</li>
