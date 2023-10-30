@@ -22,9 +22,11 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes")
 
-6. `bundle install` (runs the web server for local previewing)
+6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
 
-7. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
+7. `bundle install` (runs the web server for local previewing)
+
+8. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
 
 ### Windows guide
 
@@ -38,9 +40,11 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes")
 
-6. Run `bundle install` (runs the web server for local previewing)
+6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
 
-7. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
+7. Run `bundle install` (runs the web server for local previewing)
+
+8. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
 
 ### Editing Specific Sections
 
