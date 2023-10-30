@@ -103,7 +103,7 @@ after that poll passes will a project be removed
 # Information for project admins
 
 ## What's the whitelist?
-Gridcoin has a list of projects that it rewards called the whitelist. People crunching on these projects are able to earn new Gridcoin from it. The creation and distribution of new Gridcoin is what sends the rewards to people crunching on a project, so a project does not have to spend anything for people to earn Gridcoin. 
+Gridcoin has a list of projects that it rewards called the whitelist. People crunching on these projects are able to earn new Gridcoin from it. The creation and distribution of new Gridcoin is what sends the rewards to people crunching on a project, so a project does not have to spend anything for people to earn Gridcoin. You don't have to worry about distributing the rewards either, Gridcoin handles all of that. All you have to do is publish your user's stats for Gridcoin to base rewards off.
 
 ## What are the advantages of being on the whitelist?
 The main advantage of being on the whitelist is that more people will be interested in crunching on your project. Whitelisting usually leads to a large increase in users on the project increasing the available computing power. This could help you expand the scope of the work computed and or get faster results. Secondly, being on the whitelist helps increase awareness of the project. More people will see that the project exists since people using Gridcoin will often look at the whitelist to decide what to use BOINC for.
@@ -115,10 +115,12 @@ around once every 24 hours. The scrapers and the increase in users can potential
 Secondly, this can potentially incentivize more cheating because people now can earn money from credits. However it also incentivises people to try and catch cheating since they would be losing out on the Gridcoin gained by the cheater 
 
 ## What's the whitelisting process?
-The first step is making sure you as the admin of the project want to be whitelisted. If you, somewhere public you should say that you were interested and a date when they would want this to happen (anywhere that someone could check such as project forums, Reddit, etc). Following this, find someone to make a poll for you on Gridcoin. Lastly if the community votes votes "yes", then you
-get whitelisted.
 
-## Some things you might want to do beforehand: 
+1. The first step is making sure you as the admin of the project want to be whitelisted. You should state somewhere publicly that you are interested and a date when they would want this to happen (anywhere that someone could check such as project forums, Reddit, etc). 
+2. Find someone to make a poll for you on Gridcoin (or make one yourself)
+3. If the community votes "yes", then you get whitelisted. So far nearly every project put to a whitelist poll has been whitelisted, our users are enthusiastic about contributing to science!
+
+## Some things you might want to do beforehand
 Check that your servers can handle an increase in demand and check that credit is distributed evenly
 
 ## What if I change my mind?
@@ -126,6 +128,32 @@ If at any point in the future you want to be removed form the whitelist, you can
 
 ## What about whitelisting further in the future?
 That's a valid option too. You don't have to whitelist right away
+
+## How much are the rewards my user's receive worth?
+
+Rewards are distributed across all projects equally through a system called <a href="magnitude.html">magnitude</a>. There are 28,750 GRC minted per day as rewards, so your project's users would receive 1/n of these rewards, with n being the total number of whitelisted projects (currently {{ site.data.whitelist.projects.size }}).
+
+Each user will receive a portion of the rewards allocated to your project. Their portion is relative to other crunchers on your project. So, for example, if a user completed 10% of your project's total recent average credit, they would receive 10% of the total reward. As a project admin, you can use any system you like for allocating credit so long as it is reasonable. For example, you can allocate extra credit for the quick turnaround of workunits or for certain types of workunits.
+
+Users can then keep these GRC, sell them via an exchange, donate them, or use them to purchase goods or services from vendors which accept GRC.
+
+The formula for figuring out the daily rewards your users will receive in total is:
+
+`(current GRC value) * (28750/ number of whitelisted projects)`
+
+You can find GRC's current and historical price through an exchange monitoring site like <a href="https://coinmarketcap.com/currencies/gridcoin/" rel="nofollow">CoinMarketCap</a>. Gridcoin does not control the price of GRC, it is determined by market conditions.
+
+## Can I increase the amount of rewards my user's receive?
+
+Absolutely! Increasing the reward amount can incentivize additional crunching on your project and is often much cheaper than purchasing additional computation from cloud and compute providers, as users are often crunching at a loss or break-even. You can do this via the `rainbymagnitude` feature, which allows you to distribute additional rewards to users based on their relative contribution to your project. This will work just as if the amount of GRC allocated to your project the day of your "rain" is +x where x is the amount you are "raining". Note that this does not provide _guaranteed_ compute, but does help incentivize people to compute more.
+
+1. Choose an amount to add to your total incentive. We suggest at least the current total amount of your incentive. So if your project normally receive x GRC per month, make your "rain" x GRC as well.
+2. Let your users know that you will be dispensing additional rewards, the amount of the additional rewards, and when the amount will be "rained". You can do this via an announcement on your site. It's probably a good idea to also post about it on Gridcoin's Reddit, Discord, and other communities. Giving users a heads up of several weeks will give them time to reconfigure their machines and increase their recent average credit.
+3. Purchase GRC from an <a href="../guides/acquire-grc.htm">exchange</a> or a community member. If you buy them on an exchange, you'll need to move them to your wallet.
+4. On the day you wish to dispense the rewards, open your Gridcoin wallet and wait until it is fully synced (cloud icon bottom right of wallet).
+5. In the wallet, go to Hamburger menu (top left) -> Help -> Debug Window -> Console
+6. Type in the command `listprojects` to find your project name
+7. Type in the command `rainbymagnitude "your_project_name" amount`. For example: `rainbymagnitude "universe@home" 300`
 
 ---
 
