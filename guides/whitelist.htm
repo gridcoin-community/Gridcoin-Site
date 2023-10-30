@@ -10,25 +10,14 @@ redirect_from:
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-4">
-                    <h5>Whitelist justification</h5>
-                    <p>The whitelist was created to increase security and to focus user's resources on active projects.</p>
-                    <h5>Discussions</h5>
-                    <p><a href="https://web.archive.org/web/20150416222027/cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">CCT Whitelist thread</a></p>
+                    <h3>Important</h3>
+                            <p><ul><li>You will only be rewarded Gridcoin for whitelisted BOINC projects. Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded</li>
+                            <li> Some of these projects may currently be on the greylist <b>The most accurate source</b> for whitelist/greylist information will always be your Gridcoin wallet. </li> 
+                            <li> There are a total of {{ site.data.whitelist.projects.size }} projects whitelisted </li>
+                            <li> You can check whitelisted project details on <a href="https://gridcoinstats.eu/project">Gridcoinstats</a>. </li>
+                            </p>
                 </div>
-
-                <div class="col-12 col-sm-8">
-                    <h5>Please note:</h5>
-                    <p>You will only be rewarded Gridcoin for whitelisted BOINC projects.</p>
-                    <p>Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded Gridcoin.</p>
-                    <p>Want a project whitelisted? Ask about it on the <code>#whitelisting-committee</code> channel on the Gridcoin Discord! More details about adding a project to the whitelist can be found on the <a href="/wiki/whitelist-process.html">whitelist process wiki page</a></p>
-                    <p>You can check whitelisted project details on <a href="https://gridcoinstats.eu/project">Gridcoinstats</a>.</p>
-                </div>
-            </div>
-        </div>
-        <!--/Second row of features-->
-        <div class="container">
-            <div class="row">
-                <div class='col-12 text-center'>
+                <div class='col-12 col-sm-8'>
                     <h3>Greylist</h3>
                     <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
                     <p>The <a href="/wiki/whitelist-process.html#greylist">whitelist process wiki page</a> outlines the Greylist procedure for all whitelisted projects.</p>
@@ -40,8 +29,9 @@ redirect_from:
 
 <section class="whitelist-2 text-center">
     <h2 class="mb-2 anchor-adjust" id="projects">Whitelisted Projects</h2>
-    <div class="mb-4">There are a total of {{ site.data.whitelist.projects.size }} projects whitelisted. Note that some could currently be on the greylist. <br><b>The most accurate source</b> for whitelist/greylist information will always be your Gridcoin wallet. </p>
-<p>Go to Hamburger Menu > Settings > Researcher Wizard > Projects (or the <code>listprojects</code> command) to see which projects are currently whitelisted</div></p>
+    <div class="mb-4"></p>
+<p>To check if a project is on the greylist, in your wallet go to Hamburger Menu > Settings > Researcher Wizard > Projects (or the <code>listprojects</code> command) <br>
+Any project shown is not greylisted. Your wallet must be fully synced for the latest info.</div></p>
     <!-- BOINC Content -->
     <div class="container">
         <div class="row text-center mb-5">
@@ -65,7 +55,7 @@ redirect_from:
                                 <dfn data-toggle="tooltip" data-placement="bottom" title="Projects listed here have GPU support, but availability of GPU workunits is not guaranteed">GPU</dfn>
                             </th>
                             <th>
-                                GDPR Stats Export
+                                <dfn data-toggle="tooltip" data-placement="bottom" title="Some projects require you to opt-in to exporting your stats. You will need to do this to earn GRC for your work">GDPR Stats Export</dfn>
                             </th>
                             <th>
                                 Team
@@ -243,7 +233,7 @@ redirect_from:
         </div>
         <h3 id="about-gdpr" class="anchor-adjust">About GDPR</h3>
             <p>GDPR is a law in the European Union on data privacy. Some projects have
-            interpreted it to mean that to sharing BOINC stats to anyone requires opting in. 
+            interpreted it to mean that to sharing BOINC stats requires opting in. 
             Solo crunchers must enable it to be rewarded because otherwise Gridcoin can't see how much work 
             you've done and figure out how much you are owed</p>
             
@@ -258,6 +248,10 @@ redirect_from:
                     {{project.name}} (<a href={{project.gdpr-enable-steps}}>steps to enable</a>)<br>
                 {% endif %}
             {% endfor %}</p>
+
+        <h3 id="whitelist-process" class="anchor-adjust">Whitelist Process</h3>
+            <p>Want a project whitelisted? Ask about it on the <code>#whitelisting-committee</code> channel on the Gridcoin Discord! More details about adding a project to the whitelist can be found on the <a href="/wiki/whitelist-process.html">whitelist process wiki page</a>
+            <p>The whitelist was created to increase security and to focus user's resources on active projects. See <a href="https://web.archive.org/web/20150416222027/cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">historical discussion</a></p>
     </div>
     </div>
     
