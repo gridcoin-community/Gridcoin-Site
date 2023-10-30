@@ -2,47 +2,64 @@
 
 Open source Gridcoin website
 
-## Want to edit the wiki?
-
-See more information about that process [here](https://gridcoin.us/wiki/wiki-editing)
-
-## Interested in contributing towards the whitelist?
-
-Head on over to the [data folder](_data/) to get more info.
-
 ## Building Locally
 
 This uses the [Jekyll Site builder](https://jekyllrb.com)
 
-### Install Jekyll
-
 For installation of Jekyll, please follow the [installation guide](https://jekyllrb.com/docs/installation/) for your operating system.
 
-## Build guides
+## Build Locally & Contributing
 
 ### Ubuntu Linux guide
 
-1. `sudo apt-get install git`
+1. Fork this repository by clicking the fork button (top right)
 
-2. `git clone https://github.com/gridcoin-community/Gridcoin-Site.git`
+2. `sudo apt-get install git` if you don't already have git installed
 
-3. `cd Gridcoin-Site`
+3. `git clone https://github.com/gridcoin-community/Gridcoin-Site.git`
+ (replace this with your fork)
 
-4. `bundle install`
+4. `cd Gridcoin-Site`
+
+5. Run`bundle install` (preps the web server for local previewing)
+
+6. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`7
+
+7. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
+
+8. You can preview your changes with a local development server by running `bundle exec jekyll serve`
+
+9. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
 
 ### Windows guide
 
-1. Install [Git for windows](https://git-scm.com/downloads)
+1. Fork this repository by clicking the fork button (top right)
 
-2. Use Git GUI to clone gridcoin Repo
+2. Install [Git for windows](https://git-scm.com/downloads)
 
-  --OR--
+3. Use Git GUI to clone gridcoin Repo   --OR-- Go to the location you store Git Repos and `Rightclick` -> Gitbash here, then run  `git clone https://github.com/gridcoin-community/Gridcoin-Site.git` (put your fork's URL here)
 
-2. Go to the location you store Git Repos and `Rightclick` -> Gitbash here, then run  `git clone https://github.com/gridcoin-community/Gridcoin-Site.git`
+4. Go to Gridcoin-Site folder (or whatever you specified when pulling the repo) `Shift+RightClick` -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
 
-3. Go to Gridcoin-Site folder (or whatever you specified when pulling the repo) `Shift+RightClick` -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
+5. Run `bundle install` (preps the web server for local previewing)
 
-4. Run `bundle install`
+6. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
+
+7. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
+
+8. You can preview your changes with a local development server by running `bundle exec jekyll serve`
+
+9. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
+
+### Editing Specific Sections
+
+#### Want to edit the wiki?
+
+See more information about that process [here](https://gridcoin.us/wiki/wiki-editing)
+
+#### Interested in contributing towards the whitelist?
+
+Head on over to the [data folder](_data/) to get more info.
 
 ## How to Update gems
 
