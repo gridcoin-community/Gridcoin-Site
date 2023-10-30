@@ -141,14 +141,6 @@ The formula for figuring out the daily rewards your users will receive in total 
 
 `(current GRC value) * (28750/ number of whitelisted projects)`
 
-In Oct 2023 when GRC's value is $0.01 USD and there are 16 whitelisted projects, this works out to approximately $530 USD/month. Below are expected monthly rewards in various situations
-
-| | 14 Projects | 15 Projects | 16 Projects
-|-|-|-|
-|1 GRC = 0.01 USD | $616 | $575 | $539 
-|1 GRC = 0.02 USD | $1,232 | $1,150 | $1,078 
-|1 GRC = 0.25 USD | $15,401 | $14,375 | $13,475 
-
 You can find GRC's current and historical price through an exchange monitoring site like <a href="https://coinmarketcap.com/currencies/gridcoin/" rel="nofollow">CoinMarketCap</a>. Gridcoin does not control the price of GRC, it is determined by market conditions.
 
 ## Can I increase the amount of rewards my user's receive?
