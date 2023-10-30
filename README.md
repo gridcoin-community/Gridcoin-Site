@@ -22,7 +22,7 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
 
-6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
+6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
 
 7. `bundle install` (runs the web server for local previewing)
 
@@ -40,7 +40,7 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
 
-6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
+6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
 
 7. Run `bundle install` (runs the web server for local previewing)
 
