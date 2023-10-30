@@ -18,15 +18,18 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 3. `git clone https://github.com/gridcoin-community/Gridcoin-Site.git`
  (replace this with your fork)
+
 4. `cd Gridcoin-Site`
 
-5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
+5. Run`bundle install` (preps the web server for local previewing)
 
-6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
+6. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`7
 
-7. `bundle install` (runs the web server for local previewing)
+7. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
 
-8. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
+8. You can preview your changes with a local development server by running `bundle exec jekyll serve`
+
+9. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
 
 ### Windows guide
 
@@ -38,13 +41,15 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 4. Go to Gridcoin-Site folder (or whatever you specified when pulling the repo) `Shift+RightClick` -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
 
-5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
+5. Run `bundle install` (preps the web server for local previewing)
 
-6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
+6. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
 
-7. Run `bundle install` (runs the web server for local previewing)
+7. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com. The first time you push, you'll need to run `git push --set-upstream origin your_branch_name` first to let Github.com know about your new branch.
 
-8. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
+8. You can preview your changes with a local development server by running `bundle exec jekyll serve`
+
+9. When ready to submit changes, go back to your fork on github.com and you will be prompted to make a pull request.
 
 ### Editing Specific Sections
 
