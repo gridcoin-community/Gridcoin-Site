@@ -20,17 +20,12 @@ to note some of differences in the [Difference To Mainnet Section](#difference-t
 
 # How To Help
 
-1. Join the [Gridcoin Slack](https://join.slack.com/t/teamgridcoin/shared_invite/enQtMjk2NTI4MzAwMzg0LTE4N2I3ZWZjYWJlZGM1Zjg3MTUyMDhiN2M5NmRmZTA2NDA0ZmY1ZTFmOGM3ZGU2YTBkOTdhNTk2ZjkzMGZkODY)
+1. Join the [Gridcoin Discord](https://discord.gg/UMWUnMjN4x)
 and join the `#testnet` channel where most of the conversation about testnet is
-    * See this [help page](https://slack.com/help/articles/205239967-Join-a-channel#join-channels) 
-      for how to join channels on slack
 
-2. Look for pinned messages in `#testnet` about the latest downloads. 
+2. Look for pinned messages in `#testnet` about the latest downloads.
 If you don't see a message, or one that is old, or just are not sure about what 
 to do, feel free to ask a question on the channel
-    * See this [help page](https://slack.com/intl/en-in/help/articles/205239997-Pin-messages) 
-      for viewing pinned messages (scroll to `View Pinned Messages`)
-
     * If on MacOS you will likely need to ask on `#testnet` about downloads 
       since a testnet version is not often produced.
 
@@ -82,12 +77,12 @@ to do, feel free to ask a question on the channel
         * **make sure to run with -testnet** as an argument
 
     * On MacOS
-        * You will need to ask on the Slack channel about how to run it as 
+        * You will need to ask on the Discord channel about how to run it as 
           there's not a standard type of build for MacOS as of the time of 
           writing
 
 5. Get Testnet Coins
-    * Testnet coins can be obtained from various users on `#testnet` on Slack.
+    * Testnet coins can be obtained from various users on `#testnet` on Discord.
       Ask on that channel and give a testnet address for users to send coins to.
       
     * Some smaller amount testnet coins can obtained through faucets for testnet 
@@ -104,7 +99,7 @@ to do, feel free to ask a question on the channel
     #############################################################################
     ##
     ## TESTNET USERS MUST LAUNCH THE WALLET USING THE -testnet FLAG
-    ## TESTNET USERS MUST JOIN THE #testnet CHANNEL ON SLACK
+    ## TESTNET USERS MUST JOIN THE #testnet CHANNEL ON DISCORD
     ##
     ## For further details on this configuration file please see:
     ## https://gridcoin.us/wiki/config-file
@@ -129,7 +124,7 @@ to do, feel free to ask a question on the channel
     ## Nodes are banned for sending bad data (seconds)
     bantime=60
 
-    ## These Addnodes are for TESTNET only. See Slack for further details.
+    ## These Addnodes are for TESTNET only. See Discord for further details.
     addnode=addnode-us-central.cycy.me
     addnode=ec2-3-81-39-58.compute-1.amazonaws.com
     addnode=gridcoin.network
@@ -185,4 +180,4 @@ Note that this is not an exhaustive list
 
 # Contacts
 
-General questions about testnet can often go on the `#testnet` channel on Slack.
+General questions about testnet can often go on the `#testnet` channel on Discord.
