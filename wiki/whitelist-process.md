@@ -118,7 +118,7 @@ Secondly, this can potentially incentivize more cheating because people now can 
 
 1. The first step is making sure you as the admin of the project want to be whitelisted. You should state somewhere publicly that you are interested and a date when they would want this to happen (anywhere that someone could check such as project forums, Reddit, etc). 
 2. Find someone to make a poll for you on Gridcoin (or make one yourself)
-3. If the community votes "yes", then you get whitelisted. So far every project put to a whitelist poll has been whitelisted, our users are enthusiastic about contributing to science!
+3. If the community votes "yes", then you get whitelisted. So far nearly every project put to a whitelist poll has been whitelisted, our users are enthusiastic about contributing to science!
 
 ## Some things you might want to do beforehand
 Check that your servers can handle an increase in demand and check that credit is distributed evenly
