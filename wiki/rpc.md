@@ -361,14 +361,16 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     and or incorrect balances. `[minconf]` is ignored. `[comment]` is just a 
     comment
 
-* rainbymagnitude `<whitelisted project> <amount>`
+* rainbymagnitude `<whitelisted project> <amount> [trial_run]`
   * *Requires the wallet to have converged scraper statistics* 
 
   * Rains Gridcoin proportional to magnitude to the cruncher of a project. 
     `<whitelisted project>` is a whitelisted BOINC project. BOINC project name's
     can be seen with the projects command (note that it will list more than 
     whitelisted projects). If you want to rain to all projects, use `*`
-    as the project name. `<amount>` is the amount you want to rain. 
+    as the project name. `<amount>` is the amount you want to rain (minimum 1000 GRC)
+
+  * If trial_run is set to true, print what _would_ be done instead of actually doing it.
 
   * Note that the message field was removed in release 5.3.2
 
