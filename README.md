@@ -20,7 +20,7 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
  (replace this with your fork)
 4. `cd Gridcoin-Site`
 
-5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes")
+5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
 
 6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
 
@@ -38,7 +38,7 @@ For installation of Jekyll, please follow the [installation guide](https://jekyl
 
 4. Go to Gridcoin-Site folder (or whatever you specified when pulling the repo) `Shift+RightClick` -> Open Cmd Prompt Here or Open Powershell window here(Win 10)
 
-5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes")
+5. `git branch your_branch_name` (give it a descriptive name like "whitelist changes") followed by `git checkout your_branch_name`
 
 6. Every time you make changes, run `git commit -a` to add your changes followed by `git push` to push them to your repo on github.com.
 
