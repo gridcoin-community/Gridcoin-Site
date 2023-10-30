@@ -129,7 +129,7 @@ If at any point in the future you want to be removed form the whitelist, you can
 ## What about whitelisting further in the future?
 That's a valid option too. You don't have to whitelist right away
 
-## How much are the rewards my user's receive worth?
+## How much are the rewards my users receive worth?
 
 Rewards are distributed across all projects equally through a system called <a href="magnitude.html">magnitude</a>. There are 28,750 GRC minted per day as rewards, so your project's users would receive 1/n of these rewards, with n being the total number of whitelisted projects (currently {{ site.data.whitelist.projects.size }}).
 
