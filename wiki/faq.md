@@ -483,10 +483,10 @@ The wallet has an automated backup in place that will make backups every 24 hour
 ---
 ### How can I move my Gridcoin wallet to another machine?
 
-Note: These steps should work for any OS and for cross-OS migration. You should never run the same wallet on two machines at the same time because it looks to the network like an attack and your node may be banned. Additionally, you may lose coins and addresses as the wallets diverge over time. Don't do it.
+Note: These steps should work for any OS and for cross-OS migration. You should never run the same wallet on two machines at the same time because it looks to the network like an attack and your node may be banned. Additionally, you may lose coins and addresses as the wallets diverge over time. Don't do it. These steps reference the "data directory", see the top of this FAQ for where to find it depending on what operating system (Windows, MacOS, etc) your computer has.
 
 1. If you crunch BOINC to earn GRC, install BOINC on your new machine and attach to all your projects first. You must attach to all the same projects as before, you can set a project as "no new tasks" if you don't want to crunch it.
-2. Fully shut down the Gridcoin wallet, make sure it is not running in the system tray.
+2. Fully shut down the Gridcoin wallet on source machine, make sure it is not running in the system tray.
 3. Install the Gridcoin wallet on the new machine, fully shut it down after installation. You do not need to fully sync this wallet yet.
 4. Rename the wallet directory on the new machine to GridcoinResearch_old and copy the contents of your wallet directory from the original machine to the new machine in the same place
 5. Start the wallet on the new machine.
@@ -629,7 +629,9 @@ Try running the client with `-rescan` or run the console command
 `repairwallet`.
 
 ---
-### I get the error that the wallet is corrupt, how can I fix it? I get the error "error loading blkindex.dat"
+### I get the "error loading blkindex.dat" message
+
+This is because the blkindex.dat file has become corrupt.
 
 1. Close the Gridcoin wallet, make sure it is not minimized in the system tray.
 2. Make a backup of your wallet data folder
