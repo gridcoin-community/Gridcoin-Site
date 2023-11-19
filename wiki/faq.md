@@ -617,6 +617,16 @@ Try running the client with `-rescan` or run the console command
 `repairwallet`.
 
 ---
+### I get the error that the wallet is corrupt, how can I fix it?
+
+1. Close the Gridcoin wallet, make sure it is not minimized in the system tray.
+2. Make a backup of your wallet data folder
+3. Delete blk*.dat, the txleveldb subdirectory, and the accrual subdirectory in the wallet data folder
+4. Restart the Gridcoin wallet. It will take some time to re-sync.
+
+Note that errors like this often occur due to unexpected shutdowns and hardware issues. It is advised to make sure your hardware is stable and that you keep regular backups.
+
+---
 ### Error when sending a transaction
 
 First, check that you have your wallet unlocked fully. If you have it locked
