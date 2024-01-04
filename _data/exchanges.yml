@@ -3,7 +3,11 @@ centralized-exchanges:
   - name: SouthXchange
     image: /assets/img/exchanges/southxchange.png
     link: https://www.southxchange.com/Market/Book/GRC/BTC
-    
+  
+  - name: SafeTrade
+    image: /assets/img/exchanges/safetrade.png
+    link: https://safe.trade/trading/grcbtc
+  
   - name: Flyp.me
     image: /assets/img/exchanges/flypme.png
     link: https://flyp.me/
