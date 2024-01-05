@@ -55,14 +55,16 @@ redirect_from:
             <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
                 <ol>
                     <li>Create personal accounts on all desired projects using <b>the same email</b></li>
-                    <li>Attach desired projects to your BOINC client (Tools → Add project... / Tools → Synchronize with &lt;account manager&gt;)</li>
+                    <li>Attach all desired projects to your BOINC client on the same machine as your wallet (Tools → Add project... / Tools → Synchronize with &lt;account manager&gt;)
+                        <br>All projects that you plan to crunch need to be attached to the BOINC client on the machine with your wallet - even if you plan to crunch it on a different host</li>
                     <li>Make sure that your CPIDs are consistent across your projects (it can be checked on the
-                        project's site/your account manager/the Gridcoin Researcher Wizard)</li>
+                        project's site/your account manager/the Gridcoin "Researcher Configuration" wizard)</li>
                     <li>If they are not consistent then you're suffering from a split CPID. Instructions to fix it can
                         be found below.</li>
                     <li>Proceed to Step 2 if your CPIDs are all the same.<br>
                         <b>DO NOT CONTINUE to advertising your beacon if you have a split CPID.<br>
-                        You would likely need to readvertise your beacon which would waste your time.</b>
+                        You would likely need to readvertise your beacon which would waste your time.</b><br>
+                        Proceed to the "Resolving a split CPID" instead
                     </li>
                 </ol>
             </div>
@@ -75,18 +77,19 @@ redirect_from:
             </div>
             <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
                 <ol>
-                    <li>Attach all desired projects to the same BOINC client, if they are not already
+                    <li>Attach all desired projects to the BOINC client of the machine that is running your wallet, if they are not already
                         (Attach all projects - even if you plan to crunch it on a different host)
                     </li>
                     <li>Disconnect other BOINC clients from the internet except on the machine running the wallet</li>
-                    <li>Go to your projects tab and enable "No new tasks" for each project</li>
-                    <li>Go to your tasks tab and cancel all existing tasks (this is needed, otherwise BOINC may not actually “Update” when
+                    <li>Go to your Projects tab and enable "No new tasks" for each project</li>
+                    <li>Go to your Tasks tab and cancel all existing tasks (this is needed, otherwise BOINC may not actually “Update” when
                     requested in subsequent steps)</li>
-                    <li>Back in the projects tab, for each project, select “Allow new tasks” and press “Update”, then press “No new tasks” when
+                    <li>Back in the Projects tab, for each project, select “Allow new tasks” and press “Update”, then press “No new tasks” when
                     complete and abort any tasks it downloaded. The project update process will take about 10 seconds for each project. You
                     can monitor this progress by going to Tools → Event Log...</li>
                     <li>Check your CPIDs on the projects' site or in the Gridcoin "Researcher Configuration" wizard</li>
-                    <li>If they are still not consistent wait a few minutes before attempting these steps again</li>
+                    <li>If they are still not consistent wait a few minutes before attempting these steps again<br>
+                    If they are now consistent then you can continue to Step 2</li>
                 </ol>
             </div>
         </div>
