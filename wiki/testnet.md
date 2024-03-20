@@ -143,7 +143,6 @@ to do, feel free to ask a question on the channel
 
     ## Windows (Note the double backslashes are necessary)
     #boincdatadir=C:\\ProgramData\\BOINC\\
-    #boincappdir=C:\\Program Files\\BOINC\\
 
     ## Linux
     #boincdatadir=/var/lib/boinc-client/
