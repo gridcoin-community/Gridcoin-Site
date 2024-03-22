@@ -141,6 +141,18 @@ redirect_from:
                             </figcaption>
                             o) Keep the wallet up to date as updates are released
                         </div>
+<h5 class="text-center mt-5">3) Monitor Your Crunching</h5>
+                    <div class="mb-5 pb-2">
+                            <p>While you can monitor your work in the BOINC and/or Folding@Home managers, it may be useful to view what work the Gridcoin wallet sees you accomplishing. The Gridcoin wallet will show you how much you've earned, and your <a href="/wiki/magnitude.html">Magnitude</a> by project. To view Magnitude, open the Researcher Configuration screen as described above, and select the Projects tab. Magnitude, as well as Recent Average Credit (RAC) are shown per project. Please note that this updates slowly over time, so it is a good idea to wait a day or two after making changes before drawing conclusions from this information. If you do not see any Magnitude or RAC being populated, or the CPID shown is incorrect, you may have an issue causing you to not receive credit for your work.
+                            </p>
+                                <img class="img-fluid mx-auto d-block" src="/assets/img/guide/monitor-crunching.png" alt="image showing researcher configuration with magnitude and RAC shown">
+                                <figcaption class="text-center mb-4">
+                                    Image of the Researcher Configuration screen showing Magnitude and RAC.
+                                </figcaption>
+                                
+                            <p>For advanced users comfortable running Python tools, the Gridcoin community has provided a script which will connect to the Gridcoin wallet to provide even more detailed information about Magnitude, earned GRC/hour, and more. It can also optionally directly control BOINC to optimize crunching for maximum earnings if desired. The tool can be found on GitHub at the following link: <a href="https://github.com/makeasnek/FindTheMag2">https://github.com/makeasnek/FindTheMag2</a>.</p>
+                    </div>
+
 <h5 class="text-center mt-5">4) Claiming Your Rewards</h5>
                   <div class="mb-5 pb-2">
                             <p>Your crunching will accrue rewards (shown as "pending reward" in wallet). This reward is based on a rolling average of your credit on BOINC projects called RAC (recent average credit), which means it will "ramp up" when you start crunching and "ramp down" when you stop. It will take approximately <i>two weeks</i> to reach your maximum average daily reward. There are two ways to claim your rewards: an MRC request or staking a block. </p>
