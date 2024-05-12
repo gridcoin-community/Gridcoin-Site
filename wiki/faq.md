@@ -532,9 +532,9 @@ without the `-salvagewallet` flag
 ---
 ### How can I run multiple wallets on the same machine?
 
-You should never run the same wallet (start the same wallet.dat) on multiple machines. But if you desire multiple wallets on the same machine, such as for identity seperation, it is possible. You will just need to launch Gridcoin with the arguments -datadir="/path/to/your/datadir" and give each seperately launched Gridcoin instance a directory to itself.
+You should never run the same wallet (start the same wallet.dat) on multiple machines. But if you desire multiple wallets on the same machine, such as for identity separation, it is possible. You will just need to launch Gridcoin with the arguments -datadir="/path/to/your/datadir" and give each separately launched Gridcoin instance a directory to itself.
 
-You can then add entries to your system's startup manager to have these seperate copies run at startup.
+You can then add entries to your system's startup manager to have these separate copies run at startup.
 
 On Windows:
 
