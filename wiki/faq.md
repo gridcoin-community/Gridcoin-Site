@@ -530,6 +530,24 @@ file. Rename that new file to wallet.dat and try launching the wallet again
 without the `-salvagewallet` flag
 
 ---
+### How can I run multiple wallets on the same machine?
+
+You should never run the same wallet (start the same wallet.dat) on multiple machines. But if you desire multiple wallets on the same machine, such as for identity seperation, it is possible. You will just need to launch Gridcoin with the arguments -datadir="/path/to/your/datadir" and give each seperately launched Gridcoin instance a directory to itself.
+
+You can then add entries to your system's startup manager to have these seperate copies run at startup.
+
+On Windows:
+
+1. Find GridcoinResearch icon on desktop, left click, press Ctrl +C to copy then Ctrl +V to paste. This will create a duplicate shortcut.
+2. Right click on duplicate shortcut and left click on properties. From here, you can rename it.
+3. In the properties menu, you can also add the command line flag like so: "C:\Program Files\...gridcoinresearch.exe -datadir="C:\your\custom\data\dir"
+
+On Linux (GUI):
+
+1. Create a shortcut which calls "gridcoinresearch -datadir='/home/user/Desktop/projects/SCI/wallets/gridcoin_wallet'"
+2. Add this to the system startup using your system's startup manager
+
+---
 # Sync
 
 ---
