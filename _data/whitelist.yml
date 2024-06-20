@@ -31,6 +31,21 @@ projects:
   team: https://asteroidsathome.net/boinc/team_display.php?teamid=2218
   stats: https://gridcoinstats.eu/project/asteroids@home
 
+- name: DENIS@home
+  link: https://denis.usj.es/denisathome/
+  goal: DENIS has been created to help researchers to compute very large groups of cardiac 
+    electrophysiological model variations. Cardiac electrophysiological models are 
+    mathematical representations of the electrical activity of the cardiac cells.
+  sponsor: Universidad San Jorge
+  cpu: 'yes'
+  gpu: 'no'
+  nvidia: 'no'
+  amd: 'no'
+  intel: 'no'
+  gdpr: 'yes'
+  team: https://denis.usj.es/denisathome/team_display.php?teamid=1825
+  stats: https://www.gridcoinstats.eu/project/denis@home
+
 - name: Einstein@home
   link: https://einsteinathome.org
   goal: Search for spinning neutron (pulsars) stars using data from the LIGO gravitational-wave
