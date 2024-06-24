@@ -3,10 +3,6 @@ centralized-exchanges:
   - name: SafeTrade
     image: /assets/img/exchanges/safetrade.png
     link: https://safe.trade/trading/grcbtc
-  
-  - name: Flyp.me
-    image: /assets/img/exchanges/flypme.png
-    link: https://flyp.me/
 
   - name: FreiExchange
     image: /assets/img/exchanges/freiexchange.png
