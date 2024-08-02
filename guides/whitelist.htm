@@ -68,8 +68,8 @@ Any project shown is not greylisted. Your wallet must be fully synced for the la
                     <tbody>
                         {% for project in site.data.whitelist.projects %}
                             <tr>
-                                <td>
-                                    <a href="{{ project.link }}">{{ project.name }}</a>
+                                <td{% if project.greylisted == "yes" %} class="greylisted"{% endif %}>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
                                 </td>
                                 <td>
                                     {{ project.goal }}
@@ -138,8 +138,8 @@ Any project shown is not greylisted. Your wallet must be fully synced for the la
                     <tbody>
                         {% for project in site.data.whitelist.projects %}
                             <tr>
-                                <td>
-                                    <a href="{{ project.link }}">{{ project.name }}</a>
+                                <td{% if project.greylisted == "yes"%} class="greylisted"{% endif %}>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
                                 </td>
                                 <td class="table-color-{{project.cpu}}"> 
                                     {% if project.cpu == "yes" %}
@@ -196,8 +196,8 @@ Any project shown is not greylisted. Your wallet must be fully synced for the la
                     <tbody>
                         {% for project in site.data.whitelist.projects %}
                             <tr>
-                                <td>
-                                    <a href="{{ project.link }}">{{ project.name }}</a>
+                                <td{% if project.greylisted == "yes" %} class="greylisted"{% endif %}>
+                                    <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
                                 </td>
                                 <td class="table-color-{{project.cpu}}">
                                     {% if project.cpu == "yes" %}

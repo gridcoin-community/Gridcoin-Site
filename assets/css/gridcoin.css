@@ -240,6 +240,19 @@ dfn{
 }
 .whitelist-2 a {
     font-weight: bold;
+    color: #c194e8;
+}
+
+.whitelist-2 a:hover {
+    color: #a971da;
+}
+
+.greylisted {
+    color: #ada9a9;
+}
+
+.greylisted a {
+    color: #ada9a9;
 }
 .table-color-yes{
     --bs-table-bg: green;
