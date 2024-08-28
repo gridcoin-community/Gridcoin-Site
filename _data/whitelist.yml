@@ -156,7 +156,7 @@ projects:
   gdpr: 'no'
   team: https://boinc.bakerlab.org/rosetta/team_display.php?teamid=12575
   stats: https://gridcoinstats.eu/project/rosetta@home
-  greylisted: 'yes'
+  greylisted: 'no'
 
 - name: SiDock@Home
   link: https://www.sidock.si/sidock/
