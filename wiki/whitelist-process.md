@@ -27,7 +27,7 @@ The overall process looks like this:
 ### Criteria For Being Considered
 
 *  Project Work Availability Score (WAS) is green
-    * Means that the seven day median new credit / the 40 day median credit is greater than 0.1
+    * Means that the seven day mean new credit / the 40 day mean credit is greater than 0.1
         * Checks that there isn't a low amount of credit recently given out compared
           to its past
 ^
