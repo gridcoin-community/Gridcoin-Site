@@ -493,12 +493,6 @@ Note: These steps should work for any OS and for cross-OS migration. You should 
 6. Setup backups on your new machine so you do not lose your coins when your system drive fails
 
 ---
-### Which is the best practice to save my new wallet?
-
-Different methods were discussed in the Gridcoin Community Classroom
-\#003: <https://www.youtube.com/watch?v=JxrjUwX5XvA>
-
----
 ### How to compress my wallet getting rid of orphans?
 
 The quick and easy way.
