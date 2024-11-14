@@ -203,21 +203,6 @@ projects:
   team: https://gene.disi.unitn.it/test/team_display.php?teamid=61
   stats: https://www.gridcoinstats.eu/project/tn-grid
   greylisted: 'yes'
-  
-- name: Universe@home
-  link: https://universeathome.pl/universe/
-  goal: Physics and Astronomy
-  sponsor: University of Warsaw
-  cpu: 'yes'
-  gpu: 'no'
-  nvidia: 'no'
-  amd: 'no'
-  intel: 'no'
-  gdpr: 'yes'
-  gdpr-enable-steps: https://www.reddit.com/r/gridcoin/comments/ega7k5/universehome_requires_consent_for_stats_export/
-  team: https://universeathome.pl/universe/team_display.php?teamid=1822
-  stats: https://gridcoinstats.eu/project/universe@home
-  greylisted: 'yes'
 
 - name: World Community Grid
   link: https://www.worldcommunitygrid.org/
