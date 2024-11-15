@@ -141,7 +141,7 @@ projects:
   gdpr: 'no'
   team: https://boinc.multi-pool.info/latinsquares/team_display.php?teamid=48
   stats: https://gridcoinstats.eu/project/odlk1
-  greylisted: 'yes'
+  greylisted: 'no'
 
 - name: Rosetta@Home
   link: https://boinc.bakerlab.org/rosetta/
