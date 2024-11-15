@@ -153,7 +153,7 @@ Absolutely! Increasing the reward amount can incentivize additional crunching on
 4. On the day you wish to dispense the rewards, open your Gridcoin wallet and wait until it is fully synced (cloud icon bottom right of wallet).
 5. In the wallet, go to Hamburger menu (top left) -> Help -> Debug Window -> Console
 6. Type in the command `listprojects` to find your project name
-7. Type in the command `rainbymagnitude "your_project_name" amount`. For example: `rainbymagnitude "universe@home" 300`
+7. Type in the command `rainbymagnitude "your_project_name" amount`. For example: `rainbymagnitude "rosetta@home" 300`
 
 ---
 
