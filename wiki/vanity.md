@@ -28,11 +28,11 @@ Windows GPU (OpenCL): `oclvanitygen.exe -C GRC -o results.txt -i -k YOUR_PREFIX`
 1. Open results.txt
 2. Choose your desired address
 3. Open your wallet and navigate to Help -> Debug window
-4. Execute `importprivkey PRIVATE_KEY LABEL False` - More details can be found in `help importprivkey`
+4. Execute `importprivkey PRIVATE_KEY LABEL false` - More details can be found in `help importprivkey`
   * `importprivkey` : command to import private keys (addresses) into the wallet
   * `PRIVATE_KEY` : the private key of the address you have chosen
   * `LABEL` : a friendly name that you can assign to your new address
-  * `False` : since the address has not been used before you can skip the long process of checking the chain for pre-existing transactions using your new address
+  * `false` : since the address has not been used before you can skip the long process of checking the chain for pre-existing transactions using your new address
 
 # Valid Prefixes
 Gridcoin addresses start with either R or S. There are also a restricted set of characters which are allowed for the second character (see the table below). The rest of the address can only have base58 characters (`123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz`)
