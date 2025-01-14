@@ -170,7 +170,7 @@ projects:
   gdpr: 'no'
   team: https://www.sidock.si/sidock/team_display.php?teamid=54
   stats: https://www.gridcoinstats.eu/project/sidock@home
-  greylisted: 'no'
+  greylisted: 'yes'
 
 - name: SRBase
   link: http://srbase.my-firewall.org/sr5/
