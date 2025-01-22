@@ -170,7 +170,7 @@ projects:
   gdpr: 'no'
   team: https://www.sidock.si/sidock/team_display.php?teamid=54
   stats: https://www.gridcoinstats.eu/project/sidock@home
-  greylisted: 'yes'
+  greylisted: 'no'
 
 - name: SRBase
   link: http://srbase.my-firewall.org/sr5/
@@ -218,7 +218,7 @@ projects:
   gdpr-enable-steps: https://www.worldcommunitygrid.org/ms/viewDataSharing.action
   team: https://secure.worldcommunitygrid.org/team/viewTeamInfo.do?teamId=BBNGDQS832
   stats: https://gridcoinstats.eu/project/World_Community_Grid
-  greylisted: 'yes'
+  greylisted: 'no'
   
 - name: yoyo@home
   link: https://www.rechenkraft.net/yoyo/
