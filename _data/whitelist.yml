@@ -102,6 +102,9 @@ projects:
   sponsor: Private
   cpu: 'no'
   gpu: 'yes'
+  nvidia: 'yes'
+  amd: 'no'
+  intel: 'no'
   gdpr: 'no'
   team: https://minecraftathome.com/minecrafthome/team_display.php?teamid=1840
   stats: https://gridcoinstats.eu/project/minecraft@home
