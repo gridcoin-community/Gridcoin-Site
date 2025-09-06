@@ -10,7 +10,7 @@ redirect_from:
 
 *This page is a work in progress*
 
-RPC commands are a way to preform various actions on the wallet or get 
+RPC commands are a way to perform various actions on the wallet or get 
 information from the wallet through text. They can take in parameters
 to tell the command more information. They are run like `command parameter`.
 They can be run in a few main ways: 

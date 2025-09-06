@@ -77,7 +77,7 @@ projects:
   gdpr: 'no'
   team: https://www.gpugrid.net/team_display.php?teamid=3493
   stats: https://gridcoinstats.eu/project/gpugrid
-  greylisted: 'no'
+  greylisted: 'yes'
 
 - name: Milkyway@home
   link: http://milkyway.cs.rpi.edu/milkyway/
