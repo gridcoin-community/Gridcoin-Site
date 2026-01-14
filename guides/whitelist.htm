@@ -100,7 +100,7 @@ Any project shown is not greylisted. Your wallet must be fully synced for the la
                                 </td>
                                 <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}> {% comment %} Add warning color for background only if it requires it. No color otherwise {% endcomment %}
                                     {% if project.gdpr == "yes" %}
-                                        <a href={{project.gdpr-enable-steps}}>required<span class="oi oi-warning"></span></a>
+                                        <a href="{{ project['gdpr-enable-steps'] }}">required<span class="oi oi-warning"></span></a>
                                     {% else %}
                                       not required
                                     {% endif %}

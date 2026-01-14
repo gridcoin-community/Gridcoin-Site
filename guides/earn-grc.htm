@@ -115,7 +115,7 @@ redirect_from:
                             <ul class="text-center">
                                 {%- for project in site.data.whitelist.projects -%}
                                 {%- if project.gdpr == "yes" -%}
-                                <li class="pt-0"><ul>{{project.name}} (<a href={{project.gdpr-enable-steps}}>steps to enable</a>)</ul></li>
+                                <li class="pt-0"><ul>{{project.name}} (<a href="{{ project['gdpr-enable-steps' ]}}">steps to enable</a>)</ul></li>
                                 {%- endif -%}
                                 {%- endfor -%}
                             </ul>
