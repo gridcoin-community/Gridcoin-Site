@@ -1,29 +1,33 @@
-const allPlatforms = ["win64", "win32", "macos_arm", "macos"];
+const allPlatforms = ["win64", "macos-arm64", "macos-x86_64"];
 var platformsMissed = [...allPlatforms];
 
 function show(element){
     element.style.display = "";
 }
- 
+
 function doOtherPlatformsMatch(targetPlatform, name){
-    
+
     for (let comparePlatform of allPlatforms){
 
-        if (comparePlatform.length >= targetPlatform.length // don't match macos for macos_arm but do the other way around 
-            && comparePlatform !== targetPlatform 
+        if (comparePlatform.length >= targetPlatform.length
+            && comparePlatform !== targetPlatform
             && name.includes(targetPlatform)
             && name.includes(comparePlatform)
             ){
             return true;
         }
-        
+
     }
 
     return false;
 }
 
 function updateDownloads(data, platforms=allPlatforms, previousVersion=false) {
-    
+
+    if (!data || !data.assets) {
+        return;
+    }
+
     if(!previousVersion){
         document.getElementById("wallet-version").textContent  = 'Current Wallet Version: ' + data.name;
     }
@@ -31,7 +35,7 @@ function updateDownloads(data, platforms=allPlatforms, previousVersion=false) {
     let hotfixes = [];
 
     for (let assetFile of data.assets) {
-        
+
         const name = assetFile.name;
         const downloadURL = assetFile.browser_download_url;
 
@@ -46,14 +50,17 @@ function updateDownloads(data, platforms=allPlatforms, previousVersion=false) {
                     hotfixes.push(platform);
                 } else if (hotfixes.includes(platform)){
                     break; //if a hotfix already exists, don't update the file
-                } 
-                
+                }
+
                 const platformButton = document.getElementById(platform);
+                if (!platformButton) {
+                    continue;
+                }
                 platformButton.href = downloadURL;
                 show(platformButton);
 
                 if (name.includes("min")){
-                    const startOfMinVersion = name.indexOf("min-") + 4; 
+                    const startOfMinVersion = name.indexOf("min-") + 4;
                     const endOfFilename = name.lastIndexOf(".");
                     const minVersion = name.slice(startOfMinVersion, endOfFilename);
 
@@ -62,12 +69,14 @@ function updateDownloads(data, platforms=allPlatforms, previousVersion=false) {
 
                 if(previousVersion){
                     const versionWarn = document.getElementById(platform + "-version-warn");
-                    versionWarn.textContent += data.name;
-                    show(versionWarn);
+                    if (versionWarn) {
+                        versionWarn.textContent += data.name;
+                        show(versionWarn);
+                    }
                 }
 
                 platformsMissed = platformsMissed.filter(value => value !== platform); //remove platform from missed list
-                
+
                 break;
             }
         }
@@ -80,6 +89,10 @@ function fillInMissing(){
             .then(releases => releases.json())
             .then(releases =>{
                 for (let release of releases){
+                    // Skip pre-releases — only offer full releases as downloads.
+                    if (release.prerelease){
+                        continue;
+                    }
                     updateDownloads(release, platformsMissed, true);
                     if (platformsMissed.length === 0){
                         break;
