@@ -273,6 +273,21 @@ dfn{
     color: inherit;
 }
 
+.status-greylisted {
+    color: #ada9a9;
+}
+.status-greylisted a {
+    color: #ada9a9;
+}
+.status-excluded {
+    color: #d4a849;
+}
+.status-excluded a {
+    color: #d4a849;
+}
+.status-active {
+}
+
 /*----end whitelist.erb----*/
 /*terminology.htm*/
 .terminology-top {
