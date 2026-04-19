@@ -1,0 +1,143 @@
+---
+title: "Gridcoin - Network Analytics"
+description: "Historical time-series analytics on Gridcoin network activity — CPID churn, project participation, and more."
+---
+
+<section class="grc-bgcolor grclink mb-4">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="text-center fw-bold">Network Analytics</h2>
+                <p class="text-center mb-0">
+                    Daily snapshots of Gridcoin network activity since September 2020,
+                    derived from the Scraper's converged superblock statistics.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div id="analytics-error" class="alert alert-warning"
+                 style="display:none;" role="alert"></div>
+
+            <!-- 1. CPID activity ------------------------------------------>
+
+            <h3 class="mb-3">CPID activity over time</h3>
+            <p class="text-muted">
+                Each data point is one day. The blue line (left axis) is
+                the count of distinct CPIDs that appeared in the superblock
+                that day with positive magnitude. The green and red lines
+                (right axis) are the daily gross flows: <em>Churn in</em>
+                (active today, not yesterday) and <em>Churn out</em>
+                (active yesterday, not today). Any dataset can be hidden
+                by clicking its entry in the legend. Values on the very
+                first and last day of the series — and on days adjacent
+                to a data gap — are undefined.
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="cpid-churn-chart"></canvas>
+            </div>
+
+            <!-- 2. Project whitelist churn -------------------------------->
+
+            <h3 class="mb-3">Project whitelist churn</h3>
+            <p class="text-muted">
+                Count of projects present in the day's superblock (blue,
+                left axis) and day-over-day additions / drops (green / red,
+                right axis). Note the protocol rule: each in-superblock
+                project gets an equal share of the network-wide 115 000
+                magnitude pool, so this count directly sets the per-project
+                baseline (115 000 / N).
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 380px; width: 100%;">
+                <canvas id="project-churn-chart"></canvas>
+            </div>
+
+            <!-- 3. Per-project active CPIDs ------------------------------->
+
+            <h3 class="mb-3">Active CPIDs per project over time</h3>
+            <p class="text-muted">
+                One line per project — each day's count of distinct CPIDs
+                with positive magnitude on that project. Click a project
+                name in the legend to hide or show its line. The set of
+                projects changes over time; lines disappear when a project
+                drops out of the superblock and reappear if it's re-added.
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="project-active-cpids-chart"></canvas>
+            </div>
+
+            <!-- 4. Top researchers --------------------------------------->
+
+            <h3 class="mb-3">Top researchers by lifetime magnitude</h3>
+            <p class="text-muted">
+                Default ranking is by <em>total observed magnitude</em>
+                (sum of daily magnitude across every day the CPID appeared
+                in the observed window). Because the observed history
+                begins on 2020-09-09, CPIDs that were contributing earlier
+                are indirectly penalised — but this remains the most
+                honest cumulative measure for the captured window. Click
+                any numeric header to re-rank. Use the project filter to
+                restrict the ranking to one project's contributors.
+            </p>
+
+            <div class="row g-2 align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="top-cpids-project" class="col-form-label">Scope:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-project" class="form-select form-select-sm">
+                        <option value="">Network-wide (all projects)</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="top-cpids-limit" class="col-form-label ms-2">Show top:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-limit" class="form-select form-select-sm">
+                        <option value="25">25</option>
+                        <option value="100" selected>100</option>
+                        <option value="250">250</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <span id="top-cpids-loading" class="text-muted small" style="display:none;">Loading…</span>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-5">
+                <table class="table table-sm table-custom-dark table-hover table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>CPID</th>
+                            <th class="text-end top-cpids-sort" data-order="days_active">Days active</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_sum">Lifetime mag (total)</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_avg_active">Lifetime mag (active avg)</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_avg_elapsed">Lifetime mag (elapsed avg)</th>
+                            <th>First seen</th>
+                            <th>Last seen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="top-cpids-tbody"></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Chart.js (UMD bundle pinned to a major version) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="/assets/js/analytics-api.js"></script>
+<script src="/assets/js/fetch-cpid-churn.js"></script>
+<script src="/assets/js/fetch-project-churn.js"></script>
+<script src="/assets/js/fetch-project-active-cpids.js"></script>
+<script src="/assets/js/fetch-top-cpids.js"></script>
