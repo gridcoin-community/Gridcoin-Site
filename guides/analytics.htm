@@ -130,6 +130,43 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 </table>
             </div>
 
+            <!-- 5. CPID sand chart (stacked area by project) ------------->
+
+            <h3 class="mb-3">Magnitude contribution by project for a CPID</h3>
+            <p class="text-muted">
+                Stacked-area ("sand") chart of a single CPID's magnitude
+                broken down by project over time. Start typing a hex
+                prefix to pick from the autocomplete list, or paste a
+                full CPID (copied from the leaderboard above, for
+                example) and press <kbd>Enter</kbd>.
+            </p>
+
+            <div class="row g-2 align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="cpid-sand-input" class="col-form-label">CPID:</label>
+                </div>
+                <div class="col-auto">
+                    <input list="cpid-sand-list" id="cpid-sand-input"
+                           class="form-control form-control-sm"
+                           style="width: 360px; font-family: monospace;"
+                           placeholder="32-char hex prefix or full">
+                    <datalist id="cpid-sand-list"></datalist>
+                </div>
+                <div class="col-auto">
+                    <button id="cpid-sand-render" class="btn btn-sm btn-primary">Show</button>
+                </div>
+                <div class="col-auto">
+                    <span id="cpid-sand-loading" class="text-muted small" style="display:none;">Loading…</span>
+                </div>
+            </div>
+            <div id="cpid-sand-autocomplete-hint" class="text-muted small mb-1"></div>
+            <div id="cpid-sand-status" class="text-muted small mb-2"></div>
+
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="cpid-sand-chart"></canvas>
+            </div>
+
         </div>
     </div>
 </section>
@@ -141,3 +178,4 @@ description: "Historical time-series analytics on Gridcoin network activity — 
 <script src="/assets/js/fetch-project-churn.js"></script>
 <script src="/assets/js/fetch-project-active-cpids.js"></script>
 <script src="/assets/js/fetch-top-cpids.js"></script>
+<script src="/assets/js/fetch-cpid-sand.js"></script>
