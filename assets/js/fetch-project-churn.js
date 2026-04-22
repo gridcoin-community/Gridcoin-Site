@@ -7,19 +7,26 @@ function initProjectChurn() {
     const canvas = document.getElementById("project-churn-chart");
     if (!canvas) return;
 
-    fetch(window.analyticsApi("/api/v1/history/project-churn"))
-        .then(r => {
+    Promise.all([
+        fetch(window.analyticsApi("/api/v1/history/project-churn")).then(r => {
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return r.json();
-        })
-        .then(payload => {
+        }),
+        window.analyticsReleasesPromise || Promise.resolve([]),
+    ])
+        .then(([payload, releases]) => {
             const rows = payload.data || [];
             const labels    = rows.map(r => r.obs_date);
             const total     = rows.map(r => r.total_projects);
             const inCount   = rows.map(r => r.projects_in);
             const outCount  = rows.map(r => r.projects_out);
 
-            new Chart(canvas, {
+            const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
+            const annotations = window.buildChartAnnotations
+                ? window.buildChartAnnotations(labels, releases)
+                : {};
+
+            const chart = new Chart(canvas, {
                 data: {
                     labels: labels,
                     datasets: [
@@ -64,16 +71,21 @@ function initProjectChurn() {
                         },
                         legend: { position: "bottom" },
                         tooltip: { mode: "index", intersect: false },
+                        annotation: { annotations },
                     },
                     scales: {
                         x: {
-                            ticks: { maxTicksLimit: 12, autoSkip: true },
+                            ticks: window.yearlyXTicksConfig
+                                ? window.yearlyXTicksConfig(labels)
+                                : { maxTicksLimit: 12, autoSkip: true },
                             title: { display: true, text: "Date" },
+                            grid: grid.xGrid,
                         },
                         y: {
                             beginAtZero: false,
                             position: "left",
                             title: { display: true, text: "Projects" },
+                            grid: grid.yGrid,
                         },
                         y1: {
                             beginAtZero: true,
@@ -85,6 +97,7 @@ function initProjectChurn() {
                     },
                 },
             });
+            if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
         })
         .catch(err => {
             console.error("Failed to load project-churn:", err);

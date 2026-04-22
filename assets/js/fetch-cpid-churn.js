@@ -5,26 +5,11 @@
  * active / churn-in / churn-out line chart with Chart.js.
  */
 
-const CHURN_API_URL = (function() {
-    const host = window.location.hostname;
-    const port = window.location.port;
-    // Production: gridcoin.us uses the dedicated API subdomain.
-    if (host === "gridcoin.us" || host === "www.gridcoin.us") {
-        return "https://api.gridcoin.us/api/v1/history/cpid-churn";
-    }
-    // Jekyll dev server binds to port 4001 and has no reverse-proxy of
-    // its own — hop sideways to the FastAPI proxy on :5000 of the same
-    // host. Works for 127.0.0.1/localhost and for any LAN hostname the
-    // dev server has been bound to.
-    if (port === "4001") {
-        return `${window.location.protocol}//${host}:5000/api/v1/history/cpid-churn`;
-    }
-    // Everything else (Caddy staging on :81, same-origin prod reverse-proxy)
-    // serves the API under the same origin via /api/v1/*.
-    return "/api/v1/history/cpid-churn";
-})();
+const CHURN_API_URL = window.analyticsApi
+    ? window.analyticsApi("/api/v1/history/cpid-churn")
+    : "/api/v1/history/cpid-churn";
 
-function renderCpidChurnChart(records) {
+function renderCpidChurnChart(records, releases) {
     const canvas = document.getElementById("cpid-churn-chart");
     if (!canvas || !window.Chart) return;
 
@@ -33,7 +18,12 @@ function renderCpidChurnChart(records) {
     const churnIn = records.map(r => r.churn_in);
     const churnOut = records.map(r => r.churn_out);
 
-    new Chart(canvas, {
+    const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
+    const annotations = window.buildChartAnnotations
+        ? window.buildChartAnnotations(labels, releases)
+        : {};
+
+    const chart = new Chart(canvas, {
         type: "line",
         data: {
             labels: labels,
@@ -80,16 +70,21 @@ function renderCpidChurnChart(records) {
                 },
                 legend: { position: "bottom" },
                 tooltip: { mode: "index", intersect: false },
+                annotation: { annotations },
             },
             scales: {
                 x: {
-                    ticks: { maxTicksLimit: 12, autoSkip: true },
+                    ticks: window.yearlyXTicksConfig
+                        ? window.yearlyXTicksConfig(labels)
+                        : { maxTicksLimit: 12, autoSkip: true },
                     title: { display: true, text: "Date" },
+                    grid: grid.xGrid,
                 },
                 y: {
                     beginAtZero: false,
                     position: "left",
                     title: { display: true, text: "Active CPIDs" },
+                    grid: grid.yGrid,
                 },
                 y1: {
                     beginAtZero: true,
@@ -100,20 +95,26 @@ function renderCpidChurnChart(records) {
             },
         },
     });
+    if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
 }
 
 function initCpidChurn() {
     const errBanner = document.getElementById("analytics-error");
-    fetch(CHURN_API_URL)
-        .then(r => {
+    // Fetch the data and the release list in parallel; releases may arrive
+    // slightly later but that's fine — the chart will render without the
+    // annotation overlay if the releases request fails.
+    Promise.all([
+        fetch(CHURN_API_URL).then(r => {
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return r.json();
-        })
-        .then(payload => {
+        }),
+        window.analyticsReleasesPromise || Promise.resolve([]),
+    ])
+        .then(([payload, releases]) => {
             if (!payload || !Array.isArray(payload.data)) {
                 throw new Error("Unexpected API payload");
             }
-            renderCpidChurnChart(payload.data);
+            renderCpidChurnChart(payload.data, releases || []);
         })
         .catch(err => {
             console.error("Failed to load cpid-churn:", err);

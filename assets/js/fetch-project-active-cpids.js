@@ -38,17 +38,23 @@ function initProjectActiveCpids() {
     const canvas = document.getElementById("project-active-cpids-chart");
     if (!canvas) return;
 
-    fetch(window.analyticsApi("/api/v1/history/project-active-cpids"))
-        .then(r => {
+    Promise.all([
+        fetch(window.analyticsApi("/api/v1/history/project-active-cpids")).then(r => {
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return r.json();
-        })
-        .then(payload => {
+        }),
+        window.analyticsReleasesPromise || Promise.resolve([]),
+    ])
+        .then(([payload, releases]) => {
             if (!payload || !Array.isArray(payload.data)) {
                 throw new Error("Unexpected payload");
             }
             const { labels, datasets } = buildPerProjectSeries(payload.data);
-            new Chart(canvas, {
+            const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
+            const annotations = window.buildChartAnnotations
+                ? window.buildChartAnnotations(labels, releases)
+                : {};
+            const chart = new Chart(canvas, {
                 type: "line",
                 data: { labels, datasets },
                 options: {
@@ -65,19 +71,25 @@ function initProjectActiveCpids() {
                             labels: { boxWidth: 12, padding: 8 },
                         },
                         tooltip: { mode: "index", intersect: false },
+                        annotation: { annotations },
                     },
                     scales: {
                         x: {
-                            ticks: { maxTicksLimit: 12, autoSkip: true },
+                            ticks: window.yearlyXTicksConfig
+                                ? window.yearlyXTicksConfig(labels)
+                                : { maxTicksLimit: 12, autoSkip: true },
                             title: { display: true, text: "Date" },
+                            grid: grid.xGrid,
                         },
                         y: {
                             beginAtZero: true,
                             title: { display: true, text: "Active CPIDs (mag > 0)" },
+                            grid: grid.yGrid,
                         },
                     },
                 },
             });
+            if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
         })
         .catch(err => {
             console.error("Failed to load project-active-cpids:", err);

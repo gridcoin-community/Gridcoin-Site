@@ -96,6 +96,16 @@ function renderSandChart(rows) {
 
     const { labels, datasets } = pivotByProject(rows);
 
+    const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
+    // The sand chart re-instantiates on every CPID selection. Reading the
+    // cached resolved list keeps this sync — on the very first selection
+    // before the releases fetch has settled we just skip the release
+    // markers and fall back to quarterly-only annotations.
+    const releases = window.analyticsReleases || [];
+    const annotations = window.buildChartAnnotations
+        ? window.buildChartAnnotations(labels, releases)
+        : {};
+
     sandState.chart = new Chart(canvas, {
         type: "line",
         data: { labels, datasets },
@@ -113,20 +123,26 @@ function renderSandChart(rows) {
                     labels: { boxWidth: 12, padding: 8 },
                 },
                 tooltip: { mode: "index", intersect: false },
+                annotation: { annotations },
             },
             scales: {
                 x: {
-                    ticks: { maxTicksLimit: 12, autoSkip: true },
+                    ticks: window.yearlyXTicksConfig
+                        ? window.yearlyXTicksConfig(labels)
+                        : { maxTicksLimit: 12, autoSkip: true },
                     title: { display: true, text: "Date" },
+                    grid: grid.xGrid,
                 },
                 y: {
                     stacked: true,
                     beginAtZero: true,
                     title: { display: true, text: "Magnitude" },
+                    grid: grid.yGrid,
                 },
             },
         },
     });
+    if (window.registerAnalyticsChart) window.registerAnalyticsChart(sandState.chart);
 }
 
 function loadSandChart() {

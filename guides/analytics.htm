@@ -24,6 +24,26 @@ description: "Historical time-series analytics on Gridcoin network activity — 
             <div id="analytics-error" class="alert alert-warning"
                  style="display:none;" role="alert"></div>
 
+            <!-- Annotation legend -->
+            <div class="mb-3 small">
+                <div class="d-flex flex-wrap gap-4 align-items-center">
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px; background:rgba(255,165,0,0.85);"></span>
+                        Mandatory release (labeled at top of line)
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px; background:rgba(200,200,200,0.35);"></span>
+                        Year boundary (Jan 1)
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px;
+                                     background:repeating-linear-gradient(to bottom,
+                                        rgba(200,200,200,0.25) 0 2px, transparent 2px 6px);"></span>
+                        Quarter boundary (Apr / Jul / Oct 1)
+                    </span>
+                </div>
+            </div>
+
             <!-- 1. CPID activity ------------------------------------------>
 
             <h3 class="mb-3">CPID activity over time</h3>
@@ -173,7 +193,10 @@ description: "Historical time-series analytics on Gridcoin network activity — 
 
 <!-- Chart.js (UMD bundle pinned to a major version) -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<!-- chartjs-plugin-annotation v3 (compatible with Chart.js v4) -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
 <script src="/assets/js/analytics-api.js"></script>
+<script src="/assets/js/chart-helpers.js"></script>
 <script src="/assets/js/fetch-cpid-churn.js"></script>
 <script src="/assets/js/fetch-project-churn.js"></script>
 <script src="/assets/js/fetch-project-active-cpids.js"></script>
