@@ -196,9 +196,11 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 <strong>foundation fee</strong>, and <strong>staker fee</strong>.
                 The dotted red line on the secondary axis is the per-day
                 count of MRCs paid (typically much smaller than the GRC
-                amounts, hence its own scale). Sourced via
-                <code>getmrcinfo</code> RPC bracketed by daily UTC block
-                boundaries.
+                amounts, hence its own scale). All series are smoothed
+                with a trailing 7-day moving average to suppress the
+                day-to-day spikes from individual large MRC claims.
+                Sourced via <code>getmrcinfo</code> RPC bracketed by
+                daily UTC block boundaries.
             </p>
 
             <div class="chart-container position-relative mb-5"

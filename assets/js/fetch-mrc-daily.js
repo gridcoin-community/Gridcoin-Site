@@ -18,15 +18,36 @@ const MRC_API_URL = window.analyticsApi
     ? window.analyticsApi("/api/v1/history/mrc-daily")
     : "/api/v1/history/mrc-daily";
 
+// Rolling-mean window. Trailing (each point is the average of the
+// preceding `MA_WINDOW` days including itself), so the right edge is
+// "honest" rather than running ahead in time. The first MA_WINDOW-1
+// days are computed over the available history (a partial window) so
+// the series starts at the data's start rather than `MA_WINDOW` days
+// later — visually cleaner and the partial-window distortion is small
+// against the noise we're trying to suppress.
+const MA_WINDOW = 7;
+
+function rollingMean(arr, window) {
+    const out = new Array(arr.length);
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+        if (i >= window) sum -= arr[i - window];
+        const denom = Math.min(i + 1, window);
+        out[i] = sum / denom;
+    }
+    return out;
+}
+
 function renderMrcDailyChart(records, releases) {
     const canvas = document.getElementById("mrc-daily-chart");
     if (!canvas || !window.Chart) return;
 
     const labels = records.map(r => r.obs_date);
-    const netToResearcher = records.map(r => r.net_to_researcher);
-    const foundationFees  = records.map(r => r.foundation_fees);
-    const stakerFees      = records.map(r => r.staker_fees);
-    const mrcsPaid        = records.map(r => r.mrcs_paid);
+    const netToResearcher = rollingMean(records.map(r => r.net_to_researcher), MA_WINDOW);
+    const foundationFees  = rollingMean(records.map(r => r.foundation_fees),   MA_WINDOW);
+    const stakerFees      = rollingMean(records.map(r => r.staker_fees),       MA_WINDOW);
+    const mrcsPaid        = rollingMean(records.map(r => r.mrcs_paid),         MA_WINDOW);
 
     const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
     const annotations = window.buildChartAnnotations
@@ -99,7 +120,7 @@ function renderMrcDailyChart(records, releases) {
             plugins: {
                 title: {
                     display: true,
-                    text: "Daily MRC payments — net-to-researcher / foundation fees / staker fees (stacked, left); MRCs/day count (right)",
+                    text: "Daily MRC payments (7-day moving average) — net-to-researcher / foundation fees / staker fees (stacked, left); MRCs/day count (right)",
                 },
                 legend: { position: "bottom" },
                 tooltip: { mode: "index", intersect: false },
