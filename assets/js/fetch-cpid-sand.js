@@ -145,6 +145,10 @@ function renderSandChart(rows) {
     if (window.registerAnalyticsChart) window.registerAnalyticsChart(sandState.chart);
 }
 
+// Exposed globally so the top-CPIDs leaderboard can drive the sand chart
+// programmatically when a user clicks a CPID in the table.
+window.loadSandChart = function() { return loadSandChart(); };
+
 function loadSandChart() {
     const input   = document.getElementById("cpid-sand-input");
     const loading = document.getElementById("cpid-sand-loading");

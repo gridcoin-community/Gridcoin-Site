@@ -24,9 +24,17 @@ function renderTopCpidsRows(rows) {
     tbody.innerHTML = "";
     rows.forEach((row, i) => {
         const tr = document.createElement("tr");
+        // The CPID cell is rendered as a link styled `<code>` so it's
+        // discoverable as clickable. Click drops the full CPID into the
+        // sand-chart input below and triggers a render. A descriptive
+        // title ("...click to plot below") is appended to the existing
+        // tooltip-of-full-CPID so screen readers and hover users see
+        // both the value and the affordance.
         tr.innerHTML = `
             <td class="text-muted">${i + 1}</td>
-            <td><code title="${row.cpid}">${shortCpid(row.cpid)}</code></td>
+            <td><a href="#cpid-sand-section" class="cpid-link"
+                   title="${row.cpid} — click to plot below"
+                   data-cpid="${row.cpid}"><code>${shortCpid(row.cpid)}</code></a></td>
             <td class="text-end">${formatNumber(row.days_active, 0)}</td>
             <td class="text-end">${formatNumber(row.lifetime_mag_sum, 2)}</td>
             <td class="text-end">${formatNumber(row.lifetime_mag_avg_active, 2)}</td>
@@ -35,6 +43,31 @@ function renderTopCpidsRows(rows) {
             <td>${row.last_seen || ""}</td>
         `;
         tbody.appendChild(tr);
+    });
+}
+
+// Single delegated click handler on the tbody — survives table re-renders
+// without re-binding per-row, and only attaches once.
+function wireCpidClickToSandChart() {
+    const tbody = document.getElementById("top-cpids-tbody");
+    if (!tbody || tbody.dataset.cpidClickWired) return;
+    tbody.dataset.cpidClickWired = "1";
+    tbody.addEventListener("click", function(ev) {
+        const link = ev.target.closest("a.cpid-link");
+        if (!link) return;
+        const cpid = link.dataset.cpid;
+        if (!cpid) return;
+        ev.preventDefault();
+        const sandInput = document.getElementById("cpid-sand-input");
+        if (sandInput) sandInput.value = cpid;
+        if (typeof window.loadSandChart === "function") {
+            window.loadSandChart();
+        }
+        const target = document.getElementById("cpid-sand-section")
+            || document.getElementById("cpid-sand-input");
+        if (target && target.scrollIntoView) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
     });
 }
 
@@ -131,6 +164,7 @@ function initTopCpids() {
 
     populateProjectDropdown();
     loadTopCpids();
+    wireCpidClickToSandChart();
 }
 
 if (document.readyState === "loading") {
