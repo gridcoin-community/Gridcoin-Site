@@ -187,6 +187,25 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 <canvas id="cpid-sand-chart"></canvas>
             </div>
 
+            <!-- 6. Daily MRC payments (stacked area + count line) ----------->
+
+            <h3 class="mb-3">MRC (Manual Research Claim) payments per day</h3>
+            <p class="text-muted">
+                Daily volume of MRC research-reward payments, stacked
+                by where each GRC ends up: <strong>net to researcher</strong>,
+                <strong>foundation fee</strong>, and <strong>staker fee</strong>.
+                The dotted red line on the secondary axis is the per-day
+                count of MRCs paid (typically much smaller than the GRC
+                amounts, hence its own scale). Sourced via
+                <code>getmrcinfo</code> RPC bracketed by daily UTC block
+                boundaries.
+            </p>
+
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="mrc-daily-chart"></canvas>
+            </div>
+
         </div>
     </div>
 </section>
@@ -202,3 +221,4 @@ description: "Historical time-series analytics on Gridcoin network activity — 
 <script src="/assets/js/fetch-project-active-cpids.js"></script>
 <script src="/assets/js/fetch-top-cpids.js"></script>
 <script src="/assets/js/fetch-cpid-sand.js"></script>
+<script src="/assets/js/fetch-mrc-daily.js"></script>
