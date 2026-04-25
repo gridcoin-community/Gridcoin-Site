@@ -197,10 +197,12 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 The dotted red line on the secondary axis is the per-day
                 count of MRCs paid (typically much smaller than the GRC
                 amounts, hence its own scale). All series are smoothed
-                with a trailing 7-day moving average to suppress the
-                day-to-day spikes from individual large MRC claims.
-                Sourced via <code>getmrcinfo</code> RPC bracketed by
-                daily UTC block boundaries.
+                with a centered 14-day moving average (each point is
+                the mean of the surrounding 14 days, half before and
+                half after) to suppress the day-to-day spikes from
+                individual large MRC claims while preserving the
+                longer-term trend. Sourced via <code>getmrcinfo</code>
+                RPC bracketed by daily UTC block boundaries.
             </p>
 
             <div class="chart-container position-relative mb-5"

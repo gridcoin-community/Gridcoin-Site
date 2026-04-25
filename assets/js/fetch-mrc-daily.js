@@ -18,36 +18,40 @@ const MRC_API_URL = window.analyticsApi
     ? window.analyticsApi("/api/v1/history/mrc-daily")
     : "/api/v1/history/mrc-daily";
 
-// Rolling-mean window. Trailing (each point is the average of the
-// preceding `MA_WINDOW` days including itself), so the right edge is
-// "honest" rather than running ahead in time. The first MA_WINDOW-1
-// days are computed over the available history (a partial window) so
-// the series starts at the data's start rather than `MA_WINDOW` days
-// later — visually cleaner and the partial-window distortion is small
-// against the noise we're trying to suppress.
-const MA_WINDOW = 7;
+// Centered 14-day moving average. Each point is the mean of a
+// 14-day window centered (as nearly as the even width allows) on the
+// point: 7 days before through 6 days after, inclusive. Centered
+// rather than trailing for better visual smoothness; the trade-off
+// is that the rightmost ~6 days fall in a partial window and so are
+// noisier than the bulk of the series. Edge points (both ends) use
+// whatever portion of the window is available.
+const MA_WINDOW = 14;
+const MA_HALF_BEFORE = MA_WINDOW / 2;          // 7
+const MA_HALF_AFTER  = MA_WINDOW - MA_HALF_BEFORE - 1;  // 6
 
-function rollingMean(arr, window) {
+function rollingMean(arr, halfBefore, halfAfter) {
     const out = new Array(arr.length);
-    let sum = 0;
     for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-        if (i >= window) sum -= arr[i - window];
-        const denom = Math.min(i + 1, window);
-        out[i] = sum / denom;
+        const lo = Math.max(0, i - halfBefore);
+        const hi = Math.min(arr.length - 1, i + halfAfter);
+        let sum = 0;
+        for (let j = lo; j <= hi; j++) sum += arr[j];
+        out[i] = sum / (hi - lo + 1);
     }
     return out;
 }
+
+const MA_SUFFIX = " (14d MA)";
 
 function renderMrcDailyChart(records, releases) {
     const canvas = document.getElementById("mrc-daily-chart");
     if (!canvas || !window.Chart) return;
 
     const labels = records.map(r => r.obs_date);
-    const netToResearcher = rollingMean(records.map(r => r.net_to_researcher), MA_WINDOW);
-    const foundationFees  = rollingMean(records.map(r => r.foundation_fees),   MA_WINDOW);
-    const stakerFees      = rollingMean(records.map(r => r.staker_fees),       MA_WINDOW);
-    const mrcsPaid        = rollingMean(records.map(r => r.mrcs_paid),         MA_WINDOW);
+    const netToResearcher = rollingMean(records.map(r => r.net_to_researcher), MA_HALF_BEFORE, MA_HALF_AFTER);
+    const foundationFees  = rollingMean(records.map(r => r.foundation_fees),   MA_HALF_BEFORE, MA_HALF_AFTER);
+    const stakerFees      = rollingMean(records.map(r => r.staker_fees),       MA_HALF_BEFORE, MA_HALF_AFTER);
+    const mrcsPaid        = rollingMean(records.map(r => r.mrcs_paid),         MA_HALF_BEFORE, MA_HALF_AFTER);
 
     const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
     const annotations = window.buildChartAnnotations
@@ -63,7 +67,7 @@ function renderMrcDailyChart(records, releases) {
                 // then foundation fees, then staker fees on top. Stack
                 // total = gross MRC research reward for that day.
                 {
-                    label: "Net to researcher",
+                    label: "Net to researcher" + MA_SUFFIX,
                     data: netToResearcher,
                     borderColor: "#2d6cdf",
                     backgroundColor: "rgba(45, 108, 223, 0.45)",
@@ -74,7 +78,7 @@ function renderMrcDailyChart(records, releases) {
                     stack: "amounts",
                 },
                 {
-                    label: "Foundation fees",
+                    label: "Foundation fees" + MA_SUFFIX,
                     data: foundationFees,
                     borderColor: "#7e57c2",
                     backgroundColor: "rgba(126, 87, 194, 0.55)",
@@ -85,7 +89,7 @@ function renderMrcDailyChart(records, releases) {
                     stack: "amounts",
                 },
                 {
-                    label: "Staker fees",
+                    label: "Staker fees" + MA_SUFFIX,
                     data: stakerFees,
                     borderColor: "#ef6c00",
                     backgroundColor: "rgba(239, 108, 0, 0.55)",
@@ -99,7 +103,7 @@ function renderMrcDailyChart(records, releases) {
                 // than the amounts so it gets its own scale; rendered
                 // as a thin dotted line behind the stacked areas.
                 {
-                    label: "MRCs paid",
+                    label: "MRCs paid" + MA_SUFFIX,
                     data: mrcsPaid,
                     type: "line",
                     borderColor: "#d62728",
@@ -120,7 +124,7 @@ function renderMrcDailyChart(records, releases) {
             plugins: {
                 title: {
                     display: true,
-                    text: "Daily MRC payments (7-day moving average) — net-to-researcher / foundation fees / staker fees (stacked, left); MRCs/day count (right)",
+                    text: "Daily MRC payments (14-day centered moving average) — net-to-researcher / foundation fees / staker fees (stacked, left); MRCs/day count (right)",
                 },
                 legend: { position: "bottom" },
                 tooltip: { mode: "index", intersect: false },
