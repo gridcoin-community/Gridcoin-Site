@@ -116,6 +116,32 @@ function updateSortIndicators() {
     });
 }
 
+// Build the period/custom-range query-string fragment. Returns "" on
+// invalid custom selection (and surfaces a status message via
+// analyticsError) so the caller can short-circuit.
+function topCpidsPeriodParams() {
+    const periodSel = document.getElementById("top-cpids-period");
+    const period = periodSel ? periodSel.value : "all";
+
+    if (period === "custom") {
+        const startEl = document.getElementById("top-cpids-start-date");
+        const endEl   = document.getElementById("top-cpids-end-date");
+        const start = startEl ? startEl.value : "";
+        const end   = endEl   ? endEl.value   : "";
+        if (!start || !end) {
+            return { ok: false, msg: "Pick both a start and end date." };
+        }
+        if (start > end) {
+            return { ok: false, msg: "Start date must be on or before end date." };
+        }
+        return { ok: true, qs: `&start_date=${start}&end_date=${end}` };
+    }
+
+    // "all" / "week" / "month" / "quarter" / "year" — pass period
+    // through (backend treats period=all the same as omitting it).
+    return { ok: true, qs: `&period=${encodeURIComponent(period)}` };
+}
+
 function loadTopCpids() {
     const projectSel = document.getElementById("top-cpids-project");
     const limitSel   = document.getElementById("top-cpids-limit");
@@ -124,9 +150,16 @@ function loadTopCpids() {
     const project = projectSel ? projectSel.value : "";
     const limit   = limitSel   ? limitSel.value   : "100";
 
+    const periodParams = topCpidsPeriodParams();
+    if (!periodParams.ok) {
+        window.analyticsError(periodParams.msg);
+        return;
+    }
+
     let url = `/api/v1/history/top-cpids`
         + `?limit=${encodeURIComponent(limit)}`
-        + `&order_by=${encodeURIComponent(topCpidsOrderBy)}`;
+        + `&order_by=${encodeURIComponent(topCpidsOrderBy)}`
+        + periodParams.qs;
     if (project) url += `&project=${encodeURIComponent(project)}`;
 
     updateSortIndicators();
@@ -175,9 +208,38 @@ function populateProjectDropdown() {
 function initTopCpids() {
     const projectSel = document.getElementById("top-cpids-project");
     const limitSel   = document.getElementById("top-cpids-limit");
+    const periodSel  = document.getElementById("top-cpids-period");
 
     if (projectSel) projectSel.addEventListener("change", loadTopCpids);
     if (limitSel)   limitSel.addEventListener("change", loadTopCpids);
+
+    // Period selector — show/hide the custom-range inputs and reload.
+    // For canned periods we reload immediately on change. For custom
+    // we wait for the Apply button so the user can fill both dates
+    // before firing a request.
+    const customRangeEls = document.querySelectorAll(".top-cpids-custom-range");
+    const showCustomRange = (show) => {
+        customRangeEls.forEach(el => { el.style.display = show ? "" : "none"; });
+    };
+    if (periodSel) {
+        periodSel.addEventListener("change", () => {
+            const isCustom = periodSel.value === "custom";
+            showCustomRange(isCustom);
+            if (!isCustom) loadTopCpids();
+        });
+    }
+    const applyBtn = document.getElementById("top-cpids-apply-range");
+    if (applyBtn) applyBtn.addEventListener("click", loadTopCpids);
+
+    // Pre-fill the custom date inputs with a sensible default (last
+    // year ending today) so the picker isn't empty when first opened.
+    const today = new Date();
+    const yearAgo = new Date(today.getTime() - 365 * 86400 * 1000);
+    const fmt = (d) => d.toISOString().slice(0, 10);
+    const startEl = document.getElementById("top-cpids-start-date");
+    const endEl   = document.getElementById("top-cpids-end-date");
+    if (startEl && !startEl.value) startEl.value = fmt(yearAgo);
+    if (endEl   && !endEl.value)   endEl.value   = fmt(today);
 
     // The hide-pools toggle re-renders from cached rows without
     // re-fetching — the filter is purely client-side.

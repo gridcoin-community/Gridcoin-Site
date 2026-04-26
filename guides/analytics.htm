@@ -129,20 +129,20 @@ description: "Historical time-series analytics on Gridcoin network activity — 
 
             <!-- 5. Top researchers --------------------------------------->
 
-            <h3 class="mb-3">Top researchers by lifetime magnitude</h3>
+            <h3 class="mb-3">Top researchers by magnitude</h3>
             <p class="text-muted">
                 Default ranking is by <em>total observed magnitude</em>
-                (sum of daily magnitude across every day the CPID appeared
-                in the observed window). Because the observed history
-                begins on 2020-09-09, CPIDs that were contributing earlier
-                are indirectly penalised — but this remains the most
-                honest cumulative measure for the captured window. Click
-                any numeric header to re-rank. Use the project filter to
-                restrict the ranking to one project's contributors.
-                Pool CPIDs aggregate many crunchers and dominate the
-                top of the lifetime ranking; they're tagged with a
-                badge linking to the pool's site. Toggle <em>Hide pool
-                CPIDs</em> to rank only individual researchers.
+                (sum of daily magnitude across every day in the selected
+                window). All-time covers the full observed history (since
+                2020-09-09); the canned periods (week / month / quarter /
+                year) are rolling windows ending today. Pick <em>Custom
+                range</em> to enter explicit dates. Click any numeric
+                header to re-rank. Use the project filter to restrict the
+                ranking to one project's contributors. Pool CPIDs aggregate
+                many crunchers and dominate the top of the lifetime
+                ranking; they're tagged with a badge linking to the pool's
+                site. Toggle <em>Hide pool CPIDs</em> to rank only
+                individual researchers.
             </p>
 
             <div class="row g-2 align-items-center mb-3">
@@ -153,6 +153,33 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                     <select id="top-cpids-project" class="form-select form-select-sm">
                         <option value="">Network-wide (all projects)</option>
                     </select>
+                </div>
+                <div class="col-auto">
+                    <label for="top-cpids-period" class="col-form-label ms-2">Period:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-period" class="form-select form-select-sm">
+                        <option value="all" selected>All time</option>
+                        <option value="week">Past week</option>
+                        <option value="month">Past month</option>
+                        <option value="quarter">Past quarter</option>
+                        <option value="year">Past year</option>
+                        <option value="custom">Custom range…</option>
+                    </select>
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <input type="date" id="top-cpids-start-date"
+                           class="form-control form-control-sm" style="width: 160px;">
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <span class="col-form-label">to</span>
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <input type="date" id="top-cpids-end-date"
+                           class="form-control form-control-sm" style="width: 160px;">
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <button id="top-cpids-apply-range" class="btn btn-sm btn-primary">Apply</button>
                 </div>
                 <div class="col-auto">
                     <label for="top-cpids-limit" class="col-form-label ms-2">Show top:</label>
