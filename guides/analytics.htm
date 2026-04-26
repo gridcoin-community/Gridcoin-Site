@@ -63,7 +63,34 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 <canvas id="cpid-churn-chart"></canvas>
             </div>
 
-            <!-- 2. Project whitelist churn -------------------------------->
+            <!-- 2. Daily MRC payments (stacked area + count line) ----------->
+
+            <h3 class="mb-3">MRC (Manual Research Claim) payments per day</h3>
+            <p class="text-muted">
+                Daily volume of MRC research-reward payments, stacked
+                by where each GRC ends up: <strong>net to researcher</strong>,
+                <strong>foundation fee</strong>, and <strong>staker fee</strong>.
+                The dotted red line on the secondary axis is the per-day
+                count of MRCs paid (typically much smaller than the GRC
+                amounts, hence its own scale). All series are smoothed
+                with a centered 14-day moving average (each point is
+                the mean of the surrounding 14 days, half before and
+                half after) to suppress the day-to-day spikes from
+                individual large MRC claims while preserving the
+                longer-term trend. The x-axis is aligned to the CPID-
+                activity chart above; MRC support didn't exist before
+                v12 (block height 2&#8239;671&#8239;700, mainnet
+                2022-08-28), so the leading portion of the series is
+                zero by construction. Sourced via <code>getmrcinfo</code>
+                RPC bracketed by daily UTC block boundaries.
+            </p>
+
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="mrc-daily-chart"></canvas>
+            </div>
+
+            <!-- 3. Project whitelist churn -------------------------------->
 
             <h3 class="mb-3">Project whitelist churn</h3>
             <p class="text-muted">
@@ -79,7 +106,7 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 <canvas id="project-churn-chart"></canvas>
             </div>
 
-            <!-- 3. Per-project active CPIDs ------------------------------->
+            <!-- 4. Per-project active CPIDs ------------------------------->
 
             <h3 class="mb-3">Active CPIDs per project over time</h3>
             <p class="text-muted">
@@ -94,7 +121,7 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 <canvas id="project-active-cpids-chart"></canvas>
             </div>
 
-            <!-- 4. Top researchers --------------------------------------->
+            <!-- 5. Top researchers --------------------------------------->
 
             <h3 class="mb-3">Top researchers by lifetime magnitude</h3>
             <p class="text-muted">
@@ -150,7 +177,7 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 </table>
             </div>
 
-            <!-- 5. CPID sand chart (stacked area by project) ------------->
+            <!-- 6. CPID sand chart (stacked area by project) ------------->
 
             <h3 id="cpid-sand-section" class="mb-3">Magnitude contribution by project for a CPID</h3>
             <p class="text-muted">
@@ -185,29 +212,6 @@ description: "Historical time-series analytics on Gridcoin network activity — 
             <div class="chart-container position-relative mb-5"
                  style="height: 480px; width: 100%;">
                 <canvas id="cpid-sand-chart"></canvas>
-            </div>
-
-            <!-- 6. Daily MRC payments (stacked area + count line) ----------->
-
-            <h3 class="mb-3">MRC (Manual Research Claim) payments per day</h3>
-            <p class="text-muted">
-                Daily volume of MRC research-reward payments, stacked
-                by where each GRC ends up: <strong>net to researcher</strong>,
-                <strong>foundation fee</strong>, and <strong>staker fee</strong>.
-                The dotted red line on the secondary axis is the per-day
-                count of MRCs paid (typically much smaller than the GRC
-                amounts, hence its own scale). All series are smoothed
-                with a centered 14-day moving average (each point is
-                the mean of the surrounding 14 days, half before and
-                half after) to suppress the day-to-day spikes from
-                individual large MRC claims while preserving the
-                longer-term trend. Sourced via <code>getmrcinfo</code>
-                RPC bracketed by daily UTC block boundaries.
-            </p>
-
-            <div class="chart-container position-relative mb-5"
-                 style="height: 480px; width: 100%;">
-                <canvas id="mrc-daily-chart"></canvas>
             </div>
 
         </div>

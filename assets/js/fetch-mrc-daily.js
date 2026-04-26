@@ -18,6 +18,34 @@ const MRC_API_URL = window.analyticsApi
     ? window.analyticsApi("/api/v1/history/mrc-daily")
     : "/api/v1/history/mrc-daily";
 
+// We align the MRC chart's x-axis to the CPID-activity chart above so
+// that visual correlations between CPID participation and MRC volume
+// are easy to spot. CPID-activity history goes back to 2020-09-09 but
+// MRC support didn't exist before v12 (mainnet block 2 671 700,
+// 2022-08-28), so the leading portion of the MRC series is zeros by
+// construction. Sourcing the date axis from cpid-churn — rather than
+// hardcoding a start date — keeps the two charts in lockstep if the
+// underlying ConvergedStats history is ever extended.
+const CPID_CHURN_API_URL = window.analyticsApi
+    ? window.analyticsApi("/api/v1/history/cpid-churn")
+    : "/api/v1/history/cpid-churn";
+
+const MRC_ZERO_RECORD = {
+    mrcs_paid: 0,
+    mrcs_fee_boosted: 0,
+    gross_research: 0,
+    net_to_researcher: 0,
+    foundation_fees: 0,
+    staker_fees: 0,
+    calc_min_fees: 0,
+    fee_boost: 0,
+};
+
+function alignMrcToLabels(mrcRecords, axisLabels) {
+    const byDate = new Map(mrcRecords.map(r => [r.obs_date, r]));
+    return axisLabels.map(date => byDate.get(date) || { obs_date: date, ...MRC_ZERO_RECORD });
+}
+
 // Centered 14-day moving average. Each point is the mean of a
 // 14-day window centered (as nearly as the even width allows) on the
 // point: 7 days before through 6 days after, inclusive. Centered
@@ -167,13 +195,22 @@ function initMrcDaily() {
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return r.json();
         }),
+        fetch(CPID_CHURN_API_URL).then(r => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        }),
         window.analyticsReleasesPromise || Promise.resolve([]),
     ])
-        .then(([payload, releases]) => {
-            if (!payload || !Array.isArray(payload.data)) {
-                throw new Error("Unexpected API payload");
+        .then(([mrcPayload, cpidPayload, releases]) => {
+            if (!mrcPayload || !Array.isArray(mrcPayload.data)) {
+                throw new Error("Unexpected mrc-daily payload");
             }
-            renderMrcDailyChart(payload.data, releases || []);
+            if (!cpidPayload || !Array.isArray(cpidPayload.data)) {
+                throw new Error("Unexpected cpid-churn payload");
+            }
+            const axisLabels = cpidPayload.data.map(r => r.obs_date);
+            const aligned = alignMrcToLabels(mrcPayload.data, axisLabels);
+            renderMrcDailyChart(aligned, releases || []);
         })
         .catch(err => {
             console.error("Failed to load mrc-daily:", err);
