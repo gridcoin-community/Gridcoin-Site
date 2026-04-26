@@ -5,13 +5,14 @@
  * Provides:
  *   window.analyticsReleasesPromise   — single fetch of /api/v1/history/releases
  *   window.buildReleaseAnnotations()  — Chart.js annotation objects for
- *                                       mandatory + leisure release markers
+ *                                       mandatory release markers
  *   window.buildQuarterlyAnnotations()— quarterly + annual vertical guides
  *   window.softGridScales()           — softer horizontal grid defaults
- *   window.registerAnalyticsChart()   — so the leisure-toggle can redraw all
  *
  * Chart.js v4 + chartjs-plugin-annotation v3 are pinned via CDN on the
- * consuming page (guides/analytics.htm).
+ * consuming page (guides/analytics.htm). Only mandatory releases are
+ * rendered; the API still returns leisure releases (the data layer is
+ * unchanged) but they are filtered out at annotation-build time.
  */
 
 // Single in-flight promise — all per-chart modules that await this share
@@ -42,19 +43,6 @@ window.analyticsReleasesPromise = (function() {
             return [];
         });
 })();
-
-// Global toggle state; driven by the "Show leisure releases" checkbox in
-// analytics.htm. Each release-annotation object reads this via its
-// `display` callback, so toggling doesn't require rebuilding the chart —
-// a cheap chart.update() is enough.
-window.analyticsShowLeisure = false;
-
-// Chart registry so the leisure toggle can ripple an update() across every
-// chart on the page.
-window.analyticsCharts = window.analyticsCharts || [];
-window.registerAnalyticsChart = function(chart) {
-    window.analyticsCharts.push(chart);
-};
 
 /**
  * Nearest-label lookup. Chart.js time-series charts use a category x-axis
@@ -91,16 +79,16 @@ function nearestLabel(labels, isoDate) {
 }
 
 /**
- * Chart.js-annotation-plugin objects, one per non-prerelease GitHub
- * release whose publication date falls within the chart's label range.
- * Mandatory releases are solid orange, leisure/unknown are dotted light
- * gray (and hidden unless the global toggle is on).
+ * Chart.js-annotation-plugin objects, one per mandatory GitHub release
+ * whose publication date falls within the chart's label range. The API
+ * still returns leisure/unknown releases — they're filtered out here so
+ * the rendered annotation set stays uncluttered.
  */
 // Snap window: a mandatory release within this many days *before* the
 // chart's first data point is snapped to the leftmost label with a "←"
 // prefix so the reader can see that the data window opens just after
 // that release (e.g. the 5.0.0.0 mandatory on 2020-09-04 vs. data start
-// on 2020-09-09). Non-mandatory pre-data releases are still skipped.
+// on 2020-09-09).
 const PRE_DATA_SNAP_DAYS = 30;
 
 window.buildReleaseAnnotations = function(releases, labels) {
@@ -109,11 +97,11 @@ window.buildReleaseAnnotations = function(releases, labels) {
     const firstLabelDate = new Date(labels[0]);
     releases.forEach((rel, i) => {
         if (!rel.published_at || !rel.tag) return;
+        if (rel.type !== "mandatory") return;
         const isoDate = rel.published_at.substring(0, 10);
-        const isMandatory = rel.type === "mandatory";
 
         let xVal = nearestLabel(labels, isoDate);
-        if (xVal === null && isMandatory && isoDate < labels[0]) {
+        if (xVal === null && isoDate < labels[0]) {
             const daysBefore = (firstLabelDate - new Date(isoDate)) / 86400000;
             if (daysBefore >= 0 && daysBefore <= PRE_DATA_SNAP_DAYS) {
                 // Snap one label inward from the edge (labels[1] not
@@ -127,31 +115,23 @@ window.buildReleaseAnnotations = function(releases, labels) {
         }
         if (xVal === null) return;
 
-        const labelText = rel.tag;
-
         annotations[`release-${i}`] = {
             type: "line",
             xMin: xVal,
             xMax: xVal,
-            borderColor: isMandatory
-                ? "rgba(255, 165, 0, 0.85)"      // mandatory: vivid orange
-                : "rgba(100, 180, 230, 0.70)",   // non-mandatory: soft blue (distinct from gridlines)
-            borderWidth: isMandatory ? 1.5 : 1,
-            borderDash: isMandatory ? [] : [5, 3],
-            display: function() {
-                return isMandatory || window.analyticsShowLeisure;
-            },
+            borderColor: "rgba(255, 165, 0, 0.85)",  // vivid orange
+            borderWidth: 1.5,
             // Small always-on label for mandatory releases (only 17 —
-            // they fit). Non-mandatory is marker-only to avoid clutter.
-            // `position: "end"` puts labels at the TOP of each vertical
-            // line, which keeps them away from the leftmost y-axis
-            // tick-label area (where `position: "start"` was causing
-            // the 5.0.0.0 edge-case label to be offset vs. interior
-            // labels). `yAdjust: 30` pushes each label ~30px below the
-            // chart top so they sit consistently within the plot area.
+            // they fit). `position: "end"` puts labels at the TOP of
+            // each vertical line, which keeps them away from the
+            // leftmost y-axis tick-label area (where `position: "start"`
+            // was causing the 5.0.0.0 edge-case label to be offset vs.
+            // interior labels). `yAdjust: 30` pushes each label ~30px
+            // below the chart top so they sit consistently within the
+            // plot area.
             label: {
-                display: isMandatory,
-                content: labelText,
+                display: true,
+                content: rel.tag,
                 position: "end",
                 yAdjust: 30,
                 rotation: 270,
@@ -378,23 +358,3 @@ window.buildChartAnnotations = function(labels, releases, activations) {
         ),
     );
 };
-
-// Wire the "Show leisure releases" checkbox once the DOM is ready.
-(function() {
-    function wire() {
-        const cb = document.getElementById("show-leisure-releases");
-        if (!cb) return;
-        window.analyticsShowLeisure = !!cb.checked;
-        cb.addEventListener("change", function(e) {
-            window.analyticsShowLeisure = !!e.target.checked;
-            (window.analyticsCharts || []).forEach(function(c) {
-                if (c && typeof c.update === "function") c.update("none");
-            });
-        });
-    }
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", wire);
-    } else {
-        wire();
-    }
-})();

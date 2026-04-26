@@ -183,7 +183,6 @@ function renderMrcDailyChart(records, releases, activations) {
             },
         },
     });
-    if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
 }
 
 function initMrcDaily() {

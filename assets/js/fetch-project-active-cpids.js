@@ -90,7 +90,6 @@ function initProjectActiveCpids() {
                     },
                 },
             });
-            if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
         })
         .catch(err => {
             console.error("Failed to load project-active-cpids:", err);

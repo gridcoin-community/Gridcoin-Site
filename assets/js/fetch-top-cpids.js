@@ -18,18 +18,42 @@ function shortCpid(hex) {
     return hex.slice(0, 12) + "…";
 }
 
+// Reject any CPID that isn't 32 hex characters before letting it touch
+// the DOM. Lenient (returns the input as-is for valid hex, "" otherwise)
+// so the row simply omits the badge / data-cpid affordance for malformed
+// values rather than blowing up the whole table.
+function sanitizeCpid(cpid) {
+    return typeof cpid === "string" && /^[0-9a-fA-F]{32}$/.test(cpid) ? cpid : "";
+}
+
+// Allow only http(s) URLs for pool badge links — defensive against
+// `javascript:` etc. if window.POOL_CPIDS is ever sourced from outside
+// the in-page hardcoded list.
+function safePoolUrl(url) {
+    if (typeof url !== "string") return null;
+    return /^https?:\/\//i.test(url.trim()) ? url.trim() : null;
+}
+
 // Pool badge renderer — small Bootstrap badge linking to the pool's
-// site, shown next to the CPID hex. Empty string for non-pool CPIDs.
-function poolBadge(cpid) {
-    if (!window.POOL_CPIDS) return "";
+// site, shown next to the CPID hex. Returns a DOM node or null for
+// non-pool CPIDs (caller appends only when non-null).
+function poolBadgeNode(cpid) {
+    if (!window.POOL_CPIDS) return null;
     const pool = window.POOL_CPIDS.get(cpid);
-    if (!pool) return "";
+    if (!pool) return null;
+    const url = safePoolUrl(pool.url);
+    if (!url) return null;
     // Inline-block, ms-2 separates from the CPID code, link opens the
     // pool's site in a new tab. text-decoration-none keeps it visually
     // a badge rather than an underlined link.
-    return ` <a href="${pool.url}" target="_blank" rel="noopener"
-               class="badge bg-info text-dark text-decoration-none ms-2"
-               title="Pool — opens ${pool.url}">${pool.name}</a>`;
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.className = "badge bg-info text-dark text-decoration-none ms-2";
+    a.title = `Pool — opens ${url}`;
+    a.textContent = pool.name || "";
+    return a;
 }
 
 // Cache the most recent payload so the "Hide pools" toggle can
@@ -41,34 +65,68 @@ function renderTopCpidsRows(rows) {
 
     const tbody = document.getElementById("top-cpids-tbody");
     if (!tbody) return;
-    tbody.innerHTML = "";
+    tbody.replaceChildren();
 
     const hidePools = !!document.getElementById("top-cpids-hide-pools")?.checked;
     const filtered = hidePools
         ? lastTopCpidsRows.filter(r => !window.isPoolCpid(r.cpid))
         : lastTopCpidsRows;
 
+    // The CPID cell is rendered as a link styled `<code>` so it's
+    // discoverable as clickable. Click drops the full CPID into the
+    // sand-chart input below and triggers a render. A descriptive
+    // title ("...click to plot below") is appended to the existing
+    // tooltip-of-full-CPID so screen readers and hover users see both
+    // the value and the affordance. For pool CPIDs an inline badge
+    // follows the code, linking to the pool's site. Every API field
+    // goes through textContent or a sanitizing helper before reaching
+    // the DOM (no innerHTML on row HTML).
     filtered.forEach((row, i) => {
         const tr = document.createElement("tr");
-        // The CPID cell is rendered as a link styled `<code>` so it's
-        // discoverable as clickable. Click drops the full CPID into the
-        // sand-chart input below and triggers a render. A descriptive
-        // title ("...click to plot below") is appended to the existing
-        // tooltip-of-full-CPID so screen readers and hover users see
-        // both the value and the affordance. For pool CPIDs an inline
-        // badge follows the code, linking to the pool's site.
-        tr.innerHTML = `
-            <td class="text-muted">${i + 1}</td>
-            <td><a href="#cpid-sand-section" class="cpid-link"
-                   title="${row.cpid} — click to plot below"
-                   data-cpid="${row.cpid}"><code>${shortCpid(row.cpid)}</code></a>${poolBadge(row.cpid)}</td>
-            <td class="text-end">${formatNumber(row.days_active, 0)}</td>
-            <td class="text-end">${formatNumber(row.lifetime_mag_sum, 2)}</td>
-            <td class="text-end">${formatNumber(row.lifetime_mag_avg_active, 2)}</td>
-            <td class="text-end">${formatNumber(row.lifetime_mag_avg_elapsed, 2)}</td>
-            <td>${row.first_seen || ""}</td>
-            <td>${row.last_seen || ""}</td>
-        `;
+        const cpid = sanitizeCpid(row.cpid);
+
+        const idxCell = document.createElement("td");
+        idxCell.className = "text-muted";
+        idxCell.textContent = String(i + 1);
+        tr.appendChild(idxCell);
+
+        const cpidCell = document.createElement("td");
+        if (cpid) {
+            const link = document.createElement("a");
+            link.href = "#cpid-sand-section";
+            link.className = "cpid-link";
+            link.title = `${cpid} — click to plot below`;
+            link.dataset.cpid = cpid;
+            const code = document.createElement("code");
+            code.textContent = shortCpid(cpid);
+            link.appendChild(code);
+            cpidCell.appendChild(link);
+            const badge = poolBadgeNode(cpid);
+            if (badge) {
+                cpidCell.appendChild(document.createTextNode(" "));
+                cpidCell.appendChild(badge);
+            }
+        }
+        tr.appendChild(cpidCell);
+
+        const numCell = (text) => {
+            const td = document.createElement("td");
+            td.className = "text-end";
+            td.textContent = text;
+            return td;
+        };
+        tr.appendChild(numCell(formatNumber(row.days_active, 0)));
+        tr.appendChild(numCell(formatNumber(row.lifetime_mag_sum, 2)));
+        tr.appendChild(numCell(formatNumber(row.lifetime_mag_avg_active, 2)));
+        tr.appendChild(numCell(formatNumber(row.lifetime_mag_avg_elapsed, 2)));
+
+        const firstCell = document.createElement("td");
+        firstCell.textContent = row.first_seen || "";
+        tr.appendChild(firstCell);
+        const lastCell = document.createElement("td");
+        lastCell.textContent = row.last_seen || "";
+        tr.appendChild(lastCell);
+
         tbody.appendChild(tr);
     });
 }

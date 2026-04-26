@@ -143,7 +143,6 @@ function renderSandChart(rows) {
             },
         },
     });
-    if (window.registerAnalyticsChart) window.registerAnalyticsChart(sandState.chart);
 }
 
 // `loadSandChart` is callable as `window.loadSandChart` from

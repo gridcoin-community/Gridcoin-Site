@@ -263,10 +263,17 @@ description: "Historical time-series analytics on Gridcoin network activity — 
     </div>
 </section>
 
-<!-- Chart.js (UMD bundle pinned to a major version) -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-<!-- chartjs-plugin-annotation v3 (compatible with Chart.js v4) -->
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
+<!-- Chart.js — pinned to an exact version with Subresource Integrity so a
+     compromised or silently-rotated CDN response can't ship arbitrary JS
+     into the page. Update both the version in the URL and the integrity
+     hash together when bumping. -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"
+        integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ"
+        crossorigin="anonymous"></script>
+<!-- chartjs-plugin-annotation v3 (compatible with Chart.js v4) — same SRI rules. -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"
+        integrity="sha384-3N9GHhCtN3CQef6tNfqgZlv7sQLYIkcChN+uaTZ7xVdzKYp/SjBNPxa92+hM7EAY"
+        crossorigin="anonymous"></script>
 <script src="/assets/js/analytics-api.js"></script>
 <script src="/assets/js/chart-helpers.js"></script>
 <script src="/assets/js/pool-cpids.js"></script>

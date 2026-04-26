@@ -95,7 +95,6 @@ function renderCpidChurnChart(records, releases, activations) {
             },
         },
     });
-    if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
 }
 
 function initCpidChurn() {

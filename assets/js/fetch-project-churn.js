@@ -98,7 +98,6 @@ function initProjectChurn() {
                     },
                 },
             });
-            if (window.registerAnalyticsChart) window.registerAnalyticsChart(chart);
         })
         .catch(err => {
             console.error("Failed to load project-churn:", err);
