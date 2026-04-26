@@ -139,6 +139,10 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                 honest cumulative measure for the captured window. Click
                 any numeric header to re-rank. Use the project filter to
                 restrict the ranking to one project's contributors.
+                Pool CPIDs aggregate many crunchers and dominate the
+                top of the lifetime ranking; they're tagged with a
+                badge linking to the pool's site. Toggle <em>Hide pool
+                CPIDs</em> to rank only individual researchers.
             </p>
 
             <div class="row g-2 align-items-center mb-3">
@@ -159,6 +163,14 @@ description: "Historical time-series analytics on Gridcoin network activity — 
                         <option value="100" selected>100</option>
                         <option value="250">250</option>
                     </select>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="top-cpids-hide-pools">
+                        <label class="form-check-label small" for="top-cpids-hide-pools">
+                            Hide pool CPIDs
+                        </label>
+                    </div>
                 </div>
                 <div class="col-auto">
                     <span id="top-cpids-loading" class="text-muted small" style="display:none;">Loading…</span>
@@ -230,6 +242,7 @@ description: "Historical time-series analytics on Gridcoin network activity — 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3"></script>
 <script src="/assets/js/analytics-api.js"></script>
 <script src="/assets/js/chart-helpers.js"></script>
+<script src="/assets/js/pool-cpids.js"></script>
 <script src="/assets/js/fetch-cpid-churn.js"></script>
 <script src="/assets/js/fetch-project-churn.js"></script>
 <script src="/assets/js/fetch-project-active-cpids.js"></script>

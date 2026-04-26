@@ -18,23 +18,50 @@ function shortCpid(hex) {
     return hex.slice(0, 12) + "…";
 }
 
+// Pool badge renderer — small Bootstrap badge linking to the pool's
+// site, shown next to the CPID hex. Empty string for non-pool CPIDs.
+function poolBadge(cpid) {
+    if (!window.POOL_CPIDS) return "";
+    const pool = window.POOL_CPIDS.get(cpid);
+    if (!pool) return "";
+    // Inline-block, ms-2 separates from the CPID code, link opens the
+    // pool's site in a new tab. text-decoration-none keeps it visually
+    // a badge rather than an underlined link.
+    return ` <a href="${pool.url}" target="_blank" rel="noopener"
+               class="badge bg-info text-dark text-decoration-none ms-2"
+               title="Pool — opens ${pool.url}">${pool.name}</a>`;
+}
+
+// Cache the most recent payload so the "Hide pools" toggle can
+// re-render without re-fetching.
+let lastTopCpidsRows = [];
+
 function renderTopCpidsRows(rows) {
+    lastTopCpidsRows = rows || [];
+
     const tbody = document.getElementById("top-cpids-tbody");
     if (!tbody) return;
     tbody.innerHTML = "";
-    rows.forEach((row, i) => {
+
+    const hidePools = !!document.getElementById("top-cpids-hide-pools")?.checked;
+    const filtered = hidePools
+        ? lastTopCpidsRows.filter(r => !window.isPoolCpid(r.cpid))
+        : lastTopCpidsRows;
+
+    filtered.forEach((row, i) => {
         const tr = document.createElement("tr");
         // The CPID cell is rendered as a link styled `<code>` so it's
         // discoverable as clickable. Click drops the full CPID into the
         // sand-chart input below and triggers a render. A descriptive
         // title ("...click to plot below") is appended to the existing
         // tooltip-of-full-CPID so screen readers and hover users see
-        // both the value and the affordance.
+        // both the value and the affordance. For pool CPIDs an inline
+        // badge follows the code, linking to the pool's site.
         tr.innerHTML = `
             <td class="text-muted">${i + 1}</td>
             <td><a href="#cpid-sand-section" class="cpid-link"
                    title="${row.cpid} — click to plot below"
-                   data-cpid="${row.cpid}"><code>${shortCpid(row.cpid)}</code></a></td>
+                   data-cpid="${row.cpid}"><code>${shortCpid(row.cpid)}</code></a>${poolBadge(row.cpid)}</td>
             <td class="text-end">${formatNumber(row.days_active, 0)}</td>
             <td class="text-end">${formatNumber(row.lifetime_mag_sum, 2)}</td>
             <td class="text-end">${formatNumber(row.lifetime_mag_avg_active, 2)}</td>
@@ -151,6 +178,13 @@ function initTopCpids() {
 
     if (projectSel) projectSel.addEventListener("change", loadTopCpids);
     if (limitSel)   limitSel.addEventListener("change", loadTopCpids);
+
+    // The hide-pools toggle re-renders from cached rows without
+    // re-fetching — the filter is purely client-side.
+    const hidePools = document.getElementById("top-cpids-hide-pools");
+    if (hidePools) {
+        hidePools.addEventListener("change", () => renderTopCpidsRows(lastTopCpidsRows));
+    }
 
     document.querySelectorAll(".top-cpids-sort").forEach(th => {
         th.style.cursor = "pointer";
