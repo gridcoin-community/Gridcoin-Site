@@ -9,7 +9,7 @@ const CHURN_API_URL = window.analyticsApi
     ? window.analyticsApi("/api/v1/history/cpid-churn")
     : "/api/v1/history/cpid-churn";
 
-function renderCpidChurnChart(records, releases) {
+function renderCpidChurnChart(records, releases, activations) {
     const canvas = document.getElementById("cpid-churn-chart");
     if (!canvas || !window.Chart) return;
 
@@ -20,7 +20,7 @@ function renderCpidChurnChart(records, releases) {
 
     const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
     const annotations = window.buildChartAnnotations
-        ? window.buildChartAnnotations(labels, releases)
+        ? window.buildChartAnnotations(labels, releases, activations)
         : {};
 
     const chart = new Chart(canvas, {
@@ -109,12 +109,13 @@ function initCpidChurn() {
             return r.json();
         }),
         window.analyticsReleasesPromise || Promise.resolve([]),
+        window.analyticsBlockVersionsPromise || Promise.resolve([]),
     ])
-        .then(([payload, releases]) => {
+        .then(([payload, releases, activations]) => {
             if (!payload || !Array.isArray(payload.data)) {
                 throw new Error("Unexpected API payload");
             }
-            renderCpidChurnChart(payload.data, releases || []);
+            renderCpidChurnChart(payload.data, releases || [], activations || []);
         })
         .catch(err => {
             console.error("Failed to load cpid-churn:", err);

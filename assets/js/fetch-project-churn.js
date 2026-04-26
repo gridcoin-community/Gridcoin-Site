@@ -13,8 +13,9 @@ function initProjectChurn() {
             return r.json();
         }),
         window.analyticsReleasesPromise || Promise.resolve([]),
+        window.analyticsBlockVersionsPromise || Promise.resolve([]),
     ])
-        .then(([payload, releases]) => {
+        .then(([payload, releases, activations]) => {
             const rows = payload.data || [];
             const labels    = rows.map(r => r.obs_date);
             const total     = rows.map(r => r.total_projects);
@@ -23,7 +24,7 @@ function initProjectChurn() {
 
             const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
             const annotations = window.buildChartAnnotations
-                ? window.buildChartAnnotations(labels, releases)
+                ? window.buildChartAnnotations(labels, releases, activations)
                 : {};
 
             const chart = new Chart(canvas, {

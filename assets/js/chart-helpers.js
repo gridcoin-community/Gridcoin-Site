@@ -281,12 +281,75 @@ window.yearlyXTicksConfig = function(labels) {
 };
 
 /**
- * Convenience: given an array of labels (ISO date strings) and a release
- * list, produce the `plugins.annotation.annotations` object expected by
- * chartjs-plugin-annotation — releases plus quarterly guides, ready to
- * drop into a chart config.
+ * Block-version activation markers — dotted orange verticals at the
+ * dates each new block version actually went live on mainnet (post-
+ * grace-period transitions, *not* the dates the binaries were
+ * published). Same hue as mandatory-release markers but dashed and
+ * unlabeled, so a reader can distinguish "binary available" from
+ * "consensus rule live" — the gap between the two is the protocol
+ * grace period (~6.5 days currently).
+ *
+ * Activation list is fetched lazily from
+ * /api/v1/history/block-version-activations so the markers stay
+ * empirical (derived from the block_version recorded alongside each
+ * day's first_height) and never need code updates as new versions
+ * activate on mainnet.
  */
-window.buildChartAnnotations = function(labels, releases) {
+window.analyticsBlockVersionsPromise = (function() {
+    if (!window.analyticsApi) {
+        return Promise.resolve([]);
+    }
+    return fetch(window.analyticsApi("/api/v1/history/block-version-activations"))
+        .then(r => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        })
+        .then(payload => Array.isArray(payload.data) ? payload.data : [])
+        .catch(err => {
+            // Best-effort: missing markers are not fatal.
+            console.warn("Failed to load block-version-activations:", err);
+            return [];
+        });
+})();
+
+window.buildBlockVersionAnnotations = function(labels, activations) {
+    const annotations = {};
+    if (!labels || labels.length === 0 || !activations) return annotations;
+    activations.forEach((entry) => {
+        if (!entry.activation_date || entry.version == null) return;
+        const xVal = nearestLabel(labels, entry.activation_date);
+        if (xVal === null) return;
+        annotations[`bv-${entry.version}`] = {
+            type: "line",
+            xMin: xVal,
+            xMax: xVal,
+            borderColor: "rgba(255, 165, 0, 0.85)",
+            borderWidth: 1.5,
+            borderDash: [5, 3],
+            drawTime: "beforeDatasetsDraw",
+        };
+    });
+    return annotations;
+};
+
+window.analyticsBlockVersions = [];
+window.analyticsBlockVersionsPromise.then(arr => {
+    window.analyticsBlockVersions = arr;
+});
+
+/**
+ * Convenience: given an array of labels (ISO date strings), a release
+ * list, and a block-version activation list, produce the
+ * `plugins.annotation.annotations` object expected by
+ * chartjs-plugin-annotation — releases + quarterly guides + block-
+ * version-activation markers, ready to drop into a chart config.
+ *
+ * Block-version activations may not have arrived yet (the fetch is
+ * lazy); pass `activations` explicitly if you've awaited the promise,
+ * or rely on `window.analyticsBlockVersions` (cached after the promise
+ * resolves) for the current best-effort list.
+ */
+window.buildChartAnnotations = function(labels, releases, activations) {
     if (!labels || labels.length === 0) {
         return {};
     }
@@ -294,6 +357,10 @@ window.buildChartAnnotations = function(labels, releases) {
         {},
         window.buildQuarterlyAnnotations(labels),
         window.buildReleaseAnnotations(releases || [], labels),
+        window.buildBlockVersionAnnotations(
+            labels,
+            activations || window.analyticsBlockVersions,
+        ),
     );
 };
 

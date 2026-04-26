@@ -98,12 +98,13 @@ function renderSandChart(rows) {
 
     const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
     // The sand chart re-instantiates on every CPID selection. Reading the
-    // cached resolved list keeps this sync — on the very first selection
-    // before the releases fetch has settled we just skip the release
-    // markers and fall back to quarterly-only annotations.
+    // cached resolved lists keeps this sync — on the very first selection
+    // before the releases / block-versions fetches have settled we just
+    // skip those markers and fall back to quarterly-only annotations.
     const releases = window.analyticsReleases || [];
+    const activations = window.analyticsBlockVersions || [];
     const annotations = window.buildChartAnnotations
-        ? window.buildChartAnnotations(labels, releases)
+        ? window.buildChartAnnotations(labels, releases, activations)
         : {};
 
     sandState.chart = new Chart(canvas, {

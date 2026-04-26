@@ -44,15 +44,16 @@ function initProjectActiveCpids() {
             return r.json();
         }),
         window.analyticsReleasesPromise || Promise.resolve([]),
+        window.analyticsBlockVersionsPromise || Promise.resolve([]),
     ])
-        .then(([payload, releases]) => {
+        .then(([payload, releases, activations]) => {
             if (!payload || !Array.isArray(payload.data)) {
                 throw new Error("Unexpected payload");
             }
             const { labels, datasets } = buildPerProjectSeries(payload.data);
             const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
             const annotations = window.buildChartAnnotations
-                ? window.buildChartAnnotations(labels, releases)
+                ? window.buildChartAnnotations(labels, releases, activations)
                 : {};
             const chart = new Chart(canvas, {
                 type: "line",

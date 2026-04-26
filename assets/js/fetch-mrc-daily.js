@@ -71,7 +71,7 @@ function rollingMean(arr, halfBefore, halfAfter) {
 
 const MA_SUFFIX = " (14d MA)";
 
-function renderMrcDailyChart(records, releases) {
+function renderMrcDailyChart(records, releases, activations) {
     const canvas = document.getElementById("mrc-daily-chart");
     if (!canvas || !window.Chart) return;
 
@@ -83,7 +83,7 @@ function renderMrcDailyChart(records, releases) {
 
     const grid = window.softGridStyle ? window.softGridStyle() : { xGrid: {}, yGrid: {} };
     const annotations = window.buildChartAnnotations
-        ? window.buildChartAnnotations(labels, releases)
+        ? window.buildChartAnnotations(labels, releases, activations)
         : {};
 
     const chart = new Chart(canvas, {
@@ -200,8 +200,9 @@ function initMrcDaily() {
             return r.json();
         }),
         window.analyticsReleasesPromise || Promise.resolve([]),
+        window.analyticsBlockVersionsPromise || Promise.resolve([]),
     ])
-        .then(([mrcPayload, cpidPayload, releases]) => {
+        .then(([mrcPayload, cpidPayload, releases, activations]) => {
             if (!mrcPayload || !Array.isArray(mrcPayload.data)) {
                 throw new Error("Unexpected mrc-daily payload");
             }
@@ -210,7 +211,7 @@ function initMrcDaily() {
             }
             const axisLabels = cpidPayload.data.map(r => r.obs_date);
             const aligned = alignMrcToLabels(mrcPayload.data, axisLabels);
-            renderMrcDailyChart(aligned, releases || []);
+            renderMrcDailyChart(aligned, releases || [], activations || []);
         })
         .catch(err => {
             console.error("Failed to load mrc-daily:", err);
