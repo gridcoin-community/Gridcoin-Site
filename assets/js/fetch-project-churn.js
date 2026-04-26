@@ -83,7 +83,7 @@ function initProjectChurn() {
                             grid: grid.xGrid,
                         },
                         y: {
-                            beginAtZero: false,
+                            beginAtZero: true,
                             position: "left",
                             title: { display: true, text: "Projects" },
                             grid: grid.yGrid,

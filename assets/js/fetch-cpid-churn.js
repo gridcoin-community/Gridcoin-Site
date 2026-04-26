@@ -81,7 +81,7 @@ function renderCpidChurnChart(records, releases, activations) {
                     grid: grid.xGrid,
                 },
                 y: {
-                    beginAtZero: false,
+                    beginAtZero: true,
                     position: "left",
                     title: { display: true, text: "Active CPIDs" },
                     grid: grid.yGrid,
