@@ -327,6 +327,21 @@ window.buildBlockVersionAnnotations = function(labels, activations) {
             borderWidth: 1.5,
             borderDash: [5, 3],
             drawTime: "beforeDatasetsDraw",
+            // Small always-on label at the top, like mandatory releases
+            // but tinted to match the dashed style — distinguishes
+            // "consensus rule live" from "binary published".
+            label: {
+                display: true,
+                content: `v${entry.version}`,
+                position: "end",
+                yAdjust: 30,
+                rotation: 270,
+                backgroundColor: "rgba(20,20,20,0.55)",
+                color: "#ffd27a",
+                padding: { top: 2, bottom: 2, left: 4, right: 4 },
+                borderRadius: 3,
+                font: { size: 10 },
+            },
         };
     });
     return annotations;
