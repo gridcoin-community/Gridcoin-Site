@@ -1,0 +1,285 @@
+---
+title: "Gridcoin - Network Analytics"
+description: "Historical time-series analytics on Gridcoin network activity — CPID churn, project participation, and more."
+---
+
+<section class="grc-bgcolor grclink mb-4">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="text-center fw-bold">Network Analytics</h2>
+                <p class="text-center mb-0">
+                    Daily snapshots of Gridcoin network activity since September 2020,
+                    derived from the Scraper's converged superblock statistics.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div id="analytics-error" class="alert alert-warning"
+                 style="display:none;" role="alert"></div>
+
+            <!-- Annotation legend -->
+            <div class="mb-3 small">
+                <div class="d-flex flex-wrap gap-4 align-items-center">
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px; background:rgba(255,165,0,0.85);"></span>
+                        Mandatory release (labeled at top of line)
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px;
+                                     background:repeating-linear-gradient(to bottom,
+                                        rgba(255,165,0,0.85) 0 5px, transparent 5px 8px);"></span>
+                        Block-version activation (post-grace, labeled vN)
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px; background:rgba(200,200,200,0.35);"></span>
+                        Year boundary (Jan 1)
+                    </span>
+                    <span class="d-inline-flex align-items-center gap-2">
+                        <span style="display:inline-block; width:2px; height:14px;
+                                     background:repeating-linear-gradient(to bottom,
+                                        rgba(200,200,200,0.25) 0 2px, transparent 2px 6px);"></span>
+                        Quarter boundary (Apr / Jul / Oct 1)
+                    </span>
+                </div>
+            </div>
+
+            <!-- 1. CPID activity ------------------------------------------>
+
+            <h3 class="mb-3">CPID activity over time</h3>
+            <p class="text-muted">
+                Each data point is one day. The blue line (left axis) is
+                the count of distinct CPIDs that appeared in the superblock
+                that day with positive magnitude. The green and red lines
+                (right axis) are the daily gross flows: <em>Churn in</em>
+                (active today, not yesterday) and <em>Churn out</em>
+                (active yesterday, not today). Any dataset can be hidden
+                by clicking its entry in the legend. Values on the very
+                first and last day of the series — and on days adjacent
+                to a data gap — are undefined.
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="cpid-churn-chart"></canvas>
+            </div>
+
+            <!-- 2. Daily MRC payments (stacked area + count line) ----------->
+
+            <h3 class="mb-3">MRC (Manual Research Claim) payments per day</h3>
+            <p class="text-muted">
+                Daily volume of MRC research-reward payments, stacked
+                by where each GRC ends up: <strong>net to researcher</strong>,
+                <strong>foundation fee</strong>, and <strong>staker fee</strong>.
+                The dotted red line on the secondary axis is the per-day
+                count of MRCs paid (typically much smaller than the GRC
+                amounts, hence its own scale). All series are smoothed
+                with a centered 14-day moving average (each point is
+                the mean of the surrounding 14 days, half before and
+                half after) to suppress the day-to-day spikes from
+                individual large MRC claims while preserving the
+                longer-term trend. The x-axis is aligned to the CPID-
+                activity chart above; MRC support didn't exist before
+                v12 (block height 2&#8239;671&#8239;700, mainnet
+                2022-08-28), so the leading portion of the series is
+                zero by construction. Sourced via <code>getmrcinfo</code>
+                RPC bracketed by daily UTC block boundaries.
+            </p>
+
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="mrc-daily-chart"></canvas>
+            </div>
+
+            <!-- 3. Project whitelist churn -------------------------------->
+
+            <h3 class="mb-3">Project whitelist churn</h3>
+            <p class="text-muted">
+                Count of projects present in the day's superblock (blue,
+                left axis) and day-over-day additions / drops (green / red,
+                right axis). Note the protocol rule: each in-superblock
+                project gets an equal share of the network-wide 115 000
+                magnitude pool, so this count directly sets the per-project
+                baseline (115 000 / N).
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 380px; width: 100%;">
+                <canvas id="project-churn-chart"></canvas>
+            </div>
+
+            <!-- 4. Per-project active CPIDs ------------------------------->
+
+            <h3 class="mb-3">Active CPIDs per project over time</h3>
+            <p class="text-muted">
+                One line per project — each day's count of distinct CPIDs
+                with positive magnitude on that project. Click a project
+                name in the legend to hide or show its line. The set of
+                projects changes over time; lines disappear when a project
+                drops out of the superblock and reappear if it's re-added.
+            </p>
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="project-active-cpids-chart"></canvas>
+            </div>
+
+            <!-- 5. Top researchers --------------------------------------->
+
+            <h3 class="mb-3">Top researchers by magnitude</h3>
+            <p class="text-muted">
+                Default ranking is by <em>total observed magnitude</em>
+                (sum of daily magnitude across every day in the selected
+                window). All-time covers the full observed history (since
+                2020-09-09); the canned periods (week / month / quarter /
+                year) are rolling windows ending today. Pick <em>Custom
+                range</em> to enter explicit dates. Click any numeric
+                header to re-rank. Use the project filter to restrict the
+                ranking to one project's contributors. Pool CPIDs aggregate
+                many crunchers and dominate the top of the lifetime
+                ranking; they're tagged with a badge linking to the pool's
+                site. Toggle <em>Hide pool CPIDs</em> to rank only
+                individual researchers.
+            </p>
+
+            <div class="row g-2 align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="top-cpids-project" class="col-form-label">Scope:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-project" class="form-select form-select-sm">
+                        <option value="">Network-wide (all projects)</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="top-cpids-period" class="col-form-label ms-2">Period:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-period" class="form-select form-select-sm">
+                        <option value="all" selected>All time</option>
+                        <option value="week">Past week</option>
+                        <option value="month">Past month</option>
+                        <option value="quarter">Past quarter</option>
+                        <option value="year">Past year</option>
+                        <option value="custom">Custom range…</option>
+                    </select>
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <input type="date" id="top-cpids-start-date"
+                           class="form-control form-control-sm" style="width: 160px;">
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <span class="col-form-label">to</span>
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <input type="date" id="top-cpids-end-date"
+                           class="form-control form-control-sm" style="width: 160px;">
+                </div>
+                <div class="col-auto top-cpids-custom-range" style="display:none;">
+                    <button id="top-cpids-apply-range" class="btn btn-sm btn-primary">Apply</button>
+                </div>
+                <div class="col-auto">
+                    <label for="top-cpids-limit" class="col-form-label ms-2">Show top:</label>
+                </div>
+                <div class="col-auto">
+                    <select id="top-cpids-limit" class="form-select form-select-sm">
+                        <option value="25">25</option>
+                        <option value="100" selected>100</option>
+                        <option value="250">250</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="top-cpids-hide-pools">
+                        <label class="form-check-label small" for="top-cpids-hide-pools">
+                            Hide pool CPIDs
+                        </label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <span id="top-cpids-loading" class="text-muted small" style="display:none;">Loading…</span>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-5">
+                <table class="table table-sm table-custom-dark table-hover table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>CPID</th>
+                            <th class="text-end top-cpids-sort" data-order="days_active">Days active</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_sum">Lifetime mag (total)</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_avg_active">Lifetime mag (active avg)</th>
+                            <th class="text-end top-cpids-sort" data-order="lifetime_mag_avg_elapsed">Lifetime mag (elapsed avg)</th>
+                            <th>First seen</th>
+                            <th>Last seen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="top-cpids-tbody"></tbody>
+                </table>
+            </div>
+
+            <!-- 6. CPID sand chart (stacked area by project) ------------->
+
+            <h3 id="cpid-sand-section" class="mb-3">Magnitude contribution by project for a CPID</h3>
+            <p class="text-muted">
+                Stacked-area ("sand") chart of a single CPID's magnitude
+                broken down by project over time. Start typing a hex
+                prefix to pick from the autocomplete list, or paste a
+                full CPID (copied from the leaderboard above, for
+                example) and press <kbd>Enter</kbd>.
+            </p>
+
+            <div class="row g-2 align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="cpid-sand-input" class="col-form-label">CPID:</label>
+                </div>
+                <div class="col-auto">
+                    <input list="cpid-sand-list" id="cpid-sand-input"
+                           class="form-control form-control-sm"
+                           style="width: 360px; font-family: monospace;"
+                           placeholder="32-char hex prefix or full">
+                    <datalist id="cpid-sand-list"></datalist>
+                </div>
+                <div class="col-auto">
+                    <button id="cpid-sand-render" class="btn btn-sm btn-primary">Show</button>
+                </div>
+                <div class="col-auto">
+                    <span id="cpid-sand-loading" class="text-muted small" style="display:none;">Loading…</span>
+                </div>
+            </div>
+            <div id="cpid-sand-autocomplete-hint" class="text-muted small mb-1"></div>
+            <div id="cpid-sand-status" class="text-muted small mb-2"></div>
+
+            <div class="chart-container position-relative mb-5"
+                 style="height: 480px; width: 100%;">
+                <canvas id="cpid-sand-chart"></canvas>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Chart.js — pinned to an exact version with Subresource Integrity so a
+     compromised or silently-rotated CDN response can't ship arbitrary JS
+     into the page. Update both the version in the URL and the integrity
+     hash together when bumping. -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"
+        integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ"
+        crossorigin="anonymous"></script>
+<!-- chartjs-plugin-annotation v3 (compatible with Chart.js v4) — same SRI rules. -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.1.0/dist/chartjs-plugin-annotation.min.js"
+        integrity="sha384-3N9GHhCtN3CQef6tNfqgZlv7sQLYIkcChN+uaTZ7xVdzKYp/SjBNPxa92+hM7EAY"
+        crossorigin="anonymous"></script>
+<script src="/assets/js/analytics-api.js"></script>
+<script src="/assets/js/chart-helpers.js"></script>
+<script src="/assets/js/pool-cpids.js"></script>
+<script src="/assets/js/fetch-cpid-churn.js"></script>
+<script src="/assets/js/fetch-project-churn.js"></script>
+<script src="/assets/js/fetch-project-active-cpids.js"></script>
+<script src="/assets/js/fetch-top-cpids.js"></script>
+<script src="/assets/js/fetch-cpid-sand.js"></script>
+<script src="/assets/js/fetch-mrc-daily.js"></script>

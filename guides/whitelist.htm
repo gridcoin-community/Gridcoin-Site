@@ -6,64 +6,105 @@ redirect_from:
 ---
 <section class="whitelist grc-bgcolor grclink mb-5">
         <!--Start of GRC Feature section-->
-        <!--First row of features-->
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-4">
                     <h3>Important</h3>
                             <p><ul><li>You will only be rewarded Gridcoin for whitelisted BOINC projects. Any BOINC work done outside of the whitelisted BOINC projects will not be rewarded</li>
-                            <li> Some of these projects may currently be on the greylist <b>The most accurate source</b> for whitelist/greylist information will always be your Gridcoin wallet. </li> 
-                            <li> There are a total of {{ site.data.whitelist.projects.size }} projects whitelisted </li>
+                            <li> Some of these projects may currently be on the greylist or temporarily excluded from the superblock. </li>
                             <li> You can check whitelisted project details on <a href="https://gridcoinstats.eu/project">Gridcoinstats</a>. </li>
                             </p>
                 </div>
                 <div class='col-12 col-sm-8'>
                     <h3>Greylist</h3>
-                    <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist.  These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again.  Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
+                    <p>When projects are running out of work or are offline for temporary maintenance they are placed on the Greylist. These projects will not reward Gridcoin until they meet the requirements to be placed back on the whitelist again. Please see various social media (Twitter, Facebook, Reddit, Slack) for notices about greylisted projects.</p>
+                    <p>Projects may also be temporarily <strong>excluded</strong> from the superblock if their statistics have not been updated for more than 48 hours. This is different from greylisting — the project remains whitelisted but cannot earn rewards until stats resume.</p>
                     <p>The <a href="/wiki/whitelist-process.html#greylist">whitelist process wiki page</a> outlines the Greylist procedure for all whitelisted projects.</p>
                 </div>
             </div>
         </div>
-        <!--End of GRC Feature Section-->
 </section>
 
 <section class="whitelist-2 text-center">
     <h2 class="mb-2 anchor-adjust" id="projects">Whitelisted Projects</h2>
-    <div class="mb-4">
-    <p>To check if a project is on the greylist, in your wallet go to Hamburger Menu > Settings > Researcher Wizard > Projects (or the <code>listprojects</code> command) <br>
-    Any project shown is not greylisted. Your wallet must be fully synced for the latest info.</p>
-    </div>
-    <!-- BOINC Content -->
-    <div class="container">
+
+    <!-- API error banner (hidden by default) -->
+    <div id="api-error" class="alert alert-warning mx-auto" style="display:none; max-width: 600px;"></div>
+
+    <!-- Superblock summary (populated by JS) -->
+    <div id="superblock-info" class="container mb-4" style="display:none;"></div>
+
+    <!-- Static project data for JS to merge (hidden, consumed by fetch-whitelist.js) -->
+    <script id="static-project-data" type="application/json">
+    [{% for project in site.data.whitelist.projects %}
+        {
+            "name": {{ project.name | jsonify }},
+            "link": {{ project.link | jsonify }},
+            "goal": {{ project.goal | jsonify }},
+            "sponsor": {{ project.sponsor | jsonify }},
+            "cpu": {{ project.cpu | jsonify }},
+            "gpu": {{ project.gpu | jsonify }},
+            "nvidia": {{ project.nvidia | jsonify }},
+            "amd": {{ project.amd | jsonify }},
+            "intel": {{ project.intel | jsonify }},
+            "gdpr": {{ project.gdpr | jsonify }},
+            "gdpr-enable-steps": {{ project.gdpr-enable-steps | jsonify }},
+            "team": {{ project.team | jsonify }},
+            "stats": {{ project.stats | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor %}]
+    </script>
+
+    <!-- Dynamic table (hidden until JS populates it) -->
+    <div class="container" id="dynamic-whitelist" style="display:none;">
         <div class="row text-center mb-5">
-            <div class="col-12 d-none d-md-block">
+            <div class="col-12">
+                <div class="table-responsive">
                 <table class="table table-sm table-custom-dark table-hover table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>
-                                Project
-                            </th>
-                            <th>
-                                Goal
-                            </th>
-                            <th>
-                                Sponsor
-                            </th>
-                            <th>
-                                CPU
-                            </th>
-                            <th>
-                                <dfn data-toggle="tooltip" data-placement="bottom" title="Projects listed here have GPU support, but availability of GPU workunits is not guaranteed">GPU</dfn>
-                            </th>
-                            <th>
-                                <dfn data-toggle="tooltip" data-placement="bottom" title="Some projects require you to opt-in to exporting your stats. You will need to do this to earn GRC for your work">GDPR Stats Export</dfn>
-                            </th>
-                            <th>
-                                Team
-                            </th>
-                            <th>
-                                Stats
-                            </th>
+                            <th>Project</th>
+                            <th class="d-none d-lg-table-cell">Goal</th>
+                            <th class="d-none d-lg-table-cell">Sponsor</th>
+                            <th>Status</th>
+                            <th>RAC</th>
+                            <th class="d-none d-md-table-cell">Network Credit</th>
+                            <th class="d-none d-md-table-cell">CPIDs</th>
+                            <th class="d-none d-lg-table-cell">CPU</th>
+                            <th class="d-none d-lg-table-cell"><dfn title="Projects listed here have GPU support, but availability of GPU workunits is not guaranteed">GPU</dfn></th>
+                            <th class="d-none d-xl-table-cell"><dfn title="Some projects require you to opt-in to exporting your stats to earn GRC">GDPR</dfn></th>
+                            <th class="d-none d-xl-table-cell"><dfn title="Zero Credit Days / Whitelist Activity Score — greylist health indicators">ZCD / WAS</dfn></th>
+                            <th>Links</th>
+                        </tr>
+                    </thead>
+                    <tbody id="project-table-body">
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Static fallback table (shown by default, hidden when JS loads dynamic data) -->
+    <div class="container" id="static-whitelist">
+        <div class="mb-4">
+        <p>To check if a project is on the greylist, in your wallet go to Hamburger Menu > Settings > Researcher Wizard > Projects (or the <code>listprojects</code> command) <br>
+        Any project shown is not greylisted. Your wallet must be fully synced for the latest info.</p>
+        </div>
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <div class="table-responsive">
+                <table class="table table-sm table-custom-dark table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Goal</th>
+                            <th>Sponsor</th>
+                            <th>CPU</th>
+                            <th><dfn title="Projects listed here have GPU support, but availability of GPU workunits is not guaranteed">GPU</dfn></th>
+                            <th><dfn title="Some projects require you to opt-in to exporting your stats. You will need to do this to earn GRC for your work">GDPR Stats Export</dfn></th>
+                            <th>Team</th>
+                            <th>Stats</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,192 +113,77 @@ redirect_from:
                                 <td{% if project.greylisted == "yes" %} class="greylisted"{% endif %}>
                                     <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
                                 </td>
-                                <td>
-                                    {{ project.goal }}
-                                </td>
-                                <td>
-                                    {{ project.sponsor }}
-                                </td>
-                                <td class="table-color-{{project.cpu}}">{% comment %} uses either table-color-yes or table-color-no for the class (green or red coloring) {% endcomment %}
-                                    {% if project.cpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
-                                    {% endif %}
+                                <td>{{ project.goal }}</td>
+                                <td>{{ project.sponsor }}</td>
+                                <td class="table-color-{{project.cpu}}">
+                                    {% if project.cpu == "yes" %}✔️{% else %}❌{% endif %}
                                 </td>
                                 <td class="table-color-{{project.gpu}}">
-                                    {% if project.gpu == "no" %}
-                                      ❌                                    
-                                    {% endif %}
-                                    {% if project.nvidia == "yes" %}
-                                      <img src="/assets/img/nvidia_badge.png" height="40">                                       
-                                    {% endif %}
-                                    {% if project.amd == "yes" %}
-                                      <img src="/assets/img/amd_badge.png" height="50">
-                                    {% endif %}
-                                    {% if project.intel == "yes" %}
-                                    <img src="/assets/img/intel_badge.png" height="40">
-                                    {% endif %}
+                                    {% if project.gpu == "no" %}❌{% endif %}
+                                    {% if project.nvidia == "yes" %}<img src="/assets/img/nvidia_badge.png" height="40">{% endif %}
+                                    {% if project.amd == "yes" %}<img src="/assets/img/amd_badge.png" height="50">{% endif %}
+                                    {% if project.intel == "yes" %}<img src="/assets/img/intel_badge.png" height="40">{% endif %}
                                 </td>
-                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}> {% comment %} Add warning color for background only if it requires it. No color otherwise {% endcomment %}
+                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
                                     {% if project.gdpr == "yes" %}
                                         <a href="{{ project['gdpr-enable-steps'] }}">required<span class="oi oi-warning"></span></a>
                                     {% else %}
                                       not required
                                     {% endif %}
                                 </td>
-                                <td>
-                                    <a href="{{ project.team }}" title="Gridcoin Team Link">📊</a>
-                                </td>
-                                <td>
-                                    <a href="{{ project.stats }}" title="Project stats">📈</a>
-                                </td>
+                                <td><a href="{{ project.team }}" title="Gridcoin Team Link">📊</a></td>
+                                <td><a href="{{ project.stats }}" title="Project stats">📈</a></td>
                             </tr>
                         {% endfor %}
                     </tbody>
                 </table>
-            </div>
-
-            <div class="col-12 d-none d-sm-block d-md-none">
-                <table class="table table-sm table-custom-dark table-hover table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>
-                                Project
-                            </th>
-                            <th>
-                                CPU
-                            </th>
-                            <th>
-                                GPU
-                            </th>
-                            <th>
-                                GDPR Stats Export 
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for project in site.data.whitelist.projects %}
-                            <tr>
-                                <td{% if project.greylisted == "yes"%} class="greylisted"{% endif %}>
-                                    <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
-                                </td>
-                                <td class="table-color-{{project.cpu}}"> 
-                                    {% if project.cpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
-                                    {% endif %}
-                                </td>
-                                <td class="table-color-{{project.gpu}}">
-                                  {% if project.gpu == "no" %}
-                                  ❌                                    
-                                  {% endif %}
-                                  {% if project.nvidia == "yes" %}
-                                    <img src="/assets/img/nvidia_badge.png" height="40">                                       
-                                  {% endif %}
-                                  {% if project.amd == "yes" %}
-                                    <img src="/assets/img/amd_badge.png" height="50">
-                                  {% endif %}
-                                  {% if project.intel == "yes" %}
-                                    <img src="/assets/img/intel_badge.png" height="40">
-                                  {% endif %}
-                                </td>
-                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
-                                    {% if project.gdpr == "yes" %}
-                                    <a href={{project.gdpr-enable-steps}}>required<span class="oi oi-warning"></span></a>
-                                    {% else %}
-                                      not required
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="col-12 d-sm-none">
-                <table class="table table-sm table-custom-dark table-hover table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>
-                                Project
-                            </th>
-                            <th>
-                                CPU
-                            </th>
-                            <th>
-                                GPU
-                            </th>
-                            <th>
-                                GDPR Stats Export
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for project in site.data.whitelist.projects %}
-                            <tr>
-                                <td{% if project.greylisted == "yes" %} class="greylisted"{% endif %}>
-                                    <a href="{{ project.link }}">{{ project.name }}</a>{% if project.greylisted == "yes" %}<br><span class="greylisted">(greylisted)</span>{% endif %}
-                                </td>
-                                <td class="table-color-{{project.cpu}}">
-                                    {% if project.cpu == "yes" %}
-                                      ✔️
-                                    {% else %}
-                                      ❌
-                                    {% endif %}
-                                </td>
-                                <td class="table-color-{{project.gpu}}">
-                                  {% if project.gpu == "no" %}
-                                    ❌                                    
-                                  {% endif %}
-                                  {% if project.nvidia == "yes" %}
-                                    <img src="/assets/img/nvidia_badge.png" height="40">                                       
-                                  {% endif %}
-                                  {% if project.amd == "yes" %}
-                                    <img src="/assets/img/amd_badge.png" height="50">
-                                  {% endif %}
-                                  {% if project.intel == "yes" %}
-                                    <img src="/assets/img/intel_badge.png" height="40">
-                                  {% endif %}
-                                </td>
-                                <td {% if project.gdpr == "yes" %}class="table-color-gdpr-yes"{% endif %}>
-                                    {% if project.gdpr == "yes" %}
-                                        <a href={{project.gdpr-enable-steps}}><span class="oi oi-warning"></span></a>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                </div>
             </div>
         </div>
-        <h3 id="about-gdpr" class="anchor-adjust">About GDPR</h3>
-            <p>GDPR is a law in the European Union on data privacy. Some projects have
-            interpreted it to mean that to sharing BOINC stats requires opting in. 
-            Solo crunchers must enable it to be rewarded because otherwise Gridcoin can't see how much work 
-            you've done and figure out how much you are owed</p>
-            
-            <p>NOTE: <u>Only solo crunchers on these projects need to follow these steps</u>.
-            Pool cruncher don't need to because your pool has already done it
-            </p>
-            
-
-            <p>Currently the whitelisted projects that require this are:<br>
-            {% for project in site.data.whitelist.projects %}
-                {% if project.gdpr == "yes" %}
-                    {{project.name}} (<a href={{project.gdpr-enable-steps}}>steps to enable</a>)<br>
-                {% endif %}
-            {% endfor %}</p>
-
-        <h3 id="whitelist-process" class="anchor-adjust">Whitelist Process</h3>
-            <p>Want a project whitelisted? Ask about it on the <code>#whitelisting-committee</code> channel on the Gridcoin Discord! More details about adding a project to the whitelist can be found on the <a href="/wiki/whitelist-process.html">whitelist process wiki page</a>
-            <p>The whitelist was created to increase security and to focus user's resources on active projects. See <a href="https://web.archive.org/web/20150416222027/cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">historical discussion</a></p>
     </div>
-    </div>
-    
 
+    <!-- Column legend -->
+    <div class="container mb-5 text-start" id="table-legend">
+        <h3 class="anchor-adjust text-center" id="column-legend">Column Legend</h3>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <dl>
+                    <dt>Status</dt>
+                    <dd><span class="badge bg-success">Active</span> — project is whitelisted and in the current superblock, earning rewards.<br>
+                        <span class="badge bg-warning">Excluded</span> — project is whitelisted but temporarily excluded from the superblock because its statistics have not updated for more than 48 hours.<br>
+                        <span class="badge bg-danger">Greylisted</span> — project has been automatically or manually greylisted and is not earning rewards.
+                    </dd>
+                    <dt>RAC</dt>
+                    <dd>Recent Average Credit — the total RAC across all active Gridcoin researchers contributing to this project. This reflects Gridcoin network activity, not the BOINC project's total RAC.</dd>
+                    <dt>Network Credit</dt>
+                    <dd>Total credit earned by Gridcoin researchers on this project. This is the sum across active CPIDs on the Gridcoin network, not the BOINC project's total credit.</dd>
+                    <dt>CPIDs</dt>
+                    <dd>Number of Gridcoin researchers (unique CPIDs) actively contributing to this project.</dd>
+                </dl>
+            </div>
+            <div class="col-12 col-md-6">
+                <dl>
+                    <dt>CPU / GPU</dt>
+                    <dd>Whether the project supports CPU or GPU computation. GPU badges indicate specific vendor support (NVIDIA, AMD, Intel). <span style="color:green;">Green</span> = supported, <span style="color:darkred;">Red</span> = not supported.</dd>
+                    <dt>GDPR</dt>
+                    <dd>Some BOINC projects require you to opt in to exporting your statistics due to GDPR regulations. <strong>Solo crunchers must enable this to earn GRC</strong> — otherwise the network cannot see your contributions. Pool crunchers do not need to do this. Click "required" in the table for project-specific instructions, or see the <a href="/guides/gdpr-stats-export.htm">general GDPR stats export guide</a>.</dd>
+                    <dt>ZCD / WAS</dt>
+                    <dd><strong>ZCD</strong> (Zero Credit Days) — number of consecutive days a project has reported zero new credit. <strong>WAS</strong> (Whitelist Activity Score) — a rolling measure of project activity. A project is automatically greylisted when ZCD exceeds 7 and WAS drops below 0.1.<br>
+                    <em>Grace periods:</em> When autogreylisting first activates at the v13 block height, all projects receive a 7-superblock (~7 day) grace period while the ZCD/WAS metrics stabilize across the network. After that, newly whitelisted projects receive a 7-superblock (~7 day) grace period before greylisting rules apply. During grace periods, ZCD/WAS values are tracked but will not trigger greylisting.</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <h3 id="whitelist-process" class="anchor-adjust">Whitelist Process</h3>
+        <div class="container">
+        <p>Want a project whitelisted? Ask about it on the <code>#whitelisting-committee</code> channel on the Gridcoin Discord! More details about adding a project to the whitelist can be found on the <a href="/wiki/whitelist-process.html">whitelist process wiki page</a></p>
+        <p>The whitelist was created to increase security and to focus user's resources on active projects. See <a href="https://web.archive.org/web/20150416222027/cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">historical discussion</a></p>
+        </div>
 </section>
 <div class="container">
     <p>GeForce is a trademark, or registered trademark, of NVIDIA Corporation. // Radeon is a trademark, or registered trademark, of Advanced Micro Devices, Inc. // Intel is a trademark, or registered trademark, of Intel Corporation.</p>
 </div>
+
+<script src="/assets/js/analytics-api.js"></script>
+<script src="/assets/js/fetch-whitelist.js"></script>
