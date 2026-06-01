@@ -67,6 +67,9 @@ function projectStatus(proj) {
     if (status === "Active") {
         return { text: "Active", cssClass: "status-active" };
     }
+    if (status === "Active by Greylist Override") {
+        return { text: "Active by Greylist Override", cssClass: "status-active" };
+    }
     return { text: status, cssClass: "" };
 }
 
@@ -179,11 +182,16 @@ function renderProjectTable(apiProjects, staticLookup) {
     // Sort projects: Active first, then Excluded (less severe — project
     // is whitelisted but its stats are stale), then Greylisted (most
     // severe — not earning rewards). Anything else falls to the bottom.
-    const sortOrder = { "Active": 0, "Excluded": 1, "Greylisted": 2 };
+    const sortOrder = {
+        "Active": 0,
+        "Active by Greylist Override": 1,
+        "Excluded": 2,
+        "Greylisted": 3,
+    };
     const entries = Object.entries(apiProjects).sort((a, b) => {
         const sa = projectStatus(a[1]).text;
         const sb = projectStatus(b[1]).text;
-        const orderDiff = (sortOrder[sa] || 9) - (sortOrder[sb] || 9);
+        const orderDiff = (sortOrder[sa] ?? 9) - (sortOrder[sb] ?? 9);
         if (orderDiff !== 0) return orderDiff;
         return a[0].localeCompare(b[0]);
     });
@@ -221,8 +229,8 @@ function renderProjectTable(apiProjects, staticLookup) {
         // Status badge.
         const statusCell = document.createElement("td");
         const badge = document.createElement("span");
-        const badgeColor = status.text === "Active" ? "success"
-                         : status.text === "Excluded" ? "warning"
+        const badgeColor = status.cssClass === "status-active" ? "success"
+                         : status.cssClass === "status-excluded" ? "warning"
                          : "danger";
         badge.className = `badge bg-${badgeColor}`;
         badge.textContent = status.text;
