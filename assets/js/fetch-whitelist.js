@@ -120,7 +120,7 @@ function summaryCell(label, value) {
 /**
  * Render the superblock summary header.
  */
-function renderSuperblockHeader(sb, totalWhitelisted) {
+function renderSuperblockHeader(sb, totalWhitelisted, activeCount) {
     const el = document.getElementById("superblock-info");
     if (!el || !sb) return;
 
@@ -128,9 +128,17 @@ function renderSuperblockHeader(sb, totalWhitelisted) {
 
     const row = document.createElement("div");
     row.className = "row text-center mb-3";
+    // "Active" counts projects rendered with the status-active class — i.e.
+    // status "Active" with in_superblock=true, plus "Active by Greylist
+    // Override" (which is always in-superblock by API definition). This is
+    // not derivable from sb.total_projects because manually-greylisted
+    // projects can still appear in the superblock contract with Mag=0, and
+    // the unreachable-and-greylisted case (excluded by scrapers AND
+    // greylisted) makes "in_superblock − greylisted − excluded" wrong; the
+    // overlap forces a project-by-project pass.
     row.appendChild(summaryCell(
         "Whitelisted Projects",
-        `${totalWhitelisted} (${sb.total_projects} in superblock)`,
+        `${totalWhitelisted} (${activeCount} active)`,
     ));
     row.appendChild(summaryCell("Active Beacons", formatNumber(sb.active_beacons)));
     row.appendChild(summaryCell("Total CPIDs",   formatNumber(sb.total_cpids)));
@@ -334,7 +342,9 @@ function initWhitelist() {
             if (!data || !data.projects) throw new Error("Invalid API response");
 
             const totalWhitelisted = Object.keys(data.projects).length;
-            renderSuperblockHeader(data.superblock, totalWhitelisted);
+            const activeCount = Object.values(data.projects)
+                .filter(p => projectStatus(p).cssClass === "status-active").length;
+            renderSuperblockHeader(data.superblock, totalWhitelisted, activeCount);
             renderProjectTable(data.projects, staticLookup);
 
             // Show dynamic table, hide static fallback.
