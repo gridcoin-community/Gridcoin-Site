@@ -125,7 +125,6 @@ to do, feel free to ask a question on the channel
     bantime=60
 
     ## These Addnodes are for TESTNET only. See Discord for further details.
-    addnode=addnode-us-central.cycy.me
     addnode=ec2-3-81-39-58.compute-1.amazonaws.com
     addnode=gridcoin.network
     addnode=gridhost.ddns.net

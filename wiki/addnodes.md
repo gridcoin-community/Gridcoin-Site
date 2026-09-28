@@ -32,7 +32,7 @@ The status on this wiki page is not updated frequently.
 
 List of addnodes for the main network. These are the ones you most likely care about.
 
-See [cycy's hourly updating list](https://addnode.cycy.me) for a more up to date status.
+See [gridcat's auto-updating list](https://addnodes.gridcoin.club/), regenerated every 15 minutes, for a more up to date status.
 
 ------------
 
@@ -41,12 +41,15 @@ These are included in the default config, but if you leave them out of the confi
 
 | Node | Region |
 |-|-|
-| addnode-us-central.cycy.me | US-central |
 | ec2-3-81-39-58.compute-1.amazonaws.com | US-east |
-| gridcoin.ddns.net | UK |
+| gridcoin.network | France |
 | seeds.gridcoin.ifoggz-network.xyz | Canada |
 | seed.gridcoin.pl | Europe |
 | www.grcpool.com | US-east |
+
+Note: the wallet also writes `addnode=addnode-us-central.cycy.me` into a newly
+generated config file. That node is no longer reachable, so you can safely
+delete the line.
 
 
 #### Online (connected within the last 24 hours)
@@ -85,7 +88,7 @@ These are included in the default config, but if you leave them out of the confi
 
 List of addnodes for the [test network](testnet "wikilink")
 
-[cycy's hourly updating list](https://addnode.cycy.me/testnet)
+[gridcat's auto-updating list](https://addnodes.gridcoin.club/testnet.txt), regenerated every 15 minutes.
 
 ------------
 
@@ -93,7 +96,6 @@ List of addnodes for the [test network](testnet "wikilink")
 
 | Node | Region |
 | ---- | ------ |
-| addnode-us-central.cycy.me | US-central |
 | ec2-3-81-39-58.compute-1.amazonaws.com  | US-east |
 | gridhost.ddns.net                       | UK |
 | ormgas.com                              | Sweden |

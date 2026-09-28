@@ -571,7 +571,7 @@ you are not banned by good nodes because of earlier behavior.
 
 First, install telnet for your respective os.
 
-Then open your command box and enter `telnet addnode-us-central.cycy.me 32749`. If there is no response, your Firewall might have blocked the
+Then open your command box and enter `telnet ec2-3-81-39-58.compute-1.amazonaws.com 32749`. If there is no response, your Firewall might have blocked the
 port. Otherwise, your configuration might be wrong or your node may have been
 temporarily banned by the
 network.
