@@ -313,7 +313,11 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
     only. `includeempty` includes accounts that have no balance
   
 * listreceivedbyaddress `( minconf includeempty includeWatchonly)`
-  * Returns a list of the balance of each address. The list is formatted as:  
+  * Returns a list of the amounts *received* by each address in the wallet's
+    address book. This is not a balance: spending is not subtracted, staking
+    rewards are not counted, and change addresses (which have no address book
+    entry) are not listed. To see where your funds currently sit, use
+    `listunspent` or `listaddressgroupings`. The list is formatted as:  
     `[
       {
         "involvesWatchonly" : TRUE/FALSE
@@ -322,9 +326,10 @@ ctrl-f (Windows/Linux) or command-f (MacOS) is recommended
         "amount\" : AMOUNT            
       }, ...
      ]`
-     `minconf` is the minimum number of confirmations to use when getting the 
-     balance. `includeWatchonly` includes addresses into the balance that 
-     are watch only. `includeempty` includes addresses that have no balance 
+     `minconf` is the minimum number of confirmations a payment needs before 
+     it is counted. `includeWatchonly` includes received amounts for addresses 
+     that are watch only. `includeempty` includes address book addresses that 
+     have not received any payments 
 
 * listsinceblock `( "blockhash" target-confirmations includeWatchonly)`
   * Lists transactions to and from your wallet since a given block. If no block
