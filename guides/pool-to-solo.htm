@@ -1,8 +1,8 @@
 ---
 title: "Gridcoin - Step 1: Disconnect BOINC client from pool"
-description: "Step 1 of the 'From pool- to solo-crunching' guide; Instructing users how to remove the pool from the BOINC client."
+description: "Step 1 of the 'Pool to Solo' guide; Instructing users how to remove the pool from the BOINC client."
 redirect_from:
-  - "/Guides/pool-to-solo.htm"
+- "/Guides/pool-to-solo.htm"
 ---
 <section class="guide-menu-top grc-bgcolor">
     <div class="container">
@@ -12,16 +12,16 @@ redirect_from:
                 <hr />
                 <a href="/guides/pool-to-solo.htm">
                     <button class="btn btn-success" id="Guide-Button">
-                        Remove pool from BOINC
+                        Remove pool from BOINC and set up of personal BOINC accounts
                     </button>
                 </a>
             </div>
             <div class="col-6 col-sm-6 col-md-6 col-lg-6">
-                <h5 >Step 2</h5>
+                <h5>Step 2</h5>
                 <hr />
                 <a href="/guides/earn-grc.htm">
                     <button class="btn btn-secondary" id="Guide-Button">
-                        Setup Gridcoin for solo-crunching
+                        Setup Gridcoin for solo crunching
                     </button>
                 </a>
             </div>
@@ -30,26 +30,65 @@ redirect_from:
 </section>
 
 <section class="grc-bgcolor">
-    <!--Start of GRC Feature section-->
     <div class="container">
-
-    <!--First row of features-->
-        <!--Step 3 banner-->
         <div class='row'>
-            <div class='col-12 text-center' >
+            <div class='col-12 col-sm-8 col-md-8'>
                 <h4 class="text-bold">
-                    Remove the pool from BOINC
+                    Removing the pool from BOINC
                 </h4>
             </div>
-        </div>
-        <!--/Step 3 banner-->
-        <!--Step 3 banner-->
-        <div class='row'>
-            <div class='col-12 col-sm-12 col-md-12 col-lg-12' >
+            <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
                 <ol>
                     <li>Use the menu item in BOINC "stop using &lt;pool's name&gt;"</li>
-                    <li>Remove all projects from BOINC</li>
-                    <li>Move to the second step</li>
+                    <li>Switch to advanced view if you are not already using it (View → Advanced View...)</li>
+                    <li>Remove all projects from the projects tab in BOINC<br>
+                    You will not be able to receive rewards if you continue crunching for the pool's account</li>
+                </ol>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-12 col-sm-8 col-md-8'>
+                <h4 class="text-bold">Signing up for projects</h4>
+                <p>Note: If you are an existing BOINC user and use an account manager such as BAM, you can add projects via your account
+                manager so long as accounts at the projects all use the same e-mail address (BAM's default).</p>
+            </div>
+            <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
+                <ol>
+                    <li>Create personal accounts on all desired projects using <b>the same email</b></li>
+                    <li>Attach all desired projects to your BOINC client on the same machine as your wallet (Tools → Add project... / Tools → Synchronize with &lt;account manager&gt;)
+                        <br>All projects that you plan to crunch need to be attached to the BOINC client on the machine with your wallet - even if you plan to crunch it on a different host</li>
+                    <li>Make sure that your CPIDs are consistent across your projects (it can be checked on the
+                        project's site/your account manager/the Gridcoin "Researcher Configuration" wizard)</li>
+                    <li>If they are not consistent then you're suffering from a split CPID. Instructions to fix it can
+                        be found below.</li>
+                    <li>Proceed to Step 2 if your CPIDs are all the same.<br>
+                        <b>DO NOT CONTINUE to advertising your beacon if you have a split CPID.<br>
+                        You would likely need to readvertise your beacon which would waste your time.</b><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-12 col-sm-8 col-md-8'>
+                <h4 class="text-bold">
+                    Resolving a split CPID
+                </h4>
+            </div>
+            <div class='col-12 col-sm-12 col-md-12 col-lg-12'>
+                <ol>
+                    <li>Attach all desired projects to the BOINC client of the machine that is running your wallet, if they are not already
+                        (Attach all projects - even if you plan to crunch it on a different host)
+                    </li>
+                    <li>Disconnect other BOINC clients from the internet except on the machine running the wallet</li>
+                    <li>Go to your Projects tab and enable "No new tasks" for each project</li>
+                    <li>Go to your Tasks tab and cancel all existing tasks (this is needed, otherwise BOINC may not actually “Update” when
+                    requested in subsequent steps)</li>
+                    <li>Back in the Projects tab, for each project, select “Allow new tasks” and press “Update”, then press “No new tasks” when
+                    complete and abort any tasks it downloaded. The project update process will take about 10 seconds for each project. You
+                    can monitor this progress by going to Tools → Event Log...</li>
+                    <li>Check your CPIDs on the projects' site or in the Gridcoin "Researcher Configuration" wizard</li>
+                    <li>If they are still not consistent wait a few minutes before attempting these steps again<br>
+                    If they are now consistent then you can continue to Step 2 and re-enable tasks for your projects</li>
                 </ol>
             </div>
         </div>
