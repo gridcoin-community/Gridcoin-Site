@@ -89,7 +89,7 @@ such as `-testnet`
   * `-listen`                Accept connections from outside (default: 1 if no -proxy or -connect)
   * `-bind=<addr>`           Bind to given address. Use [host]:port notation for IPv6
   * `-dnsseed`               Find peers using DNS lookup (default: 1)
-  * `-synctime`              Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)
+  * `-synctime`              Sync time with other nodes (default: 1). Disabling this is strongly discouraged, even if this computer syncs with NTP: with `-synctime=0` this node uses only its own clock, does not correct an error in it, and while it stakes shows a warning that it has no network time quorum.
   * `-banscore=<n>`          Threshold for disconnecting misbehaving peers (default: 100)
   * `-bantime=<n>`           Number of seconds to keep misbehaving peers from reconnecting (default: 86400)
   * `-maxreceivebuffer=<n>`  Maximum per-connection receive buffer, `<n>`*1000 bytes (default: 5000)
